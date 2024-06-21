@@ -1,0 +1,150 @@
+{   // Debug Option: Every Mystery Box opening will post its item information in the console before opening.
+
+    //   If your game is crashing when opening any mystery Box from TheGambler do the following:
+    //
+    //     1 - Copy the Item information that was posted in the console right before the Error. This information looks like:
+    //                [
+    //                   { _id: '1c446ddf70bb4a2687f88bbe', _tpl: '5c06c6a80db834001b735491' },
+    //                   {
+    //                    _id: 'e70645ec4817d30ed552d29b',
+    //                    _tpl: '6571199565daf6aa960c9b10',
+    //                    parentId: '1c446ddf70bb4a2687f88bbe',
+    //                    slotId: 'Helmet_top',
+    //                    upd: {}
+    //                   }, ... more data
+    //                ]
+    //
+    //     2 - Post the error information and the Item Information from the console in TheGambler mod page comments section and this will help me pinpoint the problem.
+    //
+    "debug": false, // Default is false
+    //
+    //        
+    //           
+    
+    // Custom Trader Settings
+
+    // Trader Refresh time In Seconds. Trader will refresh inventory stock between Min-Max time.
+    "trader_update_min_time": 3600,
+    "trader_update_max_time": 4000, 
+
+    // Custom Gambling Settings
+
+    "wallet_price": 100000,
+    "wallet_stock": 15,
+
+    "key_price": 50000,
+    "key_stock": 25,
+
+    "stim_price": 36500,
+    "stim_stock": 15,
+
+    "keycard_price": 265000,
+    "keycard_stock": 15,
+
+    "fiftyfity_price": 2500000,
+    "fiftyfity_stock": 2,
+
+    "melee_price": 58500,
+    "melee_stock": 25,
+
+    "gun_case_price": 86500,
+    "gun_case_stock": 15,
+
+    "premium_gun_case_price": 240000,
+    "premium_gun_case_stock": 4,
+
+    "helmet_case_price": 55000,
+    "helmet_case_stock": 10,
+
+    "headset_case_price": 55000,
+    "headset_case_stock": 8,
+
+    "armor_case_price": 115000,
+    "armor_case_stock": 10,
+
+    "premium_armor_case_price": 375000,
+    "premium_armor_case_stock": 4,
+
+    "sealed_case_price": 350000,
+    "sealed_case_stock": 2,
+
+    "backpack_case_price": 45000,
+    "backpack_case_stock": 15,
+
+    // GAMBLING ODDS SECTION 
+    //
+    //
+    //
+    // gambling_container_wallet 
+    //
+    // Chance for each possibility in percentage from rarest to most common
+    "wallet_extremely_rare": 1,    // 2 Million Roubles
+    "wallet_rare": 2,              // 1 Miliion Roubles
+    "wallet_kinda_rare": 4,        // 500k Roubles
+    "wallet_uncommon": 9,          // 300k Roubles
+    "wallet_common": 35,           // 100K Roubles
+    // 100% - all above percentages = % at receiving nothing from gambling container. If desired. (Applies to all gambling containers!)
+
+    // gambling_container_key 
+    "key_extremely_rare": 0.5, // Extremely Rare Key
+    "key_rare": 5.0,           // Rare Key
+    "key_uncommon": 24.5,      // Uncommon Key
+    "key_common": 70.0,        // Common Key
+
+    // gambling_container_stim 
+    "stim_rare": 15.0,           // Rare Stim
+    "stim_uncommon": 30.0,       // Uncommon Stim
+    "stim_common": 55.0,         // Common Stim
+
+    // gambling_container_keycard
+    "keycard_red": 0.1,              // Red Keycard
+    "keycard_green": 0.2,            // Green Keycard
+    "keycard_blue": 0.25,            // Blue Keycard
+    "keycard_violet": 0.35,          // Violet Keycard
+    "keycard_black": 0.65,           // Black Keycard
+    "keycard_yellow": 1.2,           // Yellow Keycard
+    "keycard_blue_marking": 6.25,    // Keycard with blue marking
+    "keycard_21WS": 8,               // 21WS Keycard
+    "keycard_11SR": 8,               // 11SR Keycard
+    "keycard_access": 55,            // Access Keycard
+
+    // gambling_container_melee
+    "melee_extremely_rare": 0.25,    // Extremely Rare melee
+    "melee_rare": 2.0,               // Rare melee
+    "melee_uncommon": 22.75,         // Uncommon melee
+    "melee_common": 75.0,            // Common melee
+
+    // gambling_container_backpack
+    "backpack_extremely_rare": 5,    // Extremely Rare melee
+    "backpack_rare": 12,             // Rare melee
+    "backpack_uncommon": 30,         // Uncommon melee
+    "backpack_common": 53,           // Common melee
+
+    // gambling_container_weapon
+    "gun_rare": 10,        // Rare Gun
+    "gun_meme": 7,         // Meme Gun
+    "gun_uncommon": 28,    // Semi-modded Gun
+    "gun_scav": 20,        // Scav Gun
+    "gun_common": 35,      // Default Gun
+
+    // gambling_container_premium_weapon
+    "premium_gun_rare": 100.0,  // Rare Gun
+
+    // gambling_container_key 
+    "helmet_extremely_rare": 0.35, // Extremely Rare Key
+    "helmet_rare": 20.0,           // Rare Key
+    "helmet_uncommon": 37.0,       // Uncommon Key
+    "helmet_common": 42.65,        // Common Key
+
+    // gambling_container_key 
+    "headset_chance": 100.0, // Chance at receiving a random headset 
+
+
+    // gambling_container_armor
+    "armor_rare": 15.0,     // Rare Armor
+    "armor_uncommon": 25.0, // Uncommon Armor
+    "armor_common": 60.0,   // Common Armor
+
+    // gambling_container_premium_armor
+    "premium_armor_rare": 100.0  // Rare Armor
+}
