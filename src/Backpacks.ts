@@ -36,16 +36,13 @@ export class Backpacks {
             "5e4abc6786f77406812bd572", // LBT-2670 Slim Field Med Pack (Black)
             "5e997f0b86f7741ac73993e2",  // Sanitar's bag
             "5c0e805e86f774683f3dd637", // 3V Gear Paratus 3-Day Operator's Tactical backpack (Foliage Grey)
-            
             "5df8a4d786f77412672a1e3b", // 6Sh118 raid backpack (Digital Flora)
             "5ab8ebf186f7742d8b372e80", // SSO Attack 2 raid backpack (Khaki)
             "5b44c6ae86f7742d1627baea", // ANA Tactical Beta 2 Battle backpack (Olive Drab)
             "62a1b7fbc30cfa1d366af586", // Gruppa 99 T30 backpack (MultiCam)
             "5f5e46b96bdad616ad46d613",  // Eberlestock F4 Terminator load bearing backpack (Tiger Stripe)
             "628e1ffc83ec92260c0f437f", // Gruppa 99 T30 backpack (Black)
-
             "6034d2d697633951dc245ea6", // Eberlestock G2 Gunslinger II backpack (Dry Earth)
-
 
             "639346cc1c8f182ad90c8972", // Tasmanian Tiger Trooper 35 backpack (Khaki)
             "639346cc1c8f182ad90c8972", // Tasmanian Tiger Trooper 35 backpack (Khaki)

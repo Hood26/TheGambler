@@ -7,9 +7,10 @@ const Stims_1 = require("./Stims");
 const Backpacks_1 = require("./Backpacks");
 const Headsets_1 = require("./Headsets");
 class Gamble {
-    newItemRequest;
+    newItemsRequest;
     name;
     id;
+    count;
     container;
     hashUtil;
     logger;
@@ -20,10 +21,11 @@ class Gamble {
         this.logger = logger;
         this.container = container;
         this.config = config;
+        this.count = 0;
         this.randomUtil = container.resolve("RandomUtil");
         this.hashUtil = container.resolve("HashUtil");
-        this.newItemRequest = {
-            itemWithModsToAdd: [],
+        this.newItemsRequest = {
+            itemsWithModsToAdd: [],
             foundInRaid: true,
             useSortingTable: true
         };
@@ -72,7 +74,7 @@ class Gamble {
             default:
                 this.logger.error(`[TheGambler] This Container Doesn't exist!`);
         }
-        return this.newItemRequest;
+        return this.newItemsRequest;
     }
     openWallet() {
         let money;
@@ -104,8 +106,8 @@ class Gamble {
         }
         if (money > 0) {
             const id = "5449016a4bdc2d6f028b456f"; // Roubles
-            this.newItemRequest.itemWithModsToAdd.push(this.newItemFormat(id, money));
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, money)];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openKeycard() {
@@ -162,8 +164,8 @@ class Gamble {
             this.logger.info("[TheGambler] Keycard id = " + id);
         }
         if (id != "NaN") {
-            this.newItemRequest.itemWithModsToAdd.push(this.newItemFormat(id));
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openFiftyFifty() {
@@ -172,14 +174,14 @@ class Gamble {
         const roll = this.randomUtil.getFloat(0, 100);
         if (roll <= 50) {
             id = "57347d7224597744596b4e72"; // Can of beef stew (Small)
-            this.newItemRequest.itemWithModsToAdd.push(this.newItemFormat(id));
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.foundInRaid = true;
         }
         else {
             id = "5449016a4bdc2d6f028b456f"; // Roubles
             money = 5000000; // 5,000,000 roubles
-            this.newItemRequest.itemWithModsToAdd.push(this.newItemFormat(id, money));
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, money)];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openKey() {
@@ -216,8 +218,8 @@ class Gamble {
             this.logger.info("[TheGambler] Key id = " + id);
         }
         if (id != "NaN") {
-            this.newItemRequest.itemWithModsToAdd.push(this.newItemFormat(id));
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openStim() {
@@ -249,8 +251,8 @@ class Gamble {
             this.logger.info("[TheGambler] Stimulant id = " + id);
         }
         if (id != "NaN") {
-            this.newItemRequest.itemWithModsToAdd.push(this.newItemFormat(id));
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openWeapon() {
@@ -287,8 +289,8 @@ class Gamble {
             this.logger.info(createWeapon);
         }
         if (createWeapon.length != 0) {
-            this.newItemRequest.itemWithModsToAdd.push(...createWeapon);
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createWeapon];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openPremiumWeapon() {
@@ -308,10 +310,10 @@ class Gamble {
             this.logger.info(createGun);
         }
         if (createGun.length != 0) {
-            this.newItemRequest.itemWithModsToAdd.push(...createGun);
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createGun];
+            this.newItemsRequest.foundInRaid = true;
         }
-        //this.logger.info(this.newItemRequest.itemWithModsToAdd);
+        //this.logger.info(this.newItemsRequest.itemsWithModsToAdd);
     }
     openHelmet() {
         const roll = this.randomUtil.getFloat(0, 100);
@@ -343,8 +345,8 @@ class Gamble {
             this.logger.info(createHelmet);
         }
         if (createHelmet.length != 0) {
-            this.newItemRequest.itemWithModsToAdd.push(...createHelmet);
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createHelmet];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openHeadset() {
@@ -367,8 +369,8 @@ class Gamble {
             this.logger.info("[TheGambler] Headset id = " + id);
         }
         if (id != "NaN") {
-            this.newItemRequest.itemWithModsToAdd.push(this.newItemFormat(id));
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openBackpack() {
@@ -401,8 +403,8 @@ class Gamble {
             this.logger.info("[TheGambler] Backpack id = " + id);
         }
         if (id != "NaN") {
-            this.newItemRequest.itemWithModsToAdd.push(this.newItemFormat(id));
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openArmor() {
@@ -430,8 +432,8 @@ class Gamble {
             this.logger.info(createArmor);
         }
         if (createArmor.length != 0) {
-            this.newItemRequest.itemWithModsToAdd.push(...createArmor);
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createArmor];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openPremiumArmor() {
@@ -451,8 +453,8 @@ class Gamble {
             this.logger.info(createArmor);
         }
         if (createArmor.length != 0) {
-            this.newItemRequest.itemWithModsToAdd.push(...createArmor);
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createArmor];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     openMelee() {
@@ -533,8 +535,8 @@ class Gamble {
             this.logger.info("[TheGambler] Melee id = " + id);
         }
         if (id != "NaN") {
-            this.newItemRequest.itemWithModsToAdd.push(this.newItemFormat(id));
-            this.newItemRequest.foundInRaid = true;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.foundInRaid = true;
         }
     }
     newItemFormat(tpl, count = undefined) {
