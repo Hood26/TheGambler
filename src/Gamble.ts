@@ -329,7 +329,6 @@ export class Gamble {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createGun];
             this.newItemsRequest.foundInRaid = true;
         }
-        //this.logger.info(this.newItemsRequest.itemsWithModsToAdd);
     }
 
     private openHelmet(){
