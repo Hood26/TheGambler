@@ -141,15 +141,21 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
     //
     public newOpenRandomLoot(container: DependencyContainer, pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID: string): IItemEventRouterResponse {
         // Needed reference methods
-        const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
-        const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-        const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
         // Message Notifier Doesn't Work Yet...
         //const notifierHelper = container.resolve<NotifierHelper>("NotifierHelper");
         //const notificationSendHelper = container.resolve<NotificationSendHelper>("NotificationSendHelper");
+        const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
+        const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+        const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
         const eventOutputHolder = container.resolve<EventOutputHolder>("EventOutputHolder");
-
         const openedItem = pmcData.Inventory.items.find(x => x._id === body.item); // Get opened item from inventory
+
+        if (itemHelper.getItem(openedItem._tpl) == undefined){
+            this.logger.error("[TheGambler] Cannot find unboxed mystery container in Inventory... Best option is to restart game.. I am not fully sure why this happens...")
+            const output = eventOutputHolder.getOutput(sessionID);
+            return output;
+        }
+
         const containerDetails = itemHelper.getItem(openedItem._tpl);
         let gamble: Gamble;
 
@@ -235,13 +241,12 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
 
 
         if (newItemsRequest.itemsWithModsToAdd.length != 0) {
+
             if (inventoryHelper.canPlaceItemsInInventory(sessionID, newItemsRequest.itemsWithModsToAdd)){
-                
                 inventoryHelper.removeItem(pmcData, body.item, sessionID, output);
                 inventoryHelper.addItemsToStash(sessionID, newItemsRequest, pmcData, output);
             } else {
-            // Notifier Not Working
-            // notifierHelper.createNewMessageNotification(message);
+            // notifierHelper.createNewMessageNotification(message); // Notifier Not Working
             this.logger.error(`[${this.mod}] Cannot Open Container, Inventory Is Full!`);
             }
         } else {

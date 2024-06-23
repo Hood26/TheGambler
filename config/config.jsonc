@@ -1,5 +1,5 @@
 {   // Debug Option: Every Mystery Box opening will post its item information in the console before opening.
-
+    //
     //   If your game is crashing when opening any mystery Box from TheGambler do the following:
     //
     //     1 - Copy the Item information that was posted in the console right before the Error. This information looks like:
@@ -22,12 +22,15 @@
     //           
     
     // Custom Trader Settings
-
+    //
     // Trader Refresh time In Seconds. Trader will refresh inventory stock between Min-Max time.
     "trader_update_min_time": 3600,
     "trader_update_max_time": 4000, 
 
-    // Custom Gambling Settings
+    // Custom Gambling Price And Stock Settings
+    //
+    // Setting Price_Multiplier for example to 1.20 will make all mystery container 20% more expensive. Setting it to 0.80 will make all mystery contaienr 20% cheaper.
+    "price_multiplier": 1.0,
 
     "wallet_price": 100000,
     "wallet_stock": 15,
@@ -35,8 +38,8 @@
     "key_price": 50000,
     "key_stock": 25,
 
-    "stim_price": 36500,
-    "stim_stock": 15,
+    "stimulant_price": 36500,
+    "stimulant_stock": 15,
 
     "keycard_price": 265000,
     "keycard_stock": 15,

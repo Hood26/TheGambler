@@ -84,7 +84,7 @@ export class Gamble {
                 this.openPremiumArmor();
                 break;
             default:
-                this.logger.error(`[TheGambler] This Container Doesn't exist!`);    
+                this.logger.error(`[TheGambler] This Mystery Container Doesn't exist! Contact Author!`);    
         }
         return this.newItemsRequest;
     }
@@ -92,7 +92,7 @@ export class Gamble {
     private openWallet(){
         let money: number;
         const roll = this.randomUtil.getFloat(0, 100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Wallet] The container roll is: ${roll}!`);
         const extremely_rare_odds = this.config.wallet_extremely_rare;
         const rare_odds = this.config.wallet_rare + extremely_rare_odds;
         const kinda_rare_odds = this.config.wallet_kinda_rare + rare_odds;
@@ -124,7 +124,7 @@ export class Gamble {
     private openKeycard(){
         let id: string;
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Keycard] The container roll is: ${roll}!`);
         const keycard_red_odds = this.config.keycard_red;
         const keycard_green_odds = this.config.keycard_green + keycard_red_odds;
         const keycard_blue_odds = this.config.keycard_blue + keycard_green_odds;
@@ -193,7 +193,7 @@ export class Gamble {
     private openKey(){
         let id: string;
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Key] The container roll is: ${roll}!`);
         const keys = new Keys(); // stores arrays of keys sorted by rarity
         const extremely_rare_odds = this.config.key_extremely_rare;
         const rare_odds = this.config.key_rare + extremely_rare_odds;
@@ -235,7 +235,7 @@ export class Gamble {
     private openStim(){
         let id: string;
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Stimulant] The container roll is: ${roll}!`);
         const stims = new Stims();
         const rare_odds = this.config.stim_rare;
         const uncommon_odds = this.config.stim_uncommon + rare_odds;
@@ -275,7 +275,7 @@ export class Gamble {
         let item = new ItemCreator(this.container);
         let createWeapon: Item[] = [];
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Weapon] The container roll is: ${roll}!`);
         const rare_odds = this.config.gun_rare;
         const meme_odds = this.config.gun_meme + rare_odds;
         const uncommon_odds = this.config.gun_uncommon + meme_odds;
@@ -309,7 +309,7 @@ export class Gamble {
 
     private openPremiumWeapon(){
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Premium_Weapon] The container roll is: ${roll}!`);
         let item = new ItemCreator(this.container);
         let createGun: Item[] = [];
         const rare_odds = this.config.premium_gun_rare;
@@ -333,7 +333,7 @@ export class Gamble {
 
     private openHelmet(){
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Helmet] The container roll is: ${roll}!`);
         let item = new ItemCreator(this.container);
         let createHelmet: Item[] = [];
         
@@ -370,7 +370,7 @@ export class Gamble {
     private openHeadset(){
         let id: string;
         const roll = this.randomUtil.getFloat(0,8);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Headset] The container roll is: ${roll}!`);
         const headsets = new Headsets();
         const headset_odds = this.config.headset_chance;
         id = headsets.headsets[roll];
@@ -398,7 +398,7 @@ export class Gamble {
     private openBackpack(){
         let id: string;
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Backpack] The container roll is: ${roll}!`);
         const backpacks = new Backpacks();
         const extremely_rare_odds = this.config.backpack_extremely_rare;
         const rare_odds = this.config.backpack_rare + extremely_rare_odds;
@@ -435,7 +435,7 @@ export class Gamble {
 
     private openArmor(){
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Armor] The container roll is: ${roll}!`);
         let item = new ItemCreator(this.container);
         let createArmor: Item[] = [];
         const rare_odds = this.config.armor_rare;
@@ -465,7 +465,7 @@ export class Gamble {
 
     private openPremiumArmor(){
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Premium_Armor] The container roll is: ${roll}!`);
         let item = new ItemCreator(this.container);
         let createArmor: Item[] = [];
         const rare_odds = this.config.premium_armor_rare;
@@ -490,7 +490,7 @@ export class Gamble {
     private openMelee(){
         let id: string;
         const roll = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Melee] The container roll is: ${roll}!`);
         const extremely_rare_odds = this.config.melee_extremely_rare;
         const rare_odds = this.config.melee_rare + extremely_rare_odds;
         const uncommon_odds = this.config.melee_uncommon + rare_odds;
