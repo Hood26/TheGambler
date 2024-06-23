@@ -233,17 +233,102 @@ export class Ammo {
     ]
 
     // .45 ACP Ammo
-    public five_seven_common = [
-        "5cc86832d7f00c000d3a6e6c", // 5.7x28mm R37.F
-        "5cc86840d7f00c002412c56c", // 5.7x28mm R37.X
-        "5cc80f79e4a949033c7343b2", // 5.7x28mm SS198LF
+    public four_five_common = [
+        "5efb0fc6aeb21837e749c801", // .45 ACP Hydra-Shok
+        "5efb0d4f4bc50b58e81710f3", // .45 ACP Lasermatch FMJ
     ]
-    public five_seven_uncommon = [
-        "5cc80f8fe4a949033b0224a2", // 5.7x28mm SS197SR
-        "5cc80f67e4a949035e43bbba", // 5.7x28mm SB193
+    public four_five_uncommon = [
+        "5e81f423763d9f754677bf2e", // .45 ACP Match FMJ
     ]
-    public five_seven_rare = [
-        "5cc80f53e4a949000e1ea4f8", // 5.7x28mm L191
-        "5cc80f38e4a949001152b560", // 5.7x28mm SS190
+    public four_five_rare = [
+        "5ea2a8e200685063ec28c05a", // .45 ACP RIP
+        "5efb0cabfb3e451d70735af5", // .45 ACP AP
+    ]
+
+    // .357 Ammo
+    public three_five_seven_common = [
+        "62330c40bdd19b369e1e53d1", // .357 Magnum SP
+        "62330bfadc5883093563729b", // .357 Magnum HP
+    ]
+    public three_five_seven_uncommon = [
+        "62330c18744e5e31df12f516", // .357 Magnum JHP
+    ]
+    public three_five_seven_rare = [
+        "62330b3ed4dc74626d570b95", // .357 Magnum FMJ
+    ]
+
+    // 9x21 Gyurza Ammo
+    public nine_by_two_one_common = [
+        "5a26ac06c4a282000c5a90a8", // 9x21mm PE gzh
+        "5a26abfac4a28232980eabff", // 9x21mm P gzh
+    ]
+    public nine_by_two_one_uncommon = [
+        "5a269f97c4a282000b151807", // 9x21mm PS gzh
+        "6576f93989f0062e741ba952", // 9x21mm 7U4
+    ]
+    public nine_by_two_one_rare = [
+        "5a26ac0ec4a28200741e1e18", // 9x21mm BT gzh
+        "6576f4708ca9c4381d16cd9d", // 9x21mm 7N42 "Zubilo"
+    ]
+
+    // 9x19 Ammo
+    public nine_by_one_nine_common = [
+        "58864a4f2459770fcc257101", // 9x19mm PSO gzh
+        "5c3df7d588a4501f290594e5", // 9x19mm Green Tracer 
+        "64b7bbb74b75259c590fa897", // 9x19mm FMJ M882
+        "56d59d3ad2720bdb418b4577", // 9x19mm Pst gzh
+    ]
+    public nine_by_one_nine_uncommon = [
+        "5efb0e16aeb21837e749c7ff", // 9x19mm QuakeMaker
+        "5a3c16fe86f77452b62de32a", // 9x19mm Luger CCI
+    ]
+    public nine_by_one_nine_rare = [
+        "5c0d56a986f774449d5de529", // 9x19mm RIP
+        "5c925fa22e221601da359b7b", // 9x19mm AP 6.3
+        "5efb0da7a29a85116f6ea05f", // 9x19mm PBP gzh
+    ]
+
+    // 9x18 Ammo
+    public nine_by_one_eight_common = [
+        "5737207f24597760ff7b25f2", // 9x18mm PM PSV
+        "573719762459775a626ccbc1", // 9x18mm PM P gzh 
+        "57371f8d24597761006c6a81", // 9x18mm PM PSO gzh
+        "57371f2b24597761224311f1", // 9x18mm PM PS gs PPO 
+        "57371eb62459776125652ac1", // 9x18mm PM PRS gs
+        "57371b192459775a9f58a5e0", // 9x18mm PM PPe gzh 
+        "57371e4124597760ff7b25f1", // 9x18mm PM PPT gzh 
+        "5737201124597760fc4431f1", // 9x18mm PM Pst gzh 
+        "573720e02459776143012541", // 9x18mm PM RG028 gzh 
+    ]
+    public nine_by_one_eight_uncommon = [
+        "57372140245977611f70ee91", // 9x18mm PM SP7 gzh
+        "5737218f245977612125ba51", // 9x18mm PM SP8 gzh
+        "573718ba2459775a75491131", // 9x18mm PM BZhT gzh
+    ]
+    public nine_by_one_eight_rare = [
+        "57371aab2459775a77142f22", // 9x18mm PMM PstM gzh
+        "573719df2459775a626ccbc2", // 9x18mm PM PBM gzh
+    ]
+
+    // 7.62x25 Ammo
+    public seven_six_two_by_two_five_common = [
+        "5737207f24597760ff7b25f2", // 9x18mm PM PSV
+        "573719762459775a626ccbc1", // 9x18mm PM P gzh 
+        "57371f8d24597761006c6a81", // 9x18mm PM PSO gzh
+        "57371f2b24597761224311f1", // 9x18mm PM PS gs PPO 
+        "57371eb62459776125652ac1", // 9x18mm PM PRS gs
+        "57371b192459775a9f58a5e0", // 9x18mm PM PPe gzh 
+        "57371e4124597760ff7b25f1", // 9x18mm PM PPT gzh 
+        "5737201124597760fc4431f1", // 9x18mm PM Pst gzh 
+        "573720e02459776143012541", // 9x18mm PM RG028 gzh 
+    ]
+    public seven_six_two_by_two_five_uncommon = [
+        "57372140245977611f70ee91", // 9x18mm PM SP7 gzh
+        "5737218f245977612125ba51", // 9x18mm PM SP8 gzh
+        "573718ba2459775a75491131", // 9x18mm PM BZhT gzh
+    ]
+    public seven_six_two_by_two_five_rare = [
+        "57371aab2459775a77142f22", // 9x18mm PMM PstM gzh
+        "573719df2459775a626ccbc2", // 9x18mm PM PBM gzh
     ]
 }
