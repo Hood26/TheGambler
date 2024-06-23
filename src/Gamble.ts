@@ -43,7 +43,7 @@ export class Gamble {
     }
 
     public newGamble(): []{
-        
+
         switch(this.name){
             case 'gambling_wallet':
                 this.openWallet();
@@ -576,16 +576,16 @@ export class Gamble {
 
 
         if (roll <= rare_odds) {
-            const secondRoll = this.randomUtil.getInt(0, ammo[name + "Rare"].length - 1);
-            id = ammo[name + "Rare"][secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, ammo[name + "_rare"].length - 1);
+            id = ammo[name + "_rare"][secondRoll];
 
         } else if (roll <= uncommon_odds) {
-            const secondRoll = this.randomUtil.getInt(0, ammo[name + "Uncommon"].length - 1);
-            id = ammo[name + "Uncommon"][secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, ammo[name + "_uncommon"].length - 1);
+            id = ammo[name + "_uncommon"][secondRoll];
             
         } else if (roll <= common_odds) {
-            const secondRoll = this.randomUtil.getInt(0, ammo[name + "Common"].length - 1);
-            id = ammo[name + "Common"][secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, ammo[name + "_common"].length - 1);
+            id = ammo[name + "_common"][secondRoll];
 
         } else { // Nothing
             id = "NaN";
