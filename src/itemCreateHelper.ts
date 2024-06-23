@@ -1187,7 +1187,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Backpack Mystery Bag",
                     shortName: "Backpack Mystery Bag",
-                    description: `Need a new bag for your next loot run?We got you covered!\n==============================\nCommon Backpack - ${this.config.backpack_common}%\nUncommon Backpack - ${this.config.backpack_uncommon}%\nRare Backpack - ${this.config.backpack_rare}%\nExtremely Rare Backpack - ${this.config.backpack_extremely_rare}%`
+                    description: `Need a new bag for your next loot run? We got you covered!\n==============================\nCommon Backpack - ${this.config.backpack_common}%\nUncommon Backpack - ${this.config.backpack_uncommon}%\nRare Backpack - ${this.config.backpack_rare}%\nExtremely Rare Backpack - ${this.config.backpack_extremely_rare}%`
                 }
             }
         };
@@ -1404,6 +1404,113 @@ export class ItemCreateHelper {
             }
         };
 
+        const fivefivesixGamble: NewItemDetails = {
+            newItem: {
+                _id: "a_556x45_gamble",
+                _name: "gambling_fivefivesix",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 5.56",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 5.56",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_556x45_m995.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 5.56",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 5.56",
+                    shortName: "Mystery 5.56",
+                    description: `Looking for your next pick me up? We have all the drugs you could ask for!\n==============================\nCommon Stimulant - ${this.config.stim_common}%\nUncommon Stimulant - ${this.config.stim_uncommon}%\nRare Stimulant - ${this.config.stim_rare}%`
+                }
+            } 
+        }
+
         customItem.createItem(walletGamble);
         customItem.createItem(keyGamble);
         customItem.createItem(stimGamble);
@@ -1417,6 +1524,7 @@ export class ItemCreateHelper {
         customItem.createItem(armorGamble);
         customItem.createItem(premiumArmorGamble);
         customItem.createItem(premiumWeaponGamble);
+        customItem.createItem(fivefivesixGamble);
         
     }
 }

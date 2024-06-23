@@ -16,7 +16,7 @@
     //
     //     2 - Post the error information and the Item Information from the console in TheGambler mod page comments section and this will help me pinpoint the problem.
     //
-    "debug": false, // Default is false
+    "debug": true, // Default is false
     //
     //        
     //           
@@ -73,6 +73,9 @@
 
     "backpack_case_price": 45000,
     "backpack_case_stock": 15,
+
+    "fivefivesix_case_price":555,
+    "fivefivesix_case_stock":555,
 
     // GAMBLING ODDS SECTION 
     //
@@ -149,5 +152,13 @@
     "armor_common": 60.0,   // Common Armor
 
     // gambling_container_premium_armor
-    "premium_armor_rare": 100.0  // Rare Armor
+    "premium_armor_rare": 100.0,  // Rare Armor
+
+    "ammo_odds": {
+        // gambling_container_5.56x45
+        "fivefivesix_common": 60,    // Common 5.56x45
+        "fivefivesix_uncommon": 30,  // Uncommon 5.56x45
+        "fivefivesix_rare": 10.0    // Rare 5.56x45
+    }
+
 }

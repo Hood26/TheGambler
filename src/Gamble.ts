@@ -11,6 +11,7 @@ import { Keys } from "./keys";
 import { Stims } from "./Stims";
 import { Backpacks } from "./Backpacks";
 import { Headsets } from "./Headsets";
+import { Ammo } from "./Ammo";
 
 
 export class Gamble {
@@ -42,7 +43,7 @@ export class Gamble {
     }
 
     public newGamble(): []{
-
+        
         switch(this.name){
             case 'gambling_wallet':
                 this.openWallet();
@@ -82,6 +83,9 @@ export class Gamble {
                 break;
             case 'gambling_premium_armor':
                 this.openPremiumArmor();
+                break;
+            case 'gambling_fivefivesix':
+                this.openAmmo();
                 break;
             default:
                 this.logger.error(`[TheGambler] This Mystery Container Doesn't exist! Contact Author!`);    
@@ -553,6 +557,48 @@ export class Gamble {
 
         if (id != "NaN") {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.foundInRaid = true;
+        }
+    }
+
+    private openAmmo(){
+        let id: string;
+        const ammo = new Ammo();
+        const name = this.name.replace("gambling_", "");
+        this.logger.info(`\n[TheGambler][Ammo] name: ${name}`);
+        const roll = this.randomUtil.getFloat(0,100);
+        this.logger.info(`\n[TheGambler][Ammo] The container roll is: ${roll}!`);
+        const rare_odds = this.config.ammo_odds[name + "_rare"];
+        const uncommon_odds = this.config.ammo_odds[name + "_uncommon"] + rare_odds;
+        const common_odds = this.config.ammo_odds[name + "_common"] + uncommon_odds;
+
+        this.logger.info(`\n[TheGambler][Ammo] rare: ${rare_odds}! uncommon: ${uncommon_odds}! common: ${common_odds}!`);
+
+
+        if (roll <= rare_odds) {
+            const secondRoll = this.randomUtil.getInt(0, ammo[name + "Rare"].length - 1);
+            id = ammo[name + "Rare"][secondRoll];
+
+        } else if (roll <= uncommon_odds) {
+            const secondRoll = this.randomUtil.getInt(0, ammo[name + "Uncommon"].length - 1);
+            id = ammo[name + "Uncommon"][secondRoll];
+            
+        } else if (roll <= common_odds) {
+            const secondRoll = this.randomUtil.getInt(0, ammo[name + "Common"].length - 1);
+            id = ammo[name + "Common"][secondRoll];
+
+        } else { // Nothing
+            id = "NaN";
+            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+        }
+
+        if(this.config.debug) {
+            this.logger.info("[TheGambler] Ammo Mystery Box Information...");
+            this.logger.info("[TheGambler] Ammo id = " + id);
+        }
+
+        if (id != "NaN") {
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, 20)];
             this.newItemsRequest.foundInRaid = true;
         }
     }

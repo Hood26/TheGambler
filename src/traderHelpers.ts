@@ -124,6 +124,7 @@ export class TraderHelper
         const ARMORGAMBLE_ID = "w_armor_gamble";
         const PREMIUMARMORGAMBLE_ID = "w_premium_armor_gamble";
         const PREMIUMGUNGAMBLE_ID = "wa_premium_weapon_gamble";
+        const FIVEFIVESIX_ID = "a_556x45_gamble";
         
         
 
@@ -209,6 +210,12 @@ export class TraderHelper
                                 .addStackCount(config.headset_case_stock)
                                 .addBuyRestriction(config.headset_case_stock)
                                 .addMoneyCost(Money.ROUBLES, (config.headset_case_price * config.price_multiplier))
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(FIVEFIVESIX_ID)
+                                .addStackCount(config.fivefivesix_case_stock)
+                                .addBuyRestriction(config.fivefivesix_case_stock)
+                                .addMoneyCost(Money.ROUBLES, (config.fivefivesix_case_price * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
 
