@@ -128,7 +128,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         this.traderHelper.addTraderToDb(baseJson, tables, jsonUtil);
 
         // Add gambling containers to trader
-        this.traderHelper.addSingleItemsToTrader(tables, baseJson._id, this.fluentAssortCreator, container);
+        this.traderHelper.addSingleItemsToTrader(tables, baseJson._id, this.fluentAssortCreator, container, this.logger);
 
         // Add trader to locale file, ensures trader text shows properly on screen
         // WARNING: adds the same text to ALL locales (e.g. chinese/french/english)
@@ -148,7 +148,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
         const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
         const eventOutputHolder = container.resolve<EventOutputHolder>("EventOutputHolder");
-        const openedItem = pmcData.Inventory.items.find(x => x._id === body.item); // Get opened item from inventory
+        const openedItem = pmcData.Inventory.items.find(x => x._id === body.item);
 
         if (itemHelper.getItem(openedItem._tpl) == undefined){
             this.logger.error("[TheGambler] Cannot find unboxed mystery container in Inventory... Best option is to restart game.. I am not fully sure why this happens...")

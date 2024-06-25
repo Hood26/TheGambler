@@ -1,6 +1,7 @@
 import { DependencyContainer } from "tsyringe";
 import { CustomItemService } from "@spt-aki/services/mod/CustomItemService";
 import { NewItemDetails } from "@spt-aki/models/spt/mod/NewItemDetails";
+import { NewItemFromCloneDetails } from "@spt-aki/models/spt/mod/NewItemDetails";
 
 import { VFS } from "@spt-aki/utils/VFS";
 import { jsonc } from "jsonc";
@@ -18,9 +19,27 @@ export class ItemCreateHelper {
         // Resolve the CustomItemService container
         const customItem = container.resolve<CustomItemService>("CustomItemService");
 
+        const sealedWeaponGamble: NewItemFromCloneDetails = {
+            itemTplToClone: "648990314b4d2b31b63a46fc",
+            //overrideProperties: {},
+            parentId: "62f109593b54472778797866",
+            newId: "a_sealed_weapon_gamble", 
+            fleaPriceRoubles: 300000,
+            handbookPriceRoubles: 300000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Sealed Weapon Case",
+                    shortName: "Sealed Weapon Case",
+                    description: "Looking for a weapon with some shitty attachments that are left for you to attach yourself? Well do we have the perfect container for you. This is the same Sealed Weapon Case you would find in an airdrop and is not custom in any way."
+                }
+            }
+
+        }
+
         const walletGamble: NewItemDetails = {
             newItem: {
-                _id: "a_gambling_wallet",
+                _id: "ba_wallet_gamble",
                 _name: "gambling_wallet",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -126,7 +145,7 @@ export class ItemCreateHelper {
         }
         const keyGamble: NewItemDetails = {
             newItem: {
-                _id: "a_key_gamble",
+                _id: "bb_key_gamble",
                 _name: "gambling_key",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -232,7 +251,7 @@ export class ItemCreateHelper {
         }
         const stimGamble: NewItemDetails = {
             newItem: {
-                _id: "a_stim_gamble",
+                _id: "be_stim_gamble",
                 _name: "gambling_stim",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -339,7 +358,7 @@ export class ItemCreateHelper {
         
         const keycardGamble: NewItemDetails = {
             newItem: {
-                _id: "a_keycard_gamble",
+                _id: "bc_keycard_gamble",
                 _name: "gambling_keycard",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -554,7 +573,7 @@ export class ItemCreateHelper {
 
         const meleeWeaponGamble: NewItemDetails = {
             newItem: {
-                _id: "a_melee_weapon_gamble",
+                _id: "bd_melee_weapon_gamble",
                 _name: "gambling_melee",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -971,8 +990,8 @@ export class ItemCreateHelper {
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
-                    name: "Helmet Mystery Box",
-                    shortName: "Helmet Mystery Box",
+                    name: "Mystery Helmet",
+                    shortName: "Mystery Helmet",
                     description: `Are you tired of Chad PMCs one tapping your dome? Well I can offer protection for you! Purchase a Helmet Mystery Box today!\n==============================\nCommon Helmet - ${this.config.helmet_common}%\nUncommon Helmet - ${this.config.helmet_uncommon}%\nRare Helmet - ${this.config.helmet_rare}%\nExtremely Rare T-7 Thermal Helmet - ${this.config.helmet_extremely_rare}%`
                 }
             }
@@ -1404,10 +1423,10 @@ export class ItemCreateHelper {
             }
         };
 
-        const fivefivesixGamble: NewItemDetails = {
+        const seven_six_two_by_two_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_556x45_gamble",
-                _name: "gambling_fivefivesix",
+                _id: "a_7.62x25_gamble",
+                _name: "gambling_7.62x25",
                 _parent: "62f109593b54472778797866",
                 _props: {
                     "AnimationVariantsNumber": 0,
@@ -1418,7 +1437,7 @@ export class ItemCreateHelper {
                     "CanSellOnRagfair": false,
                     "CantRemoveFromSlotsDuringRaid": [],
                     "ConflictingItems": [],
-                    "Description": "Mystery 5.56",
+                    "Description": "Mystery 7.62x25",
                     "DiscardLimit": -1,
                     "DiscardingBlock": false,
                     "DropSoundType": "None",
@@ -1468,10 +1487,10 @@ export class ItemCreateHelper {
                     "ItemSound": "container_plastic",
                     "LootExperience": 20,
                     "MergesWithChildren": false,
-                    "Name": "Mystery 5.56",
+                    "Name": "Mystery 7.62x25",
                     "NotShownInSlot": false,
                     "Prefab": {
-                        "path": "assets/content/items/ammo/patrons/patron_556x45_m995.bundle",
+                        "path": "assets/content/items/ammo/patrons/patron_762x25tt_pst_gzh.bundle",
                         "rcid": ""
                     },
                     "QuestItem": false,
@@ -1480,7 +1499,7 @@ export class ItemCreateHelper {
                     "RepairCost": 0,
                     "RepairSpeed": 0,
                     "SearchSound": "drawer_metal_looting",
-                    "ShortName": "Mystery 5.56",
+                    "ShortName": "Mystery 7.62x25",
                     "Slots": [],
                     "StackMaxSize": 1,
                     "StackObjectsCount": 1,
@@ -1504,13 +1523,2149 @@ export class ItemCreateHelper {
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
-                    name: "Mystery 5.56",
-                    shortName: "Mystery 5.56",
-                    description: `Looking for your next pick me up? We have all the drugs you could ask for!\n==============================\nCommon Stimulant - ${this.config.stim_common}%\nUncommon Stimulant - ${this.config.stim_uncommon}%\nRare Stimulant - ${this.config.stim_rare}%`
+                    name: "Mystery 7.62x25mm",
+                    shortName: "Mystery 7.62x25mm",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["7.62x25_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["7.62x25_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["7.62x25_rare"]}%`
                 }
             } 
         }
 
+        const nine_by_one_eight_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_9x18_gamble",
+                _name: "gambling_9x18",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 9x18",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 9x18",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_9x18pm_pbm.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 9x18",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 9x18mm Rounds",
+                    shortName: "Mystery 9x18mm Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["9x18_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["9x18_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["9x18_rare"]}%`
+                }
+            } 
+        }
+
+        const nine_by_one_nine_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_9x19_gamble",
+                _name: "gambling_9x19",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 9x19",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 9x19",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_9x19_7n31.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 9x19",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 9x19mm Parabellum Rounds",
+                    shortName: "Mystery 9x19mm Parabellum Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["9x19_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["9x19_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["9x19_rare"]}%`
+                }
+            } 
+        }
+
+        const nine_by_two_one_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_9x21_gamble",
+                _name: "gambling_9x21",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 9x21",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 9x21",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_9x21_7n42.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 9x21",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 9x21mm Gyurza Rounds",
+                    shortName: "Mystery 9x21mm Gyurza Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["9x21_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["9x21_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["9x21_rare"]}%`
+                }
+            } 
+        }
+
+        const three_five_seven_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_.357_gamble",
+                _name: "gambling_.357",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery .357",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery .357",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_9x33r_fmj.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery .357",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery .357 Magnum Rounds",
+                    shortName: "Mystery .357 Magnum Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".357_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".357_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".357_rare"]}%`
+                }
+            } 
+        }
+
+        const four_five_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_.45_gamble",
+                _name: "gambling_.45",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery .45",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery .45",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_1143x23_acp_ap.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery .45",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery .45 ACP Rounds",
+                    shortName: "Mystery .45 ACP Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".45_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".45_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".45_rare"]}%`
+                }
+            } 
+        }
+
+        const four_six_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_4.6x30_gamble",
+                _name: "gambling_4.6x30",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 4.6x30",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 4.6x30",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_46x30_ap_sx.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 4.6x30",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 4.6x30mm HK Rounds",
+                    shortName: "Mystery 4.6x30mm HK Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["4.6x30_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["4.6x30_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["4.6x30_rare"]}%`
+                }
+            } 
+        }
+
+        const five_seven_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_5.7x28_gamble",
+                _name: "gambling_5.7x28",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 5.7x28",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 5.7x28",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_57x28_ss190.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 5.7x28",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 5.7x28mm FN Rounds",
+                    shortName: "Mystery 5.7x28mm FN Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["5.7x28_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["5.7x28_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["5.7x28_rare"]}%`
+                }
+            } 
+        }
+
+        const five_four_five_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_5.45x39_gamble",
+                _name: "gambling_5.45x39",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 5.45x39",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 5.45x39",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_545x39_bs.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 5.45x39",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 5.45x39mm Rounds",
+                    shortName: "Mystery 5.45x39mm Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["5.45x39_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["5.45x39_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["5.45x39_rare"]}%`
+                }
+            } 
+        }
+
+        const fivefivesix_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_5.56x45_gamble",
+                _name: "gambling_5.56x45",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 5.56x45",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 5.56x45",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_556x45_m995.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 5.56x45",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 5.56x45mm NATO Rounds",
+                    shortName: "Mystery 5.56x45mm NATO Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["5.56x45_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["5.56x45_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["5.56x45_rare"]}%`
+                }
+            } 
+        }
+
+        const blackout_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_.300_gamble",
+                _name: "gambling_.300",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery .300",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery .300",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_762x35_ap.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery .300",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery .300 Blackout Rounds",
+                    shortName: "Mystery .300 Blackout Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".300_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".300_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".300_rare"]}%`
+                }
+            } 
+        }
+
+        const seven_six_two_by_three_nine_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_7.62x39_gamble",
+                _name: "gambling_7.62x39",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 7.62x39",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 7.62x39",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_762x39_bp.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 7.62x39",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 7.62x39mm Rounds",
+                    shortName: "Mystery 7.62x39mm Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["7.62x39_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["7.62x39_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["7.62x39_rare"]}%`
+                }
+            } 
+        }
+
+        const seven_six_two_by_five_one_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_7.62x51_gamble",
+                _name: "gambling_7.62x51",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 7.62x51",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 7.62x51",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_762x51.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 7.62x51",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 7.62x51mm NATO Rounds",
+                    shortName: "Mystery 7.62x51mm NATO Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["7.62x51_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["7.62x51_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["7.62x51_rare"]}%`
+                }
+            } 
+        }
+
+        const seven_six_two_by_five_four_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_7.62x54_gamble",
+                _name: "gambling_7.62x54",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 7.62x54",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 7.62x54",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_762x54r_7n14.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 7.62x54",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 7.62x54mm Rounds",
+                    shortName: "Mystery 7.62x54mm Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["7.62x54_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["7.62x54_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["7.62x54_rare"]}%`
+                }
+            } 
+        }
+
+        const three_three_eight_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_.338_gamble",
+                _name: "gambling_.338",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery .338",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery .338",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_86x70_lapua_ap.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery .338",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery .338 Lapua Magnum Rounds",
+                    shortName: "Mystery .338 Lapua Magnum Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".338_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".338_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".338_rare"]}%`
+                }
+            } 
+        }
+
+        const nine_by_three_nine_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_9x39_gamble",
+                _name: "gambling_9x39",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 9x39",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 9x39",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_9x39_sp6.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 9x39",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 9x39mm Rounds",
+                    shortName: "Mystery 9x39mm Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["9x39_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["9x39_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["9x39_rare"]}%`
+                }
+            } 
+        }
+        const three_six_six_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_.366_gamble",
+                _name: "gambling_.366",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery .366",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery .366",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_366_custom_ap.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery .366",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery .366 TKM Rounds",
+                    shortName: "Mystery .366 TKM Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".366_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".366_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".366_rare"]}%`
+                }
+            } 
+        }
+        const one_two_seven_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_12.7x55_gamble",
+                _name: "gambling_12.7x55",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 12.7x55",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 12.7x55",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_12,7x55_ps12b.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 12.7x55",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 12.7x55mm Rounds",
+                    shortName: "Mystery 12.7x55mm Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["12.7x55_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["12.7x55_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["12.7x55_rare"]}%`
+                }
+            } 
+        }
+        const one_two_by_seven_zero_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_12/70_gamble",
+                _name: "gambling_12/70",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 12/70",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 12/70",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_12x70.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 12/70",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 12/70 Rounds",
+                    shortName: "Mystery 12/70 Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["12/70_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["12/70_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["12/70_rare"]}%`
+                }
+            } 
+        }
+        const two_zero_by_seven_zero_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_20/70_gamble",
+                _name: "gambling_20/70",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 20/70",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 20/70",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_20x70.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 20/70",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 20/70 Rounds",
+                    shortName: "Mystery 20/70 Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["20/70_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["20/70_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["20/70_rare"]}%`
+                }
+            } 
+        }
+        const two_three_by_seven_five_Gamble: NewItemDetails = {
+            newItem: {
+                _id: "a_23x75_gamble",
+                _name: "gambling_23x75",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery 23x75",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery 23x75",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/ammo/patrons/patron_23x75_shrapnel_10.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery 23x75",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 40000,
+            handbookPriceRoubles: 40000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery 23x75 Rounds",
+                    shortName: "Mystery 23x75 Rounds",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["23x75_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["23x75_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["23x75_rare"]}%`
+                }
+            } 
+        }
+
+        customItem.createItemFromClone(sealedWeaponGamble);
         customItem.createItem(walletGamble);
         customItem.createItem(keyGamble);
         customItem.createItem(stimGamble);
@@ -1524,7 +3679,27 @@ export class ItemCreateHelper {
         customItem.createItem(armorGamble);
         customItem.createItem(premiumArmorGamble);
         customItem.createItem(premiumWeaponGamble);
-        customItem.createItem(fivefivesixGamble);
+        customItem.createItem(blackout_Gamble);
+        customItem.createItem(four_six_Gamble);
+        customItem.createItem(four_five_Gamble);
+        customItem.createItem(five_seven_Gamble);
+        customItem.createItem(fivefivesix_Gamble);
+        customItem.createItem(one_two_seven_Gamble);
+        customItem.createItem(three_six_six_Gamble);
+        customItem.createItem(five_four_five_Gamble);
+        customItem.createItem(nine_by_two_one_Gamble);
+        customItem.createItem(nine_by_one_nine_Gamble);
+        customItem.createItem(three_five_seven_Gamble);
+        customItem.createItem(nine_by_one_eight_Gamble);
+        customItem.createItem(three_three_eight_Gamble);
+        customItem.createItem(nine_by_three_nine_Gamble);
+        customItem.createItem(one_two_by_seven_zero_Gamble);
+        customItem.createItem(two_zero_by_seven_zero_Gamble);
+        customItem.createItem(two_three_by_seven_five_Gamble);
+        customItem.createItem(seven_six_two_by_five_one_Gamble);
+        customItem.createItem(seven_six_two_by_two_five_Gamble);
+        customItem.createItem(seven_six_two_by_five_four_Gamble);
+        customItem.createItem(seven_six_two_by_three_nine_Gamble);
         
     }
 }

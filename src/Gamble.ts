@@ -84,7 +84,27 @@ export class Gamble {
             case 'gambling_premium_armor':
                 this.openPremiumArmor();
                 break;
-            case 'gambling_fivefivesix':
+            case 'gambling_7.62x25':
+            case 'gambling_9x18':
+            case 'gambling_9x19':
+            case 'gambling_9x21':
+            case 'gambling_.357':
+            case 'gambling_.45':
+            case 'gambling_4.6x30':
+            case 'gambling_5.7x28':
+            case 'gambling_5.45x39':
+            case 'gambling_5.56x45':
+            case 'gambling_.300':
+            case 'gambling_7.62x39':
+            case 'gambling_7.62x51':
+            case 'gambling_7.62x54':
+            case 'gambling_.338':
+            case 'gambling_9x39':
+            case 'gambling_.366':
+            case 'gambling_12.7x55':
+            case 'gambling_12/70':
+            case 'gambling_20/70':
+            case 'gambling_23x75':
                 this.openAmmo();
                 break;
             default:
@@ -572,20 +592,24 @@ export class Gamble {
         const uncommon_odds = this.config.ammo_odds[name + "_uncommon"] + rare_odds;
         const common_odds = this.config.ammo_odds[name + "_common"] + uncommon_odds;
 
+        const rareName = name + "_rare";
+        const uncommonName = name + "_uncommon";
+        const commonName = name + "_common";
+        this.logger.info(`\n[TheGambler][Ammo] rare: ${rareName}! uncommon: ${uncommonName}! common: ${commonName}!`);
         this.logger.info(`\n[TheGambler][Ammo] rare: ${rare_odds}! uncommon: ${uncommon_odds}! common: ${common_odds}!`);
 
 
         if (roll <= rare_odds) {
-            const secondRoll = this.randomUtil.getInt(0, ammo[name + "_rare"].length - 1);
-            id = ammo[name + "_rare"][secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, ammo.ammo[name + "_rare"].length - 1);
+            id = ammo.ammo[name + "_rare"][secondRoll];
 
         } else if (roll <= uncommon_odds) {
-            const secondRoll = this.randomUtil.getInt(0, ammo[name + "_uncommon"].length - 1);
-            id = ammo[name + "_uncommon"][secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, ammo.ammo[name + "_uncommon"].length - 1);
+            id = ammo.ammo[name + "_uncommon"][secondRoll];
             
         } else if (roll <= common_odds) {
-            const secondRoll = this.randomUtil.getInt(0, ammo[name + "_common"].length - 1);
-            id = ammo[name + "_common"][secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, ammo.ammo[name + "_common"].length - 1);
+            id = ammo.ammo[name + "_common"][secondRoll];
 
         } else { // Nothing
             id = "NaN";
@@ -598,7 +622,14 @@ export class Gamble {
         }
 
         if (id != "NaN") {
-            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, 20)];
+            let ammoRoll;
+
+            if(name == ".388") {
+                ammoRoll = this.randomUtil.getFloat(1,6);
+            } else {
+                ammoRoll = this.randomUtil.getFloat(10,30);
+            }
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, ammoRoll)];
             this.newItemsRequest.foundInRaid = true;
         }
     }

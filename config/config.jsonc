@@ -35,11 +35,11 @@
     "wallet_price": 100000,
     "wallet_stock": 15,
 
-    "key_price": 50000,
+    "key_price": 47500,
     "key_stock": 25,
 
     "stimulant_price": 36500,
-    "stimulant_stock": 15,
+    "stimulant_stock": 12,
 
     "keycard_price": 265000,
     "keycard_stock": 15,
@@ -57,7 +57,7 @@
     "premium_gun_case_stock": 4,
 
     "helmet_case_price": 55000,
-    "helmet_case_stock": 10,
+    "helmet_case_stock": 8,
 
     "headset_case_price": 55000,
     "headset_case_stock": 8,
@@ -74,8 +74,72 @@
     "backpack_case_price": 45000,
     "backpack_case_stock": 15,
 
-    "fivefivesix_case_price":555,
-    "fivefivesix_case_stock":555,
+    "ammo_cases_price_and_odds" : {
+
+        "7.62x25_case_price": 10000,
+        "7.62x25_case_stock": 555,
+        
+        "9x18_case_price": 10000,
+        "9x18_case_stock": 555,
+        
+        "9x19_case_price": 10000,
+        "9x19_case_stock": 555,
+        
+        "9x21_case_price": 10000,
+        "9x21_case_stock": 555,
+    
+        ".357_case_price": 10000,
+        ".357_case_stock": 555,
+    
+        ".45_case_price": 10000,
+        ".45_case_stock": 555,
+    
+        "4.6x30_case_price": 10000,
+        "4.6x30_case_stock": 555,
+    
+        "5.7x28_case_price": 10000,
+        "5.7x28_case_stock": 555,
+    
+        "5.45x39_case_price": 8500,
+        "5.45x39_case_stock": 555,
+    
+        "5.56x45_case_price": 11500,
+        "5.56x45_case_stock": 555,
+    
+        ".300_case_price": 10000,
+        ".300_case_stock": 555,
+    
+        "7.62x39_case_price": 10000,
+        "7.62x39_case_stock": 555,
+    
+        "7.62x51_case_price": 11500,
+        "7.62x51_case_stock": 555,
+    
+        "7.62x54_case_price": 14000,
+        "7.62x54_case_stock": 555,
+    
+        ".338_case_price": 15000,
+        ".338_case_stock": 555,
+    
+        "9x39_case_price": 8750,
+        "9x39_case_stock": 555,
+    
+        ".366_case_price": 10000,
+        ".366_case_stock": 555,
+    
+        "12.7x55_case_price": 10000,
+        "12.7x55_case_stock": 555,
+    
+        "12/70_case_price": 10000,
+        "12/70_case_stock": 555,
+    
+        "20/70_case_price": 10000,
+        "20/70_case_stock": 555,
+    
+        "23x75_case_price": 10000,
+        "23x75_case_stock": 555
+    },
+
 
     // GAMBLING ODDS SECTION 
     //
@@ -93,7 +157,7 @@
 
     // gambling_container_key 
     "key_extremely_rare": 0.5, // Extremely Rare Key
-    "key_rare": 5.0,           // Rare Key
+    "key_rare": 10.0,           // Rare Key
     "key_uncommon": 24.5,      // Uncommon Key
     "key_common": 70.0,        // Common Key
 
@@ -155,10 +219,90 @@
     "premium_armor_rare": 100.0,  // Rare Armor
 
     "ammo_odds": {
+        // gambling_container_7.62x25
+        "7.62x25_common": 65,   // Common Round 7.62x25
+        "7.62x25_uncommon": 25, // Uncommon Round 7.62x25
+        "7.62x25_rare": 10.0,   // Rare Round 7.62x25
+        // gambling_container_9x18
+        "9x18_common": 65,      // Common Round 9x18mm
+        "9x18_uncommon": 25.0,    // Uncommon Round 9x18mm
+        "9x18_rare": 10.0,      // Rare Round 9x18mm
+        // gambling_container_9x19
+        "9x19_common": 65.0,       // Common Round 9x19
+        "9x19_uncommon": 25.0,     // Uncommon Round 9x19
+        "9x19_rare": 10.0,       // Rare Round 9x19
+        // gambling_container_9x21
+        "9x21_common": 65.0,        // Common Round 9x21
+        "9x21_uncommon": 25.0,      // Uncommon Round 9x21
+        "9x21_rare": 10.0,        // Rare Round 9x21
+        // gambling_container_.357
+        ".357_common": 65,       // Common Round .357
+        ".357_uncommon": 25.0,     // Uncommon Round .357
+        ".357_rare": 10.0,       // Rare Round .357
+        // gambling_container_.45_ACP
+        ".45_common": 65.0,              // Common Round .45
+        ".45_uncommon": 25.0,            // Uncommon Round .45
+        ".45_rare": 10.0,              // Rare Round .45
+        // gambling_container_4.6x30
+        "4.6x30_common": 65.0,               // Common Round 4.6x30
+        "4.6x30_uncommon": 25.0,             // Uncommon Round 4.6x30
+        "4.6x30_rare": 10.0,               // Rare Round 4.6x30
+        // gambling_container_5.7x28
+        "5.7x28_common": 65.0,             // Common Round 5.7x28
+        "5.7x28_uncommon": 25.0,           // Uncommon Round 5.7x28
+        "5.7x28_rare": 10.0,             // Rare Round 5.7x28
+        // gambling_container_5.45x39
+        "5.45x39_common": 65.0,         // Common Round 5.45x39
+        "5.45x39_uncommon": 25.0,       // Uncommon Round 5.45x39
+        "5.45x39_rare": 10.0,         // Rare Round 5.45x39
         // gambling_container_5.56x45
-        "fivefivesix_common": 60,    // Common 5.56x45
-        "fivefivesix_uncommon": 30,  // Uncommon 5.56x45
-        "fivefivesix_rare": 10.0    // Rare 5.56x45
+        "5.56x45_common": 65.0,          // Common Round 5.56x45
+        "5.56x45_uncommon": 25.0,        // Uncommon Round 5.56x45
+        "5.56x45_rare": 10.0,          // Rare Round 5.56x45
+        // gambling_container_.300_Blackout
+        ".300_common": 65.0,               // Common Round .300
+        ".300_uncommon": 25.0,             // Uncommon Round .300
+        ".300_rare": 10.0,               // Rare Round .300
+        // gambling_container_7.62x39
+        "7.62x39_common": 65.0,   // Common Round 7.62x39
+        "7.62x39_uncommon": 25.0, // Uncommon Round 7.62x39
+        "7.62x39_rare": 10.0,   // Rare Round 7.62x39
+        // gambling_container_7.62x51
+        "7.62x51_common": 65.0,     // Common Round 7.62x51
+        "7.62x51_uncommon": 25.0,   // Uncommon Round 7.62x51
+        "7.62x51_rare": 10.0,     // Rare Round 7.62x51
+        // gambling_container_7.62x54
+        "7.62x54_common": 65.0,    // Common Round 7.62x54
+        "7.62x54_uncommon": 25.0,  // Uncommon Round 7.62x54
+        "7.62x54_rare": 10.0,    // Rare Round 7.62x54
+        // gambling_container_.338
+        ".338_common": 65.0,          // Common Round .338
+        ".338_uncommon": 25.0,        // Uncommon Round .338
+        ".338_rare": 10.0,          // Rare Round .338
+        // gambling_container_9x39
+        "9x39_common": 65.0,         // Common Round 9x39
+        "9x39_uncommon": 25.0,       // Uncommon Round 9x39
+        "9x39_rare": 10.0,         // Rare Round 9x39
+        // gambling_container_.366
+        ".366_common": 65.0,              // Common Round .366
+        ".366_uncommon": 25.0,            // Uncommon Round .366
+        ".366_rare": 10.0,              // Rare Round .366
+        // gambling_container_12.7x55
+        "12.7x55_common": 65.0,              // Common Round 12.7x55
+        "12.7x55_uncommon": 25.0,            // Uncommon Round 12.7x55
+        "12.7x55_rare": 10.0,              // Rare Round 12.7x55
+        // gambling_container_12/70
+        "12/70_common": 65.0,         // Common Round 12/70
+        "12/70_uncommon": 25.0,       // Uncommon Round 12/70
+        "12/70_rare": 10.0,         // Rare Round 12/70
+        // gambling_container_20/70
+        "20/70_common": 65.0,        // Common Round 20/70
+        "20/70_uncommon": 25.0,      // Uncommon Round 20/70
+        "20/70_rare": 10.0,        // Rare Round 20/70
+        // gambling_container_23x75
+        "23x75_common": 65.0,    // Common Round 23x75
+        "23x75_uncommon": 25.0,  // Uncommon Round 23x75
+        "23x75_rare": 10.0    // Rare Round 23x75
     }
 
 }
