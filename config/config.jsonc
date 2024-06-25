@@ -218,7 +218,7 @@
     // gambling_container_premium_armor
     "premium_armor_rare": 100.0,  // Rare Armor
 
-    "ammo_odds": {
+    "ammo_odds": { // NEED TO RENAME TO ITEM ODDS AND REMAKE CUZ THIS SHI ASSS.
         // gambling_container_7.62x25
         "7.62x25_common": 65.0,   // Common Round 7.62x25
         "7.62x25_uncommon": 25.0, // Uncommon Round 7.62x25
