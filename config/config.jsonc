@@ -77,67 +77,67 @@
     "ammo_cases_price_and_odds" : {
 
         "7.62x25_case_price": 10000,
-        "7.62x25_case_stock": 555,
+        "7.62x25_case_stock": 20,
         
         "9x18_case_price": 10000,
-        "9x18_case_stock": 555,
+        "9x18_case_stock": 20,
         
         "9x19_case_price": 10000,
-        "9x19_case_stock": 555,
+        "9x19_case_stock": 20,
         
         "9x21_case_price": 10000,
-        "9x21_case_stock": 555,
+        "9x21_case_stock": 20,
     
         ".357_case_price": 10000,
-        ".357_case_stock": 555,
+        ".357_case_stock": 20,
     
         ".45_case_price": 10000,
-        ".45_case_stock": 555,
+        ".45_case_stock": 20,
     
         "4.6x30_case_price": 10000,
-        "4.6x30_case_stock": 555,
+        "4.6x30_case_stock": 20,
     
         "5.7x28_case_price": 10000,
-        "5.7x28_case_stock": 555,
+        "5.7x28_case_stock": 20,
     
         "5.45x39_case_price": 8500,
-        "5.45x39_case_stock": 555,
+        "5.45x39_case_stock": 20,
     
         "5.56x45_case_price": 11500,
-        "5.56x45_case_stock": 555,
+        "5.56x45_case_stock": 20,
     
         ".300_case_price": 10000,
-        ".300_case_stock": 555,
+        ".300_case_stock": 20,
     
         "7.62x39_case_price": 10000,
-        "7.62x39_case_stock": 555,
+        "7.62x39_case_stock": 20,
     
         "7.62x51_case_price": 11500,
-        "7.62x51_case_stock": 555,
+        "7.62x51_case_stock": 20,
     
         "7.62x54_case_price": 14000,
-        "7.62x54_case_stock": 555,
+        "7.62x54_case_stock": 20,
     
-        ".338_case_price": 15000,
-        ".338_case_stock": 555,
+        ".338_case_price": 30000,
+        ".338_case_stock": 20,
     
         "9x39_case_price": 8750,
-        "9x39_case_stock": 555,
+        "9x39_case_stock": 20,
     
         ".366_case_price": 10000,
-        ".366_case_stock": 555,
+        ".366_case_stock": 20,
     
         "12.7x55_case_price": 10000,
-        "12.7x55_case_stock": 555,
+        "12.7x55_case_stock": 20,
     
         "12/70_case_price": 10000,
-        "12/70_case_stock": 555,
+        "12/70_case_stock": 20,
     
         "20/70_case_price": 10000,
-        "20/70_case_stock": 555,
+        "20/70_case_stock": 20,
     
         "23x75_case_price": 10000,
-        "23x75_case_stock": 555
+        "23x75_case_stock": 20
     },
 
 
@@ -220,11 +220,11 @@
 
     "ammo_odds": {
         // gambling_container_7.62x25
-        "7.62x25_common": 65,   // Common Round 7.62x25
-        "7.62x25_uncommon": 25, // Uncommon Round 7.62x25
+        "7.62x25_common": 65.0,   // Common Round 7.62x25
+        "7.62x25_uncommon": 25.0, // Uncommon Round 7.62x25
         "7.62x25_rare": 10.0,   // Rare Round 7.62x25
         // gambling_container_9x18
-        "9x18_common": 65,      // Common Round 9x18mm
+        "9x18_common": 65.0,      // Common Round 9x18mm
         "9x18_uncommon": 25.0,    // Uncommon Round 9x18mm
         "9x18_rare": 10.0,      // Rare Round 9x18mm
         // gambling_container_9x19
@@ -236,7 +236,7 @@
         "9x21_uncommon": 25.0,      // Uncommon Round 9x21
         "9x21_rare": 10.0,        // Rare Round 9x21
         // gambling_container_.357
-        ".357_common": 65,       // Common Round .357
+        ".357_common": 65.0,       // Common Round .357
         ".357_uncommon": 25.0,     // Uncommon Round .357
         ".357_rare": 10.0,       // Rare Round .357
         // gambling_container_.45_ACP

@@ -7,6 +7,8 @@ export class Ammo {
         '9x21',
         '.357',
         '.45',
+        '4.6x30',
+        '5.7x28',
         '5.45x39',
         '5.56x45',
         '.300',
@@ -22,7 +24,7 @@ export class Ammo {
         '23x75',
     ]
 
-    public ammo = {
+    public items = {
         "7.62x25_common": [
             "573602322459776445391df1", // 7.62x25mm TT LRNPC
             "573601b42459776410737435", // 7.62x25mm TT LRN

@@ -12,6 +12,7 @@ import { Stims } from "./Stims";
 import { Backpacks } from "./Backpacks";
 import { Headsets } from "./Headsets";
 import { Ammo } from "./Ammo";
+import { Melees } from "./Melees";
 
 
 export class Gamble {
@@ -225,20 +226,20 @@ export class Gamble {
         const common_odds = this.config.key_common + uncommon_odds;
 
         if (roll <= extremely_rare_odds) {
-            const secondRoll = this.randomUtil.getInt(0, keys.extremelyRareKeys.length - 1)
-            id = keys.extremelyRareKeys[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, keys.items["keys_extremely_rare"].length - 1)
+            id = keys.items["keys_extremely_rare"][secondRoll];
 
         } else if (roll <= rare_odds) {
-            const secondRoll = this.randomUtil.getInt(0, keys.rareKeys.length - 1);
-            id = keys.rareKeys[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, keys.items["keys_rare"].length - 1);
+            id = keys.items["keys_rare"][secondRoll];
 
         } else if (roll <= uncommon_odds) {
-            const secondRoll = this.randomUtil.getInt(0, keys.uncommonKeys.length - 1);
-            id = keys.uncommonKeys[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, keys.items["keys_uncommon"].length - 1);
+            id = keys.items["keys_uncommon"][secondRoll];
             
         } else if (roll <= common_odds) { // Common Key
-            const secondRoll = this.randomUtil.getInt(0, keys.commonKeys.length - 1);
-            id = keys.commonKeys[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, keys.items["keys_common"].length - 1);
+            id = keys.items["keys_common"][secondRoll];
 
         } else { // Nothing
             id = "NaN";
@@ -266,16 +267,16 @@ export class Gamble {
         const common_odds = this.config.stim_common + uncommon_odds;
 
         if (roll <= rare_odds) {
-            const secondRoll = this.randomUtil.getInt(0, stims.rareStims.length - 1);
-            id = stims.rareStims[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, stims.items['stims_rare'].length - 1);
+            id = stims.items['stims_rare'][secondRoll];
 
         } else if (roll <= uncommon_odds) {
-            const secondRoll = this.randomUtil.getInt(0, stims.uncommonStims.length - 1);
-            id = stims.uncommonStims[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, stims.items['stims_uncommon'].length - 1);
+            id = stims.items['stims_uncommon'][secondRoll];
             
         } else if (roll <= common_odds) { // Common Key
-            const secondRoll = this.randomUtil.getInt(0, stims.commonStims.length - 1);
-            id = stims.commonStims[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, stims.items['stims_uncommon'].length - 1);
+            id = stims.items['stims_common'][secondRoll];
 
         } else { // Nothing
             id = "NaN";
@@ -430,16 +431,16 @@ export class Gamble {
         const common_odds = this.config.backpack_common + uncommon_odds;
 
         if (roll <= rare_odds) {
-            const secondRoll = this.randomUtil.getInt(0, backpacks.rareBackpacks.length - 1);
-            id = backpacks.rareBackpacks[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, backpacks.items["backpacks_rare"].length - 1);
+            id = backpacks.items["backpacks_rare"][secondRoll];
 
         } else if (roll <= uncommon_odds) {
-            const secondRoll = this.randomUtil.getInt(0, backpacks.uncommonBackpacks.length - 1);
-            id = backpacks.uncommonBackpacks[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, backpacks.items["backpacks_uncommon"].length - 1);
+            id = backpacks.items["backpacks_uncommon"][secondRoll];
             
         } else if (roll <= common_odds) { // Common Key
-            const secondRoll = this.randomUtil.getInt(0, backpacks.commonBackpacks.length - 1);
-            id = backpacks.commonBackpacks[secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, backpacks.items["backpacks_common"].length - 1);
+            id = backpacks.items["backpacks_common"][secondRoll];
 
         } else { // Nothing
             id = "NaN";
@@ -513,6 +514,7 @@ export class Gamble {
 
     private openMelee(){
         let id: string;
+        const melees = new Melees();
         const roll = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Melee] The container roll is: ${roll}!`);
         const extremely_rare_odds = this.config.melee_extremely_rare;
@@ -521,50 +523,20 @@ export class Gamble {
         const common_odds = this.config.melee_common + uncommon_odds;
 
         if (roll <= extremely_rare_odds) {
-            const secondRoll = this.randomUtil.getInt(0, 2);
-            //this.logger.info(`[TheGambler] The Second Roll is: ${secondRoll}!`);
-            if(secondRoll == 0) {
-                id = "63920105a83e15700a00f168"; // SOG Voodoo Hawk tactical tomahawk
-            } else if(secondRoll == 1) {
-                id = "5bffe7930db834001b734a39"; // Crash Axe
-            } else if(secondRoll == 2) {
-                id = "601948682627df266209af05"; // UVSR Taiga-1 survival machete
-            }
+            const secondRoll = this.randomUtil.getInt(0, melees.items['melees_extremely_rare'].length - 1);
+            id = melees.items['melees_extremely_rare'][secondRoll];
         } else if (roll <= rare_odds) {
-            const secondRoll = this.randomUtil.getInt(0, 1);
-            if(secondRoll == 0) {
-                id = "5c0126f40db834002a125382"; // Red Rebel ice pick
-            } else if(secondRoll == 1) {
-                id = "5bffdd7e0db834001b734a1a"; // Miller Bros. Blades M-2 Tactical Sword
-            }
+            const secondRoll = this.randomUtil.getInt(0, melees.items['melees_rare'].length - 1);
+            id = melees.items['melees_rare'][secondRoll];
+
         } else if (roll <= uncommon_odds) {
-            const secondRoll = this.randomUtil.getInt(0, 3);
-            if(secondRoll == 0) {
-                id = "5fc64ea372b0dd78d51159dc"; // Cultist knife
-            } else if(secondRoll == 1) {
-                id = "5bc9c1e2d4351e00367fbcf0"; // Antique axe
-            } else if(secondRoll == 2) {
-                id = "5c010e350db83400232feec7"; // SP-8 Survival Machete
-            } else if(secondRoll == 3) {
-                id = "5c012ffc0db834001d23f03f"; // Camper axe
-            }
+            const secondRoll = this.randomUtil.getInt(0, melees.items['melees_uncommon'].length - 1);
+            id = melees.items['melees_uncommon'][secondRoll];
+
         } else if (roll <= common_odds) {
-            const secondRoll = this.randomUtil.getInt(0, 6);
-            if(secondRoll == 0) {
-                id = "5bffdc370db834001d23eca8"; // 6Kh5 Bayonet
-            } else if(secondRoll == 1) {
-                id = "57cd379a24597778e7682ecf"; // Kiba Arms Tactical Tomahawk
-            } else if(secondRoll == 2) {
-                id = "6540d2162ae6d96b540afcaf"; // PR-Taran police baton
-            } else if(secondRoll == 3) {
-                id = "54491bb74bdc2d09088b4567"; // ER FULCRUM BAYONET
-            } else if(secondRoll == 4) {
-                id = "5c07df7f0db834001b73588a"; // Freeman crowbar
-            } else if(secondRoll == 5) {
-                id = "57e26ea924597715ca604a09"; // Bars A-2607 Damascus knife
-            } else if(secondRoll == 6) {
-                id = "57e26fc7245977162a14b800"; // Bars A-2607 95Kh18 knife
-            }
+            const secondRoll = this.randomUtil.getInt(0, melees.items['melees_common'].length - 1);
+            id = melees.items['melees_common'][secondRoll];
+
         } else { // Nothing. Default percentages make this 0% of happening
             id = "NaN";
             this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
@@ -600,16 +572,16 @@ export class Gamble {
 
 
         if (roll <= rare_odds) {
-            const secondRoll = this.randomUtil.getInt(0, ammo.ammo[name + "_rare"].length - 1);
-            id = ammo.ammo[name + "_rare"][secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, ammo.items[name + "_rare"].length - 1);
+            id = ammo.items[name + "_rare"][secondRoll];
 
         } else if (roll <= uncommon_odds) {
-            const secondRoll = this.randomUtil.getInt(0, ammo.ammo[name + "_uncommon"].length - 1);
-            id = ammo.ammo[name + "_uncommon"][secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, ammo.items[name + "_uncommon"].length - 1);
+            id = ammo.items[name + "_uncommon"][secondRoll];
             
         } else if (roll <= common_odds) {
-            const secondRoll = this.randomUtil.getInt(0, ammo.ammo[name + "_common"].length - 1);
-            id = ammo.ammo[name + "_common"][secondRoll];
+            const secondRoll = this.randomUtil.getInt(0, ammo.items[name + "_common"].length - 1);
+            id = ammo.items[name + "_common"][secondRoll];
 
         } else { // Nothing
             id = "NaN";

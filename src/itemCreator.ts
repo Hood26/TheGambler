@@ -31,13 +31,13 @@ export class ItemCreator {
         let baseHelmet: Item[];
 
         if(which == "common") {
-            baseHelmet = this.Helmets.commonHelmet;
+            baseHelmet = this.Helmets.helmet_common;
         } else if (which == "uncommon") {
-            baseHelmet = this.Helmets.uncommonHelmet;
+            baseHelmet = this.Helmets.helmet_uncommon;
         } else if (which == "rare") {
-            baseHelmet = this.Helmets.rareHelmet;
+            baseHelmet = this.Helmets.helmet_rare;
         } else if (which == "extremely_rare") {
-            baseHelmet = this.Helmets.thermalHelmet;
+            baseHelmet = this.Helmets.helmet_extremely_rare;
         }
 
         const randomHelmet = this.getRandomInt(baseHelmet.length);

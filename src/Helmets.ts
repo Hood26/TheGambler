@@ -1,5 +1,5 @@
 export class Helmets {
-  public thermalHelmet = [
+  public helmet_extremely_rare = [
     {
       Items: [
         {
@@ -544,7 +544,7 @@ export class Helmets {
     }
   ];
 
-  public rareHelmet = [
+  public helmet_rare = [
     {
       Items: [
         {
@@ -2981,7 +2981,7 @@ export class Helmets {
     },
   ];
 
-  public uncommonHelmet = [
+  public helmet_uncommon = [
     {
       Items: [
         {
@@ -3652,7 +3652,7 @@ export class Helmets {
     },
   ];
 
-  public commonHelmet = [
+  public helmet_common = [
     {
       Items: [
         {
