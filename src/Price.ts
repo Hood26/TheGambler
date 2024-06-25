@@ -23,45 +23,53 @@ export class Price{
     }
 
     // This is where all Mystery Ammo containers are price generated upon trader postDBLoad
-    public generateMysteryAmmoPrices(){
+    public generateMysteryAmmoPrices(): {} {
         let ammo: Ammo = new Ammo();
         let mysteryAmmoPrices = {};
 
         for(let i = 0; i < ammo.ammoNames.length; i++){
             const current = ammo.ammoNames[i];
-            let currentPrices: Array<number> = this.getPrices(current, ammo);
+            let currentPrices: Array<number> = this.getAmmoPrices(current, ammo);
             let currentContainerPrice = this.config.ammo_cases_price_and_odds[current + "_case_price"];
             const rare_odds = this.config.ammo_odds[current + "_rare"];
             const uncommon_odds = this.config.ammo_odds[current + "_uncommon"] + rare_odds;
             const common_odds = this.config.ammo_odds[current + "_common"] + uncommon_odds;
-            const desiredProfit = 1.20;
             const iterations = 50000;
-            
-            for(let j = 0; j < iterations j++){
-                let sum = 0;
-                const roll = this.randomUtil.getFloat(0, 100);
+            const desiredPercentage = 120; // 120% profit
+            let currentPercentage = -1;
 
-                if (roll <= rare_odds){
-                    sum = sum + currentPrices[0]
-                } else if (roll <= uncommon_odds) {
-                    sum = sum + currentPrices[1]
-                } else if (roll <= common_odds) {
-                    sum = sum + currentPrices[2]
-                } else {
-                    sum = sum + 0
+            while (currentPercentage != desiredPercentage){
+                for(let j = 0; j < iterations; j++){
+                    let sum = 0;
+                    const roll = this.randomUtil.getFloat(0, 100);
+    
+                    if (roll <= rare_odds){
+                        sum = sum + currentPrices[0]
+                    } else if (roll <= uncommon_odds) {
+                        sum = sum + currentPrices[1]
+                    } else if (roll <= common_odds) {
+                        sum = sum + currentPrices[2]
+                    } else {
+                        sum = sum + 0
+                    }
+    
+                    const spent = iterations * currentContainerPrice;
+                    //const profit = sum - spent;
+                    currentPercentage = Math.floor((sum * 100) / spent) 
                 }
 
-                const spent = iterations * currentContainerPrice;
-                const profit = sum - spent;
-                const profitPercentage = sum * 100 
+                if(currentPercentage < desiredPercentage) {
+                    currentContainerPrice += 50;
+                } else if ( currentPercentage > desiredPercentage) {
+                    currentContainerPrice -= 50;
+                }
             }
-
+            mysteryAmmoPrices[current + "_case_price"] = currentContainerPrice;
         }
-
-        
+        return mysteryAmmoPrices;
     }
 
-    private getPrices(name: string, ammo: Ammo): Array<number> {
+    private getAmmoPrices(name: string, ammo: Ammo): Array<number> {
         const databaseServer = this.container.resolve<DatabaseServer>("DatabaseServer")
         const tables: IDatabaseTables = databaseServer.getTables();
         const priceTable = databaseServer.getTables().templates.prices;

@@ -157,7 +157,7 @@
 
     // gambling_container_key 
     "key_extremely_rare": 0.5, // Extremely Rare Key
-    "key_rare": 10.0,           // Rare Key
+    "key_rare": 5.0,           // Rare Key
     "key_uncommon": 24.5,      // Uncommon Key
     "key_common": 70.0,        // Common Key
 
