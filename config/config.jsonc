@@ -1,37 +1,21 @@
-{   // Debug Option: Every Mystery Box opening will post its item information in the console before opening.
-    //
-    //   If your game is crashing when opening any mystery Box from TheGambler do the following:
-    //
-    //     1 - Copy the Item information that was posted in the console right before the Error. This information looks like:
-    //                [
-    //                   { _id: '1c446ddf70bb4a2687f88bbe', _tpl: '5c06c6a80db834001b735491' },
-    //                   {
-    //                    _id: 'e70645ec4817d30ed552d29b',
-    //                    _tpl: '6571199565daf6aa960c9b10',
-    //                    parentId: '1c446ddf70bb4a2687f88bbe',
-    //                    slotId: 'Helmet_top',
-    //                    upd: {}
-    //                   }, ... more data
-    //                ]
-    //
-    //     2 - Post the error information and the Item Information from the console in TheGambler mod page comments section and this will help me pinpoint the problem.
-    //
-    "debug": true, // Default is false
-    //
-    //        
-    //           
-    
-    // Custom Trader Settings
-    //
-    // Trader Refresh time In Seconds. Trader will refresh inventory stock between Min-Max time.
-    "trader_update_min_time": 3600,
-    "trader_update_max_time": 4000, 
+{
+  // Debug Option: Every Mystery Box opening will post its item information in the console before opening.
+  //
+  "debug": true, // Default is false
 
-    // Custom Gambling Price And Stock Settings
-    //
-    // Setting Price_Multiplier for example to 1.20 will make all mystery container 20% more expensive. Setting it to 0.80 will make all mystery contaienr 20% cheaper.
-    "price_multiplier": 1.0,
+  // Custom Trader Settings
+  //
+  // Trader Refresh time In Seconds. Trader will refresh inventory stock between Min-Max time.
+  "trader_update_min_time": 3600,
+  "trader_update_max_time": 4000,
 
+  // Custom Gambling Price And Stock Settings
+  //
+  // Setting Price_Multiplier for example to 1.20 will make all mystery containers 20% more expensive. Setting it to 0.80 will make all mystery containers 20% cheaper.
+  "price_multiplier": 1.0,
+
+  // All Mystery Container Base Prices and Stock
+  "price_stock": {
     "wallet_price": 100000,
     "wallet_stock": 15,
 
@@ -74,235 +58,229 @@
     "backpack_case_price": 45000,
     "backpack_case_stock": 15,
 
-    "ammo_cases_price_and_odds" : {
+    "7.62x25_case_price": 10000,
+    "7.62x25_case_stock": 20,
 
-        "7.62x25_case_price": 10000,
-        "7.62x25_case_stock": 20,
-        
-        "9x18_case_price": 10000,
-        "9x18_case_stock": 20,
-        
-        "9x19_case_price": 10000,
-        "9x19_case_stock": 20,
-        
-        "9x21_case_price": 10000,
-        "9x21_case_stock": 20,
-    
-        ".357_case_price": 10000,
-        ".357_case_stock": 20,
-    
-        ".45_case_price": 10000,
-        ".45_case_stock": 20,
-    
-        "4.6x30_case_price": 10000,
-        "4.6x30_case_stock": 20,
-    
-        "5.7x28_case_price": 10000,
-        "5.7x28_case_stock": 20,
-    
-        "5.45x39_case_price": 8500,
-        "5.45x39_case_stock": 20,
-    
-        "5.56x45_case_price": 11500,
-        "5.56x45_case_stock": 20,
-    
-        ".300_case_price": 10000,
-        ".300_case_stock": 20,
-    
-        "7.62x39_case_price": 10000,
-        "7.62x39_case_stock": 20,
-    
-        "7.62x51_case_price": 11500,
-        "7.62x51_case_stock": 20,
-    
-        "7.62x54_case_price": 14000,
-        "7.62x54_case_stock": 20,
-    
-        ".338_case_price": 30000,
-        ".338_case_stock": 20,
-    
-        "9x39_case_price": 8750,
-        "9x39_case_stock": 20,
-    
-        ".366_case_price": 10000,
-        ".366_case_stock": 20,
-    
-        "12.7x55_case_price": 10000,
-        "12.7x55_case_stock": 20,
-    
-        "12/70_case_price": 10000,
-        "12/70_case_stock": 20,
-    
-        "20/70_case_price": 10000,
-        "20/70_case_stock": 20,
-    
-        "23x75_case_price": 10000,
-        "23x75_case_stock": 20
-    },
+    "9x18_case_price": 10000,
+    "9x18_case_stock": 20,
 
+    "9x19_case_price": 10000,
+    "9x19_case_stock": 20,
 
-    // GAMBLING ODDS SECTION 
-    //
-    //
-    //
-    // gambling_container_wallet 
+    "9x21_case_price": 10000,
+    "9x21_case_stock": 20,
+
+    ".357_case_price": 10000,
+    ".357_case_stock": 20,
+
+    ".45_case_price": 10000,
+    ".45_case_stock": 20,
+
+    "4.6x30_case_price": 10000,
+    "4.6x30_case_stock": 20,
+
+    "5.7x28_case_price": 10000,
+    "5.7x28_case_stock": 20,
+
+    "5.45x39_case_price": 8500,
+    "5.45x39_case_stock": 20,
+
+    "5.56x45_case_price": 11500,
+    "5.56x45_case_stock": 20,
+
+    ".300_case_price": 10000,
+    ".300_case_stock": 20,
+
+    "7.62x39_case_price": 10000,
+    "7.62x39_case_stock": 20,
+
+    "7.62x51_case_price": 11500,
+    "7.62x51_case_stock": 20,
+
+    "7.62x54_case_price": 14000,
+    "7.62x54_case_stock": 20,
+
+    ".338_case_price": 30000,
+    ".338_case_stock": 20,
+
+    "9x39_case_price": 8750,
+    "9x39_case_stock": 20,
+
+    ".366_case_price": 10000,
+    ".366_case_stock": 20,
+
+    "12.7x55_case_price": 10000,
+    "12.7x55_case_stock": 20,
+
+    "12/70_case_price": 10000,
+    "12/70_case_stock": 20,
+
+    "20/70_case_price": 10000,
+    "20/70_case_stock": 20,
+
+    "23x75_case_price": 10000,
+    "23x75_case_stock": 20
+  },
+
+  // GAMBLING ODDS SECTION
+  //
+  //
+  //
+  "odds": {
+    // gambling_container_wallet
     //
     // Chance for each possibility in percentage from rarest to most common
-    "wallet_extremely_rare": 1,    // 2 Million Roubles
-    "wallet_rare": 2,              // 1 Miliion Roubles
-    "wallet_kinda_rare": 4,        // 500k Roubles
-    "wallet_uncommon": 9,          // 300k Roubles
-    "wallet_common": 35,           // 100K Roubles
+    "wallet_extremely_rare": 1,   // 2 Million Roubles
+    "wallet_rare": 2,             // 1 Miliion Roubles
+    "wallet_kinda_rare": 4,       // 500k Roubles
+    "wallet_uncommon": 9,         // 300k Roubles
+    "wallet_common": 35,          // 100K Roubles
     // 100% - all above percentages = % at receiving nothing from gambling container. If desired. (Applies to all gambling containers!)
 
-    // gambling_container_key 
-    "key_extremely_rare": 0.5, // Extremely Rare Key
-    "key_rare": 5.0,           // Rare Key
-    "key_uncommon": 24.5,      // Uncommon Key
-    "key_common": 70.0,        // Common Key
+    // gambling_container_key
+    "key_extremely_rare": 0.5,    // Extremely Rare Key
+    "key_rare": 5.0,              // Rare Key
+    "key_uncommon": 24.5,         // Uncommon Key
+    "key_common": 70.0,           // Common Key
 
-    // gambling_container_stim 
-    "stim_rare": 15.0,           // Rare Stim
-    "stim_uncommon": 30.0,       // Uncommon Stim
-    "stim_common": 55.0,         // Common Stim
+    // gambling_container_stim
+    "stim_rare": 15.0,            // Rare Stim
+    "stim_uncommon": 30.0,        // Uncommon Stim
+    "stim_common": 55.0,          // Common Stim
 
     // gambling_container_keycard
-    "keycard_red": 0.1,              // Red Keycard
-    "keycard_green": 0.2,            // Green Keycard
-    "keycard_blue": 0.25,            // Blue Keycard
-    "keycard_violet": 0.35,          // Violet Keycard
-    "keycard_black": 0.65,           // Black Keycard
-    "keycard_yellow": 1.2,           // Yellow Keycard
-    "keycard_blue_marking": 6.25,    // Keycard with blue marking
-    "keycard_21WS": 8,               // 21WS Keycard
-    "keycard_11SR": 8,               // 11SR Keycard
-    "keycard_access": 55,            // Access Keycard
+    "keycard_red": 0.1,           // Red Keycard
+    "keycard_green": 0.2,         // Green Keycard
+    "keycard_blue": 0.25,         // Blue Keycard
+    "keycard_violet": 0.35,       // Violet Keycard
+    "keycard_black": 0.65,        // Black Keycard
+    "keycard_yellow": 1.2,        // Yellow Keycard
+    "keycard_blue_marking": 6.25, // Keycard with blue marking
+    "keycard_21WS": 8,            // 21WS Keycard
+    "keycard_11SR": 8,            // 11SR Keycard
+    "keycard_access": 55,         // Access Keycard
 
     // gambling_container_melee
-    "melee_extremely_rare": 0.25,    // Extremely Rare melee
-    "melee_rare": 2.0,               // Rare melee
-    "melee_uncommon": 22.75,         // Uncommon melee
-    "melee_common": 75.0,            // Common melee
+    "melee_extremely_rare": 0.25, // Extremely Rare melee
+    "melee_rare": 2.0,            // Rare melee
+    "melee_uncommon": 22.75,      // Uncommon melee
+    "melee_common": 75.0,         // Common melee
 
     // gambling_container_backpack
-    "backpack_extremely_rare": 5,    // Extremely Rare melee
-    "backpack_rare": 12,             // Rare melee
-    "backpack_uncommon": 30,         // Uncommon melee
-    "backpack_common": 53,           // Common melee
+    "backpack_extremely_rare": 5, // Extremely Rare melee
+    "backpack_rare": 12,          // Rare melee
+    "backpack_uncommon": 30,      // Uncommon melee
+    "backpack_common": 53,        // Common melee
 
     // gambling_container_weapon
-    "gun_rare": 10,        // Rare Gun
-    "gun_meme": 7,         // Meme Gun
-    "gun_uncommon": 28,    // Semi-modded Gun
-    "gun_scav": 20,        // Scav Gun
-    "gun_common": 35,      // Default Gun
+    "gun_meta": 10,               // Meta Gun
+    "gun_meme": 7,                // Meme Gun
+    "gun_uncommon": 28,           // Semi-modded Gun
+    "gun_scav": 20,               // Scav Gun
+    "gun_common": 35,             // Default Gun
 
     // gambling_container_premium_weapon
-    "premium_gun_rare": 100.0,  // Rare Gun
+    "premium_gun_meta": 100.0,    // Rare Gun
 
-    // gambling_container_key 
-    "helmet_extremely_rare": 0.35, // Extremely Rare Key
-    "helmet_rare": 20.0,           // Rare Key
-    "helmet_uncommon": 37.0,       // Uncommon Key
-    "helmet_common": 42.65,        // Common Key
+    // gambling_container_key
+    "helmet_extremely_rare": 0.35,// Extremely Rare Key
+    "helmet_rare": 20.0,          // Rare Key
+    "helmet_uncommon": 37.0,      // Uncommon Key
+    "helmet_common": 42.65,       // Common Key
 
-    // gambling_container_key 
-    "headset_chance": 100.0, // Chance at receiving a random headset 
-
+    // gambling_container_key
+    "headset_chance": 100.0,      // Chance at receiving a random headset
 
     // gambling_container_armor
-    "armor_rare": 15.0,     // Rare Armor
-    "armor_uncommon": 25.0, // Uncommon Armor
-    "armor_common": 60.0,   // Common Armor
+    "armor_rare": 15.0,           // Rare Armor
+    "armor_uncommon": 25.0,       // Uncommon Armor
+    "armor_common": 60.0,         // Common Armor
 
     // gambling_container_premium_armor
     "premium_armor_rare": 100.0,  // Rare Armor
-
-    "ammo_odds": { // NEED TO RENAME TO ITEM ODDS AND REMAKE CUZ THIS SHI ASSS.
-        // gambling_container_7.62x25
-        "7.62x25_common": 65.0,   // Common Round 7.62x25
-        "7.62x25_uncommon": 25.0, // Uncommon Round 7.62x25
-        "7.62x25_rare": 10.0,   // Rare Round 7.62x25
-        // gambling_container_9x18
-        "9x18_common": 65.0,      // Common Round 9x18mm
-        "9x18_uncommon": 25.0,    // Uncommon Round 9x18mm
-        "9x18_rare": 10.0,      // Rare Round 9x18mm
-        // gambling_container_9x19
-        "9x19_common": 65.0,       // Common Round 9x19
-        "9x19_uncommon": 25.0,     // Uncommon Round 9x19
-        "9x19_rare": 10.0,       // Rare Round 9x19
-        // gambling_container_9x21
-        "9x21_common": 65.0,        // Common Round 9x21
-        "9x21_uncommon": 25.0,      // Uncommon Round 9x21
-        "9x21_rare": 10.0,        // Rare Round 9x21
-        // gambling_container_.357
-        ".357_common": 65.0,       // Common Round .357
-        ".357_uncommon": 25.0,     // Uncommon Round .357
-        ".357_rare": 10.0,       // Rare Round .357
-        // gambling_container_.45_ACP
-        ".45_common": 65.0,              // Common Round .45
-        ".45_uncommon": 25.0,            // Uncommon Round .45
-        ".45_rare": 10.0,              // Rare Round .45
-        // gambling_container_4.6x30
-        "4.6x30_common": 65.0,               // Common Round 4.6x30
-        "4.6x30_uncommon": 25.0,             // Uncommon Round 4.6x30
-        "4.6x30_rare": 10.0,               // Rare Round 4.6x30
-        // gambling_container_5.7x28
-        "5.7x28_common": 65.0,             // Common Round 5.7x28
-        "5.7x28_uncommon": 25.0,           // Uncommon Round 5.7x28
-        "5.7x28_rare": 10.0,             // Rare Round 5.7x28
-        // gambling_container_5.45x39
-        "5.45x39_common": 65.0,         // Common Round 5.45x39
-        "5.45x39_uncommon": 25.0,       // Uncommon Round 5.45x39
-        "5.45x39_rare": 10.0,         // Rare Round 5.45x39
-        // gambling_container_5.56x45
-        "5.56x45_common": 65.0,          // Common Round 5.56x45
-        "5.56x45_uncommon": 25.0,        // Uncommon Round 5.56x45
-        "5.56x45_rare": 10.0,          // Rare Round 5.56x45
-        // gambling_container_.300_Blackout
-        ".300_common": 65.0,               // Common Round .300
-        ".300_uncommon": 25.0,             // Uncommon Round .300
-        ".300_rare": 10.0,               // Rare Round .300
-        // gambling_container_7.62x39
-        "7.62x39_common": 65.0,   // Common Round 7.62x39
-        "7.62x39_uncommon": 25.0, // Uncommon Round 7.62x39
-        "7.62x39_rare": 10.0,   // Rare Round 7.62x39
-        // gambling_container_7.62x51
-        "7.62x51_common": 65.0,     // Common Round 7.62x51
-        "7.62x51_uncommon": 25.0,   // Uncommon Round 7.62x51
-        "7.62x51_rare": 10.0,     // Rare Round 7.62x51
-        // gambling_container_7.62x54
-        "7.62x54_common": 65.0,    // Common Round 7.62x54
-        "7.62x54_uncommon": 25.0,  // Uncommon Round 7.62x54
-        "7.62x54_rare": 10.0,    // Rare Round 7.62x54
-        // gambling_container_.338
-        ".338_common": 65.0,          // Common Round .338
-        ".338_uncommon": 25.0,        // Uncommon Round .338
-        ".338_rare": 10.0,          // Rare Round .338
-        // gambling_container_9x39
-        "9x39_common": 65.0,         // Common Round 9x39
-        "9x39_uncommon": 25.0,       // Uncommon Round 9x39
-        "9x39_rare": 10.0,         // Rare Round 9x39
-        // gambling_container_.366
-        ".366_common": 65.0,              // Common Round .366
-        ".366_uncommon": 25.0,            // Uncommon Round .366
-        ".366_rare": 10.0,              // Rare Round .366
-        // gambling_container_12.7x55
-        "12.7x55_common": 65.0,              // Common Round 12.7x55
-        "12.7x55_uncommon": 25.0,            // Uncommon Round 12.7x55
-        "12.7x55_rare": 10.0,              // Rare Round 12.7x55
-        // gambling_container_12/70
-        "12/70_common": 65.0,         // Common Round 12/70
-        "12/70_uncommon": 25.0,       // Uncommon Round 12/70
-        "12/70_rare": 10.0,         // Rare Round 12/70
-        // gambling_container_20/70
-        "20/70_common": 65.0,        // Common Round 20/70
-        "20/70_uncommon": 25.0,      // Uncommon Round 20/70
-        "20/70_rare": 10.0,        // Rare Round 20/70
-        // gambling_container_23x75
-        "23x75_common": 65.0,    // Common Round 23x75
-        "23x75_uncommon": 25.0,  // Uncommon Round 23x75
-        "23x75_rare": 10.0    // Rare Round 23x75
-    }
-
+    // gambling_container_7.62x25
+    "7.62x25_common": 65.0,       // Common Round 7.62x25
+    "7.62x25_uncommon": 25.0,     // Uncommon Round 7.62x25
+    "7.62x25_rare": 10.0,         // Rare Round 7.62x25
+    // gambling_container_9x18
+    "9x18_common": 65.0,          // Common Round 9x18mm
+    "9x18_uncommon": 25.0,        // Uncommon Round 9x18mm
+    "9x18_rare": 10.0,            // Rare Round 9x18mm
+    // gambling_container_9x19
+    "9x19_common": 65.0,          // Common Round 9x19
+    "9x19_uncommon": 25.0,        // Uncommon Round 9x19
+    "9x19_rare": 10.0,            // Rare Round 9x19
+    // gambling_container_9x21
+    "9x21_common": 65.0,          // Common Round 9x21
+    "9x21_uncommon": 25.0,        // Uncommon Round 9x21
+    "9x21_rare": 10.0,            // Rare Round 9x21
+    // gambling_container_.357
+    ".357_common": 65.0,          // Common Round .357
+    ".357_uncommon": 25.0,        // Uncommon Round .357
+    ".357_rare": 10.0,            // Rare Round .357
+    // gambling_container_.45_ACP
+    ".45_common": 65.0,           // Common Round .45
+    ".45_uncommon": 25.0,         // Uncommon Round .45
+    ".45_rare": 10.0,             // Rare Round .45
+    // gambling_container_4.6x30
+    "4.6x30_common": 65.0,        // Common Round 4.6x30
+    "4.6x30_uncommon": 25.0,      // Uncommon Round 4.6x30
+    "4.6x30_rare": 10.0,          // Rare Round 4.6x30
+    // gambling_container_5.7x28
+    "5.7x28_common": 65.0,        // Common Round 5.7x28
+    "5.7x28_uncommon": 25.0,      // Uncommon Round 5.7x28
+    "5.7x28_rare": 10.0,          // Rare Round 5.7x28
+    // gambling_container_5.45x39
+    "5.45x39_common": 65.0,       // Common Round 5.45x39
+    "5.45x39_uncommon": 25.0,     // Uncommon Round 5.45x39
+    "5.45x39_rare": 10.0,         // Rare Round 5.45x39
+    // gambling_container_5.56x45
+    "5.56x45_common": 65.0,       // Common Round 5.56x45
+    "5.56x45_uncommon": 25.0,     // Uncommon Round 5.56x45
+    "5.56x45_rare": 10.0,         // Rare Round 5.56x45
+    // gambling_container_.300_Blackout
+    ".300_common": 65.0,          // Common Round .300
+    ".300_uncommon": 25.0,        // Uncommon Round .300
+    ".300_rare": 10.0,            // Rare Round .300
+    // gambling_container_7.62x39
+    "7.62x39_common": 65.0,       // Common Round 7.62x39
+    "7.62x39_uncommon": 25.0,     // Uncommon Round 7.62x39
+    "7.62x39_rare": 10.0,         // Rare Round 7.62x39
+    // gambling_container_7.62x51
+    "7.62x51_common": 65.0,       // Common Round 7.62x51
+    "7.62x51_uncommon": 25.0,     // Uncommon Round 7.62x51
+    "7.62x51_rare": 10.0,         // Rare Round 7.62x51
+    // gambling_container_7.62x54
+    "7.62x54_common": 65.0,       // Common Round 7.62x54
+    "7.62x54_uncommon": 25.0,     // Uncommon Round 7.62x54
+    "7.62x54_rare": 10.0,         // Rare Round 7.62x54
+    // gambling_container_.338
+    ".338_common": 65.0,          // Common Round .338
+    ".338_uncommon": 25.0,        // Uncommon Round .338
+    ".338_rare": 10.0,            // Rare Round .338
+    // gambling_container_9x39
+    "9x39_common": 65.0,          // Common Round 9x39
+    "9x39_uncommon": 25.0,        // Uncommon Round 9x39
+    "9x39_rare": 10.0,            // Rare Round 9x39
+    // gambling_container_.366
+    ".366_common": 65.0,          // Common Round .366
+    ".366_uncommon": 25.0,        // Uncommon Round .366
+    ".366_rare": 10.0,            // Rare Round .366
+    // gambling_container_12.7x55
+    "12.7x55_common": 65.0,       // Common Round 12.7x55
+    "12.7x55_uncommon": 25.0,     // Uncommon Round 12.7x55
+    "12.7x55_rare": 10.0,         // Rare Round 12.7x55
+    // gambling_container_12/70
+    "12/70_common": 65.0,         // Common Round 12/70
+    "12/70_uncommon": 25.0,       // Uncommon Round 12/70
+    "12/70_rare": 10.0,           // Rare Round 12/70
+    // gambling_container_20/70
+    "20/70_common": 65.0,         // Common Round 20/70
+    "20/70_uncommon": 25.0,       // Uncommon Round 20/70
+    "20/70_rare": 10.0,           // Rare Round 20/70
+    // gambling_container_23x75
+    "23x75_common": 65.0, // Common Round 23x75
+    "23x75_uncommon": 25.0, // Uncommon Round 23x75
+    "23x75_rare": 10.0 // Rare Round 23x75
+  }
 }
