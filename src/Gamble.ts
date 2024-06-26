@@ -20,14 +20,13 @@ export class Gamble {
 
     public newItemsRequest: IAddItemDirectRequest;
     public name: string;
-    //private id: string;
     private count: number;
     private mysteryContainer: MysteryContainer;
-    protected container: DependencyContainer;
-    protected hashUtil: HashUtil;
-    protected logger: ILogger;
-    protected randomUtil: RandomUtil;
-    protected config: any;
+    private container: DependencyContainer;
+    private hashUtil: HashUtil;
+    private logger: ILogger;
+    private randomUtil: RandomUtil;
+    private config: any;
 
     constructor(container: DependencyContainer, config: any, logger: ILogger, name :string){
         this.name             = name;
@@ -118,19 +117,15 @@ export class Gamble {
     }
 
     private openWallet(){
-        const roll = this.randomUtil.getFloat(0, 100);
+        const roll: number = this.randomUtil.getFloat(0, 100);
         this.logger.info(`\n[TheGambler][Wallet] The container roll is: ${roll}!`);
-        const odds = this.mysteryContainer.getOdds('wallet');
-        let money: number;
+        const odds: Array<number> = this.mysteryContainer.getOdds('wallet');
+        let money: number = -1;
 
         for(let i = 0; i < odds.length; i++) {
-
             if(roll <= odds[i]) {
                 money = this.mysteryContainer.getReward('wallet', i);
                 break;  
-            } else if (i + 1 == odds.length) {
-                money = 0;
-                this.logger.info(`[TheGambler][wallet] Case Opened... Received Nothing... Better luck next time :)`);
             }
         }
 
@@ -138,24 +133,22 @@ export class Gamble {
             const id = "5449016a4bdc2d6f028b456f"; // Roubles
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, money)];
             this.newItemsRequest.foundInRaid = true;
+        } else {
+            this.logger.info(`[TheGambler][wallet] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
     private openKeycard(){
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Keycard] The container roll is: ${roll}!`);
-        const odds = this.mysteryContainer.getOdds('keycard');
-        let id: string;
+        const odds: Array<number> = this.mysteryContainer.getOdds('keycard');
+        let id: string = "NaN";
 
         for(let i = 0; i < odds.length; i++) {
-
             if(roll <= odds[i]) {
                 id = this.mysteryContainer.getReward('keycard', i);
                 break;  
-            } else if (i + 1 == odds.length) {
-                id = 'NaN';
-                this.logger.info(`[TheGambler][keycard] Case Opened... Received Nothing... Better luck next time :)`);
-            }
+            } 
         }
 
         if(this.config.debug) {
@@ -166,13 +159,15 @@ export class Gamble {
         if (id != "NaN" ) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
+        } else {
+            this.logger.info(`[TheGambler][keycard] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
     private openFiftyFifty(){
         let id: string;
         let money: number;
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
 
         if (roll <= 50) {
             id = "57347d7224597744596b4e72"; // Can of beef stew (Small)
@@ -187,22 +182,18 @@ export class Gamble {
     }
 
     private openKey(){
-        let id: string;
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Key] The container roll is: ${roll}!`);
         const keys = new Keys(); // stores arrays of keys sorted by rarity
-        const odds = this.mysteryContainer.getOdds('key');
+        const odds: Array<number> = this.mysteryContainer.getOdds('key');
         const rarities = this.mysteryContainer.getRarities('key');
+        let id: string = "NaN";
 
         for(let i = 0; i < odds.length; i++) {
-
             if(roll <= odds[i]) {
                 const secondRoll = this.randomUtil.getInt(0, keys.items['keys' + rarities[i]].length - 1);
                 id = keys.items['keys' + rarities[i]][secondRoll];
                 break;  
-            } else if (i + 1 == odds.length) {
-                id = 'NaN';
-                this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
             }
         }
 
@@ -214,27 +205,25 @@ export class Gamble {
         if (id != "NaN") {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
-        } 
+        } else {
+            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+        }
     }
 
     private openStim(){
-        let id: string;
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Stimulant] The container roll is: ${roll}!`);
         const stims = new Stims();
-        const odds = this.mysteryContainer.getOdds('stim');
+        const odds: Array<number> = this.mysteryContainer.getOdds('stim');
         const rarities = this.mysteryContainer.getRarities('stim');
+        let id: string = "NaN";
 
         for(let i = 0; i < odds.length; i++) {
-
             if(roll <= odds[i]) {
                 const secondRoll = this.randomUtil.getInt(0, stims.items['stim' + rarities[i]].length - 1);
                 id = stims.items['stim' + rarities[i]][secondRoll];
                 break;  
-            } else if (i + 1 == odds.length) {
-                id = 'NaN';
-                this.logger.info(`[TheGambler][Stim] Case Opened... Received Nothing... Better luck next time :)`);
-            }
+            } 
         }
 
         if(this.config.debug) {
@@ -245,6 +234,8 @@ export class Gamble {
         if (id != "NaN") {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
+        } else {
+            this.logger.info(`[TheGambler][Stim] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
@@ -253,17 +244,14 @@ export class Gamble {
         // ItemCreator.ts stores all gun presets
         let item = new ItemCreator(this.container);
         let createWeapon: Item[] = [];
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Weapon] The container roll is: ${roll}!`);
-        const odds = this.mysteryContainer.getOdds('gun');
+        const odds: Array<number> = this.mysteryContainer.getOdds('gun');
 
         for(let i = 0; i < odds.length; i++) {
-
             if(roll <= odds[i]) {
                 createWeapon = item.createGun(this.mysteryContainer.getReward('gun', i));
                 break;  
-            } else if (i + 1 == odds.length) {
-                this.logger.info(`[TheGambler][Weapon] Case Opened... Received Nothing... Better luck next time :)`);
             }
         }
 
@@ -275,11 +263,13 @@ export class Gamble {
         if (createWeapon.length != 0) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createWeapon];
             this.newItemsRequest.foundInRaid = true;
+        } else {
+            this.logger.info(`[TheGambler][Weapon] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
     private openPremiumWeapon(){
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Premium_Weapon] The container roll is: ${roll}!`);
         let item = new ItemCreator(this.container);
         let createGun: Item[] = [];
@@ -303,7 +293,7 @@ export class Gamble {
     }
 
     private openHelmet(){
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Helmet] The container roll is: ${roll}!`);
         let item = new ItemCreator(this.container);
         let createHelmet: Item[] = [];
@@ -340,7 +330,7 @@ export class Gamble {
 
     private openHeadset(){
         let id: string;
-        const roll = this.randomUtil.getFloat(0,8);
+        const roll: number = this.randomUtil.getFloat(0,8);
         this.logger.info(`\n[TheGambler][Headset] The container roll is: ${roll}!`);
         const headsets = new Headsets();
         const headset_odds = this.config.headset_chance;
@@ -368,7 +358,7 @@ export class Gamble {
 
     private openBackpack(){
         let id: string;
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Backpack] The container roll is: ${roll}!`);
         const backpacks = new Backpacks();
         const extremely_rare_odds = this.config.backpack_extremely_rare;
@@ -405,7 +395,7 @@ export class Gamble {
     }
 
     private openArmor(){
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Armor] The container roll is: ${roll}!`);
         let item = new ItemCreator(this.container);
         let createArmor: Item[] = [];
@@ -435,7 +425,7 @@ export class Gamble {
 
 
     private openPremiumArmor(){
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Premium_Armor] The container roll is: ${roll}!`);
         let item = new ItemCreator(this.container);
         let createArmor: Item[] = [];
@@ -461,7 +451,7 @@ export class Gamble {
     private openMelee(){
         let id: string;
         const melees = new Melees();
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Melee] The container roll is: ${roll}!`);
         const extremely_rare_odds = this.config.melee_extremely_rare;
         const rare_odds = this.config.melee_rare + extremely_rare_odds;
@@ -504,7 +494,7 @@ export class Gamble {
         const ammo = new Ammo();
         const name = this.name.replace("gambling_", "");
         this.logger.info(`\n[TheGambler][Ammo] name: ${name}`);
-        const roll = this.randomUtil.getFloat(0,100);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Ammo] The container roll is: ${roll}!`);
         const rare_odds = this.config.ammo_odds[name + "_rare"];
         const uncommon_odds = this.config.ammo_odds[name + "_uncommon"] + rare_odds;
