@@ -1,18 +1,20 @@
 export class MysteryContainer{
-    private container;
     private config;
+    private logger;
+    private container;
 
-    constructor(config){
-        this.container = this.generateOdds(this.containersData)
+    constructor(config, logger){
         this.config    = config;
+        this.logger    = logger;
+        this.container = this.generateOdds(this.containersData)
     }
 
     private generateOdds(containerData) {
         let data = containerData;
-
+        
         for (const name in data){
             for(let i = 0; i < data[name]['rarities'].length; i++){
-
+                
                 if(i == 0) {
                     data[name]['odds'][i] = this.config.odds[name + data[name]['rarities'][i]];
                 } else {
@@ -38,7 +40,7 @@ export class MysteryContainer{
     private containersData = {
         'wallet': {
             'name': 'wallet', 
-            'rarities': ["_extremely_rare", "_rare", "kinda_rare", "_uncommon", "_common"],
+            'rarities': ["_extremely_rare", "_rare", "_kinda_rare", "_uncommon", "_common"],
             'odds': [],
             'rewards': [2000000, 1000000, 500000, 300000, 100000],
         },
@@ -59,6 +61,16 @@ export class MysteryContainer{
                 "5c94bbff86f7747ee735c08f", // TerraGroup Labs access keycard 
             ],
         },
+        'key': {
+            'name': 'key', 
+            'rarities': ["_extremely_rare","_rare", "_uncommon", "_common"],
+            'odds': [],
+        },
+        'stim': {
+            'name': 'stim', 
+            'rarities': ["_rare", "_uncommon", "_common"],
+            'odds': [],
+        },
         'melee': {
             'name': 'melee', 
             'rarities': ["_extremely_rare","_rare", "_uncommon", "_common"],
@@ -66,14 +78,14 @@ export class MysteryContainer{
         },
         'backpack': {
             'name': 'backpack', 
-            'rarities': ["_extremely_rare", "_rare", "kinda_rare", "_uncommon", "_common"],
+            'rarities': ["_extremely_rare", "_rare", "_uncommon", "_common"],
             'odds': [],
         },
         'gun': {
             'name': 'gun', 
-            'rarities': ["_meta", "_meme", "_uncommon", "_scav", "_common"],
+            'rarities': ["_meta", "_meme", "_decent", "_scav", "_base"],
             'odds': [],
-            'rewards': ["meta", "meme", "uncommon", "scav", "common"],
+            'rewards': ["meta", "meme", "decent", "scav", "base"],
         },
         'premium_gun': {
             'name': 'premium_gun', 
@@ -85,6 +97,7 @@ export class MysteryContainer{
             'name': 'helmet', 
             'rarities': ["_extremely_rare", "_rare", "_uncommon", "_common"],
             'odds': [],
+            'rewards': ["extremely_rare", "rare", "uncommon", "common"],
         },
         'headset': {
             'name': 'headset', 
@@ -95,11 +108,13 @@ export class MysteryContainer{
             'name': 'armor', 
             'rarities': ["_rare", "_uncommon", "_common"],
             'odds': [],
+            'rewards': ["rare", "uncommon", "common"],
         },
         'premium_armor': {
             'name': 'premium_armor', 
             'rarities': ["_rare"],
             'odds': [],
+            'rewards': ["rare"],
         },
         '7.62x25': {
             'name': '7.62x25', 

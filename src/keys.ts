@@ -1,6 +1,6 @@
 export class Keys {
   public items = {
-    keys_common: [
+    key_common: [
       "593858c486f774253a24cb52", // Pumping station back door key
       "591ae8f986f77406f854be45", // Yotota car key
       "5780d07a2459777de4559324", // Portable cabin key
@@ -52,7 +52,7 @@ export class Keys {
       "591afe0186f77431bd616a11", // ZB-014 key
     ],
 
-    keys_uncommon: [
+    key_uncommon: [
       "5d80ccdd86f77474f7575e02", // RB-ORB2 key
       "5d947d4e86f774447b415895", // RB-KSM key
       "5d8e0e0e86f774321140eb56", // RB-KPRL key
@@ -128,7 +128,7 @@ export class Keys {
       "5d80c78786f774403a401e3e", // RB-AK key
     ],
 
-    keys_rare: [
+    key_rare: [
       "5c1f79a086f7746ed066fb8f", // TerraGroup Labs arsenal storage room key
       "63a397d3af870e651d58e65b", // Car dealership closed section key
       "5e42c71586f7747f245e1343", // ULTRA medical storage key
@@ -141,7 +141,7 @@ export class Keys {
       "5eff09cd30a7dc22fd1ddfed", // Health Resort office key with a blue tape
     ],
 
-    keys_extremely_rare: [
+    key_extremely_rare: [
       "5d80c60f86f77440373c4ece", // RB-BK
       "5d80c62a86f7744036212b3f", // RB-VO
       "63a3a93f8a56922e82001f5d", // Abandoned Marked Key

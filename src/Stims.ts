@@ -1,6 +1,6 @@
 export class Stims {
   public items = {
-    stims_common: [
+    stim_common: [
       "544fb3f34bdc2d03748b456a", // Morphine injector
       "5c0e530286f7747fa1419862", // Propital regenerative stimulant injector
       "5ed515e03a40a50460332579", // L1 (Norepinephrine) injector
@@ -11,7 +11,7 @@ export class Stims {
       "5ed515f6915ec335206e4152", // AHF1-M stimulant injector
     ],
 
-    stims_uncommon: [
+    stim_uncommon: [
       "637b6251104668754b72f8f9", // Perfotoran (Blue Blood) stimulant injector
       "637b6179104668754b72f8f5", // PNB (Product 16) stimulant injector
       "5ed515ece452db0eb56fc028", // P22 (Product 22) stimulant injector
@@ -23,7 +23,7 @@ export class Stims {
       "5ed5166ad380ab312177c100", // "Obdolbos" cocktail injector
     ],
 
-    stims_rare: [
+    stim_rare: [
       "5c0e534186f7747fa1419867", // eTG-change regenerative stimulant injector
       "5fca138c2a7b221b2852a5c6", // xTG-12 antidote injector
       "637b60c3b7afa97bfc3d7001", // "Obdolbos 2" cocktail injector

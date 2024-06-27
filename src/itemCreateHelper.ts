@@ -23,7 +23,7 @@ export class ItemCreateHelper {
             itemTplToClone: "648990314b4d2b31b63a46fc",
             //overrideProperties: {},
             parentId: "62f109593b54472778797866",
-            newId: "a_sealed_weapon_gamble", 
+            newId: "az_sealed_weapon_gamble", 
             fleaPriceRoubles: 300000,
             handbookPriceRoubles: 300000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
@@ -139,7 +139,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Wallet",
                     shortName: "Mystery Wallet",
-                    description: `Wager your Roubles to win more, or lose it all!\n==============================\n0 Roubles - 50.0%\n100k Roubles - ${this.config.wallet_common}%\n300k Roubles - ${this.config.wallet_uncommon}%\n500k Roubles - ${this.config.wallet_kinda_rare}%\n1 Million Roubles - ${this.config.wallet_rare}%\n2 Million Roubles - ${this.config.wallet_extremely_rare}%`
+                    description: `Wager your Roubles to win more, or lose it all!\n==============================\n0 Roubles - 50.0%\n100k Roubles - ${this.config.odds['wallet_common']}%\n300k Roubles - ${this.config.odds['wallet_uncommon']}%\n500k Roubles - ${this.config.odds['wallet_kinda_rare']}%\n1 Million Roubles - ${this.config.odds['wallet_rare']}%\n2 Million Roubles - ${this.config.odds['wallet_extremely_rare']}%`
                 }
             } 
         }
@@ -245,7 +245,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Key",
                     shortName: "Mystery Key",
-                    description: `So you want a brand-new key to your favorite looting spot? Or maybe you're looking for that pesky quest key. We have it all! Try your luck!\n==============================\nCommon Key - ${this.config.key_common}%\nUncommon Key - ${this.config.key_uncommon}%\nRare Key - ${this.config.key_rare}%\nExtremely Rare Key - ${this.config.key_extremely_rare}%`
+                    description: `So you want a brand-new key to your favorite looting spot? Or maybe you're looking for that pesky quest key. We have it all! Try your luck!\n==============================\nCommon Key - ${this.config.odds['key_common']}%\nUncommon Key - ${this.config.odds['key_uncommon']}%\nRare Key - ${this.config.odds['key_rare']}%\nExtremely Rare Key - ${this.config.odds['key_extremely_rare']}%`
                 }
             } 
         }
@@ -351,7 +351,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Stimulant",
                     shortName: "Mystery Stimulant",
-                    description: `Looking for your next pick me up? We have all the drugs you could ask for!\n==============================\nCommon Stimulant - ${this.config.stim_common}%\nUncommon Stimulant - ${this.config.stim_uncommon}%\nRare Stimulant - ${this.config.stim_rare}%`
+                    description: `Looking for your next pick me up? We have all the drugs you could ask for!\n==============================\nCommon Stimulant - ${this.config.odds['stim_common']}%\nUncommon Stimulant - ${this.config.odds['stim_uncommon']}%\nRare Stimulant - ${this.config.odds['stim_rare']}%`
                 }
             } 
         }
@@ -458,7 +458,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Keycard",
                     shortName: "Mystery Keycard",
-                    description: `So you want to get into labs? Try your luck. Maybe you get, maybe you don't!\n==============================\nNothing - 25.0%\nAccess Keycard - ${this.config.keycard_access}%\n21WS Keycard - ${this.config.keycard_21WS}%\n11SR Keycard - ${this.config.keycard_11SR}%\nKeycard with a blue marking - ${this.config.keycard_blue_marking}%\nYellow Keycard - ${this.config.keycard_yellow}%\nBlack Keycard - ${this.config.keycard_black}%\nViolet Keycard - ${this.config.keycard_violet}%\nBlue Keycard - ${this.config.keycard_blue}%\nGreen Keycard - ${this.config.keycard_green}%\nRed Keycard - ${this.config.keycard_red}%`
+                    description: `So you want to get into labs? Try your luck. Maybe you get, maybe you don't!\n==============================\nNothing - 25.0%\nAccess Keycard - ${this.config.odds['keycard_access']}%\n21WS Keycard - ${this.config.odds['keycard_21WS']}%\n11SR Keycard - ${this.config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${this.config.odds['keycard_blue_marking']}%\nYellow Keycard - ${this.config.odds['keycard_yellow']}%\nBlack Keycard - ${this.config.odds['keycard_black']}%\nViolet Keycard - ${this.config.odds['keycard_violet']}%\nBlue Keycard - ${this.config.odds['keycard_blue']}%\nGreen Keycard - ${this.config.odds['keycard_green']}%\nRed Keycard - ${this.config.odds['keycard_red']}%`
                 }
             }                
         }
@@ -673,7 +673,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Melee",
                     shortName: "Mystery Melee",
-                    description: `Looking for a shiny new melee weapon? Well do we have you covered!\n==============================\nCommon Melee - ${this.config.melee_common}%\nUncommon Melee - ${this.config.melee_uncommon}%\nRare Melee - ${this.config.melee_rare}%\nExtremely Rare Melee - ${this.config.melee_extremely_rare}%`
+                    description: `Looking for a shiny new melee weapon? Well do we have you covered!\n==============================\nCommon Melee - ${this.config.odds['melee_common']}%\nUncommon Melee - ${this.config.odds['melee_uncommon']}%\nRare Melee - ${this.config.odds['melee_rare']}%\nExtremely Rare Melee - ${this.config.odds['melee_extremely_rare']}%`
                 }
             }                
         }
@@ -780,7 +780,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Weapon Mystery Box",
                     shortName: "Weapon Mystery Box",
-                    description: `Weapon Mystery Box, contains over 180 different guns ranging from Meta Chad weapons, early wipe weapons, and cursed weapons \n==============================\nFully Modded Weapon - ${this.config.gun_rare}%\nMeme Weapon - ${this.config.gun_meme}%\nSemi-modded Weapon - ${this.config.gun_uncommon}%\nScav Weapon - ${this.config.gun_scav}%\nDefault Weapon - ${this.config.gun_common}%`
+                    description: `Weapon Mystery Box, contains over 180 different guns ranging from Meta Chad weapons, early wipe weapons, and cursed weapons \n==============================\nFully Modded Weapon - ${this.config.odds['gun_rare']}%\nMeme Weapon - ${this.config.odds['gun_meme']}%\nSemi-modded Weapon - ${this.config.odds['gun_uncommon']}%\nScav Weapon - ${this.config.odds['gun_scav']}%\nDefault Weapon - ${this.config.odds['gun_common']}%`
                 }
             }
         };
@@ -886,7 +886,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Premium Weapon Mystery Box",
                     shortName: "Premium Weapon Mystery Box",
-                    description: `The Premium Weapon Mystery Box contains a guaranteed heavily modded weappon\n==============================\nRare Weapon - ${this.config.premium_armor_rare}%`
+                    description: `The Premium Weapon Mystery Box contains a guaranteed heavily modded weappon\n==============================\nRare Weapon - ${this.config.odds['premium_armor_rare']}%`
                 }
             }
         };
@@ -992,7 +992,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Helmet",
                     shortName: "Mystery Helmet",
-                    description: `Are you tired of Chad PMCs one tapping your dome? Well I can offer protection for you! Purchase a Helmet Mystery Box today!\n==============================\nCommon Helmet - ${this.config.helmet_common}%\nUncommon Helmet - ${this.config.helmet_uncommon}%\nRare Helmet - ${this.config.helmet_rare}%\nExtremely Rare T-7 Thermal Helmet - ${this.config.helmet_extremely_rare}%`
+                    description: `Are you tired of Chad PMCs one tapping your dome? Well I can offer protection for you! Purchase a Helmet Mystery Box today!\n==============================\nCommon Helmet - ${this.config.odds['helmet_common']}%\nUncommon Helmet - ${this.config.odds['helmet_uncommon']}%\nRare Helmet - ${this.config.odds['helmet_rare']}%\nExtremely Rare T-7 Thermal Helmet - ${this.config.odds['helmet_extremely_rare']}%`
                 }
             }
         };
@@ -1099,7 +1099,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Headset",
                     shortName: "Mystery Headset",
-                    description: `You can't expect to hear that sneaky USEC with those flimsy pair of headphones. Buy a Mystery Headset today!\n==============================\nRandom Headset - ${this.config.headset_chance}%`
+                    description: `You can't expect to hear that sneaky USEC with those flimsy pair of headphones. Buy a Mystery Headset today!\n==============================\nRandom Headset - ${this.config.odds['headset_chance']}%`
                 }
             }
         };
@@ -1206,7 +1206,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Backpack Mystery Bag",
                     shortName: "Backpack Mystery Bag",
-                    description: `Need a new bag for your next loot run? We got you covered!\n==============================\nCommon Backpack - ${this.config.backpack_common}%\nUncommon Backpack - ${this.config.backpack_uncommon}%\nRare Backpack - ${this.config.backpack_rare}%\nExtremely Rare Backpack - ${this.config.backpack_extremely_rare}%`
+                    description: `Need a new bag for your next loot run? We got you covered!\n==============================\nCommon Backpack - ${this.config.odds['backpack_common']}%\nUncommon Backpack - ${this.config.odds['backpack_uncommon']}%\nRare Backpack - ${this.config.odds['backpack_rare']}%\nExtremely Rare Backpack - ${this.config.odds['backpack_extremely_rare']}%`
                 }
             }
         };
@@ -1313,7 +1313,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Armor Mystery Box",
                     shortName: "Armor Mystery Box",
-                    description: `Armor Mystery Box contains most armors that can appear in throughout Tarkov\n==============================\nCommon Armor - ${this.config.armor_common}%\nUncommon Armor - ${this.config.armor_uncommon}%\nRare Armor - ${this.config.armor_rare}%`
+                    description: `Armor Mystery Box contains most armors that can appear in throughout Tarkov\n==============================\nCommon Armor - ${this.config.odds['armor_common']}%\nUncommon Armor - ${this.config.odds['armor_uncommon']}%\nRare Armor - ${this.config.odds['armor_rare']}%`
                 }
             }
         };
@@ -1418,14 +1418,14 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Premium Armor Mystery Box",
                     shortName: "Premium Armor Mystery Box",
-                    description: `The Premium Armor Mystery Box contains one of the best armors in Tarkov\n==============================\nRare Armor - ${this.config.premium_armor_rare}%`
+                    description: `The Premium Armor Mystery Box contains one of the best armors in Tarkov\n==============================\nRare Armor - ${this.config.odds['premium_armor_rare']}%`
                 }
             }
         };
 
         const seven_six_two_by_two_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_7.62x25_gamble",
+                _id: "aa_7.62x25_gamble",
                 _name: "gambling_7.62x25",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1524,15 +1524,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 7.62x25mm",
-                    shortName: "Mystery 7.62x25mm",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["7.62x25_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["7.62x25_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["7.62x25_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["7.62x25_common"]}%\nUncommon Rounds - ${this.config.odds["7.62x25_uncommon"]}%\nRare Rounds - ${this.config.odds["7.62x25_rare"]}%`
                 }
             } 
         }
 
         const nine_by_one_eight_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_9x18_gamble",
+                _id: "ab_9x18_gamble",
                 _name: "gambling_9x18",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1631,15 +1631,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 9x18mm Rounds",
-                    shortName: "Mystery 9x18mm Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["9x18_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["9x18_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["9x18_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["9x18_common"]}%\nUncommon Rounds - ${this.config.odds["9x18_uncommon"]}%\nRare Rounds - ${this.config.odds["9x18_rare"]}%`
                 }
             } 
         }
 
         const nine_by_one_nine_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_9x19_gamble",
+                _id: "ac_9x19_gamble",
                 _name: "gambling_9x19",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1738,15 +1738,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 9x19mm Parabellum Rounds",
-                    shortName: "Mystery 9x19mm Parabellum Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["9x19_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["9x19_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["9x19_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["9x19_common"]}%\nUncommon Rounds - ${this.config.odds["9x19_uncommon"]}%\nRare Rounds - ${this.config.odds["9x19_rare"]}%`
                 }
             } 
         }
 
         const nine_by_two_one_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_9x21_gamble",
+                _id: "ad_9x21_gamble",
                 _name: "gambling_9x21",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1845,15 +1845,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 9x21mm Gyurza Rounds",
-                    shortName: "Mystery 9x21mm Gyurza Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["9x21_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["9x21_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["9x21_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["9x21_common"]}%\nUncommon Rounds - ${this.config.odds["9x21_uncommon"]}%\nRare Rounds - ${this.config.odds["9x21_rare"]}%`
                 }
             } 
         }
 
         const three_five_seven_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_.357_gamble",
+                _id: "ae_.357_gamble",
                 _name: "gambling_.357",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1952,15 +1952,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery .357 Magnum Rounds",
-                    shortName: "Mystery .357 Magnum Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".357_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".357_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".357_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds[".357_common"]}%\nUncommon Rounds - ${this.config.odds[".357_uncommon"]}%\nRare Rounds - ${this.config.odds[".357_rare"]}%`
                 }
             } 
         }
 
         const four_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_.45_gamble",
+                _id: "af_.45_gamble",
                 _name: "gambling_.45",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2059,15 +2059,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery .45 ACP Rounds",
-                    shortName: "Mystery .45 ACP Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".45_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".45_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".45_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds[".45_common"]}%\nUncommon Rounds - ${this.config.odds[".45_uncommon"]}%\nRare Rounds - ${this.config.odds[".45_rare"]}%`
                 }
             } 
         }
 
         const four_six_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_4.6x30_gamble",
+                _id: "ag_4.6x30_gamble",
                 _name: "gambling_4.6x30",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2166,15 +2166,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 4.6x30mm HK Rounds",
-                    shortName: "Mystery 4.6x30mm HK Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["4.6x30_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["4.6x30_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["4.6x30_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["4.6x30_common"]}%\nUncommon Rounds - ${this.config.odds["4.6x30_uncommon"]}%\nRare Rounds - ${this.config.odds["4.6x30_rare"]}%`
                 }
             } 
         }
 
         const five_seven_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_5.7x28_gamble",
+                _id: "ah_5.7x28_gamble",
                 _name: "gambling_5.7x28",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2273,15 +2273,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 5.7x28mm FN Rounds",
-                    shortName: "Mystery 5.7x28mm FN Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["5.7x28_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["5.7x28_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["5.7x28_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["5.7x28_common"]}%\nUncommon Rounds - ${this.config.odds["5.7x28_uncommon"]}%\nRare Rounds - ${this.config.odds["5.7x28_rare"]}%`
                 }
             } 
         }
 
         const five_four_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_5.45x39_gamble",
+                _id: "ai_5.45x39_gamble",
                 _name: "gambling_5.45x39",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2380,15 +2380,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 5.45x39mm Rounds",
-                    shortName: "Mystery 5.45x39mm Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["5.45x39_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["5.45x39_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["5.45x39_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["5.45x39_common"]}%\nUncommon Rounds - ${this.config.odds["5.45x39_uncommon"]}%\nRare Rounds - ${this.config.odds["5.45x39_rare"]}%`
                 }
             } 
         }
 
         const fivefivesix_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_5.56x45_gamble",
+                _id: "aj_5.56x45_gamble",
                 _name: "gambling_5.56x45",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2487,15 +2487,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 5.56x45mm NATO Rounds",
-                    shortName: "Mystery 5.56x45mm NATO Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["5.56x45_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["5.56x45_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["5.56x45_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["5.56x45_common"]}%\nUncommon Rounds - ${this.config.odds["5.56x45_uncommon"]}%\nRare Rounds - ${this.config.odds["5.56x45_rare"]}%`
                 }
             } 
         }
 
         const blackout_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_.300_gamble",
+                _id: "ak_.300_gamble",
                 _name: "gambling_.300",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2594,15 +2594,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery .300 Blackout Rounds",
-                    shortName: "Mystery .300 Blackout Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".300_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".300_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".300_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds[".300_common"]}%\nUncommon Rounds - ${this.config.odds[".300_uncommon"]}%\nRare Rounds - ${this.config.odds[".300_rare"]}%`
                 }
             } 
         }
 
         const seven_six_two_by_three_nine_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_7.62x39_gamble",
+                _id: "al_7.62x39_gamble",
                 _name: "gambling_7.62x39",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2701,15 +2701,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 7.62x39mm Rounds",
-                    shortName: "Mystery 7.62x39mm Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["7.62x39_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["7.62x39_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["7.62x39_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["7.62x39_common"]}%\nUncommon Rounds - ${this.config.odds["7.62x39_uncommon"]}%\nRare Rounds - ${this.config.odds["7.62x39_rare"]}%`
                 }
             } 
         }
 
         const seven_six_two_by_five_one_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_7.62x51_gamble",
+                _id: "am_7.62x51_gamble",
                 _name: "gambling_7.62x51",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2808,15 +2808,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 7.62x51mm NATO Rounds",
-                    shortName: "Mystery 7.62x51mm NATO Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["7.62x51_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["7.62x51_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["7.62x51_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["7.62x51_common"]}%\nUncommon Rounds - ${this.config.odds["7.62x51_uncommon"]}%\nRare Rounds - ${this.config.odds["7.62x51_rare"]}%`
                 }
             } 
         }
 
         const seven_six_two_by_five_four_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_7.62x54_gamble",
+                _id: "an_7.62x54_gamble",
                 _name: "gambling_7.62x54",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2915,15 +2915,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 7.62x54mm Rounds",
-                    shortName: "Mystery 7.62x54mm Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["7.62x54_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["7.62x54_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["7.62x54_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["7.62x54_common"]}%\nUncommon Rounds - ${this.config.odds["7.62x54_uncommon"]}%\nRare Rounds - ${this.config.odds["7.62x54_rare"]}%`
                 }
             } 
         }
 
         const three_three_eight_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_.338_gamble",
+                _id: "ao_.338_gamble",
                 _name: "gambling_.338",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3022,15 +3022,15 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery .338 Lapua Magnum Rounds",
-                    shortName: "Mystery .338 Lapua Magnum Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".338_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".338_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".338_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds[".338_common"]}%\nUncommon Rounds - ${this.config.odds[".338_uncommon"]}%\nRare Rounds - ${this.config.odds[".338_rare"]}%`
                 }
             } 
         }
 
         const nine_by_three_nine_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_9x39_gamble",
+                _id: "ap_9x39_gamble",
                 _name: "gambling_9x39",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3129,14 +3129,14 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 9x39mm Rounds",
-                    shortName: "Mystery 9x39mm Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["9x39_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["9x39_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["9x39_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["9x39_common"]}%\nUncommon Rounds - ${this.config.odds["9x39_uncommon"]}%\nRare Rounds - ${this.config.odds["9x39_rare"]}%`
                 }
             } 
         }
         const three_six_six_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_.366_gamble",
+                _id: "aq_.366_gamble",
                 _name: "gambling_.366",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3235,14 +3235,14 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery .366 TKM Rounds",
-                    shortName: "Mystery .366 TKM Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds[".366_common"]}%\nUncommon Rounds - ${this.config.ammo_odds[".366_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds[".366_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds[".366_common"]}%\nUncommon Rounds - ${this.config.odds[".366_uncommon"]}%\nRare Rounds - ${this.config.odds[".366_rare"]}%`
                 }
             } 
         }
         const one_two_seven_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_12.7x55_gamble",
+                _id: "ar_12.7x55_gamble",
                 _name: "gambling_12.7x55",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3341,14 +3341,14 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 12.7x55mm Rounds",
-                    shortName: "Mystery 12.7x55mm Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["12.7x55_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["12.7x55_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["12.7x55_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["12.7x55_common"]}%\nUncommon Rounds - ${this.config.odds["12.7x55_uncommon"]}%\nRare Rounds - ${this.config.odds["12.7x55_rare"]}%`
                 }
             } 
         }
         const one_two_by_seven_zero_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_12/70_gamble",
+                _id: "as_12/70_gamble",
                 _name: "gambling_12/70",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3447,14 +3447,14 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 12/70 Rounds",
-                    shortName: "Mystery 12/70 Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["12/70_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["12/70_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["12/70_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["12/70_common"]}%\nUncommon Rounds - ${this.config.odds["12/70_uncommon"]}%\nRare Rounds - ${this.config.odds["12/70_rare"]}%`
                 }
             } 
         }
         const two_zero_by_seven_zero_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_20/70_gamble",
+                _id: "at_20/70_gamble",
                 _name: "gambling_20/70",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3553,14 +3553,14 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 20/70 Rounds",
-                    shortName: "Mystery 20/70 Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["20/70_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["20/70_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["20/70_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["20/70_common"]}%\nUncommon Rounds - ${this.config.odds["20/70_uncommon"]}%\nRare Rounds - ${this.config.odds["20/70_rare"]}%`
                 }
             } 
         }
         const two_three_by_seven_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "a_23x75_gamble",
+                _id: "au_23x75_gamble",
                 _name: "gambling_23x75",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3659,8 +3659,8 @@ export class ItemCreateHelper {
             locales: {
                 "en": {
                     name: "Mystery 23x75 Rounds",
-                    shortName: "Mystery 23x75 Rounds",
-                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.ammo_odds["23x75_common"]}%\nUncommon Rounds - ${this.config.ammo_odds["23x75_uncommon"]}%\nRare Rounds - ${this.config.ammo_odds["23x75_rare"]}%`
+                    shortName: "Mystery",
+                    description: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nCommon Rounds - ${this.config.odds["23x75_common"]}%\nUncommon Rounds - ${this.config.odds["23x75_uncommon"]}%\nRare Rounds - ${this.config.odds["23x75_rare"]}%`
                 }
             } 
         }

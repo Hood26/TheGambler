@@ -1,6 +1,6 @@
 export class Backpacks {
   public items = {
-    backpacks_common: [
+    backpack_common: [
       "5ab8f04f86f774585f4237d8", // Tactical sling bag (Khaki)
       "5ab8ee7786f7742d8f33f0b9", // VKBO army bag
       "56e33680d2720be2748b4576", // Transformer Bag
@@ -14,7 +14,7 @@ export class Backpacks {
       "56e335e4d2720b6c058b456d", // Scav backpack
       "56e335e4d2720b6c058b456d", // Scav backpack
     ],
-    backpacks_uncommon: [
+    backpack_uncommon: [
       "656ddcf0f02d7bcea90bf395", // Tehinkom RK-PT-25 patrol backpack (Digital Flora)
       "6034d103ca006d2dca39b3f0", // Hazard 4 Takedown sling backpack (Black)
       "6038d614d10cbf667352dd44", // Hazard 4 Takedown sling backpack (MultiCam)
@@ -30,7 +30,7 @@ export class Backpacks {
       "545cdae64bdc2d39198b4568", // Camelbak Tri-Zip assault backpack (Foliage)
       "545cdae64bdc2d39198b4568", // Camelbak Tri-Zip assault backpack (Foliage)
     ],
-    backpacks_rare: [
+    backpack_rare: [
       "5e4abc6786f77406812bd572", // LBT-2670 Slim Field Med Pack (Black)
       "5e997f0b86f7741ac73993e2", // Sanitar's bag
       "5c0e805e86f774683f3dd637", // 3V Gear Paratus 3-Day Operator's Tactical backpack (Foliage Grey)
@@ -45,7 +45,7 @@ export class Backpacks {
       "639346cc1c8f182ad90c8972", // Tasmanian Tiger Trooper 35 backpack (Khaki)
       "639346cc1c8f182ad90c8972", // Tasmanian Tiger Trooper 35 backpack (Khaki)
     ],
-    backpacks_extremely_rare: [
+    backpack_extremely_rare: [
       "656e0436d44a1bb4220303a0", // Mystery Ranch SATL Bridger Assault Pack (Foliage)
       "628bc7fb408e2b2e9c0801b1", // Mystery Ranch NICE COMM 3 BVS frame system (Coyote)
       "61b9e1aaef9a1b5d6a79899a", // Santa's bag

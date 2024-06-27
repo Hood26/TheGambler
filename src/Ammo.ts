@@ -304,10 +304,10 @@ export class Ammo {
             "5f647f31b6238e5dd066e196", // 23x75mm Shrapnel-25 buckshot
         ],
         "23x75_uncommon": [
-            "5e85a9f4add9fe03027d9bf1", // 23x75mm Zvezda flashbang round
+            "5e85a9a6eacf8c039e4e2ac1", // 23x75mm Shrapnel-10 buckshot
         ],
         "23x75_rare": [
-            "5e85a9a6eacf8c039e4e2ac1", // 23x75mm Shrapnel-10 buckshot
+            "5e85a9f4add9fe03027d9bf1", // 23x75mm Zvezda flashbang round
             "5e85aa1a988a8701445df1f5", // 23x75mm Barrikada slug
         ],
     }

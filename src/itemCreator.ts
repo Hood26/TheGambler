@@ -68,6 +68,8 @@ export class ItemCreator {
     public createGun(which: string): Item{
         let weaponBuilds: Item[];
 
+        console.log('WHICH = ' + which)
+
         if(which == "base") {
             weaponBuilds = this.Weapons.weaponBaseBuilds;
         } else if (which == "scav") {
