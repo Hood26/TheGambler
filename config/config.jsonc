@@ -137,9 +137,9 @@
     "wallet_extremely_rare": 1.0,   // 2 Million Roubles
     "wallet_rare": 2.0,             // 1 Miliion Roubles
     "wallet_kinda_rare": 4.0,       // 500k Roubles
-    "wallet_uncommon": 9.0,         // 300k Roubles
+    "wallet_uncommon": 8.0,         // 300k Roubles
     "wallet_common": 35.0,          // 100K Roubles
-    "wallet_profit_percentage": 110,
+    "wallet_profit_percentage": 115,
     // 100 minus all above percentages = percentage at receiving nothing from gambling container. If desired. (Applies to all gambling containers!)
 
     // gambling_container_keycard

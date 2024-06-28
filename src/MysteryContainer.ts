@@ -2,6 +2,7 @@ import { Ammo } from "./containers/Ammo";
 import { Backpacks } from "./containers/Backpacks";
 import { Melees } from "./containers/Melees";
 import { Stims } from "./containers/Stims";
+import { Wallet } from "./containers/Wallet";
 import { Keys } from "./containers/keys";
 
 export class MysteryContainer{
@@ -16,8 +17,9 @@ export class MysteryContainer{
         this.config     = config;
         this.logger     = logger;
         this.container  = this.setConfig(this.containersData)
-        this.simulation = ['backpack', 'key', 'melee', 'stim'];
+        this.simulation = ['wallet', 'backpack', 'key', 'melee', 'stim'];
         this.items      = {
+            wallet:   new Wallet(),
             backpack: new Backpacks(),
             key:      new Keys(),
             melee:    new Melees(),

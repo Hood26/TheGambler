@@ -1210,6 +1210,112 @@ export class ItemCreateHelper {
                 }
             }
         };
+
+        const rigGamble = {
+            newItem: {
+                _id: "wr_rig_gamble",
+                _name: "gambling_rig",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Tactical Rig Mystery Box",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 7,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Tactical Rig Mystery Box",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/equipment/rig_bearing/item_equipment_rig_bearing.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Tactical Rig Mystery Box",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 5,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+            },
+            fleaPriceRoubles: 79750,
+            handbookPriceRoubles: 79750,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Tactical Rig Mystery Box",
+                    shortName: "Tactical Rig Mystery Box",
+                    description: `From Scav rigs to Boss Rigs We got you covered!\n==============================\nCommon Rig - ${this.config.odds['rig_common']}%\nUncommon Rig - ${this.config.odds['rig_uncommon']}%\nRare Rig - ${this.config.odds['rig_rare']}%\nExtremely Rare Rig - ${this.config.odds['rig_extremely_rare']}%`
+                }
+            }
+        };
   
 
         const armorGamble = {
@@ -1418,7 +1524,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Premium Armor Mystery Box",
                     shortName: "Premium Armor Mystery Box",
-                    description: `The Premium Armor Mystery Box contains one of the best armors in Tarkov\n==============================\nRare Armor - ${this.config.odds['premium_armor_rare']}%`
+                    description: `The Premium Armor Mystery Box contains some of the highest tiers of armor found in Tarkov\n==============================\nRare Armor - ${this.config.odds['premium_armor_rare']}%`
                 }
             }
         };
@@ -3676,6 +3782,7 @@ export class ItemCreateHelper {
         customItem.createItem(helmetGamble);
         customItem.createItem(headsetGamble);
         customItem.createItem(backpackGamble);
+        customItem.createItem(rigGamble);
         customItem.createItem(armorGamble);
         customItem.createItem(premiumArmorGamble);
         customItem.createItem(premiumWeaponGamble);

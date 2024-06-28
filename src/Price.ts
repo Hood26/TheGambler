@@ -90,12 +90,14 @@ export class Price{
         let sum: number              = 0;
 
         if(name == 'wallet'){
+            console.log("wallet - getMysteryItemPrices")
             console.log(name)
             console.log(containerType)
             console.log(rarities)
             console.log(item)
             console.log(amount)
             console.log(containerType)
+            console.log('\n\n\n')
         }
 
         for(let i = 0; i < rarities.length; i++){
@@ -104,29 +106,24 @@ export class Price{
                 let currentPrice;
                 const override: number = this.MysteryContainer.getOverride(containerType, [item.items[name + rarities[i]][j]]);
 
-                // Testing purposes
-                if(name == '.45' && rarities[i] == '_uncommon'){
-                    console.log('Item ID = ' + item.items[name + rarities[i]][j]);
-                    console.log('Dynamic Flea Price = ' + itemHelper.getDynamicItemPrice(item.items[name + rarities[i]][j]));
-                    console.log('Static Item Price = ' + itemHelper.getStaticItemPrice(item.items[name + rarities[i]][j]));
-                    console.log('Item Max Price = ' + itemHelper.getItemMaxPrice(item.items[name + rarities[i]][j]));
-                    console.log('Item Price = ' + itemHelper.getItemPrice(item.items[name + rarities[i]][j]));
-                    //console.log('Custom Gambler Price = ' + this.expensiveAmmos[item.items[name + rarities[i]][j]]);
-                    console.log('\n')
-                }
-
                 if (override != undefined){
-                    //console.log("ITEM OVERIDE");
-                    //console.log(override);
                     currentPrice = override * amount;
                 } else {
                     
-                    const fleaPrice = itemHelper.getDynamicItemPrice(item.items[name + rarities[i]][j]);
-                    // Thinking: We always want to use flea price as this is most accurate, but if their is no flea price we must fallback to handbook
-                    if (fleaPrice == 0) {
-                        currentPrice = itemHelper.getItemMaxPrice(item.items[name + rarities[i]][j]) * amount;
-                    } else {
-                        currentPrice = fleaPrice * amount;
+                    if(Number.isInteger(item.items[name + rarities[i]][j])){ // Number
+                        currentPrice = item.items[name + rarities[i]][j];
+                        //console.log('Is Number')
+                        //console.log(`The Number = ${item.items[name + rarities[i]][j]}`)
+                    } else{ // String
+
+                        const fleaPrice = itemHelper.getDynamicItemPrice(item.items[name + rarities[i]][j]);
+                        // Thinking: We always want to use flea price as this is most accurate, but if their is no flea price we must fallback to handbook
+                        if (fleaPrice == 0) {
+                            currentPrice = itemHelper.getItemMaxPrice(item.items[name + rarities[i]][j]) * amount;
+
+                        } else {
+                            currentPrice = fleaPrice * amount;
+                        }
                     }
                 }
 
@@ -172,9 +169,9 @@ export class Price{
                     }
                 }
 
-                profit = sum - spent
+                profit = sum - spent;
                 spent = iterations * currentContainerPrice;
-                currentPercentage = Math.floor((sum * 100) / spent) 
+                currentPercentage = Math.floor((sum * 100) / spent);
             }
 
             if(checker.includes(currentContainerPrice)) {
