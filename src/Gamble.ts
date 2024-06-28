@@ -7,12 +7,12 @@ import { Item } from "../common/tables/IItem";
 
 
 import { ItemCreator } from "./itemCreator";
-import { Keys } from "./keys";
-import { Stims } from "./Stims";
-import { Backpacks } from "./Backpacks";
-import { Headsets } from "./Headsets";
-import { Ammo } from "./Ammo";
-import { Melees } from "./Melees";
+import { Keys } from "./containers/keys";
+import { Stims } from "./containers/Stims";
+import { Backpacks } from "./containers/Backpacks";
+import { Headsets } from "./containers/Headsets";
+import { Ammo } from "./containers/Ammo";
+import { Melees } from "./containers/Melees";
 import { MysteryContainer } from "./MysteryContainer";
 
 
@@ -120,8 +120,8 @@ export class Gamble {
         const roll: number = this.randomUtil.getFloat(0, 100);
         this.logger.info(`\n[TheGambler][Wallet] The container roll is: ${roll}!`);
         const odds: Array<number> = this.mysteryContainer.getOdds('wallet');
-        console.log('The Odds!')
-        console.log(odds)
+        //console.log('The Odds!')
+        //console.log(odds)
         let money: number = -1;
 
         for(let i = 0; i < odds.length; i++) {
@@ -249,6 +249,9 @@ export class Gamble {
         const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Weapon] The container roll is: ${roll}!`);
         const odds: Array<number> = this.mysteryContainer.getOdds('gun');
+        console.log("OpenWeapon");
+        console.log(odds);
+
 
         for(let i = 0; i < odds.length; i++) {
             if(roll <= odds[i]) {
@@ -473,8 +476,8 @@ export class Gamble {
 
         for(let i = 0; i < odds.length; i++) {
             if(roll <= odds[i]) {
-                const secondRoll = this.randomUtil.getInt(0, ammo.items[name + rarities[i]].length - 1);
-                id = ammo.items[name + rarities[i]][secondRoll];
+                const secondRoll = this.randomUtil.getInt(0, ammo.items[name].items[name + rarities[i]].length - 1);
+                id = ammo.items[name].items[name + rarities[i]][secondRoll];
                 break;  
             }
         }

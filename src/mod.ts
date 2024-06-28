@@ -37,14 +37,11 @@ import { INotification } from "@spt-aki/models/eft/notifier/INotifier";
 // New trader classes and config
 import * as baseJson from "../db/base.json";
 import { TraderHelper } from "./traderHelpers";
-import { ItemCreator } from "./itemCreator";
-import { Keys } from "./keys";
 import { ItemCreateHelper } from "./itemCreateHelper";
 import { FluentAssortConstructor as FluentAssortCreator } from "./fluentTraderAssortCreator";
 import { VFS } from "@spt-aki/utils/VFS";
 import { jsonc } from "jsonc";
 import path from "path";
-import { Stims } from "./Stims";
 import { Gamble } from "./Gamble";
 
 class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
@@ -185,8 +182,6 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
             
             if(gamble.newItemsRequest.itemsWithModsToAdd.length != 0) {
                 newItemsRequest.itemsWithModsToAdd = [...gamble.newItemsRequest.itemsWithModsToAdd]
-                this.logger.info("Item!")
-                this.logger.info(newItemsRequest.itemsWithModsToAdd)
             }
 
         } else {

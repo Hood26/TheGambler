@@ -20,23 +20,23 @@
 
   // All Mystery Container Base Prices and Stock
   "price_stock": {
-    "wallet_price": 100000,
-    "wallet_stock": 15,
+    "wallet_case_price": 100000,
+    "wallet_case_stock": 15,
 
-    "key_price": 47500,
-    "key_stock": 25,
+    "key_case_price": 47500,
+    "key_case_stock": 25,
 
-    "stimulant_price": 36500,
-    "stimulant_stock": 12,
+    "stim_case_price": 36500,
+    "stim_case_stock": 999,
 
-    "keycard_price": 265000,
-    "keycard_stock": 15,
+    "keycard_case_price": 265000,
+    "keycard_case_stock": 15,
 
-    "fiftyfifty_price": 2500000,
-    "fiftyfifty_stock": 2,
+    "fiftyfifty_case_price": 2500000,
+    "fiftyfifty_case_stock": 2,
 
-    "melee_price": 58500,
-    "melee_stock": 25,
+    "melee_case_price": 58500,
+    "melee_case_stock": 25,
 
     "gun_case_price": 86500,
     "gun_case_stock": 15,
@@ -139,18 +139,8 @@
     "wallet_kinda_rare": 4.0,       // 500k Roubles
     "wallet_uncommon": 9.0,         // 300k Roubles
     "wallet_common": 35.0,          // 100K Roubles
+    "wallet_profit_percentage": 110,
     // 100 minus all above percentages = percentage at receiving nothing from gambling container. If desired. (Applies to all gambling containers!)
-
-    // gambling_container_key
-    "key_extremely_rare": 0.5,    // Extremely Rare Key
-    "key_rare": 5.0,              // Rare Key
-    "key_uncommon": 24.5,         // Uncommon Key
-    "key_common": 70.0,           // Common Key
-
-    // gambling_container_stim
-    "stim_rare": 15.0,            // Rare Stim
-    "stim_uncommon": 30.0,        // Uncommon Stim
-    "stim_common": 55.0,          // Common Stim
 
     // gambling_container_keycard
     "keycard_red": 0.1,           // Red Keycard
@@ -163,45 +153,68 @@
     "keycard_21WS": 8.0,            // 21WS Keycard
     "keycard_11SR": 8.0,            // 11SR Keycard
     "keycard_access": 50.0,         // Access Keycard
+    "keycard_profit_percentage": 120,
+    
+    // gambling_container_key
+    "key_extremely_rare": 0.5,    // Extremely Rare Key
+    "key_rare": 5.0,              // Rare Key
+    "key_uncommon": 24.5,         // Uncommon Key
+    "key_common": 70.0,           // Common Key
+    "key_profit_percentage": 115,
+
+    // gambling_container_stim
+    "stim_extremely_rare": 10.0,    // Extremely Rare Key
+    "stim_rare": 15.0,            // Rare Stim
+    "stim_uncommon": 25.0,        // Uncommon Stim
+    "stim_common": 50.0,          // Common Stim
+    "stim_profit_percentage": 110,
 
     // gambling_container_melee
     "melee_extremely_rare": 0.25, // Extremely Rare melee
     "melee_rare": 2.0,            // Rare melee
     "melee_uncommon": 22.75,      // Uncommon melee
     "melee_common": 75.0,         // Common melee
+    "melee_profit_percentage": 120,
 
     // gambling_container_backpack
     "backpack_extremely_rare": 5.0, // Extremely Rare melee
     "backpack_rare": 12.0,          // Rare melee
     "backpack_uncommon": 30.0,      // Uncommon melee
     "backpack_common": 53.0,        // Common melee
+    "backpack_profit_percentage": 110,
 
     // gambling_container_weapon
     "gun_meta": 10.0,               // Meta Gun
     "gun_meme": 7.0,                // Meme Gun
-    "gun_uncommon": 28.0,           // Semi-modded Gun
+    "gun_decent": 28.0,           // Semi-modded Gun
     "gun_scav": 20.0,               // Scav Gun
-    "gun_common": 35.0,             // Default Gun
+    "gun_base": 35.0,             // Default Gun
+    "gun_profit_percentage": 115,
 
     // gambling_container_premium_weapon
     "premium_gun_meta": 100.0,    // Rare Gun
+    "premium_gun_profit_percentage": 115,
 
     // gambling_container_key
     "helmet_extremely_rare": 0.35,// Extremely Rare Key
     "helmet_rare": 20.0,          // Rare Key
     "helmet_uncommon": 37.0,      // Uncommon Key
     "helmet_common": 42.65,       // Common Key
+    "helmet_profit_percentage": 115,
 
     // gambling_container_key
     "headset_chance": 100.0,      // Chance at receiving a random headset
+    "headset_profit_percentage": 115,
 
     // gambling_container_armor
     "armor_rare": 15.0,           // Rare Armor
     "armor_uncommon": 25.0,       // Uncommon Armor
     "armor_common": 60.0,         // Common Armor
+    "armor_profit_percentage": 110,
 
     // gambling_container_premium_armor
     "premium_armor_rare": 100.0,  // Rare Armor
+    "premium_armor_profit_percentage": 110,
 
     // gambling_container_7.62x25
     "7.62x25_common": 62.5,       // Common Round 7.62x25
@@ -209,6 +222,7 @@
     "7.62x25_rare": 12.5,         // Rare Round 7.62x25
     "7.62x25_min": 5,
     "7.62x25_max": 30,
+    "7.62x25_profit_percentage": 110,
 
     // gambling_container_9x18
     "9x18_common": 62.5,          // Common Round 9x18mm
@@ -216,6 +230,7 @@
     "9x18_rare": 12.5,            // Rare Round 9x18mm
     "9x18_min": 5,
     "9x18_max": 30,
+    "9x18_profit_percentage": 110,
     
     // gambling_container_9x19
     "9x19_common": 62.5,          // Common Round 9x19
@@ -223,6 +238,7 @@
     "9x19_rare": 12.5,            // Rare Round 9x19
     "9x19_min": 5,
     "9x19_max": 30,
+    "9x19_profit_percentage": 110,
 
     // gambling_container_9x21
     "9x21_common": 62.5,          // Common Round 9x21
@@ -230,6 +246,7 @@
     "9x21_rare": 12.5,            // Rare Round 9x21
     "9x21_min": 5,
     "9x21_max": 30,
+    "9x21_profit_percentage": 110,
 
     // gambling_container_.357
     ".357_common": 62.5,          // Common Round .357
@@ -237,6 +254,7 @@
     ".357_rare": 12.5,            // Rare Round .357
     ".357_min": 5,
     ".357_max": 30,
+    ".357_profit_percentage": 110,
 
     // gambling_container_.45_ACP
     ".45_common": 62.5,           // Common Round .45
@@ -244,6 +262,7 @@
     ".45_rare": 12.5,             // Rare Round .45
     ".45_min": 5,
     ".45_max": 30,
+    ".45_profit_percentage": 110,
 
     // gambling_container_4.6x30
     "4.6x30_common": 62.5,        // Common Round 4.6x30
@@ -251,6 +270,7 @@
     "4.6x30_rare": 12.5,          // Rare Round 4.6x30
     "4.6x30_min": 5,
     "4.6x30_max": 30,
+    "4.6x30_profit_percentage": 110,
 
     // gambling_container_5.7x28
     "5.7x28_common": 62.5,        // Common Round 5.7x28
@@ -258,6 +278,7 @@
     "5.7x28_rare": 12.5,          // Rare Round 5.7x28
     "5.7x28_min": 5,
     "5.7x28_max": 30,
+    "5.7x28_profit_percentage": 110,
 
     // gambling_container_5.45x39
     "5.45x39_common": 62.5,       // Common Round 5.45x39
@@ -265,6 +286,7 @@
     "5.45x39_rare": 12.5,         // Rare Round 5.45x39
     "5.45x39_min": 5,
     "5.45x39_max": 30,
+    "5.45x39_profit_percentage": 110,
 
     // gambling_container_5.56x45
     "5.56x45_common": 62.5,       // Common Round 5.56x45
@@ -272,6 +294,7 @@
     "5.56x45_rare": 12.5,         // Rare Round 5.56x45
     "5.56x45_min": 5,
     "5.56x45_max": 30,
+    "5.56x45_profit_percentage": 110,
 
     // gambling_container_.300_Blackout
     ".300_common": 62.5,          // Common Round .300
@@ -279,6 +302,7 @@
     ".300_rare": 12.5,            // Rare Round .300
     ".300_min": 5,
     ".300_max": 30,
+    ".300_profit_percentage": 110,
 
     // gambling_container_7.62x39
     "7.62x39_common": 62.5,       // Common Round 7.62x39
@@ -286,6 +310,7 @@
     "7.62x39_rare": 12.5,         // Rare Round 7.62x39
     "7.62x39_min": 5,
     "7.62x39_max": 30,
+    "7.62x39_profit_percentage": 110,
 
     // gambling_container_7.62x51
     "7.62x51_common": 62.5,       // Common Round 7.62x51
@@ -293,6 +318,7 @@
     "7.62x51_rare": 12.5,         // Rare Round 7.62x51
     "7.62x51_min": 5,
     "7.62x51_max": 30,
+    "7.62x51_profit_percentage": 110,
 
     // gambling_container_7.62x54
     "7.62x54_common": 62.5,       // Common Round 7.62x54
@@ -300,6 +326,7 @@
     "7.62x54_rare": 12.5,         // Rare Round 7.62x54
     "7.62x54_min": 5,
     "7.62x54_max": 30,
+    "7.62x54_profit_percentage": 110,
 
     // gambling_container_.338
     ".338_common": 62.5,          // Common Round .338
@@ -307,6 +334,7 @@
     ".338_rare": 12.5,            // Rare Round .338
     ".338_min": 5,
     ".338_max": 10,
+    ".338_profit_percentage": 110,
 
     // gambling_container_9x39
     "9x39_common": 75.0,          // Common Round 9x39
@@ -314,6 +342,7 @@
     "9x39_rare": 10.0,            // Rare Round 9x39
     "9x39_min": 5,
     "9x39_max": 30,
+    "9x39_profit_percentage": 105,
 
     // gambling_container_.366
     ".366_common": 62.5,          // Common Round .366
@@ -321,6 +350,7 @@
     ".366_rare": 12.5,            // Rare Round .366
     ".366_min": 5,
     ".366_max": 30,
+    "366_profit_percentage": 110,
 
     // gambling_container_12.7x55
     "12.7x55_common": 62.5,       // Common Round 12.7x55
@@ -328,6 +358,7 @@
     "12.7x55_rare": 12.5,         // Rare Round 12.7x55
     "12.7x55_min": 5,
     "12.7x55_max": 30,
+    "12.7x55_profit_percentage": 110,
 
     // gambling_container_12/70
     "12/70_common": 62.5,         // Common Round 12/70
@@ -335,6 +366,7 @@
     "12/70_rare": 12.5,           // Rare Round 12/70
     "12/70_min": 5,
     "12/70_max": 10,
+    "12/70_profit_percentage": 110,
 
     // gambling_container_20/70
     "20/70_common": 62.5,         // Common Round 20/70
@@ -342,13 +374,105 @@
     "20/70_rare": 12.5,           // Rare Round 20/70
     "20/70_min": 5,
     "20/70_max": 10,
+    "20/70_profit_percentage": 110,
 
     // gambling_container_23x75
     "23x75_common": 62.5, // Common Round 23x75
     "23x75_uncommon": 25.0, // Uncommon Round 23x75
     "23x75_rare": 12.5, // Rare Round 23x75
     "23x75_min": 5,
-    "23x75_max": 10
+    "23x75_max": 10,
+    "23x75_profit_percentage": 110
 
+  },
+  //
+  //
+  //
+  // Mystery Container Automatic Price Balancer uses override prices instead of the items actual flea market price when generating optimal mystery container prices.
+  // Raising or lowering any of the values will manipulate the mystery container price in that direction
+  //  - Why?:   
+  //    - I made this override section as I felt ammo and a few blacklisted items handbook prices were way too cheap.
+  //      These changes are meant to help realistically balance mystery containers further.
+  //    - Blacklisted ammo should be expensive and I have created override prices reflecting this
+  //
+  //
+  // Enable or Disable override prices
+  // NOTE: If you use the Blacklist Mod and are satisfied with the flea market price of ammos try setting this to 'false'
+  "mystery_container_override_enable": true, // Default 'true' - Mystery Container will use prices from"mystery_container_override_price"
+                                             // If false, automatic balancer will use items' flea market price or handbook price if item is blacklisted
+  
+  "mystery_container_override_price": {
+    "ammo": {                           // Priced in Roubles
+      "57371aab2459775a77142f22": 200,  // 9x18mm PMM PstM gzh
+      "573719df2459775a626ccbc2": 300,  // 9x18mm PM PBM gzh
+      "5c0d56a986f774449d5de529": 700,  // 9x19mm RIP
+      "5c925fa22e221601da359b7b": 850,  // 9x19mm AP 6.3
+      "5efb0da7a29a85116f6ea05f": 1500, // 9x19mm PBP gzh
+      "6576f93989f0062e741ba952": 300,  // 9x21mm 7U4
+      "5a26ac0ec4a28200741e1e18": 800,  // 9x21mm BT gzh
+      "6576f4708ca9c4381d16cd9d": 1100, // 9x21mm 7N42 "Zubilo"
+      "62330c18744e5e31df12f516": 260,  // .357 Magnum JHP
+      "62330b3ed4dc74626d570b95": 300,  // .357 Magnum FMJ
+      "5efb0d4f4bc50b58e81710f3": 120,  // .45 ACP Lasermatch FMJ
+      "5e81f423763d9f754677bf2e": 165,  // .45 ACP Match FMJ
+      "5efb0fc6aeb21837e749c801": 400,  // .45 ACP Hydra-Shok
+      "5ea2a8e200685063ec28c05a": 830,  // .45 ACP RIP
+      "5efb0cabfb3e451d70735af5": 900,  // .45 ACP AP 
+      "64b6979341772715af0f9c39": 420,  // 4.6x30mm JSP SX
+      "5ba2678ad4351e44f824b344": 1140, // 4.6x30mm FMJ SX
+      "5ba26835d4351e0035628ff5": 950,  // 4.6x30mm AP SX
+      "5cc80f67e4a949035e43bbba": 325,  // 5.7x28mm SB193
+      "5cc80f53e4a949000e1ea4f8": 590,  // 5.7x28mm L191
+      "5cc80f38e4a949001152b560": 700,  // 5.7x28mm SS190
+      "56dff3afd2720bba668b4567": 200,  // 5.45x39mm PS gs
+      "56dff2ced2720bb4668b4567": 750,  // 5.45x39mm PP gs
+      "56dfef82d2720bbd668b4567": 1350, // 5.45x39mm BP gs
+      "56dff061d2720bb5668b4567": 1050, // 5.45x39mm BT gs
+      "61962b617c6c7b169525f168": 1150, // 5.45x39mm 7N40
+      "56dff026d2720bb8668b4567": 1850, // 5.45x39mm BS gs
+      "5c0d5e4486f77478390952fe": 1900, // 5.45x39mm PPBS gs "Igolnik"
+      "60194943740c5d77f6705eea": 900,  // 5.56x45mm MK 318 Mod 0 (SOST)
+      "59e6906286f7746c9f75e847": 1050, // 5.56x45mm M856A1
+      "54527ac44bdc2d36668b4567": 1550, // 5.56x45mm M855A1
+      "59e690b686f7746c9f75e848": 2000, // 5.56x45mm M995
+      "601949593ae8f707c4608daa": 2250, // 5.56x45mm SSA AP
+      "5fbe3ffdf8b6a877a729ea82": 440,  // .300 Blackout BCP FMJ
+      "619636be6db0f2477964e710": 1100, // .300 Blackout M62 Tracer
+      "64b8725c4b75259c590fa899": 1200, // .300 Blackout CBJ
+      "5fd20ff893a8961fc660a954": 1500, // .300 Blackout AP
+      "5656d7c34bdc2d9d198b4587": 315,  // 7.62x39mm PS gzh
+      "64b7af434b75259c590fa893": 1100, // 7.62x39mm PP gzh
+      "59e0d99486f7744a32234762": 1850, // 7.62x39mm BP gzh
+      "601aa3d2b2bcb34913271e6d": 2300, // 7.62x39mm MAI AP
+      "58dd3ad986f77403051cba8f": 600,  // 7.62x51mm M80
+      "5a608bf24f39f98ffc77720e": 800,  // 7.62x51mm M62 Tracer
+      "5a6086ea4f39f99cd479502f": 2000, // 7.62x51mm M61
+      "5efb0c1bd79ff02a1f5e68d9": 2500, // 7.62x51mm M993
+      "5fc382a9d724d907e2077dab": 50000,// .338 Lapua Magnum AP
+      "57a0dfb82459774d3078b56c": 305,  // 9x39mm SP-5 gs
+      "5c0d668f86f7747ccb7f13b2": 1000, // 9x39mm SPP gs
+      "61962d879bb3d20b0946d385": 1100, // 9x39mm PAB-9 gs
+      "57a0e5022459774d1673f889": 1250, // 9x39mm SP-6 gs
+      "5c0d688c86f77413ae3407b2": 1700, // 9x39mm BP gs
+      "59e655cb86f77411dc52a77b": 150,  // .366 TKM EKO
+      "5f0596629e22f464da6bbdd9": 1400, // .366 TKM AP-M
+      "5cadf6e5ae921500113bb973": 1500, // 12.7x55mm PS12A  // Prapor LL2
+      "5cadf6ddae9215051e1c23b2": 420,  // 12.7x55mm PS12
+      "5cadf6eeae921500134b2799": 2500, // 12.7x55mm PS12B
+      "5d6e6806a4b936088465b17e": 670,  // 12/70 8.5mm Magnum buckshot 
+      "64b8ee384b75259c590fa89b": 403,  // 12/70 Piranha
+      "5d6e6911a4b9361bd5780d52": 3394, // 12/70 flechette
+      "5c0d591486f7744c505b416f": 1200, // 12/70 RIP
+      "5d6e68c4a4b9361b93413f79": 600,  // 12/70 makeshift .50 BMG slug
+      "5d6e68a8a4b9360b6c0d54e2": 2500, // 12/70 AP-20 armor-piercing slug
+      "5d6e69b9a4b9361bc8618958": 95,   // 20/70 6.2mm buckshot
+      "5d6e6a5fa4b93614ec501745": 250,  // 20/70 Devastator slug
+      "5d6e6a05a4b93618084f58d0": 120,  // 20/70 Star slug
+      "5d6e6a42a4b9364f07165f52": 100,  // 20/70 "Poleva-6u" slug
+      "5e85a9f4add9fe03027d9bf1": 4000, // 23x75mm Zvezda flashbang round 
+      "5f647f31b6238e5dd066e196": 240,  // 23x75mm Shrapnel-25 buckshot
+      "5e85a9a6eacf8c039e4e2ac1": 630,  // 23x75mm Shrapnel-10 buckshot
+      "5e85aa1a988a8701445df1f5": 550   // 23x75mm Barrikada
+    }
   }
 }

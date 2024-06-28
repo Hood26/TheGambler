@@ -150,46 +150,50 @@ export class TraderHelper
         const TWO_THREE_BY_SEVEN_FIVE_GAMBLE_ID = "au_23x75_gamble";
         
         const price = new Price(container, config, logger)
-        const genereatedMysteryAmmoPrices = price.generateMysteryAmmoPrices();
+        const generatedMysteryAmmoPrices = price.generateMysteryAmmoPrices();
+        const generatedMysteryContainerPrices = price.generateMysteryContainerPrices();
+
+        console.log("THE SIMULATED CONTAINER PRICES...");
+        console.log(generatedMysteryContainerPrices)
         //const gene
 
 
-        //logger.info(genereatedMysteryAmmoPrices);
+        //logger.info(generatedMysteryAmmoPrices);
         //logger.info("test...");
-        //logger.info(genereatedMysteryAmmoPrices["9x18_case_price"]);
-        //logger.info((genereatedMysteryAmmoPrices["9x18_case_price"] * config.price_multiplier));
+        //logger.info(generatedMysteryAmmoPrices["9x18_case_price"]);
+        //logger.info((generatedMysteryAmmoPrices["9x18_case_price"] * config.price_multiplier));
         
         assortCreator.createSingleAssortItem(WALLET_GAMBLE_ID)
-                                .addStackCount(config.price_stock['wallet_stock'])
-                                .addBuyRestriction(config.price_stock['wallet_stock'])
-                                .addMoneyCost(Money.ROUBLES, (config.price_stock['wallet_price'] * config.price_multiplier))
+                                .addStackCount(config.price_stock['wallet_case_stock'])
+                                .addBuyRestriction(config.price_stock['wallet_case_stock'])
+                                .addMoneyCost(Money.ROUBLES, (config.price_stock['wallet_case_price'] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(KEY_GAMBLE_ID)
-                                .addStackCount(config.price_stock['key_stock'])
-                                .addBuyRestriction(config.price_stock['key_stock'])
-                                .addMoneyCost(Money.ROUBLES, (config.price_stock['key_price'] * config.price_multiplier))
+                                .addStackCount(config.price_stock['key_case_stock'])
+                                .addBuyRestriction(config.price_stock['key_case_stock'])
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryContainerPrices['key_case_price'] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(STIM_GAMBLE_ID)
-                                .addStackCount(config.price_stock['stimulant_stock'])
-                                .addBuyRestriction(config.price_stock['stimulant_stock'])
-                                .addMoneyCost(Money.ROUBLES, (config.price_stock['stimulant_price'] * config.price_multiplier))
+                                .addStackCount(config.price_stock['stim_case_stock'])
+                                .addBuyRestriction(config.price_stock['stim_case_stock'])
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryContainerPrices['stim_case_price'] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(KEYCARD_GAMBLE_ID)
-                                .addStackCount(config.price_stock['keycard_stock'])
-                                .addBuyRestriction(config.price_stock['keycard_stock'])
-                                .addMoneyCost(Money.ROUBLES, (config.price_stock['keycard_price'] * config.price_multiplier))
+                                .addStackCount(config.price_stock['keycard_case_stock'])
+                                .addBuyRestriction(config.price_stock['keycard_case_stock'])
+                                .addMoneyCost(Money.ROUBLES, (config.price_stock['keycard_case_price'] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
 
 
-
+    
         assortCreator.createSingleAssortItem(FIFTY_FIFTY_GAMBLE_ID)
-                                .addStackCount(config.price_stock['fiftyfifty_stock'])
-                                .addBuyRestriction(config.price_stock['fiftyfity_stock'])
-                                .addMoneyCost(Money.ROUBLES, (config.price_stock['fiftyfifty_price'] * config.price_multiplier))
+                                .addStackCount(config.price_stock['fiftyfifty_case_stock'])
+                                .addBuyRestriction(config.price_stock['fiftyfity_case_stock'])
+                                .addMoneyCost(Money.ROUBLES, (config.price_stock['fiftyfifty_case_price'] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(SEALED_WEAPON_CASE_ID)
@@ -199,9 +203,9 @@ export class TraderHelper
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(MELEE_GAMBLE_ID)
-                                .addStackCount(config.price_stock['melee_stock'])
-                                .addBuyRestriction(config.price_stock['melee_stock'])
-                                .addMoneyCost(Money.ROUBLES, (config.price_stock['melee_price'] * config.price_multiplier))
+                                .addStackCount(config.price_stock['melee_case_stock'])
+                                .addBuyRestriction(config.price_stock['melee_case_stock'])
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryContainerPrices['melee_case_price'] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(GUN_GAMBLE_ID)
@@ -239,7 +243,7 @@ export class TraderHelper
         assortCreator.createSingleAssortItem(BACKPACK_GAMBLE_ID)
                                 .addStackCount(config.price_stock['backpack_case_stock'])
                                 .addBuyRestriction(config.price_stock['backpack_case_stock'])
-                                .addMoneyCost(Money.ROUBLES, (config.price_stock['backpack_case_price'] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryContainerPrices['backpack_case_price'] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(HEADSET_GAMBLE_ID)
@@ -248,12 +252,13 @@ export class TraderHelper
                                 .addMoneyCost(Money.ROUBLES, (config.price_stock['headset_case_price'] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
+        
                                 
         /*
         assortCreator.createSingleAssortItem(SEVEN_SIX_TWO_BY_TWO_FIVE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["7.62x25_case_stock"])
                                 .addBuyRestriction(config.price_stock["7.62x25_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["7.62x25_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["7.62x25_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         */
@@ -261,121 +266,121 @@ export class TraderHelper
         assortCreator.createSingleAssortItem(NINE_BY_ONE_EIGHT_GAMBLE_ID)
                                 .addStackCount(config.price_stock["9x18_case_stock"])
                                 .addBuyRestriction(config.price_stock["9x18_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["9x18_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["9x18_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(NINE_BY_ONE_NINE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["9x19_case_stock"])
                                 .addBuyRestriction(config.price_stock["9x19_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["9x19_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["9x19_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(NINE_BY_TWO_ONE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["9x21_case_stock"])
                                 .addBuyRestriction(config.price_stock["9x21_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["9x21_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["9x21_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(THREE_FIVE_SEVEN_GAMBLE_ID)
                                 .addStackCount(config.price_stock[".357_case_stock"])
                                 .addBuyRestriction(config.price_stock[".357_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices[".357_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices[".357_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(FOUR_FIVE_GAMBLE_ID)
                                 .addStackCount(config.price_stock[".45_case_stock"])
                                 .addBuyRestriction(config.price_stock[".45_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices[".45_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices[".45_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(FOUR_SIX_BY_THREE_ZERO_GAMBLE_ID)
                                 .addStackCount(config.price_stock["4.6x30_case_stock"])
                                 .addBuyRestriction(config.price_stock["4.6x30_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["4.6x30_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["4.6x30_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(FIVE_SEVEN_BY_TWO_EIGHT_GAMBLE_ID)
                                 .addStackCount(config.price_stock["5.7x28_case_stock"])
                                 .addBuyRestriction(config.price_stock["5.7x28_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["5.7x28_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["5.7x28_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(FIVE_FOUR_FIVE_BY_THREE_NINE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["5.45x39_case_stock"])
                                 .addBuyRestriction(config.price_stock["5.45x39_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["5.45x39_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["5.45x39_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(FIVE_FIVE_SIX_BY_FOUR_FIVE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["5.56x45_case_stock"])
                                 .addBuyRestriction(config.price_stock["5.56x45_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["5.56x45_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["5.56x45_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(THREE_ZERO_ZERO_GAMBLE_ID)
                                 .addStackCount(config.price_stock[".300_case_stock"])
                                 .addBuyRestriction(config.price_stock[".300_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices[".300_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices[".300_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(SEVEN_SIX_TWO_BY_THREE_NINE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["7.62x39_case_stock"])
                                 .addBuyRestriction(config.price_stock["7.62x39_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["7.62x39_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["7.62x39_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(SEVEN_SIX_TWO_BY_FIVE_ONE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["7.62x51_case_stock"])
                                 .addBuyRestriction(config.price_stock["7.62x51_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["7.62x51_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["7.62x51_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(SEVEN_SIX_TWO_BY_FIVE_FOUR_GAMBLE_ID)
                                 .addStackCount(config.price_stock["7.62x54_case_stock"])
                                 .addBuyRestriction(config.price_stock["7.62x54_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["7.62x54_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["7.62x54_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(THREE_THREE_EIGHT_GAMBLE_ID)
                                 .addStackCount(config.price_stock[".338_case_stock"])
                                 .addBuyRestriction(config.price_stock[".338_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices[".338_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices[".338_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(NINE_BY_THREE_NINE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["9x39_case_stock"])
                                 .addBuyRestriction(config.price_stock["9x39_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["9x39_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["9x39_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(THREE_SIX_SIX_GAMBLE_ID)
                                 .addStackCount(config.price_stock[".366_case_stock"])
                                 .addBuyRestriction(config.price_stock[".366_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices[".366_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices[".366_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(ONE_TWO_SEVEN_BY_FIVE_FIVE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["12.7x55_case_stock"])
                                 .addBuyRestriction(config.price_stock["12.7x55_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["12.7x55_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["12.7x55_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(ONE_TWO_BY_SEVEN_ZERO_GAMBLE_ID)
                                 .addStackCount(config.price_stock["12/70_case_stock"])
                                 .addBuyRestriction(config.price_stock["12/70_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["12/70_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["12/70_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(TWO_ZERO_BY_SEVEN_ZERO_GAMBLE_ID)
                                 .addStackCount(config.price_stock["20/70_case_stock"])
                                 .addBuyRestriction(config.price_stock["20/70_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["20/70_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["20/70_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(TWO_THREE_BY_SEVEN_FIVE_GAMBLE_ID)
                                 .addStackCount(config.price_stock["23x75_case_stock"])
                                 .addBuyRestriction(config.price_stock["23x75_case_stock"])
-                                .addMoneyCost(Money.ROUBLES, (genereatedMysteryAmmoPrices["23x75_case_price"] * config.price_multiplier))
+                                .addMoneyCost(Money.ROUBLES, (generatedMysteryAmmoPrices["23x75_case_price"] * config.price_multiplier))
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         
