@@ -29,6 +29,10 @@
     "stim_case_price": 36500,
     "stim_case_stock": 999,
 
+    "bitcoin_case_stock": 4,
+
+    "gpcoin_case_stock": 8,
+
     "keycard_case_price": 265000,
     "keycard_case_stock": 15,
 
@@ -38,14 +42,14 @@
     "melee_case_price": 58500,
     "melee_case_stock": 25,
 
-    "gun_case_price": 86500,
+    "gun_case_price": 94500,
     "gun_case_stock": 15,
 
     "premium_gun_case_price": 250000,
     "premium_gun_case_stock": 4,
 
     "helmet_case_price": 55000,
-    "helmet_case_stock": 8,
+    "helmet_case_stock": 10,
 
     "headset_case_price": 55000,
     "headset_case_stock": 8,
@@ -62,68 +66,71 @@
     "backpack_case_price": 45000,
     "backpack_case_stock": 15,
 
+    "rig_case_price": 45000,
+    "rig_case_stock": 15,
+
     "7.62x25_case_price": 10000,
-    "7.62x25_case_stock": 555,
+    "7.62x25_case_stock": 20,
 
     "9x18_case_price": 10000,
-    "9x18_case_stock": 555,
+    "9x18_case_stock": 20,
 
     "9x19_case_price": 10000,
-    "9x19_case_stock": 555,
+    "9x19_case_stock": 20,
 
     "9x21_case_price": 10000,
-    "9x21_case_stock": 555,
+    "9x21_case_stock": 20,
 
     ".357_case_price": 10000,
-    ".357_case_stock": 555,
+    ".357_case_stock": 15,
 
     ".45_case_price": 10000,
-    ".45_case_stock": 555,
+    ".45_case_stock": 20,
 
     "4.6x30_case_price": 10000,
-    "4.6x30_case_stock": 555,
+    "4.6x30_case_stock": 15,
 
     "5.7x28_case_price": 10000,
-    "5.7x28_case_stock": 555,
+    "5.7x28_case_stock": 20,
 
     "5.45x39_case_price": 8500,
-    "5.45x39_case_stock": 555,
+    "5.45x39_case_stock": 15,
 
     "5.56x45_case_price": 11500,
-    "5.56x45_case_stock": 555,
+    "5.56x45_case_stock": 15,
 
     ".300_case_price": 10000,
-    ".300_case_stock": 555,
+    ".300_case_stock": 15,
 
     "7.62x39_case_price": 10000,
-    "7.62x39_case_stock": 555,
+    "7.62x39_case_stock": 15,
 
     "7.62x51_case_price": 11500,
-    "7.62x51_case_stock": 555,
+    "7.62x51_case_stock": 15,
 
     "7.62x54_case_price": 14000,
-    "7.62x54_case_stock": 555,
+    "7.62x54_case_stock": 15,
 
     ".338_case_price": 30000,
-    ".338_case_stock": 555,
+    ".338_case_stock": 10,
 
     "9x39_case_price": 8750,
-    "9x39_case_stock": 555,
+    "9x39_case_stock": 15,
 
     ".366_case_price": 10000,
-    ".366_case_stock": 555,
+    ".366_case_stock": 15,
 
     "12.7x55_case_price": 10000,
-    "12.7x55_case_stock": 555,
+    "12.7x55_case_stock": 15,
 
     "12/70_case_price": 10000,
-    "12/70_case_stock": 555,
+    "12/70_case_stock": 20,
 
     "20/70_case_price": 10000,
-    "20/70_case_stock": 555,
+    "20/70_case_stock": 20,
 
     "23x75_case_price": 10000,
-    "23x75_case_stock": 555
+    "23x75_case_stock": 15
   },
 
   // GAMBLING ODDS SECTION
@@ -134,11 +141,11 @@
     // gambling_container_wallet
     //
     // Chance for each possibility in percentage from rarest to most common
-    "wallet_extremely_rare": 1.0,   // 2 Million Roubles
-    "wallet_rare": 2.0,             // 1 Miliion Roubles
-    "wallet_kinda_rare": 4.0,       // 500k Roubles
-    "wallet_uncommon": 8.0,         // 300k Roubles
-    "wallet_common": 35.0,          // 100K Roubles
+    "wallet_extremely_rare": 3.0,   // 1 Million Roubles
+    "wallet_rare": 6.0,             // 500k Roubles
+    "wallet_kinda_rare": 10.0,       // 300k Roubles
+    "wallet_uncommon": 16.0,         // 100k Roubles
+    "wallet_common": 25.0,          // 50K Roubles
     "wallet_profit_percentage": 115,
     // 100 minus all above percentages = percentage at receiving nothing from gambling container. If desired. (Applies to all gambling containers!)
 
@@ -169,6 +176,14 @@
     "stim_common": 50.0,          // Common Stim
     "stim_profit_percentage": 110,
 
+    // gambling_container_bitcoin
+    "bitcoin_success": 50.0,      // Two Bitcoins
+    "bitcoin_failure": 50.0,      // Nothing
+
+    // gambling_container_gpcoin
+    "gpcoin_success": 50.0,      // Two Bitcoins
+    "gpcoin_failure": 50.0,      // Nothing
+
     // gambling_container_melee
     "melee_extremely_rare": 0.25, // Extremely Rare melee
     "melee_rare": 2.0,            // Rare melee
@@ -177,11 +192,18 @@
     "melee_profit_percentage": 120,
 
     // gambling_container_backpack
-    "backpack_extremely_rare": 5.0, // Extremely Rare melee
-    "backpack_rare": 12.0,          // Rare melee
-    "backpack_uncommon": 30.0,      // Uncommon melee
-    "backpack_common": 53.0,        // Common melee
+    "backpack_extremely_rare": 5.0, // Extremely Rare backpack
+    "backpack_rare": 15.0,          // Rare backpack
+    "backpack_uncommon": 35.0,      // Uncommon backpack
+    "backpack_common": 45.0,        // Common backpack
     "backpack_profit_percentage": 110,
+
+    // gambling_container_rig
+    "rig_boss": 5.0, // Extremely Rare rig
+    "rig_late_wipe": 15.0,          // Rare rig
+    "rig_early_wipe": 35.0,      // Uncommon rig
+    "rig_scav": 45.0,        // Common rig
+    "rig_profit_percentage": 110,
 
     // gambling_container_weapon
     "gun_meta": 10.0,               // Meta Gun
@@ -203,7 +225,9 @@
     "helmet_profit_percentage": 115,
 
     // gambling_container_key
-    "headset_chance": 100.0,      // Chance at receiving a random headset
+    "headset_rare": 10.0,      // Chance at receiving a random headset
+    "headset_uncommon": 35.0,      // Chance at receiving a random headset
+    "headset_common": 55.0,      // Chance at receiving a random headset
     "headset_profit_percentage": 115,
 
     // gambling_container_armor
@@ -374,7 +398,7 @@
     "20/70_rare": 12.5,           // Rare Round 20/70
     "20/70_min": 5,
     "20/70_max": 10,
-    "20/70_profit_percentage": 110,
+    "20/70_profit_percentage": 70,
 
     // gambling_container_23x75
     "23x75_common": 62.5, // Common Round 23x75
@@ -473,6 +497,25 @@
       "5f647f31b6238e5dd066e196": 240,  // 23x75mm Shrapnel-25 buckshot
       "5e85a9a6eacf8c039e4e2ac1": 630,  // 23x75mm Shrapnel-10 buckshot
       "5e85aa1a988a8701445df1f5": 550   // 23x75mm Barrikada
+    },
+    "armor": {
+      "60a283193cb70855c43a381d": 400000, // NFM THOR Integrated Carrier body armor
+      "545cdb794bdc2d3a198b456a": 350000, // 6B43 Zabralo-Sh body armor (Digital Flora)
+      "5ca21c6986f77479963115a7": 350000, // FORT Redut-T5 body armor (Smog)
+      "5b44cd8b86f774503d30cba2": 300000, // IOTV Gen4 body armor (Full Protection Kit, MultiCam)
+      "5c0e541586f7747fa54205c9": 285000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 245000, // FORT Redut-M body armor
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
+      "5c0e541586f7747fa54205c9": 250000, // 6B13 M assault armor (Killa Edition)
     }
   }
 }

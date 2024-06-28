@@ -10,6 +10,7 @@ import { ItemCreator } from "./itemCreator";
 import { Keys } from "./containers/keys";
 import { Stims } from "./containers/Stims";
 import { Backpacks } from "./containers/Backpacks";
+import { Rigs } from "./containers/Rigs";
 import { Headsets } from "./containers/Headsets";
 import { Ammo } from "./containers/Ammo";
 import { Melees } from "./containers/Melees";
@@ -60,6 +61,12 @@ export class Gamble {
             case 'stim':
                 this.openStim();
                 break;    
+            case 'bitcoin':
+                this.openBitcoin();
+                break;    
+            case 'gpcoin':
+                this.openGPCoin();
+                break;    
             case '50/50':
                 this.openFiftyFifty();
                 break;
@@ -80,6 +87,9 @@ export class Gamble {
                 break;
             case 'backpack':
                 this.openBackpack();
+                break;
+            case 'rig':
+                this.openRig();
                 break;
             case 'armor':
                 this.openArmor();
@@ -135,6 +145,7 @@ export class Gamble {
             const id = "5449016a4bdc2d6f028b456f"; // Roubles
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, money)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
             this.logger.info(`[TheGambler][wallet] Case Opened... Received Nothing... Better luck next time :)`);
         }
@@ -161,6 +172,7 @@ export class Gamble {
         if (id != "NaN" ) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
             this.logger.info(`[TheGambler][keycard] Case Opened... Received Nothing... Better luck next time :)`);
         }
@@ -175,11 +187,43 @@ export class Gamble {
             id = "57347d7224597744596b4e72"; // Can of beef stew (Small)
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
             id = "5449016a4bdc2d6f028b456f"; // Roubles
             money = 5000000; // 5,000,000 roubles
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, money)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
+        }
+    }
+    private openBitcoin(){
+        let id: string;
+        const roll: number = this.randomUtil.getFloat(0,100);
+
+        if (roll <= 50) {
+            this.logger.info(`[TheGambler][Bitcoin] Case Opened... Received Nothing... Better luck next time :)`);
+        } else {
+            id = "59faff1d86f7746c51718c9c"; // Bitcoin
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, 1)];
+            this.newItemsRequest.foundInRaid = true;
+            this.count++;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, 1)];
+            this.count++;
+        }
+    }
+    private openGPCoin(){
+        let id: string;
+        const roll: number = this.randomUtil.getFloat(0,100);
+
+        if (roll <= 50) {
+            this.logger.info(`[TheGambler][GPcoin] Case Opened... Received Nothing... Better luck next time :)`);
+        } else {
+            id = "5d235b4d86f7742e017bc88a"; // Bitcoin
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, 1)];
+            this.newItemsRequest.foundInRaid = true;
+            this.count++;
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, 1)];
+            this.count++;
         }
     }
 
@@ -207,6 +251,7 @@ export class Gamble {
         if (id != "NaN") {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
             this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
         }
@@ -214,7 +259,7 @@ export class Gamble {
 
     private openStim(){
         const roll: number = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler][Stimulant] The container roll is: ${roll}!`);
+        this.logger.info(`\n[TheGambler][Stim] The container roll is: ${roll}!`);
         const stims = new Stims();
         const odds: Array<number> = this.mysteryContainer.getOdds('stim');
         const rarities = this.mysteryContainer.getRarities('stim');
@@ -236,6 +281,7 @@ export class Gamble {
         if (id != "NaN") {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
             this.logger.info(`[TheGambler][Stim] Case Opened... Received Nothing... Better luck next time :)`);
         }
@@ -249,8 +295,8 @@ export class Gamble {
         const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Weapon] The container roll is: ${roll}!`);
         const odds: Array<number> = this.mysteryContainer.getOdds('gun');
-        console.log("OpenWeapon");
-        console.log(odds);
+        //console.log("OpenWeapon");
+        //console.log(odds);
 
 
         for(let i = 0; i < odds.length; i++) {
@@ -268,6 +314,7 @@ export class Gamble {
         if (createWeapon.length != 0) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createWeapon];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
             this.logger.info(`[TheGambler][Weapon] Case Opened... Received Nothing... Better luck next time :)`);
         }
@@ -295,8 +342,9 @@ export class Gamble {
         if (createGun.length != 0) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createGun];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else { // Nothing
-            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[TheGambler][Premium_Weapon] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
@@ -322,13 +370,14 @@ export class Gamble {
         if (createHelmet.length != 0) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createHelmet];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else { // Nothing
-            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[TheGambler][Helmet] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
     private openHeadset(){
-        const roll: number = this.randomUtil.getFloat(0,8);
+        const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Headset] The container roll is: ${roll}!`);
         const headsets = new Headsets();
         const rarities = this.mysteryContainer.getRarities('headset');
@@ -351,8 +400,9 @@ export class Gamble {
         if (id != "NaN") {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
-            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[TheGambler][Headset] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
@@ -380,8 +430,39 @@ export class Gamble {
         if (id != "NaN") {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
-            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[TheGambler][Backpack] Case Opened... Received Nothing... Better luck next time :)`);
+        }
+    }
+
+    private openRig(){
+        const roll: number = this.randomUtil.getFloat(0,100);
+        this.logger.info(`\n[TheGambler][Rig] The container roll is: ${roll}!`);
+        const rigs = new Rigs();
+        const rarities = this.mysteryContainer.getRarities('rig');
+        const odds: Array<number> = this.mysteryContainer.getOdds('rig');
+        let id: string = "NaN";
+
+        for(let i = 0; i < odds.length; i++) {
+            if(roll <= odds[i]) {
+                const secondRoll = this.randomUtil.getInt(0, rigs.items['rig' + rarities[i]].length - 1);
+                id = rigs.items['rig' + rarities[i]][secondRoll];
+                break;  
+            }
+        }
+
+        if(this.config.debug) {
+            this.logger.info("[TheGambler] Backpack Mystery Box Information...");
+            this.logger.info("[TheGambler] Backpack id = " + id);
+        }
+
+        if (id != "NaN") {
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.foundInRaid = true;
+            this.count++;
+        } else {
+            this.logger.info(`[TheGambler][Rig] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
@@ -402,8 +483,9 @@ export class Gamble {
         if (createArmor.length != 0) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createArmor];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
-            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[TheGambler][Armor] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
@@ -430,8 +512,9 @@ export class Gamble {
         if (createArmor.length != 0) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [...createArmor];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
-            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[TheGambler][Premium_Armor] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
@@ -459,8 +542,9 @@ export class Gamble {
         if (id != "NaN") {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
         } else {
-            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[TheGambler][Melee] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
@@ -492,9 +576,10 @@ export class Gamble {
             ammoRoll = this.randomUtil.getFloat(this.config.odds[name + '_min'], this.config.odds[name + '_max']);
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, ammoRoll)];
             this.newItemsRequest.foundInRaid = true;
+            this.count++;
 
         } else {
-            this.logger.info(`[TheGambler] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[TheGambler][Ammo] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 

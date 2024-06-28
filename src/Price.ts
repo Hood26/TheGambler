@@ -15,7 +15,7 @@ export class Price{
     private config: any;
     private logger: ILogger
     private randomUtil: any
-    private MysteryContainer: MysteryContainer
+    public MysteryContainer: MysteryContainer
 
     constructor(container: DependencyContainer, config: any, logger: ILogger){
         this.container        = container;
@@ -57,11 +57,11 @@ export class Price{
             const rarities: Array<string> = this.MysteryContainer.getRarities(current);
             const odds: Array<number> = this.MysteryContainer.getOdds(current);
             if(current == 'wallet'){
-                console.log(current)
-                console.log(rarities)
-                console.log(odds)
-                console.log(this.MysteryContainer.items[current])
-                console.log('\n\n\n')
+                //console.log(current)
+                //console.log(rarities)
+                //console.log(odds)
+                //console.log(this.MysteryContainer.items[current])
+                //console.log('\n\n\n')
             }
             
             let currentPrices: Array<number> = this.getMysteryItemPrices(current, current, rarities, this.MysteryContainer.items[current]);
@@ -89,15 +89,15 @@ export class Price{
         let prices: Array<number>    = [];
         let sum: number              = 0;
 
-        if(name == 'wallet'){
-            console.log("wallet - getMysteryItemPrices")
-            console.log(name)
-            console.log(containerType)
-            console.log(rarities)
-            console.log(item)
-            console.log(amount)
-            console.log(containerType)
-            console.log('\n\n\n')
+        if(name == 'armor'){
+            //console.log("rig - getMysteryItemPrices");
+            //console.log(name);
+            //console.log(containerType);
+            //console.log(rarities);
+            //console.log(item);
+            //console.log(amount);
+            //console.log(containerType);
+            //console.log('\n\n\n')
         }
 
         for(let i = 0; i < rarities.length; i++){
@@ -108,6 +108,7 @@ export class Price{
 
                 if (override != undefined){
                     currentPrice = override * amount;
+                    console.log("Override...")
                 } else {
                     
                     if(Number.isInteger(item.items[name + rarities[i]][j])){ // Number
@@ -116,6 +117,16 @@ export class Price{
                         //console.log(`The Number = ${item.items[name + rarities[i]][j]}`)
                     } else{ // String
 
+                        // TESTING PURPOSES
+                        if ( item.items[name + rarities[i]][j] == '5ca2151486f774244a3b8d30' ) {
+                            console.log("FORT Redut-M body armor");
+                            console.log('Dynamic Flea Price = ' + itemHelper.getDynamicItemPrice(item.items[name + rarities[i]][j]));
+                            console.log('Static Item Price = ' + itemHelper.getStaticItemPrice(item.items[name + rarities[i]][j]));
+                            console.log('Item Max Price = ' + itemHelper.getItemMaxPrice(item.items[name + rarities[i]][j]));
+                            console.log('Item Price = ' + itemHelper.getItemPrice(item.items[name + rarities[i]][j]));
+                            //console.log('Custom Gambler Price = ' + this.expensiveAmmos[item.items[name + rarities[i]][j]]);
+                        }
+                        
                         const fleaPrice = itemHelper.getDynamicItemPrice(item.items[name + rarities[i]][j]);
                         // Thinking: We always want to use flea price as this is most accurate, but if their is no flea price we must fallback to handbook
                         if (fleaPrice == 0) {
@@ -140,6 +151,7 @@ export class Price{
 
         this.logger.info(`${name} PRICES:`)
         this.logger.info(prices)
+        this.MysteryContainer.setRarityAverageProfit(name, prices);
         return prices;
     }
 
@@ -185,16 +197,16 @@ export class Price{
                     currentContainerPrice += 50;
                 }
             }
-            if(name == 'stim'){
+            if(name == 'rig'){
                 //this.logger.info(`Profit = ${profit} Spent = ${spent} Sum = ${sum}`)
                 //this.logger.info(`Current Percentage = ${currentPercentage} Desired Percentage = ${desiredPercentage}`)
                 //this.logger.info(`Current Container Price = ${currentContainerPrice} Desired Percentage = ${desiredPercentage}`)
             }
         }
-        if(name == 'key'){
+        if(name == 'rig'){
 
-            console.log(`\n${name} Simulation Results: Final Percentage = ${currentPercentage} Desired Percentage = ${desiredPercentage}`)
-            console.log(odds)
+            //console.log(`\n${name} Simulation Results: Final Percentage = ${currentPercentage} Desired Percentage = ${desiredPercentage}`)
+            //console.log(odds)
         }
         return currentContainerPrice;
     }

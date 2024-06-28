@@ -186,12 +186,12 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
 
         } else {
             // Other custom gambling containers added by different mods
-            this.logger.info(`GET RANDOM LOOT CONTAINER LOOT`);
+            //this.logger.info(`GET RANDOM LOOT CONTAINER LOOT`);
             // Other random containers
             // Get summary of loot from config
             const rewardContainerDetails = inventoryHelper.getRandomLootContainerRewardDetails(openedItem._tpl);
             const getLoot = lootGenerator.getRandomLootContainerLoot(rewardContainerDetails);
-            this.logger.info(getLoot);
+            //this.logger.info(getLoot);
 
             newItemsRequest.itemsWithModsToAdd.push(...getLoot);
             newItemsRequest.foundInRaid = rewardContainerDetails.foundInRaid;
@@ -235,6 +235,8 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         //this.logger.info(message.type);
 
 
+        //console.log("END")
+        //console.log(newItemsRequest.itemsWithModsToAdd)
         if (newItemsRequest.itemsWithModsToAdd.length != 0) {
 
             if (inventoryHelper.canPlaceItemsInInventory(sessionID, newItemsRequest.itemsWithModsToAdd)){
