@@ -118,8 +118,8 @@ export class Price{
                     } else{ // String
 
                         // TESTING PURPOSES
-                        if ( item.items[name + rarities[i]][j] == '5ca2151486f774244a3b8d30' ) {
-                            console.log("FORT Redut-M body armor");
+                        if ( item.items[name + rarities[i]][j] == '5e4ac41886f77406a511c9a8' ) {
+                            console.log("Ars Arma CPC MOD.1 plate carrier (A-TACS FG)");
                             console.log('Dynamic Flea Price = ' + itemHelper.getDynamicItemPrice(item.items[name + rarities[i]][j]));
                             console.log('Static Item Price = ' + itemHelper.getStaticItemPrice(item.items[name + rarities[i]][j]));
                             console.log('Item Max Price = ' + itemHelper.getItemMaxPrice(item.items[name + rarities[i]][j]));
