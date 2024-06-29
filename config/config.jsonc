@@ -27,7 +27,7 @@
     "key_case_stock": 25,
 
     "stim_case_price": 36500,
-    "stim_case_stock": 999,
+    "stim_case_stock": 15,
 
     "bitcoin_case_stock": 4,
 
@@ -82,25 +82,25 @@
     "9x21_case_stock": 20,
 
     ".357_case_price": 10000,
-    ".357_case_stock": 15,
+    ".357_case_stock": 20,
 
     ".45_case_price": 10000,
     ".45_case_stock": 20,
 
     "4.6x30_case_price": 10000,
-    "4.6x30_case_stock": 15,
+    "4.6x30_case_stock": 20,
 
     "5.7x28_case_price": 10000,
     "5.7x28_case_stock": 20,
 
     "5.45x39_case_price": 8500,
-    "5.45x39_case_stock": 15,
+    "5.45x39_case_stock": 20,
 
     "5.56x45_case_price": 11500,
-    "5.56x45_case_stock": 15,
+    "5.56x45_case_stock": 20,
 
     ".300_case_price": 10000,
-    ".300_case_stock": 15,
+    ".300_case_stock": 20,
 
     "7.62x39_case_price": 10000,
     "7.62x39_case_stock": 15,
@@ -115,10 +115,10 @@
     ".338_case_stock": 10,
 
     "9x39_case_price": 8750,
-    "9x39_case_stock": 15,
+    "9x39_case_stock": 20,
 
     ".366_case_price": 10000,
-    ".366_case_stock": 15,
+    ".366_case_stock": 20,
 
     "12.7x55_case_price": 10000,
     "12.7x55_case_stock": 15,
@@ -231,8 +231,8 @@
     "headset_profit_percentage": 115,
 
     // gambling_container_armor
-    "armor_rare": 15.0,           // Rare Armor
-    "armor_uncommon": 25.0,       // Uncommon Armor
+    "armor_rare": 12.5,           // Rare Armor
+    "armor_uncommon": 27.5,       // Uncommon Armor
     "armor_common": 60.0,         // Common Armor
     "armor_profit_percentage": 110,
 
@@ -412,18 +412,17 @@
   //
   //
   //
-  // Mystery Container Automatic Price Balancer uses override prices instead of the items actual flea market price when generating optimal mystery container prices.
+  // Mystery Container Automatic Price Balancer uses override prices (if applicable) instead of the items actual flea market price when generating optimal mystery container prices.
   // Raising or lowering any of the values will manipulate the mystery container price in that direction
   //  - Why?:   
   //    - I made this override section as I felt ammo and a few blacklisted items handbook prices were way too cheap.
   //      These changes are meant to help realistically balance mystery containers further.
-  //    - Blacklisted ammo should be expensive and I have created override prices reflecting this
-  //
+  //    - Blacklisted ammo/armor should be expensive and I have created override prices reflecting this
   //
   // Enable or Disable override prices
-  // NOTE: If you use the Blacklist Mod and are satisfied with the flea market price of ammos try setting this to 'false'
-  "mystery_container_override_enable": true, // Default 'true' - Mystery Container will use prices from"mystery_container_override_price"
-                                             // If false, automatic balancer will use items' flea market price or handbook price if item is blacklisted
+  // NOTE: If you use the Blacklist Mod and are satisfied with the flea market price of ammos and armors you can try setting this to 'false'
+  "mystery_container_override_enable": true, // Default 'true' - Automatic Balancer will use prices from "mystery_container_override_price" if applicable
+                                             // If 'false'     - Automatic Balancer will only use items' flea market price or handbook price if item is blacklisted
   
   "mystery_container_override_price": {
     "ammo": {                           // Priced in Roubles
@@ -499,6 +498,15 @@
       "5e85aa1a988a8701445df1f5": 550   // 23x75mm Barrikada
     },
     "armor": {
+      // Uncommon Armors
+      "5ab8e79e86f7742d8b372e78": 175000, // BNTI Gzhel-K body armor
+      "63737f448b28897f2802b874": 155000, // Hexatac HPC Plate Carrier (MultiCam Black)
+      "5c0e655586f774045612eeb2": 165000, // HighCom Trooper TFO body armor (MultiCam)
+      "5ab8dced86f774646209ec87": 165000, // ANA Tactical M2 plate carrier (Digital Flora)
+      "5d5d87f786f77427997cfaef": 175000, // Ars Arma A18 Skanda plate carrier (MultiCam)
+      "544a5caa4bdc2d1a388b4568": 155000, // Crye Precision AVS plate carrier (Ranger Green)
+
+      // Rare Armors
       "60a283193cb70855c43a381d": 475000, // NFM THOR Integrated Carrier body armor
       "545cdb794bdc2d3a198b456a": 400000, // 6B43 Zabralo-Sh body armor (Digital Flora)
       "5ca21c6986f77479963115a7": 350000, // FORT Redut-T5 body armor (Smog)
@@ -519,7 +527,7 @@
       "628b9c7d45122232a872358f": 295000, // Crye Precision CPC plate carrier (Goons Edition)
       "64a5366719bab53bd203bf33": 285000, // Eagle Allied Industries MBSS plate carrier (Coyote Brown)
       "628b9784bcf6e2659e09b8a2": 245000, // S&S Precision PlateFrame plate carrier (Goons Edition)
-      "628cd624459354321c4b7fa2": 165000, // Tasmanian Tiger SK plate carrier (MultiCam Black)
+      "628cd624459354321c4b7fa2": 185000, // Tasmanian Tiger SK plate carrier (MultiCam Black)
       "5c0e625a86f7742d77340f62": 225000 // BNTI Zhuk body armor (Digital Flora)
     }
   }

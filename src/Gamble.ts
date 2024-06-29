@@ -552,7 +552,6 @@ export class Gamble {
         const ammo = new Ammo();
         const name = this.name;
         const roll: number = this.randomUtil.getFloat(0,100);
-        this.logger.info(`\n[TheGambler][Ammo] name: ${name}`);
         this.logger.info(`\n[TheGambler][Ammo] The container roll is: ${roll}!`);
         let id: string = "NaN";
         const rarities = this.mysteryContainer.getRarities(name);

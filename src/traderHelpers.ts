@@ -160,8 +160,7 @@ export class TraderHelper
         const generatedMysteryContainerPrices = price.generateMysteryContainerPrices();
 
         const premium_armor_cost = Math.floor(price.MysteryContainer.getRarityAverageProfit('armor')[0]);
-        console.log(premium_armor_cost)
-
+        //console.log(premium_armor_cost)
         //console.log("THE SIMULATED CONTAINER PRICES...");
         //console.log(generatedMysteryContainerPrices);
 

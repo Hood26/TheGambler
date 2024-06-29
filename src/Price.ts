@@ -78,7 +78,7 @@ export class Price{
             mysteryAmmoPrices[current + "_case_price"] = currentContainerPrice;
         }
         this.logger.info("[TheGambler] Finished Generating Mystery Container Prices!");
-        console.log(mysteryAmmoPrices)
+        //console.log(mysteryAmmoPrices)
         return mysteryAmmoPrices;
     }
 
@@ -106,9 +106,9 @@ export class Price{
                 let currentPrice;
                 const override: number = this.MysteryContainer.getOverride(containerType, [item.items[name + rarities[i]][j]]);
 
-                if (override != undefined){
+                if (override != undefined && this.config['mystery_container_override_enable'] == true){
                     currentPrice = override * amount;
-                    console.log("Override...")
+                    //console.log("Override...")
                 } else {
                     
                     if(Number.isInteger(item.items[name + rarities[i]][j])){ // Number
@@ -118,12 +118,12 @@ export class Price{
                     } else{ // String
 
                         // TESTING PURPOSES
-                        if ( item.items[name + rarities[i]][j] == '5e4ac41886f77406a511c9a8' ) {
-                            console.log("Ars Arma CPC MOD.1 plate carrier (A-TACS FG)");
-                            console.log('Dynamic Flea Price = ' + itemHelper.getDynamicItemPrice(item.items[name + rarities[i]][j]));
-                            console.log('Static Item Price = ' + itemHelper.getStaticItemPrice(item.items[name + rarities[i]][j]));
-                            console.log('Item Max Price = ' + itemHelper.getItemMaxPrice(item.items[name + rarities[i]][j]));
-                            console.log('Item Price = ' + itemHelper.getItemPrice(item.items[name + rarities[i]][j]));
+                        if ( item.items[name + rarities[i]][j] == '544a5caa4bdc2d1a388b4568' ) {
+                            //console.log("Crye Precision AVS plate carrier (Ranger Green)");
+                            //console.log('Dynamic Flea Price = ' + itemHelper.getDynamicItemPrice(item.items[name + rarities[i]][j]));
+                            //console.log('Static Item Price = ' + itemHelper.getStaticItemPrice(item.items[name + rarities[i]][j]));
+                            //console.log('Item Max Price = ' + itemHelper.getItemMaxPrice(item.items[name + rarities[i]][j]));
+                            //console.log('Item Price = ' + itemHelper.getItemPrice(item.items[name + rarities[i]][j]));
                             //console.log('Custom Gambler Price = ' + this.expensiveAmmos[item.items[name + rarities[i]][j]]);
                         }
                         
@@ -149,8 +149,8 @@ export class Price{
             sum = 0;
         }
 
-        this.logger.info(`${name} PRICES:`)
-        this.logger.info(prices)
+        //this.logger.info(`${name} PRICES:`)
+        //this.logger.info(prices)
         this.MysteryContainer.setRarityAverageProfit(name, prices);
         return prices;
     }
