@@ -265,14 +265,14 @@ export class Ammo {
                     "64b8f7c241772715af0f9c3d", // 7.62x54mm R HP BT
                     "64b8f7b5389d7ffd620ccba2", // 7.62x54mm R SP BT
                     "64b8f7968532cf95ee0a0dbf", // 7.62x54mm R FMJ
-                    "5e023cf8186a883be655e54f", // 7.62x54mm R T-46M gzh 
-                    "5887431f2459777e1612938f", // 7.62x54mm R LPS gzh
                 ],
                 "7.62x54_uncommon": [
+                    "5e023cf8186a883be655e54f", // 7.62x54mm R T-46M gzh 
+                    "5887431f2459777e1612938f", // 7.62x54mm R LPS gzh
                     "59e77a2386f7742ee578960a", // 7.62x54mm R PS gzh
-                    "5e023d34e8a400319a28ed44", // 7.62x54mm R BT gzh
                 ],
                 "7.62x54_rare": [
+                    "5e023d34e8a400319a28ed44", // 7.62x54mm R BT gzh
                     "560d61e84bdc2da74d8b4571", // 7.62x54mm R SNB gzh 
                     "5e023d48186a883be655e551", // 7.62x54mm R BS gs
                 ],
@@ -296,15 +296,16 @@ export class Ammo {
             items: {
                 "9x39_common": [
                     "6576f96220d53a5b8f3e395e", // 9x39mm FMJ
-                    "57a0dfb82459774d3078b56c", // 9x39mm SP-5 gs
                 ],
                 "9x39_uncommon": [
-                    "5c0d668f86f7747ccb7f13b2", // 9x39mm SPP gs
-                    "61962d879bb3d20b0946d385", // 9x39mm PAB-9 gs
+                    "57a0dfb82459774d3078b56c", // 9x39mm SP-5 gs
                 ],
                 "9x39_rare": [
-                    "57a0e5022459774d1673f889", // 9x39mm SP-6 gs
+                    "5c0d668f86f7747ccb7f13b2", // 9x39mm SPP gs
+                    "61962d879bb3d20b0946d385", // 9x39mm PAB-9 gs
                     "5c0d688c86f77413ae3407b2", // 9x39mm BP gs
+                    "57a0e5022459774d1673f889", // 9x39mm SP-6 gs
+                    "57a0e5022459774d1673f889", // 9x39mm SP-6 gs
                 ],
             }
         },

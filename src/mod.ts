@@ -156,7 +156,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         const containerDetails = itemHelper.getItem(openedItem._tpl);
         let gamble: Gamble;
 
-        const newItemsRequest: IAddItemDirectRequest = { // base tarkov sealed cases
+        const newItemsRequest: IAddItemDirectRequest = {
             itemsWithModsToAdd: [],
             foundInRaid: true,
             useSortingTable : true
@@ -182,6 +182,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
             
             if(gamble.newItemsRequest.itemsWithModsToAdd.length != 0) {
                 newItemsRequest.itemsWithModsToAdd = [...gamble.newItemsRequest.itemsWithModsToAdd]
+                newItemsRequest.foundInRaid  = gamble.newItemsRequest.foundInRaid;
             }
 
         } else {

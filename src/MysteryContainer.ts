@@ -1,6 +1,7 @@
 import { Ammo } from "./containers/Ammo";
 import { Armors } from "./containers/Armors";
 import { Backpacks } from "./containers/Backpacks";
+import { Foods } from "./containers/Foods";
 import { Headsets } from "./containers/Headsets";
 import { Melees } from "./containers/Melees";
 import { Rigs } from "./containers/Rigs";
@@ -20,7 +21,7 @@ export class MysteryContainer{
         this.config     = config;
         this.logger     = logger;
         this.container  = this.setConfig(this.containersData)
-        this.simulation = ['wallet', 'armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim'];
+        this.simulation = ['wallet', 'armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food'];
         this.items      = {
             wallet:   new Wallet(),
             backpack: new Backpacks(),
@@ -30,6 +31,7 @@ export class MysteryContainer{
             key:      new Keys(),
             melee:    new Melees(),
             stim:     new Stims(),
+            food:     new Foods(),
             ammo:     new Ammo()
         }
         //console.log('CONTAINER INFO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
@@ -60,6 +62,10 @@ export class MysteryContainer{
             
         }
         return data;
+    }
+
+    public getName(name: string): string{
+        return this.container[name]['name'];
     }
 
     public getOdds(name: string): Array<number>{
@@ -132,6 +138,14 @@ export class MysteryContainer{
         'stim': {
             'name': 'stim', 
             'rarities': ["_extremely_rare", "_rare", "_uncommon", "_common"],
+            'odds': [],
+            'override': [],
+            'rarity_average_profit' : [],
+            'profit_percentage': 110,
+        },
+        'food': {
+            'name': 'food', 
+            'rarities': ["_rare", "_uncommon", "_common"],
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],

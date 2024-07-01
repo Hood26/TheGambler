@@ -53,9 +53,10 @@ export class Price{
         const mysteryContainerNames = this.MysteryContainer.simulation;
 
         for(let i = 0; i < mysteryContainerNames.length; i++){
-            const current = mysteryContainerNames[i];
-            const rarities: Array<string> = this.MysteryContainer.getRarities(current);
-            const odds: Array<number> = this.MysteryContainer.getOdds(current);
+            const current = this.MysteryContainer.getName(mysteryContainerNames[i]);
+            const name = mysteryContainerNames[i];
+            const rarities: Array<string> = this.MysteryContainer.getRarities(name);
+            const odds: Array<number> = this.MysteryContainer.getOdds(name);
             if(current == 'wallet'){
                 //console.log(current)
                 //console.log(rarities)
@@ -64,21 +65,21 @@ export class Price{
                 //console.log('\n\n\n')
             }
             
-            let currentPrices: Array<number> = this.getMysteryItemPrices(current, current, rarities, this.MysteryContainer.items[current]);
+            let currentPrices: Array<number> = this.getMysteryItemPrices(current, current, rarities, this.MysteryContainer.items[this.MysteryContainer.getName(name)]);
             let currentContainerPrice = this.config.price_stock[current + "_case_price"];
             
             
-            //console.log(current)
-            //console.log(currentPrices)
-            //console.log(odds)
-            //console.log(rarities)
-            currentContainerPrice = this.runSimulation(current, currentContainerPrice, odds, currentPrices, -1, this.MysteryContainer.getProfitPercentage(current));
-            //console.log('The Price = ' + currentContainerPrice)
+            console.log(current)
+            console.log(currentPrices)
+            console.log(odds)
+            console.log(rarities)
+            currentContainerPrice = this.runSimulation(name, currentContainerPrice, odds, currentPrices, -1, this.MysteryContainer.getProfitPercentage(name));
+            console.log('The Price = ' + currentContainerPrice)
 
-            mysteryAmmoPrices[current + "_case_price"] = currentContainerPrice;
+            mysteryAmmoPrices[name + "_case_price"] = currentContainerPrice;
         }
         this.logger.info("[TheGambler] Finished Generating Mystery Container Prices!");
-        //console.log(mysteryAmmoPrices)
+        console.log(mysteryAmmoPrices)
         return mysteryAmmoPrices;
     }
 
@@ -88,6 +89,8 @@ export class Price{
         const itemHelper: ItemHelper = this.container.resolve<ItemHelper>("ItemHelper");
         let prices: Array<number>    = [];
         let sum: number              = 0;
+
+        console.log(`Overide = ${containerType}`)
 
         if(name == 'armor'){
             //console.log("rig - getMysteryItemPrices");
@@ -149,8 +152,8 @@ export class Price{
             sum = 0;
         }
 
-        //this.logger.info(`${name} PRICES:`)
-        //this.logger.info(prices)
+        this.logger.info(`${name} PRICES:`)
+        this.logger.info(prices)
         this.MysteryContainer.setRarityAverageProfit(name, prices);
         return prices;
     }

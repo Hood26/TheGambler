@@ -24,8 +24,8 @@ export class ItemCreateHelper {
             //overrideProperties: {},
             parentId: "62f109593b54472778797866",
             newId: "az_sealed_weapon_gamble", 
-            fleaPriceRoubles: 300000,
-            handbookPriceRoubles: 300000,
+            fleaPriceRoubles: 450000,
+            handbookPriceRoubles: 450000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -39,7 +39,7 @@ export class ItemCreateHelper {
 
         const walletGamble: NewItemDetails = {
             newItem: {
-                _id: "ba_wallet_gamble",
+                _id: "bb_wallet_gamble",
                 _name: "gambling_wallet",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -132,8 +132,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 110000,
-            handbookPriceRoubles: 110000,
+            fleaPriceRoubles: 130000,
+            handbookPriceRoubles: 130000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -145,7 +145,7 @@ export class ItemCreateHelper {
         }
         const keyGamble: NewItemDetails = {
             newItem: {
-                _id: "bb_key_gamble",
+                _id: "bc_key_gamble",
                 _name: "gambling_key",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -238,8 +238,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 60000,
-            handbookPriceRoubles: 60000,
+            fleaPriceRoubles: 90000,
+            handbookPriceRoubles: 90000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -251,7 +251,7 @@ export class ItemCreateHelper {
         }
         const stimGamble: NewItemDetails = {
             newItem: {
-                _id: "bd_stim_gamble",
+                _id: "bf_stim_gamble",
                 _name: "gambling_stim",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -344,8 +344,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 70000,
+            handbookPriceRoubles: 70000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -357,7 +357,7 @@ export class ItemCreateHelper {
         }
         const bitcoinGamble: NewItemDetails = {
             newItem: {
-                _id: "bf_bitcoin_gamble",
+                _id: "bg_bitcoin_gamble",
                 _name: "gambling_bitcoin",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -450,8 +450,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 1100000,
+            handbookPriceRoubles: 1100000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -463,7 +463,7 @@ export class ItemCreateHelper {
         }
         const gpcoinGamble: NewItemDetails = {
             newItem: {
-                _id: "bg_gpcoin_gamble",
+                _id: "bh_gpcoin_gamble",
                 _name: "gambling_gpcoin",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -556,8 +556,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 125000,
+            handbookPriceRoubles: 125000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -570,7 +570,7 @@ export class ItemCreateHelper {
         
         const keycardGamble: NewItemDetails = {
             newItem: {
-                _id: "bc_keycard_gamble",
+                _id: "bd_keycard_gamble",
                 _name: "gambling_keycard",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -663,8 +663,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 450000,
-            handbookPriceRoubles: 450000,
+            fleaPriceRoubles: 325000,
+            handbookPriceRoubles: 325000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -770,8 +770,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 6500000,
-            handbookPriceRoubles: 6500000,
+            fleaPriceRoubles: 2750000,
+            handbookPriceRoubles: 2750000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -780,6 +780,113 @@ export class ItemCreateHelper {
                     description: "The true all in, ALL OR NOTHING!\n==============================\nDelicious Can of Beef Stew - 50.0%\n5 Million Roubles - 50.0%"
                 }
             }                
+        }
+
+        const foodGamble: NewItemDetails = {
+            newItem: {
+                _id: "ba_food_gamble",
+                _name: "gambling_food",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery Food",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 2,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery Food",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/weapons/usable_items/item_mre/item_mre_loot.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery Food",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 35000,
+            handbookPriceRoubles: 35000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery Food",
+                    shortName: "Mystery Food",
+                    description: `Come along friend, you look a little peckish. Try your luck at scoring a delicious snack!\n==============================\nCommon Food - ${this.config.odds['food_common']}%\nUncommon Food - ${this.config.odds['food_uncommon']}%\nRare Food - ${this.config.odds['food_rare']}%\n`
+                }
+            } 
         }
 
 
@@ -878,8 +985,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 75000,
-            handbookPriceRoubles: 75000,
+            fleaPriceRoubles: 82500,
+            handbookPriceRoubles: 82500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -985,8 +1092,8 @@ export class ItemCreateHelper {
                 _proto: "",
                 _type: "Item"
             },
-            fleaPriceRoubles: 88000,
-            handbookPriceRoubles: 88000,
+            fleaPriceRoubles: 130000,
+            handbookPriceRoubles: 130000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1091,8 +1198,8 @@ export class ItemCreateHelper {
                 _proto: "",
                 _type: "Item"
             },
-            fleaPriceRoubles: 79750,
-            handbookPriceRoubles: 79750,
+            fleaPriceRoubles: 300000,
+            handbookPriceRoubles: 300000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1197,8 +1304,8 @@ export class ItemCreateHelper {
                 _proto: "",
                 _type: "Item"
             },
-            fleaPriceRoubles: 79750,
-            handbookPriceRoubles: 79750,
+            fleaPriceRoubles: 100000,
+            handbookPriceRoubles: 100000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1624,8 +1731,8 @@ export class ItemCreateHelper {
                 _proto: "",
                 _type: "Item"
             },
-            fleaPriceRoubles: 79750,
-            handbookPriceRoubles: 79750,
+            fleaPriceRoubles: 100000,
+            handbookPriceRoubles: 100000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1729,8 +1836,8 @@ export class ItemCreateHelper {
                 _proto: "",
                 _type: "Item"
             },
-            fleaPriceRoubles: 79750,
-            handbookPriceRoubles: 79750,
+            fleaPriceRoubles: 340000,
+            handbookPriceRoubles: 340000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1836,8 +1943,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1943,8 +2050,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 5000,
-            handbookPriceRoubles: 5000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2050,8 +2157,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2157,8 +2264,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2264,8 +2371,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2371,8 +2478,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2478,8 +2585,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2585,8 +2692,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2692,8 +2799,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 12500,
+            handbookPriceRoubles: 12500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2799,8 +2906,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 14500,
+            handbookPriceRoubles: 14500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2906,8 +3013,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 15000,
+            handbookPriceRoubles: 15000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3013,8 +3120,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 15000,
+            handbookPriceRoubles: 15000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3120,8 +3227,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 17500,
+            handbookPriceRoubles: 17500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3227,8 +3334,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 16500,
+            handbookPriceRoubles: 16500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3334,8 +3441,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 65000,
+            handbookPriceRoubles: 65000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3441,8 +3548,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 15000,
+            handbookPriceRoubles: 15000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3547,8 +3654,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 15000,
+            handbookPriceRoubles: 15000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3653,8 +3760,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 16000,
+            handbookPriceRoubles: 16000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3759,8 +3866,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3865,8 +3972,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3971,8 +4078,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 40000,
-            handbookPriceRoubles: 40000,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3987,6 +4094,7 @@ export class ItemCreateHelper {
         customItem.createItem(walletGamble);
         customItem.createItem(keyGamble);
         customItem.createItem(stimGamble);
+        customItem.createItem(foodGamble);
         customItem.createItem(bitcoinGamble);
         customItem.createItem(gpcoinGamble);
         customItem.createItem(keycardGamble);
