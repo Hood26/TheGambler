@@ -3661,7 +3661,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery .366 TKM Rounds",
                     shortName: "Mystery",
-                    description: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${this.config.odds['.336_min']}-${this.config.odds['.336_max']} Rounds\nCommon Rounds - ${this.config.odds[".366_common"]}%\nUncommon Rounds - ${this.config.odds[".366_uncommon"]}%\nRare Rounds - ${this.config.odds[".366_rare"]}%`
+                    description: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${this.config.odds['.366_min']}-${this.config.odds['.366_max']} Rounds\nCommon Rounds - ${this.config.odds[".366_common"]}%\nUncommon Rounds - ${this.config.odds[".366_uncommon"]}%\nRare Rounds - ${this.config.odds[".366_rare"]}%`
                 }
             } 
         }

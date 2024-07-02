@@ -134,13 +134,13 @@ export class Ammo {
             items: {
                 "4.6x30_common": [
                     "5ba26812d4351e003201fef1", // 4.6x30mm Action SX
-                    "5ba26844d4351e00334c9475", // 4.6x30mm Subsonic SX
                 ],
                 "4.6x30_uncommon": [
+                    "5ba26844d4351e00334c9475", // 4.6x30mm Subsonic SX
                     "64b6979341772715af0f9c39", // 4.6x30mm JSP SX 
-                    "5ba2678ad4351e44f824b344", // 4.6x30mm FMJ SX
                 ],
                 "4.6x30_rare": [
+                    "5ba2678ad4351e44f824b344", // 4.6x30mm FMJ SX
                     "5ba26835d4351e0035628ff5", // 4.6x30mm AP SX
                 ],
             }
@@ -247,13 +247,13 @@ export class Ammo {
                 "7.62x51_common": [
                     "5e023e88277cce2b522ff2b1", // 7.62x51mm Ultra Nosler
                     "5e023e6e34d52a55c3304f71", // 7.62x51mm TCW SP
-                    "5e023e53d4353e3302577c4c", // 7.62x51mm BCP FMJ 
                 ],
                 "7.62x51_uncommon": [
+                    "5e023e53d4353e3302577c4c", // 7.62x51mm BCP FMJ 
                     "58dd3ad986f77403051cba8f", // 7.62x51mm M80
-                    "5a608bf24f39f98ffc77720e", // 7.62x51mm M62 Tracer
                 ],
                 "7.62x51_rare": [
+                    "5a608bf24f39f98ffc77720e", // 7.62x51mm M62 Tracer
                     "5a6086ea4f39f99cd479502f", // 7.62x51mm M61
                     "5efb0c1bd79ff02a1f5e68d9", // 7.62x51mm M993
                 ],
