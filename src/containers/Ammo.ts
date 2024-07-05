@@ -1,6 +1,6 @@
 export class Ammo {
 
-    public ammoNames = [
+    public names = [
         '7.62x25',
         '9x18',
         '9x19',

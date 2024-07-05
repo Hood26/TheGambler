@@ -9,6 +9,16 @@ import { Stims } from "./containers/Stims";
 import { Wallet } from "./containers/Wallet";
 import { Keys } from "./containers/keys";
 
+interface newContainer {
+    name: string;
+    rarities: Array<string>;
+    odds: Array<number>;
+    override: [];
+    rarity_average_profit: Array<number>;
+    profit_percentage: number;
+    rewards: [];
+};
+
 export class MysteryContainer{
 
     private config;
@@ -16,6 +26,19 @@ export class MysteryContainer{
     private container;
     public items;
     public simulation;
+
+    /*
+    'wallet': {
+            'name': 'wallet', 
+            'rarities': ["_extremely_rare", "_rare", "_kinda_rare", "_uncommon", "_common"],
+            'odds': [],
+            'override': [],
+            'rarity_average_profit' : [],
+            'profit_percentage': 0,
+            'rewards': [1000000, 500000, 300000, 100000, 50000],
+        },
+    */
+
 
     constructor(config, logger){
         this.config     = config;
@@ -38,7 +61,7 @@ export class MysteryContainer{
         //console.log(this.container);
     }
 
-    private setConfig(containerData) {
+    private setConfig(containerData: any) {
         let data = containerData;
         let override = ['ammo', 'armor'];
         
@@ -80,7 +103,7 @@ export class MysteryContainer{
         return this.container[name]['rewards'][index];
     }
 
-    public getRarityAverageProfit(name:string): void  {
+    public getRarityAverageProfit(name:string): number  {
         return this.container[name]['rarity_average_profit'];
     }
 
@@ -104,7 +127,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 115,
+            'profit_percentage': 0,
             'rewards': [1000000, 500000, 300000, 100000, 50000],
         },
         'keycard': {
@@ -113,7 +136,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 115,
+            'profit_percentage': 0,
             'rewards': [
                 "5c1d0efb86f7744baf2e7b7b", // TerraGroup Labs keycard (Red)
                 "5c1d0dc586f7744baf2e7b79", // TerraGroup Labs keycard (Green)
@@ -133,7 +156,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 115,
+            'profit_percentage': 0,
         },
         'stim': {
             'name': 'stim', 
@@ -181,7 +204,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 115,
+            'profit_percentage': 0,
             'rewards': ["meta", "meme", "decent", "scav", "base"],
         },
         'premium_gun': {
@@ -190,7 +213,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 115,
+            'profit_percentage': 0,
             'rewards': ["meta"],
         },
         'helmet': {
@@ -199,7 +222,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 115,
+            'profit_percentage': 0,
             'rewards': ["extremely_rare", "rare", "uncommon", "common"],
         },
         'headset': {
@@ -208,7 +231,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 115,
+            'profit_percentage': 0,
         },
         'armor': {
             'name': 'armor', 
@@ -216,7 +239,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 115,
+            'profit_percentage': 0,
             'rewards': ["rare", "uncommon", "common"],
         },
         'premium_armor': {
@@ -225,7 +248,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 115,
+            'profit_percentage': 0,
             'rewards': ["rare"],
         },
         'ammo': {
@@ -234,7 +257,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '7.62x25': {
             'name': '7.62x25', 
@@ -242,7 +265,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '9x18': {
             'name': '9x18', 
@@ -250,7 +273,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '9x19': {
             'name': '9x19', 
@@ -258,7 +281,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '9x21': {
             'name': '9x21', 
@@ -266,7 +289,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '.357': {
             'name': '.357', 
@@ -274,7 +297,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '.45': {
             'name': '.45', 
@@ -282,7 +305,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '4.6x30': {
             'name': '4.6x30', 
@@ -290,7 +313,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '5.7x28': {
             'name': '5.7x28', 
@@ -298,7 +321,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '5.45x39': {
             'name': '5.45x39', 
@@ -306,7 +329,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '5.56x45': {
             'name': '5.56x45', 
@@ -314,7 +337,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '.300': {
             'name': '.300', 
@@ -322,7 +345,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '7.62x39': {
             'name': '7.62x39', 
@@ -330,7 +353,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '7.62x51': {
             'name': '7.62x51', 
@@ -338,7 +361,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '7.62x54': {
             'name': '7.62x54', 
@@ -346,7 +369,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '.338': {
             'name': '.338', 
@@ -354,7 +377,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '9x39': {
             'name': '9x39', 
@@ -362,7 +385,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '.366': {
             'name': '.366', 
@@ -370,7 +393,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '12.7x55': {
             'name': '12.7x55', 
@@ -378,7 +401,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '12/70': {
             'name': '12/70', 
@@ -386,7 +409,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '20/70': {
             'name': '20/70', 
@@ -394,7 +417,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
         '23x75': {
             'name': '23x75', 
@@ -402,7 +425,7 @@ export class MysteryContainer{
             'odds': [],
             'override': [],
             'rarity_average_profit' : [],
-            'profit_percentage': 105,
+            'profit_percentage': 0,
         },
     }
 }

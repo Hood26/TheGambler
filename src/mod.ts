@@ -175,7 +175,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
             newItemsRequest.foundInRaid = containerSettings.foundInRaid;
 
         } else if (isGamblingContainer){
-            // All TheGambler Custom Gambling Happens Here
+            // All Gambler Custom Gambling Happens Here
             const currentContainer = containerDetails[1];
             gamble = new Gamble(container, this.config, this.logger, currentContainer._name);
             gamble.newGamble();
@@ -188,12 +188,9 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         } else {
             // Other custom gambling containers added by different mods
             //this.logger.info(`GET RANDOM LOOT CONTAINER LOOT`);
-            // Other random containers
             // Get summary of loot from config
             const rewardContainerDetails = inventoryHelper.getRandomLootContainerRewardDetails(openedItem._tpl);
             const getLoot = lootGenerator.getRandomLootContainerLoot(rewardContainerDetails);
-            //this.logger.info(getLoot);
-
             newItemsRequest.itemsWithModsToAdd.push(...getLoot);
             newItemsRequest.foundInRaid = rewardContainerDetails.foundInRaid;
             
@@ -215,27 +212,27 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         */
 
 
-        const output = eventOutputHolder.getOutput(sessionID);
-        let multipleItems: any;
-        /*
-        let message: Message = { // Not Working
-            _id: String,
-            uid: String,
-            type: MessageType,
-            text: String,
-            dt: Number
-        };
-        message._id = this.hashUtil.generate();
-        message.uid = this.hashUtil.generate();
-        message.type = 13;
-        message.text = "Inventory Full"
-        message.dt = 69
-        */
-        //this.logger.info(multipleItems);
-
-        //this.logger.info(message.type);
-
-
+       /*
+       let message: Message = { // Not Working
+       _id: String,
+       uid: String,
+       type: MessageType,
+       text: String,
+       dt: Number
+       };
+       message._id = this.hashUtil.generate();
+       message.uid = this.hashUtil.generate();
+       message.type = 13;
+       message.text = "Inventory Full"
+       message.dt = 69
+       */
+      //this.logger.info(multipleItems);
+      
+      //this.logger.info(message.type);
+      
+      
+      const output = eventOutputHolder.getOutput(sessionID);
+      let multipleItems: any;
         //console.log("END")
         //console.log(newItemsRequest.itemsWithModsToAdd)
         if (newItemsRequest.itemsWithModsToAdd.length != 0) {

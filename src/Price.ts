@@ -28,18 +28,20 @@ export class Price{
     // This is where all Mystery Ammo containers are price generated during postDBLoad
     public generateMysteryAmmoPrices(): {} {
         this.logger.info("[TheGambler] Generating Mystery Ammo Prices...");
-        let ammo: Ammo = new Ammo();
+        let ammo: Ammo = this.MysteryContainer.items.ammo;
         let mysteryAmmoPrices = {};
 
-        for(let i = 0; i < ammo.ammoNames.length; i++){
-            const current = ammo.ammoNames[i];
-            const count = ((this.config.odds[current + '_min'] + this.config.odds[current + '_max']) / 2);
+        for(let i = 0; i < ammo.names.length; i++){
+            const current = ammo.names[i];
+            const amount = ((this.config.odds[current + '_min'] + this.config.odds[current + '_max']) / 2);
             const odds: Array<number> = this.MysteryContainer.getOdds(current);
             const rarities: Array<string> = this.MysteryContainer.getRarities(current);
+            const items = this.MysteryContainer.items['ammo'].items[current];
+            //console.log(items)
             let currentContainerPrice = this.config.price_stock[current + "_case_price"];
+            let currentPrices: Array<number> = this.getMysteryContainerPrices(current, 'ammo',  rarities, items, amount);
 
-            let currentPrices: Array<number> = this.getMysteryItemPrices(current, 'ammo',  rarities, this.MysteryContainer.items['ammo'].items[current], count);
-            currentContainerPrice = this.runSimulation(current, currentContainerPrice, odds, currentPrices, -1, this.MysteryContainer.getProfitPercentage(current));
+            currentContainerPrice = this.runSimulation(currentContainerPrice, odds, currentPrices, -1, this.MysteryContainer.getProfitPercentage(current));
             mysteryAmmoPrices[current + "_case_price"] = currentContainerPrice;
         }
 
@@ -57,46 +59,51 @@ export class Price{
             const name = mysteryContainerNames[i];
             const rarities: Array<string> = this.MysteryContainer.getRarities(name);
             const odds: Array<number> = this.MysteryContainer.getOdds(name);
-            let currentPrices: Array<number> = this.getMysteryItemPrices(current, current, rarities, this.MysteryContainer.items[this.MysteryContainer.getName(name)]);
+            const items = this.MysteryContainer.items[this.MysteryContainer.getName(name)];
+            let currentPrices: Array<number> = this.getMysteryContainerPrices(current, current, rarities, items);
             let currentContainerPrice = this.config.price_stock[current + "_case_price"];
-            currentContainerPrice = this.runSimulation(name, currentContainerPrice, odds, currentPrices, -1, this.MysteryContainer.getProfitPercentage(name));
+
+            currentContainerPrice = this.runSimulation(currentContainerPrice, odds, currentPrices, -1, this.MysteryContainer.getProfitPercentage(name));
             mysteryAmmoPrices[name + "_case_price"] = currentContainerPrice;
         }
         this.logger.info("[TheGambler] Finished Generating Mystery Container Prices!");
         return mysteryAmmoPrices;
     }
 
+    private getItemPrice(name: string, containerType: string, rarities: Array<string>, items: any, amount: number = 1, currentRarityIndex: number, currentItemIndex: number): number {
+        const itemHelper: ItemHelper = this.container.resolve<ItemHelper>("ItemHelper");
+        const override: number = this.MysteryContainer.getOverride(containerType, [items.items[name + rarities[currentRarityIndex]][currentItemIndex]]);
+        let currentPrice: number = 0;
+
+        if (override && this.config['mystery_container_override_enable']) {
+            currentPrice = override * amount;
+        } else {
+            if(Number.isInteger(items.items[name + rarities[currentRarityIndex]][currentItemIndex])){ // Override exists for current item
+                currentPrice = items.items[name + rarities[currentRarityIndex]][currentItemIndex];
+            } else{ // No override exists for current item
+                
+                // Thinking: We always want to use flea price as this is most accurate, but if there is no flea price we must fallback to handbook
+                const fleaPrice = itemHelper.getDynamicItemPrice(items.items[name + rarities[currentRarityIndex]][currentItemIndex]);
+                if (fleaPrice == 0) {
+                    currentPrice = itemHelper.getItemMaxPrice(items.items[name + rarities[currentRarityIndex]][currentItemIndex]) * amount;
+
+                } else {
+                    currentPrice = fleaPrice * amount;
+                }
+            }
+        }
+        return currentPrice;
+    }
 
     // Generates the average income for a Mystery Container sorted by rarity
-    private getMysteryItemPrices(name: string ,containerType: string, rarities: Array<string>, item: any, amount: number = 1): Array<number> {
-        const itemHelper: ItemHelper = this.container.resolve<ItemHelper>("ItemHelper");
+    private getMysteryContainerPrices(name: string ,containerType: string, rarities: Array<string>, items: any, amount: number = 1): Array<number> {
         let prices: Array<number>    = [];
         let sum: number              = 0;
 
         for(let i = 0; i < rarities.length; i++){
             let count = 0;
-            for (let j = 0; j < item.items[name + rarities[i]].length; j++){
-                let currentPrice;
-                const override: number = this.MysteryContainer.getOverride(containerType, [item.items[name + rarities[i]][j]]);
-
-                if (override != undefined && this.config['mystery_container_override_enable'] == true){
-                    currentPrice = override * amount;
-                } else {
-                    
-                    if(Number.isInteger(item.items[name + rarities[i]][j])){ // Number
-                        currentPrice = item.items[name + rarities[i]][j];
-                    } else{ // String
-                        
-                        const fleaPrice = itemHelper.getDynamicItemPrice(item.items[name + rarities[i]][j]);
-                        // Thinking: We always want to use flea price as this is most accurate, but if their is no flea price we must fallback to handbook
-                        if (fleaPrice == 0) {
-                            currentPrice = itemHelper.getItemMaxPrice(item.items[name + rarities[i]][j]) * amount;
-
-                        } else {
-                            currentPrice = fleaPrice * amount;
-                        }
-                    }
-                }
+            for (let j = 0; j < items.items[name + rarities[i]].length; j++){
+                const currentPrice = this.getItemPrice(name, containerType, rarities, items, amount, i, j);
                 sum = sum + currentPrice;
                 count++; 
             }
@@ -109,7 +116,7 @@ export class Price{
     }
 
     // Runs a simulation of a Mystery Container that generates the most optimal price for a desired profit percentage
-    public runSimulation(name: string, containerPrice: number, odds: Array<number>, prices: Array<number>, basePercentage: number, desiredPercentage: number): number {
+    public runSimulation(containerPrice: number, odds: Array<number>, prices: Array<number>, basePercentage: number, desiredPercentage: number): number {
         let currentContainerPrice: number = containerPrice;
         let currentPercentage: number     = basePercentage;
         const iterations                  = 50000; // 50,000 Mystery Containers simulated
@@ -125,7 +132,7 @@ export class Price{
 
                 for(let k = 0; k < odds.length; k++){
                     if(roll <= odds[k]){
-                        sum += prices[k]; // odds and prices have to be index by rarity order (rarest,... ->, common) or else KABOOM
+                        sum += prices[k]; // odds and prices have to be indexed by rarity order (rarest,... ->, common) or else KABOOM
                         break; // This caused me soo much pain :(
                     }
                 }
@@ -136,7 +143,7 @@ export class Price{
             }
 
             if(checker.includes(currentContainerPrice)) {
-                break; // The final profit percentage may be a little off by up to 1% doing this... Look into in the future...
+                break; // The final profit percentage may be a little off by up to 1% by doing this... Look into in the future...
             } else {
                 checker.push(currentContainerPrice);
 
