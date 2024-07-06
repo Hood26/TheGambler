@@ -1,4 +1,12 @@
 export class Foods {
+  
+    public rarities: [
+    "_extremely_rare", 
+    "_rare", 
+    "_uncommon", 
+    "_common"
+    ]
+  
     public items = {
       food_common: [
   

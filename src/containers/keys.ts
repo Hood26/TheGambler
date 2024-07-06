@@ -1,4 +1,12 @@
 export class Keys {
+  
+  public rarities: [
+    "_extremely_rare", 
+    "_rare", 
+    "_uncommon", 
+    "_common"
+  ]
+
   public items = {
     key_common: [
       "593858c486f774253a24cb52", // Pumping station back door key

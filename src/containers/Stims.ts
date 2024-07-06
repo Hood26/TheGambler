@@ -1,4 +1,12 @@
 export class Stims {
+  
+  public rarities: [
+    "_extremely_rare", 
+    "_rare", 
+    "_uncommon", 
+    "_common"
+  ]
+
   public items = {
     stim_common: [
 

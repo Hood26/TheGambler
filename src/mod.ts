@@ -148,7 +148,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         const openedItem = pmcData.Inventory.items.find(x => x._id === body.item);
 
         if (itemHelper.getItem(openedItem._tpl) == undefined){
-            this.logger.error("[TheGambler] Cannot find unboxed mystery container in Inventory... Best option is to restart game.. I am not fully sure why this happens...")
+            this.logger.error("[TheGambler] Cannot find unboxed mystery container in Inventory... Best option is to restart game and server.. I am not fully sure why this happens...")
             const output = eventOutputHolder.getOutput(sessionID);
             return output;
         }

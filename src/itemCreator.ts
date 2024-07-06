@@ -2,22 +2,22 @@ import { DependencyContainer } from "tsyringe";
 import { HashUtil } from "@spt-aki/utils/HashUtil";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
 
-import { Weapons } from './containers/Weapons';
-import { Armors } from './containers/Armors';
-import { Helmets } from './containers/Helmets';
+import { WeaponPresets } from './presets/WeaponPresets';
+import { ArmorPresets } from './presets/ArmorPresets';
+import { HelmetPresets } from './presets/HelmetPresets';
 
 
 export class ItemCreator {
 
     protected Weapons: any;
     protected Helmets: any;
-    protected armor: any;
+    protected Armors: any;
     protected hashUtil: HashUtil;
 
     constructor(container: DependencyContainer){
-        this.Weapons = new Weapons();
-        this.Helmets = new Helmets();
-        this.armor = new Armors();
+        this.Weapons = new WeaponPresets();
+        this.Helmets = new HelmetPresets();
+        this.Armors = new ArmorPresets();
         this.hashUtil = container.resolve<HashUtil>("HashUtil");
     }
 
@@ -46,16 +46,16 @@ export class ItemCreator {
         return this.generateItem(getItem);
     }
 
-    // Returns a random armor from Armors
+    // Returns a random Armor from Armors
     public createArmor(which: string): Item{
         let baseArmor: Item[];
 
         if(which == "common") {
-            baseArmor = this.armor.commonArmor;
+            baseArmor = this.Armors.commonArmor;
         } else if (which == "uncommon") {
-            baseArmor = this.armor.uncommonArmor;
+            baseArmor = this.Armors.uncommonArmor;
         } else if (which == "rare") {
-            baseArmor = this.armor.rareArmor;
+            baseArmor = this.Armors.rareArmor;
         }
 
         const randomArmor = this.getRandomInt(baseArmor.length);

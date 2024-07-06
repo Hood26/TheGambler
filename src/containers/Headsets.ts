@@ -1,5 +1,12 @@
 export class Headsets {
-    items = {
+
+    public rarities: [
+        "_rare", 
+        "_uncommon", 
+        "_common"
+      ]
+
+    public items = {
         headset_common: [
             "5b432b965acfc47a8774094e", // GSSh-01 active headset
             "6033fa48ffd42c541047f728", // OPSMEN Earmor M32 headset

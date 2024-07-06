@@ -3,121 +3,152 @@ import { Armors } from "./containers/Armors";
 import { Backpacks } from "./containers/Backpacks";
 import { Foods } from "./containers/Foods";
 import { Headsets } from "./containers/Headsets";
+import { Helmets } from "./containers/Helmets";
+import { Keycard } from "./containers/Keycard";
 import { Melees } from "./containers/Melees";
 import { Rigs } from "./containers/Rigs";
 import { Stims } from "./containers/Stims";
 import { Wallet } from "./containers/Wallet";
+import { Weapons } from "./containers/Weapons";
 import { Keys } from "./containers/keys";
 
-interface newContainer {
-    name: string;
-    rarities: Array<string>;
-    odds: Array<number>;
-    override: [];
-    rarity_average_profit: Array<number>;
-    profit_percentage: number;
-    rewards: [];
-};
+class Container {
 
-export class MysteryContainer{
+    public name: string;
+    public rarities: Array<string>;
+    public odds: Array<number>;
+    public override: {};
+    public rarity_average_profit: Array<number>;
+    public profit_percentage: number;
+    public rewards: any;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+export class MysteryContainer {
 
     private config;
     private logger;
-    private container;
+    private containers;
+    private names;
     public items;
     public simulation;
-
-    /*
-    'wallet': {
-            'name': 'wallet', 
-            'rarities': ["_extremely_rare", "_rare", "_kinda_rare", "_uncommon", "_common"],
-            'odds': [],
-            'override': [],
-            'rarity_average_profit' : [],
-            'profit_percentage': 0,
-            'rewards': [1000000, 500000, 300000, 100000, 50000],
-        },
-    */
-
+    public override;
 
     constructor(config, logger){
         this.config     = config;
         this.logger     = logger;
-        this.container  = this.setConfig(this.containersData)
+        //this.container  = this.setData(this.containersData) Old Way
+        this.containers  = this.setContainers()
+        this.names      = ['wallet', 'keycard', 'key', 'stim', 'food', 'melee', 'backpack', 'rig', 'weapon', 'helmet', 'headset', 'headset', 'armor',]
         this.simulation = ['wallet', 'armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food'];
+        this.override    = ['ammo', 'armor'];
         this.items      = {
             wallet:   new Wallet(),
-            backpack: new Backpacks(),
-            armor:    new Armors(),
-            rig:      new Rigs(),
-            headset:  new Headsets(),
+            keycard:  new Keycard(),
             key:      new Keys(),
-            melee:    new Melees(),
             stim:     new Stims(),
             food:     new Foods(),
+            melee:    new Melees(),
+            backpack: new Backpacks(),
+            rig:      new Rigs(),
+            weapon:   new Weapons(),
+            helmet:   new Helmets(),
+            headset:  new Headsets(),
+            armor:    new Armors(),
             ammo:     new Ammo()
         }
-        //console.log('CONTAINER INFO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-        //console.log(this.container);
     }
 
-    private setConfig(containerData: any) {
-        let data = containerData;
-        let override = ['ammo', 'armor'];
-        
-        for (const name in data){
-            data[name]['profit_percentage'] = this.config.odds[name + '_profit_percentage'];
+    private setContainers() {
+        //let data = containerData; Old Way
+        let containers = {};
 
-            for(let i = 0; i < data[name]['rarities'].length; i++){
-                
-                if(i == 0) {
-                    data[name]['odds'][i] = this.config.odds[name + data[name]['rarities'][i]];
+        for(let i = 0; i < this.names.length; i++) {
+            const container = new Container(this.names[i]);
+            container.rarities = [...this.items[container.name].rarities]; // clone rarities
+
+            for(let j = 0; j < container.rarities.length; j++){
+                if(j == 0) {
+                    container.odds[j] = this.config.odds[this.names[i] + container.rarities[j]];
                 } else {
-                    data[name]['odds'][i] = this.config.odds[name + data[name]['rarities'][i]] + data[name]['odds'][i-1];
+                    container.odds[j] = this.config.odds[this.names[i] + container.rarities[j]] + container.odds[j-1];
                 }
-            }
-
-            for(let i = 0; i < override.length; i++){
-                const currentName = override[i];
-                //console.log(this.config.mystery_container_override_price[currentName])
-                data[currentName]['override'] = this.config.mystery_container_override_price[currentName];
+                container.rewards[j] = [...this.items[container.name][container.name + container.rarities[j]]]
             }
             
+            if(this.override.includes(container.name)){
+                container.override = this.config.mystery_container_override_price[container.name];
+            }
+            container.profit_percentage = this.config.odds[container.name + '_profit_percentage'];
+            containers[container.name] = container;
         }
-        return data;
+
+        // Ammo has a little different format from other mystery containers so we have to sperate from previous
+        // Refactor if another container is added like this in the future...
+        for(let i = 0; i < this.items.ammo.names.length; i++){
+            const container = new Container(this.items.ammo.names[i]);
+            container.rarities = [...this.items.ammo.rarities]; // clone rarities
+
+            for(let j = 0; j < container.rarities.length; j++){
+                if(j == 0) {
+                    container.odds[j] = this.config.odds[this.names[i] + container.rarities[j]];
+                } else {
+                    container.odds[j] = this.config.odds[this.names[i] + container.rarities[j]] + container.odds[j-1];
+                }
+                container.rewards[j] = [...this.items.ammo.items[container.name].items[container.name + container.rarities[j]]]
+            }
+            
+            container.override = this.config.mystery_container_override_price['ammo'];
+            container.profit_percentage = this.config.odds[container.name + '_profit_percentage'];
+            containers[container.name] = container;
+        }
+
+        console.log(containers)
+        return containers;
+    }
+    
+    // getRandomInt(3) returns 0, 1, or 2
+    private getRandomInt(max: number) {
+        return Math.floor(Math.random() * max);
     }
 
     public getName(name: string): string{
-        return this.container[name]['name'];
+        return this.containers[name].name;
     }
 
     public getOdds(name: string): Array<number>{
-        return this.container[name]['odds'];
+        return this.containers[name].odds;
     }
 
     public getRarities(name: string): Array<string>{
-        return this.container[name]['rarities'];
+        return this.containers[name].rarities;
     }
 
+    // Returns random Reward from possible Rewards
     public getReward(name: string, index: number): any {
-        return this.container[name]['rewards'][index];
+        const rewards: [] = this.containers[name].rewards[index];
+        const randomNumber = this.getRandomInt(rewards.length - 1);
+        return rewards[randomNumber];
     }
 
     public getRarityAverageProfit(name:string): number  {
-        return this.container[name]['rarity_average_profit'];
+        return this.containers[name].rarity_average_profit;
     }
 
     public getProfitPercentage(name:string): number  {
-        return this.container[name]['profit_percentage'];
+        return this.containers[name].profit_percentage;
     }
 
     public getOverride(name:string, item: any): number  {
-        return this.container[name]['override'][item];
+        return this.containers[name].override[item];
     }
 
     public setRarityAverageProfit(name:string, profit: Array<number>): void  {
-        //return this.container[name]['override'][item];
-        this.container[name]['rarity_average_profit'] = profit;
+        //return this.containers[name]['override'][item];
+        this.containers[name].rarity_average_profit = profit;
     }
 
     private containersData = {
@@ -198,8 +229,8 @@ export class MysteryContainer{
             'rarity_average_profit' : [],
             'profit_percentage': 110,
         },
-        'gun': {
-            'name': 'gun', 
+        'weapon': {
+            'name': 'weapon', 
             'rarities': ["_meta", "_meme", "_decent", "_scav", "_base"],
             'odds': [],
             'override': [],

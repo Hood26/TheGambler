@@ -1,4 +1,12 @@
 export class Backpacks {
+
+  public rarities: [
+    "_extremely_rare", 
+    "_rare", 
+    "_uncommon", 
+    "_common"
+  ]
+  
   public items = {
     backpack_common: [
       "5ab8f04f86f774585f4237d8", // Tactical sling bag (Khaki)

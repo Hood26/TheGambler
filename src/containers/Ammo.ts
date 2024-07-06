@@ -24,6 +24,12 @@ export class Ammo {
         '23x75',
     ]
 
+    public rarities: [
+        "_rare", 
+        "_uncommon", 
+        "_common"
+      ]
+
     public items = {
         "7.62x25": {
             items: {

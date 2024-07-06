@@ -1,4 +1,12 @@
 export class Rigs {
+
+  public rarities: [
+    "_boss", 
+    "_late_wipe", 
+    "_early_wipe", 
+    "_scav"
+  ]
+
   public items = { // Store IDs for Automatic Balancer to handle
     rig_scav: [
       '572b7adb24597762ae139821', // Scav Vest

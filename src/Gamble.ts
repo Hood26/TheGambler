@@ -323,19 +323,19 @@ export class Gamble {
 
     private openWeapon(){
 
-        // ItemCreator.ts stores all gun presets
+        // ItemCreator.ts stores all weapon presets
         let item = new ItemCreator(this.container);
         let createWeapon: Item[] = [];
         const roll: number = this.randomUtil.getFloat(0,100);
         this.logger.info(`\n[TheGambler][Weapon] The container roll is: ${roll}!`);
-        const odds: Array<number> = this.mysteryContainer.getOdds('gun');
+        const odds: Array<number> = this.mysteryContainer.getOdds('weapon');
         //console.log("OpenWeapon");
         //console.log(odds);
 
 
         for(let i = 0; i < odds.length; i++) {
             if(roll <= odds[i]) {
-                createWeapon = item.createGun(this.mysteryContainer.getReward('gun', i));
+                createWeapon = item.createGun(this.mysteryContainer.getReward('weapon', i));
                 break;  
             }
         }
