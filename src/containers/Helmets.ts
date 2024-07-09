@@ -1,13 +1,15 @@
 export class Helmets {
+
+  public parent = "helmet";
   
-  public rarities: [
+  public rarities = [
     "_extremely_rare", 
     "_rare", 
     "_uncommon", 
     "_common"
   ]
 
-  public rewards: [
+  public rewards = [
     "extremely_rare", 
     "rare", 
     "uncommon", 

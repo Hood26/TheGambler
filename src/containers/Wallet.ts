@@ -1,18 +1,20 @@
 export class Wallet {
+
+  public parent = "wallet";
   
-    public rarities: [
+    public rarities = [
       "_extremely_rare", 
       "_rare", 
       "_kinda_rare", 
       "_uncommon", 
       "_common"]
     
-    public rewards: [
-      1000000, 
-      500000, 
-      300000, 
-      100000, 
-      50000
+    public rewards = [
+      [1000000], 
+      [500000], 
+      [300000], 
+      [100000], 
+      [50000]
     ]
 
 /*

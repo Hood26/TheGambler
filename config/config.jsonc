@@ -58,13 +58,13 @@
     "melee_case_stock": 15,
     "melee_case_enable": true,
 
-    "gun_case_price": 95000,
-    "gun_case_stock": 12,
-    "gun_case_enable": true,
+    "weapon_case_price": 95000,
+    "weapon_case_stock": 12,
+    "weapon_case_enable": true,
 
-    "premium_gun_case_price": 250000,
-    "premium_gun_case_stock": 2,
-    "premium_gun_case_enable": true,
+    "premium_weapon_case_price": 250000,
+    "premium_weapon_case_stock": 2,
+    "premium_weapon_case_enable": true,
 
     "helmet_case_price": 55000,
     "helmet_case_stock": 8,
@@ -279,16 +279,16 @@
     "rig_profit_percentage": 110, // Container Profitability
 
     // Weapon Mystery Box
-    "gun_meta": 10.0,             // Meta Gun
-    "gun_meme": 7.0,              // Meme Gun
-    "gun_decent": 28.0,           // Semi-modded Gun
-    "gun_scav": 20.0,             // Scav Gun
-    "gun_base": 35.0,             // Default Gun
-    "gun_profit_percentage": 115, // Container Profitability
+    "weapon_meta": 10.0,             // Meta Weapon
+    "weapon_meme": 7.0,              // Meme Weapon
+    "weapon_decent": 28.0,           // Semi-modded Weapon
+    "weapon_scav": 20.0,             // Scav Weapon
+    "weapon_base": 35.0,             // Default Weapon
+    "weapon_profit_percentage": 115, // Container Profitability
 
     // Premium Weapon Mystery Box
-    "premium_gun_meta": 100.0,            // Rare Gun
-    "premium_gun_profit_percentage": 115, // Container Profitability
+    "premium_weapon_meta": 100.0,            // Rare Weapon
+    "premium_weapon_profit_percentage": 115, // Container Profitability
 
     // Mystery Helmet
     "helmet_extremely_rare": 0.35,   // Extremely Rare Helmet
@@ -311,7 +311,7 @@
 
     // Premium Armor Mystery Box
     "premium_armor_rare": 100.0,           // Rare Armor
-    "premium_armor_profit_percentage": 85, // Container Profitability
+    "premium_armor_profit_percentage": 70, // Container Profitability
 
     // Mystery 7.62x25
     "7.62x25_common": 60.0,          // Common Round 7.62x25

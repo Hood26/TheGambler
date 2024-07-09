@@ -66,7 +66,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         this.logger = container.resolve<ILogger>("WinstonLogger");
         this.logger.debug(`[${this.mod}] preAki Loading... `);
 
-        // Get SPT code/data we need later
+        // services
         const preAkiModLoader: PreAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
         const imageRouter: ImageRouter = container.resolve<ImageRouter>("ImageRouter");
         const hashUtil: HashUtil = container.resolve<HashUtil>("HashUtil");
@@ -89,7 +89,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         // Add trader to flea market
         ragfairConfig.traders[baseJson._id] = true;
 
-        // openRandomLootContainer override in InventoryController. Lets us use mod items.
+        // openRandomLootContainer override in InventoryController. Override allows implementation of custom Gambler containers
         container.afterResolution("InventoryController", (_t, result: InventoryController) => 
             {
                 result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string) =>
@@ -154,8 +154,6 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         }
 
         const containerDetails = itemHelper.getItem(openedItem._tpl);
-        let gamble: Gamble;
-
         const newItemsRequest: IAddItemDirectRequest = {
             itemsWithModsToAdd: [],
             foundInRaid: true,
@@ -163,7 +161,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         };
 
         const isSealedWeaponBox = containerDetails[1]._name.includes("event_container_airdrop"); // Default tarkov tagged container
-        const isGamblingContainer = containerDetails[1]._name.includes("gambling_"); // Gambler items are tagged with "gambling_container" identifier
+        const isGamblingContainer = containerDetails[1]._name.includes("gambling_"); // Gambler items are tagged with "gambling_" identifier
 
         if(isSealedWeaponBox) {
             // Sealed Weapon container
@@ -175,9 +173,9 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
             newItemsRequest.foundInRaid = containerSettings.foundInRaid;
 
         } else if (isGamblingContainer){
-            // All Gambler Custom Gambling Happens Here
+            // All Gambler Custom actions Happens Here
             const currentContainer = containerDetails[1];
-            gamble = new Gamble(container, this.config, this.logger, currentContainer._name);
+            let gamble: Gamble = new Gamble(container, this.config, this.logger, currentContainer._name);
             gamble.newGamble();
             
             if(gamble.newItemsRequest.itemsWithModsToAdd.length != 0) {

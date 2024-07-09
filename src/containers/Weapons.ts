@@ -1,6 +1,8 @@
 export class Weapons {
+
+  public parent = "weapon";
   
-  public rarities: [
+  public rarities = [
     "_meta", 
     "_meme", 
     "_decent", 
@@ -8,7 +10,7 @@ export class Weapons {
     "_base"
   ]
 
-  public rewards: [
+  public rewards = [
     "meta", 
     "meme", 
     "decent", 

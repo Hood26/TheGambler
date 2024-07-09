@@ -1099,7 +1099,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Weapon Mystery Box",
                     shortName: "Weapon Mystery Box",
-                    description: `Weapon Mystery Box, contains over 230 different guns ranging from Meta Chad weapons, early wipe weapons, and cursed weapons \n==============================\nFully Modded Weapon - ${this.config.odds['gun_meta']}%\nMeme Weapon - ${this.config.odds['gun_meme']}%\nSemi-modded Weapon - ${this.config.odds['gun_decent']}%\nScav Weapon - ${this.config.odds['gun_scav']}%\nDefault Weapon - ${this.config.odds['gun_base']}%`
+                    description: `Weapon Mystery Box, contains over 230 different weapons ranging from Meta Chad weapons, early wipe weapons, and cursed weapons \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nMeme Weapon - ${this.config.odds['weapon_meme']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}%`
                 }
             }
         };
@@ -1205,7 +1205,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Premium Weapon Mystery Box",
                     shortName: "Premium Weapon Mystery Box",
-                    description: `The Premium Weapon Mystery Box contains a guaranteed heavily modded weappon\n==============================\nRare Weapon - ${this.config.odds['premium_armor_rare']}%`
+                    description: `The Premium Weapon Mystery Box contains a guaranteed heavily modded weappon\n==============================\nRare Weapon - ${this.config.odds['premium_weapon_meta']}%`
                 }
             }
         };

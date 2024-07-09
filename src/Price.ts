@@ -37,9 +37,8 @@ export class Price{
             const odds: Array<number> = this.MysteryContainer.getOdds(current);
             const rarities: Array<string> = this.MysteryContainer.getRarities(current);
             const items = this.MysteryContainer.items['ammo'].items[current];
-            //console.log(items)
             let currentContainerPrice = this.config.price_stock[current + "_case_price"];
-            let currentPrices: Array<number> = this.getMysteryContainerPrices(current, 'ammo',  rarities, items, amount);
+            let currentPrices: Array<number> = this.getMysteryContainerPrices(current, current,  rarities, items, amount);
 
             currentContainerPrice = this.runSimulation(currentContainerPrice, odds, currentPrices, -1, this.MysteryContainer.getProfitPercentage(current));
             mysteryAmmoPrices[current + "_case_price"] = currentContainerPrice;
@@ -55,12 +54,15 @@ export class Price{
         const mysteryContainerNames = this.MysteryContainer.simulation;
 
         for(let i = 0; i < mysteryContainerNames.length; i++){
+            console.log("Container Name!!")
+            console.log(mysteryContainerNames[i])
             const current = this.MysteryContainer.getName(mysteryContainerNames[i]);
-            const name = mysteryContainerNames[i];
+            const name : string = mysteryContainerNames[i];
+            const parent :string = this.MysteryContainer.getParent(name);
             const rarities: Array<string> = this.MysteryContainer.getRarities(name);
             const odds: Array<number> = this.MysteryContainer.getOdds(name);
             const items = this.MysteryContainer.items[this.MysteryContainer.getName(name)];
-            let currentPrices: Array<number> = this.getMysteryContainerPrices(current, current, rarities, items);
+            let currentPrices: Array<number> = this.getMysteryContainerPrices(current, parent, rarities, items);
             let currentContainerPrice = this.config.price_stock[current + "_case_price"];
 
             currentContainerPrice = this.runSimulation(currentContainerPrice, odds, currentPrices, -1, this.MysteryContainer.getProfitPercentage(name));
@@ -70,22 +72,25 @@ export class Price{
         return mysteryAmmoPrices;
     }
 
-    private getItemPrice(name: string, containerType: string, rarities: Array<string>, items: any, amount: number = 1, currentRarityIndex: number, currentItemIndex: number): number {
+    private getItemPrice(name: string, parent: string, rarities: Array<string>, items: any, amount: number = 1, currentRarityIndex: number, currentItemIndex: number): number {
         const itemHelper: ItemHelper = this.container.resolve<ItemHelper>("ItemHelper");
-        const override: number = this.MysteryContainer.getOverride(containerType, [items.items[name + rarities[currentRarityIndex]][currentItemIndex]]);
+        //console.log([items.rewards[currentRarityIndex][currentItemIndex]])
+        //console.log('Parent!!')
+        //console.log(parent)
+        const override: number = this.MysteryContainer.getOverride(parent, items.rewards[currentRarityIndex][currentItemIndex]);
         let currentPrice: number = 0;
 
         if (override && this.config['mystery_container_override_enable']) {
             currentPrice = override * amount;
         } else {
-            if(Number.isInteger(items.items[name + rarities[currentRarityIndex]][currentItemIndex])){ // Override exists for current item
-                currentPrice = items.items[name + rarities[currentRarityIndex]][currentItemIndex];
+            if(Number.isInteger(items.rewards[currentRarityIndex][currentItemIndex])){ // Override exists for current item
+                currentPrice = items.rewards[currentRarityIndex][currentItemIndex];
             } else{ // No override exists for current item
                 
                 // Thinking: We always want to use flea price as this is most accurate, but if there is no flea price we must fallback to handbook
-                const fleaPrice = itemHelper.getDynamicItemPrice(items.items[name + rarities[currentRarityIndex]][currentItemIndex]);
+                const fleaPrice = itemHelper.getDynamicItemPrice(items.rewards[currentRarityIndex][currentItemIndex]);
                 if (fleaPrice == 0) {
-                    currentPrice = itemHelper.getItemMaxPrice(items.items[name + rarities[currentRarityIndex]][currentItemIndex]) * amount;
+                    currentPrice = itemHelper.getItemMaxPrice(items.rewards[currentRarityIndex][currentItemIndex]) * amount;
 
                 } else {
                     currentPrice = fleaPrice * amount;
@@ -96,14 +101,14 @@ export class Price{
     }
 
     // Generates the average income for a Mystery Container sorted by rarity
-    private getMysteryContainerPrices(name: string ,containerType: string, rarities: Array<string>, items: any, amount: number = 1): Array<number> {
+    private getMysteryContainerPrices(name: string ,parent: string, rarities: Array<string>, items: any, amount: number = 1): Array<number> {
         let prices: Array<number>    = [];
         let sum: number              = 0;
 
         for(let i = 0; i < rarities.length; i++){
             let count = 0;
-            for (let j = 0; j < items.items[name + rarities[i]].length; j++){
-                const currentPrice = this.getItemPrice(name, containerType, rarities, items, amount, i, j);
+            for (let j = 0; j < items.rewards[i].length; j++){
+                const currentPrice = this.getItemPrice(name, parent, rarities, items, amount, i, j);
                 sum = sum + currentPrice;
                 count++; 
             }

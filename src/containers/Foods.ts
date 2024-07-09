@@ -1,30 +1,19 @@
 export class Foods {
+
+    public parent = "food";
   
-    public rarities: [
-    "_extremely_rare", 
+    public rarities = [
     "_rare", 
     "_uncommon", 
     "_common"
     ]
-  
-    public items = {
-      food_common: [
-  
-        "575062b524597720a31c09a1", // Can of Ice Green tea
-        "57513f07245977207e26a311", // Pack of apple juice
-        "5448ff904bdc2d6f028b456e", // Army crackers
-        "5751487e245977207e26a315", // Emelya rye croutons
-        "57513f9324597720a7128161", // Pack of Grand juice
-        "544fb62a4bdc2dfb738b4568", // Pack of Russian Army pineapple juice
-        "544fb6cc4bdc2d34748b456e", // Slickers chocolate bar
-        "57514643245977207f2c2d09", // Can of TarCola soda
-        "57513fcc24597720a31c09a6", // Pack of Vita juice
-        "57347d692459774491567cf1", // Can of green peas
-        "57347d90245977448f7b7f65", // Pack of oat flakes
-        "57347d3d245977448f7b7f61", // Rye croutons
+
+    public rewards = [
+      [
+        "5d1b33a686f7742523398398", // Canister with purified water
+        "5d1b376e86f774252519444e", // Bottle of Fierce Hatchling moonshine
       ],
-      
-      food_uncommon: [
+      [
         "656df4fec921ad01000481a2", // Pack of instant noodles
         "5448fee04bdc2dbc018b4567", // Bottle of water (0.6L)
         "5751496424597720a27126da", // Can of Hot Rod energy drink
@@ -51,10 +40,20 @@ export class Foods {
         "5ed5166ad380ab312177c100", // MRE ration pack
         "59e3577886f774176a362503", // Pack of sugar
       ],
-      
-      food_rare: [
-        "5d1b33a686f7742523398398", // Canister with purified water
-        "5d1b376e86f774252519444e", // Bottle of Fierce Hatchling moonshine
-      ],
-    };
+      [
+  
+        "575062b524597720a31c09a1", // Can of Ice Green tea
+        "57513f07245977207e26a311", // Pack of apple juice
+        "5448ff904bdc2d6f028b456e", // Army crackers
+        "5751487e245977207e26a315", // Emelya rye croutons
+        "57513f9324597720a7128161", // Pack of Grand juice
+        "544fb62a4bdc2dfb738b4568", // Pack of Russian Army pineapple juice
+        "544fb6cc4bdc2d34748b456e", // Slickers chocolate bar
+        "57514643245977207f2c2d09", // Can of TarCola soda
+        "57513fcc24597720a31c09a6", // Pack of Vita juice
+        "57347d692459774491567cf1", // Can of green peas
+        "57347d90245977448f7b7f65", // Pack of oat flakes
+        "57347d3d245977448f7b7f61", // Rye croutons
+      ]
+    ]
   }
