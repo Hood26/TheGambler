@@ -1,3 +1,4 @@
+import { RandomUtil } from "@spt-aki/utils/RandomUtil";
 import { Ammo } from "./containers/Ammo";
 import { Armors } from "./containers/Armors";
 import { Backpacks } from "./containers/Backpacks";
@@ -20,6 +21,8 @@ class Container {
     public parent: string
     public rarities: Array<string>;
     public odds: Array<number>;
+    public min: number;
+    public max: number;
     public override: {};
     public rarity_average_profit: Array<number>;
     public profit_percentage: number;
@@ -82,7 +85,7 @@ export class MysteryContainer {
     private setContainers(): { [key: string]: Container } {
         const containers: { [key: string]: Container } = {};
     
-        const createAndConfigureContainer = (name: string, item: any, index: number, isAmmo: boolean = false) => {
+        const createAndConfigureContainer = (name: string, item: any, index: number, isAmmo: boolean) => {
             const container = new Container(name);
             container.rarities = [...item.rarities];
             container.parent = item.parent;
@@ -101,7 +104,8 @@ export class MysteryContainer {
             if (this.override.includes(name) || isAmmo) {
                 container.override = this.config.mystery_container_override_price[container.parent];
             }
-    
+            container.min = this.config.odds[name + '_min']? this.config.odds[name + '_min'] : 1;
+            container.max = this.config.odds[name + '_max']? this.config.odds[name + '_max'] : 1;
             container.profit_percentage = this.config.odds[name + '_profit_percentage'];
             containers[name] = container;
         };
@@ -136,10 +140,16 @@ export class MysteryContainer {
     }
 
     // Returns random Reward from possible Rewards
-    public getReward(name: string, index: number): any {
-        const rewards: [] = this.containers[name].rewards[index];
+    public getReward(name: string, rarityIndex: number): any {
+        const rewards: [] = this.containers[name].rewards[rarityIndex];
         const randomNumber = this.getRandomInt(rewards.length - 1);
         return rewards[randomNumber];
+    }
+
+    public getRandomAmount(name: string): number {
+        const min = this.containers[name].min;
+        const max = this.containers[name].max;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     public getRarityAverageProfit(name:string): number  {

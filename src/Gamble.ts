@@ -51,56 +51,14 @@ export class Gamble {
 
         switch(this.name){
             case 'wallet':
-                this.openWallet();
-                break;
             case 'keycard':
-                this.openKeycard();
-                break;
             case 'key':
-                this.openKey();
-                break;    
             case 'stim':
-                this.openStim();
-                break;    
             case 'food':
-                this.openFood();
-                break;    
-            case 'bitcoin':
-                this.openBitcoin();
-                break;    
-            case 'gpcoin':
-                this.openGPCoin();
-                break;    
-            case '50/50':
-                this.openFiftyFifty();
-                break;
             case 'melee':
-                this.openMelee();
-                break;
-            case 'weapon':
-                this.openWeapon();
-                break;
-            case 'premium_weapon':
-                this.openPremiumWeapon();
-                break;
-            case 'helmet':
-                this.openHelmet();
-                break;
             case 'headset':
-                this.openHeadset();
-                break;
             case 'backpack':
-                this.openBackpack();
-                break;
             case 'rig':
-                this.openRig();
-                break;
-            case 'armor':
-                this.openArmor();
-                break;
-            case 'premium_armor':
-                this.openPremiumArmor();
-                break;
             case '7.62x25':
             case '9x18':
             case '9x19':
@@ -122,12 +80,59 @@ export class Gamble {
             case '12/70':
             case '20/70':
             case '23x75':
-                this.openAmmo();
+                this.openReward();
+                break;
+            case 'weapon':
+                this.openWeapon();
+                break;
+            case 'premium_weapon':
+                this.openPremiumWeapon();
+                break;
+            case 'helmet':
+                this.openHelmet();
+                break;
+            case 'bitcoin':
+                this.openBitcoin();
+                break;    
+            case 'gpcoin':
+                this.openGPCoin();
+                break;    
+            case '50/50':
+                this.openFiftyFifty();
+                break;
+            case 'armor':
+                this.openArmor();
+                break;
+            case 'premium_armor':
+                this.openPremiumArmor();
                 break;
             default:
                 this.logger.error(`[TheGambler] This Mystery Container Doesn't exist! Contact Author!`);    
         }
         return this.newItemsRequest;
+    }
+
+    private openReward(){
+        const roll: number = this.randomUtil.getFloat(0,100);
+        this.logger.info(`\n[TheGambler][${this.name}] The container roll is: ${roll}!`);
+        const odds: Array<number> = this.mysteryContainer.getOdds(this.name);
+        let id: string = "NaN";
+
+        for(let i = 0; i < odds.length; i++) {
+            if(roll <= odds[i]) {
+                id = this.mysteryContainer.getReward(this.name, i);
+                break;  
+            }
+        }
+
+        if (id !== "NaN") {
+            console.log('Adding Item to Request!')
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, this.mysteryContainer.getRandomAmount(this.name))];
+            this.newItemsRequest.foundInRaid = true;
+            this.count++;
+        } else {
+            this.logger.info(`[TheGambler][${this.name}] Case Opened... Received Nothing... Better luck next time :)`);
+        }
     }
 
     private openWallet(){
@@ -574,7 +579,7 @@ export class Gamble {
         }
 
         if (id != "NaN") {
-            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
+            this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, this.mysteryContainer.getRandomAmount(this.name))];
             this.newItemsRequest.foundInRaid = true;
             this.count++;
         } else {
