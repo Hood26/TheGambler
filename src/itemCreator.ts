@@ -26,8 +26,26 @@ export class ItemCreator {
         return Math.floor(Math.random() * max);
     }
 
+    public createPreset(name: string, rarity: string): Item{
+        let itemPreset: Item[] = [];
+        console.log('createPreset ' + name + ' ' + rarity)
+
+        switch(name){
+            case 'helmet':
+                itemPreset = this.createHelmet(rarity);
+                break;
+            case 'armor':
+                itemPreset = this.createArmor(rarity);
+                break;
+            case 'weapon':
+                itemPreset = this.createGun(rarity);
+                break;
+        }
+        return itemPreset
+    }
+
     // Returns a random helmet from Helmets
-    public createHelmet(which: string): Item{
+    private createHelmet(which: string): Item{
         let baseHelmet: Item[];
 
         if(which == "common") {
@@ -47,7 +65,7 @@ export class ItemCreator {
     }
 
     // Returns a random Armor from Armors
-    public createArmor(which: string): Item{
+    private createArmor(which: string): Item{
         let baseArmor: Item[];
 
         if(which == "common") {
@@ -65,7 +83,7 @@ export class ItemCreator {
     }
 
     // Returns a random gun from Weapons
-    public createGun(which: string): Item{
+    private createGun(which: string): Item{
         let weaponBuilds: Item[];
 
         //console.log('WHICH = ' + which)

@@ -6,6 +6,10 @@ export class PremiumArmors {
     "_rare", 
   ]
 
+  presets = [
+    "rare", 
+  ]
+
   public rewards = [
     [
       "5fd4c474dd870108a754b241", // 5.11 Tactical Hexgrid plate carrier

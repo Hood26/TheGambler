@@ -10,7 +10,7 @@ export class Weapons {
     "_base"
   ]
 
-  public rewards = [
+  public presets = [
     "meta", 
     "meme", 
     "decent", 

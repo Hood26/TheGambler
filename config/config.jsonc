@@ -249,13 +249,15 @@
     "food_common": 60.0,           // Common Food
     "food_profit_percentage": 120, // Container Profitability
 
+    // 5,000,000 Roubles 50/50
+    "roubles_success": 50.0,   // 50/50 Success  
+    "roubles_failure": 50.0,   // 50/50 Failure  
+
     // Mystery Bitcoin 50/50
     "bitcoin_success": 50.0,      // Two Bitcoins
-    "bitcoin_failure": 50.0,      // Nothing
 
     // Mystery GP Coin 50/50
     "gpcoin_success": 50.0,      // Two Bitcoins
-    "gpcoin_failure": 50.0,      // Nothing
 
     // Mystery Melee
     "melee_extremely_rare": 0.25,   // Extremely Rare melee
@@ -317,7 +319,7 @@
     "7.62x25_common": 60.0,          // Common Round 7.62x25
     "7.62x25_uncommon": 25.0,        // Uncommon Round 7.62x25
     "7.62x25_rare": 15.0,            // Rare Round 7.62x25
-    "7.62x25_min": 5,                // Minimum Rounds Generated
+    "7.62x25_min": 10,                // Minimum Rounds Generated
     "7.62x25_max": 20,               // Maximum Rounds Generated
     "7.62x25_profit_percentage": 110,// Container Profitability
 
@@ -325,7 +327,7 @@
     "9x18_common": 60.0,            // Common Round 9x18mm
     "9x18_uncommon": 25.0,          // Uncommon Round 9x18mm
     "9x18_rare": 15.0,              // Rare Round 9x18mm
-    "9x18_min": 5,                  // Minimum Rounds Generated
+    "9x18_min": 10,                  // Minimum Rounds Generated
     "9x18_max": 20,                 // Maximum Rounds Generated
     "9x18_profit_percentage": 105,  // Container Profitability
     
@@ -333,7 +335,7 @@
     "9x19_common": 60.0,            // Common Round 9x19
     "9x19_uncommon": 25.0,          // Uncommon Round 9x19
     "9x19_rare": 15.0,              // Rare Round 9x19
-    "9x19_min": 5,                  // Minimum Rounds Generated
+    "9x19_min": 10,                  // Minimum Rounds Generated
     "9x19_max": 20,                 // Maximum Rounds Generated
     "9x19_profit_percentage": 110,  // Container Profitability
 
@@ -341,7 +343,7 @@
     "9x21_common": 60.0,            // Common Round 9x21
     "9x21_uncommon": 25.0,          // Uncommon Round 9x21
     "9x21_rare": 15.0,              // Rare Round 9x21
-    "9x21_min": 5,                  // Minimum Rounds Generated
+    "9x21_min": 10,                  // Minimum Rounds Generated
     "9x21_max": 20,                 // Maximum Rounds Generated
     "9x21_profit_percentage": 110,  // Container Profitability
 
@@ -357,7 +359,7 @@
     ".45_common": 60.0,             // Common Round .45
     ".45_uncommon": 25.0,           // Uncommon Round .45
     ".45_rare": 15.0,               // Rare Round .45
-    ".45_min": 5,                   // Minimum Rounds Generated
+    ".45_min": 10,                   // Minimum Rounds Generated
     ".45_max": 20,                  // Maximum Rounds Generated
     ".45_profit_percentage": 105,   // Container Profitability
 
@@ -365,7 +367,7 @@
     "4.6x30_common": 60.0,          // Common Round 4.6x30
     "4.6x30_uncommon": 25.0,        // Uncommon Round 4.6x30
     "4.6x30_rare": 15.0,            // Rare Round 4.6x30
-    "4.6x30_min": 5,                // Minimum Rounds Generated
+    "4.6x30_min": 10,                // Minimum Rounds Generated
     "4.6x30_max": 20,               // Maximum Rounds Generated
     "4.6x30_profit_percentage": 105,// Container Profitability
 
@@ -373,7 +375,7 @@
     "5.7x28_common": 60.0,           // Common Round 5.7x28
     "5.7x28_uncommon": 25.0,         // Uncommon Round 5.7x28
     "5.7x28_rare": 15.0,             // Rare Round 5.7x28
-    "5.7x28_min": 5,                 // Minimum Rounds Generated
+    "5.7x28_min": 10,                 // Minimum Rounds Generated
     "5.7x28_max": 20,                // Maximum Rounds Generated
     "5.7x28_profit_percentage": 110, // Container Profitability
 
@@ -381,7 +383,7 @@
     "5.45x39_common": 55.0,          // Common Round 5.45x39
     "5.45x39_uncommon": 30.0,        // Uncommon Round 5.45x39
     "5.45x39_rare": 15.0,            // Rare Round 5.45x39
-    "5.45x39_min": 5,                // Minimum Rounds Generated
+    "5.45x39_min": 10,                // Minimum Rounds Generated
     "5.45x39_max": 20,               // Maximum Rounds Generated
     "5.45x39_profit_percentage": 105,// Container Profitability
 
@@ -389,7 +391,7 @@
     "5.56x45_common": 55.0,          // Common Round 5.56x45
     "5.56x45_uncommon": 30.0,        // Uncommon Round 5.56x45
     "5.56x45_rare": 15.0,            // Rare Round 5.56x45
-    "5.56x45_min": 5,                // Minimum Rounds Generated
+    "5.56x45_min": 10,                // Minimum Rounds Generated
     "5.56x45_max": 20,               // Maximum Rounds Generated
     "5.56x45_profit_percentage": 110,// Container Profitability
 
@@ -397,7 +399,7 @@
     ".300_common": 55.0,             // Common Round .300
     ".300_uncommon": 30.0,           // Uncommon Round .300
     ".300_rare": 15.0,               // Rare Round .300
-    ".300_min": 5,                   // Minimum Rounds Generated
+    ".300_min": 10,                   // Minimum Rounds Generated
     ".300_max": 20,                  // Maximum Rounds Generated
     ".300_profit_percentage": 110,   // Container Profitability
 
@@ -405,7 +407,7 @@
     "7.62x39_common": 60.0,          // Common Round 7.62x39
     "7.62x39_uncommon": 25.0,        // Uncommon Round 7.62x39
     "7.62x39_rare": 15.0,            // Rare Round 7.62x39
-    "7.62x39_min": 5,                // Minimum Rounds Generated
+    "7.62x39_min": 10,                // Minimum Rounds Generated
     "7.62x39_max": 20,               // Maximum Rounds Generated
     "7.62x39_profit_percentage": 110,// Container Profitability
 
@@ -413,7 +415,7 @@
     "7.62x51_common": 60.0,          // Common Round 7.62x51
     "7.62x51_uncommon": 25.0,        // Uncommon Round 7.62x51
     "7.62x51_rare": 15.0,            // Rare Round 7.62x51
-    "7.62x51_min": 5,                // Minimum Rounds Generated
+    "7.62x51_min": 10,                // Minimum Rounds Generated
     "7.62x51_max": 15,               // Maximum Rounds Generated
     "7.62x51_profit_percentage": 110,// Container Profitability
 
@@ -421,7 +423,7 @@
     "7.62x54_common": 55.0,          // Common Round 7.62x54
     "7.62x54_uncommon": 30.0,        // Uncommon Round 7.62x54
     "7.62x54_rare": 15.0,            // Rare Round 7.62x54
-    "7.62x54_min": 5,                // Minimum Rounds Generated
+    "7.62x54_min": 10,                // Minimum Rounds Generated
     "7.62x54_max": 15,               // Maximum Rounds Generated
     "7.62x54_profit_percentage": 110,// Container Profitability
 
@@ -437,7 +439,7 @@
     "9x39_common": 52.5,             // Common Round 9x39
     "9x39_uncommon": 32.5,           // Uncommon Round 9x39
     "9x39_rare": 15.0,               // Rare Round 9x39
-    "9x39_min": 5,                   // Minimum Rounds Generated
+    "9x39_min": 10,                   // Minimum Rounds Generated
     "9x39_max": 20,                  // Maximum Rounds Generated
     "9x39_profit_percentage": 100,   // Container Profitability
 
@@ -445,7 +447,7 @@
     ".366_common": 60.0,             // Common Round .366
     ".366_uncommon": 25.0,           // Uncommon Round .366
     ".366_rare": 15.0,               // Rare Round .366
-    ".366_min": 5,                   // Minimum Rounds Generated
+    ".366_min": 10,                   // Minimum Rounds Generated
     ".366_max": 20,                  // Maximum Rounds Generated
     "366_profit_percentage": 110,    // Container Profitability
 
@@ -453,7 +455,7 @@
     "12.7x55_common": 60.0,          // Common Round 12.7x55
     "12.7x55_uncommon": 25.0,        // Uncommon Round 12.7x55
     "12.7x55_rare": 15.0,            // Rare Round 12.7x55
-    "12.7x55_min": 5,                // Minimum Rounds Generated
+    "12.7x55_min": 10,                // Minimum Rounds Generated
     "12.7x55_max": 20,               // Maximum Rounds Generated
     "12.7x55_profit_percentage": 115,// Container Profitability
 
@@ -461,7 +463,7 @@
     "12/70_common": 60.0,            // Common Round 12/70
     "12/70_uncommon": 25.0,          // Uncommon Round 12/70
     "12/70_rare": 15.0,              // Rare Round 12/70
-    "12/70_min": 3,                  // Minimum Rounds Generated
+    "12/70_min": 5,                  // Minimum Rounds Generated
     "12/70_max": 10,                 // Maximum Rounds Generated
     "12/70_profit_percentage": 110,  // Container Profitability
 
@@ -469,7 +471,7 @@
     "20/70_common": 60.0,            // Common Round 20/70
     "20/70_uncommon": 25.0,          // Uncommon Round 20/70
     "20/70_rare": 15.0,              // Rare Round 20/70
-    "20/70_min": 3,                  // Minimum Rounds Generated
+    "20/70_min": 5,                  // Minimum Rounds Generated
     "20/70_max": 10,                 // Maximum Rounds Generated
     "20/70_profit_percentage": 85,   // Container Profitability
 

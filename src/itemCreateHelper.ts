@@ -678,7 +678,7 @@ export class ItemCreateHelper {
         const fiftyFiftyGamble: NewItemDetails = {
             newItem: {
                 _id: "z_50/50_gamble",
-                _name: "gambling_50/50",
+                _name: "gambling_roubles",
                 _parent: "62f109593b54472778797866",
                 _props: {
                     "AnimationVariantsNumber": 0,

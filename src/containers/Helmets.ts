@@ -9,7 +9,7 @@ export class Helmets {
     "_common"
   ]
 
-  public rewards = [
+  public presets = [
     "extremely_rare", 
     "rare", 
     "uncommon", 

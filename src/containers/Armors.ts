@@ -8,6 +8,12 @@ export class Armors {
     "_common"
   ]
 
+  presets = [
+    "rare", 
+    "uncommon", 
+    "common"
+  ]
+
   public rewards = [
     [
       "5fd4c474dd870108a754b241", // 5.11 Tactical Hexgrid plate carrier
