@@ -26,6 +26,30 @@ export class Ammo {
         '23x75',
     ]
 
+    public BSGCalibers = {
+        'Caliber762x25TT':    '7.62x25', 
+        'Caliber9x18PM':      '9x18',  
+        'Caliber9x19PARA':    '9x19', 
+        'Caliber9x21':        '9x21', 
+        'Caliber9x33R':       '.357', 
+        'Caliber1143x23ACP':  '.45',  // ?? why BSG
+        'Caliber46x30':       '4.6x30', 
+        'Caliber57x28':       '5.7x28', 
+        'Caliber545x39':      '5.45x39', 
+        'Caliber556x45NATO':  '5.56x45', 
+        'Caliber762x35':      '.300', 
+        'Caliber762x39':      '7.62x39', 
+        'Caliber762x51':      '7.62x51', 
+        'Caliber762x54R':     '7.62x54', 
+        'Caliber86x70':       '.338', 
+        'Caliber9x39':        '9x39', 
+        'Caliber366TKM':      '.366', 
+        'Caliber127x55':      '12.7x55', 
+        'Caliber12g':         '12/70', 
+        'Caliber20g':         '20/70', 
+        'Caliber23x75':       '23x75', 
+    }
+
     public rarities = [
         "_rare", 
         "_uncommon", 

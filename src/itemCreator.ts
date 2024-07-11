@@ -15,6 +15,7 @@ export class ItemCreator {
     public Armors: any;
     public caliber: string;
     public magazine: string;
+    public magazineMaxAmmo: number;
     public weaponType: string;
     private hashUtil: HashUtil;
     private itemHelper: ItemHelper;
@@ -154,7 +155,17 @@ export class ItemCreator {
 
                 } else {
                     if(build[i].slotId == "mod_magazine") {
+                        // Save magazine
                         this.magazine = build[i]._tpl;
+                        // Maximum rounds in saved magazine
+                        const magInfo = this.itemHelper.getItem(this.magazine)
+                        console.log('magInfo\n')
+                        console.log(magInfo)
+                        console.log('magInfo._props\n')
+                        console.log(magInfo[1]._props)
+                        console.log('magInfo[1]._props.Cartridges[0]._max_count\n')
+                        console.log(magInfo[1]._props.Cartridges[0]._max_count)
+                        this.magazineMaxAmmo = magInfo[1]._props.Cartridges[0]._max_count;
                     }
                     item.push({
                         _id: newId,

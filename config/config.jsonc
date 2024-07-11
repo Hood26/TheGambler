@@ -33,21 +33,21 @@
     "key_case_enable": true,
 
     "stim_case_price": 36500,
-    "stim_case_stock": 10,
+    "stim_case_stock": 8,
     "stim_case_enable": true,
 
     "food_case_price": 26500,
-    "food_case_stock": 6,
+    "food_case_stock": 8,
     "food_case_enable": true,
 
-    "bitcoin_case_stock": 4,
+    "bitcoin_case_stock": 3,
     "bitcoin_case_enable": true,
 
-    "gpcoin_case_stock": 8,
+    "gpcoin_case_stock": 6,
     "gpcoin_case_enable": true,
 
     "keycard_case_price": 265000,
-    "keycard_case_stock": 10,
+    "keycard_case_stock": 15,
     "keycard_case_enable": true,
 
     "fiftyfifty_case_price": 2500000,

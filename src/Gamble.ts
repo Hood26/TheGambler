@@ -26,6 +26,7 @@ export class Gamble {
     private mysteryContainer: MysteryContainer;
     private currentCaliber: string;
     private currentMagazine: string;
+    private currentMagazineMaxAmmo: number;
     private currentWeaponType: string;
     private container: DependencyContainer;
     private hashUtil: HashUtil;
@@ -103,36 +104,13 @@ export class Gamble {
         return this.newItemsRequest;
     }
 
-    private calibers = {
-        '762x25TT':    '7.62x25', 
-        '9x18PM':      '9x18',  
-        '9x19PARA':    '9x19', 
-        '9x21':        '9x21', 
-        '9x33R':       '.357', 
-        '1143x23ACP':  '.45',  // ?? why BSG
-        '46x30':       '4.6x30', 
-        '57x28':       '5.7x28', 
-        '545x39':      '5.45x39', 
-        '556x45NATO':  '5.56x45', 
-        '762x35':      '.300', 
-        '762x39':      '7.62x39', 
-        '762x51':      '7.62x51', 
-        '762x54R':     '7.62x54', 
-        '86x70':       '.338', 
-        '9x39':        '9x39', 
-        '366TKM':      '.366', 
-        '127x55':      '12.7x55', 
-        '12g':         '12/70', 
-        '20g':         '20/70', 
-        '23x75':       '23x75', 
-    }
-
-
-    // Opens all rewards from a container (so far only designed for loadout container)
+    // Opens all rewards from the loadout container
     private openGuaranteedRewards(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){ 
         //console.log('\nopenGuaranteedRewards');
         const rewards = this.mysteryContainer.getGuaranteedRewards(name);
         const randomness = this.mysteryContainer.getGuaranteedRandomness(name);
+        let currentCaliber: string, currentMagazine: string, currentMagazineMaxAmmo: number, currentWeaponType : string;
+
         console.log('RANDOMNESS: ' + randomness)
         for(let i = 0; i < rewards.length; i++) {
             const current = rewards[i];
@@ -152,10 +130,46 @@ export class Gamble {
                 }
 
                 if(current === 'weapon' || current === 'premium_weapon') {
-                    let currentCaliber = this.currentCaliber;
-                    let currentMagazine = this.currentMagazine;
+                    currentCaliber = this.currentCaliber;
+                    currentMagazine = this.currentMagazine;
+                    currentMagazineMaxAmmo = this.currentMagazineMaxAmmo
+                    currentWeaponType = this.currentWeaponType;
+
                     console.log('WEAPON INFO')
-                    console.log(currentCaliber + ' ' + currentMagazine)
+                    console.log(currentCaliber + ' ' + currentMagazine + ' ' + currentWeaponType + ' ' + currentMagazineMaxAmmo)
+                    //push magazines and ammo
+                    console.log('Current Caliber: ' + currentCaliber)
+                    const caliber = this.mysteryContainer.items['ammo'].BSGCalibers[currentCaliber];
+                    //console.log('END OF OPENING CALIBER: ' + caliber)
+                    //console.log('END OF OPENING MAGAZINE: ' + this.currentMagazine)
+                    if (caliber != '20x70' && caliber != '23x75' && caliber != '12/70') {
+                        this.openReward(caliber, roll, this.currentMagazine, false, 1);
+                        this.openReward(caliber, roll, this.currentMagazine, false, 1);
+                    }
+                    let tempRoll: number;
+
+                    // Depending on the ammo type, we want to generate a different rarity of ammo from the temproll
+                    if(currentWeaponType == 'meme') {
+                        tempRoll = this.randomUtil.getFloat(0,25);
+                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                    } else if(currentWeaponType == 'decent') {
+                        tempRoll = this.randomUtil.getFloat(8,40);
+                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                    } else if(currentWeaponType == 'meta') {
+                        tempRoll = this.randomUtil.getFloat(0,25);
+                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                    }
+                     else {
+                        this.openReward(caliber, roll, 'NaN', true, currentMagazineMaxAmmo);
+                        this.openReward(caliber, roll, 'NaN', true, currentMagazineMaxAmmo);
+                        this.openReward(caliber, roll, 'NaN', true, currentMagazineMaxAmmo);
+                    }
                 }
 
             } else { // Reward  is a item
@@ -184,13 +198,10 @@ export class Gamble {
         }
     }
 
-    private openReward(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){ 
-        //console.log('\nopenReward()');
-        //this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
-        let id: string = 'NaN'
+    private openReward(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100), id: string = 'NaN', stackable: boolean = false, reward_amount: number = undefined){ 
+        console.log('\nopenReward()');
+        this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
         const odds: Array<number> = this.mysteryContainer.getOdds(name);
-        let reward_amount: number;
-        let stackable: boolean;
         let guaranteed_rewards = this.mysteryContainer.getGuaranteedRewards(name);
 
         if (guaranteed_rewards) {
@@ -203,14 +214,21 @@ export class Gamble {
         //console.log('The Parent ' + this.mysteryContainer.getParent(name));
         //console.log('The Odds');
         //console.log(odds);
+        if (id === "NaN") {
+            console.log('ID is NaN... Searching for ID...')
+            for(let i = 0; i < odds.length; i++) {
+                if(roll <= odds[i]) {
+                    console.log('WIN! Creating ' + name + ' index = ' + i + ' rewards = ' +  this.mysteryContainer.getReward(name, i))
+                    id = this.mysteryContainer.getReward(name, i);
+                    if(reward_amount === undefined){
+                        reward_amount = this.mysteryContainer.getRewardAmount(name, i);
+                    }
+                    if(stackable === false){
+                        stackable = this.mysteryContainer.getStackable(name, i);
 
-        for(let i = 0; i < odds.length; i++) {
-            if(roll <= odds[i]) {
-                //console.log('WIN! Creating ' + name + ' index = ' + i + ' rewards = ' +  this.mysteryContainer.getReward(name, i))
-                id = this.mysteryContainer.getReward(name, i);
-                reward_amount = this.mysteryContainer.getRewardAmount(name, i);
-                stackable = this.mysteryContainer.getStackable(name, i);
-                break;  
+                    }
+                    break;  
+                }
             }
         }
     
@@ -220,8 +238,10 @@ export class Gamble {
             this.logger.info(id);
         }
 
+        console.log('reward_amount = ' + reward_amount)
         if (id !== "NaN") {
             if(!reward_amount){ // ammo has min and max amount instead of a fixed amount
+                console.log('Retrieving Reward Amount!!!')
                 reward_amount = this.mysteryContainer.getRandomAmount(name); 
             }
             if(!stackable){
@@ -262,7 +282,8 @@ export class Gamble {
                     // Store values for possible future use
                     this.currentCaliber = item.caliber;
                     this.currentMagazine = item.magazine;
-                    this.currentWeaponType = item.weaponsType;
+                    this.currentWeaponType = item.weaponType;
+                    this.currentMagazineMaxAmmo = item.magazineMaxAmmo;
                 }
                 break;  
             }
