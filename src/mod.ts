@@ -193,46 +193,10 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
             newItemsRequest.foundInRaid = rewardContainerDetails.foundInRaid;
             
         }
-
-
-        /*
-        notifierHelper.createNewMessageNotification({ // Not Working
-                    "_id": "",
-                    "uid": "",
-                    "type": 13,
-                    "dt": 69,
-                    "text": "Inventory Full!",
-                    "hasRewards": false, //idk
-                    "rewardCollected": false,//idk
-                    "items": {},
-                    "maxStorageTime": null
-                });
-        */
-
-
-       /*
-       let message: Message = { // Not Working
-       _id: String,
-       uid: String,
-       type: MessageType,
-       text: String,
-       dt: Number
-       };
-       message._id = this.hashUtil.generate();
-       message.uid = this.hashUtil.generate();
-       message.type = 13;
-       message.text = "Inventory Full"
-       message.dt = 69
-       */
-      //this.logger.info(multipleItems);
       
-      //this.logger.info(message.type);
-      
-      
-      const output = eventOutputHolder.getOutput(sessionID);
-      let multipleItems: any;
-        //console.log("END")
-        //console.log(newItemsRequest.itemsWithModsToAdd)
+        const output = eventOutputHolder.getOutput(sessionID);
+        let multipleItems: any;
+
         if (newItemsRequest.itemsWithModsToAdd.length != 0) {
 
             if (inventoryHelper.canPlaceItemsInInventory(sessionID, newItemsRequest.itemsWithModsToAdd)){

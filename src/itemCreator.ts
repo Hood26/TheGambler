@@ -9,10 +9,10 @@ import { HelmetPresets } from './presets/HelmetPresets';
 
 export class ItemCreator {
 
-    protected Weapons: any;
-    protected Helmets: any;
-    protected Armors: any;
-    protected hashUtil: HashUtil;
+    public Weapons: any;
+    public Helmets: any;
+    public Armors: any;
+    private hashUtil: HashUtil;
 
     constructor(container: DependencyContainer){
         this.Weapons = new WeaponPresets();
@@ -22,7 +22,7 @@ export class ItemCreator {
     }
 
     // getRandomInt(3) returns 0, 1, or 2
-    protected getRandomInt(max: number) {
+    private getRandomInt(max: number) {
         return Math.floor(Math.random() * max);
     }
 

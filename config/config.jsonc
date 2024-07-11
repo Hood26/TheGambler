@@ -90,6 +90,10 @@
     "backpack_case_stock": 6,
     "backpack_case_enable": true,
 
+    "loadout_case_price": 500000,
+    "loadout_case_stock": 999,
+    "loadout_case_enable": true,
+
     "rig_case_price": 45000,
     "rig_case_stock": 6,
     "rig_case_enable": true,

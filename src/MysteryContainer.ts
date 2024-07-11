@@ -30,6 +30,9 @@ class Container {
     public override: {};
     public rarity_average_profit: Array<number>;
     public profit_percentage: number;
+    public guaranteed_rewards: Array<string>;
+    public guaranteed_stackable: Array<boolean>;
+    public guaranteed_reward_amount: Array<number>;
     public reward_amount: Array<number>;
     public rewards: any;
     public presets: Array<string>;
@@ -66,7 +69,7 @@ export class MysteryContainer {
         this.names = [
             'wallet', 'keycard', 'key', 'stim', 'food', 'melee', 
             'backpack', 'rig', 'weapon', 'premium_weapon', 'helmet', 
-            'headset', 'armor', 'premium_armor', 'roubles', 'bitcoin', 'gpcoin', 'loadout'
+            'headset', 'armor', 'premium_armor', 'roubles', 'bitcoin', 'gpcoin', 'loadout', 'ammo'
         ];
         this.simulation = ['wallet', 'armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food'];
         this.override    = ['ammo', 'armor'];
@@ -129,6 +132,9 @@ export class MysteryContainer {
             container.max = this.config.odds[`${name}_max`] || 1;
             container.profit_percentage = this.config.odds[`${name}_profit_percentage`];
             container.presets = item.presets? [...item.presets] : [];
+            container.guaranteed_stackable = item.guaranteed_stackable? item.guaranteed_stackable : undefined
+            container.guaranteed_reward_amount = item.guaranteed_reward_amount? item.guaranteed_reward_amount : undefined
+            container.guaranteed_rewards = item.guaranteed_rewards? item.guaranteed_rewards : undefined
         };
     
         const createAndConfigureContainer = (name: string, item: any, isAmmo: boolean) => {
@@ -172,6 +178,25 @@ export class MysteryContainer {
     public getRarities(name: string): Array<string>{
         return this.containers[name].rarities;
     }
+/*
+    public getOpenAll(name: string): boolean{
+        return this.containers[name].openAll? this.containers[name].openAll : false;
+    }
+*/
+
+    public getGuaranteedRewards(name: string): Array<string>{
+        return this.containers[name].guaranteed_rewards? this.containers[name].guaranteed_rewards : undefined;
+    }
+
+    public getGuaranteedRewardAmount(name: string, rarityIndex: number): any {
+        return this.containers[name].guaranteed_reward_amount[rarityIndex];
+    }
+
+    public getGuaranteedStackable(name: string, rarityIndex: number): boolean {
+        return this.containers[name].guaranteed_stackable[rarityIndex];
+    }
+
+
     public getPreset(name: string, rarityIndex: number): any {
         return this.containers[name].presets[rarityIndex];
     }
@@ -182,6 +207,13 @@ export class MysteryContainer {
         const randomNumber = this.getRandomInt(rewards.length - 1);
         return rewards[randomNumber];
     }
+
+    // Returns all rewards from possible rewards
+    public getRewards(name: string): Array<string> {
+        return this.containers[name].rewards;
+  
+    }
+
     public getRewardAmount(name: string, rarityIndex: number): any {
         return this.containers[name].reward_amount[rarityIndex];
     }
@@ -213,58 +245,3 @@ export class MysteryContainer {
         this.containers[name].rarity_average_profit = profit;
     }
 }
-
-
-
-
-/*
-    private setContainers(): { [key: string]: Container } {
-        const containers: { [key: string]: Container } = {};
-    
-        const generateAmount = (length: number, item: any) => {
-            const amount = [];
-            for(let i = 0; i < length; i++){
-                amount.push(item);
-            }
-            return amount;
-        }
-    
-        const createAndConfigureContainer = (name: string, item: any, index: number, isAmmo: boolean) => {
-            const container = new Container(name);
-            console.log(container.name)
-            container.rarities = [...item.rarities];
-            container.parent = item.parent;
-    
-            for(let j = 0; j < container.rarities.length; j++){
-                const key = `${container.name}${container.rarities[j]}`;
-                
-                if(j == 0) {
-                    container.odds[j] = this.config.odds[key];
-                } else {
-                    container.odds[j] = this.config.odds[key] + container.odds[j-1];
-                }
-                container.rewards[j] = [...item.rewards[j]]
-            }
-            
-            if (this.override.includes(name) || isAmmo) {
-                container.override = this.config.mystery_container_override_price[container.parent];
-                container.stackable = item.stackable? [...item.stackable] : generateAmount(container.rarities.length, true);
-            }
-            if (!isAmmo) {
-                container.reward_amount = item.reward_amount? [...item.reward_amount] : generateAmount(container.rarities.length, 1);
-                container.stackable = item.stackable? [...item.stackable] : generateAmount(container.rarities.length, false);
-            }
-            container.min = this.config.odds[name + '_min']? this.config.odds[name + '_min'] : 1;
-            container.max = this.config.odds[name + '_max']? this.config.odds[name + '_max'] : 1;
-            container.profit_percentage = this.config.odds[name + '_profit_percentage'];
-            containers[name] = container;
-        };
-    
-        this.names.forEach((name, index) => createAndConfigureContainer(name, this.items[name], index, false));
-        this.items.ammo.names.forEach((name, index) => createAndConfigureContainer(name, this.items.ammo.items[name], index, true));
-    
-        console.log('THE CONTAINER!!!')
-        console.log(containers)
-        return containers;
-    }
-*/

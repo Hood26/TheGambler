@@ -137,7 +137,7 @@ export class Price{
 
                 for(let k = 0; k < odds.length; k++){
                     if(roll <= odds[k]){
-                        sum += prices[k]; // odds and prices have to be indexed by rarity order (rarest,... ->, common) or else KABOOM
+                        sum += prices[k]; // odds and prices have to be indexed by rarity order [rarest,... ->, common] or else KABOOM
                         break; // This caused me soo much pain :(
                     }
                 }

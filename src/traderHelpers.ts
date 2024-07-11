@@ -126,6 +126,7 @@ export class TraderHelper
         const FIFTY_FIFTY_GAMBLE_ID = "z_50/50_gamble";
         const WEAPON_GAMBLE_ID = "w_weapon_gamble";
         const BACKPACK_GAMBLE_ID = "wr_backpack_gamble";
+        const LOADOUT_GAMBLE_ID = "ws_loadout_gamble";
         const RIG_GAMBLE_ID = "wr_rig_gamble";
         const HELMET_GAMBLE_ID = "x_helmet_gamble";
         const HEADSET_GAMBLE_ID = "xy_headset_gamble";
@@ -290,6 +291,14 @@ export class TraderHelper
                                     .addStackCount(config.price_stock['backpack_case_stock'])
                                     .addBuyRestriction(config.price_stock['backpack_case_stock'])
                                     .addMoneyCost(Money.ROUBLES, (generatedMysteryContainerPrices['backpack_case_price'] * config.price_multiplier))
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        }
+        if (config.price_stock['loadout_case_enable']){
+            assortCreator.createSingleAssortItem(LOADOUT_GAMBLE_ID)
+                                    .addStackCount(config.price_stock['loadout_case_stock'])
+                                    .addBuyRestriction(config.price_stock['loadout_case_stock'])
+                                    .addMoneyCost(Money.ROUBLES, (config.price_stock['loadout_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }

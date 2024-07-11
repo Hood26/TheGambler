@@ -47,7 +47,8 @@ export class Gamble {
 
     }
 
-    public newGamble(name: string = this.name, roll: number = undefined): []{
+    public newGamble(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)): []{
+        console.log('NEW GAMBLE: Creating ' + name + ' roll = ' + roll)
 
         switch(name){
             case 'wallet':
@@ -83,14 +84,15 @@ export class Gamble {
             case 'roubles':
             case 'bitcoin':
             case 'gpcoin':
-                this.openReward();
+            case 'loadout':
+                this.openReward(name, roll);
                 break;
             case 'weapon':
             case 'premium_weapon':
             case 'helmet':
             case 'armor':
             case 'premium_armor':
-                this.openPreset();
+                this.openPreset(name, roll);
                 break;
             default:
                 this.logger.error(`[TheGambler] This Mystery Container Doesn't exist! Contact Author!`);    
@@ -107,29 +109,78 @@ export class Gamble {
         id = "NaN";
     */
 
-    private openReward(roll: number = this.randomUtil.getFloat(0,100)){ 
-        this.logger.info(`\n[TheGambler][${this.name}] The container roll is: ${roll}!`);
-        const odds: Array<number> = this.mysteryContainer.getOdds(this.name);
-        let id: string = "NaN";
-        let reward_amount: number;
-        let stackable: boolean
+    // For containers like the mystery medical container that rewards multiple items per rarity is my thinking...........
 
-        console.log('The Name ' + this.name);
-        console.log('The Parent ' + this.mysteryContainer.getParent(this.name));
+
+
+
+    // Opens all rewards from a container
+    private openGuaranteedRewards(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){ 
+        console.log('\nopenGuaranteedRewards');
+        const rewards = this.mysteryContainer.getGuaranteedRewards(name);
+        for(let i = 0; i < rewards.length; i++) {
+            const current = rewards[i];
+            console.log('OPEN GUARANTEED REWARDS: Creating ' + name + ' index = ' + i + ' rewards = ' +  current)
+
+            if (this.mysteryContainer.getName(current)) { // Rewards is a container
+                this.newGamble(current, roll);
+
+            } else { // Reward  is a item
+                // Finish.........
+                const reward_amount = this.mysteryContainer.getRewardAmount(name, i);
+                const stackable = this.mysteryContainer.getStackable(name, i);
+
+                if(!stackable){
+                    for(let i = 0; i < reward_amount; i++){
+                        this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(current)];
+                        this.newItemsRequest.foundInRaid = true;
+                        this.count++;
+                    }
+
+                } else {
+                    console.log('OPEN GUARANTEED REWARDS: Item exists and is stackable... Adding to newItemsRequest...')
+                    console.log('current id: ' + current)
+                    console.log('Reward Amount: ' + reward_amount)
+                    console.log('stackable: ' + stackable)
+                    this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(current, reward_amount)];
+                    this.newItemsRequest.foundInRaid = true;
+                    this.count++;
+                }
+            }
+        }
+    }
+
+    private openReward(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){ 
+        console.log('\nopenReward()');
+        this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
+        let id: string = 'NaN'
+        const odds: Array<number> = this.mysteryContainer.getOdds(name);
+        let reward_amount: number;
+        let stackable: boolean;
+        let guaranteed_rewards = this.mysteryContainer.getGuaranteedRewards(name);
+
+        if (guaranteed_rewards) {
+            this.openGuaranteedRewards(name, roll);
+            console.log('FINISHEDDDDDDDDDDDDDDDDDDDDDDDDDDDDD')
+            return;
+        }
+
+        console.log('The Name ' + name);
+        console.log('The Parent ' + this.mysteryContainer.getParent(name));
         console.log('The Odds');
         console.log(odds);
 
-
         for(let i = 0; i < odds.length; i++) {
             if(roll <= odds[i]) {
-                console.log('WIN! Creating ' + this.name + ' index = ' + i + ' rewards = ' +  this.mysteryContainer.getReward(this.name, i))
-                id = this.mysteryContainer.getReward(this.name, i);
-                reward_amount = this.mysteryContainer.getRewardAmount(this.name, i);
-                stackable = this.mysteryContainer.getStackable(this.name, i);
+                console.log('WIN! Creating ' + name + ' index = ' + i + ' rewards = ' +  this.mysteryContainer.getReward(name, i))
+                id = this.mysteryContainer.getReward(name, i);
+                reward_amount = this.mysteryContainer.getRewardAmount(name, i);
+                stackable = this.mysteryContainer.getStackable(name, i);
                 break;  
             }
         }
-
+    
+        
         if(this.config.debug) {
             this.logger.info("[TheGambler] Weapon Mystery Box Information...");
             this.logger.info(id);
@@ -137,7 +188,7 @@ export class Gamble {
 
         if (id !== "NaN") {
             if(!reward_amount){ // ammo has min and max amount instead of a fixed amount
-                reward_amount = this.mysteryContainer.getRandomAmount(this.name); 
+                reward_amount = this.mysteryContainer.getRandomAmount(name); 
             }
             if(!stackable){
                 for(let i = 0; i < reward_amount; i++){
@@ -154,27 +205,23 @@ export class Gamble {
                 this.newItemsRequest.foundInRaid = true;
                 this.count++;
             }
-
+    
         } else {
-            this.logger.info(`[TheGambler][${this.name}] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[TheGambler][${name}] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
-    private openPreset( roll: number = this.randomUtil.getFloat(0,100)){
+    private openPreset(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){
+        console.log('\nopenPreset()');
         // ItemCreator stores all preset creation functions
         let item = new ItemCreator(this.container);
         let preset: Item[] = [];
-        this.logger.info(`\n[TheGambler][${this.name}] The container roll is: ${roll}!`);
-        const odds: Array<number> = this.mysteryContainer.getOdds(this.name);
+        this.logger.info(`\n[TheGambler][${name}] The container roll is: ${roll}!`);
+        const odds: Array<number> = this.mysteryContainer.getOdds(name);
 
-        console.log('The Name ' + this.name);
-        console.log('The Parent ' + this.mysteryContainer.getParent(this.name))
-        console.log('The Odds')
-        console.log(odds);
         for(let i = 0; i < odds.length; i++) {
             if(roll <= odds[i]) {
-                const parent = this.mysteryContainer.getParent(this.name);
-                console.log('WIN! Creating ' + parent + ' ' + this.mysteryContainer.getPreset(parent, i))
+                const parent = this.mysteryContainer.getParent(name);
                 preset = item.createPreset(parent, this.mysteryContainer.getPreset(parent, i));
                 break;  
             }
