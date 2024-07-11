@@ -1,6 +1,7 @@
 import { DependencyContainer } from "tsyringe";
 import { HashUtil } from "@spt-aki/utils/HashUtil";
 import { Item } from "@spt-aki/models/eft/common/tables/IItem";
+import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
 
 import { WeaponPresets } from './presets/WeaponPresets';
 import { ArmorPresets } from './presets/ArmorPresets';
@@ -12,13 +13,18 @@ export class ItemCreator {
     public Weapons: any;
     public Helmets: any;
     public Armors: any;
+    public caliber: string;
+    public magazine: string;
+    public weaponType: string;
     private hashUtil: HashUtil;
+    private itemHelper: ItemHelper;
 
     constructor(container: DependencyContainer){
         this.Weapons = new WeaponPresets();
         this.Helmets = new HelmetPresets();
         this.Armors = new ArmorPresets();
         this.hashUtil = container.resolve<HashUtil>("HashUtil");
+        this.itemHelper = container.resolve<ItemHelper>("ItemHelper");
     }
 
     // getRandomInt(3) returns 0, 1, or 2
@@ -102,7 +108,7 @@ export class ItemCreator {
 
         const randomBuild = this.getRandomInt(weaponBuilds.length);
         let getItem = weaponBuilds[randomBuild].Items;
-
+        this.weaponType = which;
         return this.generateItem(getItem);
     }
 
@@ -118,6 +124,7 @@ export class ItemCreator {
             if(i == 0) { // item base
                 baseId = build[i]._id; // Need the base to reference in attachments
                 parentIdMap[baseId] = _randomId; // base id = _randomId
+                
                 item.push({
                     _id: _randomId,
                     _tpl: build[i]._tpl
@@ -146,6 +153,9 @@ export class ItemCreator {
                     });
 
                 } else {
+                    if(build[i].slotId == "mod_magazine") {
+                        this.magazine = build[i]._tpl;
+                    }
                     item.push({
                         _id: newId,
                         _tpl: build[i]._tpl,
@@ -161,6 +171,8 @@ export class ItemCreator {
                 }
             }
         }
+        const itemInfo = this.itemHelper.getItem(item[0]._tpl)
+        this.caliber = itemInfo[1]._props.ammoCaliber; // save caliber
         return item;
     }
 

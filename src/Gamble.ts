@@ -24,6 +24,9 @@ export class Gamble {
     public name: string;
     private count: number;
     private mysteryContainer: MysteryContainer;
+    private currentCaliber: string;
+    private currentMagazine: string;
+    private currentWeaponType: string;
     private container: DependencyContainer;
     private hashUtil: HashUtil;
     private logger: ILogger;
@@ -48,10 +51,13 @@ export class Gamble {
     }
 
     public newGamble(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)): []{
-        console.log('NEW GAMBLE: Creating ' + name + ' roll = ' + roll)
+        //console.log('NEW GAMBLE: Creating ' + name + ' roll = ' + roll)
 
         switch(name){
             case 'wallet':
+            case 'roubles':
+            case 'bitcoin':
+            case 'gpcoin':
             case 'keycard':
             case 'key':
             case 'stim':
@@ -60,6 +66,7 @@ export class Gamble {
             case 'headset':
             case 'backpack':
             case 'rig':
+            case 'loadout':
             case '7.62x25':
             case '9x18':
             case '9x19':
@@ -81,10 +88,6 @@ export class Gamble {
             case '12/70':
             case '20/70':
             case '23x75':
-            case 'roubles':
-            case 'bitcoin':
-            case 'gpcoin':
-            case 'loadout':
                 this.openReward(name, roll);
                 break;
             case 'weapon':
@@ -100,30 +103,60 @@ export class Gamble {
         return this.newItemsRequest;
     }
 
-    /*
-    id = this.mysteryContainer.getReward(this.name, i);
+    private calibers = {
+        '762x25TT':    '7.62x25', 
+        '9x18PM':      '9x18',  
+        '9x19PARA':    '9x19', 
+        '9x21':        '9x21', 
+        '9x33R':       '.357', 
+        '1143x23ACP':  '.45',  // ?? why BSG
+        '46x30':       '4.6x30', 
+        '57x28':       '5.7x28', 
+        '545x39':      '5.45x39', 
+        '556x45NATO':  '5.56x45', 
+        '762x35':      '.300', 
+        '762x39':      '7.62x39', 
+        '762x51':      '7.62x51', 
+        '762x54R':     '7.62x54', 
+        '86x70':       '.338', 
+        '9x39':        '9x39', 
+        '366TKM':      '.366', 
+        '127x55':      '12.7x55', 
+        '12g':         '12/70', 
+        '20g':         '20/70', 
+        '23x75':       '23x75', 
+    }
 
-    if(this.mysteryContainer.getName(id)) { // Current reward is a mystery container
-        this.name = this.mysteryContainer.getName(id);
-        this.newGamble(this.name, roll);
-        id = "NaN";
-    */
 
-    // For containers like the mystery medical container that rewards multiple items per rarity is my thinking...........
-
-
-
-
-    // Opens all rewards from a container
+    // Opens all rewards from a container (so far only designed for loadout container)
     private openGuaranteedRewards(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){ 
-        console.log('\nopenGuaranteedRewards');
+        //console.log('\nopenGuaranteedRewards');
         const rewards = this.mysteryContainer.getGuaranteedRewards(name);
+        const randomness = this.mysteryContainer.getGuaranteedRandomness(name);
+        console.log('RANDOMNESS: ' + randomness)
         for(let i = 0; i < rewards.length; i++) {
             const current = rewards[i];
-            console.log('OPEN GUARANTEED REWARDS: Creating ' + name + ' index = ' + i + ' rewards = ' +  current)
+            //console.log('OPEN GUARANTEED REWARDS: Creating ' + name + ' index = ' + i + ' rewards = ' +  current)
 
             if (this.mysteryContainer.getName(current)) { // Rewards is a container
-                this.newGamble(current, roll);
+
+                if(this.currentWeaponType == 'meme') { // Generated Weapon is meme all rewards are random now
+                    this.newGamble(current);
+                    
+                } else{
+                    if (randomness[i]) {
+                        this.newGamble(current);
+                    } else {
+                        this.newGamble(current, roll);
+                    }
+                }
+
+                if(current === 'weapon' || current === 'premium_weapon') {
+                    let currentCaliber = this.currentCaliber;
+                    let currentMagazine = this.currentMagazine;
+                    console.log('WEAPON INFO')
+                    console.log(currentCaliber + ' ' + currentMagazine)
+                }
 
             } else { // Reward  is a item
                 // Finish.........
@@ -131,6 +164,7 @@ export class Gamble {
                 const stackable = this.mysteryContainer.getStackable(name, i);
 
                 if(!stackable){
+                    //console.log('OPEN GUARANTEED REWARDS: Item exists and NOT stackable... Adding to newItemsRequest...')
                     for(let i = 0; i < reward_amount; i++){
                         this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(current)];
                         this.newItemsRequest.foundInRaid = true;
@@ -138,10 +172,10 @@ export class Gamble {
                     }
 
                 } else {
-                    console.log('OPEN GUARANTEED REWARDS: Item exists and is stackable... Adding to newItemsRequest...')
-                    console.log('current id: ' + current)
-                    console.log('Reward Amount: ' + reward_amount)
-                    console.log('stackable: ' + stackable)
+                    //console.log('OPEN GUARANTEED REWARDS: Item exists and is stackable... Adding to newItemsRequest...')
+                    //console.log('current id: ' + current)
+                    //console.log('Reward Amount: ' + reward_amount)
+                    //console.log('stackable: ' + stackable)
                     this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(current, reward_amount)];
                     this.newItemsRequest.foundInRaid = true;
                     this.count++;
@@ -151,8 +185,8 @@ export class Gamble {
     }
 
     private openReward(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){ 
-        console.log('\nopenReward()');
-        this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
+        //console.log('\nopenReward()');
+        //this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
         let id: string = 'NaN'
         const odds: Array<number> = this.mysteryContainer.getOdds(name);
         let reward_amount: number;
@@ -165,14 +199,14 @@ export class Gamble {
             return;
         }
 
-        console.log('The Name ' + name);
-        console.log('The Parent ' + this.mysteryContainer.getParent(name));
-        console.log('The Odds');
-        console.log(odds);
+        //console.log('The Name ' + name);
+        //console.log('The Parent ' + this.mysteryContainer.getParent(name));
+        //console.log('The Odds');
+        //console.log(odds);
 
         for(let i = 0; i < odds.length; i++) {
             if(roll <= odds[i]) {
-                console.log('WIN! Creating ' + name + ' index = ' + i + ' rewards = ' +  this.mysteryContainer.getReward(name, i))
+                //console.log('WIN! Creating ' + name + ' index = ' + i + ' rewards = ' +  this.mysteryContainer.getReward(name, i))
                 id = this.mysteryContainer.getReward(name, i);
                 reward_amount = this.mysteryContainer.getRewardAmount(name, i);
                 stackable = this.mysteryContainer.getStackable(name, i);
@@ -197,10 +231,10 @@ export class Gamble {
                     this.count++;
                 }
             } else {
-                console.log('Item exists and is stackable... Adding to newItemsRequest...')
-                console.log('ID: ' + id)
-                console.log('Reward Amount: ' + reward_amount)
-                console.log('stackable: ' + stackable)
+                //console.log('Item exists and is stackable... Adding to newItemsRequest...')
+                //console.log('ID: ' + id)
+                //console.log('Reward Amount: ' + reward_amount)
+                //console.log('stackable: ' + stackable)
                 this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, reward_amount)];
                 this.newItemsRequest.foundInRaid = true;
                 this.count++;
@@ -212,7 +246,7 @@ export class Gamble {
     }
 
     private openPreset(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){
-        console.log('\nopenPreset()');
+        //console.log('\nopenPreset()');
         // ItemCreator stores all preset creation functions
         let item = new ItemCreator(this.container);
         let preset: Item[] = [];
@@ -223,6 +257,13 @@ export class Gamble {
             if(roll <= odds[i]) {
                 const parent = this.mysteryContainer.getParent(name);
                 preset = item.createPreset(parent, this.mysteryContainer.getPreset(parent, i));
+
+                if (name === 'weapon' || name === 'premium_weapon') {
+                    // Store values for possible future use
+                    this.currentCaliber = item.caliber;
+                    this.currentMagazine = item.magazine;
+                    this.currentWeaponType = item.weaponsType;
+                }
                 break;  
             }
         }
@@ -239,6 +280,7 @@ export class Gamble {
         } else {
             this.logger.info(`[TheGambler][Weapon] Case Opened... Received Nothing... Better luck next time :)`);
         }
+
     }
 
 

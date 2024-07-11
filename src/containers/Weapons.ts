@@ -4,17 +4,17 @@ export class Weapons {
   
   public rarities = [
     "_meta", 
-    "_meme", 
     "_decent", 
     "_scav", 
-    "_base"
+    "_base",
+    "_meme" 
   ]
 
   public presets = [
     "meta", 
-    "meme", 
     "decent", 
     "scav", 
-    "base"
+    "base",
+    "meme"
   ]
 }

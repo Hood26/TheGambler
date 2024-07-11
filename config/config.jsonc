@@ -285,11 +285,11 @@
     "rig_profit_percentage": 110, // Container Profitability
 
     // Weapon Mystery Box
-    "weapon_meta": 10.0,             // Meta Weapon
-    "weapon_meme": 7.0,              // Meme Weapon
-    "weapon_decent": 28.0,           // Semi-modded Weapon
-    "weapon_scav": 20.0,             // Scav Weapon
-    "weapon_base": 35.0,             // Default Weapon
+    "weapon_meta": 15.0,             // Meta Weapon
+    "weapon_decent": 40.3,           // Semi-modded Weapon
+    "weapon_scav": 25.0,             // Scav Weapon
+    "weapon_base": 12.0,             // Default Weapon
+    "weapon_meme": 7.7,              // Meme Weapon
     "weapon_profit_percentage": 115, // Container Profitability
 
     // Premium Weapon Mystery Box

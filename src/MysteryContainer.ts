@@ -33,6 +33,7 @@ class Container {
     public guaranteed_rewards: Array<string>;
     public guaranteed_stackable: Array<boolean>;
     public guaranteed_reward_amount: Array<number>;
+    public guaranteed_randomness: Array<boolean>;
     public reward_amount: Array<number>;
     public rewards: any;
     public presets: Array<string>;
@@ -135,6 +136,7 @@ export class MysteryContainer {
             container.guaranteed_stackable = item.guaranteed_stackable? item.guaranteed_stackable : undefined
             container.guaranteed_reward_amount = item.guaranteed_reward_amount? item.guaranteed_reward_amount : undefined
             container.guaranteed_rewards = item.guaranteed_rewards? item.guaranteed_rewards : undefined
+            container.guaranteed_randomness = item.guaranteed_randomness? item.guaranteed_randomness : undefined
         };
     
         const createAndConfigureContainer = (name: string, item: any, isAmmo: boolean) => {
@@ -194,6 +196,10 @@ export class MysteryContainer {
 
     public getGuaranteedStackable(name: string, rarityIndex: number): boolean {
         return this.containers[name].guaranteed_stackable[rarityIndex];
+    }
+
+    public getGuaranteedRandomness(name: string): Array<boolean> {
+        return this.containers[name].guaranteed_randomness;
     }
 
 
