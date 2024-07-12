@@ -12,7 +12,7 @@ export class Loadouts {
   public guaranteed_reward_amount = [1,1,1];
   public guaranteed_randomness = [false, false, true, false, false, false, true, true, true, true];
   public guaranteed_rewards = [
-    'weapon', 'helmet', 'headset', 'armor', 'rig', 'backpack', 'food', 'food', 'stim', 'stim'
+    'weapon', 'helmet', 'headset', 'armor', 'rig', 'backpack', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_healing', 'stim' 
   ];
 
   public rewards = undefined;

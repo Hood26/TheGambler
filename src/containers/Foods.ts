@@ -37,7 +37,6 @@ export class Foods {
         "57505f6224597709a92585a9", // Alyonka chocolate bar
         "590c5f0d86f77413997acfab", // MRE ration pack
         "575146b724597720a27126d5", // Pack of milk
-        "5ed5166ad380ab312177c100", // MRE ration pack
         "59e3577886f774176a362503", // Pack of sugar
       ],
       [

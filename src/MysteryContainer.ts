@@ -17,6 +17,12 @@ import { FlipRouble } from "./containers/FlipRouble";
 import { FlipGPCoin } from "./containers/FlipGPCoin";
 import { FlipBitcoin } from "./containers/FlipBitcoin";
 import { Loadouts } from "./containers/Loadouts";
+import { Medical } from "./containers/Medical";
+import { LoadoutFood } from "./containers/LoadoutFood";
+import { Loadoutdrink } from "./containers/LoadoutDrink";
+import { LoadoutLightBleed } from "./containers/LoadoutLightBleed";
+import { LoadoutHeavyBleed } from "./containers/LoadoutHeavyBleed";
+import { LoadoutHealing } from "./containers/LoadoutHealing";
 
 class Container {
 
@@ -35,6 +41,7 @@ class Container {
     public guaranteed_reward_amount: Array<number>;
     public guaranteed_randomness: Array<boolean>;
     public reward_amount: Array<number>;
+    public reward_rolls: Array<number>;
     public rewards: any;
     public presets: Array<string>;
 
@@ -68,32 +75,39 @@ export class MysteryContainer {
         this.logger     = logger;
         //this.container  = this.setData(this.containersData) Old Way
         this.names = [
-            'wallet', 'keycard', 'key', 'stim', 'food', 'melee', 
+            'wallet', 'keycard', 'key', 'stim', 'medical', 'food', 'melee', 
             'backpack', 'rig', 'weapon', 'premium_weapon', 'helmet', 
-            'headset', 'armor', 'premium_armor', 'roubles', 'bitcoin', 'gpcoin', 'loadout', 'ammo'
+            'headset', 'armor', 'premium_armor', 'roubles', 'bitcoin', 'gpcoin',
+             'loadout', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_healing', 'ammo'
         ];
-        this.simulation = ['wallet', 'armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food'];
+        this.simulation = ['armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food'];
         this.override    = ['ammo', 'armor'];
         this.items      = {
-            wallet:          new Wallet(),
-            keycard:         new Keycard(),
-            key:             new Keys(),
-            stim:            new Stims(),
-            food:            new Foods(),
-            melee:           new Melees(),
-            backpack:        new Backpacks(),
-            rig:             new Rigs(),
-            helmet:          new Helmets(),
-            headset:         new Headsets(),
-            weapon:          new Weapons(),
-            premium_weapon:  new PremiumWeapons(),
-            armor:           new Armors(),
-            premium_armor:   new PremiumArmors(),
-            ammo:            new Ammo(),
-            roubles:         new FlipRouble(),
-            bitcoin:         new FlipBitcoin(),
-            gpcoin:          new FlipGPCoin(),
-            loadout:         new Loadouts()
+            wallet:              new Wallet(),
+            keycard:             new Keycard(),
+            key:                 new Keys(),
+            stim:                new Stims(),
+            medical:             new Medical(),
+            food:                new Foods(),
+            melee:               new Melees(),
+            backpack:            new Backpacks(),
+            rig:                 new Rigs(),
+            helmet:              new Helmets(),
+            headset:             new Headsets(),
+            weapon:              new Weapons(),
+            premium_weapon:      new PremiumWeapons(),
+            armor:               new Armors(),
+            premium_armor:       new PremiumArmors(),
+            ammo:                new Ammo(),
+            roubles:             new FlipRouble(),
+            bitcoin:             new FlipBitcoin(),
+            gpcoin:              new FlipGPCoin(),
+            loadout:             new Loadouts(),
+            loadout_food:        new LoadoutFood(),
+            loadout_drink:       new Loadoutdrink(),
+            loadout_light_bleed: new LoadoutLightBleed(),
+            loadout_heavy_bleed: new LoadoutHeavyBleed(),
+            loadout_healing:     new LoadoutHealing()
         }
         //console.log(this.items)
         this.containers  = this.setContainers()
@@ -137,14 +151,16 @@ export class MysteryContainer {
             container.guaranteed_reward_amount = item.guaranteed_reward_amount? item.guaranteed_reward_amount : undefined
             container.guaranteed_rewards = item.guaranteed_rewards? item.guaranteed_rewards : undefined
             container.guaranteed_randomness = item.guaranteed_randomness? item.guaranteed_randomness : undefined
+            container.reward_rolls = item.reward_rolls? item.reward_rolls : undefined
+            
         };
     
         const createAndConfigureContainer = (name: string, item: any, isAmmo: boolean) => {
             const container = new Container(name);
+            console.log(container.name)
             container.rarities = [...item.rarities];
             container.parent = item.parent;
             
-            console.log(container.name)
             calculateOddsAndRewards(container, item);
             applyOverrides(container, item, isAmmo);
             setContainerProperties(container, name, item);
@@ -185,7 +201,6 @@ export class MysteryContainer {
         return this.containers[name].openAll? this.containers[name].openAll : false;
     }
 */
-
     public getGuaranteedRewards(name: string): Array<string>{
         return this.containers[name].guaranteed_rewards? this.containers[name].guaranteed_rewards : undefined;
     }
@@ -210,8 +225,13 @@ export class MysteryContainer {
     // Returns random Reward from possible Rewards
     public getReward(name: string, rarityIndex: number): any {
         const rewards: [] = this.containers[name].rewards[rarityIndex];
-        const randomNumber = this.getRandomInt(rewards.length - 1);
+        const randomNumber = this.getRandomInt(rewards.length);
         return rewards[randomNumber];
+    }
+
+    // Returns the amount of rolls for each set of items in rewards
+    public getRewardRolls(name: string): Array<number>{
+        return this.containers[name].reward_rolls? this.containers[name].reward_rolls : undefined;
     }
 
     // Returns all rewards from possible rewards

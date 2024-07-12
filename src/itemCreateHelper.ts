@@ -355,6 +355,112 @@ export class ItemCreateHelper {
                 }
             } 
         }
+        const medicalGamble: NewItemDetails = {
+            newItem: {
+                _id: "zz_medical_gamble",
+                _name: "gambling_medical",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Mystery Medical Box",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 3,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Mystery Medical Box",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/containers/item_container_meds/item_container_meds.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Mystery Medical Box",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 3,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 70000,
+            handbookPriceRoubles: 70000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Mystery Medical Box",
+                    shortName: "Mystery Medical Box",
+                    description: `Hey soldier, looking for some meds to keep you alive out there? I have a business to run here and I don't have time to sort through all this stuff. Take a chance and see what you get!`
+                }
+            } 
+        }
         const bitcoinGamble: NewItemDetails = {
             newItem: {
                 _id: "bg_bitcoin_gamble",
@@ -670,7 +776,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Keycard",
                     shortName: "Mystery Keycard",
-                    description: `So you want to get into labs? Try your luck. Maybe you get the card you've been dreaming of, maybe you don't!\n==============================\nNothing - 25.0%\nAccess Keycard - ${this.config.odds['keycard_access']}%\n21WS Keycard - ${this.config.odds['keycard_21WS']}%\n11SR Keycard - ${this.config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${this.config.odds['keycard_blue_marking']}%\nYellow Keycard - ${this.config.odds['keycard_yellow']}%\nBlack Keycard - ${this.config.odds['keycard_black']}%\nViolet Keycard - ${this.config.odds['keycard_violet']}%\nBlue Keycard - ${this.config.odds['keycard_blue']}%\nGreen Keycard - ${this.config.odds['keycard_green']}%\nRed Keycard - ${this.config.odds['keycard_red']}%`
+                    description: `So you want to get into labs? Try your luck. Maybe you get the card you've been dreaming of, maybe you don't!\n==============================\nAccess Keycard - ${this.config.odds['keycard_access']}%\n21WS Keycard - ${this.config.odds['keycard_21WS']}%\n11SR Keycard - ${this.config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${this.config.odds['keycard_blue_marking']}%\nYellow Keycard - ${this.config.odds['keycard_yellow']}%\nBlack Keycard - ${this.config.odds['keycard_black']}%\nViolet Keycard - ${this.config.odds['keycard_violet']}%\nBlue Keycard - ${this.config.odds['keycard_blue']}%\nGreen Keycard - ${this.config.odds['keycard_green']}%\nRed Keycard - ${this.config.odds['keycard_red']}%`
                 }
             }                
         }
@@ -1418,7 +1524,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Headset",
                     shortName: "Mystery Headset",
-                    description: `You can't expect to hear that sneaky USEC with those flimsy pair of headphones. Come try a pair of these headphones!\n==============================\nRandom Headset - ${this.config.odds['headset_chance']}%`
+                    description: `You can't expect to hear that sneaky USEC with those flimsy pair of headphones. Buy a Mystery Headset today!\n==============================\nCommon Headset - ${this.config.odds['headset_common']}%\nUncommon Headset - ${this.config.odds['headset_uncommon']}%\nRare Headset - ${this.config.odds['headset_rare']}%`
                 }
             }
         };
@@ -1631,7 +1737,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Loadout Mystery Bag",
                     shortName: "Loadout Mystery Bag",
-                    description: `Loadout`
+                    description: `A full raid kit in one unbox! What more could you ask for? Items unboxed include: weapon, extra magazines, ammo, armor, rig, helmet, headset, backpack, food, drink, and medical supplies.`
                 }
             }
         };
@@ -1844,7 +1950,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Armor Mystery Box",
                     shortName: "Armor Mystery Box",
-                    description: `Need protection? Better be safe than sorry otherwise that Timmy will catch you lacking.\n==============================\nCommon Armor - ${this.config.odds['armor_common']}%\nUncommon Armor - ${this.config.odds['armor_uncommon']}%\nRare Armor - ${this.config.odds['armor_rare']}%`
+                    description: `Need protection? Better be safe than sorry. Otherwise, that Timmy will catch you lacking.\n==============================\nCommon Armor - ${this.config.odds['armor_common']}%\nUncommon Armor - ${this.config.odds['armor_uncommon']}%\nRare Armor - ${this.config.odds['armor_rare']}%`
                 }
             }
         };
@@ -4200,6 +4306,7 @@ export class ItemCreateHelper {
         customItem.createItem(walletGamble);
         customItem.createItem(keyGamble);
         customItem.createItem(stimGamble);
+        customItem.createItem(medicalGamble);
         customItem.createItem(foodGamble);
         customItem.createItem(bitcoinGamble);
         customItem.createItem(gpcoinGamble);

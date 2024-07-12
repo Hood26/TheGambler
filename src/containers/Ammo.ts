@@ -423,14 +423,16 @@ export class Ammo {
               ],
             rewards: [
                 [
-                    "5c0d668f86f7747ccb7f13b2", // 9x39mm SPP gs
-                    "61962d879bb3d20b0946d385", // 9x39mm PAB-9 gs
                     "5c0d688c86f77413ae3407b2", // 9x39mm BP gs
                     "57a0e5022459774d1673f889", // 9x39mm SP-6 gs
                     "57a0e5022459774d1673f889", // 9x39mm SP-6 gs
                 ],
                 [
                     "57a0dfb82459774d3078b56c", // 9x39mm SP-5 gs
+                    "57a0dfb82459774d3078b56c", // 9x39mm SP-5 gs
+                    "57a0dfb82459774d3078b56c", // 9x39mm SP-5 gs
+                    "5c0d668f86f7747ccb7f13b2", // 9x39mm SPP gs
+                    "61962d879bb3d20b0946d385", // 9x39mm PAB-9 gs
                 ],
                 [
                     "6576f96220d53a5b8f3e395e", // 9x39mm FMJ

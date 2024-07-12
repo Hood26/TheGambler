@@ -103,7 +103,6 @@ export class TraderHelper
         return assortTable;
     }
 
-
      /**
      * Add basic items to trader
      * @param tables SPT db
@@ -121,6 +120,7 @@ export class TraderHelper
         const KEYCARD_GAMBLE_ID = "bd_keycard_gamble";
         const MELEE_GAMBLE_ID = "be_melee_weapon_gamble";
         const STIM_GAMBLE_ID = "bf_stim_gamble";
+        const MEDICAL_GAMBLE_ID = "zz_medical_gamble";
         const BITCOIN_GAMBLE_ID = "bg_bitcoin_gamble";
         const GPCOIN_GAMBLE_ID = "bh_gpcoin_gamble";
         const FIFTY_FIFTY_GAMBLE_ID = "z_50/50_gamble";
@@ -156,11 +156,29 @@ export class TraderHelper
         const TWO_THREE_BY_SEVEN_FIVE_GAMBLE_ID = "au_23x75_gamble";
         const BITCOIN_ID = '59faff1d86f7746c51718c9c';
         const GPCOIN_ID = '5d235b4d86f7742e017bc88a';
+        const MEDICAL_TOOLS_MEDS_ID = '619cc01e0a7c3a1a2731940c';
+        const PILE_OF_MEDS_ID = '5d1b3a5d86f774252167ba22';
+        const BLOODSET_ID = '5b4335ba86f7744d2837a264';
         
         const price = new Price(container, config, logger);
         const generatedMysteryAmmoPrices = price.generateMysteryAmmoPrices();
         const generatedMysteryContainerPrices = price.generateMysteryContainerPrices();
         console.log(generatedMysteryContainerPrices)
+        //console.log("THE SIMULATED AMMO PRICES...")
+        //console.log(generatedMysteryAmmoPrices)
+
+        /*
+        let loadoutPrice = config.price_stock['weapon_case_price']
+                            + config.price_stock['helmet_case_stock'] + generatedMysteryContainerPrices['armor_case_price']
+                            + generatedMysteryContainerPrices['backpack_case_price'] + generatedMysteryContainerPrices['rig_case_price']
+                            + generatedMysteryContainerPrices['headset_case_price'] 
+                            + generatedMysteryContainerPrices['food_case_price'] + generatedMysteryContainerPrices['food_case_price'] 
+                            + generatedMysteryContainerPrices['stim_case_price'] + generatedMysteryContainerPrices['stim_case_price']
+        if (!loadoutPrice) { // incase bugs occur
+            loadoutPrice = 475000;
+        }
+        */
+        
 
         //console.log(premium_armor_cost)
         //console.log("THE SIMULATED CONTAINER PRICES...");
@@ -186,7 +204,16 @@ export class TraderHelper
                                     .addMoneyCost(Money.ROUBLES, (generatedMysteryContainerPrices['stim_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
-        }                        
+        }  
+        if (config.price_stock['medical_case_enable']){
+            assortCreator.createSingleAssortItem(MEDICAL_GAMBLE_ID)
+                                    .addStackCount(config.price_stock['medical_case_stock'])
+                                    .addBarterCost(PILE_OF_MEDS_ID, 3)
+                                    .addBarterCost(MEDICAL_TOOLS_MEDS_ID, 2)
+                                    .addBarterCost(BLOODSET_ID, 1)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        }                       
         if (config.price_stock['food_case_enable']){
             assortCreator.createSingleAssortItem(FOOD_GAMBLE_ID)
                                     .addStackCount(config.price_stock['food_case_stock'])

@@ -118,11 +118,7 @@ export class ItemCreator {
         // We map every build[i]._id to a newly generated _id inside of parenIdMap. We HAVE to do this as if we have two duplicate items they would have the same _id which will brick the player inventory.
         const parentIdMap = {};
         const _randomId = this.hashUtil.generate(); // New Item baseId;
-        console.log('THE BASE BUILD\n')
-        console.log(build);
         const weapon_name = build['Name']? build['Name'] : undefined;
-        console.log('WEAPON NAME\n')
-        console.log(weapon_name)
         build = build.Items;
 
         let baseId;
@@ -131,18 +127,10 @@ export class ItemCreator {
             if(i == 0) { // item base
                 baseId = build[i]._id; // Need the base to reference in attachments
                 parentIdMap[baseId] = _randomId; // base id = _randomId
-                if (weapon_name) {
-                    item.push({
-                        _id: _randomId,
-                        _tpl: build[i]._tpl,
-                        _name: weapon_name
-                    });
-                } else {
-                    item.push({
-                        _id: _randomId,
-                        _tpl: build[i]._tpl
-                    });
-                }
+                item.push({
+                    _id: _randomId,
+                    _tpl: build[i]._tpl
+                });
             } else { // Children Attachments  
             
                 const newId = this.hashUtil.generate();
@@ -197,8 +185,6 @@ export class ItemCreator {
         }
         const itemInfo = this.itemHelper.getItem(item[0]._tpl)
         this.caliber = itemInfo[1]._props.ammoCaliber; // save caliber
-        console.log('NEW WEAPON')
-        console.log(item)
         return item;
     }
 

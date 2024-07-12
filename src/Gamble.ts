@@ -62,12 +62,17 @@ export class Gamble {
             case 'keycard':
             case 'key':
             case 'stim':
+            case 'medical':
             case 'food':
+            case 'loadout_food':
+            case 'loadout_drink':
+            case 'loadout_light_bleed':
+            case 'loadout_heavy_bleed':
+            case 'loadout_healing':
             case 'melee':
             case 'headset':
             case 'backpack':
             case 'rig':
-            case 'loadout':
             case '7.62x25':
             case '9x18':
             case '9x19':
@@ -98,6 +103,9 @@ export class Gamble {
             case 'premium_armor':
                 this.openPreset(name, roll);
                 break;
+            case 'loadout':
+                this.openLoadoutContainer(name, roll);
+                break;
             default:
                 this.logger.error(`[TheGambler] This Mystery Container Doesn't exist! Contact Author!`);    
         }
@@ -105,8 +113,7 @@ export class Gamble {
     }
 
     // Opens all rewards from the loadout container
-    private openGuaranteedRewards(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){ 
-        //console.log('\nopenGuaranteedRewards');
+    private openLoadoutContainer(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){ 
         const rewards = this.mysteryContainer.getGuaranteedRewards(name);
         const randomness = this.mysteryContainer.getGuaranteedRandomness(name);
         let currentCaliber: string, currentMagazine: string, currentMagazineMaxAmmo: number, currentWeaponType : string;
@@ -146,8 +153,8 @@ export class Gamble {
                         this.openReward(caliber, roll, this.currentMagazine, false, 1);
                         this.openReward(caliber, roll, this.currentMagazine, false, 1);
                     }
-                    let tempRoll: number;
 
+                    let tempRoll: number;
                     // Depending on the ammo type, we want to generate a different rarity of ammo from the temproll
                     if(currentWeaponType == 'meme') {
                         tempRoll = this.randomUtil.getFloat(0,25);
@@ -199,26 +206,42 @@ export class Gamble {
     }
 
     private openReward(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100), id: string = 'NaN', stackable: boolean = false, reward_amount: number = undefined){ 
-        console.log('\nopenReward()');
         this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
         const odds: Array<number> = this.mysteryContainer.getOdds(name);
         let guaranteed_rewards = this.mysteryContainer.getGuaranteedRewards(name);
-
+        let reward_rolls: Array<number> = this.mysteryContainer.getRewardRolls(name);
+        let generatedRewards = [];
+        
+        /* // Not Implemented Yet...
         if (guaranteed_rewards) {
             this.openGuaranteedRewards(name, roll);
-            console.log('FINISHEDDDDDDDDDDDDDDDDDDDDDDDDDDDDD')
             return;
+            }
+            */
+           
+           //console.log('The Name ' + name);
+           //console.log('The Parent ' + this.mysteryContainer.getParent(name));
+           //console.log('The Odds');
+           //console.log(odds);
+        if (id === "NaN" && reward_rolls) {
+            const rewards = this.mysteryContainer.getRewards(name);
+            for(let i = 0; i < rewards.length; i++) {
+                for(let j = 0; j < reward_rolls[i]; j++) {
+                    const item = this.mysteryContainer.getReward(name, i);
+                    this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(item)];
+                    this.newItemsRequest.foundInRaid = true;
+                    this.count++;
+                }
+            }
         }
 
-        //console.log('The Name ' + name);
-        //console.log('The Parent ' + this.mysteryContainer.getParent(name));
-        //console.log('The Odds');
-        //console.log(odds);
-        if (id === "NaN") {
-            console.log('ID is NaN... Searching for ID...')
+
+
+        if (id === "NaN" && !reward_rolls) {
+           // console.log('ID is NaN... Searching for ID...')
             for(let i = 0; i < odds.length; i++) {
                 if(roll <= odds[i]) {
-                    console.log('WIN! Creating ' + name + ' index = ' + i + ' rewards = ' +  this.mysteryContainer.getReward(name, i))
+                    //console.log('WIN! Creating ' + name + ' index = ' + i + ' rewards = ' +  this.mysteryContainer.getReward(name, i))
                     id = this.mysteryContainer.getReward(name, i);
                     if(reward_amount === undefined){
                         reward_amount = this.mysteryContainer.getRewardAmount(name, i);
@@ -238,10 +261,10 @@ export class Gamble {
             this.logger.info(id);
         }
 
-        console.log('reward_amount = ' + reward_amount)
-        if (id !== "NaN") {
+        //console.log('reward_amount = ' + reward_amount)
+        if (id !== "NaN" && !reward_rolls) {
             if(!reward_amount){ // ammo has min and max amount instead of a fixed amount
-                console.log('Retrieving Reward Amount!!!')
+                //console.log('Retrieving Reward Amount!!!')
                 reward_amount = this.mysteryContainer.getRandomAmount(name); 
             }
             if(!stackable){
@@ -251,10 +274,6 @@ export class Gamble {
                     this.count++;
                 }
             } else {
-                //console.log('Item exists and is stackable... Adding to newItemsRequest...')
-                //console.log('ID: ' + id)
-                //console.log('Reward Amount: ' + reward_amount)
-                //console.log('stackable: ' + stackable)
                 this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, reward_amount)];
                 this.newItemsRequest.foundInRaid = true;
                 this.count++;
@@ -296,7 +315,11 @@ export class Gamble {
 
         if (preset.length != 0) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [...preset];
-            this.newItemsRequest.foundInRaid = true;
+            if (name === 'weapon' || name === 'premium_weapon') {
+                this.newItemsRequest.foundInRaid = false;
+            } else {
+                this.newItemsRequest.foundInRaid = true;
+            }
             this.count++;
         } else {
             this.logger.info(`[TheGambler][Weapon] Case Opened... Received Nothing... Better luck next time :)`);
