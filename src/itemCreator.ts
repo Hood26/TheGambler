@@ -66,7 +66,7 @@ export class ItemCreator {
         }
 
         const randomHelmet = this.getRandomInt(baseHelmet.length);
-        let getItem = baseHelmet[randomHelmet].Items;
+        let getItem = baseHelmet[randomHelmet];
         
         return this.generateItem(getItem);
     }
@@ -84,7 +84,7 @@ export class ItemCreator {
         }
 
         const randomArmor = this.getRandomInt(baseArmor.length);
-        let getItem = baseArmor[randomArmor].Items;
+        let getItem = baseArmor[randomArmor];
         
         return this.generateItem(getItem);
     }
@@ -108,16 +108,22 @@ export class ItemCreator {
         }
 
         const randomBuild = this.getRandomInt(weaponBuilds.length);
-        let getItem = weaponBuilds[randomBuild].Items;
+        let getItem = weaponBuilds[randomBuild];
         this.weaponType = which;
         return this.generateItem(getItem);
     }
 
-    private generateItem(build: Item[]): Item[] {
+    private generateItem(build: any): Item[] {
         const item: Item[] = [];
         // We map every build[i]._id to a newly generated _id inside of parenIdMap. We HAVE to do this as if we have two duplicate items they would have the same _id which will brick the player inventory.
         const parentIdMap = {};
         const _randomId = this.hashUtil.generate(); // New Item baseId;
+        console.log('THE BASE BUILD\n')
+        console.log(build);
+        const weapon_name = build['Name']? build['Name'] : undefined;
+        console.log('WEAPON NAME\n')
+        console.log(weapon_name)
+        build = build.Items;
 
         let baseId;
         for(let i = 0; i < build.length; i++){
@@ -125,11 +131,18 @@ export class ItemCreator {
             if(i == 0) { // item base
                 baseId = build[i]._id; // Need the base to reference in attachments
                 parentIdMap[baseId] = _randomId; // base id = _randomId
-                
-                item.push({
-                    _id: _randomId,
-                    _tpl: build[i]._tpl
-                });
+                if (weapon_name) {
+                    item.push({
+                        _id: _randomId,
+                        _tpl: build[i]._tpl,
+                        _name: weapon_name
+                    });
+                } else {
+                    item.push({
+                        _id: _randomId,
+                        _tpl: build[i]._tpl
+                    });
+                }
             } else { // Children Attachments  
             
                 const newId = this.hashUtil.generate();
@@ -184,6 +197,8 @@ export class ItemCreator {
         }
         const itemInfo = this.itemHelper.getItem(item[0]._tpl)
         this.caliber = itemInfo[1]._props.ammoCaliber; // save caliber
+        console.log('NEW WEAPON')
+        console.log(item)
         return item;
     }
 
