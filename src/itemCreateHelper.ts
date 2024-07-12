@@ -670,7 +670,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Keycard",
                     shortName: "Mystery Keycard",
-                    description: `So you want to get into labs? Try your luck. Maybe you get, maybe you don't!\n==============================\nNothing - 25.0%\nAccess Keycard - ${this.config.odds['keycard_access']}%\n21WS Keycard - ${this.config.odds['keycard_21WS']}%\n11SR Keycard - ${this.config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${this.config.odds['keycard_blue_marking']}%\nYellow Keycard - ${this.config.odds['keycard_yellow']}%\nBlack Keycard - ${this.config.odds['keycard_black']}%\nViolet Keycard - ${this.config.odds['keycard_violet']}%\nBlue Keycard - ${this.config.odds['keycard_blue']}%\nGreen Keycard - ${this.config.odds['keycard_green']}%\nRed Keycard - ${this.config.odds['keycard_red']}%`
+                    description: `So you want to get into labs? Try your luck. Maybe you get the card you've been dreaming of, maybe you don't!\n==============================\nNothing - 25.0%\nAccess Keycard - ${this.config.odds['keycard_access']}%\n21WS Keycard - ${this.config.odds['keycard_21WS']}%\n11SR Keycard - ${this.config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${this.config.odds['keycard_blue_marking']}%\nYellow Keycard - ${this.config.odds['keycard_yellow']}%\nBlack Keycard - ${this.config.odds['keycard_black']}%\nViolet Keycard - ${this.config.odds['keycard_violet']}%\nBlue Keycard - ${this.config.odds['keycard_blue']}%\nGreen Keycard - ${this.config.odds['keycard_green']}%\nRed Keycard - ${this.config.odds['keycard_red']}%`
                 }
             }                
         }
@@ -777,7 +777,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "50/50 Case",
                     shortName: "50/50 Case",
-                    description: "The true all in, ALL OR NOTHING!\n==============================\nDelicious Can of Beef Stew - 50.0%\n5 Million Roubles - 50.0%"
+                    description: "ARE YOU SCARED??? DON'T BE! THIS COULD BE YOU'RE CHANCE TO WIN IT ALL! THE TRUE ALL IN OR NOTHING!\n==============================\nDelicious Can of Beef Stew - 50.0%\n5 Million Roubles - 50.0%"
                 }
             }                
         }
@@ -884,7 +884,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Food",
                     shortName: "Mystery Food",
-                    description: `Come along friend, you look a little peckish. Try your luck at scoring a delicious snack!\n==============================\nCommon Food - ${this.config.odds['food_common']}%\nUncommon Food - ${this.config.odds['food_uncommon']}%\nRare Food - ${this.config.odds['food_rare']}%\n`
+                    description: `Come along friend, you look a little hungry. Try your luck at scoring a delicious snack!\n==============================\nCommon Food - ${this.config.odds['food_common']}%\nUncommon Food - ${this.config.odds['food_uncommon']}%\nRare Food - ${this.config.odds['food_rare']}%\n`
                 }
             } 
         }
@@ -992,7 +992,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Melee",
                     shortName: "Mystery Melee",
-                    description: `Looking for a shiny new melee weapon? Well do we have you covered!\n==============================\nCommon Melee - ${this.config.odds['melee_common']}%\nUncommon Melee - ${this.config.odds['melee_uncommon']}%\nRare Melee - ${this.config.odds['melee_rare']}%\nExtremely Rare Melee - ${this.config.odds['melee_extremely_rare']}%`
+                    description: `Looking for a shiny new weapon to beat your foes with? Come test your luck!\n\n PS: These weapons may or may have not been stolen from a sad little Timmy who didn't shove this up their pouch in time... poor timmy :'(\n==============================\nCommon Melee - ${this.config.odds['melee_common']}%\nUncommon Melee - ${this.config.odds['melee_uncommon']}%\nRare Melee - ${this.config.odds['melee_rare']}%\nExtremely Rare Melee - ${this.config.odds['melee_extremely_rare']}%`
                 }
             }                
         }
@@ -1099,7 +1099,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Weapon Mystery Box",
                     shortName: "Weapon Mystery Box",
-                    description: `Weapon Mystery Box, contains over 230 different weapons ranging from Meta Chad weapons, early wipe weapons, and cursed weapons \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nMeme Weapon - ${this.config.odds['weapon_meme']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}%`
+                    description: `Weapon Mystery Box, contains over 230 different weapons ranging from Meta/Chad weapons, early wipe weapons, scav weapons, meme/cursed weapons, and much more... \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nMeme Weapon - ${this.config.odds['weapon_meme']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}%`
                 }
             }
         };
@@ -1311,7 +1311,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Helmet",
                     shortName: "Mystery Helmet",
-                    description: `Are you tired of Chad PMCs one tapping your dome? Well I can offer protection for you! Purchase a Helmet Mystery Box today!\n==============================\nCommon Helmet - ${this.config.odds['helmet_common']}%\nUncommon Helmet - ${this.config.odds['helmet_uncommon']}%\nRare Helmet - ${this.config.odds['helmet_rare']}%\nExtremely Rare T-7 Thermal Helmet - ${this.config.odds['helmet_extremely_rare']}%`
+                    description: `Are you tired of Chad PMCs one tapping the largest part of your player? Well I can offer protection for you! Purchase a Helmet Mystery Box today!\n==============================\nCommon Helmet - ${this.config.odds['helmet_common']}%\nUncommon Helmet - ${this.config.odds['helmet_uncommon']}%\nRare Helmet - ${this.config.odds['helmet_rare']}%\nExtremely Rare T-7 Thermal Helmet - ${this.config.odds['helmet_extremely_rare']}%`
                 }
             }
         };
@@ -1418,7 +1418,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Headset",
                     shortName: "Mystery Headset",
-                    description: `You can't expect to hear that sneaky USEC with those flimsy pair of headphones. Buy a Mystery Headset today!\n==============================\nRandom Headset - ${this.config.odds['headset_chance']}%`
+                    description: `You can't expect to hear that sneaky USEC with those flimsy pair of headphones. Come try a pair of these headphones!\n==============================\nRandom Headset - ${this.config.odds['headset_chance']}%`
                 }
             }
         };
@@ -1525,7 +1525,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Backpack Mystery Bag",
                     shortName: "Backpack Mystery Bag",
-                    description: `Need a new bag for your next loot run? We got you covered!\n==============================\nCommon Backpack - ${this.config.odds['backpack_common']}%\nUncommon Backpack - ${this.config.odds['backpack_uncommon']}%\nRare Backpack - ${this.config.odds['backpack_rare']}%\nExtremely Rare Backpack - ${this.config.odds['backpack_extremely_rare']}%`
+                    description: `Need a new bag for your next loot run? Come try these bags for size!\n==============================\nCommon Backpack - ${this.config.odds['backpack_common']}%\nUncommon Backpack - ${this.config.odds['backpack_uncommon']}%\nRare Backpack - ${this.config.odds['backpack_rare']}%\nExtremely Rare Backpack - ${this.config.odds['backpack_extremely_rare']}%`
                 }
             }
         };
@@ -1844,7 +1844,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Armor Mystery Box",
                     shortName: "Armor Mystery Box",
-                    description: `Armor Mystery Box contains most armors that can appear in throughout Tarkov\n==============================\nCommon Armor - ${this.config.odds['armor_common']}%\nUncommon Armor - ${this.config.odds['armor_uncommon']}%\nRare Armor - ${this.config.odds['armor_rare']}%`
+                    description: `Need protection? Better be safe than sorry otherwise that Timmy will catch you lacking.\n==============================\nCommon Armor - ${this.config.odds['armor_common']}%\nUncommon Armor - ${this.config.odds['armor_uncommon']}%\nRare Armor - ${this.config.odds['armor_rare']}%`
                 }
             }
         };
@@ -1949,7 +1949,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Premium Armor Mystery Box",
                     shortName: "Premium Armor Mystery Box",
-                    description: `The Premium Armor Mystery Box contains some of the highest tiers of armor found throughout Tarkov\n==============================\nRare Armor - ${this.config.odds['premium_armor_rare']}%`
+                    description: `So you need something a little better than a PACA? Alright... sheesh.. Since I like you a little better than the rest, I have a sweet deal I can offer you. I don't have much of these left to offer, but you can try your luck.\n==============================\nRare Armor - ${this.config.odds['premium_armor_rare']}%`
                 }
             }
         };

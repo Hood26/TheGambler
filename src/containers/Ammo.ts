@@ -26,7 +26,7 @@ export class Ammo {
         '23x75',
     ]
 
-    public BSGCalibers = {
+    public BSGCalibers = { // this is stupid
         'Caliber762x25TT':    '7.62x25', 
         'Caliber9x18PM':      '9x18',  
         'Caliber9x19PARA':    '9x19', 
