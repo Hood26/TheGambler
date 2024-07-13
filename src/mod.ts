@@ -1,37 +1,32 @@
-import { DependencyContainer } from "tsyringe";
 // SPT types
-import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
-import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
-import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
-import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { ImageRouter } from "@spt-aki/routers/ImageRouter";
-import { ConfigServer } from "@spt-aki/servers/ConfigServer";
-import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
-import { ITraderConfig } from "@spt-aki/models/spt/config/ITraderConfig";
-import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
-import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { IOpenRandomLootContainerRequestData } from "@spt-aki/models/eft/inventory/IOpenRandomLootContainerRequestData";
-import { Traders } from "@spt-aki/models/enums/Traders";
-import { IItemEventRouterResponse } from "@spt-aki/models/eft/itemEvent/IItemEventRouterResponse";
-import { LootGenerator } from "@spt-aki/generators/LootGenerator";
-import { InventoryHelper } from "@spt-aki/helpers/InventoryHelper";
-import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
-import { NotifierHelper } from "@spt-aki/helpers/NotifierHelper";
-import { NotificationSendHelper } from "@spt-aki/helpers/NotificationSendHelper";
-import { EventOutputHolder } from "@spt-aki/routers/EventOutputHolder";
-import { RandomUtil } from "@spt-aki/utils/RandomUtil";
-import { InventoryController } from "@spt-aki/controllers/InventoryController";
-import { IPmcData } from "@spt-aki/models/eft/common/IPmcData";
-import { HashUtil } from "@spt-aki/utils/HashUtil";
+import { DependencyContainer } from "tsyringe";
+import { IPreSptLoadMod } from "@spt/models/external/IPreSptLoadMod";
+import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
+import { PreSptModLoader } from "@spt/loaders/PreSptModLoader";
+import { DatabaseServer } from "@spt/servers/DatabaseServer";
+import { ImageRouter } from "@spt/routers/ImageRouter";
+import { ConfigServer } from "@spt/servers/ConfigServer";
+import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
+import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
+import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
+import { JsonUtil } from "@spt/utils/JsonUtil";
+import { IOpenRandomLootContainerRequestData } from "@spt/models/eft/inventory/IOpenRandomLootContainerRequestData";
+import { Traders } from "@spt/models/enums/Traders";
+import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
+import { LootGenerator } from "@spt/generators/LootGenerator";
+import { InventoryHelper } from "@spt/helpers/InventoryHelper";
+import { ItemHelper } from "@spt/helpers/ItemHelper";
+import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
+import { RandomUtil } from "@spt/utils/RandomUtil";
+import { InventoryController } from "@spt/controllers/InventoryController";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
+import { HashUtil } from "@spt/utils/HashUtil";
 import { IAddItemDirectRequest } from "@spt/models/eft/inventory/IAddItemsDirectRequest";
 import { Item } from "../common/tables/IItem";
-import { Money } from "@spt-aki/models/enums/Money";
-import { Traders } from "@spt-aki/models/enums/Traders";
-import { HashUtil } from "@spt-aki/utils/HashUtil";
-import { Message } from "@spt-aki/models/eft/profile/IAkiProfile";
-import { MessageType } from "@spt-aki/models/enums/MessageType";
-import { INotification } from "@spt-aki/models/eft/notifier/INotifier";
+import { Money } from "@spt/models/enums/Money";
+import { Traders } from "@spt/models/enums/Traders";
+import { HashUtil } from "@spt/utils/HashUtil";
 
 
 // New trader classes and config
@@ -39,12 +34,12 @@ import * as baseJson from "../db/base.json";
 import { TraderHelper } from "./traderHelpers";
 import { ItemCreateHelper } from "./itemCreateHelper";
 import { FluentAssortConstructor as FluentAssortCreator } from "./fluentTraderAssortCreator";
-import { VFS } from "@spt-aki/utils/VFS";
+import { VFS } from "@spt/utils/VFS";
 import { jsonc } from "jsonc";
 import path from "path";
 import { Gamble } from "./Gamble";
 
-class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
+class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
 {
     private mod: string
     private logger: ILogger
@@ -54,20 +49,20 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
     public config: any;
 
     constructor() {
-        this.mod = "TheGambler"; // Logging uses
+        this.mod = "TheGambler";
     }
 
     /**
      * Some work needs to be done prior to SPT code being loaded, registering the profile image + setting trader update time inside the trader config json
      * @param container Dependency container
      */
-    public preAkiLoad(container: DependencyContainer): void {
+    public preSptLoad(container: DependencyContainer): void {
         // Get a logger
         this.logger = container.resolve<ILogger>("WinstonLogger");
         this.logger.debug(`[${this.mod}] preAki Loading... `);
 
-        // services
-        const preAkiModLoader: PreAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
+        // Get SPT code/data we need later
+        const preSptModLoader: PreSptModLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
         const imageRouter: ImageRouter = container.resolve<ImageRouter>("ImageRouter");
         const hashUtil: HashUtil = container.resolve<HashUtil>("HashUtil");
         const configServer = container.resolve<ConfigServer>("ConfigServer");
@@ -80,7 +75,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         this.hashUtil = hashUtil;
         this.traderHelper = new TraderHelper();
         this.fluentAssortCreator = new FluentAssortCreator(hashUtil, this.logger);
-        this.traderHelper.registerProfileImage(baseJson, this.mod, preAkiModLoader, imageRouter, "thegambler.jpg");
+        this.traderHelper.registerProfileImage(baseJson, this.mod, preSptModLoader, imageRouter, "thegambler.jpg");
         this.traderHelper.setTraderUpdateTime(traderConfig, baseJson, this.config.trader_update_min_time, this.config.trader_update_max_time);
 
         // Add trader to trader enum
@@ -89,7 +84,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         // Add trader to flea market
         ragfairConfig.traders[baseJson._id] = true;
 
-        // openRandomLootContainer override in InventoryController. Override allows implementation of custom Gambler containers
+        // openRandomLootContainer override in InventoryController. Lets us use mod items.
         container.afterResolution("InventoryController", (_t, result: InventoryController) => 
             {
                 result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string) =>
@@ -138,9 +133,6 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
     //
     public newOpenRandomLoot(container: DependencyContainer, pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID: string): IItemEventRouterResponse {
         // Needed reference methods
-        // Message Notifier Doesn't Work Yet...
-        //const notifierHelper = container.resolve<NotifierHelper>("NotifierHelper");
-        //const notificationSendHelper = container.resolve<NotificationSendHelper>("NotificationSendHelper");
         const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
         const itemHelper = container.resolve<ItemHelper>("ItemHelper");
         const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
@@ -148,12 +140,14 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         const openedItem = pmcData.Inventory.items.find(x => x._id === body.item);
 
         if (itemHelper.getItem(openedItem._tpl) == undefined){
-            this.logger.error("[TheGambler] Cannot find unboxed mystery container in Inventory... Best option is to restart game and server.. I am not fully sure why this happens...")
+            this.logger.error("[TheGambler] Cannot find unboxed mystery container in Inventory... Best option is to restart game.. I am not fully sure why this happens...")
             const output = eventOutputHolder.getOutput(sessionID);
             return output;
         }
 
         const containerDetails = itemHelper.getItem(openedItem._tpl);
+        let gamble: Gamble;
+
         const newItemsRequest: IAddItemDirectRequest = {
             itemsWithModsToAdd: [],
             foundInRaid: true,
@@ -161,7 +155,7 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
         };
 
         const isSealedWeaponBox = containerDetails[1]._name.includes("event_container_airdrop"); // Default tarkov tagged container
-        const isGamblingContainer = containerDetails[1]._name.includes("gambling_"); // Gambler items are tagged with "gambling_" identifier
+        const isGamblingContainer = containerDetails[1]._name.includes("gambling_"); // Gambler items are tagged with "gambling_container" identifier
 
         if(isSealedWeaponBox) {
             // Sealed Weapon container
@@ -173,9 +167,9 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
             newItemsRequest.foundInRaid = containerSettings.foundInRaid;
 
         } else if (isGamblingContainer){
-            // All Gambler Custom actions Happens Here
+            // All TheGambler Custom Gambling Happens Here
             const currentContainer = containerDetails[1];
-            let gamble: Gamble = new Gamble(container, this.config, this.logger, currentContainer._name);
+            gamble = new Gamble(container, this.config, this.logger, currentContainer._name);
             gamble.newGamble();
             
             if(gamble.newItemsRequest.itemsWithModsToAdd.length != 0) {
@@ -190,10 +184,9 @@ class SampleTrader implements IPreAkiLoadMod, IPostDBLoadMod
             const rewardContainerDetails = inventoryHelper.getRandomLootContainerRewardDetails(openedItem._tpl);
             const getLoot = lootGenerator.getRandomLootContainerLoot(rewardContainerDetails);
             newItemsRequest.itemsWithModsToAdd.push(...getLoot);
-            newItemsRequest.foundInRaid = rewardContainerDetails.foundInRaid;
-            
+            newItemsRequest.foundInRaid = rewardContainerDetails.foundInRaid; 
         }
-      
+
         const output = eventOutputHolder.getOutput(sessionID);
         let multipleItems: any;
 

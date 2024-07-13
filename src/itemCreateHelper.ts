@@ -1,9 +1,9 @@
 import { DependencyContainer } from "tsyringe";
-import { CustomItemService } from "@spt-aki/services/mod/CustomItemService";
-import { NewItemDetails } from "@spt-aki/models/spt/mod/NewItemDetails";
-import { NewItemFromCloneDetails } from "@spt-aki/models/spt/mod/NewItemDetails";
+import { CustomItemService } from "@spt/services/mod/CustomItemService";
+import { NewItemDetails } from "@spt/models/spt/mod/NewItemDetails";
+import { NewItemFromCloneDetails } from "@spt/models/spt/mod/NewItemDetails";
 
-import { VFS } from "@spt-aki/utils/VFS";
+import { VFS } from "@spt/utils/VFS";
 import { jsonc } from "jsonc";
 import path from "path";
 
@@ -369,7 +369,7 @@ export class ItemCreateHelper {
                     "CanSellOnRagfair": false,
                     "CantRemoveFromSlotsDuringRaid": [],
                     "ConflictingItems": [],
-                    "Description": "Mystery Medical Box",
+                    "Description": "Mystery Medical Kit",
                     "DiscardLimit": -1,
                     "DiscardingBlock": false,
                     "DropSoundType": "None",
@@ -419,7 +419,7 @@ export class ItemCreateHelper {
                     "ItemSound": "container_plastic",
                     "LootExperience": 20,
                     "MergesWithChildren": false,
-                    "Name": "Mystery Medical Box",
+                    "Name": "Mystery Medical Kit",
                     "NotShownInSlot": false,
                     "Prefab": {
                         "path": "assets/content/items/containers/item_container_meds/item_container_meds.bundle",
@@ -431,7 +431,7 @@ export class ItemCreateHelper {
                     "RepairCost": 0,
                     "RepairSpeed": 0,
                     "SearchSound": "drawer_metal_looting",
-                    "ShortName": "Mystery Medical Box",
+                    "ShortName": "Mystery Medical Kit",
                     "Slots": [],
                     "StackMaxSize": 1,
                     "StackObjectsCount": 1,
@@ -455,8 +455,8 @@ export class ItemCreateHelper {
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
-                    name: "Mystery Medical Box",
-                    shortName: "Mystery Medical Box",
+                    name: "Mystery Medical Kit",
+                    shortName: "Mystery Medical Kit",
                     description: `Hey soldier, looking for some meds to keep you alive out there? I have a business to run here and I don't have time to sort through all this stuff. Take a chance and see what you get!`
                 }
             } 

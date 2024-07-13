@@ -1,7 +1,7 @@
 import { DependencyContainer } from "tsyringe";
-import { HashUtil } from "@spt-aki/utils/HashUtil";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
-import { ItemHelper } from "@spt-aki/helpers/ItemHelper";
+import { HashUtil } from "@spt/utils/HashUtil";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { ItemHelper } from "@spt/helpers/ItemHelper";
 
 import { WeaponPresets } from './presets/WeaponPresets';
 import { ArmorPresets } from './presets/ArmorPresets';

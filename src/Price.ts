@@ -1,9 +1,9 @@
 import { DependencyContainer } from "tsyringe";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
-import { RandomUtil } from "@spt-aki/utils/RandomUtil";
+import { RandomUtil } from "@spt/utils/RandomUtil";
 import { Ammo } from "./containers/Ammo";
 import { MysteryContainer } from "./MysteryContainer";
 

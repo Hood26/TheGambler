@@ -1,18 +1,18 @@
 import { DependencyContainer } from "tsyringe";
-import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
-import { ITraderBase, ITraderAssort } from "@spt-aki/models/eft/common/tables/ITrader";
-import { ITraderConfig, UpdateTime } from "@spt-aki/models/spt/config/ITraderConfig";
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { ImageRouter } from "@spt-aki/routers/ImageRouter";
-import { JsonUtil } from "@spt-aki/utils/JsonUtil";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
+import { PreAkiModLoader } from "@spt/loaders/PreAkiModLoader";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { ITraderBase, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
+import { ITraderConfig, UpdateTime } from "@spt/models/spt/config/ITraderConfig";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { ImageRouter } from "@spt/routers/ImageRouter";
+import { JsonUtil } from "@spt/utils/JsonUtil";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 
 import { FluentAssortConstructor as FluentAssortCreator } from "./fluentTraderAssortCreator";
-import { Money } from "@spt-aki/models/enums/Money";
+import { Money } from "@spt/models/enums/Money";
 import * as baseJson from "../db/base.json";
 
-import { VFS } from "@spt-aki/utils/VFS";
+import { VFS } from "@spt/utils/VFS";
 import { jsonc } from "jsonc";
 import path from "path";
 import { Price } from "./Price";
@@ -163,7 +163,7 @@ export class TraderHelper
         const price = new Price(container, config, logger);
         const generatedMysteryAmmoPrices = price.generateMysteryAmmoPrices();
         const generatedMysteryContainerPrices = price.generateMysteryContainerPrices();
-        console.log(generatedMysteryContainerPrices)
+        //console.log(generatedMysteryContainerPrices)
         //console.log("THE SIMULATED AMMO PRICES...")
         //console.log(generatedMysteryAmmoPrices)
         //console.log(premium_armor_cost)

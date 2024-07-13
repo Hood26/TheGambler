@@ -14,6 +14,7 @@ export class Melees {
       "63920105a83e15700a00f168", // SOG Voodoo Hawk tactical tomahawk
       "5bffe7930db834001b734a39", // Crash Axe
       "601948682627df266209af05", // UVSR Taiga-1 survival machete
+      "65ca457b4aafb5d7fc0dcb5d", // United Cutlery M48 Tactical Kukri
     ],
     [
       "5c0126f40db834002a125382", // Red Rebel ice pick

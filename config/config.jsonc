@@ -469,7 +469,7 @@
     "7.62x51_rare": 20.0,            // Rare Round 7.62x51
     "7.62x51_min": 15,                // Minimum Rounds Generated
     "7.62x51_max": 25,               // Maximum Rounds Generated
-    "7.62x51_profit_percentage": 130,// Container Profitability
+    "7.62x51_profit_percentage": 120,// Container Profitability
 
     // Mystery 7.62x54
     "7.62x54_common": 45.0,          // Common Round 7.62x54
@@ -501,7 +501,7 @@
     ".366_rare": 20.0,               // Rare Round .366
     ".366_min": 15,                   // Minimum Rounds Generated
     ".366_max": 30,                  // Maximum Rounds Generated
-    ".366_profit_percentage": 120,    // Container Profitability
+    ".366_profit_percentage": 110,    // Container Profitability
 
     // Mystery 12.7x55
     "12.7x55_common": 45.0,          // Common Round 12.7x55

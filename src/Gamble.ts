@@ -1,7 +1,7 @@
 import { DependencyContainer } from "tsyringe";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
-import { RandomUtil } from "@spt-aki/utils/RandomUtil";
-import { HashUtil } from "@spt-aki/utils/HashUtil";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
+import { RandomUtil } from "@spt/utils/RandomUtil";
+import { HashUtil } from "@spt/utils/HashUtil";
 import { IAddItemDirectRequest } from "@spt/models/eft/inventory/IAddItemsDirectRequest";
 import { Item } from "../common/tables/IItem";
 
