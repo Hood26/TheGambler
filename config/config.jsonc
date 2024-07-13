@@ -29,11 +29,11 @@
     "wallet_case_enable": true,
 
     "key_case_price": 47500,
-    "key_case_stock": 15,
+    "key_case_stock": 12,
     "key_case_enable": true,
 
     "stim_case_price": 36500,
-    "stim_case_stock": 8,
+    "stim_case_stock": 6,
     "stim_case_enable": true,
 
     "medical_case_price": 60000,
@@ -41,17 +41,17 @@
     "medical_case_enable": true,
 
     "food_case_price": 26500,
-    "food_case_stock": 8,
+    "food_case_stock": 6,
     "food_case_enable": true,
 
-    "bitcoin_case_stock": 3,
+    "bitcoin_case_stock": 4,
     "bitcoin_case_enable": true,
 
     "gpcoin_case_stock": 6,
     "gpcoin_case_enable": true,
 
-    "keycard_case_price": 300000, // 124% return on investment at this price
-    "keycard_case_stock": 15,
+    "keycard_case_price": 330000, // 124% return on investment at this price
+    "keycard_case_stock": 12,
     "keycard_case_enable": true,
 
     "fiftyfifty_case_price": 2500000,
@@ -62,8 +62,8 @@
     "melee_case_stock": 15,
     "melee_case_enable": true,
 
-    "weapon_case_price": 110000,
-    "weapon_case_stock": 12,
+    "weapon_case_price": 120000,
+    "weapon_case_stock": 8,
     "weapon_case_enable": true,
 
     "premium_weapon_case_price": 235000,
@@ -79,7 +79,7 @@
     "headset_case_enable": true,
 
     "armor_case_price": 115000,
-    "armor_case_stock": 6,
+    "armor_case_stock": 4,
     "armor_case_enable": true,
 
     "premium_armor_case_price": 375000,
@@ -94,12 +94,12 @@
     "backpack_case_stock": 6,
     "backpack_case_enable": true,
 
-    "loadout_case_price": 450000,
-    "loadout_case_stock": 3,
+    "loadout_case_price": 435000,
+    "loadout_case_stock": 4,
     "loadout_case_enable": true,
 
     "rig_case_price": 45000,
-    "rig_case_stock": 6,
+    "rig_case_stock": 5,
     "rig_case_enable": true,
 
     // All Mystery Ammo Container settings
@@ -108,15 +108,15 @@
     //
     "all_ammo_enable": true, // This will enable or disable trader from selling all Mystery Ammo containers
 
-    "7.62x25_case_price": 10000,
+    "7.62x25_case_price": 6000,
     "7.62x25_case_stock": 6,
     "7.62x25_case_enable": true,
 
-    "9x18_case_price": 10000,
+    "9x18_case_price": 6000,
     "9x18_case_stock": 6,
     "9x18_case_enable": true,
 
-    "9x19_case_price": 10000,
+    "9x19_case_price": 9000,
     "9x19_case_stock": 6,
     "9x19_case_enable": true,
 
@@ -124,15 +124,15 @@
     "9x21_case_stock": 6,
     "9x21_case_enable": true,
 
-    ".357_case_price": 10000,
+    ".357_case_price": 5000,
     ".357_case_stock": 6,
     ".357_case_enable": true,
 
-    ".45_case_price": 10000,
+    ".45_case_price": 8000,
     ".45_case_stock": 6,
     ".45_case_enable": true,
 
-    "4.6x30_case_price": 10000,
+    "4.6x30_case_price": 9000,
     "4.6x30_case_stock": 6,
     "4.6x30_case_enable": true,
 
@@ -140,55 +140,55 @@
     "5.7x28_case_stock": 6,
     "5.7x28_case_enable": true,
 
-    "5.45x39_case_price": 8500,
+    "5.45x39_case_price": 10500,
     "5.45x39_case_stock": 6,
     "5.45x39_case_enable": true,
 
-    "5.56x45_case_price": 11500,
+    "5.56x45_case_price": 15000,
     "5.56x45_case_stock": 6,
     "5.56x45_case_enable": true,
 
-    ".300_case_price": 10000,
+    ".300_case_price": 14000,
     ".300_case_stock": 6,
     ".300_case_enable": true,
 
-    "7.62x39_case_price": 10000,
+    "7.62x39_case_price": 15000,
     "7.62x39_case_stock": 6,
     "7.62x39_case_enable": true,
 
-    "7.62x51_case_price": 11500,
+    "7.62x51_case_price": 16000,
     "7.62x51_case_stock": 4,
     "7.62x51_case_enable": true,
 
-    "7.62x54_case_price": 14000,
+    "7.62x54_case_price": 19000,
     "7.62x54_case_stock": 4,
     "7.62x54_case_enable": true,
 
-    ".338_case_price": 30000,
+    ".338_case_price": 50000,
     ".338_case_stock": 3,
     ".338_case_enable": true,
 
-    "9x39_case_price": 10000,
+    "9x39_case_price": 13000,
     "9x39_case_stock": 6,
     "9x39_case_enable": true,
 
-    ".366_case_price": 10000,
+    ".366_case_price": 6000,
     ".366_case_stock": 6,
     ".366_case_enable": true,
 
-    "12.7x55_case_price": 10000,
+    "12.7x55_case_price": 16000,
     "12.7x55_case_stock": 4,
     "12.7x55_case_enable": true,
 
-    "12/70_case_price": 10000,
+    "12/70_case_price": 6000,
     "12/70_case_stock": 6,
     "12/70_case_enable": true,
 
-    "20/70_case_price": 10000,
+    "20/70_case_price": 6000,
     "20/70_case_stock": 6,
     "20/70_case_enable": true,
 
-    "23x75_case_price": 10000,
+    "23x75_case_price": 7000,
     "23x75_case_stock": 4,
     "23x75_case_enable": true
   },
@@ -220,36 +220,39 @@
     "wallet_extremely_rare": 3.0,    // 1 Million Roubles
     "wallet_rare": 6.0,              // 500k Roubles
     "wallet_kinda_rare": 10.0,       // 300k Roubles
-    "wallet_uncommon": 16.0,         // 100k Roubles
-    "wallet_common": 25.0,           // 50K Roubles
-    "wallet_profit_percentage": 115, // Container Profitability
+    "wallet_uncommon": 15.0,         // 100k Roubles
+    "wallet_common": 20.0,           // 50K Roubles
+    "wallet_extra_common": 21.0,     // 25K Roubles
+    "wallet_profit_percentage": 119, // Container Profitability 
+                                     // (Will not alter the price of the Mystery Wallet currently, (will fix in 0.2.1) but 119% is the average profit return per 500,000 simulated openings)
 
     // Mystery Keycard
     "keycard_red": 0.1,           // Red Keycard
     "keycard_green": 0.2,         // Green Keycard
-    "keycard_blue": 0.25,         // Blue Keycard
-    "keycard_violet": 0.35,       // Violet Keycard
-    "keycard_black": 0.65,        // Black Keycard
-    "keycard_yellow": 1.2,        // Yellow Keycard
-    "keycard_blue_marking": 6.25, // Keycard with blue marking
+    "keycard_blue": 0.3,         // Blue Keycard
+    "keycard_violet": 0.65,       // Violet Keycard
+    "keycard_black": 1.0,        // Black Keycard
+    "keycard_yellow": 2.0,        // Yellow Keycard
+    "keycard_blue_marking": 5.75, // Keycard with blue marking
     "keycard_21WS": 8.0,          // 21WS Keycard
     "keycard_11SR": 8.0,          // 11SR Keycard
-    "keycard_access": 75.0,       // Access Keycard
-    "keycard_profit_percentage": 120, // Container Profitability
+    "keycard_access": 74.0,       // Access Keycard
+    "keycard_profit_percentage": 124, // Container Profitability
+                                      // (Will not alter the price of the Mystery Keycard currently, (will fix in 0.2.1) but 124% is the average profit return per 500,000 simulated openings)
     
     // Mystery Key
     "key_extremely_rare": 0.5,    // Extremely Rare Key
     "key_rare": 5.0,              // Rare Key
     "key_uncommon": 24.5,         // Uncommon Key
     "key_common": 70.0,           // Common Key
-    "key_profit_percentage": 115, // Container Profitability
+    "key_profit_percentage": 125, // Container Profitability
 
     // Mystery Stimulant
     "stim_extremely_rare": 10.0,   // Extremely Rare Key
     "stim_rare": 15.0,             // Rare Stim
     "stim_uncommon": 25.0,         // Uncommon Stim
     "stim_common": 50.0,           // Common Stim
-    "stim_profit_percentage": 110, // Container Profitability
+    "stim_profit_percentage": 120, // Container Profitability
 
     // Mystery Medical Box
     "medical_rare": 12.0,             // Rare Meds
@@ -270,11 +273,15 @@
 
     // Loadout Food
     // Chance for receiving food with loadout
-    "loadout_food_success": 100.0, // 100% chance of receiving food with loadout
+    "loadout_food_rare": 30.0, // 100% chance of receiving food with loadout
+    "loadout_food_uncommon": 40.0, // 100% chance of receiving food with loadout
+    "loadout_food_common": 30.0, // 100% chance of receiving food with loadout
 
     // Loadout Drink
     // Chance for receiving drink with loadout
-    "loadout_drink_success": 100.0, // 100% chance of receiving drink with loadout
+    "loadout_drink_rare": 30.0, // 100% chance of receiving drink with loadout
+    "loadout_drink_uncommon": 40.0, // 100% chance of receiving drink with loadout
+    "loadout_drink_common": 30.0, // 100% chance of receiving drink with loadout
 
     // Loadout Light Bleed
     "loadout_light_bleed_rare": 30, // Rare Loaout Light Bleed supply
@@ -309,27 +316,27 @@
     "melee_rare": 2.0,              // Rare melee
     "melee_uncommon": 22.75,        // Uncommon melee
     "melee_common": 75.0,           // Common melee
-    "melee_profit_percentage": 120, // Container Profitability
+    "melee_profit_percentage": 130, // Container Profitability
 
     // Mystery Backpack
     "backpack_extremely_rare": 5.0, // Extremely Rare backpack
-    "backpack_rare": 15.0,          // Rare backpack
+    "backpack_rare": 20.0,          // Rare backpack
     "backpack_uncommon": 35.0,      // Uncommon backpack
-    "backpack_common": 45.0,        // Common backpack
+    "backpack_common": 40.0,        // Common backpack
     "backpack_profit_percentage": 110, // Container Profitability
 
     // Mystery Tactical Rig
     "rig_boss": 5.0,              // Extremely Rare rig
     "rig_late_wipe": 25.0,        // Rare rig
-    "rig_early_wipe": 40.0,       // Uncommon rig
-    "rig_scav": 30.0,             // Common rig
-    "rig_profit_percentage": 110, // Container Profitability
+    "rig_early_wipe": 50.0,       // Uncommon rig
+    "rig_scav": 20.0,             // Common rig
+    "rig_profit_percentage": 115, // Container Profitability
 
     // Weapon Mystery Box
-    "weapon_meta": 15.0,             // Meta Weapon
+    "weapon_meta": 20.0,             // Meta Weapon
     "weapon_decent": 40.3,           // Semi-modded Weapon
     "weapon_scav": 20.0,             // Scav Weapon
-    "weapon_base": 17.0,             // Default Weapon
+    "weapon_base": 12.0,             // Default Weapon
     "weapon_meme": 7.7,              // Meme Weapon
     "weapon_profit_percentage": 115, // Container Profitability
 
@@ -346,14 +353,14 @@
 
     // Mystery Headset
     "headset_rare": 10.0,             // Rare Headset
-    "headset_uncommon": 35.0,         // Uncommon Headset
-    "headset_common": 55.0,           // Common Headset
+    "headset_uncommon": 40.0,         // Uncommon Headset
+    "headset_common": 50.0,           // Common Headset
     "headset_profit_percentage": 115, // Container Profitability
 
     // Armor Mystery Box
     "armor_rare": 12.5,             // Rare Armor
-    "armor_uncommon": 27.5,         // Uncommon Armor
-    "armor_common": 60.0,           // Common Armor
+    "armor_uncommon": 37.5,         // Uncommon Armor
+    "armor_common": 50.0,           // Common Armor
     "armor_profit_percentage": 120, // Container Profitability
 
     // Premium Armor Mystery Box
@@ -374,7 +381,7 @@
     "9x18_rare": 20.0,              // Rare Round 9x18mm
     "9x18_min": 15,                  // Minimum Rounds Generated
     "9x18_max": 30,                 // Maximum Rounds Generated
-    "9x18_profit_percentage": 125,  // Container Profitability
+    "9x18_profit_percentage": 110,  // Container Profitability
     
     // Mystery 9x19
     "9x19_common": 45.0,            // Common Round 9x19
@@ -398,7 +405,7 @@
     ".357_rare": 20.0,              // Rare Round .357
     ".357_min": 3,                  // Minimum Rounds Generated
     ".357_max": 10,                 // Maximum Rounds Generated
-    ".357_profit_percentage": 75,  // Container Profitability
+    ".357_profit_percentage": 45,  // Container Profitability
 
     // Mystery .45_ACP
     ".45_common": 45.0,             // Common Round .45
@@ -430,7 +437,7 @@
     "5.45x39_rare": 20.0,            // Rare Round 5.45x39
     "5.45x39_min": 15,                // Minimum Rounds Generated
     "5.45x39_max": 30,               // Maximum Rounds Generated
-    "5.45x39_profit_percentage": 125,// Container Profitability
+    "5.45x39_profit_percentage": 130,// Container Profitability
 
     // Mystery 5.56x45
     "5.56x45_common": 45.0,          // Common Round 5.56x45
@@ -438,7 +445,7 @@
     "5.56x45_rare": 20.0,            // Rare Round 5.56x45
     "5.56x45_min": 15,                // Minimum Rounds Generated
     "5.56x45_max": 30,               // Maximum Rounds Generated
-    "5.56x45_profit_percentage": 125,// Container Profitability
+    "5.56x45_profit_percentage": 135,// Container Profitability
 
     // Mystery .300_Blackout
     ".300_common": 45.0,             // Common Round .300
@@ -454,7 +461,7 @@
     "7.62x39_rare": 20.0,            // Rare Round 7.62x39
     "7.62x39_min": 15,                // Minimum Rounds Generated
     "7.62x39_max": 30,               // Maximum Rounds Generated
-    "7.62x39_profit_percentage": 120,// Container Profitability
+    "7.62x39_profit_percentage": 125,// Container Profitability
 
     // Mystery 7.62x51
     "7.62x51_common": 45.0,          // Common Round 7.62x51
@@ -462,7 +469,7 @@
     "7.62x51_rare": 20.0,            // Rare Round 7.62x51
     "7.62x51_min": 15,                // Minimum Rounds Generated
     "7.62x51_max": 25,               // Maximum Rounds Generated
-    "7.62x51_profit_percentage": 120,// Container Profitability
+    "7.62x51_profit_percentage": 130,// Container Profitability
 
     // Mystery 7.62x54
     "7.62x54_common": 45.0,          // Common Round 7.62x54
@@ -470,7 +477,7 @@
     "7.62x54_rare": 20.0,            // Rare Round 7.62x54
     "7.62x54_min": 15,                // Minimum Rounds Generated
     "7.62x54_max": 25,               // Maximum Rounds Generated
-    "7.62x54_profit_percentage": 120,// Container Profitability
+    "7.62x54_profit_percentage": 130,// Container Profitability
 
     // Mystery .338
     ".338_common": 62.5,             // Common Round .338
@@ -494,7 +501,7 @@
     ".366_rare": 20.0,               // Rare Round .366
     ".366_min": 15,                   // Minimum Rounds Generated
     ".366_max": 30,                  // Maximum Rounds Generated
-    "366_profit_percentage": 120,    // Container Profitability
+    ".366_profit_percentage": 120,    // Container Profitability
 
     // Mystery 12.7x55
     "12.7x55_common": 45.0,          // Common Round 12.7x55
@@ -518,7 +525,7 @@
     "20/70_rare": 20.0,              // Rare Round 20/70
     "20/70_min": 5,                  // Minimum Rounds Generated
     "20/70_max": 10,                 // Maximum Rounds Generated
-    "20/70_profit_percentage": 85,   // Container Profitability
+    "20/70_profit_percentage": 10,// Rounds are extremely cheap in general   // Container Profitability
 
     // Mystery 23x75
     "23x75_common": 45.0,            // Common Round 23x75
@@ -526,7 +533,7 @@
     "23x75_rare": 20.0,              // Rare Round 23x75
     "23x75_min": 2,                  // Minimum Rounds Generated
     "23x75_max": 4,                 // Maximum Rounds Generated
-    "23x75_profit_percentage": 100   // Container Profitability
+    "23x75_profit_percentage": 30   // Container Profitability
 
   },
   //

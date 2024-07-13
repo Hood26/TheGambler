@@ -166,20 +166,6 @@ export class TraderHelper
         console.log(generatedMysteryContainerPrices)
         //console.log("THE SIMULATED AMMO PRICES...")
         //console.log(generatedMysteryAmmoPrices)
-
-        /*
-        let loadoutPrice = config.price_stock['weapon_case_price']
-                            + config.price_stock['helmet_case_stock'] + generatedMysteryContainerPrices['armor_case_price']
-                            + generatedMysteryContainerPrices['backpack_case_price'] + generatedMysteryContainerPrices['rig_case_price']
-                            + generatedMysteryContainerPrices['headset_case_price'] 
-                            + generatedMysteryContainerPrices['food_case_price'] + generatedMysteryContainerPrices['food_case_price'] 
-                            + generatedMysteryContainerPrices['stim_case_price'] + generatedMysteryContainerPrices['stim_case_price']
-        if (!loadoutPrice) { // incase bugs occur
-            loadoutPrice = 475000;
-        }
-        */
-        
-
         //console.log(premium_armor_cost)
         //console.log("THE SIMULATED CONTAINER PRICES...");
         //console.log(generatedMysteryContainerPrices);

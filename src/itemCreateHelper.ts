@@ -139,7 +139,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Wallet",
                     shortName: "Mystery Wallet",
-                    description: `Wager your Roubles to win more, or lose it all!\n==============================\n0 Roubles - 40.0%\n50k Roubles - ${this.config.odds['wallet_common']}%\n100k Roubles - ${this.config.odds['wallet_uncommon']}%\n300k Roubles - ${this.config.odds['wallet_kinda_rare']}%\n500k Roubles - ${this.config.odds['wallet_rare']}%\n1 Million Roubles - ${this.config.odds['wallet_extremely_rare']}%`
+                    description: `Wager your Roubles to win more, or lose it all!\n==============================\n0 Roubles - 25.0%\n25k Roubles - ${this.config.odds['wallet_extra_common']}%\n50k Roubles - ${this.config.odds['wallet_common']}%\n100k Roubles - ${this.config.odds['wallet_uncommon']}%\n300k Roubles - ${this.config.odds['wallet_kinda_rare']}%\n500k Roubles - ${this.config.odds['wallet_rare']}%\n1 Million Roubles - ${this.config.odds['wallet_extremely_rare']}%`
                 }
             } 
         }
@@ -450,8 +450,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 70000,
-            handbookPriceRoubles: 70000,
+            fleaPriceRoubles: 275000,
+            handbookPriceRoubles: 275000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1205,7 +1205,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Weapon Mystery Box",
                     shortName: "Weapon Mystery Box",
-                    description: `Weapon Mystery Box, contains over 283 different weapons ranging from Meta/Chad weapons, early wipe weapons, scav weapons, meme/cursed weapons, and much more... \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nMeme Weapon - ${this.config.odds['weapon_meme']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}%`
+                    description: `Weapon Mystery Box, contains over 305 different weapons ranging from Meta/Chad weapons, early wipe weapons, scav weapons, meme/cursed weapons, and much more... \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nMeme Weapon - ${this.config.odds['weapon_meme']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}%`
                 }
             }
         };
@@ -2262,8 +2262,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 14000,
+            handbookPriceRoubles: 14000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2369,8 +2369,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 19500,
+            handbookPriceRoubles: 19500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2476,8 +2476,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 19000,
+            handbookPriceRoubles: 19000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2583,8 +2583,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 13000,
+            handbookPriceRoubles: 13000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2690,8 +2690,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 19000,
+            handbookPriceRoubles: 19000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2797,8 +2797,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 23000,
+            handbookPriceRoubles: 23000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2904,8 +2904,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 20000,
+            handbookPriceRoubles: 20000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3011,8 +3011,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 12500,
-            handbookPriceRoubles: 12500,
+            fleaPriceRoubles: 20000,
+            handbookPriceRoubles: 20000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3118,8 +3118,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 14500,
-            handbookPriceRoubles: 14500,
+            fleaPriceRoubles: 25000,
+            handbookPriceRoubles: 25000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3225,8 +3225,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 15000,
-            handbookPriceRoubles: 15000,
+            fleaPriceRoubles: 22500,
+            handbookPriceRoubles: 22500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3332,8 +3332,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 15000,
-            handbookPriceRoubles: 15000,
+            fleaPriceRoubles: 22500,
+            handbookPriceRoubles: 22500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3439,8 +3439,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 17500,
-            handbookPriceRoubles: 17500,
+            fleaPriceRoubles: 24500,
+            handbookPriceRoubles: 24500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3546,8 +3546,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 16500,
-            handbookPriceRoubles: 16500,
+            fleaPriceRoubles: 26000,
+            handbookPriceRoubles: 26000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3653,8 +3653,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 65000,
-            handbookPriceRoubles: 65000,
+            fleaPriceRoubles: 80000,
+            handbookPriceRoubles: 80000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3760,8 +3760,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 15000,
-            handbookPriceRoubles: 15000,
+            fleaPriceRoubles: 22000,
+            handbookPriceRoubles: 22000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3866,8 +3866,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 15000,
-            handbookPriceRoubles: 15000,
+            fleaPriceRoubles: 17000,
+            handbookPriceRoubles: 17000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -3972,8 +3972,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 16000,
-            handbookPriceRoubles: 16000,
+            fleaPriceRoubles: 25500,
+            handbookPriceRoubles: 25500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -4078,8 +4078,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 14500,
+            handbookPriceRoubles: 14500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -4184,8 +4184,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 16000,
+            handbookPriceRoubles: 16000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -4290,8 +4290,8 @@ export class ItemCreateHelper {
                 _type: "Item"
                      
             },
-            fleaPriceRoubles: 10000,
-            handbookPriceRoubles: 10000,
+            fleaPriceRoubles: 18000,
+            handbookPriceRoubles: 18000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {

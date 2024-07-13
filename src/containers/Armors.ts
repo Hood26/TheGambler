@@ -14,6 +14,32 @@ export class Armors {
     "common"
   ]
 
+  public armor_rigs = [
+    "5b44cad286f77402a54ae7e5", // 5.11 Tactical TacTec plate carrier (Ranger Green)
+    "5e4ac41886f77406a511c9a8", // Ars Arma CPC MOD.1 plate carrier (A-TACS FG)
+    "609e860ebd219504d8507525", // Crye Precision AVS plate carrier (Tagilla Edition)
+    "628b9c7d45122232a872358f", // Crye Precision CPC plate carrier (Goons Edition)
+    "64a5366719bab53bd203bf33", // Eagle Allied Industries MBSS plate carrier (Coyote Brown)
+    "628b9784bcf6e2659e09b8a2", // S&S Precision PlateFrame plate carrier (Goons Edition)
+    "628cd624459354321c4b7fa2", // Tasmanian Tiger SK plate carrier (MultiCam Black)
+    "5d5d646386f7742797261fd9", // 6B3TM-01 armored rig (Khaki)
+    "5c0e722886f7740458316a57", // ANA Tactical M1 plate carrier (Olive Drab)
+    "5ab8dced86f774646209ec87", // ANA Tactical M2 plate carrier (Digital Flora)
+    "5d5d87f786f77427997cfaef", // Ars Arma A18 Skanda plate carrier (MultiCam)
+    "60a3c70cde5f453f634816a3", // CQC Osprey MK4A plate carrier (Assault, MTP)
+    "60a3c68c37ea821725773ef5", // CQC Osprey MK4A plate carrier (Protection, MTP)
+    "544a5caa4bdc2d1a388b4568", // Crye Precision AVS plate carrier (Ranger Green)
+    "628dc750b910320f4c27a732", // ECLiPSE RBAV-AF plate carrier (Ranger Green)
+    "64a5366719bab53bd203bf33", // Eagle Allied Industries MBSS plate carrier (Coyote Brown)
+    "61bc85697113f767765c7fe7", // Eagle Industries MMAC plate carrier (Ranger Green)
+    "61bcc89aef0f505f0c6cd0fc", // FirstSpear Strandhogg plate carrier (Ranger Green)
+    "639343fce101f4caa40a4ef3", // Shellback Tactical Banshee plate carrier (A-TACS AU)
+    "5c0e746986f7741453628fe5", // WARTECH TV-110 plate carrier (Coyote)
+    "64a536392d2c4e6e970f4121", // WARTECH TV-115 plate carrier (Olive Drab)
+    "5c0e446786f7742013381639", // 6B5-15 Zh-86 Uley armored rig (Flora)
+    "5c0e3eb886f7742015526062", // 6B5-16 Zh-86 Uley armored rig (Khaki)
+  ]
+
   public rewards = [
     [
       "5fd4c474dd870108a754b241", // 5.11 Tactical Hexgrid plate carrier

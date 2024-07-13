@@ -109,7 +109,6 @@ export class MysteryContainer {
             loadout_heavy_bleed: new LoadoutHeavyBleed(),
             loadout_healing:     new LoadoutHealing()
         }
-        //console.log(this.items)
         this.containers  = this.setContainers()
     }
 
@@ -157,7 +156,7 @@ export class MysteryContainer {
     
         const createAndConfigureContainer = (name: string, item: any, isAmmo: boolean) => {
             const container = new Container(name);
-            console.log(container.name)
+            //console.log(container.name)
             container.rarities = [...item.rarities];
             container.parent = item.parent;
             
@@ -171,8 +170,7 @@ export class MysteryContainer {
         this.names.forEach(name => createAndConfigureContainer(name, this.items[name], false));
         this.items.ammo.names.forEach(name => createAndConfigureContainer(name, this.items.ammo.items[name], true));
     
-        console.log('THE CONTAINER!!!');
-        console.log(containers);
+        //console.log('THE CONTAINER!!!');
         return containers;
     }
     

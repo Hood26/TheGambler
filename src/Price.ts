@@ -39,7 +39,7 @@ export class Price{
             const items = this.MysteryContainer.items['ammo'].items[current];
             let currentContainerPrice = this.config.price_stock[current + "_case_price"];
             let currentPrices: Array<number> = this.getMysteryContainerPrices(current, current,  rarities, items, amount);
-
+            
             currentContainerPrice = this.runSimulation(currentContainerPrice, odds, currentPrices, -1, this.MysteryContainer.getProfitPercentage(current));
             mysteryAmmoPrices[current + "_case_price"] = currentContainerPrice;
         }
@@ -54,8 +54,8 @@ export class Price{
         const mysteryContainerNames = this.MysteryContainer.simulation;
 
         for(let i = 0; i < mysteryContainerNames.length; i++){
-            console.log("Container Name!!")
-            console.log(mysteryContainerNames[i])
+            //console.log("Container Name!!")
+            //console.log(mysteryContainerNames[i])
             const current = this.MysteryContainer.getName(mysteryContainerNames[i]);
             const name : string = mysteryContainerNames[i];
             const parent :string = this.MysteryContainer.getParent(name);

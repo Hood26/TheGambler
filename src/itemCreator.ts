@@ -35,7 +35,7 @@ export class ItemCreator {
 
     public createPreset(name: string, rarity: string): Item{
         let itemPreset: Item[] = [];
-        console.log('createPreset ' + name + ' ' + rarity)
+        //console.log('createPreset ' + name + ' ' + rarity)
 
         switch(name){
             case 'helmet':
@@ -160,12 +160,6 @@ export class ItemCreator {
                         this.magazine = build[i]._tpl;
                         // Maximum rounds in saved magazine
                         const magInfo = this.itemHelper.getItem(this.magazine)
-                        console.log('magInfo\n')
-                        console.log(magInfo)
-                        console.log('magInfo._props\n')
-                        console.log(magInfo[1]._props)
-                        console.log('magInfo[1]._props.Cartridges[0]._max_count\n')
-                        console.log(magInfo[1]._props.Cartridges[0]._max_count)
                         this.magazineMaxAmmo = magInfo[1]._props.Cartridges[0]._max_count;
                     }
                     item.push({
