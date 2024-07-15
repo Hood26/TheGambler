@@ -1,4 +1,4 @@
 export class ConfigLoader {
     
-    public config = require("../config/config.jsonc")
+    public config = require("../config/config.jsonc");
 }

@@ -29,6 +29,7 @@ export class Gamble {
     private currentMagazine: string;
     private currentMagazineMaxAmmo: number;
     private currentWeaponType: string;
+    private currentHeadsetCompatible: boolean;
     private container: DependencyContainer;
     private hashUtil: HashUtil;
     private logger: ILogger;
@@ -105,7 +106,7 @@ export class Gamble {
                 this.openPreset(name, roll);
                 break;
             case 'loadout':
-                this.openLoadoutContainer(name, roll);
+                this.openLoadoutContainer(name);
                 break;
             default:
                 this.logger.error(`[TheGambler] This Mystery Container Doesn't exist! Contact Author!`);    
@@ -114,7 +115,7 @@ export class Gamble {
     }
 
     // Opens all rewards from the loadout container
-    private openLoadoutContainer(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){ 
+    private openLoadoutContainer(name: string = this.name, roll: number = this.randomUtil.getFloat(0,85)){ 
         this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
         const rewards = this.mysteryContainer.getGuaranteedRewards(name);
         const randomness = this.mysteryContainer.getGuaranteedRandomness(name);
@@ -127,13 +128,27 @@ export class Gamble {
             if (this.mysteryContainer.getName(current)) { // Rewards is a container
 
                 if(this.currentWeaponType == 'meme') { // Generated Weapon is meme all rewards are random now
-                    this.newGamble(current);
+
+                    this.newGamble(current, this.randomUtil.getFloat(0,70));
                     
                 } else{
                     if (randomness[i]) {
+                        console.log('Randomness is true... Generating random roll...')
                         this.newGamble(current);
                     } else {
+                        console.log('Randomness is false... Using current roll...')
                         this.newGamble(current, roll);
+                    }
+                }
+
+                if(current === 'helmet') {
+                    console.log('currentHeadsetCompatible = ' + this.currentHeadsetCompatible)
+                    if (!this.currentHeadsetCompatible) {
+                        console.log('Helmet is not headset compatible... Skipping headset reward...')
+                        i++; // Skip the headset reward
+                    } else if (this.mysteryContainer.items['helmet'].headset_incompatible_helmets.includes(this.currentID)) {
+                        console.log('Helmet is headset incompatible and in headset_incompatible_helmets array... Skipping headset reward...')
+                        i++; // Skip the headset reward
                     }
                 }
 
@@ -168,23 +183,32 @@ export class Gamble {
                     }
 
                     let tempRoll: number;
+                    let min, max = 0;
                     // Depending on the ammo type, we want to generate a different rarity of ammo from the temproll
                     switch(currentWeaponType) {
                         case 'meme':
-                            tempRoll = this.randomUtil.getFloat(0,30);
+                            min = 5;
+                            max = 30;
                             break;
                         case 'decent':
-                            tempRoll = this.randomUtil.getFloat(10,50);
+                            min = 10;
+                            max = 50;
                             break;
                         case 'meta':
-                            tempRoll = this.randomUtil.getFloat(0,35);
+                            min = 3;
+                            max = 26;
                             break;
                         default:
+                            min = 10;
+                            max = 90
                             tempRoll = roll;
                             break;
                     }
 
                     for(let i = 0; i < magazineCount; i++){
+                        
+                        tempRoll = this.randomUtil.getFloat(min, max); // random roll for each ammo reward
+                        console.log('Ammo Temp Roll: ' + tempRoll);
                         this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
                     }
                 }
@@ -307,6 +331,9 @@ export class Gamble {
                     this.currentMagazine = item.magazine;
                     this.currentWeaponType = item.weaponType;
                     this.currentMagazineMaxAmmo = item.magazineMaxAmmo;
+                }
+                if (name === 'helmet') {
+                    this.currentHeadsetCompatible = item.headsetCompatible;
                 }
                 break;  
             }

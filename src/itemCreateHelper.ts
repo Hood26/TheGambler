@@ -245,7 +245,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Key",
                     shortName: "Mystery Key",
-                    description: `So you want a brand-new key to your favorite looting spot? Or maybe you're looking for that pesky quest key. We have it all! Try your luck!\n==============================\nCommon Key - ${this.config.odds['key_common']}%\nUncommon Key - ${this.config.odds['key_uncommon']}%\nRare Key - ${this.config.odds['key_rare']}%\nExtremely Rare Key - ${this.config.odds['key_extremely_rare']}%`
+                    description: `So you want a brand-new key to your favorite looting spot? Or maybe you're looking for that pesky quest key. We have it all! (Seriously every single key found throughout Tarkov!) Try your luck!\n==============================\nCommon Key - ${this.config.odds['key_common']}%\nUncommon Key - ${this.config.odds['key_uncommon']}%\nRare Key - ${this.config.odds['key_rare']}%\nExtremely Rare Key - ${this.config.odds['key_extremely_rare']}%`
                 }
             } 
         }
@@ -457,7 +457,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Medical Kit",
                     shortName: "Mystery Medical Kit",
-                    description: `Hey soldier, looking for some meds to keep you alive out there? I have a business to run here and I don't have time to sort through all this stuff. Take a chance and see what you get!`
+                    description: `Hey soldier, looking for some meds to help keep you alive out there? I have a business to run here and I don't have time to sort through all this stuff. Take a chance and see what you get!`
                 }
             } 
         }
@@ -776,7 +776,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Keycard",
                     shortName: "Mystery Keycard",
-                    description: `So you want to get into labs? Try your luck. Maybe you get the card you've been dreaming of, maybe you don't!\n==============================\nAccess Keycard - ${this.config.odds['keycard_access']}%\n21WS Keycard - ${this.config.odds['keycard_21WS']}%\n11SR Keycard - ${this.config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${this.config.odds['keycard_blue_marking']}%\nYellow Keycard - ${this.config.odds['keycard_yellow']}%\nBlack Keycard - ${this.config.odds['keycard_black']}%\nViolet Keycard - ${this.config.odds['keycard_violet']}%\nBlue Keycard - ${this.config.odds['keycard_blue']}%\nGreen Keycard - ${this.config.odds['keycard_green']}%\nRed Keycard - ${this.config.odds['keycard_red']}%`
+                    description: `So you want to get into labs? Well your in luck! I have a few gambles I can offer you for the right price. Maybe you get the card you've been dreaming of or maybe you don't!\n==============================\nAccess Keycard - ${this.config.odds['keycard_access']}%\n21WS Keycard - ${this.config.odds['keycard_21WS']}%\n11SR Keycard - ${this.config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${this.config.odds['keycard_blue_marking']}%\nYellow Keycard - ${this.config.odds['keycard_yellow']}%\nBlack Keycard - ${this.config.odds['keycard_black']}%\nViolet Keycard - ${this.config.odds['keycard_violet']}%\nBlue Keycard - ${this.config.odds['keycard_blue']}%\nGreen Keycard - ${this.config.odds['keycard_green']}%\nRed Keycard - ${this.config.odds['keycard_red']}%`
                 }
             }                
         }
@@ -1650,7 +1650,7 @@ export class ItemCreateHelper {
                     "CanSellOnRagfair": false,
                     "CantRemoveFromSlotsDuringRaid": [],
                     "ConflictingItems": [],
-                    "Description": "Loadout Mystery Box",
+                    "Description": "Mystery Loadout",
                     "DiscardLimit": -1,
                     "DiscardingBlock": false,
                     "DropSoundType": "None",
@@ -1700,7 +1700,7 @@ export class ItemCreateHelper {
                     "ItemSound": "container_plastic",
                     "LootExperience": 20,
                     "MergesWithChildren": false,
-                    "Name": "Loadout Mystery Box",
+                    "Name": "Mystery Loadout",
                     "NotShownInSlot": false,
                     "Prefab": {
                         "path": "assets/content/items/equipment/backpack_blackjack/item_equipment_backpack_blackjack.bundle",
@@ -1712,7 +1712,7 @@ export class ItemCreateHelper {
                     "RepairCost": 0,
                     "RepairSpeed": 0,
                     "SearchSound": "drawer_metal_looting",
-                    "ShortName": "Loadout Mystery Box",
+                    "ShortName": "Mystery Loadout",
                     "Slots": [],
                     "StackMaxSize": 1,
                     "StackObjectsCount": 1,
@@ -1735,9 +1735,9 @@ export class ItemCreateHelper {
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
-                    name: "Loadout Mystery Bag",
-                    shortName: "Loadout Mystery Bag",
-                    description: `A full raid kit in one unbox! What more could you ask for? Items unboxed include: weapon, extra magazines, ammo, armor, rig, helmet, headset, backpack, food, drink, and medical supplies.`
+                    name: "Mystery Loadout",
+                    shortName: "Mystery Loadout",
+                    description: `A full raid kit in one unbox! You will never receive the same exact kit as every items is randomly generated and correlate by rarity of the generated weapon. Items unboxed include:\n Weapon, Extra Magazines, Ammo, Armor, Rig, Helmet, Headset, Backpack, Food, Drink, and Medical Supplies.`
                 }
             }
         };

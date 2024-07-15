@@ -12,6 +12,7 @@ export class ItemCreator {
 
     public Weapons: any;
     public Helmets: any;
+    public headsetCompatible: boolean;
     public Armors: any;
     public caliber: string;
     public magazine: string;
@@ -23,6 +24,7 @@ export class ItemCreator {
     constructor(container: DependencyContainer){
         this.Weapons = new WeaponPresets();
         this.Helmets = new HelmetPresets();
+        this.headsetCompatible = true;
         this.Armors = new ArmorPresets();
         this.hashUtil = container.resolve<HashUtil>("HashUtil");
         this.itemHelper = container.resolve<ItemHelper>("ItemHelper");
@@ -123,6 +125,10 @@ export class ItemCreator {
 
         let baseId;
         for(let i = 0; i < build.length; i++){
+
+            if (build[i]._tpl == "5a16b9fffcdbcb0176308b34") { // helmet has a headset
+                this.headsetCompatible = false;
+            }
 
             if(i == 0) { // item base
                 baseId = build[i]._id; // Need the base to reference in attachments

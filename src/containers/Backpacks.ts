@@ -18,8 +18,8 @@ export class Backpacks {
       "5c0e774286f77468413cc5b2", // Mystery Ranch Blackjack 50 backpack (MultiCam)
     ],
     [
-      "5e4abc6786f77406812bd572", // LBT-2670 Slim Field Med Pack (Black)
-      "5e997f0b86f7741ac73993e2", // Sanitar's bag
+      //"5e4abc6786f77406812bd572", // LBT-2670 Slim Field Med Pack (Black)
+      //"5e997f0b86f7741ac73993e2", // Sanitar's bag
       "5c0e805e86f774683f3dd637", // 3V Gear Paratus 3-Day Operator's Tactical backpack (Foliage Grey)
       "5df8a4d786f77412672a1e3b", // 6Sh118 raid backpack (Digital Flora)
       "5ab8ebf186f7742d8b372e80", // SSO Attack 2 raid backpack (Khaki)

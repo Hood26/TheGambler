@@ -5,7 +5,7 @@
 
   // Debug Option: Every Mystery Box opening will post its item information in the console before opening.
   //
-  "debug": false, // Default is false
+  "debug": true, // Default is false
 
   // Custom Trader Settings
   //
@@ -40,14 +40,14 @@
     "medical_case_stock": 1,
     "medical_case_enable": true,
 
-    "food_case_price": 26500,
+    "food_case_price": 33000,
     "food_case_stock": 6,
     "food_case_enable": true,
 
     "bitcoin_case_stock": 4,
     "bitcoin_case_enable": true,
 
-    "gpcoin_case_stock": 6,
+    "gpcoin_case_stock": 8,
     "gpcoin_case_enable": true,
 
     "keycard_case_price": 330000, // 124% return on investment at this price
@@ -58,7 +58,7 @@
     "fiftyfifty_case_stock": 2,
     "fiftyfifty_case_enable": true,
 
-    "melee_case_price": 58500,
+    "melee_case_price": 78500,
     "melee_case_stock": 15,
     "melee_case_enable": true,
 
@@ -66,11 +66,11 @@
     "weapon_case_stock": 8,
     "weapon_case_enable": true,
 
-    "premium_weapon_case_price": 235000,
+    "premium_weapon_case_price": 245000,
     "premium_weapon_case_stock": 1,
     "premium_weapon_case_enable": true,
 
-    "helmet_case_price": 60000,
+    "helmet_case_price": 65000,
     "helmet_case_stock": 6,
     "helmet_case_enable": true,
 
@@ -91,11 +91,11 @@
     "sealed_case_enable": true,
 
     "backpack_case_price": 45000,
-    "backpack_case_stock": 6,
+    "backpack_case_stock": 4,
     "backpack_case_enable": true,
 
-    "loadout_case_price": 435000,
-    "loadout_case_stock": 4,
+    "loadout_case_price": 425000,
+    "loadout_case_stock": 3,
     "loadout_case_enable": true,
 
     "rig_case_price": 45000,
@@ -224,7 +224,8 @@
     "wallet_common": 20.0,           // 50K Roubles
     "wallet_extra_common": 21.0,     // 25K Roubles
     "wallet_profit_percentage": 119, // Container Profitability 
-                                     // (Will not alter the price of the Mystery Wallet currently, (will fix in 0.2.1) but 119% is the average profit return per 500,000 simulated openings)
+                                     // (Will not alter the price of the Mystery Wallet currently, (will fix in 0.2.2) but 119% is the average profit return per 500,000 simulated openings)
+                                     //   - You can alter the price of the Mystery Wallet by changing the wallet_case_price
 
     // Mystery Keycard
     "keycard_red": 0.1,           // Red Keycard
@@ -238,7 +239,8 @@
     "keycard_11SR": 8.0,          // 11SR Keycard
     "keycard_access": 74.0,       // Access Keycard
     "keycard_profit_percentage": 124, // Container Profitability
-                                      // (Will not alter the price of the Mystery Keycard currently, (will fix in 0.2.1) but 124% is the average profit return per 500,000 simulated openings)
+                                      //   - (Will not alter the price of the Mystery Keycard currently, (will fix in 0.2.2) but 124% is the average profit return per 500,000 simulated openings)
+                                      //   - You can alter the price of the Mystery Keycard by changing the keycard_case_price
     
     // Mystery Key
     "key_extremely_rare": 0.5,    // Extremely Rare Key
@@ -258,7 +260,7 @@
     "medical_rare": 12.0,             // Rare Meds
     "medical_uncommon": 30.0,         // Uncommon Meds
     "medical_common": 58.0,           // Common Meds
-    "medical_profit_percentage": 110, // Container Profitability
+    "medical_profit_percentage": 110, // Container Profitability DOESN'T WORK AS THIS CONTAINER IS BOUGHT BY BARTER
     
     // Mystery Food
     "food_rare": 5.0,             // Rare Food
@@ -273,15 +275,15 @@
 
     // Loadout Food
     // Chance for receiving food with loadout
-    "loadout_food_rare": 30.0, // 100% chance of receiving food with loadout
-    "loadout_food_uncommon": 40.0, // 100% chance of receiving food with loadout
-    "loadout_food_common": 30.0, // 100% chance of receiving food with loadout
+    "loadout_food_rare": 30.0, // Rare Loadout Food supply
+    "loadout_food_uncommon": 40.0, // Uncommon Loadout Food supply
+    "loadout_food_common": 30.0, // Common Loadout Food supply
 
     // Loadout Drink
     // Chance for receiving drink with loadout
-    "loadout_drink_rare": 30.0, // 100% chance of receiving drink with loadout
-    "loadout_drink_uncommon": 40.0, // 100% chance of receiving drink with loadout
-    "loadout_drink_common": 30.0, // 100% chance of receiving drink with loadout
+    "loadout_drink_rare": 30.0, // Rare Loadout Drink supply
+    "loadout_drink_uncommon": 40.0, // Uncommon Loadout Drink supply
+    "loadout_drink_common": 30.0, // Common Loadout Drink supply
 
     // Loadout Light Bleed
     "loadout_light_bleed_rare": 30, // Rare Loaout Light Bleed supply
@@ -316,51 +318,54 @@
     "melee_rare": 2.0,              // Rare melee
     "melee_uncommon": 22.75,        // Uncommon melee
     "melee_common": 75.0,           // Common melee
-    "melee_profit_percentage": 130, // Container Profitability
+    "melee_profit_percentage": 135, // Container Profitability
 
     // Mystery Backpack
     "backpack_extremely_rare": 5.0, // Extremely Rare backpack
     "backpack_rare": 20.0,          // Rare backpack
     "backpack_uncommon": 35.0,      // Uncommon backpack
     "backpack_common": 40.0,        // Common backpack
-    "backpack_profit_percentage": 110, // Container Profitability
+    "backpack_profit_percentage": 125, // Container Profitability
 
     // Mystery Tactical Rig
     "rig_boss": 5.0,              // Extremely Rare rig
-    "rig_late_wipe": 25.0,        // Rare rig
-    "rig_early_wipe": 50.0,       // Uncommon rig
-    "rig_scav": 20.0,             // Common rig
-    "rig_profit_percentage": 115, // Container Profitability
+    "rig_late_wipe": 30.0,        // Rare rig
+    "rig_early_wipe": 40.0,       // Uncommon rig
+    "rig_scav": 25.0,             // Common rig
+    "rig_profit_percentage": 130, // Container Profitability
 
     // Weapon Mystery Box
-    "weapon_meta": 20.0,             // Meta Weapon
-    "weapon_decent": 40.3,           // Semi-modded Weapon
-    "weapon_scav": 20.0,             // Scav Weapon
-    "weapon_base": 12.0,             // Default Weapon
+    "weapon_meta": 17.5,             // Meta Weapon
+    "weapon_decent": 45.3,           // Semi-modded Weapon
     "weapon_meme": 7.7,              // Meme Weapon
-    "weapon_profit_percentage": 115, // Container Profitability
+    "weapon_scav": 20.0,             // Scav Weapon
+    "weapon_base": 9.5,              // Default Weapon
+    "weapon_profit_percentage": 115, // Container Profitability DOESN'T WORK YET (SOON^TM)
+                                     //  - You can alter the price of the Mystery Weapon by changing the weapon_case_price
 
     // Premium Weapon Mystery Box
     "premium_weapon_meta": 100.0,            // Rare Weapon
-    "premium_weapon_profit_percentage": 115, // Container Profitability
+    "premium_weapon_profit_percentage": 115, // Container Profitability DOESN'T WORK YET (SOON^TM) 
+                                             //  - You can alter the price of the Mystery Weapon Box by changing the premium_weapon_case_price
 
     // Mystery Helmet
     "helmet_extremely_rare": 0.35,   // Extremely Rare Helmet
     "helmet_rare": 20.0,             // Rare Helmet
-    "helmet_uncommon": 37.0,         // Uncommon Helmet
-    "helmet_common": 42.65,          // Common Helmet
-    "helmet_profit_percentage": 115, // Container Profitability
+    "helmet_uncommon": 39.0,         // Uncommon Helmet
+    "helmet_common": 40.65,          // Common Helmet
+    "helmet_profit_percentage": 115, // Container Profitability DOESN'T WORK YET (SOON^TM)
+                                     //  - You can alter the price of the Mystery Helmet by changing the helmet_case_price
 
     // Mystery Headset
-    "headset_rare": 10.0,             // Rare Headset
-    "headset_uncommon": 40.0,         // Uncommon Headset
+    "headset_rare": 8.0,             // Rare Headset
+    "headset_uncommon": 42.0,         // Uncommon Headset
     "headset_common": 50.0,           // Common Headset
     "headset_profit_percentage": 115, // Container Profitability
 
     // Armor Mystery Box
-    "armor_rare": 12.5,             // Rare Armor
-    "armor_uncommon": 37.5,         // Uncommon Armor
-    "armor_common": 50.0,           // Common Armor
+    "armor_rare": 20.0,             // Rare Armor
+    "armor_uncommon": 40.0,         // Uncommon Armor
+    "armor_common": 40.5,           // Common Armor
     "armor_profit_percentage": 120, // Container Profitability
 
     // Premium Armor Mystery Box
@@ -371,7 +376,7 @@
     "7.62x25_common": 45.0,          // Common Round 7.62x25
     "7.62x25_uncommon": 35.0,        // Uncommon Round 7.62x25
     "7.62x25_rare": 20.0,            // Rare Round 7.62x25
-    "7.62x25_min": 15,                // Minimum Rounds Generated
+    "7.62x25_min": 15,               // Minimum Rounds Generated
     "7.62x25_max": 30,               // Maximum Rounds Generated
     "7.62x25_profit_percentage": 125,// Container Profitability
 

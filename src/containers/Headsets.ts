@@ -17,7 +17,7 @@ export class Headsets {
         "5645bcc04bdc2d363b8b4572", // Peltor ComTac 2 headset (OD Green)
         "5e4d34ca86f774264f758330", // Walker's Razor Digital headset
         "5c165d832e2216398b5a7e36", // Peltor Tactical Sport headset
-        "5a16b9fffcdbcb0176308b34", // Ops-Core FAST RAC Headset
+        //"5a16b9fffcdbcb0176308b34", // Ops-Core FAST RAC Headset
 
         ],
         [

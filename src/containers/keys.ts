@@ -9,6 +9,11 @@ export class Keys {
     "_common"
   ]
 
+  // 0.2.0 Keys Total = 143 - 1 broken key
+  // 0.2.1 Keys Total = 216 - 1 broken key
+
+  
+
   public rewards = [
     [ // Extremely Rare
       "5d80c60f86f77440373c4ece", // RB-BK
@@ -21,6 +26,10 @@ export class Keys {
       "64d4b23dc1b37504b41ac2b6", // Rusted bloody key
     ], 
     [ // Rare
+      "664d3db6db5dea2bad286955", // Shatun's hideout
+      "664d3dd590294949fe2d81b7", // Grumpy's hideout key
+      "664d3ddfdda2e85aca370d75", // Voron's hideout key
+      "664d3de85f2355673b09aed5", // Leon's hideout key
       "5c1f79a086f7746ed066fb8f", // TerraGroup Labs arsenal storage room key
       "63a397d3af870e651d58e65b", // Car dealership closed section key
       "5e42c71586f7747f245e1343", // ULTRA medical storage key
@@ -31,8 +40,45 @@ export class Keys {
       "5d08d21286f774736e7c94c3", // Shturman's stash key
       "63a39f6e64283b5e9c56b289", // Iron gate key
       "5eff09cd30a7dc22fd1ddfed", // Health Resort office key with a blue tape
+      "6398fd8ad3de3849057f5128", // Backup hideout key
     ], 
     [ // Uncommon
+      "5c1e2d1f86f77431e9280bee", // TerraGroup Labs weapon testing area key
+      "5ad7247386f7747487619dc3", // Goshan cash register key
+      "61aa5b7db225ac1ead7957c1", // USEC cottage first safe key
+      "64ccc246ff54fb38131acf29", // X-ray room key
+      "61aa5ba8018e9821b7368da9", // USEC cottage second safe key
+      "5c1e2a1e86f77431ea0ea84c", // TerraGroup Labs manager's office room key
+      "5a0eb6ac86f7743124037a28", // Cottage back door key
+      "64ce572331dd890873175115", // Aspect company office key
+      "63a39f08cd6db0635c197600", // Pinewood hotel room 215 key
+      "5ad5db3786f7743568421cce", // EMERCOM medical unit key
+      "63a399193901f439517cafb6", // Car dealership director's office room key
+      "5ad5d64486f774079b080af8", // NecrusPharm pharmacy key
+      "63a71e86b7f4570d3a293169", // Concordia apartment 64 office room key
+      "64ccc24de61ea448b507d34d", // TerraGroup security armory key
+      "64ccc1fe088064307e14a6f7", // Beluga restaurant director key
+      "5d80cbd886f77470855c26c2", // RB-MP13 key
+      "5d80cbd886f77470855c26c2", // RB-MP13 key
+      "63a39c7964283b5e9c56b280", // Concordia security room key
+      "5d8e3ecc86f774414c78d05e", // RB-GN key
+      "63a71ed21031ac76fe773c7f", // Financial institution small office key
+      "5d80c6fc86f774403a401e3c", // RB-TB key
+      "5d80c8f586f77440373c4ed0", // RB-OP key
+      "62987cb98081af308d7558c8", // Conference room key
+      "5d80cb5686f77440545d1286", // RB-PSV1 key
+      "5d95d6be86f77424444eb3a7", // RB-PSV2 key
+      "61a64492ba05ef10d62adcc1", // Rogue USEC stash key
+      "5d8e15b686f774445103b190", // HEP station storage room key
+      "61aa81fcb225ac1ead7957c3", // Rogue USEC workshop key
+      "63a71e781031ac76fe773c7d", // Concordia apartment 8 room key
+      "5d80cb3886f77440556dbf09", // RB-PSP1 key
+      "5d80ca9086f774403a401e40", // RB-MP21 key
+      "62987e26a77ec735f90a2995", // Water treatment plant storage room key
+      "5a0f006986f7741ffd2fe484", // Weather station safe key
+      "5a0448bc86f774736f14efa8", // Key to the closed premises of the Health Resort
+      "63a39e1d234195315d4020bd", // Primorsky 46-48 skybridge key
+      //"6391fcf5744e45201147080f", // Primorsky Ave apartment key
       "5d80ccdd86f77474f7575e02", // RB-ORB2 key
       "5d947d4e86f774447b415895", // RB-KSM key
       "5d8e0e0e86f774321140eb56", // RB-KPRL key
@@ -104,10 +150,25 @@ export class Keys {
       "5ad7217186f7746744498875", // OLI cash register key
       "61a64428a8c6aa1b795f0ba1", // Convenience store storage room key
       "5a0f045e86f7745b0f0d0e42", // Gas station safe key
-      //"66265d7be65f224b2e17c6aa", // USEC cottage room key BROKEN DO NOT ADD
+      "66265d7be65f224b2e17c6aa", // USEC cottage room key
       "5d80c78786f774403a401e3e", // RB-AK key
     ], 
     [ // Common
+      "5780d0532459777a5108b9a2", // Tarcone Director's office key
+      "61aa5b518f5e7a39b41416e2", // Merin car trunk key
+      "5d8e0db586f7744450412a42", // RB-KORL key
+      "5913915886f774123603c392", // Military checkpoint key
+      "5780d0652459777df90dcb74", // Gas station office key
+      "62a9cb937377a65d7b070cef", // Rogue USEC barrack key
+      "64ccc2111779ad6ba200a139", // Tarbank cash register department key
+      "591382d986f774465a6413a7", // Dorm room 105 key
+      "61a6444b8c141d68246e2d2f", // Hillside house key
+      "6582dc4b6ba9e979af6b79f4", // MVD academy entrance hall guard room key
+      "62a09ec84f842e1bd12da3f2", // Missam forklift key
+      "63a39c69af870e651d58e6aa", // Store manager's key
+      "63a39dfe3901f439517cafba", // Zmeisky 3 apartment 8 key
+      "63a39df18a56922e82001f25", // Zmeisky 5 apartment 20 key
+      "57a349b2245977762b199ec7", // Pumping station front door key
       "593858c486f774253a24cb52", // Pumping station back door key
       "591ae8f986f77406f854be45", // Yotota car key
       "5780d07a2459777de4559324", // Portable cabin key
