@@ -178,7 +178,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             }
 
         } else {
-            // Other custom gambling containers added by different mods
+            // Other containers
             //this.logger.info(`GET RANDOM LOOT CONTAINER LOOT`);
             // Get summary of loot from config
             const rewardContainerDetails = inventoryHelper.getRandomLootContainerRewardDetails(openedItem._tpl);

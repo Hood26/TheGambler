@@ -213,8 +213,7 @@ export class Gamble {
                     }
                 }
 
-            } else { // Reward  is a item
-                // Finish.........
+            } else { // Reward is an item
                 const reward_amount = this.mysteryContainer.getRewardAmount(name, i);
                 const stackable = this.mysteryContainer.getStackable(name, i);
 

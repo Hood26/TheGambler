@@ -1,11 +1,12 @@
 {
   // Note: The Config stores all values that are configurable to personal preferences. You can manipulate Mystery Container prices, stock, and odd here
+  // PS: Sorry for the long and ugly file, I will try to make it more readable in the future.
 
 
 
   // Debug Option: Every Mystery Box opening will post its item information in the console before opening.
   //
-  "debug": true, // Default is false
+  "debug": false, // Default is false
 
   // Custom Trader Settings
   //
@@ -199,8 +200,8 @@
   //   - Each Mystery Container has odds that you can manipulate yourself if you so choose.
   //    
   //     Example:
-  //        'Mystery Wallet' Odds:  3.0 + 6.0 + 10.0 + 16.0 + 25.0 = 60% chance at recieving a reward!
-  //                                                  100.0% - 60.0% = 40% chance at recieving nothing! 
+  //        'Mystery Wallet' Odds:  3.0 + 6.0 + 10.0 + 15.0 + 20.0 + 21 = 75% chance at recieving a reward!
+  //                                                  100.0% - 75.0% = 25% chance at recieving nothing! 
   //
   //            - Keep in mind this applies to ALL mystery containers 
   //
@@ -208,10 +209,19 @@
   //     Odds Definitions:
   //       - container_profit_percentage:
   //         - This is how profitable the mystery container will be, and is used as a calculation by the Automatic Price Balancer when determining the mystery container price.
-  //       - ammo_min:
+  //           Raising or lowering this value will manipulate the mystery container price in that direction
+  //         - Manipulating the odds will also alter the mystery container price
+
+  //       - ammo_min: (INTEGER ONLY)
   //         - The minimum amount of rounds generated during a mystery ammo opening, is also used as a calculation by the Automatic Price Balancer when determining the mystery ammo price
-  //       - ammo_max:
+  //       - ammo_max: (INTEGER ONLY)
   //         - The maximum amount of rounds generated during a mystery ammo opening, is also used as a calculation by the Automatic Price Balancer when determining the mystery ammo price
+
+
+
+  //      Loadout Mystery Container Odds:
+  //        - Currently the Mystery Loadout Container uses many of the below containers to generate a loadout, so manipulating any of these odds will also manipulate the loadout container generation in some way.
+  //          I plan on changing this in the future to have more specific odds for the loadout container, but for now, this is how it works.
   // 
   //
   "odds": {
@@ -224,22 +234,22 @@
     "wallet_common": 20.0,           // 50K Roubles
     "wallet_extra_common": 21.0,     // 25K Roubles
     "wallet_profit_percentage": 119, // Container Profitability 
-                                     // (Will not alter the price of the Mystery Wallet currently, (will fix in 0.2.2) but 119% is the average profit return per 500,000 simulated openings)
+                                     // (Will not alter the price of the Mystery Wallet currently, (will fix in 0.2.2) but 119% is the average profit return per 500,000 simulated openings @ 100,000 Roubles Price)
                                      //   - You can alter the price of the Mystery Wallet by changing the wallet_case_price
 
     // Mystery Keycard
     "keycard_red": 0.1,           // Red Keycard
     "keycard_green": 0.2,         // Green Keycard
-    "keycard_blue": 0.3,         // Blue Keycard
+    "keycard_blue": 0.3,          // Blue Keycard
     "keycard_violet": 0.65,       // Violet Keycard
-    "keycard_black": 1.0,        // Black Keycard
+    "keycard_black": 1.0,         // Black Keycard
     "keycard_yellow": 2.0,        // Yellow Keycard
     "keycard_blue_marking": 5.75, // Keycard with blue marking
     "keycard_21WS": 8.0,          // 21WS Keycard
     "keycard_11SR": 8.0,          // 11SR Keycard
     "keycard_access": 74.0,       // Access Keycard
     "keycard_profit_percentage": 124, // Container Profitability
-                                      //   - (Will not alter the price of the Mystery Keycard currently, (will fix in 0.2.2) but 124% is the average profit return per 500,000 simulated openings)
+                                      //   - (Will not alter the price of the Mystery Keycard currently, (will fix in 0.2.2) but 124% is the average profit return per 500,000 simulated openings @ 330,000 Roubles Price)
                                       //   - You can alter the price of the Mystery Keycard by changing the keycard_case_price
     
     // Mystery Key
@@ -263,7 +273,7 @@
     "medical_profit_percentage": 110, // Container Profitability DOESN'T WORK AS THIS CONTAINER IS BOUGHT BY BARTER
     
     // Mystery Food
-    "food_rare": 5.0,             // Rare Food
+    "food_rare": 5.0,              // Rare Food
     "food_uncommon": 35.0,         // Uncommon Food
     "food_common": 60.0,           // Common Food
     "food_profit_percentage": 120, // Container Profitability
@@ -271,7 +281,9 @@
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     // The following odds are for the Loadout Mystery Container
-
+    //
+    //
+    //
 
     // Loadout Food
     // Chance for receiving food with loadout
@@ -341,12 +353,12 @@
     "weapon_scav": 20.0,             // Scav Weapon
     "weapon_base": 9.5,              // Default Weapon
     "weapon_profit_percentage": 115, // Container Profitability DOESN'T WORK YET (SOON^TM)
-                                     //  - You can alter the price of the Mystery Weapon by changing the weapon_case_price
+                                     //  - You can alter the price of the Weapon Mystery Box by changing the weapon_case_price
 
     // Premium Weapon Mystery Box
     "premium_weapon_meta": 100.0,            // Rare Weapon
     "premium_weapon_profit_percentage": 115, // Container Profitability DOESN'T WORK YET (SOON^TM) 
-                                             //  - You can alter the price of the Mystery Weapon Box by changing the premium_weapon_case_price
+                                             //  - You can alter the price of the Premium Mystery Weapon Box by changing the premium_weapon_case_price
 
     // Mystery Helmet
     "helmet_extremely_rare": 0.35,   // Extremely Rare Helmet
@@ -554,7 +566,7 @@
   // Enable or Disable override prices
   // NOTE: If you use the Blacklist Mod and are satisfied with the flea market price of ammos and armors you can try setting this to 'false'
   "mystery_container_override_enable": true, // Default 'true' - Automatic Balancer will use prices from "mystery_container_override_price" if applicable
-                                             // If 'false'     - Automatic Balancer will only use items' flea market price or handbook price if item is blacklisted
+                                             // If 'false'     - Automatic Balancer will only use items' flea market price (or handbook price if item is blacklisted)
   
   "mystery_container_override_price": {
     "ammo": {                           // Priced in Roubles
