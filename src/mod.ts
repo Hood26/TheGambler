@@ -154,7 +154,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             useSortingTable : true
         };
 
-        const isSealedWeaponBox = containerDetails[1]._name.includes("event_container_airdrop"); // Default tarkov tagged container
+        const isSealedWeaponBox = containerDetails[1]._name.includes("event_container_airdrop"); // Default tarkov tagged containers
         const isGamblingContainer = containerDetails[1]._name.includes("gambling_"); // Gambler items are tagged with "gambling_container" identifier
 
         if(isSealedWeaponBox) {
