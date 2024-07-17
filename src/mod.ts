@@ -154,10 +154,11 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             useSortingTable : true
         };
 
-        const isSealedWeaponBox = containerDetails[1]._name.includes("event_container_airdrop"); // Default tarkov tagged containers
+        const isSealedWeaponBox = containerDetails[1]._name.includes("event_container_airdrop"); // default airdrop container
+        const isRefSealedWeaponBox = containerDetails[1]._name.includes("Arena_weaponcrate_blue_open"); // Ref Unlocked Weapons Container
         const isGamblingContainer = containerDetails[1]._name.includes("gambling_"); // Gambler items are tagged with "gambling_container" identifier
 
-        if(isSealedWeaponBox) {
+        if(isSealedWeaponBox || isRefSealedWeaponBox) { // currently iseRefSealedWeaponBox uses the same exact loot generation as isSealedWeaponBox in spt 3.9.1
             // Sealed Weapon container
             // Get summary of loot from config
             const containerSettings = inventoryHelper.getInventoryConfig().sealedAirdropContainer;

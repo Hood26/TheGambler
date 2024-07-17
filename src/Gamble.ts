@@ -133,21 +133,16 @@ export class Gamble {
                     
                 } else{
                     if (randomness[i]) {
-                        console.log('Randomness is true... Generating random roll...')
                         this.newGamble(current);
                     } else {
-                        console.log('Randomness is false... Using current roll...')
                         this.newGamble(current, roll);
                     }
                 }
 
                 if(current === 'helmet') {
-                    console.log('currentHeadsetCompatible = ' + this.currentHeadsetCompatible)
                     if (!this.currentHeadsetCompatible) {
-                        console.log('Helmet is not headset compatible... Skipping headset reward...')
                         i++; // Skip the headset reward
                     } else if (this.mysteryContainer.items['helmet'].headset_incompatible_helmets.includes(this.currentID)) {
-                        console.log('Helmet is headset incompatible and in headset_incompatible_helmets array... Skipping headset reward...')
                         i++; // Skip the headset reward
                     }
                 }
@@ -208,7 +203,6 @@ export class Gamble {
                     for(let i = 0; i < magazineCount; i++){
                         
                         tempRoll = this.randomUtil.getFloat(min, max); // random roll for each ammo reward
-                        console.log('Ammo Temp Roll: ' + tempRoll);
                         this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
                     }
                 }
