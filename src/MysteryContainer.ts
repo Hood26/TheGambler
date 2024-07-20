@@ -156,7 +156,6 @@ export class MysteryContainer {
     
         const createAndConfigureContainer = (name: string, item: any, isAmmo: boolean) => {
             const container = new Container(name);
-            //console.log(container.name)
             container.rarities = [...item.rarities];
             container.parent = item.parent;
             
@@ -171,6 +170,8 @@ export class MysteryContainer {
         this.items.ammo.names.forEach(name => createAndConfigureContainer(name, this.items.ammo.items[name], true));
     
         //console.log('THE CONTAINER!!!');
+        //console.log(containers);
+
         return containers;
     }
     
@@ -191,6 +192,9 @@ export class MysteryContainer {
         return this.containers[name].odds;
     }
 
+    public getRarity(name: string, index: number): string{
+        return this.containers[name].rarities[index];
+    }
     public getRarities(name: string): Array<string>{
         return this.containers[name].rarities;
     }

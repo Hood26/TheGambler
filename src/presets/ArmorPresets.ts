@@ -1,4 +1,8 @@
+import { Armors } from "src/containers/Armors";
+
 export class ArmorPresets {
+
+  public armors = new Armors();
   
   public commonArmor = [
     {

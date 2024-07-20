@@ -1,4 +1,8 @@
+import { Helmets } from "src/containers/Helmets";
+
 export class HelmetPresets {
+
+  public helmets = new Helmets();
   
   public helmet_extremely_rare = [
     {
@@ -129,7 +133,7 @@ export class HelmetPresets {
             },
             "parentId": "21450386f70fa5985f78144f",
             "slotId": "mod_equipment_001"
-        }
+        },
         {
             "_id": "2498ba8002fa314f79469379",
             "_tpl": "5a16b8a9fcdbcb00165aa6ca",

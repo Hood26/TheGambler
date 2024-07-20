@@ -2,18 +2,17 @@ import { DependencyContainer } from "tsyringe";
 import { HashUtil } from "@spt/utils/HashUtil";
 import { Item } from "@spt/models/eft/common/tables/IItem";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
-
-import { WeaponPresets } from './presets/WeaponPresets';
-import { ArmorPresets } from './presets/ArmorPresets';
-import { HelmetPresets } from './presets/HelmetPresets';
+import { Armors } from "./containers/armors";
+import { Helmets } from "./containers/helmets";
+import { Weapons } from "./containers/weapons";
 
 
 export class ItemCreator {
 
-    public Weapons: any;
-    public Helmets: any;
+    public armors: any;
+    public helmets: any;
+    public weapons: any;
     public headsetCompatible: boolean;
-    public Armors: any;
     public caliber: string;
     public magazine: string;
     public magazineMaxAmmo: number;
@@ -22,10 +21,10 @@ export class ItemCreator {
     private itemHelper: ItemHelper;
 
     constructor(container: DependencyContainer){
-        this.Weapons = new WeaponPresets();
-        this.Helmets = new HelmetPresets();
+        this.armors = new Armors();
+        this.helmets = new Helmets();
+        this.weapons = new Weapons();
         this.headsetCompatible = true;
-        this.Armors = new ArmorPresets();
         this.hashUtil = container.resolve<HashUtil>("HashUtil");
         this.itemHelper = container.resolve<ItemHelper>("ItemHelper");
     }
@@ -53,18 +52,15 @@ export class ItemCreator {
         return itemPreset
     }
 
-    // Returns a random helmet from Helmets
+    // Returns a random helmet from helmets
     private createHelmet(which: string): Item{
         let baseHelmet: Item[];
 
-        if(which == "common") {
-            baseHelmet = this.Helmets.helmet_common;
-        } else if (which == "uncommon") {
-            baseHelmet = this.Helmets.helmet_uncommon;
-        } else if (which == "rare") {
-            baseHelmet = this.Helmets.helmet_rare;
-        } else if (which == "extremely_rare") {
-            baseHelmet = this.Helmets.helmet_extremely_rare;
+        for(let i = 0; i <  this.helmets.rarities.length; i++){
+            if (which === this.helmets.rarities[i]) {
+                baseHelmet = this.helmets.presets[i];
+                break;
+            }
         }
 
         const randomHelmet = this.getRandomInt(baseHelmet.length);
@@ -73,16 +69,15 @@ export class ItemCreator {
         return this.generateItem(getItem);
     }
 
-    // Returns a random Armor from Armors
+    // Returns a random Armor from armors
     private createArmor(which: string): Item{
         let baseArmor: Item[];
 
-        if(which == "common") {
-            baseArmor = this.Armors.commonArmor;
-        } else if (which == "uncommon") {
-            baseArmor = this.Armors.uncommonArmor;
-        } else if (which == "rare") {
-            baseArmor = this.Armors.rareArmor;
+        for(let i = 0; i <  this.armors.rarities.length; i++){
+            if (which === this.armors.rarities[i]) {
+                baseArmor = this.armors.presets[i];
+                break;
+            }
         }
 
         const randomArmor = this.getRandomInt(baseArmor.length);
@@ -91,22 +86,16 @@ export class ItemCreator {
         return this.generateItem(getItem);
     }
 
-    // Returns a random gun from Weapons
+    // Returns a random gun from weapons
     private createGun(which: string): Item{
         let weaponBuilds: Item[];
 
-        //console.log('WHICH = ' + which)
 
-        if(which == "base") {
-            weaponBuilds = this.Weapons.weaponBaseBuilds;
-        } else if (which == "scav") {
-            weaponBuilds = this.Weapons.weaponScavBuilds;
-        } else if (which == "decent") {
-            weaponBuilds = this.Weapons.weaponDecentBuilds;
-        } else if (which == "meme") {
-            weaponBuilds = this.Weapons.weaponMemeBuilds;
-        } else if (which == "meta") {
-            weaponBuilds = this.Weapons.weaponMetaBuilds;
+        for(let i = 0; i <  this.weapons.rarities.length; i++){
+            if (which === this.weapons.rarities[i]) {
+                weaponBuilds = this.weapons.presets[i];
+                break;
+            }
         }
 
         const randomBuild = this.getRandomInt(weaponBuilds.length);

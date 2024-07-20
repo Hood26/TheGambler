@@ -315,7 +315,7 @@ export class Gamble {
         for(let i = 0; i < odds.length; i++) {
             if(roll <= odds[i]) {
                 const parent = this.mysteryContainer.getParent(name);
-                preset = item.createPreset(parent, this.mysteryContainer.getPreset(parent, i));
+                preset = item.createPreset(parent, this.mysteryContainer.getRarity(parent, i));
                 this.currentID = preset[0]._tpl;
 
                 if (name === 'weapon' || name === 'premium_weapon') {

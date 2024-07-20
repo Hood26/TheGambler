@@ -1,4 +1,8 @@
+import { Weapons } from "src/containers/Weapons";
+
 export class WeaponPresets {
+
+  public weapons = new Weapons();
 
   public weaponMetaBuilds = [
     {
