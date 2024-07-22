@@ -169,6 +169,82 @@ export class TraderHelper
         //console.log(premium_armor_cost)
         //console.log("THE SIMULATED CONTAINER PRICES...");
         //console.log(generatedMysteryContainerPrices);
+        
+        
+        
+        const GOLD_AKM_HANDGUARD_ID = 'gold_akm_handguard';
+        const GOLD_AKM_FOREGRIP_ID = 'gold_akm_foregrip';
+        const GOLD_AKM_STOCK_ID = 'gold_akm_stock';
+        const GOLD_AKM_MAGAZINE_ID = 'gold_akm_magazine';
+        const GOLD_AKM_RECEIVER_ID = 'gold_akm_receiver';
+        const GOLD_AKM_REAR_SIGHT_ID = 'gold_akm_rearsight';
+        const GOLD_AKM_CHARGE_HANDLE_ID = 'gold_akm_chargehandle';
+        const GOLD_AKM_SILENCER_ID = 'gold_akm_silencer';
+        const GOLD_AKM_PISTOLGRIP_ID = 'gold_akm_pistolgrip';
+        // FOR AK-74 gas tube (6P20 Sb.1-2)
+        //console.log(tables.templates.items['59c6633186f7740cf0493bb9'])
+        tables.templates.items['59d64ec286f774171d1e0a42']._props.Slots[0]._props.filters[0].Filter.push(GOLD_AKM_HANDGUARD_ID);
+        tables.templates.items['59d6088586f774275f37482f']._props.Slots[6]._props.filters[0].Filter.push(GOLD_AKM_STOCK_ID);
+        tables.templates.items['59d6088586f774275f37482f']._props.Slots[7]._props.filters[0].Filter.push(GOLD_AKM_MAGAZINE_ID);
+        tables.templates.items['59d6088586f774275f37482f']._props.Slots[4]._props.filters[0].Filter.push(GOLD_AKM_RECEIVER_ID);
+        tables.templates.items['59d6088586f774275f37482f']._props.Slots[2]._props.filters[0].Filter.push(GOLD_AKM_SILENCER_ID);
+        tables.templates.items['59d6088586f774275f37482f']._props.Slots[5]._props.filters[0].Filter.push(GOLD_AKM_REAR_SIGHT_ID);
+        tables.templates.items['59d6088586f774275f37482f']._props.Slots[8]._props.filters[0].Filter.push(GOLD_AKM_CHARGE_HANDLE_ID);
+        tables.templates.items['59d6088586f774275f37482f']._props.Slots[3]._props.filters[0].Filter.push(GOLD_AKM_PISTOLGRIP_ID);
+        // foregrip
+        tables.templates.items['59e0bed186f774156f04ce84']._props.Slots[0]._props.filters[0].Filter.push(GOLD_AKM_FOREGRIP_ID);
+
+
+
+        assortCreator.createSingleAssortItem(GOLD_AKM_HANDGUARD_ID)
+                                    .addStackCount(999)
+                                    .addMoneyCost(Money.ROUBLES, 5000)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(GOLD_AKM_FOREGRIP_ID)
+                                    .addStackCount(999)
+                                    .addMoneyCost(Money.ROUBLES, 5000)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(GOLD_AKM_STOCK_ID)
+                                    .addStackCount(999)
+                                    .addMoneyCost(Money.ROUBLES, 5000)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(GOLD_AKM_MAGAZINE_ID)
+                                    .addStackCount(999)
+                                    .addMoneyCost(Money.ROUBLES, 5000)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(GOLD_AKM_RECEIVER_ID)
+                                    .addStackCount(999)
+                                    .addMoneyCost(Money.ROUBLES, 5000)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(GOLD_AKM_REAR_SIGHT_ID)
+                                    .addStackCount(999)
+                                    .addMoneyCost(Money.ROUBLES, 5000)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(GOLD_AKM_CHARGE_HANDLE_ID)
+                                    .addStackCount(999)
+                                    .addMoneyCost(Money.ROUBLES, 5000)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(GOLD_AKM_SILENCER_ID)
+                                    .addStackCount(999)
+                                    .addMoneyCost(Money.ROUBLES, 5000)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(GOLD_AKM_PISTOLGRIP_ID)
+                                    .addStackCount(999)
+                                    .addMoneyCost(Money.ROUBLES, 5000)
+                                    .addLoyaltyLevel(1)
+                                    .export(tables.traders[baseJson._id]);
+
+
+
+
 
         if (config.price_stock['wallet_case_enable']){
             assortCreator.createSingleAssortItem(WALLET_GAMBLE_ID)

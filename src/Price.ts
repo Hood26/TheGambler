@@ -153,9 +153,9 @@ export class Price{
                 checker.push(currentContainerPrice);
 
                 if(currentPercentage < desiredPercentage) {
-                    currentContainerPrice -= 50;
+                    currentContainerPrice -= 500;
                 } else if ( currentPercentage > desiredPercentage) {
-                    currentContainerPrice += 50;
+                    currentContainerPrice += 500;
                 }
             }
             //console.log(`Current Container Price: ${currentContainerPrice} Current Percentage: ${currentPercentage} Desired Percentage: ${desiredPercentage}`);

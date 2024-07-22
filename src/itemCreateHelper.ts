@@ -19,6 +19,206 @@ export class ItemCreateHelper {
         // Resolve the CustomItemService container
         const customItem = container.resolve<CustomItemService>("CustomItemService");
 
+        const gold_akm_handguard: NewItemFromCloneDetails = {
+            itemTplToClone: "5c17664f2e2216398b5a7e3c",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/gold_akm_handguard.bundle",
+                    rcid: ""
+                }
+            },
+            parentId: "55818a104bdc2db9688b4569",
+            newId: "gold_akm_handguard", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Gold AKM Handguard",
+                    shortName: "Gold AKM Handguard",
+                    description: "This is a test..."
+                }
+            }
+        }
+
+        const gold_akm_foregrip: NewItemFromCloneDetails = {
+            itemTplToClone: "5c1cd46f2e22164bef5cfedb",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/gold_akm_foregrip.bundle",
+                    rcid: ""
+                }
+            },
+            parentId: "55818af64bdc2d5b648b4570",
+            newId: "gold_akm_foregrip", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Gold AKM Foregrip",
+                    shortName: "Gold AKM Foregrip",
+                    description: "This is a test..."
+                }
+            }
+        }
+
+        const gold_akm_stock: NewItemFromCloneDetails = {
+            itemTplToClone: "59d6514b86f774171a068a08",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/gold_akm_stock.bundle",
+                    rcid: ""
+                }
+            },
+            parentId: "55818a594bdc2db9688b456a",
+            newId: "gold_akm_stock", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Gold AKM Stock",
+                    shortName: "Gold AKM Stock",
+                    description: "This is a test..."
+                }
+            }
+        }
+
+        const gold_akm_magazine: NewItemFromCloneDetails = {
+            itemTplToClone: "59d625f086f774661516605d",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/gold_akm_magazine.bundle",
+                    rcid: ""
+                }
+            },
+            parentId: "5448bc234bdc2d3c308b4569",
+            newId: "gold_akm_magazine", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Gold AKM Magazine",
+                    shortName: "Gold AKM Magazine",
+                    description: "This is a test..."
+                }
+            }
+        }
+
+        const gold_akm_receiver: NewItemFromCloneDetails = {
+            itemTplToClone: "59d6507c86f7741b846413a2",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/gold_akm_receiver.bundle",
+                    rcid: ""
+                }
+            },
+            parentId: "55818a304bdc2db5418b457d",
+            newId: "gold_akm_receiver", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Gold AKM Receiver",
+                    shortName: "Gold AKM Receiver",
+                    description: "This is a test..."
+                }
+            }
+        }
+
+        const gold_akm_rearsight: NewItemFromCloneDetails = {
+            itemTplToClone: "59d650cf86f7741b846413a4",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/gold_akm_rearsight.bundle",
+                    rcid: ""
+                }
+            },
+            parentId: "55818ac54bdc2d5b648b456e",
+            newId: "gold_akm_rearsight", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Gold AKM Rear Sight",
+                    shortName: "Gold AKM Rear Sight",
+                    description: "This is a test..."
+                }
+            }
+        }
+
+        const gold_akm_chargehandle: NewItemFromCloneDetails = {
+            itemTplToClone: "6130ca3fd92c473c77020dbd",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/gold_akm_chargehandle.bundle",
+                    rcid: ""
+                }
+            },
+            parentId: "55818a6f4bdc2db9688b456b",
+            newId: "gold_akm_chargehandle", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Gold AKM Charging Handle",
+                    shortName: "Gold AKM Charging Handle",
+                    description: "This is a test..."
+                }
+            }
+        }
+
+        const gold_akm_silencer: NewItemFromCloneDetails = {
+            itemTplToClone: "593d489686f7745c6255d58a",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/gold_akm_silencer.bundle",
+                    rcid: ""
+                }
+            },
+            parentId: "550aa4cd4bdc2dd8348b456c",
+            newId: "gold_akm_silencer", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Gold AKM Silencer",
+                    shortName: "Gold AKM Silencer",
+                    description: "This is a test..."
+                }
+            }
+        }
+
+        const gold_akm_pistolgrip: NewItemFromCloneDetails = {
+            itemTplToClone: "5649ae4a4bdc2d1b2b8b4588",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/gold_akm_pistolgrip.bundle",
+                    rcid: ""
+                }
+            },
+            parentId: "55818a684bdc2ddd698b456d",
+            newId: "gold_akm_pistolgrip", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Gold AKM Pistol Grip",
+                    shortName: "Gold AKM Pistol Grip",
+                    description: "This is a test..."
+                }
+            }
+        }
+
+
+
         const sealedWeaponGamble: NewItemFromCloneDetails = {
             itemTplToClone: "648990314b4d2b31b63a46fc",
             //overrideProperties: {},
@@ -4302,6 +4502,15 @@ export class ItemCreateHelper {
             } 
         }
 
+        customItem.createItemFromClone(gold_akm_handguard);
+        customItem.createItemFromClone(gold_akm_foregrip);
+        customItem.createItemFromClone(gold_akm_stock);
+        customItem.createItemFromClone(gold_akm_magazine);
+        customItem.createItemFromClone(gold_akm_receiver);
+        customItem.createItemFromClone(gold_akm_chargehandle);
+        customItem.createItemFromClone(gold_akm_rearsight);
+        customItem.createItemFromClone(gold_akm_silencer);
+        customItem.createItemFromClone(gold_akm_pistolgrip);
         customItem.createItemFromClone(sealedWeaponGamble);
         customItem.createItem(walletGamble);
         customItem.createItem(keyGamble);

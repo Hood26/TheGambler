@@ -23,6 +23,8 @@
   //     Price and Stock Definitions:
   //       - container_case_enable:
   //         - True enables the Mystery Container to be sold from the trader, False removes the Mystery Container from being sold at all
+  //       - container_case_price:
+  //         - The price of the Mystery Container, will be overridden by the Automatic Price Balancer if applicable
   //
   "price_stock": {
     "wallet_case_price": 100000,
