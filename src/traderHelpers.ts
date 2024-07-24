@@ -162,6 +162,7 @@ export class TraderHelper
         
         const price = new Price(container, config, logger);
         const generatedMysteryAmmoPrices = price.generateMysteryAmmoPrices();
+        const generatedMysteryPresetPrices = price.generateMysteryContainerPresetPrices();
         const generatedMysteryContainerPrices = price.generateMysteryContainerPrices();
         //console.log(generatedMysteryContainerPrices)
         //console.log("THE SIMULATED AMMO PRICES...")

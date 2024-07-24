@@ -65,7 +65,7 @@
     "melee_case_stock": 15,
     "melee_case_enable": true,
 
-    "weapon_case_price": 120000,
+    "weapon_case_price": 250000,
     "weapon_case_stock": 8,
     "weapon_case_enable": true,
 
@@ -332,29 +332,29 @@
     "melee_rare": 2.0,              // Rare melee
     "melee_uncommon": 22.75,        // Uncommon melee
     "melee_common": 75.0,           // Common melee
-    "melee_profit_percentage": 135, // Container Profitability
+    "melee_profit_percentage": 115, // Container Profitability
 
     // Mystery Backpack
     "backpack_extremely_rare": 5.0, // Extremely Rare backpack
     "backpack_rare": 20.0,          // Rare backpack
     "backpack_uncommon": 35.0,      // Uncommon backpack
     "backpack_common": 40.0,        // Common backpack
-    "backpack_profit_percentage": 125, // Container Profitability
+    "backpack_profit_percentage": 120, // Container Profitability
 
     // Mystery Tactical Rig
     "rig_boss": 5.0,              // Extremely Rare rig
     "rig_late_wipe": 30.0,        // Rare rig
     "rig_early_wipe": 40.0,       // Uncommon rig
     "rig_scav": 25.0,             // Common rig
-    "rig_profit_percentage": 130, // Container Profitability
+    "rig_profit_percentage": 120, // Container Profitability
 
     // Weapon Mystery Box
-    "weapon_meta": 17.5,             // Meta Weapon
-    "weapon_decent": 45.3,           // Semi-modded Weapon
     "weapon_meme": 7.7,              // Meme Weapon
-    "weapon_scav": 20.0,             // Scav Weapon
-    "weapon_base": 9.5,              // Default Weapon
-    "weapon_profit_percentage": 115, // Container Profitability DOESN'T WORK YET (SOON^TM)
+    "weapon_meta": 17.3,             // Meta Weapon
+    "weapon_decent": 30.0,           // Semi-modded Weapon
+    "weapon_scav": 25.0,             // Scav Weapon
+    "weapon_base": 20.0,              // Default Weapon
+    "weapon_profit_percentage": 100, // Container Profitability DOESN'T WORK YET (SOON^TM)
                                      //  - You can alter the price of the Weapon Mystery Box by changing the weapon_case_price
 
     // Premium Weapon Mystery Box
@@ -678,6 +678,908 @@
       "628b9784bcf6e2659e09b8a2": 245000, // S&S Precision PlateFrame plate carrier (Goons Edition)
       "628cd624459354321c4b7fa2": 185000, // Tasmanian Tiger SK plate carrier (MultiCam Black)
       "5c0e625a86f7742d77340f62": 225000 // BNTI Zhuk body armor (Digital Flora)
+    },
+    "weapon": {
+      "5580223e4bdc2d1c128b457f": 30179, // MP-43-1C 12ga double-barrel shotgun
+      "5fc3f2d5900b1d5091531e57": 151318, // TDI KRISS Vector Gen.2 9x19 submachine gun
+      "5b3b713c5acfc4330140bd8d": 158152, // TT-33 7.62x25 TT pistol (Golden)
+      "579204f224597773d619e051": 79363, // Makarov PM (t) 9x18PM pistol
+      "5ae08f0a5acfc408fb1398a1": 68358, // Mosin 7.62x54R bolt-action rifle (Sniper)
+      "59d6088586f774275f37482f": 78000, // Kalashnikov AKM 7.62x39 assault rifle
+      "5b0bbe4e5acfc40dc528a72d": 115192, // DS Arms SA-58 7.62x51 assault rifle
+      "5447a9cd4bdc2dbd208b4567": 65730, // Colt M4A1 5.56x45 assault rifle
+      "57c44b372459772d2b39b8ce": 135210, // AS VAL 9x39 special assault rifle
+      "5c07c60e0db834002330051f": 33000 // ADAR 2-15 5.56x45 carbine
     }
-  }
+  },
+
+  // These are attachments that wil not be inclued during the mystery container price generation
+  // All of these attachments come with base weapons and will NOT be included in the weapon mystery container price
+  // Its probably best to leave this alone unless you know what you are doing
+  "skip_base_attachments": [
+    "5c0e2ff6d174af02a1659d4a", // AR-15 ADAR 2-15 wooden stock
+    "5aaa5e60e5b5b000140293d6", // 5.56x45 Magpul PMAG 10 GEN M3 STANAG 10-round magazine
+    "5c0e2f26d174af02a9625114", // AR-15 ADAR 2-15 5.56x45 upper receiver
+    "5c0faeddd174af02a962601f", // AR-15 ADAR 2-15 buffer tube
+    "5c0faf68d174af02a96260b8", // AR-15 ADAR 2-15 charging handle
+    "5c0e2f94d174af029f650d56", // AR-15 5.56x45 Molot Arms 406mm barrel
+    "5c0e2f5cd174af02a012cfc9", // AR-15 ADAR 2-15 wooden handguard
+    "5c0fafb6d174af02a96260ba", // AR-15 ADAR 2-15 5.56x45 flash hider
+    "5ae30e795acfc408fb139a0b", // M4A1 front sight with gas block
+    "6450ec2e7da7133e5a09ca96", // 9A-91 9x39 20-round magazine
+    "6450f21a3d52156624001fcf", // 9A-91 pistol grip
+    "6451167ad4928d46d30be3fd", // 9A-91 top-folding stock
+    "645122f6d4928d46d30be3ff", // 9A-91 9x39 barrel
+    "64527a263d52156624001fd7", // 9A-91 handguard retainer
+    "644675573d52156624001fc9", // 9A-91 handguard
+    "6450ec2e7da7133e5a09ca96", // 9A-91 9x39 20-round magazine
+    "6452519e3d52156624001fd5", // VSK-94 stock
+    "645123013d52156624001fd1", // VSK-94 9x39 barrel
+    "64527a263d52156624001fd7", // 9A-91 handguard retainer
+    "6448f2f6d4928d46d30be3f6", // VSK-94 handguard
+    "5b099ac65acfc400186331e1", // SA-58/FAL 7.62x51 20-round magazine
+    "5f2aa46b878ef416f538b567", // RFB 7.62x51 18 inch barrel
+    "5f2aa47a200e2c0ee46efa71", // RFB handguard
+    "5f2aa49f9b44de6b1b4e68d4", // RFB scope rail mount
+    "5f2aa4464b50c14bcf07acdb", // RFB thread protection cap
+    "5f2aa493cd375f14e15eea72", // RFB handguard rail mount
+    "55802f5d4bdc2dac148b458f", // AR-15 Magpul MOE pistol grip (Black)
+    "5aaa5dfee5b5b000140293d3", // 5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine
+    "5d4405aaa4b9361e6a4e6bd3", // TX-15 5.56x45 Lightweight upper receiver
+    "5649be884bdc2d79388b4577", // AR-15 Colt Carbine buffer tube
+    "5d44334ba4b9362b346d1948", // AR-15 Radian Weapons Raptor charging handle (Grey)
+    "5d440b93a4b9364276578d4b", // AR-15 5.56x45 18 inch barrel
+    "5d4405f0a4b9361e6a4e6bd9", // AR-15 Lone Star Ion Lite handguard
+    "5d4406a8a4b9361e4f6eb8b7", // AR-15 Magpul PRS GEN3 stock (Grey)
+    "5d440625a4b9361eec4ae6c5", // AR-15 Thunder Beast Arms 223CB 5.56x45 muzzle brake
+    "56eabcd4d2720b66698b4574", // AR-15 Daniel Defense MK12 Low Profile Gas Block
+    "5b7be47f5acfc400170e2dd2", // Magpul M-LOK 2.5 inch rail
+    "5b7be4895acfc400170e2dd5", // Magpul M-LOK 4.1 inch rail
+    "5d44064fa4b9361e4f6eb8b5", // Thunder Beast Arms Ultra 5 sound suppressor
+    "587e0531245977466077a0f7", // OP-SKS wooden stock
+    "634eff66517ccc8a960fc735", // OP-SKS 7.62x39 520mm barrel
+    "587df3a12459772c28142567", // SKS 7.62x39 10-round internal box magazine
+    "634f06262e5def262d0b30ca", // OP-SKS dust cover
+    "634f05a21f9f536910079b56", // OP-SKS upper band
+    "634f036a517ccc8a960fc746", // OP-SKS gas tube
+    "574db213245977459a2f3f5d", // SKS rear sight
+    "634f03d40384a3ba4f06f874", // OP-SKS gas tube cover
+    "5c5039be2e221602b177c9ff", // VPO-101 "Vepr-Hunter" gas tube
+    "5c503d0a2e221602b542b7ef", // VPO-101 "Vepr-Hunter" dust cover
+    "5c503b1c2e221602b21d6e9d", // VPO-101 "Vepr-Hunter" rear sight
+    "5c503af12e221602b177ca02", // VPO-101 "Vepr-Hunter" stock
+    "5c503ac82e221602b21d6e9a", // VPO-101 "Vepr-Hunter" 7.62x51 5-round magazine
+    "59e649f986f77411d949b246", // Molot Arms AKM-type gas tube
+    "59e61eb386f77440d64f5daf", // VPO-136 "Vepr-KM" 7.62x39 muzzle brake-compensator
+    "59e6318286f77444dd62c4cc", // AK bakelite pistol grip
+    "59e6449086f7746c9f75e822", // Molot Arms AKM-type dust cover
+    "59d650cf86f7741b846413a4", // AKM rear sight (6P1 Sb.2-1)
+    "59e6227d86f77440d64f5dc2", // VPO-136 "Vepr-KM" wooden stock
+    "5b1fd4e35acfc40018633c39", // AK 7.62x39 aluminium 10-round magazine
+    "59e6284f86f77440d569536f", // VPO-136 "Vepr-KM" wooden handguard
+    "59e649f986f77411d949b246", // Molot Arms AKM-type gas tube
+    "59e8a00d86f7742ad93b569c", // VPO-209 thread protector
+    "59e6318286f77444dd62c4cc", // AK bakelite pistol grip
+    "59e6449086f7746c9f75e822", // Molot Arms AKM-type dust cover
+    "59e8977386f77415a553c453", // VPO-209 rear sight
+    "59e89d0986f77427600d226e", // VPO-209 wooden stock
+    "5b1fd4e35acfc40018633c39", // AK 7.62x39 aluminium 10-round magazine
+    "59e898ee86f77427614bd225", // VPO-209 wooden handguard
+    "628b8d83717774443b15e248", // AK-545 SAG Mk. 2.1 gas tube
+    "5943eeeb86f77412d6384f6b", // AK-74 PWS CQB 74 5.45x39 muzzle brake
+    "5cf50850d7f00c056e24104c", // AK Strike Industries Enhanced Pistol Grip (Black)
+    "628b9a40717774443b15e9f2", // AK-545 SAG buffer tube
+    "55d480c04bdc2d1d4e8b456a", // AK-74 5.45x39 6L23 30-round magazine
+    "628b916469015a4e1711ed8d", // AK-545 SAG Mk.3 handguard
+    "55d4ae6c4bdc2d8b2f8b456e", // AR-15 High Standard M4SS Stock
+    "628b9be6cff66b70c002b14c", // AK-545 SAG railed dust cover
+    "628b9471078f94059a4b9bfb", // AK-545 SAG rear sight
+    "574dad8024597745964bf05c", // SKS TOZ wooden stock (56-A-231 Sb.5)
+    "634f02331f9f536910079b51", // SKS 7.62x39 520mm barrel
+    "587df3a12459772c28142567", // SKS 7.62x39 10-round internal box magazine
+    "634f05ca517ccc8a960fc748", // SKS dust cover
+    "634f04d82e5def262d0b30c6", // SKS upper band
+    "634f02d7517ccc8a960fc744", // SKS gas tube
+    "574db213245977459a2f3f5d", // SKS rear sight
+    "634f08a21f9f536910079b5a", // SKS gas tube cover
+    "628b8d83717774443b15e248", // AK-545 SAG Mk. 2.1 gas tube
+    "5ac7655e5acfc40016339a19", // AK-74M 5.45x39 muzzle brake-compensator (6P20 0-20)
+    "5cf50850d7f00c056e24104c", // AK Strike Industries Enhanced Pistol Grip (Black)
+    "628b9a40717774443b15e9f2", // AK-545 SAG buffer tube
+    "55d480c04bdc2d1d4e8b456a", // AK-74 5.45x39 6L23 30-round magazine
+    "628b916469015a4e1711ed8d", // AK-545 SAG Mk.3 handguard
+    "55d4ae6c4bdc2d8b2f8b456e", // AR-15 High Standard M4SS Stock
+    "628b9be6cff66b70c002b14c", // AK-545 SAG railed dust cover
+    "628b9471078f94059a4b9bfb", // AK-545 SAG rear sight
+    "6410745d5dd49d77bd078485", // AVT-40 wooden stock
+    "6410758c857473525b08bb77", // SVT-40 7.62x54R 625mm barrel
+    "6422e1ea3c0f06190302161a", // SVT-40 7.62x54R 10-round magazine
+    "64119cdbdcf48d656f0aa272", // SVT dust cover
+    "64119d1f2c6d6f921a0929f8", // SVT-40 7.62x54R muzzle brake
+    "64119d90dcf48d656f0aa275", // SVT-40 rear sight
+    "64119d672c6d6f921a0929fb", // SVT-40 front sight
+    "6410745d5dd49d77bd078485", // AVT-40 wooden stock
+    "6410758c857473525b08bb77", // SVT-40 7.62x54R 625mm barrel
+    "641074a07fd350b98c0b3f96", // AVT-40 7.62x54R 15-round magazine
+    "64119cdbdcf48d656f0aa272", // SVT dust cover
+    "64119d1f2c6d6f921a0929f8", // SVT-40 7.62x54R muzzle brake
+    "64119d90dcf48d656f0aa275", // SVT-40 rear sight
+    "64119d672c6d6f921a0929fb", // SVT-40 front sight
+    "5caf17c9ae92150b30006be1", // ASh-12 12.7x55 muzzle brake-compensator
+    "5caf1041ae92157c28402e3f", // ASh-12 12.7x55 10-round magazine
+    "5caf16a2ae92152ac412efbc", // ASh-12 folding front sight
+    "5cdaa99dd7f00c002412d0b2", // ASh-12 polymer handguard
+    "5caf1691ae92152ac412efb9", // ASh-12 rear sight carry handle
+    "5cda9bcfd7f00c0c0b53e900", // ASh-12 vertical foregrip
+    "57c44dd02459772d2e0ae249", // AS VAL 9x39 integral barrel-suppressor
+    "57c44f4f2459772d2c627113", // AS VAL dust cover
+    "57838f9f2459774a150289a0", // VSS 9x39 6L25 20-round magazine
+    "57c44fa82459772d2d75e415", // AS VAL pistol grip
+    "57c450252459772d28133253", // AS VAL skeleton stock
+    "57c44e7b2459772d28133248", // AS VAL rear sight
+    "55802f5d4bdc2dac148b458f", // AR-15 Magpul MOE pistol grip (Black)
+    "59d6272486f77466146386ff", // AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine
+    "606587a88900dc2d9a55b659", // Mk47 Resolute 7.62x39 upper receiver
+    "606587e18900dc2d9a55b65f", // CMMG buffer tube
+    "606587bd6d0bd7580617bacc", // Mk47 ambidextrous charging handle
+    "60658776f2cb2e02a42ace2b", // Mk47 254mm barrel
+    "6065880c132d4d12c81fd8da", // AR-10 CMMG MK3 RML9 9 inch M-LOK handguard
+    "5bc09a18d4351e003562b68e", // Magpul MBUS Gen2 flip-up rear sight
+    "606587d11246154cad35d635", // AR-15 CMMG RipStock buttstock
+    "6065c6e7132d4d12c81fd8e1", // AR-10 CMMG SV Brake 7.62x51 muzzle brake
+    "6065dc8a132d4d12c81fd8e3", // AR-10 CMMG low profile gas block
+    "5bc09a30d4351e00367fb7c8", // Magpul MBUS Gen2 flip-up front sight
+    "55d4b9964bdc2d1d4e8b456e", // AR-15 Colt A2 pistol grip
+    "55d4887d4bdc2d962f8b4570", // 5.56x45 Colt AR-15 STANAG 30-round magazine
+    "55d355e64bdc2d962f8b4569", // M4A1 5.56x45 upper receiver
+    "5649be884bdc2d79388b4577", // AR-15 Colt Carbine buffer tube
+    "55d44fd14bdc2d962f8b456e", // AR-15 Colt charging handle
+    "55d3632e4bdc2d972f8b4569", // AR-15 5.56x45 370mm barrel
+    "5ae30db85acfc408fb139a05", // AR-15 Colt M4 Carbine Length handguard
+    "5ae30bad5acfc400185c2dc4", // AR-15 rear sight carry handle
+    "55d4ae6c4bdc2d8b2f8b456e", // AR-15 High Standard M4SS Stock
+    "544a38634bdc2d58388b4568", // AR-15 Colt USGI A2 5.56x45 flash hider
+    "5ae30e795acfc408fb139a0b", // M4A1 front sight with gas block
+    "637f57a68d137b27f70c4968", // AR-15 Colt M4 Carbine Length lower handguard
+    "5b099b965acfc400186331e6", // SA-58 SAW-style pistol grip (Black)
+    "5b099ac65acfc400186331e1", // SA-58/FAL 7.62x51 20-round magazine
+    "5b099a9d5acfc47a8607efe7", // SA-58 quad rail handguard
+    "5b099a765acfc47a8607efe3", // SA-58 7.62x51 11 inch barrel
+    "5b0bc22d5acfc47a8607f085", // SA-58 Holland Type rear sight
+    "5b099bb25acfc400186331e8", // SA-58 Extreme Duty dust cover
+    "5b099bf25acfc4001637e683", // SA-58 buffer tube adapter
+    "5b099b7d5acfc400186331e4", // SA-58 3-Prong Trident 7.62x51 flash hider
+    "5649be884bdc2d79388b4577", // AR-15 Colt Carbine buffer tube
+    "56eabf3bd2720b75698b4569", // AR-15 Magpul MOE Carbine stock (Black)
+    "58d2912286f7744e27117493", // Magpul MOE Carbine rubber buttpad
+    "5c48a2c22e221602b313fb6c", // MDR pistol grip (FDE)
+    "55802d5f4bdc2dac148b458e", // 5.56x45 Magpul PMAG 30 GEN M3 W STANAG 30-round magazine
+    "5c48a14f2e2216152006edd7", // MDR handguard (FDE)
+    "5c48a2852e221602b21d5923", // MDR 5.56x45 16 inch barrel
+    "5c48a2a42e221602b66d1e07", // Desert Tech 5.56x45 flash hider
+    "5dcbd6dddbd3d91b3e5468de", // MDR pistol grip (Black)
+    "5a3501acc4a282000d72293a", // AR-10 7.62x51 Magpul PMAG 20 SR-LR GEN M3 20-round magazine
+    "5dcbd6b46ec07c0c4347a564", // MDR handguard (Black)
+    "5dcbe9431e1f4616d354987e", // MDR 7.62x51 16 inch barrel
+    "5dcbe965e4ed22586443a79d", // Desert Tech 7.62x51 flash hider
+    "55d4b9964bdc2d1d4e8b456e", // AR-15 Colt A2 pistol grip
+    "618168dc8004cc50514c34fc", // FN SCAR-H 7.62x51 20-round magazine
+    "6165adcdd3a39d50044c120f", // FN SCAR-H 7.62x51 upper receiver
+    "61816734d8e3106d9806c1f3", // FN SCAR folding polymer stock
+    "6181688c6c780c1e710c9b04", // FN SCAR charging handle
+    "6183b084a112697a4b3a6e6c", // FN SCAR-H 7.62x51 20 inch barrel
+    "61817865d3a39d50044c13a4", // FN SCAR flip-up rear sight
+    "61816df1d3a39d50044c139e", // FN SCAR bottom rail
+    "61816dfa6ef05c2ce828f1ad", // FN SCAR side rail
+    "618167528004cc50514c34f9", // FN SCAR retractable polymer stock
+    "618167441cb55961fa0fdc71", // FN SCAR cheek rest
+    "618178aa1cb55961fa0fdc80", // AAC SCAR-SD 51T 7.62x51 flash hider
+    "61816fcad92c473c770215cc", // FN SCAR flip-up front sight
+    "618167616ef05c2ce828f1a8", // FN SCAR rubber buttpad
+    "571659bb2459771fb2755a12", // AR-15 Damage Industries ECS pistol grip (FDE)
+    "6183d53f1cb55961fa0fdcda", // FN SCAR-H 7.62x51 20-round magazine (FDE)
+    "6165aeedfaa1272e431521e3", // FN SCAR-H 7.62x51 upper receiver (FDE)
+    "61825d06d92c473c770215de", // FN SCAR folding polymer stock (FDE)
+    "6181688c6c780c1e710c9b04", // FN SCAR charging handle
+    "6183b0711cb55961fa0fdcad", // FN SCAR-H 7.62x51 16 inch barrel
+    "61817865d3a39d50044c13a4", // FN SCAR flip-up rear sight
+    "61816df1d3a39d50044c139e", // FN SCAR bottom rail
+    "61816dfa6ef05c2ce828f1ad", // FN SCAR side rail
+    "61825d136ef05c2ce828f1cc", // FN SCAR retractable polymer stock (FDE)
+    "61825d24d3a39d50044c13af", // FN SCAR cheek rest (FDE)
+    "618178aa1cb55961fa0fdc80", // AAC SCAR-SD 51T 7.62x51 flash hider
+    "61816fcad92c473c770215cc", // FN SCAR flip-up front sight
+    "618167616ef05c2ce828f1a8", // FN SCAR rubber buttpad
+    "571659bb2459771fb2755a12", // AR-15 Damage Industries ECS pistol grip (FDE)
+    "61840d85568c120fdd2962a5", // FN SCAR-L 5.56x45 30-round magazine (FDE)
+    "618426d96c780c1e710c9b9f", // FN SCAR-L 5.56x45 upper receiver (FDE)
+    "61825d06d92c473c770215de", // FN SCAR folding polymer stock (FDE)
+    "6181688c6c780c1e710c9b04", // FN SCAR charging handle
+    "6183fd911cb55961fa0fdce9", // FN SCAR-L 5.56x45 14 inch barrel
+    "61817865d3a39d50044c13a4", // FN SCAR flip-up rear sight
+    "61816df1d3a39d50044c139e", // FN SCAR bottom rail
+    "61816dfa6ef05c2ce828f1ad", // FN SCAR side rail
+    "61825d136ef05c2ce828f1cc", // FN SCAR retractable polymer stock (FDE)
+    "61825d24d3a39d50044c13af", // FN SCAR cheek rest (FDE)
+    "618407a850224f204c1da549", // FN SCAR-L 5.56x45 flash hider
+    "61816fcad92c473c770215cc", // FN SCAR flip-up front sight
+    "618167616ef05c2ce828f1a8", // FN SCAR rubber buttpad
+    "55d4b9964bdc2d1d4e8b456e", // AR-15 Colt A2 pistol grip
+    "61840bedd92c473c77021635", // FN SCAR-L 5.56x45 30-round magazine
+    "618405198004cc50514c3594", // FN SCAR-L 5.56x45 upper receiver
+    "61816734d8e3106d9806c1f3", // FN SCAR folding polymer stock
+    "6181688c6c780c1e710c9b04", // FN SCAR charging handle
+    "6183fd9e8004cc50514c358f", // FN SCAR-L 5.56x45 18 inch barrel
+    "61817865d3a39d50044c13a4", // FN SCAR flip-up rear sight
+    "61816df1d3a39d50044c139e", // FN SCAR bottom rail
+    "61816dfa6ef05c2ce828f1ad", // FN SCAR side rail
+    "618167528004cc50514c34f9", // FN SCAR retractable polymer stock
+    "618167441cb55961fa0fdc71", // FN SCAR cheek rest
+    "618407a850224f204c1da549", // FN SCAR-L 5.56x45 flash hider
+    "61816fcad92c473c770215cc", // FN SCAR flip-up front sight
+    "618167616ef05c2ce828f1a8", // FN SCAR rubber buttpad
+    "5bb20e0ed4351e3bac1212dc", // AR-15 HK Battle Grip Beavertail pistol grip
+    "5c05413a0db834001c390617", // 5.56x45 HK Steel Maritime STANAG 30-round magazine
+    "5bb20d53d4351e4502010a69", // HK 416A5 5.56x45 upper receiver
+    "5bb20e58d4351e00320205d7", // HK Enhanced Tube buffer tube
+    "5bb20dbcd4351e44f824c04e", // AR-15 HK Extended Latch charging handle
+    "5bb20d9cd4351e00334c9d8a", // HK 416A5 5.56x45 14.5 inch barrel
+    "5bb20de5d4351e0035629e59", // HK 416A5 Quad Rail handguard
+    "5bb20e49d4351e3bac1212de", // HK 416A5 flip-up rear sight
+    "5bb20e70d4351e0035629f8f", // AR-15 HK Slim Line buttstock
+    "544a38634bdc2d58388b4568", // AR-15 Colt USGI A2 5.56x45 flash hider
+    "5bb20dcad4351e3bac1212da", // HK 416A5 low profile gas block
+    "62307b7b10d2321fa8741921", // HK G36 5.56x45 30-round magazine
+    "622f140da5958f63c67f1735", // HK G36 polymer stock
+    "622b38c56762c718e457e246", // HK G36 5.56x45 480mm barrel
+    "6231654c71b5bc3baa1078e5", // HK G36 6-vent handguard
+    "622f02437762f55aaa68ac85", // HK G36 magwell
+    "622b4d7df9cfc87d675d2ded", // HK G36 Hensoldt HKV 3x carry handle
+    "622f128cec80d870d349b4e8", // HK G36 5.56x45 4-prong flash hider
+    "622b327b267a1b13a44abea3", // HK G36 gas block
+    "622efbcb99f4ea1a4d6c9a15", // Hensoldt RV red dot sight
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5ac72e615acfc43f67248aa0", // AK-101 5.56x45 muzzle brake-compensator
+    "5649ade84bdc2d1b2b8b4587", // AK polymer pistol grip (6P1 Sb.8)
+    "5ac50da15acfc4001718d287", // AK-74M dust cover (6P34 0-1)
+    "5ac72e475acfc400180ae6fe", // AK-74M rear sight (6P20 Sb.2)
+    "5ac50c185acfc400163398d4", // AK-74M polymer stock (6P34 Sb.15)
+    "5ac66c5d5acfc4001718d314", // AK-101 5.56x45 6L29 30-round magazine
+    "5648b1504bdc2d9d488b4584", // AK-74 polymer handguard (6P20 Sb.9)
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5ac72e725acfc400180ae701", // AK-102 5.56x45 muzzle brake-compensator (6P44 0-20)
+    "5649ade84bdc2d1b2b8b4587", // AK polymer pistol grip (6P1 Sb.8)
+    "5ac50da15acfc4001718d287", // AK-74M dust cover (6P34 0-1)
+    "5ac733a45acfc400192630e2", // AK-105 rear sight (6P44 Sb.1-30)
+    "5ac50c185acfc400163398d4", // AK-74M polymer stock (6P34 Sb.15)
+    "5ac66c5d5acfc4001718d314", // AK-101 5.56x45 6L29 30-round magazine
+    "5648b1504bdc2d9d488b4584", // AK-74 polymer handguard (6P20 Sb.9)
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5ac72e7d5acfc40016339a02", // AK-103 7.62x39 muzzle brake-compensator
+    "5649ade84bdc2d1b2b8b4587", // AK polymer pistol grip (6P1 Sb.8)
+    "5ac50da15acfc4001718d287", // AK-74M dust cover (6P34 0-1)
+    "5ac72e475acfc400180ae6fe", // AK-74M rear sight (6P20 Sb.2)
+    "5ac50c185acfc400163398d4", // AK-74M polymer stock (6P34 Sb.15)
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
+    "5648b1504bdc2d9d488b4584", // AK-74 polymer handguard (6P20 Sb.9)
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5649aa744bdc2ded0b8b457e", // AK-74 5.45x39 muzzle brake-compensator (6P20 0-20)
+    "57e3dba62459770f0c32322b", // AK bakelite pistol grip (6P4 Sb.9)
+    "5649af094bdc2df8348b4586", // AK-74 dust cover (6P20 0-1)
+    "5649b0544bdc2d1b2b8b458a", // AK-74 rear sight (6P20 Sb.2)
+    "5649b1c04bdc2d16268b457c", // AK-74 wooden stock (6P20 Sb.5)
+    "564ca99c4bdc2d16268b4589", // AK-74 5.45x39 6L20 30-round magazine
+    "5648b0744bdc2d363b8b4578", // AK-74 wooden handguard (6P20 Sb.6)
+    "649ec107961514b22506b10c", // AK-12 gas tube
+    "649ec2af961514b22506b10f", // AK-12 5.45x39 muzzle brake
+    "5beec8ea0db834001a6f9dbf", // AK-12 pistol grip
+    "649ec2f3961514b22506b111", // AK-12 dust cover
+    "649ec87d8007560a9001ab36", // AK-12 buffer tube
+    "649ec30cb013f04a700e60fb", // AK-12 5.45x39 early model 30-round magazine
+    "649ec127c93611967b034957", // AK-12 handguard
+    "649ec2da59cbb3c813042dca", // AK-12 rear sight base
+    "5beec8c20db834001d2c465c", // AK-12 stock
+    "5beecbb80db834001d2c465e", // RPK-16 handguard rail
+    "649ec2cec93611967b03495e", // AK-12 rear sight
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5ac72e945acfc43f3b691116", // AK-105 5.45x39 muzzle brake-compensator (6P44 0-20)
+    "5649ade84bdc2d1b2b8b4587", // AK polymer pistol grip (6P1 Sb.8)
+    "5ac50da15acfc4001718d287", // AK-74M dust cover (6P34 0-1)
+    "5ac733a45acfc400192630e2", // AK-105 rear sight (6P44 Sb.1-30)
+    "5ac50c185acfc400163398d4", // AK-74M polymer stock (6P34 Sb.15)
+    "55d480c04bdc2d1d4e8b456a", // AK-74 5.45x39 6L23 30-round magazine
+    "5648b1504bdc2d9d488b4584", // AK-74 polymer handguard (6P20 Sb.9)
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5649aa744bdc2ded0b8b457e", // AK-74 5.45x39 muzzle brake-compensator (6P20 0-20)
+    "5649ad3f4bdc2df8348b4585", // AK bakelite pistol grip (6P1 Sb.8V)
+    "5649af094bdc2df8348b4586", // AK-74 dust cover (6P20 0-1)
+    "5649b0544bdc2d1b2b8b458a", // AK-74 rear sight (6P20 Sb.2)
+    "5649b1c04bdc2d16268b457c", // AK-74 wooden stock (6P20 Sb.5)
+    "564ca99c4bdc2d16268b4589", // AK-74 5.45x39 6L20 30-round magazine
+    "5648b0744bdc2d363b8b4578", // AK-74 wooden handguard (6P20 Sb.6)
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5ac7655e5acfc40016339a19", // AK-74M 5.45x39 muzzle brake-compensator (6P20 0-20)
+    "5649ade84bdc2d1b2b8b4587", // AK polymer pistol grip (6P1 Sb.8)
+    "5ac50da15acfc4001718d287", // AK-74M dust cover (6P34 0-1)
+    "5ac72e475acfc400180ae6fe", // AK-74M rear sight (6P20 Sb.2)
+    "5ac50c185acfc400163398d4", // AK-74M polymer stock (6P34 Sb.15)
+    "55d480c04bdc2d1d4e8b456a", // AK-74 5.45x39 6L23 30-round magazine
+    "5648b1504bdc2d9d488b4584", // AK-74 polymer handguard (6P20 Sb.9)
+    "59d64ec286f774171d1e0a42", // AKM gas tube (6P1 Sb.1-2)
+    "59d64fc686f774171b243fe2", // AKM 7.62x39 muzzle brake-compensator (6P1 0-14)
+    "5a0071d486f77404e23a12b2", // AKM wooden pistol grip
+    "59d6507c86f7741b846413a2", // AKM dust cover (6P1 0-1)
+    "59d650cf86f7741b846413a4", // AKM rear sight (6P1 Sb.2-1)
+    "59ff3b6a86f77477562ff5ed", // AKMS shoulder piece (6P4 Sb.1-19)
+    "5a0060fc86f7745793204432", // AKMS 7.62x39 aluminium 30-round magazine
+    "59d64f2f86f77417193ef8b3", // AKM wooden handguard (6P1 Sb.6-1)
+    "59d64ec286f774171d1e0a42", // AKM gas tube (6P1 Sb.1-2)
+    "59d64fc686f774171b243fe2", // AKM 7.62x39 muzzle brake-compensator (6P1 0-14)
+    "59e62cc886f77440d40b52a1", // AKM bakelite pistol grip
+    "59d6507c86f7741b846413a2", // AKM dust cover (6P1 0-1)
+    "59d650cf86f7741b846413a4", // AKM rear sight (6P1 Sb.2-1)
+    "59d6514b86f774171a068a08", // AKM wooden stock (6P1 Sb.5)
+    "5a01c29586f77474660c694c", // AK 7.62x39 6L10 30-round magazine
+    "59d64f2f86f77417193ef8b3", // AKM wooden handguard (6P1 Sb.6-1)
+    "59d64ec286f774171d1e0a42", // AKM gas tube (6P1 Sb.1-2)
+    "59d64fc686f774171b243fe2", // AKM 7.62x39 muzzle brake-compensator (6P1 0-14)
+    "59e62cc886f77440d40b52a1", // AKM bakelite pistol grip
+    "59d6507c86f7741b846413a2", // AKM dust cover (6P1 0-1)
+    "59d650cf86f7741b846413a4", // AKM rear sight (6P1 Sb.2-1)
+    "59d6514b86f774171a068a08", // AKM wooden stock (6P1 Sb.5)
+    "59d625f086f774661516605d", // AK 7.62x39 30-round magazine (issued '55 or later)
+    "59d64f2f86f77417193ef8b3", // AKM wooden handguard (6P1 Sb.6-1)
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5649aa744bdc2ded0b8b457e", // AK-74 5.45x39 muzzle brake-compensator (6P20 0-20)
+    "57e3dba62459770f0c32322b", // AK bakelite pistol grip (6P4 Sb.9)
+    "5649af094bdc2df8348b4586", // AK-74 dust cover (6P20 0-1)
+    "5649b0544bdc2d1b2b8b458a", // AK-74 rear sight (6P20 Sb.2)
+    "5ab626e4d8ce87272e4c6e43", // AKS-74 metal skeletonized stock (6P21 Sb.5)
+    "564ca99c4bdc2d16268b4589", // AK-74 5.45x39 6L20 30-round magazine
+    "5648b0744bdc2d363b8b4578", // AK-74 wooden handguard (6P20 Sb.6)
+    "59d64ec286f774171d1e0a42", // AKM gas tube (6P1 Sb.1-2)
+    "59e61eb386f77440d64f5daf", // VPO-136 "Vepr-KM" 7.62x39 muzzle brake-compensator
+    "5a0071d486f77404e23a12b2", // AKM wooden pistol grip
+    "59d6507c86f7741b846413a2", // AKM dust cover (6P1 0-1)
+    "59d650cf86f7741b846413a4", // AKM rear sight (6P1 Sb.2-1)
+    "5abcd472d8ce8700166032ae", // AKMSN shoulder piece (6P4N Sb.1-19)
+    "5a0060fc86f7745793204432", // AKMS 7.62x39 aluminium 30-round magazine
+    "59d64f2f86f77417193ef8b3", // AKM wooden handguard (6P1 Sb.6-1)
+    "57e3dba62459770f0c32322b", // AK bakelite pistol grip (6P4 Sb.9)
+    "57dc347d245977596754e7a1", // AKS-74U metal skeleton stock (6P26 Sb.5)
+    "564ca99c4bdc2d16268b4589", // AK-74 5.45x39 6L20 30-round magazine
+    "57dc324a24597759501edc20", // AKS-74U 5.45x39 muzzle brake (6P26 0-20)
+    "57dc334d245977597164366f", // AKS-74U dust cover (6P26 Sb.7)
+    "59d36a0086f7747e673f3946", // AKS-74U gas tube (6P26 Sb.1-2)
+    "57dc32dc245977596d4ef3d3", // AKS-74U wooden handguard (6P26 Sb.6)
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5649aa744bdc2ded0b8b457e", // AK-74 5.45x39 muzzle brake-compensator (6P20 0-20)
+    "57e3dba62459770f0c32322b", // AK bakelite pistol grip (6P4 Sb.9)
+    "5649af094bdc2df8348b4586", // AK-74 dust cover (6P20 0-1)
+    "5649b0544bdc2d1b2b8b458a", // AK-74 rear sight (6P20 Sb.2)
+    "5ab626e4d8ce87272e4c6e43", // AKS-74 metal skeletonized stock (6P21 Sb.5)
+    "564ca99c4bdc2d16268b4589", // AK-74 5.45x39 6L20 30-round magazine
+    "5648b0744bdc2d363b8b4578", // AK-74 wooden handguard (6P20 Sb.6)
+    "5649ad3f4bdc2df8348b4585", // AK bakelite pistol grip (6P1 Sb.8V)
+    "57dc347d245977596754e7a1", // AKS-74U metal skeleton stock (6P26 Sb.5)
+    "564ca99c4bdc2d16268b4589", // AK-74 5.45x39 6L20 30-round magazine
+    "57dc324a24597759501edc20", // AKS-74U 5.45x39 muzzle brake (6P26 0-20)
+    "57dc334d245977597164366f", // AKS-74U dust cover (6P26 Sb.7)
+    "59d36a0086f7747e673f3946", // AKS-74U gas tube (6P26 Sb.1-2)
+    "57dc32dc245977596d4ef3d3", // AKS-74U wooden handguard (6P26 Sb.6)
+    "5649ad3f4bdc2df8348b4585", // AK bakelite pistol grip (6P1 Sb.8V)
+    "57dc347d245977596754e7a1", // AKS-74U metal skeleton stock (6P26 Sb.5)
+    "564ca99c4bdc2d16268b4589", // AK-74 5.45x39 6L20 30-round magazine
+    "57ffb0e42459777d047111c5", // AKS-74U PBS-4 5.45x39 sound suppressor
+    "5839a7742459773cf9693481", // AKS-74UB dust cover
+    "59d36a0086f7747e673f3946", // AKS-74U gas tube (6P26 Sb.1-2)
+    "57dc32dc245977596d4ef3d3", // AKS-74U wooden handguard (6P26 Sb.6)
+    "62e7c98b550c8218d602cbb4", // Steyr AUG 5.56x45 30-round magazine
+    "62e7c880f68e7a0676050c7c", // Steyr AUG A1 charging handle
+    "62ea7c793043d74a0306e19f", // Steyr AUG A1 STG77 1.5x optic sight
+    "62e7c7f3c34ea971710c32fc", // Steyr AUG A1 5.56x45 20 inch barrel
+    "630f2872911356c17d06abc5", // Steyr AUG A1 5.56x45 closed flash hider
+    "634e61b0767cb15c4601a877", // Steyr AUG vertical foregrip
+    "652911675ae2ae97b80fdf3c", // AR-15 SIG M400 Reduced Angle Pistol Grip (Coyote Tan)
+    "65293c38fc460e50a509cb25", // AR-10 7.62x51 Lancer L7AWM 20-round magazine
+    "6529119424cbe3c74a05e5bb", // MCX SPEAR 6.8x51 upper receiver
+    "6529348224cbe3c74a05e5c4", // MCX/MPX Stock Locking Hinge Assembly
+    "6529109524cbe3c74a05e5b7", // MCX SPEAR charging handle
+    "6567e751a715f85433025998", // SIG ALPHA4 30mm ring scope mount
+    "652910565ae2ae97b80fdf35", // MCX SPEAR 6.8x51 330mm barrel
+    "652910ef50dc782999054b97", // MCX SPEAR 11 inch M-LOK handguard
+    "6529366450dc782999054ba0", // MCX/MPX folding stock adapter buffer tube (Coyote Tan)
+    "6567e7681265c8a131069b0f", // SIG TANGO6T 1-6x24 30mm riflescope
+    "6529113b5ae2ae97b80fdf39", // MCX SPEAR Clutch-Lok QD 6.8x51 Shouldered Flash Hider
+    "652910bc24cbe3c74a05e5b9", // MCX SPEAR Adjustable Gas Piston
+    "652911e650dc782999054b9d", // MCX SPEAR SLX68-MG-QD 6.8x51 sound suppressor
+    "6529370c405a5f51dd023db8", // AR-15 Magpul MOE SL-K buttstock (Coyote Tan)
+    "5fbcbd6c187fea44d52eda14", // MCX pistol grip
+    "55d4887d4bdc2d962f8b4570", // 5.56x45 Colt AR-15 STANAG 30-round magazine
+    "5fbcc3e4d6fa9c00c571bb58", // MCX GEN1 .300 BLK upper receiver
+    "5fbcc437d724d907e2077d5c", // MPX/MCX lightweight stock
+    "5fbcc640016cce60e8341acc", // MCX charging handle
+    "5fbbfacda56d053a3543f799", // MCX .300 BLK 229mm barrel
+    "5fbc226eca32ed67276c155d", // MCX GEN1 KeyMod 8 inch handguard
+    "5fc0fa957283c4046c58147e", // MCX flip-up rear sight
+    "5fbc22ccf24b94483f726483", // SIG Sauer Taper-LOK 7.62x51/.300 BLK muzzle adapter
+    "5fbc210bf24b94483f726481", // MCX gas block
+    "5fc0fa362770a0045c59c677", // MCX flip-up front sight
+    "5fbcbd10ab884124df0cd563", // SIG Sauer Two Port Brake 7.62x51 muzzle brake
+    "62e7c98b550c8218d602cbb4", // Steyr AUG 5.56x45 30-round magazine
+    "62ebbc53e3c1e1ec7c02c44f", // Steyr AUG A3 charging handle
+    "62e7c72df68e7a0676050c77", // Steyr AUG A3 5.56x45 receiver
+    "62e7c7f3c34ea971710c32fc", // Steyr AUG A1 5.56x45 20 inch barrel
+    "62ebd290c427473eff0baafb", // Steyr AUG A3 M1 1.5x optic sight
+    "630f28f0cadb1fe05e06f004", // Steyr AUG A3 5.56x45 closed flash hider
+    "634e61b0767cb15c4601a877", // Steyr AUG vertical foregrip
+    "5beec8ea0db834001a6f9dbf", // AK-12 pistol grip
+    "5beec91a0db834001961942d", // RPK-16 dust cover
+    "5beec8b20db834001961942a", // RPK-16 buffer tube
+    "5beec3e30db8340019619424", // RPK-16 handguard
+    "5beec1bd0db834001e6006f3", // RPK-16 5.45x39 15 inch barrel
+    "5beec9450db83400970084fd", // RPK-16 rear sight base
+    "5beec8c20db834001d2c465c", // AK-12 stock
+    "5beecbb80db834001d2c465e", // RPK-16 handguard rail
+    "5beecbb80db834001d2c465e", // RPK-16 handguard rail
+    "5beec3420db834001b095429", // RPK-16 5.45x39 muzzle brake-compensator
+    "5bf3f59f0db834001a6fa060", // RPK-16 rear sight
+    "57838f0b2459774a256959b2", // VSS 9x39 6L24 10-round magazine
+    "57838c962459774a1651ec63", // VSS 9x39 integral barrel-suppressor
+    "578395402459774a256959b5", // VSS dust cover
+    "578395e82459774a0e553c7b", // VSS wooden stock
+    "57838e1b2459774a256959b1", // VSS rear sight
+    "646371779f5f0ea59a04c204", // PK pistol grip
+    "646372518610c40fc20204e8", // PK 7.62x54R 100-round box
+    "646371a9f2404ab67905c8e6", // PKM wooden stock
+    "646371faf2404ab67905c8e9", // PKM 7.62x54R 658mm barrel
+    "6464d870bb2c580352070cc4", // PK bipod
+    "6492fb8253acae0af00a29b6", // PK rear sight
+    "6492efb8cfcf7c89e701abf3", // PKM 7.62x54R slotted flash hider
+    "64cbad529f7cf7f75c077fd5", // PK pistol grip (Black)
+    "646372518610c40fc20204e8", // PK 7.62x54R 100-round box
+    "6492e3a97df7d749100e29ee", // PKP polymer stock
+    "64639a9aab86f8fd4300146c", // PKP 7.62x54R 658mm barrel
+    "6464d870bb2c580352070cc4", // PK bipod
+    "6492fb8253acae0af00a29b6", // PK rear sight
+    "6513f0a194c72326990a3868", // RPD 7.62x39 "Buben" 100-round box
+    "6513f1798cb24472490ee331", // RPD wooden stock
+    "6513eff1e06849f06c0957d4", // RPD 7.62x39 520mm barrel
+    "6513f05a94c72326990a3866", // RPD wooden handguard
+    "6513f153e63f29908d0ffaba", // RPD rear sight
+    "6513f13a8cb24472490ee32f", // RPD wooden pistol grip
+    "6513f037e06849f06c0957d7", // RPD bipod
+    "6513f0f5e63f29908d0ffab8", // RPD barrel thread protector
+    "6513f0a194c72326990a3868", // RPD 7.62x39 "Buben" 100-round box
+    "6513f1798cb24472490ee331", // RPD wooden stock
+    "6513eff1e06849f06c0957d4", // RPD 7.62x39 520mm barrel
+    "6513f05a94c72326990a3866", // RPD wooden handguard
+    "6513f153e63f29908d0ffaba", // RPD rear sight
+    "6513f13a8cb24472490ee32f", // RPD wooden pistol grip
+    "6513f037e06849f06c0957d7", // RPD bipod
+    "6513f0f5e63f29908d0ffab8", // RPD barrel thread protector
+    "5a339805c4a2826c6e06d73d", // AR-15 Magpul MIAD pistol grip (FDE)
+    "5a3501acc4a282000d72293a", // AR-10 7.62x51 Magpul PMAG 20 SR-LR GEN M3 20-round magazine
+    "5a33ca0fc4a282000d72292f", // AR-15 Colt A2 buffer tube
+    "5a329052c4a28200741e22d3", // R11 RSASS handguard
+    "5a34fae7c4a2826c6e06d760", // AR-10 7.62x51 22 inch barrel
+    "5a33cae9c4a28232980eb086", // AR-15 Magpul PRS GEN2 stock (FDE)
+    "5a34fd2bc4a282329a73b4c5", // AR-10 AAC Blackout 51T 7.62x51 flash hider
+    "5a34fbadc4a28200741e230a", // AR-10 JP Enterprises Gas System-6
+    "55d4b9964bdc2d1d4e8b456e", // AR-15 Colt A2 pistol grip
+    "5df8f541c41b2312ea3335e3", // AR-10 7.62x51 KAC 20-round steel magazine
+    "5649be884bdc2d79388b4577", // AR-15 Colt Carbine buffer tube
+    "5df8e4080b92095fd441e594", // SR-25 7.62x51 upper receiver
+    "5df8e053bb49d91fb446d6a6", // AR-10 KAC charging handle
+    "5ae30c9a5acfc408fb139a03", // AR-15 LMT SOPMOD stock
+    "5df917564a9f347bc92edca3", // SR-25 7.62x51 16 inch barrel
+    "5df916dfbb49d91fb446d6b9", // AR-10 KAC URX 4 14.5 inch handguard
+    "5dfa3d7ac41b2312ea33362a", // KAC Folding Micro rear sight
+    "5dfa3cd1b33c0951220c079b", // AR-10 KAC QDC 7.62x51 Flash Suppressor Kit
+    "5dfa3d45dfc58d14537c20b0", // AR-10 KAC Low Profile Gas Block
+    "5dfa3d950dee1b22f862eae0", // KAC Folding Micro front sight
+    "64b9e2037fdfb81df81e3c25", // M1A 7.62x51 10-round magazine
+    "5aaf8e43e5b5b00015693246", // M1A SOCOM 16 stock
+    "5aaf9d53e5b5b00015042a52", // M1A 7.62x51 16 inch barrel
+    "5abcbb20d8ce87001773e258", // M14 SA Enlarged Military Aperture rear sight
+    "5ab24ef9e5b5b00fe93c9209", // M1A SOCOM 16 upper part
+    "5aafa1c2e5b5b00015042a56", // M1A SOCOM 16 7.62x51 muzzle brake-compensator
+    "5aafa49ae5b5b00015042a58", // M1A SA XS Post .125 Blade front sight
+    "5c471be12e221602b66cd9ac", // SVDS pistol grip
+    "5c471c442e221602b542a6f8", // SVD 7.62x54R 10-round magazine
+    "5c471b5d2e221602b21d4e14", // SVDS polymer stock
+    "5c471cb32e221602b177afaa", // SVDS 7.62x54R 22 inch barrel
+    "5c471c2d2e22164bef5d077f", // SVDS upper band
+    "5c471bd12e221602b4129c3a", // SVDS dust cover
+    "5c471bfc2e221602b21d4e17", // SVDS 7.62x54R muzzle brake-compensator
+    "5c471c842e221615214259b5", // SVDS gas tube
+    "5c471c6c2e221602b66cd9ae", // SVDS polymer handguard
+    "5c471b7e2e2216152006e46c", // SVDS rear sight
+    "5c471ba12e221602b3137d76", // SVDS front sight
+    "57c55efc2459772d2c6271e7", // Hogue OverMolded Rubber Grip (Black)
+    "5fc23426900b1d5091531e15", // Mk-18 .338 LM 10-round magazine
+    "5649be884bdc2d79388b4577", // AR-15 Colt Carbine buffer tube
+    "5fc278107283c4046c581489", // Mk-18 .338 LM upper receiver
+    "5fc2369685fd526b824a5713", // AR-15 B5 Systems Precision stock
+    "5fc23678ab884124df0cd590", // Mk-18 .338 LM 24 inch barrel
+    "5fc235db2770a0045c59c683", // Mk-18 18 inch handguard
+    "5fc23636016cce60e8341b05", // SilencerCo AC-858 ASR .338 LM muzzle brake
+    "5fc2360f900b1d5091531e19", // Mk-18 gas block
+    "6193dcd0f8ee7e52e4210a28", // AR-15 HK Battle Grip Beavertail pistol grip (RAL 8000)
+    "617131a4568c120fdd29482d", // HK417/G28 7.62x51 20-round magazine
+    "617153016c780c1e710c9a2f", // HK G28 buffer tube
+    "61713a8fd92c473c770214a4", // HK G28 7.62x51 upper receiver
+    "61702d8a67085e45ef140b24", // HK417 E1 extended charging handle
+    "617155ee50224f204c1da3cd", // HK417 Adjustable Buttstock
+    "61713cc4d8e3106d9806c109", // Recknagel Era-Tac 34mm ring scope mount
+    "61702be9faa1272e431522c3", // HK417 7.62x51 16.5 inch barrel
+    "61703001d92c473c77021497", // HK417 Extended Free Float handguard with flip-up front sight
+    "5bb20e49d4351e3bac1212de", // HK 416A5 flip-up rear sight
+    "61715e7e67085e45ef140b33", // HK Adjustable Buttstock cheek rest
+    "61714eec290d254f5e6b2ffc", // Schmidt & Bender PM II 3-12x50 34mm riflescope
+    "61714b2467085e45ef140b2c", // Recknagel Era-Tac Sunshade mount for Aimpoint T-1 sights
+    "61713308d92c473c770214a0", // HK Prolonged 7.62x51 flash hider
+    "61702f1b67085e45ef140b26", // HK417 low profile gas block
+    "619386379fb0c665d5490dbe", // HK Sturmgriff foregrip
+    "58d399e486f77442e0016fe7", // Aimpoint Micro T-1 reflex sight
+    "6171367e1cb55961fa0fdb36", // HK G28 B&T QD 7.62x51 sound suppressor
+    "559ba5b34bdc2d1f1a8b4582", // SV-98 7.62x54R 10-round magazine
+    "56083e1b4bdc2dc8488b4572", // SV-98 rear sight
+    "56083eab4bdc2d26448b456a", // SV-98 anti-heat ribbon
+    "560e620e4bdc2d724b8b456b", // SV-98 7.62x54R muzzle device
+    "61faa91878830f069b6b7967", // SV-98 wooden stock
+    "56ea8222d2720b69698b4567", // SV-98 bipod
+    "5888988e24597752fe43a6fa", // DVL-10 7.62x51 10-round magazine
+    "5888956924597752983e182d", // DVL-10 M2 7.62x51 660mm barrel
+    "57c55f172459772d27602381", // Hogue OverMolded Rubber Grip (Olive Drab)
+    "58889d0c2459775bc215d981", // DVL-10 Lobaev Arms stock
+    "5888996c24597754281f9419", // DVL-10 M2 7.62x51 muzzle brake
+    "5888976c24597754281f93f5", // DVL-10 M2 handguard
+    "5ae0973a5acfc4001562206c", // Mosin Rifle 7.62x54R 5-round magazine
+    "5ae096d95acfc400185c2c81", // Mosin Rifle standard stock
+    "5ae09bff5acfc4001562219d", // Mosin Rifle 7.62x54R 730mm regular barrel
+    "5ae099875acfc4001714e593", // Mosin Rifle front sight
+    "5ae099925acfc4001a5fc7b3", // Mosin Rifle rear sight
+    "5ae0973a5acfc4001562206c", // Mosin Rifle 7.62x54R 5-round magazine
+    "5bfd35380db83400232fe5cc", // Mosin Rifle Infantry stock
+    "5ae09bff5acfc4001562219d", // Mosin Rifle 7.62x54R 730mm regular barrel
+    "5ae099875acfc4001714e593", // Mosin Rifle front sight
+    "5ae099925acfc4001a5fc7b3", // Mosin Rifle rear sight
+    "5de653abf76fdc1ce94a5a2a", // VPO-215 "Gornostay" .366 TKM 4-round magazine
+    "5de655be4a9f347bc92edb88", // VPO-215 "Gornostay" stock
+    "5de65547883dde217541644b", // VPO-215 "Gornostay" .366TKM 23 inch barrel
+    "5de6558e9f98ac2bc65950fc", // VPO-215 "Gornostay" scope rail mount
+    "5de6556a205ddc616a6bc4f7", // VPO-215 "Gornostay" thread protection cap
+    "5bfea7ad0db834001c38f1ee", // M700 7.62x51 Wyatt's Outdoor 5-round magazine
+    "5bfeb32b0db834001a6694d9", // M700 Hogue Overmolded Ghillie stock
+    "5bfebc320db8340019668d79", // M700 7.62x51 20 inch threaded barrel
+    "5df25b6c0b92095fd441e4cf", // ORSIS T-5000M 7.62x51 5-round magazine
+    "5df256570dee1b22f862e9c4", // ORSIS T-5000M 7.62x51 660mm barrel
+    "5df35e59c41b2312ea3334d5", // ORSIS T-5000M aluminium body
+    "5df35e970b92095fd441e4d2", // ORSIS T-5000M scope mount
+    "5df35e7f2a78646d96665dd4", // ORSIS T-5000M 7.62x51 muzzle brake-compensator
+    "5df25d3bfd6b4e6e2276dc9a", // ORSIS T-5000M handguard
+    "5df38a5fb74cd90030650cb6", // ORSIS T-5000M pistol grip
+    "5df35ddddfc58d14537c2036", // ORSIS T-5000M stock
+    "5df35eb2b11454561e3923e2", // ORSIS T-5000M medium length rail
+    "5df35eb2b11454561e3923e2", // ORSIS T-5000M medium length rail
+    "5df35ea9c41b2312ea3334d8", // ORSIS T-5000M long length rail
+    "5df35eb2b11454561e3923e2", // ORSIS T-5000M medium length rail
+    "5df36948bb49d91fb446d5ad", // ORSIS T-5000M padded handguard grip
+    "628120fd5631d45211793c9f", // AI AXMC .338 LM 10-round magazine
+    "62811e2510e26c1f344e6554", // AI AXMC pistol grip
+    "62811cd7308cb521f87a8f99", // AI AXMC .338 LM bolt assembly
+    "62811f828193841aca4a45c3", // AI AXMC AX buttstock
+    "6281204f308cb521f87a8f9b", // AI AXMC .338 LM chassis
+    "6281209662cba23f6c4d7a19", // AI AXMC AX KeySlot 16 inch handguard
+    "6281212a09427b40ab14e770", // AI AXMC padded handguard grip
+    "62811fbf09427b40ab14e767", // AI AXMC upper receiver
+    "628120c21d5df4475f46a337", // AI AXMC AT X Top Rail
+    "628120d309427b40ab14e76d", // AI AXMC Adapter Kit short length rail
+    "628120d309427b40ab14e76d", // AI AXMC Adapter Kit short length rail
+    "628120dd308cb521f87a8fa1", // AI AXMC Adapter Kit medium length rail
+    "628121434fa03b6b6c35dc6a", // AI AXMC .338 LM 28 inch barrel
+    "62812081d23f207deb0ab216", // AI .338 LM Tactical Muzzle Brake
+    "628120621d5df4475f46a335", // AI AXMC thread protection cap
+    "5a17fb03fcdbcbcae668728f", // APS 9x18PM 20-round magazine
+    "5a17fb9dfcdbcbcae6687291", // APB detachable wire stock
+    "5a17fc70fcdbcb0176308b3d", // APS bakelite side-pieces
+    "5aba62f8d8ce87001943946b", // APS front sight
+    "5aba639ed8ce8700182ece67", // APB rear sight
+    "5abcc328d8ce8700194394f3", // APB 9x18PM sound suppressor
+    "5cadc1c6ae9215000f2775a4", // M9A3 9x19 threaded barrel
+    "5cadc431ae921500113bb8d5", // M9A3 polymer side grips
+    "5cadc55cae921500103bb3be", // M9A3 pistol slide
+    "5cadc2e0ae9215051e1c21e7", // M9A3 9x19 17-round magazine
+    "5cadc390ae921500126a77f1", // M9A3 thread protection cap
+    "5cadd940ae9215051e1c2316", // M9A3 rear sight
+    "5cadd919ae921500126a77f3", // M9A3 front sight
+    "624c3074dbbd335e8e6becf3", // Chiappa Rhino 9x19 6-round cylinder
+    "619f4d304c58466fe1228437", // Chiappa Rhino front sight
+    "619f4bffd25cbd424731fb97", // Chiappa Rhino wooden pistol grip
+    "619f54a1d25cbd424731fb99", // Chiappa Rhino .357 6-round cylinder
+    "619f4cee4c58466fe1228435", // Chiappa Rhino rear sight
+    "619f4d304c58466fe1228437", // Chiappa Rhino front sight
+    "619f4bffd25cbd424731fb97", // Chiappa Rhino wooden pistol grip
+    "5e81c519cb2b95385c177551", // M1911A1 .45 ACP 127mm barrel
+    "5e81c6bf763d9f754677beff", // M1911A1 side grips
+    "5e81edc13397a21db957f6a1", // M1911A1 pistol slide
+    "5e81c4ca763d9f754677befa", // M1911A1 .45 ACP 7-round magazine
+    "5e81c6a2ac2bb513793cdc7f", // M1911A1 trigger
+    "5e81c550763d9f754677befd", // M1911A1 hammer
+    "5e81c539cb2b95385c177553", // M1911A1 slide stop
+    "5e81ee4dcb2b95385c177582", // M1911A1 rear sight
+    "5e81ee213397a21db957f6a6", // M1911A1 front sight
+    "5f3e7801153b8571434a924c", // M1911A1 .45 ACP National Match barrel
+    "5f3e778efcd9b651187d7201", // M45A1 Mil-Tac GVT G10 side grips
+    "5f3e7823ddc4f03b010e2045", // M45A1 pistol slide
+    "5f3e77b26cda304dcc634057", // M1911A1 .45 ACP Wilson Combat 7-round magazine
+    "5f3e772a670e2a7b01739a52", // M45A1 trigger
+    "5f3e76d86cda304dcc634054", // M45A1 hammer
+    "5f3e777688ca2d00ad199d25", // M45A1 slide lock
+    "5f3e7897ddc4f03b010e204a", // M45A1 Novak Lomount rear sight
+    "5f3e78a7fbf956000b716b8e", // M45A1 Novak Lomount front sight
+    "5d3eb5b6a4b9361eab311902", // FN Five-seveN 5.7x28 barrel
+    "5d3eb44aa4b93650d64e4979", // FN Five-seveN MK2 pistol slide
+    "5d3eb5eca4b9363b1f22f8e4", // FN Five-seveN 5.7x28 20-round magazine
+    "5d3eb4aba4b93650d64e497d", // FN Five-seveN MK2 rear sight
+    "5d3eb536a4b9363b1f22f8e2", // FN Five-seveN MK2 front sight
+    "5d3eb59ea4b9361c284bb4b2", // FN Five-seveN 5.7x28 threaded barrel
+    "5d3eb44aa4b93650d64e4979", // FN Five-seveN MK2 pistol slide
+    "5d3eb5eca4b9363b1f22f8e4", // FN Five-seveN 5.7x28 20-round magazine
+    "5d3ef698a4b9361182109872", // Gemtech SFN-57 5.7x28 sound suppressor
+    "5d3eb4aba4b93650d64e497d", // FN Five-seveN MK2 rear sight
+    "5d3eb536a4b9363b1f22f8e2", // FN Five-seveN MK2 front sight
+    "5a6b5f868dc32e000a311389", // Glock 17 9x19 barrel
+    "5a6f5e048dc32e00094b97da", // Glock 17 pistol slide
+    "5a718b548dc32e000d46d262", // Glock 9x19 17-round magazine
+    "5a6f5d528dc32e00094b97d9", // Glock rear sight
+    "5a6f58f68dc32e000a311390", // Glock front sight
+    "5b1fa9ea5acfc40018633c0a", // Glock 18C 9x19 barrel with a compensator
+    "5b1faa0f5acfc40dc528aeb5", // Glock 18C pistol slide
+    "5a718b548dc32e000d46d262", // Glock 9x19 17-round magazine
+    "5a6f5d528dc32e00094b97d9", // Glock rear sight
+    "5a6f58f68dc32e000a311390", // Glock front sight
+    "630764fea987397c0816d219", // Glock 19X 9x19 barrel
+    "63075cc5962d0247b029dc2a", // Glock 19X pistol slide
+    "63076701a987397c0816d21b", // Glock 9x19 19-round magazine (Coyote)
+    "630765cb962d0247b029dc45", // Glock 19X rear sight
+    "630765777d50ff5e8a1ea718", // Glock 19X front sight
+    "6194ef39de3cdf1d2614a768", // HK USP .45 ACP barrel
+    "6193d382ed0429009f543e65", // HK USP .45 ACP pistol slide
+    "6193d338de3cdf1d2614a6fc", // HK USP .45 ACP 12-round magazine
+    "6193d3cded0429009f543e6a", // HK USP trigger
+    "6193d3be7c6c7b169525f0da", // HK USP hammer
+    "6193d5d4f8ee7e52e4210a1b", // HK USP slide lock
+    "6194f2912d2c397d6600348d", // HK USP rear sight
+    "6194f35c18a3974e5e7421e6", // HK USP front sight
+    "602a95edda11d6478d5a06da", // PL-15 9x19 barrel
+    "60228924961b8d75ee233c32", // PL-15 pistol slide
+    "602286df23506e50807090c6", // PL-15 9x19 16-round magazine
+    "60229948cacb6b0506369e27", // PL-15 rear sight
+    "60228a76d62c9b14ed777a66", // PL-15 front sight
+    "5448c12b4bdc2d02308b456f", // PM 9x18PM 90-93 8-round magazine
+    "6374a822e629013b9c0645c8", // PM pistol slide
+    "6374a7e7417239a7bf00f042", // PM bakelite side grips
+    "63c6adcfb4ba094317063742", // PM rear sight
+    "5448c12b4bdc2d02308b456f", // PM 9x18PM 90-93 8-round magazine
+    "6374a822e629013b9c0645c8", // PM pistol slide
+    "6374a7e7417239a7bf00f042", // PM bakelite side grips
+    "63c6adcfb4ba094317063742", // PM rear sight
+    "5448c12b4bdc2d02308b456f", // PM 9x18PM 90-93 8-round magazine
+    "56e05b06d2720bb2668b4586", // PB 9x18PM sound suppressor
+    "56e05a6ed2720bd0748b4567", // PB bakelite side grips
+    "633ec6ee025b096d320a3b15", // RSh-12 12.7x55 5-round cylinder
+    "633ec8e4025b096d320a3b1e", // RSh-12 pistol grip
+    "56d5a1f7d2720bb3418b456a", // P226 9x19 112mm barrel
+    "56d5a2bbd2720bb8418b456a", // P226 polymer pistol grip (Black)
+    "56d5a407d2720bb3418b456b", // P226R MK25 pistol slide
+    "56d59948d2720bb7418b4582", // P226 9x19 15-round magazine
+    "56d5a77ed2720b90418b4568", // P226 rear sight
+    "56d5a661d2720bd8418b456b", // P226 front sight
+    "59f99a7d86f7745b134aa97b", // SR-1MP 9x21 18-round magazine
+    "5a17fb03fcdbcbcae668728f", // APS 9x18PM 20-round magazine
+    "5a17fc70fcdbcb0176308b3d", // APS bakelite side-pieces
+    "5aba62f8d8ce87001943946b", // APS front sight
+    "5aba637ad8ce87001773e17f", // APS rear sight
+    "571a26d524597720680fbe8a", // TT 7.62x25 116mm barrel
+    "571a282c2459771fb2755a69", // TT side grips
+    "571a29dc2459771fb2755a6a", // TT 7.62x25 tt-105 8-round magazine
+    "5b3baf8f5acfc40dc5296692", // TT 7.62x25 116mm gilded barrel
+    "5b3cadf35acfc400194776a0", // TT ornated side grips
+    "571a29dc2459771fb2755a6a", // TT 7.62x25 tt-105 8-round magazine
+    "576a5ed62459771e9c2096cb", // MP-443 "Grach" 9x19 18-round magazine
+    "576a63cd2459771e796e0e11", // MP-443 "Grach" polymer pistol grip
+    "5de8eac42a78646d96665d91", // MP9 9x19 30-round magazine
+    "5de910da8b6c4240ba2651b5", // MP9 stock
+    "5e0090f7e9dc277128008b93", // MP9 9x19 upper receiver
+    "5de922d4b11454561e39239f", // MP9 charging handle
+    "5de8fbf2b74cd90030650c79", // MP9 bottom rail
+    "5de8fb539f98ac2bc659513a", // MP9 rear sight
+    "5de8eac42a78646d96665d91", // MP9 9x19 30-round magazine
+    "5de910da8b6c4240ba2651b5", // MP9 stock
+    "5de8fbad2fbe23140d3ee9c4", // MP9-N vertical foregrip
+    "5de8e67c4a9f347bc92edbd7", // MP9-N 9x19 upper receiver
+    "5de922d4b11454561e39239f", // MP9 charging handle
+    "5de8fb539f98ac2bc659513a", // MP9 rear sight
+    "5de8fc0b205ddc616a6bc51b", // MP9 side rail
+    "5cc70093e4a949033c734312", // FN P90 5.7x28 50-round magazine
+    "5cc700b9e4a949000f0f0f25", // FN P90 stock
+    "5cc70102e4a949035e43ba74", // FN P90 5.7x28 upper receiver
+    "5cc701aae4a949000e1ea45c", // FN P90 5.7x28 10.5 inch barrel
+    "5cc6ea78e4a949000e1ea3c1", // FN P90 charging handle
+    "5cc700cae4a949035e43ba72", // FN P90 buttpad
+    "5cebec38d7f00c00110a652a", // FN P90 Ring Sight reflex sight
+    "5cc70146e4a949000d73bf6b", // FN P90 upper receiver side rail
+    "5cc70146e4a949000d73bf6b", // FN P90 upper receiver side rail
+    "5cc82796e24e8d000f5859a8", // FN P90 5.7x28 flash hider
+    "5d2f213448f0355009199284", // HK MP5 9x19 20-round magazine
+    "5d2f261548f03576f500e7b7", // HK MP5K 9x19 upper receiver
+    "5d2f2d5748f03572ec0c0139", // HK MP5K cocking handle
+    "5d2f259b48f0355a844acd74", // HK MP5K polymer handguard
+    "5926d2be86f774134d668e4e", // HK MP5 Drum rear sight
+    "5d2f25bc48f03502573e5d85", // HK MP5K End Cap stock
+    "5926c3b286f774640d189b6b", // HK MP5 9x19 30-round magazine
+    "5926c0df86f77462f647f764", // HK MP5 9x19 upper receiver
+    "5926c32286f774616e42de99", // HK MP5 cocking handle
+    "5926c36d86f77467a92a8629", // HK MP5 Wide Tropical polymer handguard
+    "5926d2be86f774134d668e4e", // HK MP5 Drum rear sight
+    "5926d3c686f77410de68ebc8", // HK MP5 A2 stock
+    "5926e16e86f7742f5a0f7ecb", // HK MP5 3-lug thread protector
+    "5ba264f6d4351e0034777d52", // HK MP7 4.6x30 20-round magazine
+    "5ba26acdd4351e003562908e", // HK MP7A1 4.6x30 flash hider
+    "5ba26b01d4351e0085325a51", // HK MP7 flip-up front sight
+    "5ba26b17d4351e00367f9bdd", // HK MP7 flip-up rear sight
+    "5bcf0213d4351e0085327c17", // HK MP7A1 stock
+    "5ba264f6d4351e0034777d52", // HK MP7 4.6x30 20-round magazine
+    "5ba26acdd4351e003562908e", // HK MP7A1 4.6x30 flash hider
+    "5ba26b01d4351e0085325a51", // HK MP7 flip-up front sight
+    "5ba26b17d4351e00367f9bdd", // HK MP7 flip-up rear sight
+    "5bd704e7209c4d00d7167c31", // HK MP7A2 stock
+    "57d152ec245977144076ccdf", // PP-91 "Kedr" polymer pistol grip
+    "57d1519e24597714373db79d", // PP-91 "Kedr" 9x18PM 30-round magazine
+    "5fc3e466187fea44d52eda90", // HK UMP .45 ACP 25-round magazine
+    "5fc3e4ee7283c4046c5814af", // HK UMP polymer stock
+    "5fc3e4a27283c4046c5814ab", // HK UMP .45 ACP 8 inch barrel
+    "5fc53954f8b6a877a729eaeb", // HK UMP bottom handguard rail
+    "5fc5396e900b1d5091531e72", // HK UMP side handguard rail
+    "5fc5396e900b1d5091531e72", // HK UMP side handguard rail
+    "5998517986f7746017232f7e", // PP-19-01 "Vityaz" pistol grip
+    "599851db86f77467372f0a18", // PP-19-01 "Vityaz" metal skeleton stock
+    "599860ac86f77436b225ed1a", // PP-19-01 "Vityaz" 9x19 30-round magazine
+    "5998597786f77414ea6da093", // PP-19-01 "Vityaz" 9x19 muzzle brake-compensator
+    "59985a8086f77414ec448d1a", // PP-19-01 "Vityaz" dust cover
+    "599860e986f7743bb57573a6", // PP-19-01 "Vityaz" rear sight
+    "59ccd11386f77428f24a488f", // PP-19-01 "Vityaz" gas tube
+    "5648b1504bdc2d9d488b4584", // AK-74 polymer handguard (6P20 Sb.9)
+    "5ea03e9400685063ec28bfa4", // PPSh-41 stock
+    "5ea034eb5aad6446a939737b", // PPSh-41 7.62x25 35-round magazine
+    "5ea03e5009aa976f2e7a514b", // PPSh-41 dust cover
+    "5ea02bb600685063ec28bfa1", // PPSh-41 7.62x25 10.6 inch barrel
+    "57d152ec245977144076ccdf", // PP-91 "Kedr" polymer pistol grip
+    "57d1519e24597714373db79d", // PP-91 "Kedr" 9x18PM 30-round magazine
+    "57d152ec245977144076ccdf", // PP-91 "Kedr" polymer pistol grip
+    "57f3c7e024597738ea4ba286", // PP-91-01 "Kedr-B" threaded suppressor adapter
+    "57d1519e24597714373db79d", // PP-91 "Kedr" 9x18PM 30-round magazine
+    "57f3c8cc2459773ec4480328", // PP-91-01 "Kedr-B" 9x18PM sound suppressor
+    "5894a51286f77426d13baf02", // MPX pistol grip
+    "5894a05586f774094708ef75", // MPX 9x19 30-round magazine
+    "5894a5b586f77426d2590767", // MPX GEN1 9x19 upper receiver
+    "5894a13e86f7742405482982", // MPX/MCX collapsing/telescoping stock
+    "58949edd86f77409483e16a9", // MPX double latch charging handle
+    "5894a2c386f77427140b8342", // MPX 9x19 203mm barrel
+    "5894a42086f77426d2590762", // MPX GEN1 handguard
+    "5894a81786f77427140b8347", // MPX flip-up rear sight
+    "58949dea86f77409483e16a8", // MPX A2 9x19 flash hider
+    "5894a73486f77426d259076c", // MPX flip-up front sight
+    "58a56f8d86f774651579314c", // MPX GEN1 handguard 2 inch rail
+    "58a5c12e86f7745d585a2b9e", // MPX GEN1 handguard 4 inch rail
+    "58a56f8d86f774651579314c", // MPX GEN1 handguard 2 inch rail
+    "633a98eab8b0506e48497c1a", // SR-2M 9x21 20-round magazine
+    "62e2a754b6c0ee2f230cee0f", // SR-2M 9x21 hand stopper
+    "62e292e7b6c0ee2f230cee00", // SR-2M top-folding stock
+    "62e27a7865f0b1592a49e17b", // SR-2M dust cover
+    "62e15547db1a5c41971c1b5e", // SR-2M polymer handguard
+    "637b9c37b7e3bc41b21ce71a", // SR-2M pistol grip
+    "62ed189fb3608410ef5a2bfc", // SR-2M short side rail
+    "5998517986f7746017232f7e", // PP-19-01 "Vityaz" pistol grip
+    "599851db86f77467372f0a18", // PP-19-01 "Vityaz" metal skeleton stock
+    "5998529a86f774647f44f421", // Saiga-9 9x19 sb.7 10-round magazine
+    "5998598e86f7740b3f498a86", // Saiga-9 9x19 muzzle brake-compensator
+    "59985a8086f77414ec448d1a", // PP-19-01 "Vityaz" dust cover
+    "599860e986f7743bb57573a6", // PP-19-01 "Vityaz" rear sight
+    "59ccd11386f77428f24a488f", // PP-19-01 "Vityaz" gas tube
+    "5648b1504bdc2d9d488b4584", // AK-74 polymer handguard (6P20 Sb.9)
+    "602e71bd53a60014f9705bfa", // AR-15 DLG Tactical DLG-123 pistol grip
+    "5a7ad2e851dfba0016153692", // Glock 9x19 "Big Stick" 33-round magazine
+    "602e63fb6335467b0c5ac94d", // STM-9 9x19 upper receiver
+    "602e3f1254072b51b239f713", // AR-15 Soyuz-TM buffer tube
+    "6033749e88382f4fab3fd2c5", // AR-15 MASP Industries Ambidextrous Battle Charging Handle
+    "602f85fd9b513876d4338d9c", // STM-9 magwell
+    "603372b4da11d6478d5a07ff", // STM-9 9x19 10.5 inch barrel
+    "6034e3cb0ddce744014cb870", // AR-15 Soyuz-TM 9 inch M-LOK handguard
+    "602e620f9b513876d4338d9a", // AR-15 FAB Defense GL-CORE buttstock
+    "60337f5dce399e10262255d1", // STM-9 9x19 muzzle brake
+    "5fb651b52b1b027b1f50bcff", // Glock .45 ACP 13-round magazine
+    "5fb6567747ce63734e3fa1dc", // KRISS Defiance low profile flip-up front sight
+    "5fb6564947ce63734e3fa1da", // KRISS Defiance low profile flip-up rear sight
+    "5fb6558ad6f0b2136f2d7eb7", // KRISS Vector Gen.2 folding stock
+    "5fb65363d1409e5ca04b54f5", // KRISS Vector .45 ACP 5 inch barrel
+    "5fbb976df9986c4cff3fe5f2", // KRISS Vector bottom rail
+    "5fce0f9b55375d18a253eff2", // KRISS Vector side rail
+    "5fce0f9b55375d18a253eff2", // KRISS Vector side rail
+    "5fb6548dd1409e5ca04b54f9", // KRISS Vector .45 ACP thread protection cap
+    "5a718b548dc32e000d46d262", // Glock 9x19 17-round magazine
+    "5fb6567747ce63734e3fa1dc", // KRISS Defiance low profile flip-up front sight
+    "5fb6564947ce63734e3fa1da", // KRISS Defiance low profile flip-up rear sight
+    "5fb6558ad6f0b2136f2d7eb7", // KRISS Vector Gen.2 folding stock
+    "5fbbc366ca32ed67276c1557", // KRISS Vector 9x19 5 inch barrel
+    "5fbb976df9986c4cff3fe5f2", // KRISS Vector bottom rail
+    "5fce0f9b55375d18a253eff2", // KRISS Vector side rail
+    "5fce0f9b55375d18a253eff2", // KRISS Vector side rail
+    "5fbbc34106bde7524f03cbe9", // KRISS Vector 9x19 thread protection cap
+    "6259c2c1d714855d182bad85", // Benelli M3 Super 90 12ga 500mm barrel
+    "6259c4347d6aab70bc23a190", // Benelli M3 forend
+    "625ff2ccb8c587128c1a01dd", // Benelli M3 Super 90 12ga 5-shell magazine cap
+    "6259c3387d6aab70bc23a18d", // Benelli M3 telescopic stock
+    "625ed7c64d9b6612df732146", // Benelli M3 Super 90 upper receiver top rail
+    "625ebcef6f53af4aa66b44dc", // Benelli M3 Ghost Ring rear sight
+    "625ec45bb14d7326ac20f572", // Benelli M3 Super 90 charging handle
+    "6259c3d8012d6678ec38eeb8", // Benelli M3 telescopic stock pistol grip
+    "55d4491a4bdc2d882f8b456e", // MP-133 12ga 510mm barrel
+    "55d45d3f4bdc2d972f8b456c", // MP-133 beechwood forestock
+    "55d484b44bdc2d1d4e8b456d", // MP-133 12ga 6-shell magazine
+    "56083cba4bdc2de22e8b456f", // MP-133/153 wooden stock
+    "60dc519adf4c47305f6d410d", // MTs-255-12 12ga cylinder
+    "612368f58b401f4f51239b33", // MTs-255-12 12ga 755mm barrel with rib
+    "612781056f3d944a17348d60", // MTs-255-12 wooden stock
+    "6123649463849f3d843da7c4", // MTs-255-12 beechwood forestock
+    "619d36da53b4d42ee724fae4", // MTs-255-12 12ga choke
+    "5e87071478f43e51ca2de5e1", // Mossberg 590A1 12ga 20 inch barrel
+    "5e87076ce2db31558c75a11d", // Mossberg 590A1 SpeedFeed short handguard
+    "5e87080c81c4ed43e83cefda", // Mossberg 590A1 12ga 8-shell magazine cap
+    "5e87116b81c4ed43e83cefdd", // Mossberg 590A1 polymer stock
+    "5e87114fe2db31558c75a120", // Mossberg 590 Ghost Ring rear sight
+    "5e8708d4ae379e67d22e0102", // Mossberg 590 Ghost Ring front sight
+    "5a787f7ac5856700177af660", // M870 12ga 508mm barrel
+    "5a788089c5856700142fdd9c", // M870 SpeedFeed Short handguard
+    "5a7882dcc5856700177af662", // M870 12ga 4-shell magazine cap
+    "5a7880d0c5856700142fdd9d", // M870 SPS polymer stock
+    "576169e62459773c69055191", // SOK-12 polymer handguard (Sb.7-1)
+    "576167ab2459773cad038c43", // SOK-12 thread protection tube
+    "5649ade84bdc2d1b2b8b4587", // AK polymer pistol grip (6P1 Sb.8)
+    "57616c112459773cce774d66", // SOK-12 dust cover (Sb.0-2)
+    "57a9b9ce2459770ee926038d", // SOK-12 rear sight
+    "57616ca52459773c69055192", // SOK-12 AK-style stock
+    "57616a9e2459773c7a400234", // SOK-12 12/76 sb.5 5-round magazine
+    "56deec93d2720bec348b4568", // MP-153 12ga 750mm barrel
+    "56deed6ed2720b4c698b4583", // MP-153 polymer forestock
+    "56deee15d2720bee328b4567", // MP-153 12ga 4-shell magazine cap
+    "56083be64bdc2d20478b456f", // MP-133/153 plastic stock
+    "6076c1b9f2cb2e02a42acedc", // MP-155 12ga 510mm barrel
+    "607d5aa50494a626335e12ed", // MP-155 walnut forestock
+    "6076c87f232e5a31c233d50e", // MP-155 12ga 6-shell magazine
+    "607d5a891246154cad35d6aa", // MP-155 walnut stock
+    "5a38ee51c4a282000c5a955c", // TOZ-106 20ga MTs 20-01 Sb.3 2-shot magazine
+    "5a38ef1fc4a282000b1521f6", // TOZ-106 stock
+    "5a38eecdc4a282329a73b512", // TOZ-106 002 pistol grip
+    "61f4012adfc9f01a816adda1", // MP-18 7.62x54R 600mm barrel
+    "61f7b234ea4ab34f2f59c3ec", // MP-18 wooden stock
+    "61f7b85367ddd414173fdb36", // MP-18 wooden handguard
+    "64748d02d1c009260702b526", // MP-43 12ga sawed-off 310mm barrel
+    "55d447bb4bdc2d892f8b456f", // MP-43-1C 12ga 725mm barrel
+    "611a31ce5b7ffe001b4649d1", // MP-43-1C buttpad
+    "5e848d2eea0a7c419c2f9bfd", // KS-23 23x75 700mm barrel
+    "5e848d51e4dbc5266a4ec63b", // KS-23M forestock
+    "5f647d9f8499b57dc40ddb93", // KS-23M 23x75 3-shell magazine cap
+    "5e848db4681bea2ada00daa9", // KS-23 wooden stock
+    "59c6633186f7740cf0493bb9", // AK-74 gas tube (6P20 Sb.1-2)
+    "5ac72e895acfc43b321d4bd5", // AK-104 7.62x39 muzzle brake-compensator (6P46 0-20)
+    "5649ade84bdc2d1b2b8b4587", // AK polymer pistol grip (6P1 Sb.8)
+    "5ac50da15acfc4001718d287", // AK-74M dust cover (6P34 0-1)
+    "5ac733a45acfc400192630e2", // AK-105 rear sight (6P44 Sb.1-30)
+    "5ac50c185acfc400163398d4", // AK-74M polymer stock (6P34 Sb.15)
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
+    "5648b1504bdc2d9d488b4584" // AK-74 polymer handguard (6P20 Sb.9)
+  ]
 }

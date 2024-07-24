@@ -1,6 +1,7 @@
 export class Helmets {
 
   public parent = "helmet";
+  public calculate_preset_prices = false;
   
   public rarities = [
     "_extremely_rare", 
@@ -28,6 +29,11 @@ export class Helmets {
     '5f60c74e3b85f6263c145586', // Rys-T bulletproof helmet (Black)
     '5ca20ee186f774799474abc2', // Vulkan-5 LShZ-5 bulletproof helmet (Black)
   ];
+
+  // tpls that don't make sense to calculate prices for
+  public presets_invalid_tpls = [
+    '657f9897f4c82973640b235e', // Hybrid composite materials
+  ]
 
   // 2d array of rewards by sorted rarity
   public presets = [

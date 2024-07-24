@@ -43,6 +43,8 @@ class Container {
     public reward_amount: Array<number>;
     public reward_rolls: Array<number>;
     public rewards: any;
+    public presets_invalid_tpls: Array<string>;
+    public calculate_preset_prices: boolean;
     public presets: Array<string>;
 
     constructor(name: string) {
@@ -56,6 +58,7 @@ class Container {
         this.profit_percentage     = 0;
         this.reward_amount         = [];
         this.rewards               = [];
+        this.presets_invalid_tpls  = [];
         this.presets               = [];
     }
 }
@@ -81,7 +84,7 @@ export class MysteryContainer {
              'loadout', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_healing', 'ammo'
         ];
         this.simulation = ['armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food'];
-        this.override    = ['ammo', 'armor'];
+        this.override    = ['ammo', 'armor', 'weapon'];
         this.items      = {
             wallet:              new Wallet(),
             keycard:             new Keycard(),
@@ -146,11 +149,13 @@ export class MysteryContainer {
             container.max = this.config.odds[`${name}_max`] || 1;
             container.profit_percentage = this.config.odds[`${name}_profit_percentage`];
             container.presets = item.presets? [...item.presets] : [];
-            container.guaranteed_stackable = item.guaranteed_stackable? item.guaranteed_stackable : undefined
-            container.guaranteed_reward_amount = item.guaranteed_reward_amount? item.guaranteed_reward_amount : undefined
-            container.guaranteed_rewards = item.guaranteed_rewards? item.guaranteed_rewards : undefined
-            container.guaranteed_randomness = item.guaranteed_randomness? item.guaranteed_randomness : undefined
-            container.reward_rolls = item.reward_rolls? item.reward_rolls : undefined
+            container.guaranteed_stackable = item.guaranteed_stackable? item.guaranteed_stackable : undefined;
+            container.guaranteed_reward_amount = item.guaranteed_reward_amount? item.guaranteed_reward_amount : undefined;
+            container.guaranteed_rewards = item.guaranteed_rewards? item.guaranteed_rewards : undefined;
+            container.guaranteed_randomness = item.guaranteed_randomness? item.guaranteed_randomness : undefined;
+            container.reward_rolls = item.reward_rolls? item.reward_rolls : undefined;
+            container.calculate_preset_prices = item.calculate_preset_prices? item.calculate_preset_prices : false;
+            container.presets_invalid_tpls = item.presets_invalid_tpls? item.presets_invalid_tpls : undefined;
             
         };
     
@@ -182,6 +187,17 @@ export class MysteryContainer {
 
     public getName(name: string): string{
         return this.containers[name].name;
+    }
+
+    // Returns all containers that have presets to price calculate in the simulation
+    public getPresetNames(): Array<string>{
+        let names: Array<string> = [];
+        for(const container in this.containers){
+            if(this.containers[container].calculate_preset_prices){
+                names.push(container);
+            }
+        }
+        return names;
     }
 
     public getParent(name: string): string{
