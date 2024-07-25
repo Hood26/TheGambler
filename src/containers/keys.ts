@@ -1,6 +1,7 @@
 export class Keys {
 
   public parent = "key";
+  public price_generate = true;
   
   public rarities = [
     "_extremely_rare", 

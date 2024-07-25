@@ -1,6 +1,8 @@
 export class Medical {
   
   public parent = "medical";
+  //public price_generate = true;
+  
   public rarities = [
     "_uncommon",
     "_uncommon",

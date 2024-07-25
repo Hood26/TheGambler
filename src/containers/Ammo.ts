@@ -1,6 +1,7 @@
 export class Ammo {
 
     public parent = "ammo";
+    //public price_generate = true;
 
     public names = [
         '7.62x25',

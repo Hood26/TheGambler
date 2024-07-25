@@ -1,6 +1,7 @@
 export class Rigs {
 
   public parent = "rig";
+  public price_generate = true;
 
   public rarities = [
     "_boss", 

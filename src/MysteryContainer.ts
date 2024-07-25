@@ -33,6 +33,8 @@ class Container {
     public stackable: Array<boolean>;
     public min: number;
     public max: number;
+    public isAmmo: boolean;
+    public isPreset: boolean;
     public override: {};
     public rarity_average_profit: Array<number>;
     public profit_percentage: number;
@@ -83,7 +85,7 @@ export class MysteryContainer {
             'headset', 'armor', 'premium_armor', 'roubles', 'bitcoin', 'gpcoin',
              'loadout', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_healing', 'ammo'
         ];
-        this.simulation = ['armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food'];
+        this.simulation = [] //['armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food', 'keycard'];
         this.override    = ['ammo', 'armor', 'weapon'];
         this.items      = {
             wallet:              new Wallet(),
@@ -141,6 +143,9 @@ export class MysteryContainer {
             if (!isAmmo) {
                 container.reward_amount = item.reward_amount || generateAmount(container.rarities.length, 1);
                 container.stackable = item.stackable || generateAmount(container.rarities.length, false);
+                if (item.is_preset) container.isPreset = true;
+            } else {
+                container.isAmmo = true;
             }
         };
     
@@ -163,6 +168,7 @@ export class MysteryContainer {
             const container = new Container(name);
             container.rarities = [...item.rarities];
             container.parent = item.parent;
+            if (item.price_generate) this.simulation.push(name);
             
             calculateOddsAndRewards(container, item);
             applyOverrides(container, item, isAmmo);
@@ -176,7 +182,8 @@ export class MysteryContainer {
     
         //console.log('THE CONTAINER!!!');
         //console.log(containers);
-
+        //console.log('TO SIMULATE NAMES')
+        //console.log(this.simulation)
         return containers;
     }
     
@@ -287,5 +294,13 @@ export class MysteryContainer {
     public setRarityAverageProfit(name:string, profit: Array<number>): void  {
         //return this.containers[name]['override'][item];
         this.containers[name].rarity_average_profit = profit;
+    }
+
+    public isAmmo(name: string): boolean {
+        return this.containers[name].isAmmo;
+    }
+
+    public isPreset(name: string): boolean {
+        return this.containers[name].isPreset;
     }
 }

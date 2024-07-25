@@ -1,6 +1,7 @@
 export class Headsets {
 
     public parent = "headset";
+    public price_generate = true;
 
     public rarities = [
         "_rare", 

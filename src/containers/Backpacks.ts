@@ -1,6 +1,7 @@
 export class Backpacks {
 
   public parent = "backpack";
+  public price_generate = true;
 
   public rarities = [
     "_extremely_rare", 

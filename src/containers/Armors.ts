@@ -1,6 +1,7 @@
 export class Armors {
 
   public parent = "armor";
+  public price_generate = true;
   
   public rarities = [
     "_rare", 

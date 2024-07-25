@@ -1,6 +1,7 @@
 export class Keycard {
 
     public parent = "keycard";
+    public price_generate = true;
 
     public rarities = [
       "_red",
@@ -28,5 +29,5 @@ export class Keycard {
       ["5c94bbff86f7747ee735c08f"] // TerraGroup Labs access keycard 
     ]
   
-
+  }
   

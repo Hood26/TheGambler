@@ -1,6 +1,7 @@
 export class Helmets {
 
   public parent = "helmet";
+  public is_preset = true;
   public calculate_preset_prices = false;
   
   public rarities = [

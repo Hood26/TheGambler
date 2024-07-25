@@ -1,6 +1,7 @@
 export class Foods {
 
     public parent = "food";
+    public price_generate = true;
   
     public rarities = [
     "_rare", 

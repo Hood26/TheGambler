@@ -1,6 +1,7 @@
 export class Melees {
 
   public parent = "melee";
+  public price_generate = true;
 
   public rarities = [
     "_extremely_rare", 

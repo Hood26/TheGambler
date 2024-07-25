@@ -1,6 +1,7 @@
 export class Stims {
 
   public parent = "stim";
+  public price_generate = true;
   
   public rarities = [
     "_extremely_rare", 
