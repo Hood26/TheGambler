@@ -20,9 +20,6 @@ export class LoadoutGrenade {
       'NaN', // No grenade
       'NaN', // No grenade
       'NaN', // No grenade
-      'NaN', // No grenade
-      'NaN', // No grenade
-      'NaN', // No grenade
       '5e340dcdcb6d5863cc5e5efb', // VOG-25 Khattabka improvised hand grenade
       '5e340dcdcb6d5863cc5e5efb', // VOG-25 Khattabka improvised hand grenade
       '5e32f56fcb6d5863cc5e5ee4', // VOG-17 Khattabka improvised hand grenade
@@ -47,9 +44,13 @@ export class LoadoutGrenade {
       'NaN', // No grenade
       'NaN', // No grenade
       'NaN', // No grenade
+      'NaN', // No grenade
+      '5710c24ad2720bc3458b45a3', // F-1 hand grenade
       '5710c24ad2720bc3458b45a3', // F-1 hand grenade
       '5448be9a4bdc2dfd2f8b456a', // RGD-5 hand grenade
       '5448be9a4bdc2dfd2f8b456a', // RGD-5 hand grenade
+      '5448be9a4bdc2dfd2f8b456a', // RGD-5 hand grenade
+      '5a0c27731526d80618476ac4', // Zarya stun grenade
       '5a0c27731526d80618476ac4', // Zarya stun grenade
       '5a0c27731526d80618476ac4', // Zarya stun grenade
     ]

@@ -136,19 +136,17 @@ export class Gamble {
 
             if (this.mysteryContainer.getName(current)) { // Rewards is a container
 
-                console.log('Weapon Type = ' + currentWeaponType)
+                //console.log('Weapon Type = ' + currentWeaponType)
                 if(currentWeaponType == '_meme') { // Generated Weapon is meme all rewards are random now
-                    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH')
-                    console.log('Meme weapon found... Generating random rewards...')
-                    this.newGamble(current, this.randomUtil.getFloat(8,70));
+                    this.newGamble(current, this.randomUtil.getFloat(0,70));
                     
                 } else if (this.currentWeaponType == '_meta') { // Generated Weapon is meta all rewards are random now
 
-                    this.newGamble(current, this.randomUtil.getFloat(6,40));
+                    this.newGamble(current, this.randomUtil.getFloat(5,40));
 
                 } else if (this.currentWeaponType == '_decent') { // Generated Weapon is meta all rewards are random now
 
-                    this.newGamble(current, this.randomUtil.getFloat(18,50));
+                    this.newGamble(current, this.randomUtil.getFloat(18,45));
 
                 }else if (this.currentWeaponType == '_scav') { // Generated Weapon is meta all rewards are random now
 
@@ -156,15 +154,11 @@ export class Gamble {
 
                 }else{
                     if (randomness[i]) {
-                        console.log('Randomness found... Generating random rewards...')
                         this.newGamble(current);
                     } else {
-                        console.log('No randomness found... Generating guaranteed rewards...')
                         this.newGamble(current, roll);
                     }
                 }
-
-                console.log('The Rest...')
 
                 if(current === 'helmet') {
                     if (!this.currentHeadsetCompatible) {
@@ -214,10 +208,10 @@ export class Gamble {
                             break;
                         case '_decent':
                             min = 10;
-                            max = 50;
+                            max = 45;
                             break;
                         case '_meta':
-                            min = 3;
+                            min = 2;
                             max = 26;
                             break;
                         default:

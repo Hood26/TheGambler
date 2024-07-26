@@ -27,7 +27,6 @@ export class Price{
 
     // This is where all Mystery containers are price generated during server load
     public generateContainerPrices(): {} {
-        this.logger.info("[TheGambler] Generating Mystery Container Prices...");
         let containerPrices = {};
         const mysteryContainerNames = [...this.MysteryContainer.simulation, ...this.MysteryContainer.items.ammo.names];
         //console.log(mysteryContainerNames)
@@ -56,7 +55,7 @@ export class Price{
             containerPrices[name + "_case_price"] = currentContainerPrice;
         }
 
-        this.logger.info("[TheGambler] Finished Generating Mystery Container Prices!");
+        this.logger.success("[TheGambler] Mystery Container Price Generation Complete!");
         //console.log("Mystery Container Prices")
         //console.log(containerPrices)
         return containerPrices;
@@ -110,10 +109,6 @@ export class Price{
             sum = sum / count;
             prices.push(sum);
             sum = 0;
-            if ( name == 'wallet') {
-                console.log('Wallet Price Ranges:')
-                console.log(prices)
-            }
         }
         this.MysteryContainer.setRarityAverageProfit(name, prices);
         return prices;
@@ -151,7 +146,6 @@ export class Price{
     }
 
     private getContainerPresetPrices(name: string ,parent: string, rarities: Array<string>, items: any, amount: number = 1): Array<number> {
-        console.log('getContainerPresetPrices()...')
         let prices: Array<number>    = [];
         let weaponPricesPerTier: Array<number> = [];
         let tierTotal: number        = 0;
@@ -199,21 +193,10 @@ export class Price{
             weaponPricesPerTier = [];
         }
         this.MysteryContainer.setRarityAverageProfit(name, prices);
-        //if ( name == 'helmet') {
-            //console.log('Helmet Price Ranges:')
-            //console.log(prices)
-        //}
-        //if ( name == 'weapon') {
-            //console.log('Weapon Price Ranges:')
-            //console.log(prices)
-        //}
-        //console.log('Container Weapon Prices:')
-        //console.log(prices)
         return prices;
     }
 
     private runPriceGeneration = (odds: Array<number>, prices: Array<number>, profitability: number) => {
-        //console.log('Running Price Generation...')
         let sum: number = 0;
         let trackOdds = 0;
 

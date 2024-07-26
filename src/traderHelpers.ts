@@ -162,7 +162,6 @@ export class TraderHelper
         
         const price = new Price(container, config, logger);
         const generatedPrices = price.generateContainerPrices();
-        console.log(generatedPrices)
 
         const GOLD_AKM_HANDGUARD_ID = 'gold_akm_handguard';
         const GOLD_AKM_FOREGRIP_ID = 'gold_akm_foregrip';
@@ -186,63 +185,11 @@ export class TraderHelper
         // foregrip
         tables.templates.items['59e0bed186f774156f04ce84']._props.Slots[0]._props.filters[0].Filter.push(GOLD_AKM_FOREGRIP_ID);
 
-
-
-        /*
-        assortCreator.createSingleAssortItem(GOLD_AKM_HANDGUARD_ID)
-                                    .addStackCount(999)
-                                    .addMoneyCost(Money.ROUBLES, 5000)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        assortCreator.createSingleAssortItem(GOLD_AKM_FOREGRIP_ID)
-                                    .addStackCount(999)
-                                    .addMoneyCost(Money.ROUBLES, 5000)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        assortCreator.createSingleAssortItem(GOLD_AKM_STOCK_ID)
-                                    .addStackCount(999)
-                                    .addMoneyCost(Money.ROUBLES, 5000)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        assortCreator.createSingleAssortItem(GOLD_AKM_MAGAZINE_ID)
-                                    .addStackCount(999)
-                                    .addMoneyCost(Money.ROUBLES, 5000)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        assortCreator.createSingleAssortItem(GOLD_AKM_RECEIVER_ID)
-                                    .addStackCount(999)
-                                    .addMoneyCost(Money.ROUBLES, 5000)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        assortCreator.createSingleAssortItem(GOLD_AKM_REAR_SIGHT_ID)
-                                    .addStackCount(999)
-                                    .addMoneyCost(Money.ROUBLES, 5000)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        assortCreator.createSingleAssortItem(GOLD_AKM_CHARGE_HANDLE_ID)
-                                    .addStackCount(999)
-                                    .addMoneyCost(Money.ROUBLES, 5000)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        assortCreator.createSingleAssortItem(GOLD_AKM_SILENCER_ID)
-                                    .addStackCount(999)
-                                    .addMoneyCost(Money.ROUBLES, 5000)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        assortCreator.createSingleAssortItem(GOLD_AKM_PISTOLGRIP_ID)
-                                    .addStackCount(999)
-                                    .addMoneyCost(Money.ROUBLES, 5000)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-
-        */  
-
-
         
         if (config.price_stock['wallet_case_enable']){
             assortCreator.createSingleAssortItem(WALLET_GAMBLE_ID)
                                     .addUnlimitedStackCount()
-                                    .addMoneyCost(Money.ROUBLES, (config.price_stock['wallet_case_price'] * config.price_multiplier))
+                                    .addMoneyCost(Money.ROUBLES, (generatedPrices['wallet_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }

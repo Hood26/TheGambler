@@ -9,10 +9,12 @@ export class Wallet {
       "_kinda_rare", 
       "_uncommon", 
       "_common",
-      "_extra_common"
+      "_extra_common",
+      "_base"
     ]
-    public stackable = [true, true, true, true, true, true]
+    public stackable = [true, true, true, true, true, true, true]
     public reward_amount = [
+      2500000,
       1000000, 
       500000, 
       300000, 
@@ -21,6 +23,7 @@ export class Wallet {
       25000
     ]
     public rewards = [
+      ['5449016a4bdc2d6f028b456f'], 
       ['5449016a4bdc2d6f028b456f'], 
       ['5449016a4bdc2d6f028b456f'], 
       ['5449016a4bdc2d6f028b456f'], 

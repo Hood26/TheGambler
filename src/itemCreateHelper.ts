@@ -339,7 +339,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Wallet",
                     shortName: "Mystery Wallet",
-                    description: `Wager your Roubles to win more, or lose it all!\n==============================\n0 Roubles - 25.0%\n25k Roubles - ${this.config.odds['wallet_extra_common']}%\n50k Roubles - ${this.config.odds['wallet_common']}%\n100k Roubles - ${this.config.odds['wallet_uncommon']}%\n300k Roubles - ${this.config.odds['wallet_kinda_rare']}%\n500k Roubles - ${this.config.odds['wallet_rare']}%\n1 Million Roubles - ${this.config.odds['wallet_extremely_rare']}%`
+                    description: `Wager your Roubles to win more, or lose it all!\n==============================\n25k Roubles - ${this.config.odds['wallet_base']}%\n50k Roubles - ${this.config.odds['wallet_extra_common']}%\n100k Roubles - ${this.config.odds['wallet_common']}%\n300k Roubles - ${this.config.odds['wallet_uncommon']}%\n500k Roubles - ${this.config.odds['wallet_kinda_rare']}%\n1 Million Roubles - ${this.config.odds['wallet_rare']}%\n2.5 Million Roubles - ${this.config.odds['wallet_extremely_rare']}%`
                 }
             } 
         }
