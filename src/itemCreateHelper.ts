@@ -1405,7 +1405,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Weapon Mystery Box",
                     shortName: "Weapon Mystery Box",
-                    description: `Weapon Mystery Box, contains over 305 different weapons ranging from Meta/Chad weapons, early wipe weapons, scav weapons, meme/cursed weapons, and much more... \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nMeme Weapon - ${this.config.odds['weapon_meme']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}%`
+                    description: `Weapon Mystery Box, contains over 402 different weapons ranging from Meta/Chad weapons, early wipe weapons, scav weapons, meme/cursed weapons, and much more... \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nMeme Weapon - ${this.config.odds['weapon_meme']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}%`
                 }
             }
         };
