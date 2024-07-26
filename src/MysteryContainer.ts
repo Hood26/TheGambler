@@ -23,6 +23,9 @@ import { Loadoutdrink } from "./containers/LoadoutDrink";
 import { LoadoutLightBleed } from "./containers/LoadoutLightBleed";
 import { LoadoutHeavyBleed } from "./containers/LoadoutHeavyBleed";
 import { LoadoutHealing } from "./containers/LoadoutHealing";
+import { LoadoutGrenade } from "./containers/LoadoutGrenade";
+import { LoadoutSplit } from "./containers/LoadoutSplint";
+import { LoadoutFacecovers } from "./containers/LoadoutFacecovers";
 
 class Container {
 
@@ -83,10 +86,10 @@ export class MysteryContainer {
             'wallet', 'keycard', 'key', 'stim', 'medical', 'food', 'melee', 
             'backpack', 'rig', 'weapon', 'premium_weapon', 'helmet', 
             'headset', 'armor', 'premium_armor', 'roubles', 'bitcoin', 'gpcoin',
-             'loadout', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_healing', 'ammo'
+             'loadout', 'loadout_grenade', 'loadout_facecovers', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_splint', 'loadout_healing', 'ammo'
         ];
         this.simulation = [] //['armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food', 'keycard'];
-        this.override    = ['ammo', 'armor', 'weapon'];
+        this.override    = ['ammo', 'armor', 'weapon', 'helmet'];
         this.items      = {
             wallet:              new Wallet(),
             keycard:             new Keycard(),
@@ -108,10 +111,13 @@ export class MysteryContainer {
             bitcoin:             new FlipBitcoin(),
             gpcoin:              new FlipGPCoin(),
             loadout:             new Loadouts(),
+            loadout_grenade:     new LoadoutGrenade(),
+            loadout_facecovers:  new LoadoutFacecovers(),
             loadout_food:        new LoadoutFood(),
             loadout_drink:       new Loadoutdrink(),
             loadout_light_bleed: new LoadoutLightBleed(),
             loadout_heavy_bleed: new LoadoutHeavyBleed(),
+            loadout_splint:      new LoadoutSplit(),   
             loadout_healing:     new LoadoutHealing()
         }
         this.containers  = this.setContainers()
@@ -258,7 +264,7 @@ export class MysteryContainer {
     public getRewardRolls(name: string): Array<number>{
         return this.containers[name].reward_rolls? this.containers[name].reward_rolls : undefined;
     }
-
+    
     // Returns all rewards from possible rewards
     public getRewards(name: string): Array<string> {
         return this.containers[name].rewards;

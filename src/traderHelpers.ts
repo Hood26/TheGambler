@@ -241,21 +241,21 @@ export class TraderHelper
         
         if (config.price_stock['wallet_case_enable']){
             assortCreator.createSingleAssortItem(WALLET_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['wallet_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (config.price_stock['wallet_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['key_case_enable']){
             assortCreator.createSingleAssortItem(KEY_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['key_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (generatedPrices['key_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['stim_case_enable']){
             assortCreator.createSingleAssortItem(STIM_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['stim_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (generatedPrices['stim_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
@@ -271,35 +271,35 @@ export class TraderHelper
         }                       
         if (config.price_stock['food_case_enable']){
             assortCreator.createSingleAssortItem(FOOD_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['food_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (generatedPrices['food_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }                        
         if (config.price_stock['bitcoin_case_enable']){
             assortCreator.createSingleAssortItem(BITCOIN_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['bitcoin_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addBarterCost(BITCOIN_ID, 1)
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['gpcoin_case_enable']){
             assortCreator.createSingleAssortItem(GPCOIN_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['gpcoin_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addBarterCost(GPCOIN_ID, 1)
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['keycard_case_enable']){
             assortCreator.createSingleAssortItem(KEYCARD_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['keycard_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (generatedPrices['keycard_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['fiftyfifty_case_enable']){
             assortCreator.createSingleAssortItem(FIFTY_FIFTY_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['fiftyfifty_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (config.price_stock['fiftyfifty_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
@@ -313,28 +313,28 @@ export class TraderHelper
         }
         if (config.price_stock['melee_case_enable']){
             assortCreator.createSingleAssortItem(MELEE_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['melee_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (generatedPrices['melee_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['weapon_case_enable']){
             assortCreator.createSingleAssortItem(WEAPON_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['weapon_case_stock'])
-                                    .addMoneyCost(Money.ROUBLES, (config.price_stock['weapon_case_price'] * config.price_multiplier))
+                                    .addUnlimitedStackCount()
+                                    .addMoneyCost(Money.ROUBLES, (generatedPrices['weapon_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['helmet_case_enable']){
             assortCreator.createSingleAssortItem(HELMET_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['helmet_case_stock'])
-                                    .addMoneyCost(Money.ROUBLES, (config.price_stock['helmet_case_price'] * config.price_multiplier))
+                                    .addUnlimitedStackCount()
+                                    .addMoneyCost(Money.ROUBLES, (generatedPrices['helmet_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['armor_case_enable']){
             assortCreator.createSingleAssortItem(ARMOR_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['armor_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (generatedPrices['armor_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
@@ -349,34 +349,34 @@ export class TraderHelper
         if (config.price_stock['premium_weapon_case_enable']){
             assortCreator.createSingleAssortItem(PREMIUM_WEAPON_GAMBLE_ID)
                                     .addStackCount(config.price_stock['premium_weapon_case_stock'])
-                                    .addMoneyCost(Money.ROUBLES, (config.price_stock['premium_weapon_case_price'] * config.price_multiplier))
+                                    .addMoneyCost(Money.ROUBLES, (generatedPrices['premium_weapon_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['backpack_case_enable']){
             assortCreator.createSingleAssortItem(BACKPACK_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['backpack_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (generatedPrices['backpack_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['loadout_case_enable']){
             assortCreator.createSingleAssortItem(LOADOUT_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['loadout_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (config.price_stock['loadout_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['rig_case_enable']){
             assortCreator.createSingleAssortItem(RIG_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['rig_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (generatedPrices['rig_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
         if (config.price_stock['headset_case_enable']){
             assortCreator.createSingleAssortItem(HEADSET_GAMBLE_ID)
-                                    .addStackCount(config.price_stock['headset_case_stock'])
+                                    .addUnlimitedStackCount()
                                     .addMoneyCost(Money.ROUBLES, (generatedPrices['headset_case_price'] * config.price_multiplier))
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);                    
@@ -384,140 +384,140 @@ export class TraderHelper
         if (config.price_stock['all_ammo_enable']){
            if (config.price_stock['9x18_case_enable']){
                assortCreator.createSingleAssortItem(NINE_BY_ONE_EIGHT_GAMBLE_ID)
-                                       .addStackCount(config.price_stock["9x18_case_stock"])
+                                        .addUnlimitedStackCount()
                                        .addMoneyCost(Money.ROUBLES, (generatedPrices["9x18_case_price"] * config.price_multiplier))
                                        .addLoyaltyLevel(1)
                                        .export(tables.traders[baseJson._id]);
            }
            if (config.price_stock['9x19_case_enable']){
                assortCreator.createSingleAssortItem(NINE_BY_ONE_NINE_GAMBLE_ID)
-                                       .addStackCount(config.price_stock["9x19_case_stock"])
+                                        .addUnlimitedStackCount()
                                        .addMoneyCost(Money.ROUBLES, (generatedPrices["9x19_case_price"] * config.price_multiplier))
                                        .addLoyaltyLevel(1)
                                        .export(tables.traders[baseJson._id]);
            }
            if (config.price_stock['9x21_case_enable']){
                assortCreator.createSingleAssortItem(NINE_BY_TWO_ONE_GAMBLE_ID)
-                                       .addStackCount(config.price_stock["9x21_case_stock"])
+                                       .addUnlimitedStackCount()
                                        .addMoneyCost(Money.ROUBLES, (generatedPrices["9x21_case_price"] * config.price_multiplier))
                                        .addLoyaltyLevel(1)
                                        .export(tables.traders[baseJson._id]);
            }
            if (config.price_stock['.357_case_enable']){
                assortCreator.createSingleAssortItem(THREE_FIVE_SEVEN_GAMBLE_ID)
-                                       .addStackCount(config.price_stock[".357_case_stock"])
+                                        .addUnlimitedStackCount()
                                        .addMoneyCost(Money.ROUBLES, (generatedPrices[".357_case_price"] * config.price_multiplier))
                                        .addLoyaltyLevel(1)
                                        .export(tables.traders[baseJson._id]);
            }
             if (config.price_stock['.45_case_enable']){
                 assortCreator.createSingleAssortItem(FOUR_FIVE_GAMBLE_ID)
-                                        .addStackCount(config.price_stock[".45_case_stock"])
+                                        .addUnlimitedStackCount()
                                         .addMoneyCost(Money.ROUBLES, (generatedPrices[".45_case_price"] * config.price_multiplier))
                                         .addLoyaltyLevel(1)
                                         .export(tables.traders[baseJson._id]);
            }
             if (config.price_stock['4.6x30_case_enable']){
                 assortCreator.createSingleAssortItem(FOUR_SIX_BY_THREE_ZERO_GAMBLE_ID)
-                                        .addStackCount(config.price_stock["4.6x30_case_stock"])
+                                        .addUnlimitedStackCount()
                                         .addMoneyCost(Money.ROUBLES, (generatedPrices["4.6x30_case_price"] * config.price_multiplier))
                                         .addLoyaltyLevel(1)
                                         .export(tables.traders[baseJson._id]);
            }
             if (config.price_stock['5.7x28_case_enable']){
                 assortCreator.createSingleAssortItem(FIVE_SEVEN_BY_TWO_EIGHT_GAMBLE_ID)
-                                        .addStackCount(config.price_stock["5.7x28_case_stock"])
+                                        .addUnlimitedStackCount()
                                         .addMoneyCost(Money.ROUBLES, (generatedPrices["5.7x28_case_price"] * config.price_multiplier))
                                         .addLoyaltyLevel(1)
                                         .export(tables.traders[baseJson._id]);
            }
             if (config.price_stock['5.45x39_case_enable']){
                 assortCreator.createSingleAssortItem(FIVE_FOUR_FIVE_BY_THREE_NINE_GAMBLE_ID)
-                                        .addStackCount(config.price_stock["5.45x39_case_stock"])
+                                        .addUnlimitedStackCount()
                                         .addMoneyCost(Money.ROUBLES, (generatedPrices["5.45x39_case_price"] * config.price_multiplier))
                                         .addLoyaltyLevel(1)
                                         .export(tables.traders[baseJson._id]);
            }
             if (config.price_stock['5.56x45_case_enable']){
                 assortCreator.createSingleAssortItem(FIVE_FIVE_SIX_BY_FOUR_FIVE_GAMBLE_ID)
-                                        .addStackCount(config.price_stock["5.56x45_case_stock"])
+                                        .addUnlimitedStackCount()
                                         .addMoneyCost(Money.ROUBLES, (generatedPrices["5.56x45_case_price"] * config.price_multiplier))
                                         .addLoyaltyLevel(1)
                                         .export(tables.traders[baseJson._id]);
            }
             if (config.price_stock['.300_case_enable']){
                 assortCreator.createSingleAssortItem(THREE_ZERO_ZERO_GAMBLE_ID)
-                                        .addStackCount(config.price_stock[".300_case_stock"])
+                                        .addUnlimitedStackCount()
                                         .addMoneyCost(Money.ROUBLES, (generatedPrices[".300_case_price"] * config.price_multiplier))
                                         .addLoyaltyLevel(1)
                                         .export(tables.traders[baseJson._id]);
            }
             if (config.price_stock['7.62x39_case_enable']){
                 assortCreator.createSingleAssortItem(SEVEN_SIX_TWO_BY_THREE_NINE_GAMBLE_ID)
-                                        .addStackCount(config.price_stock["7.62x39_case_stock"])
+                                        .addUnlimitedStackCount()
                                         .addMoneyCost(Money.ROUBLES, (generatedPrices["7.62x39_case_price"] * config.price_multiplier))
                                         .addLoyaltyLevel(1)
                                         .export(tables.traders[baseJson._id]);
            }
              if (config.price_stock['7.62x51_case_enable']){
                  assortCreator.createSingleAssortItem(SEVEN_SIX_TWO_BY_FIVE_ONE_GAMBLE_ID)
-                                         .addStackCount(config.price_stock["7.62x51_case_stock"])
+                                        .addUnlimitedStackCount()
                                          .addMoneyCost(Money.ROUBLES, (generatedPrices["7.62x51_case_price"] * config.price_multiplier))
                                          .addLoyaltyLevel(1)
                                          .export(tables.traders[baseJson._id]);
            }
              if (config.price_stock['7.62x54_case_enable']){
                  assortCreator.createSingleAssortItem(SEVEN_SIX_TWO_BY_FIVE_FOUR_GAMBLE_ID)
-                                         .addStackCount(config.price_stock["7.62x54_case_stock"])
+                                         .addUnlimitedStackCount()
                                          .addMoneyCost(Money.ROUBLES, (generatedPrices["7.62x54_case_price"] * config.price_multiplier))
                                          .addLoyaltyLevel(1)
                                          .export(tables.traders[baseJson._id]);
            }
              if (config.price_stock['.338_case_enable']){
                  assortCreator.createSingleAssortItem(THREE_THREE_EIGHT_GAMBLE_ID)
-                                         .addStackCount(config.price_stock[".338_case_stock"])
+                                         .addUnlimitedStackCount()
                                          .addMoneyCost(Money.ROUBLES, (generatedPrices[".338_case_price"] * config.price_multiplier))
                                          .addLoyaltyLevel(1)
                                          .export(tables.traders[baseJson._id]);
            }
              if (config.price_stock['9x39_case_enable']){
                  assortCreator.createSingleAssortItem(NINE_BY_THREE_NINE_GAMBLE_ID)
-                                         .addStackCount(config.price_stock["9x39_case_stock"])
+                                         .addUnlimitedStackCount()
                                          .addMoneyCost(Money.ROUBLES, (generatedPrices["9x39_case_price"] * config.price_multiplier))
                                          .addLoyaltyLevel(1)
                                          .export(tables.traders[baseJson._id]);
            }
              if (config.price_stock['.366_case_enable']){
                  assortCreator.createSingleAssortItem(THREE_SIX_SIX_GAMBLE_ID)
-                                         .addStackCount(config.price_stock[".366_case_stock"])
+                                         .addUnlimitedStackCount()
                                          .addMoneyCost(Money.ROUBLES, (generatedPrices[".366_case_price"] * config.price_multiplier))
                                          .addLoyaltyLevel(1)
                                          .export(tables.traders[baseJson._id]);
            }
              if (config.price_stock['12.7x55_case_enable']){
                  assortCreator.createSingleAssortItem(ONE_TWO_SEVEN_BY_FIVE_FIVE_GAMBLE_ID)
-                                         .addStackCount(config.price_stock["12.7x55_case_stock"])
+                                         .addUnlimitedStackCount()
                                          .addMoneyCost(Money.ROUBLES, (generatedPrices["12.7x55_case_price"] * config.price_multiplier))
                                          .addLoyaltyLevel(1)
                                          .export(tables.traders[baseJson._id]);
            }
              if (config.price_stock['12/70_case_enable']){
                  assortCreator.createSingleAssortItem(ONE_TWO_BY_SEVEN_ZERO_GAMBLE_ID)
-                                         .addStackCount(config.price_stock["12/70_case_stock"])
+                                         .addUnlimitedStackCount()
                                          .addMoneyCost(Money.ROUBLES, (generatedPrices["12/70_case_price"] * config.price_multiplier))
                                          .addLoyaltyLevel(1)
                                          .export(tables.traders[baseJson._id]);
            }
              if (config.price_stock['20/70_case_enable']){
                  assortCreator.createSingleAssortItem(TWO_ZERO_BY_SEVEN_ZERO_GAMBLE_ID)
-                                         .addStackCount(config.price_stock["20/70_case_stock"])
+                                         .addUnlimitedStackCount()
                                          .addMoneyCost(Money.ROUBLES, (generatedPrices["20/70_case_price"] * config.price_multiplier))
                                          .addLoyaltyLevel(1)
                                          .export(tables.traders[baseJson._id]);
            }
              if (config.price_stock['23x75_case_enable']){
                  assortCreator.createSingleAssortItem(TWO_THREE_BY_SEVEN_FIVE_GAMBLE_ID)
-                                         .addStackCount(config.price_stock["23x75_case_stock"])
+                                         .addUnlimitedStackCount()
                                          .addMoneyCost(Money.ROUBLES, (generatedPrices["23x75_case_price"] * config.price_multiplier))
                                          .addLoyaltyLevel(1)
                                          .export(tables.traders[baseJson._id]);

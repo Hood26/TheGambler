@@ -58,7 +58,7 @@ export class ItemCreator {
 
         for(let i = 0; i <  this.helmets.rarities.length; i++){
             if (which === this.helmets.rarities[i]) {
-                baseHelmet = this.helmets.rewards[i];
+                baseHelmet = this.helmets.presets[i];
                 break;
             }
         }
@@ -75,7 +75,7 @@ export class ItemCreator {
 
         for(let i = 0; i <  this.armors.rarities.length; i++){
             if (which === this.armors.rarities[i]) {
-                baseArmor = this.armors.rewards[i];
+                baseArmor = this.armors.presets[i];
                 break;
             }
         }
@@ -93,7 +93,7 @@ export class ItemCreator {
 
         for(let i = 0; i <  this.weapons.rarities.length; i++){
             if (which === this.weapons.rarities[i]) {
-                weaponBuilds = this.weapons.rewards[i];
+                weaponBuilds = this.weapons.presets[i];
                 break;
             }
         }

@@ -9,10 +9,6 @@ export class PremiumWeapons {
     "_meta", 
   ]
 
-  presets = [
-    "meta",
-  ]
-
   public rewards = [
     "meta", 
   ]

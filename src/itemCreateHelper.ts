@@ -36,7 +36,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Gold AKM Handguard",
                     shortName: "Gold AKM Handguard",
-                    description: "This is a test..."
+                    description: "Handguard that is wrapped in golden foil"
                 }
             }
         }
@@ -58,7 +58,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Gold AKM Foregrip",
                     shortName: "Gold AKM Foregrip",
-                    description: "This is a test..."
+                    description: "Foregrip that is wrapped in golden foil"
                 }
             }
         }
@@ -80,7 +80,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Gold AKM Stock",
                     shortName: "Gold AKM Stock",
-                    description: "This is a test..."
+                    description: "Stock that is wrapped in golden foil"
                 }
             }
         }
@@ -102,7 +102,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Gold AKM Magazine",
                     shortName: "Gold AKM Magazine",
-                    description: "This is a test..."
+                    description: "Magazine that is wrapped in golden foil"
                 }
             }
         }
@@ -124,7 +124,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Gold AKM Receiver",
                     shortName: "Gold AKM Receiver",
-                    description: "This is a test..."
+                    description: "Receiver that is wrapped in golden foil"
                 }
             }
         }
@@ -146,7 +146,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Gold AKM Rear Sight",
                     shortName: "Gold AKM Rear Sight",
-                    description: "This is a test..."
+                    description: "Rear sight that is wrapped in golden foil"
                 }
             }
         }
@@ -168,7 +168,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Gold AKM Charging Handle",
                     shortName: "Gold AKM Charging Handle",
-                    description: "This is a test..."
+                    description: "Charging handle that is wrapped in golden foil"
                 }
             }
         }
@@ -190,7 +190,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Gold AKM Silencer",
                     shortName: "Gold AKM Silencer",
-                    description: "This is a test..."
+                    description: "Suppressor that is wrapped in golden foil"
                 }
             }
         }
@@ -212,7 +212,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Gold AKM Pistol Grip",
                     shortName: "Gold AKM Pistol Grip",
-                    description: "This is a test..."
+                    description: "Pistol grip that is wrapped in golden foil"
                 }
             }
         }
@@ -1398,8 +1398,8 @@ export class ItemCreateHelper {
                 _proto: "",
                 _type: "Item"
             },
-            fleaPriceRoubles: 130000,
-            handbookPriceRoubles: 130000,
+            fleaPriceRoubles: 200000,
+            handbookPriceRoubles: 200000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1937,7 +1937,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Loadout",
                     shortName: "Mystery Loadout",
-                    description: `A full raid kit in one unbox! You will never receive the same exact kit as every items is randomly generated and correlate by rarity of the generated weapon. Items unboxed include:\n Weapon, Extra Magazines, Ammo, Armor, Rig, Helmet, Headset, Backpack, Food, Drink, and Medical Supplies.`
+                    description: `A full raid kit in one unbox! You will never receive the same exact kit as every items is randomly generated and correlate by rarity of the generated weapon. Items unboxed include:\n Weapon, Extra Magazines, Ammo, Grenades, Armor, Rig, Helmet, Headset, Backpack, Food, Drink, and Medical Supplies.`
                 }
             }
         };

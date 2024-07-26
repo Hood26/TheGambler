@@ -1,6 +1,7 @@
 export class Wallet {
 
   public parent = "wallet";
+  public price_generate = true;
   
     public rarities = [
       "_extremely_rare", 

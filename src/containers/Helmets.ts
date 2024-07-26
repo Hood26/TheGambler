@@ -2,6 +2,7 @@ export class Helmets {
 
   public parent = "helmet";
   public is_preset = true;
+  public price_generate = true;
   public calculate_preset_prices = false;
   
   public rarities = [
@@ -3688,6 +3689,46 @@ export class Helmets {
           },
         ],
       },
+      {
+        Items: [
+          {
+              _id: "0c0b06fc4712b021d08e0299",
+              _tpl: "5a16bb52fcdbcb001a3b00dc",
+              parentId: "5fe49444ae6628187a2e78b8",
+              slotId: "hideout",
+              upd: {
+                  StackObjectsCount: 1
+              },
+              "location": {
+                  "x": 2,
+                  "y": 2,
+                  "r": 0,
+                  "rotation": false
+              }
+          },
+          {
+              _id: "e5fdebf9a2ade01fb8553c00",
+              _tpl: "5a16b8a9fcdbcb00165aa6ca",
+              parentId: "0c0b06fc4712b021d08e0299",
+              slotId: "mod_nvg",
+              upd: {}
+          },
+          {
+              _id: "0770a465f0843d51533ae2be",
+              _tpl: "5a16b93dfcdbcbcae6687261",
+              parentId: "e5fdebf9a2ade01fb8553c00",
+              slotId: "mod_nvg",
+              upd: {}
+          },
+          {
+              _id: "6a60886196750e2a79fd88e3",
+              _tpl: "57235b6f24597759bf5a30f1",
+              parentId: "0770a465f0843d51533ae2be",
+              slotId: "mod_nvg",
+              upd: {}
+          }
+        ],
+      }
     ],
     [
       // _common
@@ -4391,46 +4432,6 @@ export class Helmets {
                   "rotation": false
               }
           },
-        ],
-      },
-      {
-        Items: [
-          {
-              _id: "0c0b06fc4712b021d08e0299",
-              _tpl: "5a16bb52fcdbcb001a3b00dc",
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              upd: {
-                  StackObjectsCount: 1
-              },
-              "location": {
-                  "x": 2,
-                  "y": 2,
-                  "r": 0,
-                  "rotation": false
-              }
-          },
-          {
-              _id: "e5fdebf9a2ade01fb8553c00",
-              _tpl: "5a16b8a9fcdbcb00165aa6ca",
-              parentId: "0c0b06fc4712b021d08e0299",
-              slotId: "mod_nvg",
-              upd: {}
-          },
-          {
-              _id: "0770a465f0843d51533ae2be",
-              _tpl: "5a16b93dfcdbcbcae6687261",
-              parentId: "e5fdebf9a2ade01fb8553c00",
-              slotId: "mod_nvg",
-              upd: {}
-          },
-          {
-              _id: "6a60886196750e2a79fd88e3",
-              _tpl: "57235b6f24597759bf5a30f1",
-              parentId: "0770a465f0843d51533ae2be",
-              slotId: "mod_nvg",
-              upd: {}
-          }
         ],
       },
       {

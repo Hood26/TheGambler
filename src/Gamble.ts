@@ -55,6 +55,7 @@ export class Gamble {
 
     public newGamble(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)): []{
         //console.log('NEW GAMBLE: Creating ' + name + ' roll = ' + roll)
+        let loadout = false; // this is temp for now until foundInRaid prop is implemented
 
         switch(name){
             case 'wallet':
@@ -66,10 +67,13 @@ export class Gamble {
             case 'stim':
             case 'medical':
             case 'food':
+            case 'loadout_grenade':
+            case 'loadout_facecovers':
             case 'loadout_food':
             case 'loadout_drink':
             case 'loadout_light_bleed':
             case 'loadout_heavy_bleed':
+            case 'loadout_splint':
             case 'loadout_healing':
             case 'melee':
             case 'headset':
@@ -107,15 +111,20 @@ export class Gamble {
                 break;
             case 'loadout':
                 this.openLoadoutContainer(name);
+                loadout = true;
                 break;
             default:
                 this.logger.error(`[TheGambler] This Mystery Container Doesn't exist! Contact Author!`);    
+        }
+
+        if (loadout) {
+            this.newItemsRequest.foundInRaid = false;
         }
         return this.newItemsRequest;
     }
 
     // Opens all rewards from the loadout container
-    private openLoadoutContainer(name: string = this.name, roll: number = this.randomUtil.getFloat(0,85)){ 
+    private openLoadoutContainer(name: string = this.name, roll: number = this.randomUtil.getFloat(0,77)){  // 70.0 - 77.0 is meme
         this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
         const rewards = this.mysteryContainer.getGuaranteedRewards(name);
         const randomness = this.mysteryContainer.getGuaranteedRandomness(name);
@@ -127,17 +136,35 @@ export class Gamble {
 
             if (this.mysteryContainer.getName(current)) { // Rewards is a container
 
-                if(this.currentWeaponType == 'meme') { // Generated Weapon is meme all rewards are random now
-
-                    this.newGamble(current, this.randomUtil.getFloat(0,70));
+                console.log('Weapon Type = ' + currentWeaponType)
+                if(currentWeaponType == '_meme') { // Generated Weapon is meme all rewards are random now
+                    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH')
+                    console.log('Meme weapon found... Generating random rewards...')
+                    this.newGamble(current, this.randomUtil.getFloat(8,70));
                     
-                } else{
+                } else if (this.currentWeaponType == '_meta') { // Generated Weapon is meta all rewards are random now
+
+                    this.newGamble(current, this.randomUtil.getFloat(6,40));
+
+                } else if (this.currentWeaponType == '_decent') { // Generated Weapon is meta all rewards are random now
+
+                    this.newGamble(current, this.randomUtil.getFloat(18,50));
+
+                }else if (this.currentWeaponType == '_scav') { // Generated Weapon is meta all rewards are random now
+
+                    this.newGamble(current, this.randomUtil.getFloat(48,70));
+
+                }else{
                     if (randomness[i]) {
+                        console.log('Randomness found... Generating random rewards...')
                         this.newGamble(current);
                     } else {
+                        console.log('No randomness found... Generating guaranteed rewards...')
                         this.newGamble(current, roll);
                     }
                 }
+
+                console.log('The Rest...')
 
                 if(current === 'helmet') {
                     if (!this.currentHeadsetCompatible) {
@@ -181,15 +208,15 @@ export class Gamble {
                     let min, max = 0;
                     // Depending on the ammo type, we want to generate a different rarity of ammo from the temproll
                     switch(currentWeaponType) {
-                        case 'meme':
+                        case '_meme':
                             min = 5;
                             max = 30;
                             break;
-                        case 'decent':
+                        case '_decent':
                             min = 10;
                             max = 50;
                             break;
-                        case 'meta':
+                        case '_meta':
                             min = 3;
                             max = 26;
                             break;
@@ -248,6 +275,9 @@ export class Gamble {
             for(let i = 0; i < rewards.length; i++) {
                 for(let j = 0; j < reward_rolls[i]; j++) {
                     const item = this.mysteryContainer.getReward(name, i);
+                    if (item == "NaN") { // Nothing
+                        continue;
+                    }
                     this.currentID = item;
                     this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(item)];
                     this.newItemsRequest.foundInRaid = true;
@@ -255,8 +285,6 @@ export class Gamble {
                 }
             }
         }
-
-
 
         if (id === "NaN" && !reward_rolls) {
            // console.log('ID is NaN... Searching for ID...')
@@ -305,11 +333,11 @@ export class Gamble {
     }
 
     private openPreset(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){
+        this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
         //console.log('\nopenPreset()');
         // ItemCreator stores all preset creation functions
         let item = new ItemCreator(this.container);
         let preset: Item[] = [];
-        this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
         const odds: Array<number> = this.mysteryContainer.getOdds(name);
 
         for(let i = 0; i < odds.length; i++) {

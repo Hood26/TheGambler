@@ -30,40 +30,32 @@ export class Price{
         this.logger.info("[TheGambler] Generating Mystery Container Prices...");
         let containerPrices = {};
         const mysteryContainerNames = [...this.MysteryContainer.simulation, ...this.MysteryContainer.items.ammo.names];
-        console.log(mysteryContainerNames)
+        //console.log(mysteryContainerNames)
 
-        for(let i = 0; i < mysteryContainerNames.length; i++){
-            let amount: number = 1;
-            const current = this.MysteryContainer.getName(mysteryContainerNames[i]); // we need to remove current and name from this and generateMysterContainerPrices() as this is stupid implementation
-            const name : string = current; // we need to remove current and name from this and generateMysterContainerPrices() as this is stupid implementation
-            const parent :string = this.MysteryContainer.getParent(name);
+        for (let i = 0; i < mysteryContainerNames.length; i++) {
+            const name: string = this.MysteryContainer.getName(mysteryContainerNames[i]);
+            const parent: string = this.MysteryContainer.getParent(name);
             const rarities: Array<string> = this.MysteryContainer.getRarities(name);
             const odds: Array<number> = this.MysteryContainer.getOdds(name);
             let currentPrices: Array<number> = [];
-            let currentContainerPrice = this.config.price_stock[current + "_case_price"];
+            let currentContainerPrice = this.config.price_stock[name + "_case_price"];
 
             if (this.MysteryContainer.isAmmo(mysteryContainerNames[i])) {
-                //console.log('Ammo')
-                const amount = ((this.config.odds[current + '_min'] + this.config.odds[current + '_max']) / 2);
-                const items = this.MysteryContainer.items['ammo'].items[current];
-                currentPrices = this.getMysteryContainerPrices(current, current,  rarities, items, amount);
-
+                const amount = ((this.config.odds[name + '_min'] + this.config.odds[name + '_max']) / 2);
+                const items = this.MysteryContainer.items['ammo'].items[name];
+                currentPrices = this.getMysteryContainerPrices(name, name, rarities, items, amount);
             } else if (this.MysteryContainer.isPreset(mysteryContainerNames[i])) {
-                //console.log('Preset')
-                const items = this.MysteryContainer.items[this.MysteryContainer.getParent(name)];
-                currentPrices = this.getContainerPresetPrices(current, parent,  rarities, items);
-                
+                const items = this.MysteryContainer.items[parent];
+                currentPrices = this.getContainerPresetPrices(name, parent, rarities, items);
             } else {
-                //console.log('Container')
-                const items = this.MysteryContainer.items[this.MysteryContainer.getName(name)];
-                currentPrices = this.getMysteryContainerPrices(current, parent, rarities, items);
-                
+                const items = this.MysteryContainer.items[name];
+                currentPrices = this.getMysteryContainerPrices(name, parent, rarities, items);
             }
-            
+
             currentContainerPrice = this.runPriceGeneration(odds, currentPrices, this.MysteryContainer.getProfitPercentage(name));
             containerPrices[name + "_case_price"] = currentContainerPrice;
-
         }
+
         this.logger.info("[TheGambler] Finished Generating Mystery Container Prices!");
         //console.log("Mystery Container Prices")
         //console.log(containerPrices)
@@ -72,17 +64,16 @@ export class Price{
 
     private getItemPrice(parent: string, currentItem: string, amount: number): number {
         const itemHelper: ItemHelper = this.container.resolve<ItemHelper>("ItemHelper");
-        //console.log([items.rewards[currentRarityIndex][currentItemIndex]])
-        //console.log('Parent!!')
-        //console.log(parent)
         const override: number = this.MysteryContainer.getOverride(parent, currentItem);
         let currentPrice: number = 0;
 
         if (override && this.config['mystery_container_override_enable']) {
             currentPrice = override * amount;
-            //console.log('Override Price!!!!!!!!!')
+            //if (parent == 'armor') {
+                //console.log('Armor Override Price: ' + currentPrice)
+            //}
+
         } else {
-    
             // Thinking: We always want to use flea price as this is most accurate, but if there is no flea price we must fallback to handbook
             const fleaPrice = itemHelper.getDynamicItemPrice(currentItem);
             if (fleaPrice == 0) {
@@ -102,23 +93,34 @@ export class Price{
         for(let i = 0; i < rarities.length; i++){
             let count = 0;
             for (let j = 0; j < items.rewards[i].length; j++){
-                const currentItem = items.rewards[i][j]
-                const currentPrice =  this.getItemPrice(parent, currentItem, amount);
+                const currentItem = items.rewards[i][j];
+                let currentPrice: number = 0;
+
+                if (currentItem == '5449016a4bdc2d6f028b456f') { // isRoubles
+                    currentPrice = this.MysteryContainer.items[parent].reward_amount[i];
+                    //console.log('Roubles Price: ' + currentPrice)
+                } else {
+                    currentPrice =  this.getItemPrice(parent, currentItem, amount);
+
+                }
+
                 sum = sum + currentPrice;
                 count++; 
             }
             sum = sum / count;
             prices.push(sum);
             sum = 0;
+            if ( name == 'wallet') {
+                console.log('Wallet Price Ranges:')
+                console.log(prices)
+            }
         }
         this.MysteryContainer.setRarityAverageProfit(name, prices);
-
-        //console.log('getMysteryContainerPrices() Container Prices...:')
-        //console.log(prices)
         return prices;
     }
 
     // checks if the current item id is part of a traders assort and returns the price.
+    // returns 0 if the item is not sold by a trader for roubles
     private traderAssortPrice(currentItem: string): any {
         const databaseServer: DatabaseServer = this.container.resolve<DatabaseServer>("DatabaseServer");
         const tables = databaseServer.getTables();
@@ -134,6 +136,7 @@ export class Price{
                     price = traderAssort.barter_scheme[_id][0][0].count;
 
                     if (price < 10) { // price is most likely a barter. This is a bad way of doing this, but fuck it.
+                        price = 0;
                         continue;
                     }
 
@@ -156,11 +159,16 @@ export class Price{
 
         for(let i = 0; i < rarities.length; i++){
             let count = 0;
-            for(let j = 0; j < items.rewards[i].length; j++) {
-                for(let k = 0; k < items.rewards[i][j].Items.length; k++){
+            for(let j = 0; j < items.presets[i].length; j++) {
+                for(let k = 0; k < items.presets[i][j].Items.length; k++){
 
                     let currentPrice: number = 0;
-                    let currentItem = items.rewards[i][j].Items[k]._tpl;
+                    let currentItem = items.presets[i][j].Items[k]._tpl;
+
+                    if (name == 'helmet') { // skip usless helmet attachments
+                        if (items.presets[i][j].Items[k].slotId == 'Helmet_top') continue;
+                        if (items.presets[i][j].Items[k].slotId == 'Helmet_back') continue;
+                    }
                     if (this.config.skip_base_attachments.includes(currentItem)) { // attachment is a base attachment, skip...
                         continue;
 
@@ -180,6 +188,10 @@ export class Price{
                 weaponPricesPerTier.push(Math.floor(sum));
                 sum = 0;
             }
+            //if ( name == 'helmet') {
+                //console.log('Helmet Rarity = ' + rarities[i]);
+                //console.log(weaponPricesPerTier)
+            //}
             const tierSum = weaponPricesPerTier.reduce((a, b) => a + b, 0);
             sum = tierSum / count;
             prices.push(Math.floor(sum));
@@ -187,6 +199,14 @@ export class Price{
             weaponPricesPerTier = [];
         }
         this.MysteryContainer.setRarityAverageProfit(name, prices);
+        //if ( name == 'helmet') {
+            //console.log('Helmet Price Ranges:')
+            //console.log(prices)
+        //}
+        //if ( name == 'weapon') {
+            //console.log('Weapon Price Ranges:')
+            //console.log(prices)
+        //}
         //console.log('Container Weapon Prices:')
         //console.log(prices)
         return prices;
