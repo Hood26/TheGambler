@@ -236,7 +236,7 @@
     "wallet_common": 15.0,            // 100k Roubles
     "wallet_extra_common": 35.0,      // 50K Roubles
     "wallet_base": 35.0,              // 25k Roubles
-    "wallet_profit_percentage": 0.97, // Container Profitability 
+    "wallet_profit_percentage": 0.98, // Container Profitability 
 
     // Mystery Keycard
     "keycard_red": 0.1,           // Red Keycard
@@ -276,7 +276,7 @@
     "food_rare": 5.0,              // Rare Food
     "food_uncommon": 35.0,         // Uncommon Food
     "food_common": 60.0,           // Common Food
-    "food_profit_percentage": 0.94, // Container Profitability
+    "food_profit_percentage": 0.95, // Container Profitability
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -348,7 +348,7 @@
     "melee_rare": 2.0,              // Rare melee
     "melee_uncommon": 22.75,        // Uncommon melee
     "melee_common": 75.0,           // Common melee
-    "melee_profit_percentage": 0.94, // Container Profitability
+    "melee_profit_percentage": 0.95, // Container Profitability
 
     // Mystery Backpack
     "backpack_extremely_rare": 5.0, // Extremely Rare backpack
