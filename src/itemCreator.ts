@@ -2,9 +2,9 @@ import { DependencyContainer } from "tsyringe";
 import { HashUtil } from "@spt/utils/HashUtil";
 import { Item } from "@spt/models/eft/common/tables/IItem";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
-import { Armors } from "./containers/armors";
-import { Helmets } from "./containers/helmets";
-import { Weapons } from "./containers/weapons";
+import { Weapons } from "./containers/Weapons";
+import { Helmets } from "./containers/Helmets";
+import { Armors } from "./containers/Armors";
 
 
 export class ItemCreator {

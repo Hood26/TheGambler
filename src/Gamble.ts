@@ -140,15 +140,15 @@ export class Gamble {
                 if(currentWeaponType == '_meme') { // Generated Weapon is meme all rewards are random now
                     this.newGamble(current, this.randomUtil.getFloat(0,70));
                     
-                } else if (this.currentWeaponType == '_meta') { // Generated Weapon is meta all rewards are random now
+                } else if (this.currentWeaponType == '_meta') {
 
                     this.newGamble(current, this.randomUtil.getFloat(5,40));
 
-                } else if (this.currentWeaponType == '_decent') { // Generated Weapon is meta all rewards are random now
+                } else if (this.currentWeaponType == '_decent') {
 
                     this.newGamble(current, this.randomUtil.getFloat(18,45));
 
-                }else if (this.currentWeaponType == '_scav') { // Generated Weapon is meta all rewards are random now
+                }else if (this.currentWeaponType == '_scav') {
 
                     this.newGamble(current, this.randomUtil.getFloat(48,70));
 
