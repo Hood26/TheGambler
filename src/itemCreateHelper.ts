@@ -19,6 +19,79 @@ export class ItemCreateHelper {
         // Resolve the CustomItemService container
         const customItem = container.resolve<CustomItemService>("CustomItemService");
 
+
+        const white_chip: NewItemFromCloneDetails = {
+            itemTplToClone: "5696686a4bdc2da3298b456a",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/white_chip.bundle",
+                    rcid: ""
+                },
+                DiscardLimit: -1, // Allows currency to be dropped in raid
+            },
+            DiscardLimit: -1,
+            parentId: "543be5dd4bdc2deb348b4569",
+            newId: "white_chip", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "White Poker Chip",
+                    shortName: "Chip",
+                    description: "Common poker chip that can be used to buy valuable mystery boxes from the Gambler."
+                }
+            }
+        }
+
+        const red_chip: NewItemFromCloneDetails = {
+            itemTplToClone: "5696686a4bdc2da3298b456a",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/red_chip.bundle",
+                    rcid: ""
+                },
+                DiscardLimit: -1,
+            },
+            DiscardLimit: -1,
+            parentId: "543be5dd4bdc2deb348b4569",
+            newId: "red_chip", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Red Poker Chip",
+                    shortName: "Chip",
+                    description: "Uncommon poker chip that can be used to buy valuable mystery boxes from the Gambler."
+                }
+            }
+        }
+
+        const green_chip: NewItemFromCloneDetails = {
+            itemTplToClone: "5696686a4bdc2da3298b456a",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/green_chip.bundle",
+                    rcid: ""
+                },
+                DiscardLimit: -1,
+            },
+            DiscardLimit: -1,
+            parentId: "543be5dd4bdc2deb348b4569",
+            newId: "green_chip", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Green Poker Chip",
+                    shortName: "Chip",
+                    description: "Rare poker chip that can be used to buy valuable mystery boxes from the Gambler."
+                }
+            }
+        }
+
         const gold_akm_handguard: NewItemFromCloneDetails = {
             itemTplToClone: "5c17664f2e2216398b5a7e3c",
             overrideProperties: {
@@ -4502,6 +4575,9 @@ export class ItemCreateHelper {
             } 
         }
 
+        customItem.createItemFromClone(green_chip);
+        customItem.createItemFromClone(white_chip);
+        customItem.createItemFromClone(red_chip);
         customItem.createItemFromClone(gold_akm_handguard);
         customItem.createItemFromClone(gold_akm_foregrip);
         customItem.createItemFromClone(gold_akm_stock);

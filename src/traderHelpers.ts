@@ -163,6 +163,34 @@ export class TraderHelper
         const price = new Price(container, config, logger);
         const generatedPrices = price.generateContainerPrices();
 
+
+
+
+        const green_chip = 'green_chip';
+        const white_chip = 'white_chip';
+        const red_chip = 'red_chip';
+
+        assortCreator.createSingleAssortItem(white_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(Money.ROUBLES, 5000)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(green_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(Money.ROUBLES, 5000)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(red_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(Money.ROUBLES, 5000)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+
+
+
+
+
+
         const GOLD_AKM_HANDGUARD_ID = 'gold_akm_handguard';
         const GOLD_AKM_FOREGRIP_ID = 'gold_akm_foregrip';
         const GOLD_AKM_STOCK_ID = 'gold_akm_stock';
