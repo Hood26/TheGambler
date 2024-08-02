@@ -73,6 +73,7 @@ export class Gamble {
             case 'loadout_drink':
             case 'loadout_light_bleed':
             case 'loadout_heavy_bleed':
+            case 'loadout_stim':
             case 'loadout_splint':
             case 'loadout_healing':
             case 'melee':
@@ -124,12 +125,20 @@ export class Gamble {
     }
 
     // Opens all rewards from the loadout container
-    private openLoadoutContainer(name: string = this.name, roll: number = this.randomUtil.getFloat(0,77)){  // 70.0 - 77.0 is meme
+    private openLoadoutContainer(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){  // 74.3 - 82 is meme // 82 MAX
         this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
         const rewards = this.mysteryContainer.getGuaranteedRewards(name);
         const randomness = this.mysteryContainer.getGuaranteedRandomness(name);
         let curerntID: string;
         let currentCaliber: string, currentMagazine: string, currentMagazineMaxAmmo: number, currentWeaponType : string;
+
+        if (roll > 90) { // _scav
+            roll = this.randomUtil.getFloat(44.3, 74.3);
+            roll = 65;
+        } else if (roll > 82) { // _decent
+            roll = this.randomUtil.getFloat(19.3, 44.3);
+            roll = 38;
+        }
 
         for(let i = 0; i < rewards.length; i++) {
             const current = rewards[i];
@@ -138,11 +147,11 @@ export class Gamble {
 
                 //console.log('Weapon Type = ' + currentWeaponType)
                 if(currentWeaponType == '_meme') { // Generated Weapon is meme all rewards are random now
-                    this.newGamble(current, this.randomUtil.getFloat(0,70));
+                    this.newGamble(current, this.randomUtil.getFloat(5,65));
                     
                 } else if (this.currentWeaponType == '_meta') {
 
-                    this.newGamble(current, this.randomUtil.getFloat(5,40));
+                    this.newGamble(current, this.randomUtil.getFloat(5,28));
 
                 } else if (this.currentWeaponType == '_decent') {
 

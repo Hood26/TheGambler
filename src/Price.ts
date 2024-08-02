@@ -6,6 +6,7 @@ import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { RandomUtil } from "@spt/utils/RandomUtil";
 import { Ammo } from "./containers/Ammo";
 import { MysteryContainer } from "./MysteryContainer";
+import { Gamble } from "./Gamble";
 
 
 
@@ -176,7 +177,7 @@ export class Price{
                         }
 
                         sum = sum + currentPrice;
-                    }
+                    }   
                 }
                 count++
                 weaponPricesPerTier.push(Math.floor(sum));
@@ -207,5 +208,33 @@ export class Price{
         }
         sum *= profitability;
         return Math.floor(sum);
+    }
+    
+    
+    public loadoutSimulation = () => {
+        let sum = 0;
+        const weaponContainerPrice = 147000;
+        const extraItems = 5; // extra 2 mags and 3 ammo stacks
+        const simulations = 50000;
+
+        for(let i = 0; i < simulations; i++) {
+            const gamble = new Gamble(this.container, this.config, this.logger, 'loadout');
+            gamble.newGamble();
+            //console.log(gamble.newItemsRequest.itemsWithModsToAdd[1][0].upd.StackObjectsCount)
+
+            for (let j = 0; j < gamble.newItemsRequest.itemsWithModsToAdd.length; j++) {
+                if ( j != 0 && j != 1 + extraItems) { // Weapon, we dont price calculate
+                    const indexItem = gamble.newItemsRequest.itemsWithModsToAdd[j][0];
+                    const currentItem = indexItem._tpl;
+                    const amount = indexItem.upd ? indexItem.upd.StackObjectsCount : 1;
+                    const itemPrice = this.getItemPrice('weapon', currentItem, amount);
+                    sum += itemPrice;
+                }
+            }
+
+            sum += weaponContainerPrice;
+        }
+
+       return Math.floor(sum / simulations); 
     }
 }

@@ -163,13 +163,22 @@ export class TraderHelper
         const price = new Price(container, config, logger);
         const generatedPrices = price.generateContainerPrices();
 
+        
+        //const loadoutPrice = price.loadoutSimulation();
+        //console.log('One Loadout Cost = ' + loadoutPrice);
+        
+        console.log(generatedPrices);
 
 
 
-        const green_chip = 'green_chip';
-        const white_chip = 'white_chip';
-        const red_chip = 'red_chip';
+        const white_chip = 'a_white_chip';
+        const pake_white_chips = 'aaa_white_chips_gamble';
+        const red_chip = 'b_red_chip';
+        const green_chip = 'c_green_chip';
+        const blue_chip = 'd_blue_chip';
+        const black_chip = 'e_black_chip';
 
+        /*
         assortCreator.createSingleAssortItem(white_chip)
                                 .addStackCount(999)
                                 .addMoneyCost(Money.ROUBLES, 5000)
@@ -185,7 +194,7 @@ export class TraderHelper
                                 .addMoneyCost(Money.ROUBLES, 5000)
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
-
+        */
 
 
 
@@ -221,6 +230,84 @@ export class TraderHelper
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }
+        
+        assortCreator.createSingleAssortItem(white_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(Money.ROUBLES, 20000)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(pake_white_chips)
+                                .addStackCount(999)
+                                .addMoneyCost(red_chip, 1)
+                                .addStackCount(4)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(pake_white_chips)
+                                .addStackCount(999)
+                                .addMoneyCost(red_chip, 1)
+                                .addStackCount(4)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(pake_white_chips)
+                                .addStackCount(999)
+                                .addMoneyCost(red_chip, 1)
+                                .addStackCount(4)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(pake_white_chips)
+                                .addStackCount(999)
+                                .addMoneyCost(red_chip, 1)
+                                .addStackCount(4)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(red_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(white_chip, 4)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(green_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(red_chip, 4)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(blue_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(green_chip, 4)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(black_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(blue_chip, 4)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+                                /*
+        assortCreator.createSingleAssortItem(green_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(Money.ROUBLES, 50000)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(green_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(Money.ROUBLES, 50000)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(green_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(Money.ROUBLES, 50000)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(green_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(Money.ROUBLES, 50000)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+        assortCreator.createSingleAssortItem(green_chip)
+                                .addStackCount(999)
+                                .addMoneyCost(Money.ROUBLES, 50000)
+                                .addLoyaltyLevel(1)
+                                .export(tables.traders[baseJson._id]);
+                                */
+        
         if (config.price_stock['key_case_enable']){
             assortCreator.createSingleAssortItem(KEY_GAMBLE_ID)
                                     .addUnlimitedStackCount()

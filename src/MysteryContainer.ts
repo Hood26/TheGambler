@@ -26,6 +26,7 @@ import { LoadoutHealing } from "./containers/LoadoutHealing";
 import { LoadoutGrenade } from "./containers/LoadoutGrenade";
 import { LoadoutSplit } from "./containers/LoadoutSplint";
 import { LoadoutFacecovers } from "./containers/LoadoutFacecovers";
+import { LoadoutStim } from "./containers/LoadoutStim";
 
 class Container {
 
@@ -86,7 +87,7 @@ export class MysteryContainer {
             'wallet', 'keycard', 'key', 'stim', 'medical', 'food', 'melee', 
             'backpack', 'rig', 'weapon', 'premium_weapon', 'helmet', 
             'headset', 'armor', 'premium_armor', 'roubles', 'bitcoin', 'gpcoin',
-             'loadout', 'loadout_grenade', 'loadout_facecovers', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_splint', 'loadout_healing', 'ammo'
+             'loadout', 'loadout_grenade', 'loadout_facecovers', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_stim', 'loadout_splint', 'loadout_healing', 'ammo'
         ];
         this.simulation = [] //['armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food', 'keycard'];
         this.override    = ['ammo', 'armor', 'weapon', 'helmet'];
@@ -117,6 +118,7 @@ export class MysteryContainer {
             loadout_drink:       new Loadoutdrink(),
             loadout_light_bleed: new LoadoutLightBleed(),
             loadout_heavy_bleed: new LoadoutHeavyBleed(),
+            loadout_stim:        new LoadoutStim(),
             loadout_splint:      new LoadoutSplit(),   
             loadout_healing:     new LoadoutHealing()
         }

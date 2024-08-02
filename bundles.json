@@ -10,6 +10,14 @@
             ]
         },
         {
+            "key": "assets/pack_white_chips.bundle",
+            "dependencyKeys": [
+                "cubemaps",
+				"shaders",
+				"assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
             "key": "assets/red_chip.bundle",
             "dependencyKeys": [
                 "cubemaps",
@@ -19,6 +27,22 @@
         },
         {
             "key": "assets/green_chip.bundle",
+            "dependencyKeys": [
+                "cubemaps",
+				"shaders",
+				"assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "assets/blue_chip.bundle",
+            "dependencyKeys": [
+                "cubemaps",
+				"shaders",
+				"assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "assets/black_chip.bundle",
             "dependencyKeys": [
                 "cubemaps",
 				"shaders",

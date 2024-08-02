@@ -9,14 +9,27 @@ export class LoadoutLightBleed {
 
   public rewards = [
     [
+      'NaN', // None
+      '5751a25924597722c463c472', // Army bandage
       '5751a25924597722c463c472', // Army bandage
     ],
     [
+      'NaN', // None
+      'NaN', // None
+      '544fb25a4bdc2dfb738b4567', // Aseptic bandage
       '544fb25a4bdc2dfb738b4567', // Aseptic bandage
       '5751a25924597722c463c472', // Army bandage
+      '5751a25924597722c463c472', // Army bandage
     ],
     [
+      'NaN', // None
+      'NaN', // None
+      'NaN', // None
       '5751a25924597722c463c472', // Army bandage
+      '5751a25924597722c463c472', // Army bandage
+      '5751a25924597722c463c472', // Army bandage
+      '544fb25a4bdc2dfb738b4567', // Aseptic bandage
+      '544fb25a4bdc2dfb738b4567', // Aseptic bandage
       '544fb25a4bdc2dfb738b4567', // Aseptic bandage
       '544fb25a4bdc2dfb738b4567', // Aseptic bandage
     ],

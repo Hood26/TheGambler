@@ -53,7 +53,7 @@
     "gpcoin_case_stock": 999,
     "gpcoin_case_enable": true,
 
-    "keycard_case_price": 330000, // 124% return on investment at this price
+    "keycard_case_price": 330000,
     "keycard_case_stock": 999,
     "keycard_case_enable": true,
 
@@ -229,6 +229,7 @@
   "odds": {
     // Mystery Wallet
     // Chance for each possibility in percentage from rarest to most common
+
     "wallet_extremely_rare": 0.5,     // 2.5 Million Roubles
     "wallet_rare": 2.5,               // 1 Million Roubles
     "wallet_kinda_rare": 4.0,         // 500k Roubles
@@ -280,7 +281,7 @@
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////
-    // The following odds are for the Loadout Mystery Container
+    // The following odds are for the Mystery Loadout Generation
     //
     //
     //
@@ -310,22 +311,27 @@
     "loadout_drink_common": 30.0, // Common Loadout Drink supply
 
     // Loadout Light Bleed
-    "loadout_light_bleed_rare": 30, // Rare Loaout Light Bleed supply
+    "loadout_light_bleed_rare": 30, // Rare Loadout Light Bleed supply
     "loadout_light_bleed_uncommon": 40, // Uncommon Loadout Light Bleed supply
     "loadout_light_bleed_common": 30, // Common Loadout Light Bleed supply
 
     // Loadout Heavy Bleed
-    "loadout_heavy_bleed_rare": 30, // Rare Loaout heavy Bleed supply
+    "loadout_heavy_bleed_rare": 30, // Rare Loadout heavy Bleed supply
     "loadout_heavy_bleed_uncommon": 40, // Uncommon Loadout heavy Bleed supply
     "loadout_heavy_bleed_common": 30, // Common Loadout heavy Bleed supply 
 
+    // Loadout Stim
+    "loadout_stim_rare": 30, // Rare Loadout Stim supply
+    "loadout_stim_uncommon": 40, // Uncommon Loadout Stim supply
+    "loadout_stim_common": 30, // Common Loadout Stim supply 
+
     // Loadout Splint
-    "loadout_splint_rare": 30, // Rare Loaout Splint supply
+    "loadout_splint_rare": 30, // Rare Loadout Splint supply
     "loadout_splint_uncommon": 40, // Uncommon Loadout Splint supply
     "loadout_splint_common": 30, // Common Loadout Splint supply 
 
     // Loadout Headling
-    "loadout_healing_rare": 30, // Rare Loaout headling supply
+    "loadout_healing_rare": 30, // Rare Loadout headling supply
     "loadout_healing_uncommon": 40, // Uncommon Loadout headling supply
     "loadout_healing_common": 30, // Common Loadout headling supply
 
@@ -365,11 +371,11 @@
     "rig_profit_percentage": 0.94, // Container Profitability
 
     // Weapon Mystery Box
-    "weapon_meta": 20.0,              // Meta Weapon
+    "weapon_meta": 19.3,              // Meta Weapon
     "weapon_decent": 25.0,            // Semi-modded Weapon
-    "weapon_scav": 25.0,              // Scav Weapon
-    "weapon_meme": 7.0,               // Meme Weapon
-    "weapon_base": 23.0,              // Default Weapon
+    "weapon_scav": 30.0,              // Scav Weapon
+    "weapon_meme": 7.7,               // Meme Weapon
+    "weapon_base": 18.0,              // Default Weapon
     "weapon_profit_percentage": 0.85, // Container Profitability
 
     // Premium Weapon Mystery Box

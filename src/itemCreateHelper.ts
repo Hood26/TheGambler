@@ -31,7 +31,7 @@ export class ItemCreateHelper {
             },
             DiscardLimit: -1,
             parentId: "543be5dd4bdc2deb348b4569",
-            newId: "white_chip", 
+            newId: "a_white_chip", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
@@ -55,7 +55,7 @@ export class ItemCreateHelper {
             },
             DiscardLimit: -1,
             parentId: "543be5dd4bdc2deb348b4569",
-            newId: "red_chip", 
+            newId: "b_red_chip", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
@@ -67,7 +67,7 @@ export class ItemCreateHelper {
                 }
             }
         }
-
+        
         const green_chip: NewItemFromCloneDetails = {
             itemTplToClone: "5696686a4bdc2da3298b456a",
             overrideProperties: {
@@ -79,7 +79,7 @@ export class ItemCreateHelper {
             },
             DiscardLimit: -1,
             parentId: "543be5dd4bdc2deb348b4569",
-            newId: "green_chip", 
+            newId: "c_green_chip", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
@@ -88,6 +88,54 @@ export class ItemCreateHelper {
                     name: "Green Poker Chip",
                     shortName: "Chip",
                     description: "Rare poker chip that can be used to buy valuable mystery boxes from the Gambler."
+                }
+            }
+        }
+
+        const blue_chip: NewItemFromCloneDetails = {
+            itemTplToClone: "5696686a4bdc2da3298b456a",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/blue_chip.bundle",
+                    rcid: ""
+                },
+                DiscardLimit: -1,
+            },
+            DiscardLimit: -1,
+            parentId: "543be5dd4bdc2deb348b4569",
+            newId: "d_blue_chip", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Blue Poker Chip",
+                    shortName: "Chip",
+                    description: "Uber poker chip that can be used to buy valuable mystery boxes from the Gambler."
+                }
+            }
+        }
+
+        const black_chip: NewItemFromCloneDetails = {
+            itemTplToClone: "5696686a4bdc2da3298b456a",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/black_chip.bundle",
+                    rcid: ""
+                },
+                DiscardLimit: -1,
+            },
+            DiscardLimit: -1,
+            parentId: "543be5dd4bdc2deb348b4569",
+            newId: "e_black_chip", 
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Black Poker Chip",
+                    shortName: "Chip",
+                    description: "Uber poker chip that can be used to buy valuable mystery boxes from the Gambler."
                 }
             }
         }
@@ -308,6 +356,199 @@ export class ItemCreateHelper {
                 }
             }
 
+        }
+
+
+        /*
+        const new_green_chip: NewItemDetails = {
+            newItem: {
+                _id: "green_chip",
+                _name: "gambling_green_chip",
+                _parent: "543be5dd4bdc2deb348b4569",
+                _proto: "",
+                _type: "Item",
+                _props: {
+                    "Name": "Green Poker Chip",
+                    "ShortName": "Chip",
+                    "Description": "Rare poker chip that can be used to buy valuable mystery boxes from the Gambler.",
+                    "Weight": 0.01,
+                    "BackgroundColor": "green",
+                    "Width": 1,
+                    "Height": 1,
+                    "StackMaxSize": 50000,
+                    "RarityPvE": "Rare",
+                    "ItemSound": "item_money",
+                    "Prefab": {
+                        "path": "assets/green_chip.bundle",
+                        "rcid": ""
+                    }, 
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "StackObjectsCount": 1,
+                    "NotShownInSlot": false,
+                    "ExaminedByDefault": true,
+                    "ExamineTime": 1,
+                    "IsUndiscardable": false,
+                    "IsUnsaleable": false,
+                    "IsUnbuyable": false,
+                    "IsUngivable": false,
+                    "IsLockedafterEquip": false,
+                    "QuestItem": false,
+                    "LootExperience": 50,
+                    "ExamineExperience": 10,
+                    "HideEntrails": false,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "MergesWithChildren": false,
+                    "CanSellOnRagfair": false,
+                    "CanRequireOnRagfair": true,
+                    "ConflictingItems": [],
+                    "Unlootable": false,
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UnlootableFromSide": [],
+                    "AnimationVariantsNumber": 0,
+                    "DiscardingBlock": false,
+                    "RagFairCommissionModifier": 1,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "DiscardLimit": -1,
+                    "DropSoundType": "None",
+                    "InsuranceDisabled": false,
+                    "QuestStashMaxCount": 0,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnremovable": false,
+                    "StackMinRandom": 45,
+                    "StackMaxRandom": 100,
+                    "type": "USD",
+                    "eqMin": 45,
+                    "eqMax": 100,
+                    "rate": 1,
+                    "IsRagfairCurrency": true,
+                },
+            },
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Green Poker Chip",
+                    shortName: "Chip",
+                    description: "Rare poker chip that can be used to buy valuable mystery boxes from the Gambler."
+                }
+            } 
+        }
+            */
+        const pack_white_chips: NewItemDetails = {
+            newItem: {
+                _id: "aaa_white_chips_gamble",
+                _name: "gambling_white_chips",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Pack of White Poker Chips",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 1,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Pack of White Poker Chips",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/pack_white_chips.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Pack of White Poker Chips",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 1,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+                     
+            },
+            fleaPriceRoubles: 80000,
+            handbookPriceRoubles: 80000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Pack of White Poker Chips",
+                    shortName: "Chips",
+                    description: `Pack of 4 White Poker Chips.`
+                }
+            } 
         }
 
         const walletGamble: NewItemDetails = {
@@ -4575,9 +4816,11 @@ export class ItemCreateHelper {
             } 
         }
 
-        customItem.createItemFromClone(green_chip);
         customItem.createItemFromClone(white_chip);
         customItem.createItemFromClone(red_chip);
+        customItem.createItemFromClone(green_chip);
+        customItem.createItemFromClone(blue_chip);
+        customItem.createItemFromClone(black_chip);
         customItem.createItemFromClone(gold_akm_handguard);
         customItem.createItemFromClone(gold_akm_foregrip);
         customItem.createItemFromClone(gold_akm_stock);
@@ -4588,6 +4831,7 @@ export class ItemCreateHelper {
         customItem.createItemFromClone(gold_akm_silencer);
         customItem.createItemFromClone(gold_akm_pistolgrip);
         customItem.createItemFromClone(sealedWeaponGamble);
+        customItem.createItem(pack_white_chips);
         customItem.createItem(walletGamble);
         customItem.createItem(keyGamble);
         customItem.createItem(stimGamble);
