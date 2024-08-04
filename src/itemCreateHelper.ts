@@ -10,6 +10,7 @@ import path from "path";
 export class ItemCreateHelper {
 
     public config: any;
+    public loot: Array<NewItemFromCloneDetails> = [];
 
     // Create customs Items and store them in the database
     public createItems(container: DependencyContainer) {
@@ -28,6 +29,8 @@ export class ItemCreateHelper {
                     rcid: ""
                 },
                 DiscardLimit: -1, // Allows currency to be dropped in raid
+                StackMinRandom: 1,
+                StackMaxRandom: 4,
             },
             DiscardLimit: -1,
             parentId: "543be5dd4bdc2deb348b4569",
@@ -41,8 +44,16 @@ export class ItemCreateHelper {
                     shortName: "Chip",
                     description: "Common poker chip that can be used to buy valuable mystery boxes from the Gambler."
                 }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 3000,
+                "578f8778245977358849a9b5": 4000,
+                "5909e4b686f7747f5b744fa4": 3000,
+                "578f8782245977354405a1e3": 6000,
+                "578f87b7245977356274f2cd": 5000,
             }
         }
+        this.loot.push(white_chip);
 
         const red_chip: NewItemFromCloneDetails = {
             itemTplToClone: "5696686a4bdc2da3298b456a",
@@ -52,6 +63,8 @@ export class ItemCreateHelper {
                     rcid: ""
                 },
                 DiscardLimit: -1,
+                StackMinRandom: 1,
+                StackMaxRandom: 1,
             },
             DiscardLimit: -1,
             parentId: "543be5dd4bdc2deb348b4569",
@@ -65,8 +78,16 @@ export class ItemCreateHelper {
                     shortName: "Chip",
                     description: "Uncommon poker chip that can be used to buy valuable mystery boxes from the Gambler."
                 }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 3000,
+                "578f8778245977358849a9b5": 4000,
+                "5909e4b686f7747f5b744fa4": 3000,
+                "578f8782245977354405a1e3": 6000,
+                "578f87b7245977356274f2cd": 5000,
             }
         }
+        this.loot.push(red_chip);
         
         const green_chip: NewItemFromCloneDetails = {
             itemTplToClone: "5696686a4bdc2da3298b456a",
@@ -76,6 +97,8 @@ export class ItemCreateHelper {
                     rcid: ""
                 },
                 DiscardLimit: -1,
+                StackMinRandom: 1,
+                StackMaxRandom: 1,
             },
             DiscardLimit: -1,
             parentId: "543be5dd4bdc2deb348b4569",
@@ -89,8 +112,17 @@ export class ItemCreateHelper {
                     shortName: "Chip",
                     description: "Rare poker chip that can be used to buy valuable mystery boxes from the Gambler."
                 }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 3000,
+                "578f8778245977358849a9b5": 4000,
+                "5909e4b686f7747f5b744fa4": 3000,
+                "578f8782245977354405a1e3": 6000,
+                "578f87b7245977356274f2cd": 5000,
             }
         }
+        this.loot.push(green_chip);
+            
 
         const blue_chip: NewItemFromCloneDetails = {
             itemTplToClone: "5696686a4bdc2da3298b456a",
@@ -100,6 +132,8 @@ export class ItemCreateHelper {
                     rcid: ""
                 },
                 DiscardLimit: -1,
+                StackMinRandom: 1,
+                StackMaxRandom: 1,
             },
             DiscardLimit: -1,
             parentId: "543be5dd4bdc2deb348b4569",
@@ -113,8 +147,16 @@ export class ItemCreateHelper {
                     shortName: "Chip",
                     description: "Uber poker chip that can be used to buy valuable mystery boxes from the Gambler."
                 }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 3000,
+                "578f8778245977358849a9b5": 4000,
+                "5909e4b686f7747f5b744fa4": 3000,
+                "578f8782245977354405a1e3": 6000,
+                "578f87b7245977356274f2cd": 5000,
             }
         }
+        this.loot.push(blue_chip);
 
         const black_chip: NewItemFromCloneDetails = {
             itemTplToClone: "5696686a4bdc2da3298b456a",
@@ -124,6 +166,8 @@ export class ItemCreateHelper {
                     rcid: ""
                 },
                 DiscardLimit: -1,
+                StackMinRandom: 1,
+                StackMaxRandom: 1,
             },
             DiscardLimit: -1,
             parentId: "543be5dd4bdc2deb348b4569",
@@ -137,8 +181,16 @@ export class ItemCreateHelper {
                     shortName: "Chip",
                     description: "Uber poker chip that can be used to buy valuable mystery boxes from the Gambler."
                 }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 3000,
+                "578f8778245977358849a9b5": 4000,
+                "5909e4b686f7747f5b744fa4": 3000,
+                "578f8782245977354405a1e3": 6000,
+                "578f87b7245977356274f2cd": 5000,
             }
         }
+        this.loot.push(black_chip);
 
         const gold_akm_handguard: NewItemFromCloneDetails = {
             itemTplToClone: "5c17664f2e2216398b5a7e3c",
@@ -362,7 +414,7 @@ export class ItemCreateHelper {
         /*
         const new_green_chip: NewItemDetails = {
             newItem: {
-                _id: "green_chip",
+                _id: "c_green_chip",
                 _name: "gambling_green_chip",
                 _parent: "543be5dd4bdc2deb348b4569",
                 _proto: "",
@@ -443,7 +495,8 @@ export class ItemCreateHelper {
                 }
             } 
         }
-            */
+        */
+            
         const pack_white_chips: NewItemDetails = {
             newItem: {
                 _id: "aaa_white_chips_gamble",
@@ -548,7 +601,7 @@ export class ItemCreateHelper {
                     shortName: "Chips",
                     description: `Pack of 4 White Poker Chips.`
                 }
-            } 
+            }
         }
 
         const walletGamble: NewItemDetails = {
@@ -4831,6 +4884,7 @@ export class ItemCreateHelper {
         customItem.createItemFromClone(gold_akm_silencer);
         customItem.createItemFromClone(gold_akm_pistolgrip);
         customItem.createItemFromClone(sealedWeaponGamble);
+        //customItem.createItem(new_green_chip);
         customItem.createItem(pack_white_chips);
         customItem.createItem(walletGamble);
         customItem.createItem(keyGamble);

@@ -1,0 +1,15 @@
+{
+    "gambler_intro task_1": "Find a White Poker Chip in raid",
+    "gambler_intro task_2": "Find a Red Poker Chip in raid",
+    "gambler_intro name": "Welcome To The Gambling Life",
+    "gambler_intro description": "So you want to gamble your roubles? Well, you've come to the right place. I'm known as the Gambler around these parts of Tarkov and I can help you get started on your journey on scoring it big. But first, I have a few tasks to test your skill, complete them and you'll be rewarded handsomely and unlock new gambling opportunities. Before Tarkov became the trechoroous and dangerous warzone it is today, I owned a lavish casino with many tables to wage bets, but that is now gone. My precious poker chips are scattered around Tarkov and I need you to find them for me. They can be found anywhere in Tarkov, lately I've hear they are scattered in loot stashes. Once you have one, come back to me and I'll compensate you for your hard work. Good luck out there.",
+    "gambler_intro successMessagetext": "I see you found the chips, I don't care if you stole them off a scav or found them in a pile of trash, you have them and that's all that matters. Welcome to the gambling life kid. I have few new barters and items you can purchase with your new hard earned poker chips. Find more in the future and you can spend them here.",
+
+    "gambler_reshala AFF_0": "Kill Reshala",
+    "gambler_reshala name": "Death of the Crime Lord",
+    "gambler_reshala description": "Hey kid, I have a new job for you and I think its something you can handle. I need you to kill the traitor known as Reshala. He's been causing me trouble and I need him gone. I'll reward you handsomely if you can take him out. He's usually found at the Customs location near dorms or the new gas station. Good luck out there. You can keep his flimsy golden TT, I'll reward you with something better if you can finish the job.",
+    "gambler_reshala successMessagetext": "I see you've taken care of Reshala, good job soldier. You can keep his crappy golden TT, I have a better reward for you. This weapon is Reshala's most prized possession I stole a few years back, when he was still a small time crook. I think you'll find it useful in your future endeavors. Good luck out there."
+
+
+
+}    

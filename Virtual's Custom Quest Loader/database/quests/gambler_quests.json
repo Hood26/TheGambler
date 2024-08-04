@@ -1,0 +1,118 @@
+{
+    "gambler_intro": {
+    "QuestName": "Welcome To The Gambling Life",
+    "_id": "gambler_intro",
+    "acceptPlayerMessage": "gambler_intro acceptPlayerMessage",
+    "canShowNotificationsInGame": true,
+    "changeQuestMessageText": "gambler_intro changeQuestMessageText",
+    "completePlayerMessage": "gambler_intro completePlayerMessage",
+    "conditions": {
+      "AvailableForFinish": [
+        {
+            "conditionType": "FindItem",
+            "countInRaid": false,
+            "dogtagLevel": 0,
+            "dynamicLocale": false,
+            "globalQuestCounterId": "",
+            "id": "gambler_intro task_1",
+            "index": 0,
+            "isEncoded": false,
+            "maxDurability": 100,
+            "minDurability": 0,
+            "onlyFoundInRaid": true,
+            "parentId": "",
+            "target": [
+              "a_white_chip"
+            ],
+            "value": 1,
+            "visibilityConditions": []
+          },
+          {
+            "conditionType": "FindItem",
+            "countInRaid": false,
+            "dogtagLevel": 0,
+            "dynamicLocale": false,
+            "globalQuestCounterId": "",
+            "id": "gambler_intro task_2",
+            "index": 1,
+            "isEncoded": false,
+            "maxDurability": 100,
+            "minDurability": 0,
+            "onlyFoundInRaid": true,
+            "parentId": "",
+            "target": [
+              "b_red_chip"
+            ],
+            "value": 1,
+            "visibilityConditions": []
+          }
+      ],
+      "AvailableForStart": [
+        {
+            "compareMethod": ">=",
+            "conditionType": "Level",
+            "dynamicLocale": false,
+            "globalQuestCounterId": "",
+            "id": "gambler_intro",
+            "index": 0,
+            "parentId": "",
+            "value": 1,
+            "visibilityConditions": []
+          } 
+      ],
+      "Fail": []
+    },
+    "declinePlayerMessage": "gambler_intro declinePlayerMessage",
+    "description": "gambler_intro description",
+    "failMessageText": "gambler_intro failMessageText",
+    "image": "/files/quest/icon/5ae4a76086f774455f7d62d2.jpg",
+    "instantComplete": false,
+    "isKey": false,
+    "location": "any",
+    "name": "gambler_intro name",
+    "note": "gambler_intro note",
+    "restartable": false,
+    "rewards": {
+      "Started": [],
+      "Fail": [],
+      "Success": [
+        {
+          "id": "gambler_intro reward_0",
+          "index": 0,
+          "type": "Experience",
+          "value": "8000"
+        },
+        {
+          "id": "gambler_intro reward_1",
+          "index": 1,
+          "target": "gambler",
+          "type": "TraderStanding",
+          "value": "0.03"
+        },
+        {
+          "value": "8",
+          "id": "gambler_intro reward_2",
+          "type": "Item",
+          "target": "gambler_intro reward_2_0",
+          "index": 2,
+          "findInRaid": true,
+          "items": [
+            {
+              "_id": "gambler_intro reward_2_0",
+              "_tpl": "a_white_chip",
+              "upd": {
+                "StackObjectsCount": 8
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "secretQuest": false,
+    "side": "Pmc",
+    "startedMessageText": "gambler_intro startedMessageText",
+    "successMessageText": "gambler_intro successMessageText",
+    "traderId": "gambler",
+    "type": "PickUp"
+  }
+}

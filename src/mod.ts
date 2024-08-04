@@ -107,7 +107,6 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         const databaseServer: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         //const configServer: ConfigServer = container.resolve<ConfigServer>("ConfigServer");
         const jsonUtil: JsonUtil = container.resolve<JsonUtil>("JsonUtil");
-
         // Creates and stores new gambling items in database
         const itemCreate = new ItemCreateHelper();
 
@@ -126,6 +125,41 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         // WARNING: adds the same text to ALL locales (e.g. chinese/french/english)
         this.traderHelper.addTraderToLocales(baseJson, tables, baseJson.name, "Gambler", baseJson.nickname, baseJson.location, "Welcome Traveler! May I indulge you in purchasing some mystery boxes?");
 
+        const maps = [
+            "bigmap",     // customs
+            "factory4_day",
+            "factory4_night",
+            "woods",
+            "rezervbase",
+            "shoreline",
+            "interchange",
+            "tarkovstreets",
+            "lighthouse",
+            "laboratory",
+            "sandbox",    // groundzero
+            "sandbox_high"// groundzero20
+        ];
+        
+        //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution) // Drawer
+        // Currently this adds poker chips to many static loot containers on all maps
+        for (let item of itemCreate.loot){
+            for(const map of maps){
+                const mapStaticLoot = tables.locations[map].staticLoot;
+                const staticLootProbabilities = item.addToStaticLoot;
+                for(const [lootContainer, probability] of Object.entries(staticLootProbabilities)){
+
+                    try{
+                        mapStaticLoot[lootContainer].itemDistribution.push({
+                            "tpl": item.newId,
+                            "relativeProbability": probability
+                        });
+                    } catch (e){
+                        this.logger.debug("Could not add " + item.newId + " to container " + lootContainer + " on map " + map)
+                    }
+
+                }
+            }
+        }
         this.logger.debug(`[${this.mod}] postDb Loaded`);
     }
 
