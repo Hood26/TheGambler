@@ -84,7 +84,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         // Add trader to flea market
         ragfairConfig.traders[baseJson._id] = true;
 
-        // openRandomLootContainer override in InventoryController. Lets us use mod items.
+        // openRandomLootContainer override in InventoryController. Adds gambler mystery boxes.
         container.afterResolution("InventoryController", (_t, result: InventoryController) => 
             {
                 result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string) =>
@@ -142,7 +142,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         
         //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution) // Drawer
         // Currently this adds poker chips to many static loot containers on all maps
-        for (let item of itemCreate.loot){
+        for (const item of itemCreate.loot){
             for(const map of maps){
                 const mapStaticLoot = tables.locations[map].staticLoot;
                 const staticLootProbabilities = item.addToStaticLoot;
@@ -163,8 +163,6 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         this.logger.debug(`[${this.mod}] postDb Loaded`);
     }
 
-    // openRandomLootContainer override function. All the gambling happens here
-    //
     public newOpenRandomLoot(container: DependencyContainer, pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID: string): IItemEventRouterResponse {
         // Needed reference methods
         const lootGenerator = container.resolve<LootGenerator>("LootGenerator");

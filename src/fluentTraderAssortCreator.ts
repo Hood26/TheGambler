@@ -60,9 +60,11 @@ export class FluentAssortConstructor
         return this;
     }
 
-    public addStackCount(stackCount: number): FluentAssortConstructor
+    public addStackCount(stackCount: number, unlimited: boolean = false): FluentAssortConstructor
     {
         this.itemsToSell[0].upd.StackObjectsCount = stackCount;
+
+        if (unlimited) this.itemsToSell[0].upd.UnlimitedCount = true;
 
         return this;
     }

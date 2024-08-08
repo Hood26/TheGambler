@@ -55,7 +55,6 @@ export class Gamble {
 
     public newGamble(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)): []{
         //console.log('NEW GAMBLE: Creating ' + name + ' roll = ' + roll)
-        let loadout = false; // this is temp for now until foundInRaid prop is implemented
 
         switch(name){
             case 'wallet':
@@ -112,14 +111,15 @@ export class Gamble {
                 break;
             case 'loadout':
                 this.openLoadoutContainer(name);
-                loadout = true;
                 break;
             default:
                 this.logger.error(`[TheGambler] This Mystery Container Doesn't exist! Contact Author!`);    
         }
 
-        if (loadout) {
-            this.newItemsRequest.foundInRaid = false;
+        if (this.mysteryContainer.isAmmo(this.name)) {
+            this.newItemsRequest.foundInRaid = this.config.container_config["all_ammo_rewards_found_in_raid_status"];
+        } else {
+            this.newItemsRequest.foundInRaid = this.config.container_config[this.name + "_rewards_found_in_raid_status"];
         }
         return this.newItemsRequest;
     }
@@ -145,8 +145,7 @@ export class Gamble {
 
             if (this.mysteryContainer.getName(current)) { // Rewards is a container
 
-                //console.log('Weapon Type = ' + currentWeaponType)
-                if(currentWeaponType == '_meme') { // Generated Weapon is meme all rewards are random now
+                if(currentWeaponType == '_meme') { 
                     this.newGamble(current, this.randomUtil.getFloat(5,65));
                     
                 } else if (this.currentWeaponType == '_meta') {
@@ -245,14 +244,12 @@ export class Gamble {
                     //console.log('OPEN GUARANTEED REWARDS: Item exists and NOT stackable... Adding to newItemsRequest...')
                     for(let i = 0; i < reward_amount; i++){
                         this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(current)];
-                        this.newItemsRequest.foundInRaid = true;
                         this.count++;
                     }
 
                 } else {
                     //console.log('OPEN GUARANTEED REWARDS: Item exists and is stackable... Adding to newItemsRequest...')
                     this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(current, reward_amount)];
-                    this.newItemsRequest.foundInRaid = true;
                     this.count++;
                 }
             }
@@ -283,7 +280,6 @@ export class Gamble {
                     }
                     this.currentID = item;
                     this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(item)];
-                    this.newItemsRequest.foundInRaid = true;
                     this.count++;
                 }
             }
@@ -321,12 +317,10 @@ export class Gamble {
             if(!stackable){
                 for(let i = 0; i < reward_amount; i++){
                     this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id)];
-                    this.newItemsRequest.foundInRaid = true;
                     this.count++;
                 }
             } else {
                 this.newItemsRequest.itemsWithModsToAdd[this.count] = [this.newItemFormat(id, reward_amount)];
-                this.newItemsRequest.foundInRaid = true;
                 this.count++;
             }
     
@@ -370,12 +364,8 @@ export class Gamble {
 
         if (preset.length != 0) {
             this.newItemsRequest.itemsWithModsToAdd[this.count] = [...preset];
-            if (name === 'weapon' || name === 'premium_weapon') {
-                this.newItemsRequest.foundInRaid = false;
-            } else {
-                this.newItemsRequest.foundInRaid = true;
-            }
             this.count++;
+
         } else {
             this.logger.info(`[TheGambler][Weapon] Case Opened... Received Nothing... Better luck next time :)`);
         }

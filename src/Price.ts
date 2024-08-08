@@ -26,7 +26,11 @@ export class Price{
         this.randomUtil       = this.container.resolve<RandomUtil>("RandomUtil");
     }
 
-    // This is where all Mystery containers are price generated during server load
+    /**
+     * Generates the prices for the mystery containers.
+     * 
+     * @returns An object containing the generated container prices.
+     */
     public generateContainerPrices(): {} {
         let containerPrices = {};
         const mysteryContainerNames = [...this.MysteryContainer.simulation, ...this.MysteryContainer.items.ammo.names];
@@ -38,7 +42,7 @@ export class Price{
             const rarities: Array<string> = this.MysteryContainer.getRarities(name);
             const odds: Array<number> = this.MysteryContainer.getOdds(name);
             let currentPrices: Array<number> = [];
-            let currentContainerPrice = this.config.price_stock[name + "_case_price"];
+            let currentContainerPrice = this.config.container_config[name + "_price"];
 
             if (this.MysteryContainer.isAmmo(mysteryContainerNames[i])) {
                 const amount = ((this.config.odds[name + '_min'] + this.config.odds[name + '_max']) / 2);
@@ -53,7 +57,7 @@ export class Price{
             }
 
             currentContainerPrice = this.runPriceGeneration(odds, currentPrices, this.MysteryContainer.getProfitPercentage(name));
-            containerPrices[name + "_case_price"] = currentContainerPrice;
+            containerPrices[name + "_price"] = currentContainerPrice;
         }
 
         this.logger.success("[TheGambler] Mystery Container Price Generation Complete!");
@@ -62,6 +66,14 @@ export class Price{
         return containerPrices;
     }
 
+    /**
+     * Calculates the price of an item based on the given parameters.
+     * 
+     * @param parent - The parent item category.
+     * @param currentItem - The current item.
+     * @param amount - The quantity of the item.
+     * @returns The calculated price of the item.
+     */
     private getItemPrice(parent: string, currentItem: string, amount: number): number {
         const itemHelper: ItemHelper = this.container.resolve<ItemHelper>("ItemHelper");
         const override: number = this.MysteryContainer.getOverride(parent, currentItem);
@@ -85,7 +97,16 @@ export class Price{
         return currentPrice;
     }
 
-    // Generates the average income for a Mystery Container sorted by rarity
+    /**
+     * Generates the average income for a Mystery Container sorted by rarity
+     * 
+     * @param name - The name of the container.
+     * @param parent - The parent container.
+     * @param rarities - An array of rarities.
+     * @param items - The rewards in the container.
+     * @param amount - The quantity of items.
+     * @returns An array of prices.
+     */
     private getMysteryContainerPrices(name: string ,parent: string, rarities: Array<string>, items: any, amount: number = 1): Array<number> {
         let prices: Array<number>    = [];
         let sum: number              = 0;
@@ -115,8 +136,13 @@ export class Price{
         return prices;
     }
 
-    // checks if the current item id is part of a traders assort and returns the price.
-    // returns 0 if the item is not sold by a trader for roubles
+    /**
+     * Calculates the price of a given item in the trader's assort.
+     * Returns 0 if the item is not sold by a trader for roubles.
+     * 
+     * @param currentItem - The item for which the price needs to be calculated.
+     * @returns The price of the item in the trader's assortment. If no trader sells the item, returns 0.
+     */
     private traderAssortPrice(currentItem: string): any {
         const databaseServer: DatabaseServer = this.container.resolve<DatabaseServer>("DatabaseServer");
         const tables = databaseServer.getTables();
@@ -146,6 +172,16 @@ export class Price{
         return price; // No trader sells the item
     }
 
+    /**
+     * Generates the average income for a preset Mystery Container sorted by rarity
+     * 
+     * @param name - The name of the container.
+     * @param parent - The parent container.
+     * @param rarities - An array of rarities.
+     * @param items - The items in the container.
+     * @param amount - The amount of items. Default is 1.
+     * @returns An array of preset prices.
+     */
     private getContainerPresetPrices(name: string ,parent: string, rarities: Array<string>, items: any, amount: number = 1): Array<number> {
         let prices: Array<number>    = [];
         let weaponPricesPerTier: Array<number> = [];
@@ -197,6 +233,14 @@ export class Price{
         return prices;
     }
 
+    /**
+     * Calculates the most optimal mystery container price based on the given odds, prices, and desired profitability.
+     * 
+     * @param odds - An array of numbers representing the odds.
+     * @param prices - An array of numbers representing the prices.
+     * @param profitability - A number representing the profitability.
+     * @returns The calculated price generation.
+     */
     private runPriceGeneration = (odds: Array<number>, prices: Array<number>, profitability: number) => {
         let sum: number = 0;
         let trackOdds = 0;
@@ -211,6 +255,11 @@ export class Price{
     }
     
     
+    /**
+     * Performs a loadout simulation and calculates the average price of the loadout.
+     * 
+     * @returns The average price of the loadout.
+     */
     public loadoutSimulation = () => {
         let sum = 0;
         const weaponContainerPrice = 147000;

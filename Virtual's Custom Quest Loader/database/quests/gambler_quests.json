@@ -105,6 +105,20 @@
               }
             }
           ]
+        },
+        {
+          "id": "gambler_intro reward_3",
+          "index": 3,
+          "items": [
+            {
+              "_id": "66b15c72b10189169400fb52",
+              "_tpl": "a_white_chip"
+            }
+          ],
+          "loyaltyLevel": 1,
+          "target": "66b15c72b10189169400fb52",
+          "traderId": "gambler",
+          "type": "AssortmentUnlock"
         }
       ]
     },

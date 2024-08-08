@@ -19,181 +19,337 @@
   // Setting Price_Multiplier for example to 1.20 will make all mystery containers 20% more expensive. Setting it to 0.80 will make all mystery containers 20% cheaper.
   "price_multiplier": 1.0,
 
-  // All Mystery Container Base Prices and Stock
-  //     Price and Stock Definitions:
-  //       - container_case_enable:
-  //         - True enables the Mystery Container to be sold from the trader, False removes the Mystery Container from being sold at all
-  //       - container_case_price:
-  //         - The price of the Mystery Container, will be overridden by the Automatic Price Balancer if applicable
+  // All Mystery Container individual settings: price, stock, ... etc
+  //     Configuarable Options:
+  //       - container_enable:
+  //         - If false, mystery box will be disabled, and NOT be sold by the trader
   //
-  "price_stock": {
-    "wallet_case_price": 100000,
-    "wallet_case_stock": 999,
-    "wallet_case_enable": true,
+  //       - container_manual_pricing:
+  //         - If true, the 'container_price' option will be used as the price of the Mystery Container, if false, the Automatic Price Balancer will
+  //           determine the price of the Mystery Container based on the 'container_profit_percentage' option, odds, and flea price of all rewards.
+  //
+  //       - container_price:
+  //         - The price of the Mystery Container ONLY if 'container_manual_pricing' is set to true, will be overridden by the Automatic Price Balancer if false
+  //
+  //       - container_unlimited_stock:
+  //         - If false, the container stock will be limited to the value of 'container_stock' option. if true, the container will have unlimited stock
+  //
+  //       - container_stock:
+  //         - Amount of mystery containers available for purchase, only used if container_unlimited_stock is set to false
+  //
+  //       - container_rewards_found_in_raid_status:
+  //         - If true, the rewards in the Mystery Container will have the found in raid status. If false, rewards will NOT have the found in raid status
+  //
+  "container_config": {
+    // Mystery Wallet
+    "wallet_enable": true,
+    "wallet_manual_pricing": false,
+    "wallet_price": 100000,
+    "wallet_unlimited_stock": true,
+    "wallet_stock": 15,
+    "wallet_rewards_found_in_raid_status": true,
 
-    "key_case_price": 47500,
-    "key_case_stock": 999,
-    "key_case_enable": true,
+    // Mystery Key
+    "key_enable": true,
+    "key_manual_pricing": false,
+    "key_price": 47500,
+    "key_unlimited_stock": true,
+    "key_stock": 15,
+    "key_rewards_found_in_raid_status": true,
 
-    "stim_case_price": 36500,
-    "stim_case_stock": 999,
-    "stim_case_enable": true,
+    // Mystery Stimulant
+    "stim_enable": true,
+    "stim_manual_pricing": false,
+    "stim_price": 36500,
+    "stim_unlimited_stock": true,
+    "stim_stock": 8,
+    "stim_found_in_raid_status": true,
 
-    "medical_case_price": 60000,
-    "medical_case_stock": 999,
-    "medical_case_enable": true,
+    // Mystery Medical Kit
+    "medical_enable": true,
+    "medical_manual_pricing": false,
+    "medical_price": 60000,
+    "medical_unlimited_stock": false,
+    "medical_stock": 1,
+    "medical_rewards_found_in_raid_status": true,
 
-    "food_case_price": 33000,
-    "food_case_stock": 999,
-    "food_case_enable": true,
+    // Mystery Food
+    "food_enable": true,
+    "food_manual_pricing": false,
+    "food_price": 33000,
+    "food_unlimited_stock": true,
+    "food_stock": 6,
+    "food_rewards_found_in_raid_status": true,
 
-    "bitcoin_case_stock": 999,
-    "bitcoin_case_enable": true,
+    // Mystery Bitcoin
+    "bitcoin_enable": true,
+    "bitcoin_unlimited_stock": true,
+    "bitcoin_stock": 4,
+    "bitcoin_rewards_found_in_raid_status": true,
 
-    "gpcoin_case_stock": 999,
-    "gpcoin_case_enable": true,
+    // Mystery GP Coin
+    "gpcoin_enable": true,
+    "gpcoin_unlimited_stock": true,
+    "gpcoin_stock": 8,
+    "gpcoin_rewards_found_in_raid_status": true,
 
-    "keycard_case_price": 330000,
-    "keycard_case_stock": 999,
-    "keycard_case_enable": true,
+    // Mystery Keycard
+    "keycard_enable": true,
+    "keycard_manual_pricing": false,
+    "keycard_price": 330000,
+    "keycard_unlimited_stock": true,
+    "keycard_stock": 10,
+    "keycard_rewards_found_in_raid_status": true,
 
-    "fiftyfifty_case_price": 2500000,
-    "fiftyfifty_case_stock": 999,
-    "fiftyfifty_case_enable": true,
+    // 50/50 Case
+    "fiftyfifty_enable": true,
+    "fiftyfifty_manual_pricing": true,
+    "fiftyfifty_price": 2500000,
+    "fiftyfifty_unlimited_stock": true,
+    "fiftyfifty_stock": 2,
+    "fiftyfifty_rewards_found_in_raid_status": true,
 
-    "melee_case_price": 78500,
-    "melee_case_stock": 999,
-    "melee_case_enable": true,
+    // Mystery Melee
+    "melee_enable": true,
+    "melee_manual_pricing": false,
+    "melee_price": 78500,
+    "melee_unlimited_stock": true,
+    "melee_stock": 15,
+    "melee_rewards_found_in_raid_status": true,
 
-    "weapon_case_price": 150000,
-    "weapon_case_stock": 999,
-    "weapon_case_enable": true,
+    // Weapon Mystery Box
+    "weapon_enable": true,
+    "weapon_manual_pricing": false,
+    "weapon_price": 150000,
+    "weapon_unlimited_stock": true,
+    "weapon_stock": 10,
+    "weapon_rewards_found_in_raid_status": true,
 
-    "premium_weapon_case_price": 245000,
-    "premium_weapon_case_stock": 1,
-    "premium_weapon_case_enable": true,
+    // Premium Weapon Mystery Box
+    "premium_weapon_enable": true,
+    "premium_weapon_manual_pricing": false,
+    "premium_weapon_price": 245000,
+    "premium_weapon_unlimited_stock": false,
+    "premium_weapon_stock": 1,
+    "premium_weapon_rewards_found_in_raid_status": true,
 
-    "helmet_case_price": 65000,
-    "helmet_case_stock": 999,
-    "helmet_case_enable": true,
+    // Mystery Helmet
+    "helmet_enable": true,
+    "helmet_manual_pricing": false,
+    "helmet_price": 65000,
+    "helmet_unlimited_stock": true,
+    "helmet_stock": 6,
+    "helmet_rewards_found_in_raid_status": true,
 
-    "headset_case_price": 55000,
-    "headset_case_stock": 999,
-    "headset_case_enable": true,
+    // Mystery Headset
+    "headset_enable": true,
+    "headset_manual_pricing": false,
+    "headset_price": 55000,
+    "headset_unlimited_stock": true,
+    "headset_stock": 4,
+    "headset_rewards_found_in_raid_status": true,
 
-    "armor_case_price": 115000,
-    "armor_case_stock": 999,
-    "armor_case_enable": true,
+    // Armor Mystery Box
+    "armor_enable": true,
+    "armor_manual_pricing": false,
+    "armor_price": 115000,
+    "armor_unlimited_stock": true,
+    "armor_stock": 8,
+    "armor_rewards_found_in_raid_status": true,
 
-    "premium_armor_case_price": 375000,
-    "premium_armor_case_stock": 1,
-    "premium_armor_case_enable": true,
+    // Premium Armor Mystery Box
+    "premium_armor_enable": true,
+    "premium_armor_manual_pricing": false,
+    "premium_armor_price": 375000,
+    "premium_armor_unlimited_stock": false,
+    "premium_armor_stock": 1,
+    "premium_armor_rewards_found_in_raid_status": true,
 
-    "sealed_case_price": 350000,
-    "sealed_case_stock": 1,
-    "sealed_case_enable": true,
+    // Sealed Weapon Case
+    "sealed_enable": true,
+    "sealed_manual_pricing": true,
+    "sealed_price": 350000,
+    "sealed_unlimited_stock": false,
+    "sealed_stock": 1,
+    "sealed_rewards_found_in_raid_status": true,
 
-    "backpack_case_price": 45000,
-    "backpack_case_stock": 999,
-    "backpack_case_enable": true,
+    // Backpack Mystery Bag
+    "backpack_enable": true,
+    "backpack_manual_pricing": false,
+    "backpack_price": 45000,
+    "backpack_unlimited_stock": true,
+    "backpack_stock": 6,
+    "backpack_rewards_found_in_raid_status": true,
 
-    "loadout_case_price": 445000,
-    "loadout_case_stock": 999,
-    "loadout_case_enable": true,
+    // Mystery Loadout
+    "loadout_enable": true,
+    "loadout_manual_pricing": true,
+    "loadout_price": 445000,
+    "loadout_unlimited_stock": true,
+    "loadout_stock": 3,
+    "loadout_rewards_found_in_raid_status": false,
 
-    "rig_case_price": 45000,
-    "rig_case_stock": 999,
-    "rig_case_enable": true,
+    // Tactical Rig Mystery Box
+    "rig_enable": true,
+    "rig_manual_pricing": false,
+    "rig_price": 45000,
+    "rig_unlimited_stock": true,
+    "rig_stock": 6,
+    "rig_rewards_found_in_raid_status": true,
 
     // All Mystery Ammo Container settings
     //
     //
     //
     "all_ammo_enable": true, // This will enable or disable trader from selling all Mystery Ammo containers
+    "all_ammo_rewards_found_in_raid_status": true, // found in raid status of all Mystery Ammo containers
 
-    "7.62x25_case_price": 6000,
-    "7.62x25_case_stock": 999,
-    "7.62x25_case_enable": true,
+    // Mystery 7.62x25
+    "7.62x25_enable": true,
+    "7.62x25_manual_pricing": false,
+    "7.62x25_price": 6000,
+    "7.62x25_unlimited_stock": true,
+    "7.62x25_stock": 999,
 
-    "9x18_case_price": 6000,
-    "9x18_case_stock": 999,
-    "9x18_case_enable": true,
+    // Mystery 9x18
+    "9x18_enable": true,
+    "9x18_manual_pricing": false,
+    "9x18_price": 6000,
+    "9x18_unlimited_stock": true,
+    "9x18_stock": 999,
 
-    "9x19_case_price": 9000,
-    "9x19_case_stock": 999,
-    "9x19_case_enable": true,
+    // Mystery 9x19
+    "9x19_enable": true,
+    "9x19_manual_pricing": false,
+    "9x19_price": 9000,
+    "9x19_unlimited_stock": true,
+    "9x19_stock": 999,
 
-    "9x21_case_price": 10000,
-    "9x21_case_stock": 999,
-    "9x21_case_enable": true,
+    // Mystery 9x21
+    "9x21_enable": true,
+    "9x21_manual_pricing": false,
+    "9x21_price": 10000,
+    "9x21_unlimited_stock": true,
+    "9x21_stock": 999,
 
-    ".357_case_price": 5000,
-    ".357_case_stock": 999,
-    ".357_case_enable": true,
+    // Mystery .357
+    ".357_enable": true,
+    ".357_manual_pricing": false,
+    ".357_price": 5000,
+    ".357_unlimited_stock": true,
+    ".357_stock": 999,
 
-    ".45_case_price": 8000,
-    ".45_case_stock": 999,
-    ".45_case_enable": true,
+    // Mystery .45_ACP
+    ".45_enable": true,
+    ".45_manual_pricing": false,
+    ".45_price": 8000,
+    ".45_unlimited_stock": true,
+    ".45_stock": 999,
 
-    "4.6x30_case_price": 9000,
-    "4.6x30_case_stock": 999,
-    "4.6x30_case_enable": true,
+    // Mystery 4.6x30
+    "4.6x30_enable": true,
+    "4.6x30_manual_pricing": false,
+    "4.6x30_price": 9000,
+    "4.6x30_unlimited_stock": true,
+    "4.6x30_stock": 999,
 
-    "5.7x28_case_price": 10000,
-    "5.7x28_case_stock": 999,
-    "5.7x28_case_enable": true,
+    // Mystery 5.7x28
+    "5.7x28_enable": true,
+    "5.7x28_manual_pricing": false,
+    "5.7x28_price": 10000,
+    "5.7x28_unlimited_stock": true,
+    "5.7x28_stock": 999,
 
-    "5.45x39_case_price": 10500,
-    "5.45x39_case_stock": 999,
-    "5.45x39_case_enable": true,
+    // Mystery 5.45x39
+    "5.45x39_enable": true,
+    "5.45x39_manual_pricing": false,
+    "5.45x39_price": 10500,
+    "5.45x39_unlimited_stock": true,
+    "5.45x39_stock": 999,
 
-    "5.56x45_case_price": 15000,
-    "5.56x45_case_stock": 999,
-    "5.56x45_case_enable": true,
+    // Mystery 5.56x45
+    "5.56x45_enable": true,
+    "5.56x45_manual_pricing": false,
+    "5.56x45_price": 15000,
+    "5.56x45_unlimited_stock": true,
+    "5.56x45_stock": 999,
 
-    ".300_case_price": 14000,
-    ".300_case_stock": 999,
-    ".300_case_enable": true,
+    // Mystery .300_Blackout
+    ".300_enable": true,
+    ".300_manual_pricing": false,
+    ".300_price": 14000,
+    ".300_unlimited_stock": true,
+    ".300_stock": 999,
 
-    "7.62x39_case_price": 15000,
-    "7.62x39_case_stock": 999,
-    "7.62x39_case_enable": true,
+    // Mystery 7.62x39
+    "7.62x39_enable": true,
+    "7.62x39_manual_pricing": false,
+    "7.62x39_price": 15000,
+    "7.62x39_unlimited_stock": true,
+    "7.62x39_stock": 999,
 
-    "7.62x51_case_price": 16000,
-    "7.62x51_case_stock": 999,
-    "7.62x51_case_enable": true,
+    // Mystery 7.62x51
+    "7.62x51_enable": true,
+    "7.62x51_manual_pricing": false,
+    "7.62x51_price": 16000,
+    "7.62x51_unlimited_stock": true,
+    "7.62x51_stock": 999,
 
-    "7.62x54_case_price": 19000,
-    "7.62x54_case_stock": 999,
-    "7.62x54_case_enable": true,
+    // Mystery 7.62x54
+    "7.62x54_enable": true,
+    "7.62x54_manual_pricing": false,
+    "7.62x54_price": 19000,
+    "7.62x54_unlimited_stock": true,
+    "7.62x54_stock": 999,
 
-    ".338_case_price": 50000,
-    ".338_case_stock": 999,
-    ".338_case_enable": true,
+    // Mystery 9x39
+    ".338_enable": true,
+    ".338_manual_pricing": false,
+    ".338_price": 50000,
+    ".338_unlimited_stock": true,
+    ".338_stock": 999,
 
-    "9x39_case_price": 13000,
-    "9x39_case_stock": 999,
-    "9x39_case_enable": true,
+    // Mystery 9x39
+    "9x39_enable": true,
+    "9x39_manual_pricing": false,
+    "9x39_price": 13000,
+    "9x39_unlimited_stock": true,
+    "9x39_stock": 999,
 
-    ".366_case_price": 6000,
-    ".366_case_stock": 999,
-    ".366_case_enable": true,
+    // Mystery .366
+    ".366_enable": true,
+    ".366_manual_pricing": false,
+    ".366_price": 6000,
+    ".366_unlimited_stock": true,
+    ".366_stock": 999,
 
-    "12.7x55_case_price": 16000,
-    "12.7x55_case_stock": 999,
-    "12.7x55_case_enable": true,
+    // Mystery 12.7x55
+    "12.7x55_enable": true,
+    "12.7x55_manual_pricing": false,
+    "12.7x55_price": 16000,
+    "12.7x55_unlimited_stock": true,
+    "12.7x55_stock": 999,
 
-    "12/70_case_price": 6000,
-    "12/70_case_stock": 999,
-    "12/70_case_enable": true,
+    // Mystery 12/70
+    "12/70_enable": true,
+    "12/70_manual_pricing": false,
+    "12/70_price": 6000,
+    "12/70_unlimited_stock": true,
+    "12/70_stock": 999,
 
-    "20/70_case_price": 6000,
-    "20/70_case_stock": 999,
-    "20/70_case_enable": true,
+    // Mystery 20/70
+    "20/70_enable": true,
+    "20/70_manual_pricing": false,
+    "20/70_price": 6000,
+    "20/70_unlimited_stock": true,
+    "20/70_stock": 999,
 
-    "23x75_case_price": 7000,
-    "23x75_case_stock": 999,
-    "23x75_case_enable": true
+    // Mystery 23x75
+    "23x75_enable": true,
+    "23x75_manual_pricing": false,
+    "23x75_price": 7000,
+    "23x75_unlimited_stock": true,
+    "23x75_stock": 999
   },
 
   // GAMBLING ODDS SECTION
@@ -201,9 +357,9 @@
   // README:
   //   - Each Mystery Container has odds that you can manipulate yourself if you so choose.
   //    
-  //     Example:
-  //        'Mystery Wallet' Odds:  3.0 + 6.0 + 10.0 + 15.0 + 20.0 + 21 = 75% chance at recieving a reward!
-  //                                                  100.0% - 75.0% = 25% chance at recieving nothing! 
+  //     Example: (This is not the Mystery Wallet actual odds, just an example)
+  //        'Mystery Wallet' Odds:  0.5 + 2.5 + 4.0 + 8.0 + 15.0 + 35.0 + 0 = 65% chance at recieving a reward!
+  //                                                  100.0% - 65.0% = 35% chance at recieving nothing! 
   //
   //            - Keep in mind this applies to ALL mystery containers 
   //
@@ -212,15 +368,18 @@
   //       - container_profit_percentage:
   //         - This is how profitable the mystery container will be, and is used as a calculation by the Automatic Price Balancer when determining the mystery container price.
   //           - The higher the percentage, the more expensive and less profitable the container will be, and vice versa.
-  //         - Manipulating the odds will also alter the mystery container price
-
-  //       - ammo_min: (INTEGER ONLY)
+  //
+  //       - container_extremely_rare / container_rare / container_uncommon / container_common / container_extra_common / container_base:
+  //         - Theses are the odds for each rarity of a mystery container, increasing or decreasing odds will alter the mystery container price generation and the the chances at recieving a reward of that rarity.
+  //         - If you manually change these values, make sure the total odds for each container DON'T go over 100%, anything under 100% will result in a chance at recieving nothing.
+  //         - Manipulating the odds values will also alter the generated mystery container price
+  //
+  //       - ammo_min: (Whole numbers only, no decimals)
   //         - The minimum amount of rounds generated during a mystery ammo opening, is also used as a calculation by the Automatic Price Balancer when determining the mystery ammo price
-  //       - ammo_max: (INTEGER ONLY)
+  //       - ammo_max: (Whole numbers only, no decimals)
   //         - The maximum amount of rounds generated during a mystery ammo opening, is also used as a calculation by the Automatic Price Balancer when determining the mystery ammo price
-
-
-
+  //
+  //
   //      Loadout Mystery Container Odds:
   //        - Currently the Mystery Loadout Container uses many of the below containers to generate a loadout, so manipulating any of these odds will also manipulate the loadout container generation in some way.
   //          I plan on changing this in the future to have more specific odds for the loadout container, but for now, this is how it works.
@@ -229,7 +388,6 @@
   "odds": {
     // Mystery Wallet
     // Chance for each possibility in percentage from rarest to most common
-
     "wallet_extremely_rare": 0.5,     // 2.5 Million Roubles
     "wallet_rare": 2.5,               // 1 Million Roubles
     "wallet_kinda_rare": 4.0,         // 500k Roubles
@@ -380,7 +538,7 @@
 
     // Premium Weapon Mystery Box
     "premium_weapon_meta": 100.0,             // Rare Weapon
-    "premium_weapon_profit_percentage": 0.81, // Container Profitability
+    "premium_weapon_profit_percentage": 0.77, // Container Profitability
 
 
     // Mystery Helmet
