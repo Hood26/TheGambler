@@ -80,6 +80,23 @@ export class TraderHelper
                 started: {},
                 success: {
                     "66b15c72b10189169400fb52": "gambler_intro",
+                    "66b59e1cfcf263f4d70af422": "gambler_ammo_part_1",
+                    "66b59e1cfcf263f4d70af432": "gambler_ammo_part_2",
+                    "66b59e1cfcf263f4d70af433": "gambler_ammo_part_3",
+                    "66b59e1cfcf263f4d70af423": "gambler_ammo_part_4",
+                    "66b59e1cfcf263f4d70af430": "gambler_ammo_part_5",
+                    "66b59e1cfcf263f4d70af425": "gambler_ammo_part_6",
+                    "66b59e1cfcf263f4d70af428": "gambler_ammo_part_7",
+                    "66b59e1cfcf263f4d70af427": "gambler_ammo_part_8",
+                    "66b59e1cfcf263f4d70af42a": "gambler_ammo_part_9",
+                    "66b59e1cfcf263f4d70af429": "gambler_ammo_part_10",
+                    "66b59e1cfcf263f4d70af434": "gambler_ammo_part_11",
+                    "66b59e1cfcf263f4d70af42b": "gambler_ammo_part_12",
+                    "66b59e1cfcf263f4d70af42f": "gambler_ammo_part_13",
+                    "66b59e1cfcf263f4d70af431": "gambler_ammo_part_14",
+                    "66b59e1cfcf263f4d70af42d": "gambler_ammo_part_15",
+                    "66b59e1cfcf263f4d70af42c": "gambler_ammo_part_16",
+                    "66b59e1cfcf263f4d70af42e": "gambler_ammo_part_17"
                 },
                 fail: {}
             } // questassort is empty as trader has no assorts unlocked by quests
@@ -144,44 +161,160 @@ export class TraderHelper
         tables.templates.items['59d6088586f774275f37482f']._props.Slots[3]._props.filters[0].Filter.push(GOLD_AKM_PISTOLGRIP_ID);
         tables.templates.items['59e0bed186f774156f04ce84']._props.Slots[0]._props.filters[0].Filter.push(GOLD_AKM_FOREGRIP_ID);
 
-        const names: Record<string, string> = {
-            wallet: "bb_wallet_gamble",
-            key: "bc_key_gamble",
-            keycard: "bd_keycard_gamble",
-            sealed: "az_sealed_weapon_gamble",
-            food: "ba_food_gamble",
-            melee: "be_melee_weapon_gamble",
-            stim: "bf_stim_gamble",
-            fiftyfifty: "z_50/50_gamble",
-            weapon: "w_weapon_gamble",
-            backpack: "wr_backpack_gamble",
-            loadout: "ws_loadout_gamble",
-            rig: "wr_rig_gamble",
-            helmet: "x_helmet_gamble",
-            headset: "xy_headset_gamble",
-            armor: "w_armor_gamble",
-            premium_armor: "w_premium_armor_gamble",
-            premium_weapon: "wa_premium_weapon_gamble",
-            '9x18': "ab_9x18_gamble",
-            '9x19': "ac_9x19_gamble",
-            '9x21': "ad_9x21_gamble",
-            '.357': "ae_.357_gamble",
-            '.45': "af_.45_gamble",
-            '4.6x30': "ag_4.6x30_gamble",
-            '5.7x28': "ah_5.7x28_gamble",
-            '5.45x39': "ai_5.45x39_gamble",
-            '5.56x45': "aj_5.56x45_gamble",
-            '.300': "ak_.300_gamble",
-            '7.62x39': "al_7.62x39_gamble",
-            '7.62x51': "am_7.62x51_gamble",
-            '7.62x54': "an_7.62x54_gamble",
-            '.338': "ao_.338_gamble",
-            '9x39': "ap_9x39_gamble",
-            '.366': "aq_.366_gamble",
-            '12.7x55': "ar_12.7x55_gamble",
-            '12/70': "as_12/70_gamble",
-            '20/70': "at_20/70_gamble",
-            '23x75': "au_23x75_gamble"
+        type itemProps = {
+            _id: string,
+            quest_id: string,
+        }
+
+        const names: Record<string, itemProps> = {
+            wallet: {
+                _id: "bb_wallet_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e0"
+            },
+            key: {
+                _id: "bc_key_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e1"
+            },             
+            keycard: {
+                _id: "bd_keycard_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e2"
+            }, 
+            sealed: {
+                _id: "az_sealed_weapon_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e3"
+            }, 
+            food: {
+                _id: "ba_food_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e4"
+            }, 
+            melee:  {
+                _id: "be_melee_weapon_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e5"
+            }, 
+            stim: {
+                _id: "bf_stim_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e6"
+            },  
+            fiftyfifty: {
+                _id: "z_50/50_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e7"
+            }, 
+            weapon: {
+                _id: "w_weapon_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e8"
+            }, 
+            backpack: {
+                _id: "wr_backpack_gamble",
+                quest_id: "66b57e52fcf263f4d70af3e9"
+            }, 
+            loadout: {
+                _id: "ws_loadout_gamble",
+                quest_id: "66b57e52fcf263f4d70af3ea"
+            }, 
+            rig: {
+                _id: "wr_rig_gamble",
+                quest_id: "66b57e52fcf263f4d70af3eb"
+            }, 
+            helmet: {
+                _id: "x_helmet_gamble",
+                quest_id: "66b57e52fcf263f4d70af3ec"
+            }, 
+            headset: {
+                _id: "xy_headset_gamble",
+                quest_id: "66b57e52fcf263f4d70af3ed"
+            }, 
+            armor: {
+                _id: "w_armor_gamble",
+                quest_id: "66b57e52fcf263f4d70af3ee"
+            }, 
+            premium_armor: {
+                _id: "w_premium_armor_gamble",
+                quest_id: "66b57e52fcf263f4d70af3ef"
+            }, 
+            premium_weapon: {
+                _id: "wa_premium_weapon_gamble",
+                quest_id: "66b57e52fcf263f4d70af3f0"
+            },
+            '9x18': {
+                _id: "zzab_9x18_gamble",
+                quest_id: "66b59e1cfcf263f4d70af421"
+            },  
+            '9x19': {
+                _id: "zzac_9x19_gamble",
+                quest_id: "66b59e1cfcf263f4d70af422"
+            },
+            '9x21': {
+                _id: "zzad_9x21_gamble",
+                quest_id: "66b59e1cfcf263f4d70af423"
+            },
+            '.357': {
+                _id: "zzae_.357_gamble",
+                quest_id: "66b59e1cfcf263f4d70af424"
+            },
+            '.45': {
+                _id: "zzaf_.45_gamble",
+                quest_id: "66b59e1cfcf263f4d70af425"
+            },
+            '4.6x30': {
+                _id: "zzag_4.6x30_gamble",
+                quest_id: "66b59e1cfcf263f4d70af426"
+            },
+            '5.7x28': {
+                _id: "zzah_5.7x28_gamble",
+                quest_id: "66b59e1cfcf263f4d70af427"
+            },
+            '5.45x39': {
+                _id: "zzai_5.45x39_gamble",
+                quest_id: "66b59e1cfcf263f4d70af428"
+            },
+            '5.56x45': {
+                _id: "zzaj_5.56x45_gamble",
+                quest_id: "66b59e1cfcf263f4d70af429"
+            },
+            '.300': {
+                _id: "zzak_.300_gamble",
+                quest_id: "66b59e1cfcf263f4d70af42a"
+            },
+            '7.62x39': {
+                _id: "zzal_7.62x39_gamble",
+                quest_id: "66b59e1cfcf263f4d70af42b"
+            },
+            '7.62x51': {
+                _id: "zzam_7.62x51_gamble",
+                quest_id: "66b59e1cfcf263f4d70af42c"
+            },
+            '7.62x54': {
+                _id: "zzan_7.62x54_gamble",
+                quest_id: "66b59e1cfcf263f4d70af42d"
+            },
+            '.338': {
+                _id: "zzao_.338_gamble",
+                quest_id: "66b59e1cfcf263f4d70af42e"
+            },
+            '9x39': {
+                _id: "zzap_9x39_gamble",
+                quest_id: "66b59e1cfcf263f4d70af42f"
+            },
+            '.366': {
+                _id: "zzaq_.366_gamble",
+                quest_id: "66b59e1cfcf263f4d70af430"
+            },
+            '12.7x55': {
+                _id: "zzar_12.7x55_gamble",
+                quest_id: "66b59e1cfcf263f4d70af431"
+            },
+            '12/70': {
+                _id: "zzas_12/70_gamble",
+                quest_id: "66b59e1cfcf263f4d70af432"
+            },
+            '20/70': {
+                _id: "zzat_20/70_gamble",
+                quest_id: "66b59e1cfcf263f4d70af433"
+            },
+            '23x75': {
+                _id: "zzau_23x75_gamble",
+                quest_id: "66b59e1cfcf263f4d70af434"
+            },
         };
         
         const price = new Price(container, config, logger);
@@ -218,12 +351,12 @@ export class TraderHelper
         */
 
         
-                                   /*
-        assortCreator.createSingleAssortItem(white_chip, '66b15c72b10189169400fb52')
+       assortCreator.createSingleAssortItem(white_chip, '66b15c72b10189169400fb52')
                                 .addStackCount(999)
                                 .addMoneyCost(Money.ROUBLES, 20000)
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
+       /*
         assortCreator.createSingleAssortItem(pake_white_chips)
                                 .addStackCount(999)
                                 .addMoneyCost(red_chip, 1)
@@ -301,13 +434,14 @@ export class TraderHelper
         
         for (let i in Object.keys(names)) {
             const name = Object.keys(names)[i];
+            const current = Object.values(names)[i];
             if (config.container_config[name + '_enable']){
 
                 if ((parseInt(name.substring(0,1)) || name.substring(0,1) == '.') && !config.container_config['all_ammo_enable']) { // isAmmo and ammo is disabled: SKIP all ammo
                     continue;
                 }
 
-                assortCreator.createSingleAssortItem(names[name])
+                assortCreator.createSingleAssortItem(current._id, current.quest_id)
                                         .addStackCount(config.container_config[name + '_unlimited_stock'] ? 999999 : config.container_config[name + '_stock'], config.container_config[name + '_unlimited_stock'])
                                         .addMoneyCost(Money.ROUBLES, (generatedPrices[name + '_price'] && !config.container_config[name + '_manual_pricing']) ? (generatedPrices[name + '_price'] * config.price_multiplier) : (config.container_config[name + '_price'] * config.price_multiplier))
                                         .addLoyaltyLevel(1)
