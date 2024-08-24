@@ -25,8 +25,6 @@ import { HashUtil } from "@spt/utils/HashUtil";
 import { IAddItemDirectRequest } from "@spt/models/eft/inventory/IAddItemsDirectRequest";
 import { Item } from "../common/tables/IItem";
 import { Money } from "@spt/models/enums/Money";
-import { Traders } from "@spt/models/enums/Traders";
-import { HashUtil } from "@spt/utils/HashUtil";
 
 
 // New trader classes and config

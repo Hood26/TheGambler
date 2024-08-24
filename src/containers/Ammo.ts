@@ -475,7 +475,7 @@ export class Ammo {
                     "5cadf6ddae9215051e1c23b2", // 12.7x55mm PS12
                 ],
                 [
-                    "5cadf6ddae9215051e1c23b2", // 12.7x55mm PS12A
+                    "5cadf6e5ae921500113bb973", // 12.7x55mm PS12A
                 ],
             ]
         },

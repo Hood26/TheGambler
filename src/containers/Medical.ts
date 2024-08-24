@@ -13,7 +13,6 @@ export class Medical {
     "_uncommon"
   ]
 
-  public rewards_rolls_all = true;
   public reward_rolls = [5, 5, 3, 4, 4, 3, 2] // Number of times rolled for each rarity (MAYBE)
   public rewards = [
     [ // Light Bleeds

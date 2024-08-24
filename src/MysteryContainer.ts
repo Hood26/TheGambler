@@ -27,6 +27,8 @@ import { LoadoutGrenade } from "./containers/LoadoutGrenade";
 import { LoadoutSplit } from "./containers/LoadoutSplint";
 import { LoadoutFacecovers } from "./containers/LoadoutFacecovers";
 import { LoadoutStim } from "./containers/LoadoutStim";
+import type { itemProps } from "./MysteryContainerInfo";
+import { MysteryContainerInfo } from "./MysteryContainerInfo";
 
 class Container {
 
@@ -40,6 +42,7 @@ class Container {
     public isAmmo: boolean;
     public isPreset: boolean;
     public override: {};
+    public rolls: number;
     public rarity_average_profit: Array<number>;
     public profit_percentage: number;
     public guaranteed_rewards: Array<string>;
@@ -74,6 +77,7 @@ export class MysteryContainer {
     private config;
     private logger;
     private containers;
+    private containerInfo: Record<string, itemProps>;
     private names;
     public items;
     public simulation;
@@ -82,7 +86,7 @@ export class MysteryContainer {
     constructor(config, logger){
         this.config     = config;
         this.logger     = logger;
-        //this.container  = this.setData(this.containersData) Old Way
+        this.containerInfo = MysteryContainerInfo;
         this.names = [
             'wallet', 'keycard', 'key', 'stim', 'medical', 'food', 'melee', 
             'backpack', 'rig', 'weapon', 'premium_weapon', 'helmet', 
@@ -162,6 +166,7 @@ export class MysteryContainer {
             container.max = this.config.odds[`${name}_max`] || 1;
             container.profit_percentage = this.config.odds[`${name}_profit_percentage`];
             container.presets = item.presets? [...item.presets] : [];
+            container.rolls = item.rolls? item.rolls : 1;
             container.guaranteed_stackable = item.guaranteed_stackable? item.guaranteed_stackable : undefined;
             container.guaranteed_reward_amount = item.guaranteed_reward_amount? item.guaranteed_reward_amount : undefined;
             container.guaranteed_rewards = item.guaranteed_rewards? item.guaranteed_rewards : undefined;
@@ -310,5 +315,13 @@ export class MysteryContainer {
 
     public isPreset(name: string): boolean {
         return this.containers[name].isPreset;
+    }
+
+    public isMysteryContainer(name: string): boolean {
+        return this.containerInfo[name] ? true : false;
+    }
+
+    getMysteryContainerId(name: string): string {
+        return this.containerInfo[name]._id;
     }
 }

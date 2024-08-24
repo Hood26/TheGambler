@@ -269,7 +269,8 @@ export class Gamble {
             return;
             }
             */
-           
+
+        // If the ID is NaN, we need to generate a random item with a determined amound of rolls for each rarity (i.e. Medical container)
         if (id === "NaN" && reward_rolls) {
             const rewards = this.mysteryContainer.getRewards(name);
             for(let i = 0; i < rewards.length; i++) {
@@ -285,19 +286,18 @@ export class Gamble {
             }
         }
 
+        // If the ID is NaN, we need to generate random reward(s) based off property (rolls)
         if (id === "NaN" && !reward_rolls) {
-           // console.log('ID is NaN... Searching for ID...')
             for(let i = 0; i < odds.length; i++) {
                 if(roll <= odds[i]) {
                     //console.log('WIN! Creating ' + name + ' index = ' + i + ' rewards = ' +  this.mysteryContainer.getReward(name, i))
                     id = this.mysteryContainer.getReward(name, i);
                     this.currentID = id;
-                    if(reward_amount === undefined){
+                    if(!reward_amount){ // determined amount to receive
                         reward_amount = this.mysteryContainer.getRewardAmount(name, i);
                     }
-                    if(stackable === false){
+                    if(!stackable){ // Item is not stackable
                         stackable = this.mysteryContainer.getStackable(name, i);
-
                     }
                     break;  
                 }

@@ -2,6 +2,7 @@ import { DependencyContainer } from "tsyringe";
 import { CustomItemService } from "@spt/services/mod/CustomItemService";
 import { NewItemDetails } from "@spt/models/spt/mod/NewItemDetails";
 import { NewItemFromCloneDetails } from "@spt/models/spt/mod/NewItemDetails";
+import { DatabaseServer } from "@spt/servers/DatabaseServer";
 
 import { VFS } from "@spt/utils/VFS";
 import { jsonc } from "jsonc";
@@ -14,12 +15,12 @@ export class ItemCreateHelper {
 
     // Create customs Items and store them in the database
     public createItems(container: DependencyContainer) {
-        const vfs = container.resolve<VFS>("VFS")
+        const db: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+        const vfs = container.resolve<VFS>("VFS");
         this.config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
 
         // Resolve the CustomItemService container
         const customItem = container.resolve<CustomItemService>("CustomItemService");
-
 
         const white_chip: NewItemFromCloneDetails = {
             itemTplToClone: "5696686a4bdc2da3298b456a",
@@ -54,6 +55,8 @@ export class ItemCreateHelper {
             }
         }
         this.loot.push(white_chip);
+
+
 
         const red_chip: NewItemFromCloneDetails = {
             itemTplToClone: "5696686a4bdc2da3298b456a",
@@ -145,7 +148,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Blue Poker Chip",
                     shortName: "Chip",
-                    description: "Uber poker chip that can be used to buy valuable mystery boxes from the Gambler."
+                    description: "Epic poker chip that can be used to buy valuable mystery boxes from the Gambler."
                 }
             },
             addToStaticLoot: {
@@ -179,7 +182,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Black Poker Chip",
                     shortName: "Chip",
-                    description: "Uber poker chip that can be used to buy valuable mystery boxes from the Gambler."
+                    description: "Legendary poker chip that can be used to buy valuable mystery boxes from the Gambler."
                 }
             },
             addToStaticLoot: {
@@ -1030,7 +1033,7 @@ export class ItemCreateHelper {
         }
         const bitcoinGamble: NewItemDetails = {
             newItem: {
-                _id: "bg_bitcoin_gamble",
+                _id: "aa_bitcoin_gamble",
                 _name: "gambling_bitcoin",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1136,7 +1139,7 @@ export class ItemCreateHelper {
         }
         const gpcoinGamble: NewItemDetails = {
             newItem: {
-                _id: "bh_gpcoin_gamble",
+                _id: "aa_gpcoin_gamble",
                 _name: "gambling_gpcoin",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4869,6 +4872,7 @@ export class ItemCreateHelper {
             } 
         }
 
+        
         customItem.createItemFromClone(white_chip);
         customItem.createItemFromClone(red_chip);
         customItem.createItemFromClone(green_chip);

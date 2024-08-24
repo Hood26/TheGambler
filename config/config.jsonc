@@ -534,11 +534,11 @@
     "weapon_scav": 30.0,              // Scav Weapon
     "weapon_meme": 7.7,               // Meme Weapon
     "weapon_base": 18.0,              // Default Weapon
-    "weapon_profit_percentage": 0.85, // Container Profitability
+    "weapon_profit_percentage": 0.84, // Container Profitability
 
     // Premium Weapon Mystery Box
     "premium_weapon_meta": 100.0,             // Rare Weapon
-    "premium_weapon_profit_percentage": 0.77, // Container Profitability
+    "premium_weapon_profit_percentage": 0.75, // Container Profitability
 
 
     // Mystery Helmet

@@ -16,7 +16,8 @@ import { VFS } from "@spt/utils/VFS";
 import { jsonc } from "jsonc";
 import path from "path";
 import { Price } from "./Price";
-import { MysteryContainer } from "./MysteryContainer";
+import type { itemProps } from "./MysteryContainerInfo";
+import { MysteryContainerInfo } from "./MysteryContainerInfo";
 
 
 export class TraderHelper
@@ -132,8 +133,8 @@ export class TraderHelper
         const vfs = container.resolve<VFS>("VFS")
         const config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
         const MEDICAL_GAMBLE_ID = "zz_medical_gamble";
-        const BITCOIN_GAMBLE_ID = "bg_bitcoin_gamble";
-        const GPCOIN_GAMBLE_ID = "bh_gpcoin_gamble";
+        const BITCOIN_GAMBLE_ID = "aa_bitcoin_gamble";
+        const GPCOIN_GAMBLE_ID = "aa_gpcoin_gamble";
         const BITCOIN_ID = '59faff1d86f7746c51718c9c';
         const GPCOIN_ID = '5d235b4d86f7742e017bc88a';
         const MEDICAL_TOOLS_MEDS_ID = '619cc01e0a7c3a1a2731940c';
@@ -161,162 +162,8 @@ export class TraderHelper
         tables.templates.items['59d6088586f774275f37482f']._props.Slots[3]._props.filters[0].Filter.push(GOLD_AKM_PISTOLGRIP_ID);
         tables.templates.items['59e0bed186f774156f04ce84']._props.Slots[0]._props.filters[0].Filter.push(GOLD_AKM_FOREGRIP_ID);
 
-        type itemProps = {
-            _id: string,
-            quest_id: string,
-        }
-
-        const names: Record<string, itemProps> = {
-            wallet: {
-                _id: "bb_wallet_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e0"
-            },
-            key: {
-                _id: "bc_key_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e1"
-            },             
-            keycard: {
-                _id: "bd_keycard_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e2"
-            }, 
-            sealed: {
-                _id: "az_sealed_weapon_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e3"
-            }, 
-            food: {
-                _id: "ba_food_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e4"
-            }, 
-            melee:  {
-                _id: "be_melee_weapon_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e5"
-            }, 
-            stim: {
-                _id: "bf_stim_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e6"
-            },  
-            fiftyfifty: {
-                _id: "z_50/50_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e7"
-            }, 
-            weapon: {
-                _id: "w_weapon_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e8"
-            }, 
-            backpack: {
-                _id: "wr_backpack_gamble",
-                quest_id: "66b57e52fcf263f4d70af3e9"
-            }, 
-            loadout: {
-                _id: "ws_loadout_gamble",
-                quest_id: "66b57e52fcf263f4d70af3ea"
-            }, 
-            rig: {
-                _id: "wr_rig_gamble",
-                quest_id: "66b57e52fcf263f4d70af3eb"
-            }, 
-            helmet: {
-                _id: "x_helmet_gamble",
-                quest_id: "66b57e52fcf263f4d70af3ec"
-            }, 
-            headset: {
-                _id: "xy_headset_gamble",
-                quest_id: "66b57e52fcf263f4d70af3ed"
-            }, 
-            armor: {
-                _id: "w_armor_gamble",
-                quest_id: "66b57e52fcf263f4d70af3ee"
-            }, 
-            premium_armor: {
-                _id: "w_premium_armor_gamble",
-                quest_id: "66b57e52fcf263f4d70af3ef"
-            }, 
-            premium_weapon: {
-                _id: "wa_premium_weapon_gamble",
-                quest_id: "66b57e52fcf263f4d70af3f0"
-            },
-            '9x18': {
-                _id: "zzab_9x18_gamble",
-                quest_id: "66b59e1cfcf263f4d70af421"
-            },  
-            '9x19': {
-                _id: "zzac_9x19_gamble",
-                quest_id: "66b59e1cfcf263f4d70af422"
-            },
-            '9x21': {
-                _id: "zzad_9x21_gamble",
-                quest_id: "66b59e1cfcf263f4d70af423"
-            },
-            '.357': {
-                _id: "zzae_.357_gamble",
-                quest_id: "66b59e1cfcf263f4d70af424"
-            },
-            '.45': {
-                _id: "zzaf_.45_gamble",
-                quest_id: "66b59e1cfcf263f4d70af425"
-            },
-            '4.6x30': {
-                _id: "zzag_4.6x30_gamble",
-                quest_id: "66b59e1cfcf263f4d70af426"
-            },
-            '5.7x28': {
-                _id: "zzah_5.7x28_gamble",
-                quest_id: "66b59e1cfcf263f4d70af427"
-            },
-            '5.45x39': {
-                _id: "zzai_5.45x39_gamble",
-                quest_id: "66b59e1cfcf263f4d70af428"
-            },
-            '5.56x45': {
-                _id: "zzaj_5.56x45_gamble",
-                quest_id: "66b59e1cfcf263f4d70af429"
-            },
-            '.300': {
-                _id: "zzak_.300_gamble",
-                quest_id: "66b59e1cfcf263f4d70af42a"
-            },
-            '7.62x39': {
-                _id: "zzal_7.62x39_gamble",
-                quest_id: "66b59e1cfcf263f4d70af42b"
-            },
-            '7.62x51': {
-                _id: "zzam_7.62x51_gamble",
-                quest_id: "66b59e1cfcf263f4d70af42c"
-            },
-            '7.62x54': {
-                _id: "zzan_7.62x54_gamble",
-                quest_id: "66b59e1cfcf263f4d70af42d"
-            },
-            '.338': {
-                _id: "zzao_.338_gamble",
-                quest_id: "66b59e1cfcf263f4d70af42e"
-            },
-            '9x39': {
-                _id: "zzap_9x39_gamble",
-                quest_id: "66b59e1cfcf263f4d70af42f"
-            },
-            '.366': {
-                _id: "zzaq_.366_gamble",
-                quest_id: "66b59e1cfcf263f4d70af430"
-            },
-            '12.7x55': {
-                _id: "zzar_12.7x55_gamble",
-                quest_id: "66b59e1cfcf263f4d70af431"
-            },
-            '12/70': {
-                _id: "zzas_12/70_gamble",
-                quest_id: "66b59e1cfcf263f4d70af432"
-            },
-            '20/70': {
-                _id: "zzat_20/70_gamble",
-                quest_id: "66b59e1cfcf263f4d70af433"
-            },
-            '23x75': {
-                _id: "zzau_23x75_gamble",
-                quest_id: "66b59e1cfcf263f4d70af434"
-            },
-        };
-        
+        // All Mystery Containers _id and quest_id
+        const names: Record<string, itemProps> = MysteryContainerInfo;     
         const price = new Price(container, config, logger);
         const generatedPrices = price.generateContainerPrices();
 
@@ -350,13 +197,15 @@ export class TraderHelper
                                 .export(tables.traders[baseJson._id]);
         */
 
-        
+        /*        
        assortCreator.createSingleAssortItem(white_chip, '66b15c72b10189169400fb52')
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 20000)
+                                .addStackCount(20)
+                                .addMoneyCost(Money.ROUBLES, 10000)
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
-       /*
+        */
+
+
         assortCreator.createSingleAssortItem(pake_white_chips)
                                 .addStackCount(999)
                                 .addMoneyCost(red_chip, 1)
@@ -383,7 +232,7 @@ export class TraderHelper
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(red_chip)
                                 .addStackCount(999)
-                                .addMoneyCost(white_chip, 4)
+                                .addMoneyCost(white_chip, 8)
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(green_chip)
@@ -393,15 +242,15 @@ export class TraderHelper
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(blue_chip)
                                 .addStackCount(999)
-                                .addMoneyCost(green_chip, 4)
+                                .addMoneyCost(green_chip, 3)
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
         assortCreator.createSingleAssortItem(black_chip)
                                 .addStackCount(999)
-                                .addMoneyCost(blue_chip, 4)
+                                .addMoneyCost(blue_chip, 2)
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
-                                */
+                                
                                 /*
         assortCreator.createSingleAssortItem(green_chip)
                                 .addStackCount(999)
