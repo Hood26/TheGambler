@@ -172,7 +172,7 @@ export class TraderHelper
         //const loadoutPrice = price.loadoutSimulation();
         //console.log('One Loadout Cost = ' + loadoutPrice);
         
-        console.log(generatedPrices);
+        //console.log(generatedPrices);
 
         const white_chip = 'a_white_chip';
         const pake_white_chips = 'aaa_white_chips_gamble';
@@ -320,7 +320,7 @@ export class TraderHelper
         if (config.container_config['gpcoin_enable']){
             assortCreator.createSingleAssortItem(GPCOIN_GAMBLE_ID)
                                     .addStackCount(config.container_config.gpcoin_unlimited_stock ? 999999 : config.container_config.gpcoin_stock, config.container_config.gpcoin_unlimited_stock)
-                                    .addBarterCost(GPCOIN_ID, 50)
+                                    .addBarterCost(GPCOIN_ID, 25)
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }             

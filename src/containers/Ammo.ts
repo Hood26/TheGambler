@@ -211,9 +211,9 @@ export class Ammo {
             rewards: [
                 [
                     "5ba26835d4351e0035628ff5", // 4.6x30mm AP SX
+                    "5ba2678ad4351e44f824b344", // 4.6x30mm FMJ SX
                 ],
                 [
-                    "5ba2678ad4351e44f824b344", // 4.6x30mm FMJ SX
                     "64b6979341772715af0f9c39", // 4.6x30mm JSP SX 
                 ],
                 [

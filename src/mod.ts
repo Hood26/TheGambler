@@ -194,8 +194,11 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             const containerSettings = inventoryHelper.getInventoryConfig().sealedAirdropContainer;
             // This id is bugged and we have to delete it or bad shit will happen. Looks like SPT base bug?
             delete(containerSettings.weaponRewardWeight['5e848cc2988a8701445df1e8']) 
-            newItemsRequest.itemsWithModsToAdd.push(...lootGenerator.getSealedWeaponCaseLoot(containerSettings));
-            console.log(newItemsRequest.itemsWithModsToAdd)
+            try {
+                newItemsRequest.itemsWithModsToAdd.push(...lootGenerator.getSealedWeaponCaseLoot(containerSettings));
+            } catch (e) {
+                console.log(newItemsRequest.itemsWithModsToAdd)
+            }
             newItemsRequest.foundInRaid = containerSettings.foundInRaid;
 
         } else if (isGamblingContainer){

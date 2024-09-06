@@ -1239,7 +1239,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery GP Coin 50/50",
                     shortName: "Mystery GP Coin 50/50",
-                    description: `Feeling lucky? Looking to double up your spoils? Try your luck at double or nothing!\n==============================\n100 GP Coin - ${this.config.odds['gpcoin_success']}%\nNothing - ${this.config.odds['gpcoin_failure']}`
+                    description: `Feeling lucky? Looking to double up your spoils? Try your luck at double or nothing!\n==============================\n50 GP Coin - ${this.config.odds['gpcoin_success']}%\nNothing - ${this.config.odds['gpcoin_failure']}`
                 }
             } 
         }

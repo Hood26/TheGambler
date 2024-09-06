@@ -90,7 +90,7 @@
     // Mystery GP Coin
     "gpcoin_enable": true,
     "gpcoin_unlimited_stock": true,
-    "gpcoin_stock": 8,
+    "gpcoin_stock": 4,
     "gpcoin_rewards_found_in_raid_status": true,
 
     // Mystery Keycard
@@ -123,7 +123,7 @@
     "weapon_price": 150000,
     "weapon_unlimited_stock": true,
     "weapon_stock": 10,
-    "weapon_rewards_found_in_raid_status": true,
+    "weapon_rewards_found_in_raid_status": false,
 
     // Premium Weapon Mystery Box
     "premium_weapon_enable": true,
@@ -131,7 +131,7 @@
     "premium_weapon_price": 245000,
     "premium_weapon_unlimited_stock": false,
     "premium_weapon_stock": 1,
-    "premium_weapon_rewards_found_in_raid_status": true,
+    "premium_weapon_rewards_found_in_raid_status": false,
 
     // Mystery Helmet
     "helmet_enable": true,
@@ -209,7 +209,7 @@
     "7.62x25_manual_pricing": false,
     "7.62x25_price": 6000,
     "7.62x25_unlimited_stock": false,
-    "7.62x25_stock": 6,
+    "7.62x25_stock": 8,
 
     // Mystery 9x18
     "9x18_enable": true,
@@ -335,21 +335,21 @@
     "12/70_manual_pricing": false,
     "12/70_price": 6000,
     "12/70_unlimited_stock": false,
-    "12/70_stock": 6,
+    "12/70_stock": 10,
 
     // Mystery 20/70
     "20/70_enable": true,
     "20/70_manual_pricing": false,
     "20/70_price": 6000,
     "20/70_unlimited_stock": false,
-    "20/70_stock": 6,
+    "20/70_stock": 10,
 
     // Mystery 23x75
     "23x75_enable": true,
     "23x75_manual_pricing": false,
     "23x75_price": 7000,
     "23x75_unlimited_stock": false,
-    "23x75_stock": 4
+    "23x75_stock": 6
   },
 
   // GAMBLING ODDS SECTION
@@ -416,14 +416,14 @@
     "key_rare": 5.0,              // Rare Key
     "key_uncommon": 24.5,         // Uncommon Key
     "key_common": 70.0,           // Common Key
-    "key_profit_percentage": 0.94, // Container Profitability
+    "key_profit_percentage": 0.93, // Container Profitability
 
     // Mystery Stimulant
     "stim_extremely_rare": 10.0,   // Extremely Rare Key
     "stim_rare": 15.0,             // Rare Stim
     "stim_uncommon": 25.0,         // Uncommon Stim
     "stim_common": 50.0,           // Common Stim
-    "stim_profit_percentage": 0.95, // Container Profitability
+    "stim_profit_percentage": 0.94, // Container Profitability
 
     // Mystery Medical Box
     "medical_rare": 12.0,             // Rare Meds
@@ -435,7 +435,7 @@
     "food_rare": 5.0,              // Rare Food
     "food_uncommon": 35.0,         // Uncommon Food
     "food_common": 60.0,           // Common Food
-    "food_profit_percentage": 0.95, // Container Profitability
+    "food_profit_percentage": 0.94, // Container Profitability
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -512,7 +512,7 @@
     "melee_rare": 2.0,              // Rare melee
     "melee_uncommon": 22.75,        // Uncommon melee
     "melee_common": 75.0,           // Common melee
-    "melee_profit_percentage": 0.95, // Container Profitability
+    "melee_profit_percentage": 0.94, // Container Profitability
 
     // Mystery Backpack
     "backpack_extremely_rare": 5.0, // Extremely Rare backpack
@@ -538,7 +538,7 @@
 
     // Premium Weapon Mystery Box
     "premium_weapon_meta": 100.0,             // Rare Weapon
-    "premium_weapon_profit_percentage": 0.75, // Container Profitability
+    "premium_weapon_profit_percentage": 0.69, // Container Profitability
 
 
     // Mystery Helmet
@@ -546,13 +546,13 @@
     "helmet_rare": 17.5,              // Rare Helmet
     "helmet_uncommon": 27.5,          // Uncommon Helmet
     "helmet_common": 54.65,           // Common Helmet
-    "helmet_profit_percentage": 0.94, // Container Profitability
+    "helmet_profit_percentage": 0.86, // Container Profitability
 
     // Mystery Headset
     "headset_rare": 8.0,             // Rare Headset
     "headset_uncommon": 42.0,         // Uncommon Headset
     "headset_common": 50.0,           // Common Headset
-    "headset_profit_percentage": 0.94, // Container Profitability
+    "headset_profit_percentage": 0.92, // Container Profitability
 
     // Armor Mystery Box
     "armor_rare": 20.0,             // Rare Armor
@@ -562,7 +562,7 @@
 
     // Premium Armor Mystery Box
     "premium_armor_rare": 100.0,           // Rare Armor
-    "premium_armor_profit_percentage": 1.03, // Container Profitability
+    "premium_armor_profit_percentage": 0.98, // Container Profitability
 
     // Mystery 7.62x25 NOT SOLD BY TRADER CURRENTLY, ONLY USED FOR LOADOUT AMMO GENERATION
     "7.62x25_common": 45.0,          // Common Round 7.62x25
@@ -586,7 +586,7 @@
     "9x19_rare": 20.0,              // Rare Round 9x19
     "9x19_min": 15,                  // Minimum Rounds Generated
     "9x19_max": 30,                 // Maximum Rounds Generated
-    "9x19_profit_percentage": 0.74,  // Container Profitability
+    "9x19_profit_percentage": 0.93,  // Container Profitability
 
     // Mystery 9x21
     "9x21_common": 45.0,            // Common Round 9x21
@@ -594,7 +594,7 @@
     "9x21_rare": 20.0,              // Rare Round 9x21
     "9x21_min": 15,                  // Minimum Rounds Generated
     "9x21_max": 30,                 // Maximum Rounds Generated
-    "9x21_profit_percentage": 0.78,  // Container Profitability
+    "9x21_profit_percentage": 0.94,  // Container Profitability
 
     // Mystery .357
     ".357_common": 45.0,            // Common Round .357
@@ -610,7 +610,7 @@
     ".45_rare": 20.0,               // Rare Round .45
     ".45_min": 15,                   // Minimum Rounds Generated
     ".45_max": 30,                  // Maximum Rounds Generated
-    ".45_profit_percentage": 0.75,   // Container Profitability
+    ".45_profit_percentage": 1.04,   // Container Profitability
 
     // Mystery 4.6x30
     "4.6x30_common": 45.0,          // Common Round 4.6x30
@@ -618,7 +618,7 @@
     "4.6x30_rare": 20.0,            // Rare Round 4.6x30
     "4.6x30_min": 15,                // Minimum Rounds Generated
     "4.6x30_max": 30,               // Maximum Rounds Generated
-    "4.6x30_profit_percentage": 0.82,// Container Profitability
+    "4.6x30_profit_percentage": 1.04,// Container Profitability
 
     // Mystery 5.7x28
     "5.7x28_common": 45.0,           // Common Round 5.7x28
@@ -626,7 +626,7 @@
     "5.7x28_rare": 20.0,             // Rare Round 5.7x28
     "5.7x28_min": 15,                 // Minimum Rounds Generated
     "5.7x28_max": 30,                // Maximum Rounds Generated
-    "5.7x28_profit_percentage": 0.82, // Container Profitability
+    "5.7x28_profit_percentage": 0.94, // Container Profitability
 
     // Mystery 5.45x39
     "5.45x39_common": 45.0,          // Common Round 5.45x39
@@ -634,7 +634,7 @@
     "5.45x39_rare": 20.0,            // Rare Round 5.45x39
     "5.45x39_min": 15,                // Minimum Rounds Generated
     "5.45x39_max": 30,               // Maximum Rounds Generated
-    "5.45x39_profit_percentage": 0.75,// Container Profitability
+    "5.45x39_profit_percentage": 1.01,// Container Profitability
 
     // Mystery 5.56x45
     "5.56x45_common": 45.0,          // Common Round 5.56x45
@@ -642,7 +642,7 @@
     "5.56x45_rare": 20.0,            // Rare Round 5.56x45
     "5.56x45_min": 15,                // Minimum Rounds Generated
     "5.56x45_max": 30,               // Maximum Rounds Generated
-    "5.56x45_profit_percentage": 0.76,// Container Profitability
+    "5.56x45_profit_percentage": 0.94,// Container Profitability
 
     // Mystery .300_Blackout
     ".300_common": 45.0,             // Common Round .300
@@ -650,7 +650,7 @@
     ".300_rare": 20.0,               // Rare Round .300
     ".300_min": 15,                   // Minimum Rounds Generated
     ".300_max": 30,                  // Maximum Rounds Generated
-    ".300_profit_percentage": 0.80,   // Container Profitability
+    ".300_profit_percentage": 0.95,   // Container Profitability
 
     // Mystery 6.8x51 NOT SOLD BY TRADER CURRENTLY, ONLY USED FOR LOADOUT AMMO GENERATION
     "6.8x51_common": 45.0,             // Common Round 6.8x51
@@ -658,7 +658,7 @@
     "6.8x51_rare": 30.0,               // Rare Round 6.8x51
     "6.8x51_min": 15,                   // Minimum Rounds Generated
     "6.8x51_max": 30,                  // Maximum Rounds Generated
-    "6.8x51_profit_percentage": 0.90,   // Container Profitability
+    "6.8x51_profit_percentage": 0.97,   // Container Profitability
 
     // Mystery 7.62x39
     "7.62x39_common": 45.0,          // Common Round 7.62x39
@@ -666,7 +666,7 @@
     "7.62x39_rare": 20.0,            // Rare Round 7.62x39
     "7.62x39_min": 15,                // Minimum Rounds Generated
     "7.62x39_max": 30,               // Maximum Rounds Generated
-    "7.62x39_profit_percentage": 0.54,// Container Profitability
+    "7.62x39_profit_percentage": 0.88,// Container Profitability
 
     // Mystery 7.62x51
     "7.62x51_common": 45.0,          // Common Round 7.62x51
@@ -674,7 +674,7 @@
     "7.62x51_rare": 20.0,            // Rare Round 7.62x51
     "7.62x51_min": 15,                // Minimum Rounds Generated
     "7.62x51_max": 25,               // Maximum Rounds Generated
-    "7.62x51_profit_percentage": 0.82,// Container Profitability
+    "7.62x51_profit_percentage": 0.95,// Container Profitability
 
     // Mystery 7.62x54
     "7.62x54_common": 45.0,          // Common Round 7.62x54
@@ -682,7 +682,7 @@
     "7.62x54_rare": 20.0,            // Rare Round 7.62x54
     "7.62x54_min": 15,                // Minimum Rounds Generated
     "7.62x54_max": 25,               // Maximum Rounds Generated
-    "7.62x54_profit_percentage": 0.56,// Container Profitability
+    "7.62x54_profit_percentage": 0.90,// Container Profitability
 
     // Mystery .338
     ".338_common": 62.5,             // Common Round .338
@@ -690,7 +690,7 @@
     ".338_rare": 12.5,               // Rare Round .338
     ".338_min": 5,                   // Minimum Rounds Generated
     ".338_max": 10,                  // Maximum Rounds Generated
-    ".338_profit_percentage": 0.75,   // Container Profitability
+    ".338_profit_percentage": 0.91,   // Container Profitability
 
     // Mystery 9x39
     "9x39_common": 45.0,             // Common Round 9x39
@@ -698,7 +698,7 @@
     "9x39_rare": 20.0,               // Rare Round 9x39
     "9x39_min": 15,                   // Minimum Rounds Generated
     "9x39_max": 30,                  // Maximum Rounds Generated
-    "9x39_profit_percentage": 0.83,   // Container Profitability
+    "9x39_profit_percentage": 0.97,   // Container Profitability
 
     // Mystery .366
     ".366_common": 45.0,             // Common Round .366
@@ -706,7 +706,7 @@
     ".366_rare": 20.0,               // Rare Round .366
     ".366_min": 15,                   // Minimum Rounds Generated
     ".366_max": 30,                  // Maximum Rounds Generated
-    ".366_profit_percentage": 0.94,    // Container Profitability
+    ".366_profit_percentage": 0.97,    // Container Profitability
 
     // Mystery 12.7x55
     "12.7x55_common": 45.0,          // Common Round 12.7x55
@@ -714,7 +714,7 @@
     "12.7x55_rare": 20.0,            // Rare Round 12.7x55
     "12.7x55_min": 15,                // Minimum Rounds Generated
     "12.7x55_max": 25,               // Maximum Rounds Generated
-    "12.7x55_profit_percentage": 0.50,// Container Profitability
+    "12.7x55_profit_percentage": 0.98,// Container Profitability
 
     // Mystery 12/70
     "12/70_common": 45.0,            // Common Round 12/70
@@ -722,7 +722,7 @@
     "12/70_rare": 20.0,              // Rare Round 12/70
     "12/70_min": 5,                  // Minimum Rounds Generated
     "12/70_max": 10,                 // Maximum Rounds Generated
-    "12/70_profit_percentage": 0.85,  // Container Profitability
+    "12/70_profit_percentage": 1.25,  // Container Profitability
 
     // Mystery 20/70
     "20/70_common": 45.0,            // Common Round 20/70
@@ -761,68 +761,68 @@
       "57371aab2459775a77142f22": 205,  // 9x18mm PMM PstM gzh
       "573719df2459775a626ccbc2": 300,  // 9x18mm PM PBM gzh
       "5c0d56a986f774449d5de529": 700,  // 9x19mm RIP
-      "5c925fa22e221601da359b7b": 850,  // 9x19mm AP 6.3
-      "5efb0da7a29a85116f6ea05f": 1300, // 9x19mm PBP gzh
-      "6576f93989f0062e741ba952": 300,  // 9x21mm 7U4
+      "5c925fa22e221601da359b7b": 450,  // 9x19mm AP 6.3
+      "5efb0da7a29a85116f6ea05f": 950, // 9x19mm PBP gzh
+      "6576f93989f0062e741ba952": 350,  // 9x21mm 7U4
       "5a26ac0ec4a28200741e1e18": 800,  // 9x21mm BT gzh
-      "6576f4708ca9c4381d16cd9d": 1100, // 9x21mm 7N42 "Zubilo"
+      "6576f4708ca9c4381d16cd9d": 950, // 9x21mm 7N42 "Zubilo"
       "62330c18744e5e31df12f516": 260,  // .357 Magnum JHP
       "62330b3ed4dc74626d570b95": 300,  // .357 Magnum FMJ
       "5efb0d4f4bc50b58e81710f3": 110,  // .45 ACP Lasermatch FMJ
-      "5e81f423763d9f754677bf2e": 297,  // .45 ACP Match FMJ
-      "5efb0fc6aeb21837e749c801": 650,  // .45 ACP Hydra-Shok
-      "5ea2a8e200685063ec28c05a": 900,  // .45 ACP RIP
-      "5efb0cabfb3e451d70735af5": 1000,  // .45 ACP AP 
-      "64b6979341772715af0f9c39": 420,  // 4.6x30mm JSP SX
-      "5ba2678ad4351e44f824b344": 1610, // 4.6x30mm FMJ SX
-      "5ba26835d4351e0035628ff5": 2300,  // 4.6x30mm AP SX
-      "5cc80f67e4a949035e43bbba": 325,  // 5.7x28mm SB193
-      "5cc80f53e4a949000e1ea4f8": 590,  // 5.7x28mm L191
+      "5e81f423763d9f754677bf2e": 150,  // .45 ACP Match FMJ
+      "5efb0fc6aeb21837e749c801": 350,  // .45 ACP Hydra-Shok
+      "5ea2a8e200685063ec28c05a": 600,  // .45 ACP RIP
+      "5efb0cabfb3e451d70735af5": 950,  // .45 ACP AP 
+      "64b6979341772715af0f9c39": 320,  // 4.6x30mm JSP SX
+      "5ba2678ad4351e44f824b344": 950, // 4.6x30mm FMJ SX
+      "5ba26835d4351e0035628ff5": 1800,  // 4.6x30mm AP SX
+      "5cc80f67e4a949035e43bbba": 500,  // 5.7x28mm SB193
+      "5cc80f53e4a949000e1ea4f8": 420,  // 5.7x28mm L191
       "5cc80f38e4a949001152b560": 700,  // 5.7x28mm SS190
       "56dff3afd2720bba668b4567": 200,  // 5.45x39mm PS gs
-      "56dff2ced2720bb4668b4567": 750,  // 5.45x39mm PP gs
-      "56dfef82d2720bbd668b4567": 1350, // 5.45x39mm BP gs
-      "56dff061d2720bb5668b4567": 1050, // 5.45x39mm BT gs
-      "61962b617c6c7b169525f168": 1150, // 5.45x39mm 7N40
-      "56dff026d2720bb8668b4567": 1850, // 5.45x39mm BS gs
-      "5c0d5e4486f77478390952fe": 1900, // 5.45x39mm PPBS gs "Igolnik"
-      "60194943740c5d77f6705eea": 900,  // 5.56x45mm MK 318 Mod 0 (SOST)
-      "59e6906286f7746c9f75e847": 1050, // 5.56x45mm M856A1
+      "56dff2ced2720bb4668b4567": 350,  // 5.45x39mm PP gs
+      "56dff061d2720bb5668b4567": 550, // 5.45x39mm BT gs
+      "56dfef82d2720bbd668b4567": 850, // 5.45x39mm BP gs
+      "61962b617c6c7b169525f168": 1000, // 5.45x39mm 7N40
+      "56dff026d2720bb8668b4567": 1350, // 5.45x39mm BS gs
+      "5c0d5e4486f77478390952fe": 1450, // 5.45x39mm PPBS gs "Igolnik"
+      "60194943740c5d77f6705eea": 500,  // 5.56x45mm MK 318 Mod 0 (SOST)
+      "59e6906286f7746c9f75e847": 1000, // 5.56x45mm M856A1
       "54527ac44bdc2d36668b4567": 1550, // 5.56x45mm M855A1
-      "59e690b686f7746c9f75e848": 2000, // 5.56x45mm M995
-      "601949593ae8f707c4608daa": 2250, // 5.56x45mm SSA AP
-      "5fbe3ffdf8b6a877a729ea82": 440,  // .300 Blackout BCP FMJ
-      "619636be6db0f2477964e710": 1100, // .300 Blackout M62 Tracer
-      "64b8725c4b75259c590fa899": 1200, // .300 Blackout CBJ
-      "5fd20ff893a8961fc660a954": 1500, // .300 Blackout AP
+      "59e690b686f7746c9f75e848": 1850, // 5.56x45mm M995
+      "601949593ae8f707c4608daa": 2000, // 5.56x45mm SSA AP
+      "5fbe3ffdf8b6a877a729ea82": 340,  // .300 Blackout BCP FMJ
+      "619636be6db0f2477964e710": 800, // .300 Blackout M62 Tracer
+      "64b8725c4b75259c590fa899": 1100, // .300 Blackout CBJ
+      "5fd20ff893a8961fc660a954": 1400, // .300 Blackout AP
       "5656d7c34bdc2d9d198b4587": 315,  // 7.62x39mm PS gzh
-      "64b7af434b75259c590fa893": 1100, // 7.62x39mm PP gzh
-      "59e0d99486f7744a32234762": 1850, // 7.62x39mm BP gzh
-      "601aa3d2b2bcb34913271e6d": 2650, // 7.62x39mm MAI AP
+      "64b7af434b75259c590fa893": 650, // 7.62x39mm PP gzh
+      "59e0d99486f7744a32234762": 1500, // 7.62x39mm BP gzh
+      "601aa3d2b2bcb34913271e6d": 1650, // 7.62x39mm MAI AP
       "58dd3ad986f77403051cba8f": 600,  // 7.62x51mm M80
       "5a608bf24f39f98ffc77720e": 850,  // 7.62x51mm M62 Tracer
-      "5a6086ea4f39f99cd479502f": 2500, // 7.62x51mm M61
-      "5efb0c1bd79ff02a1f5e68d9": 3500, // 7.62x51mm M993
-      "5e023d34e8a400319a28ed44": 2500, // 7.62x54mm R BT gzh
-      "560d61e84bdc2da74d8b4571": 3000, // 7.62x54mm R SNB gzh
-      "5e023d48186a883be655e551": 3500, // 7.62x54mm R BS gs
+      "5a6086ea4f39f99cd479502f": 2250, // 7.62x51mm M61
+      "5efb0c1bd79ff02a1f5e68d9": 2500, // 7.62x51mm M993
+      "5e023d34e8a400319a28ed44": 1500, // 7.62x54mm R BT gzh
+      "560d61e84bdc2da74d8b4571": 2000, // 7.62x54mm R SNB gzh
+      "5e023d48186a883be655e551": 2500, // 7.62x54mm R BS gs
       "5fc382a9d724d907e2077dab": 50000,// .338 Lapua Magnum AP
-      "57a0dfb82459774d3078b56c": 305,  // 9x39mm SP-5 gs
-      "5c0d668f86f7747ccb7f13b2": 1750, // 9x39mm SPP gs
-      "61962d879bb3d20b0946d385": 1700, // 9x39mm PAB-9 gs
+      "57a0dfb82459774d3078b56c": 239,  // 9x39mm SP-5 gs
+      "5c0d668f86f7747ccb7f13b2": 517, // 9x39mm SPP gs
+      "61962d879bb3d20b0946d385": 850, // 9x39mm PAB-9 gs
       "57a0e5022459774d1673f889": 1450, // 9x39mm SP-6 gs
-      "5c0d688c86f77413ae3407b2": 2500, // 9x39mm BP gs
+      "5c0d688c86f77413ae3407b2": 1600, // 9x39mm BP gs
       "59e655cb86f77411dc52a77b": 150,  // .366 TKM EKO
-      "5f0596629e22f464da6bbdd9": 1300, // .366 TKM AP-M
-      "5cadf6e5ae921500113bb973": 1500, // 12.7x55mm PS12A  // Prapor LL2
-      "5cadf6ddae9215051e1c23b2": 420,  // 12.7x55mm PS12
-      "5cadf6eeae921500134b2799": 3500, // 12.7x55mm PS12B
+      "5f0596629e22f464da6bbdd9": 1250, // .366 TKM AP-M
+      "5cadf6e5ae921500113bb973": 250, // 12.7x55mm PS12A  // Prapor LL2
+      "5cadf6ddae9215051e1c23b2": 400,  // 12.7x55mm PS12
+      "5cadf6eeae921500134b2799": 2250, // 12.7x55mm PS12B
       "5d6e6806a4b936088465b17e": 670,  // 12/70 8.5mm Magnum buckshot 
       "64b8ee384b75259c590fa89b": 403,  // 12/70 Piranha
-      "5d6e6911a4b9361bd5780d52": 4000, // 12/70 flechette
-      "5c0d591486f7744c505b416f": 2000, // 12/70 RIP
+      "5d6e6911a4b9361bd5780d52": 800, // 12/70 flechette
+      "5c0d591486f7744c505b416f": 900, // 12/70 RIP
       "5d6e68c4a4b9361b93413f79": 600,  // 12/70 makeshift .50 BMG slug
-      "5d6e68a8a4b9360b6c0d54e2": 4500, // 12/70 AP-20 armor-piercing slug
+      "5d6e68a8a4b9360b6c0d54e2": 1250, // 12/70 AP-20 armor-piercing slug
       "5d6e69b9a4b9361bc8618958": 95,   // 20/70 6.2mm buckshot
       "5d6e6a5fa4b93614ec501745": 250,  // 20/70 Devastator slug
       "5d6e6a05a4b93618084f58d0": 120,  // 20/70 Star slug

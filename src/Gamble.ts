@@ -209,7 +209,7 @@ export class Gamble {
                     //push magazines and ammo
                     const caliber = this.mysteryContainer.items['ammo'].BSGCalibers[currentCaliber];
                     if (caliber != '20x70' && caliber != '23x75' && caliber != '12/70' && caliber != '.357' && !badMagazines.includes(currentMagazine)) {
-                        console.log('caliber: ' + caliber + ' magazine: ' + currentMagazine)
+                        //console.log('caliber: ' + caliber + ' magazine: ' + currentMagazine)
                         this.openReward(caliber, roll, currentMagazine, false, 1);
                         this.openReward(caliber, roll, currentMagazine, false, 1);
                     }
