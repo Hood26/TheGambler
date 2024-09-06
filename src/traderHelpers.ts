@@ -79,7 +79,8 @@ export class TraderHelper
             base: jsonUtil.deserialize(jsonUtil.serialize(traderDetailsToAdd)) as ITraderBase, // Deserialise/serialise creates a copy of the json and allows us to cast it as an ITraderBase
             questassort: {
                 started: {},
-                success: {
+                success: {},
+                /*success: {
                     "66b15c72b10189169400fb52": "gambler_intro",
                     "66b59e1cfcf263f4d70af422": "gambler_ammo_part_1",
                     "66b59e1cfcf263f4d70af432": "gambler_ammo_part_2",
@@ -99,6 +100,7 @@ export class TraderHelper
                     "66b59e1cfcf263f4d70af42c": "gambler_ammo_part_16",
                     "66b59e1cfcf263f4d70af42e": "gambler_ammo_part_17"
                 },
+                */
                 fail: {}
             } // questassort is empty as trader has no assorts unlocked by quests
         };
@@ -133,8 +135,8 @@ export class TraderHelper
         const vfs = container.resolve<VFS>("VFS")
         const config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
         const MEDICAL_GAMBLE_ID = "zz_medical_gamble";
-        const BITCOIN_GAMBLE_ID = "aa_bitcoin_gamble";
-        const GPCOIN_GAMBLE_ID = "aa_gpcoin_gamble";
+        const BITCOIN_GAMBLE_ID = "bg_bitcoin_gamble"; // new aa_bitcoin_gamble
+        const GPCOIN_GAMBLE_ID = "bh_gpcoin_gamble";   // new aa_gpcoin_gamble
         const BITCOIN_ID = '59faff1d86f7746c51718c9c';
         const GPCOIN_ID = '5d235b4d86f7742e017bc88a';
         const MEDICAL_TOOLS_MEDS_ID = '619cc01e0a7c3a1a2731940c';
@@ -205,7 +207,7 @@ export class TraderHelper
                                 .export(tables.traders[baseJson._id]);
         */
 
-
+/*
         assortCreator.createSingleAssortItem(pake_white_chips)
                                 .addStackCount(999)
                                 .addMoneyCost(red_chip, 1)
@@ -250,6 +252,7 @@ export class TraderHelper
                                 .addMoneyCost(blue_chip, 2)
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
+*/
                                 
                                 /*
         assortCreator.createSingleAssortItem(green_chip)
@@ -317,7 +320,7 @@ export class TraderHelper
         if (config.container_config['gpcoin_enable']){
             assortCreator.createSingleAssortItem(GPCOIN_GAMBLE_ID)
                                     .addStackCount(config.container_config.gpcoin_unlimited_stock ? 999999 : config.container_config.gpcoin_stock, config.container_config.gpcoin_unlimited_stock)
-                                    .addBarterCost(GPCOIN_ID, 1)
+                                    .addBarterCost(GPCOIN_ID, 50)
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
         }             

@@ -170,7 +170,7 @@
     "sealed_manual_pricing": true,
     "sealed_price": 350000,
     "sealed_unlimited_stock": false,
-    "sealed_stock": 1,
+    "sealed_stock": 999,
     "sealed_rewards_found_in_raid_status": true,
 
     // Backpack Mystery Bag
@@ -208,148 +208,148 @@
     "7.62x25_enable": true,
     "7.62x25_manual_pricing": false,
     "7.62x25_price": 6000,
-    "7.62x25_unlimited_stock": true,
-    "7.62x25_stock": 999,
+    "7.62x25_unlimited_stock": false,
+    "7.62x25_stock": 6,
 
     // Mystery 9x18
     "9x18_enable": true,
     "9x18_manual_pricing": false,
     "9x18_price": 6000,
-    "9x18_unlimited_stock": true,
-    "9x18_stock": 999,
+    "9x18_unlimited_stock": false,
+    "9x18_stock": 8,
 
     // Mystery 9x19
     "9x19_enable": true,
     "9x19_manual_pricing": false,
     "9x19_price": 9000,
-    "9x19_unlimited_stock": true,
-    "9x19_stock": 999,
+    "9x19_unlimited_stock": false,
+    "9x19_stock": 8,
 
     // Mystery 9x21
     "9x21_enable": true,
     "9x21_manual_pricing": false,
     "9x21_price": 10000,
-    "9x21_unlimited_stock": true,
-    "9x21_stock": 999,
+    "9x21_unlimited_stock": false,
+    "9x21_stock": 8,
 
     // Mystery .357
     ".357_enable": true,
     ".357_manual_pricing": false,
     ".357_price": 5000,
-    ".357_unlimited_stock": true,
-    ".357_stock": 999,
+    ".357_unlimited_stock": false,
+    ".357_stock": 8,
 
     // Mystery .45_ACP
     ".45_enable": true,
     ".45_manual_pricing": false,
     ".45_price": 8000,
-    ".45_unlimited_stock": true,
-    ".45_stock": 999,
+    ".45_unlimited_stock": false,
+    ".45_stock": 8,
 
     // Mystery 4.6x30
     "4.6x30_enable": true,
     "4.6x30_manual_pricing": false,
     "4.6x30_price": 9000,
-    "4.6x30_unlimited_stock": true,
-    "4.6x30_stock": 999,
+    "4.6x30_unlimited_stock": false,
+    "4.6x30_stock": 6,
 
     // Mystery 5.7x28
     "5.7x28_enable": true,
     "5.7x28_manual_pricing": false,
     "5.7x28_price": 10000,
-    "5.7x28_unlimited_stock": true,
-    "5.7x28_stock": 999,
+    "5.7x28_unlimited_stock": false,
+    "5.7x28_stock": 6,
 
     // Mystery 5.45x39
     "5.45x39_enable": true,
     "5.45x39_manual_pricing": false,
     "5.45x39_price": 10500,
-    "5.45x39_unlimited_stock": true,
-    "5.45x39_stock": 999,
+    "5.45x39_unlimited_stock": false,
+    "5.45x39_stock": 6,
 
     // Mystery 5.56x45
     "5.56x45_enable": true,
     "5.56x45_manual_pricing": false,
     "5.56x45_price": 15000,
-    "5.56x45_unlimited_stock": true,
-    "5.56x45_stock": 999,
+    "5.56x45_unlimited_stock": false,
+    "5.56x45_stock": 6,
 
     // Mystery .300_Blackout
     ".300_enable": true,
     ".300_manual_pricing": false,
     ".300_price": 14000,
-    ".300_unlimited_stock": true,
-    ".300_stock": 999,
+    ".300_unlimited_stock": false,
+    ".300_stock": 6,
 
     // Mystery 7.62x39
     "7.62x39_enable": true,
     "7.62x39_manual_pricing": false,
     "7.62x39_price": 15000,
-    "7.62x39_unlimited_stock": true,
-    "7.62x39_stock": 999,
+    "7.62x39_unlimited_stock": false,
+    "7.62x39_stock": 6,
 
     // Mystery 7.62x51
     "7.62x51_enable": true,
     "7.62x51_manual_pricing": false,
     "7.62x51_price": 16000,
-    "7.62x51_unlimited_stock": true,
-    "7.62x51_stock": 999,
+    "7.62x51_unlimited_stock": false,
+    "7.62x51_stock": 6,
 
     // Mystery 7.62x54
     "7.62x54_enable": true,
     "7.62x54_manual_pricing": false,
     "7.62x54_price": 19000,
-    "7.62x54_unlimited_stock": true,
-    "7.62x54_stock": 999,
+    "7.62x54_unlimited_stock": false,
+    "7.62x54_stock": 6,
 
     // Mystery 9x39
     ".338_enable": true,
     ".338_manual_pricing": false,
     ".338_price": 50000,
-    ".338_unlimited_stock": true,
-    ".338_stock": 999,
+    ".338_unlimited_stock": false,
+    ".338_stock": 4,
 
     // Mystery 9x39
     "9x39_enable": true,
     "9x39_manual_pricing": false,
     "9x39_price": 13000,
-    "9x39_unlimited_stock": true,
-    "9x39_stock": 999,
+    "9x39_unlimited_stock": false,
+    "9x39_stock": 6,
 
     // Mystery .366
     ".366_enable": true,
     ".366_manual_pricing": false,
     ".366_price": 6000,
-    ".366_unlimited_stock": true,
-    ".366_stock": 999,
+    ".366_unlimited_stock": false,
+    ".366_stock": 6,
 
     // Mystery 12.7x55
     "12.7x55_enable": true,
     "12.7x55_manual_pricing": false,
     "12.7x55_price": 16000,
-    "12.7x55_unlimited_stock": true,
-    "12.7x55_stock": 999,
+    "12.7x55_unlimited_stock": false,
+    "12.7x55_stock": 6,
 
     // Mystery 12/70
     "12/70_enable": true,
     "12/70_manual_pricing": false,
     "12/70_price": 6000,
-    "12/70_unlimited_stock": true,
-    "12/70_stock": 999,
+    "12/70_unlimited_stock": false,
+    "12/70_stock": 6,
 
     // Mystery 20/70
     "20/70_enable": true,
     "20/70_manual_pricing": false,
     "20/70_price": 6000,
-    "20/70_unlimited_stock": true,
-    "20/70_stock": 999,
+    "20/70_unlimited_stock": false,
+    "20/70_stock": 6,
 
     // Mystery 23x75
     "23x75_enable": true,
     "23x75_manual_pricing": false,
     "23x75_price": 7000,
-    "23x75_unlimited_stock": true,
-    "23x75_stock": 999
+    "23x75_unlimited_stock": false,
+    "23x75_stock": 4
   },
 
   // GAMBLING ODDS SECTION
@@ -564,7 +564,7 @@
     "premium_armor_rare": 100.0,           // Rare Armor
     "premium_armor_profit_percentage": 1.03, // Container Profitability
 
-    // Mystery 7.62x25
+    // Mystery 7.62x25 NOT SOLD BY TRADER CURRENTLY, ONLY USED FOR LOADOUT AMMO GENERATION
     "7.62x25_common": 45.0,          // Common Round 7.62x25
     "7.62x25_uncommon": 35.0,        // Uncommon Round 7.62x25
     "7.62x25_rare": 20.0,            // Rare Round 7.62x25
@@ -578,7 +578,7 @@
     "9x18_rare": 20.0,              // Rare Round 9x18mm
     "9x18_min": 15,                  // Minimum Rounds Generated
     "9x18_max": 30,                 // Maximum Rounds Generated
-    "9x18_profit_percentage": 1.25,  // Container Profitability
+    "9x18_profit_percentage": 1.00,  // Container Profitability
     
     // Mystery 9x19
     "9x19_common": 45.0,            // Common Round 9x19
@@ -586,7 +586,7 @@
     "9x19_rare": 20.0,              // Rare Round 9x19
     "9x19_min": 15,                  // Minimum Rounds Generated
     "9x19_max": 30,                 // Maximum Rounds Generated
-    "9x19_profit_percentage": 1.00,  // Container Profitability
+    "9x19_profit_percentage": 0.74,  // Container Profitability
 
     // Mystery 9x21
     "9x21_common": 45.0,            // Common Round 9x21
@@ -594,7 +594,7 @@
     "9x21_rare": 20.0,              // Rare Round 9x21
     "9x21_min": 15,                  // Minimum Rounds Generated
     "9x21_max": 30,                 // Maximum Rounds Generated
-    "9x21_profit_percentage": 0.93,  // Container Profitability
+    "9x21_profit_percentage": 0.78,  // Container Profitability
 
     // Mystery .357
     ".357_common": 45.0,            // Common Round .357
@@ -602,7 +602,7 @@
     ".357_rare": 20.0,              // Rare Round .357
     ".357_min": 3,                  // Minimum Rounds Generated
     ".357_max": 10,                 // Maximum Rounds Generated
-    ".357_profit_percentage": 3.7,  // Container Profitability
+    ".357_profit_percentage": 2.0,  // Container Profitability
 
     // Mystery .45_ACP
     ".45_common": 45.0,             // Common Round .45
@@ -610,7 +610,7 @@
     ".45_rare": 20.0,               // Rare Round .45
     ".45_min": 15,                   // Minimum Rounds Generated
     ".45_max": 30,                  // Maximum Rounds Generated
-    ".45_profit_percentage": 1.00,   // Container Profitability
+    ".45_profit_percentage": 0.75,   // Container Profitability
 
     // Mystery 4.6x30
     "4.6x30_common": 45.0,          // Common Round 4.6x30
@@ -618,7 +618,7 @@
     "4.6x30_rare": 20.0,            // Rare Round 4.6x30
     "4.6x30_min": 15,                // Minimum Rounds Generated
     "4.6x30_max": 30,               // Maximum Rounds Generated
-    "4.6x30_profit_percentage": 1.00,// Container Profitability
+    "4.6x30_profit_percentage": 0.82,// Container Profitability
 
     // Mystery 5.7x28
     "5.7x28_common": 45.0,           // Common Round 5.7x28
@@ -626,7 +626,7 @@
     "5.7x28_rare": 20.0,             // Rare Round 5.7x28
     "5.7x28_min": 15,                 // Minimum Rounds Generated
     "5.7x28_max": 30,                // Maximum Rounds Generated
-    "5.7x28_profit_percentage": 1.00, // Container Profitability
+    "5.7x28_profit_percentage": 0.82, // Container Profitability
 
     // Mystery 5.45x39
     "5.45x39_common": 45.0,          // Common Round 5.45x39
@@ -634,7 +634,7 @@
     "5.45x39_rare": 20.0,            // Rare Round 5.45x39
     "5.45x39_min": 15,                // Minimum Rounds Generated
     "5.45x39_max": 30,               // Maximum Rounds Generated
-    "5.45x39_profit_percentage": 1.00,// Container Profitability
+    "5.45x39_profit_percentage": 0.75,// Container Profitability
 
     // Mystery 5.56x45
     "5.56x45_common": 45.0,          // Common Round 5.56x45
@@ -642,7 +642,7 @@
     "5.56x45_rare": 20.0,            // Rare Round 5.56x45
     "5.56x45_min": 15,                // Minimum Rounds Generated
     "5.56x45_max": 30,               // Maximum Rounds Generated
-    "5.56x45_profit_percentage": 1.00,// Container Profitability
+    "5.56x45_profit_percentage": 0.76,// Container Profitability
 
     // Mystery .300_Blackout
     ".300_common": 45.0,             // Common Round .300
@@ -650,7 +650,15 @@
     ".300_rare": 20.0,               // Rare Round .300
     ".300_min": 15,                   // Minimum Rounds Generated
     ".300_max": 30,                  // Maximum Rounds Generated
-    ".300_profit_percentage": 1.00,   // Container Profitability
+    ".300_profit_percentage": 0.80,   // Container Profitability
+
+    // Mystery 6.8x51 NOT SOLD BY TRADER CURRENTLY, ONLY USED FOR LOADOUT AMMO GENERATION
+    "6.8x51_common": 45.0,             // Common Round 6.8x51
+    "6.8x51_uncommon": 25.0,           // Uncommon Round 6.8x51
+    "6.8x51_rare": 30.0,               // Rare Round 6.8x51
+    "6.8x51_min": 15,                   // Minimum Rounds Generated
+    "6.8x51_max": 30,                  // Maximum Rounds Generated
+    "6.8x51_profit_percentage": 0.90,   // Container Profitability
 
     // Mystery 7.62x39
     "7.62x39_common": 45.0,          // Common Round 7.62x39
@@ -658,7 +666,7 @@
     "7.62x39_rare": 20.0,            // Rare Round 7.62x39
     "7.62x39_min": 15,                // Minimum Rounds Generated
     "7.62x39_max": 30,               // Maximum Rounds Generated
-    "7.62x39_profit_percentage": 1.00,// Container Profitability
+    "7.62x39_profit_percentage": 0.54,// Container Profitability
 
     // Mystery 7.62x51
     "7.62x51_common": 45.0,          // Common Round 7.62x51
@@ -666,7 +674,7 @@
     "7.62x51_rare": 20.0,            // Rare Round 7.62x51
     "7.62x51_min": 15,                // Minimum Rounds Generated
     "7.62x51_max": 25,               // Maximum Rounds Generated
-    "7.62x51_profit_percentage": 1.00,// Container Profitability
+    "7.62x51_profit_percentage": 0.82,// Container Profitability
 
     // Mystery 7.62x54
     "7.62x54_common": 45.0,          // Common Round 7.62x54
@@ -674,7 +682,7 @@
     "7.62x54_rare": 20.0,            // Rare Round 7.62x54
     "7.62x54_min": 15,                // Minimum Rounds Generated
     "7.62x54_max": 25,               // Maximum Rounds Generated
-    "7.62x54_profit_percentage": 1.00,// Container Profitability
+    "7.62x54_profit_percentage": 0.56,// Container Profitability
 
     // Mystery .338
     ".338_common": 62.5,             // Common Round .338
@@ -682,7 +690,7 @@
     ".338_rare": 12.5,               // Rare Round .338
     ".338_min": 5,                   // Minimum Rounds Generated
     ".338_max": 10,                  // Maximum Rounds Generated
-    ".338_profit_percentage": 1.05,   // Container Profitability
+    ".338_profit_percentage": 0.75,   // Container Profitability
 
     // Mystery 9x39
     "9x39_common": 45.0,             // Common Round 9x39
@@ -690,7 +698,7 @@
     "9x39_rare": 20.0,               // Rare Round 9x39
     "9x39_min": 15,                   // Minimum Rounds Generated
     "9x39_max": 30,                  // Maximum Rounds Generated
-    "9x39_profit_percentage": 1.00,   // Container Profitability
+    "9x39_profit_percentage": 0.83,   // Container Profitability
 
     // Mystery .366
     ".366_common": 45.0,             // Common Round .366
@@ -698,7 +706,7 @@
     ".366_rare": 20.0,               // Rare Round .366
     ".366_min": 15,                   // Minimum Rounds Generated
     ".366_max": 30,                  // Maximum Rounds Generated
-    ".366_profit_percentage": 1.00,    // Container Profitability
+    ".366_profit_percentage": 0.94,    // Container Profitability
 
     // Mystery 12.7x55
     "12.7x55_common": 45.0,          // Common Round 12.7x55
@@ -706,7 +714,7 @@
     "12.7x55_rare": 20.0,            // Rare Round 12.7x55
     "12.7x55_min": 15,                // Minimum Rounds Generated
     "12.7x55_max": 25,               // Maximum Rounds Generated
-    "12.7x55_profit_percentage": 0.97,// Container Profitability
+    "12.7x55_profit_percentage": 0.50,// Container Profitability
 
     // Mystery 12/70
     "12/70_common": 45.0,            // Common Round 12/70
@@ -714,7 +722,7 @@
     "12/70_rare": 20.0,              // Rare Round 12/70
     "12/70_min": 5,                  // Minimum Rounds Generated
     "12/70_max": 10,                 // Maximum Rounds Generated
-    "12/70_profit_percentage": 0.95,  // Container Profitability
+    "12/70_profit_percentage": 0.85,  // Container Profitability
 
     // Mystery 20/70
     "20/70_common": 45.0,            // Common Round 20/70
@@ -722,7 +730,7 @@
     "20/70_rare": 20.0,              // Rare Round 20/70
     "20/70_min": 5,                  // Minimum Rounds Generated
     "20/70_max": 10,                 // Maximum Rounds Generated
-    "20/70_profit_percentage": 10.0, // Container Profitability (Rounds are extremely cheap in general)
+    "20/70_profit_percentage": 7.0, // Container Profitability (Rounds are extremely cheap in general)
 
     // Mystery 23x75
     "23x75_common": 45.0,            // Common Round 23x75

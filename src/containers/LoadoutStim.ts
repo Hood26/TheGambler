@@ -36,7 +36,11 @@ export class LoadoutStim {
     [
       'NaN', // None
       'NaN', // None
+      'NaN', // None
+      '5c0e530286f7747fa1419862', // Propital regenerative stimulant injector
       '5c10c8fd86f7743d7d706df3', // Adrenaline injector
+      '5c10c8fd86f7743d7d706df3', // Adrenaline injector
+      '544fb3f34bdc2d03748b456a' // Morphine injector
       '544fb3f34bdc2d03748b456a' // Morphine injector
     ],
   ]

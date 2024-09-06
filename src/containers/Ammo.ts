@@ -15,6 +15,7 @@ export class Ammo {
         '5.45x39',
         '5.56x45',
         '.300',
+        '6.8x51',
         '7.62x39',
         '7.62x51',
         '7.62x54',
@@ -38,7 +39,8 @@ export class Ammo {
         'Caliber57x28':       '5.7x28', 
         'Caliber545x39':      '5.45x39', 
         'Caliber556x45NATO':  '5.56x45', 
-        'Caliber762x35':      '.300', 
+        'Caliber762x35':      '.300',
+        'Caliber68x51':       '6.8x51', 
         'Caliber762x39':      '7.62x39', 
         'Caliber762x51':      '7.62x51', 
         'Caliber762x54R':     '7.62x54', 
@@ -208,14 +210,14 @@ export class Ammo {
               ],
             rewards: [
                 [
-                    "5ba2678ad4351e44f824b344", // 4.6x30mm FMJ SX
                     "5ba26835d4351e0035628ff5", // 4.6x30mm AP SX
                 ],
                 [
-                    "5ba26844d4351e00334c9475", // 4.6x30mm Subsonic SX
+                    "5ba2678ad4351e44f824b344", // 4.6x30mm FMJ SX
                     "64b6979341772715af0f9c39", // 4.6x30mm JSP SX 
                 ],
                 [
+                    "5ba26844d4351e00334c9475", // 4.6x30mm Subsonic SX
                     "5ba26812d4351e003201fef1", // 4.6x30mm Action SX
                 ],
             ]
@@ -322,6 +324,25 @@ export class Ammo {
                 ],
             ]
         },
+        "6.8x51": {
+            parent: "ammo",
+            rarities: [
+                "_rare", 
+                "_uncommon", 
+                "_common"
+              ],
+            rewards: [
+                [
+                    "6529243824cbe3c74a05e5c1", // 6.8x51mm SIG Hybrid
+                ],
+                [
+                    "6529302b8c26af6326029fb7", // 6.8x51mm SIG FMJ
+                ],
+                [
+                    "6529302b8c26af6326029fb7", // 6.8x51mm SIG FMJ
+                ],
+            ]
+        },
         "7.62x39": {
             parent: "ammo",
             rarities: [
@@ -336,6 +357,7 @@ export class Ammo {
                 ],
                 [
                     "5656d7c34bdc2d9d198b4587", // 7.62x39mm PS gzh
+                    "64b7af434b75259c590fa893", // 7.62x39mm PP gzh
                     "64b7af434b75259c590fa893", // 7.62x39mm PP gzh
                 ],
                 [

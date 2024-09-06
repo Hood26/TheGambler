@@ -47,7 +47,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
     public config: any;
 
     constructor() {
-        this.mod = "TheGambler";
+        this.mod = "GamblerTrader";
     }
 
     /**
@@ -73,7 +73,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         this.hashUtil = hashUtil;
         this.traderHelper = new TraderHelper();
         this.fluentAssortCreator = new FluentAssortCreator(hashUtil, this.logger);
-        this.traderHelper.registerProfileImage(baseJson, this.mod, preSptModLoader, imageRouter, "thegambler.jpg");
+        this.traderHelper.registerProfileImage(baseJson, 'zGamblerTrader', preSptModLoader, imageRouter, "thegambler.jpg");
         this.traderHelper.setTraderUpdateTime(traderConfig, baseJson, this.config.trader_update_min_time, this.config.trader_update_max_time);
 
         // Add trader to trader enum
@@ -170,7 +170,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         const openedItem = pmcData.Inventory.items.find(x => x._id === body.item);
 
         if (itemHelper.getItem(openedItem._tpl) == undefined){
-            this.logger.error("[TheGambler] Cannot find unboxed mystery container in Inventory... Best option is to restart game.. I am not fully sure why this happens...")
+            this.logger.error("[GamblerTrader] Cannot find unboxed mystery container in Inventory... Best option is to restart game.. I am not fully sure why this happens...")
             const output = eventOutputHolder.getOutput(sessionID);
             return output;
         }
@@ -195,6 +195,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             // This id is bugged and we have to delete it or bad shit will happen. Looks like SPT base bug?
             delete(containerSettings.weaponRewardWeight['5e848cc2988a8701445df1e8']) 
             newItemsRequest.itemsWithModsToAdd.push(...lootGenerator.getSealedWeaponCaseLoot(containerSettings));
+            console.log(newItemsRequest.itemsWithModsToAdd)
             newItemsRequest.foundInRaid = containerSettings.foundInRaid;
 
         } else if (isGamblingContainer){
@@ -228,7 +229,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
                 inventoryHelper.addItemsToStash(sessionID, newItemsRequest, pmcData, output);
             } else {
             // notifierHelper.createNewMessageNotification(message); // Notifier Not Working
-            this.logger.error(`[${this.mod}] Cannot Open Container, Inventory Is Full!`);
+            this.logger.error(`[${this.mod}] Cannot Open Container! Inventory Is Full!`);
             }
         } else {
             // Container returned nothing...

@@ -4,8 +4,8 @@ export class FlipGPCoin {
   public rarities = [
     "_success", 
   ]
-  public stackable = [false]
-  public reward_amount = [2]
+  public stackable = [true]
+  public reward_amount = [100]
   public rewards = [
     [
       '5d235b4d86f7742e017bc88a', // GP Coin

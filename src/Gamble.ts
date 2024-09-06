@@ -90,6 +90,7 @@ export class Gamble {
             case '5.45x39':
             case '5.56x45':
             case '.300':
+            case '6.8x51':
             case '7.62x39':
             case '7.62x51':
             case '7.62x54':
@@ -113,7 +114,7 @@ export class Gamble {
                 this.openLoadoutContainer(name);
                 break;
             default:
-                this.logger.error(`[TheGambler] This Mystery Container Doesn't exist! Contact Author!`);    
+                this.logger.error(`[GamblerTrader] This Mystery Container Doesn't exist! Contact Author!`);    
         }
 
         if (this.mysteryContainer.isAmmo(this.name)) {
@@ -126,18 +127,17 @@ export class Gamble {
 
     // Opens all rewards from the loadout container
     private openLoadoutContainer(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){  // 74.3 - 82 is meme // 82 MAX
-        this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
+        this.logger.info(`[GamblerTrader][${name}] The container roll is: ${roll}!`);
         const rewards = this.mysteryContainer.getGuaranteedRewards(name);
         const randomness = this.mysteryContainer.getGuaranteedRandomness(name);
-        let curerntID: string;
         let currentCaliber: string, currentMagazine: string, currentMagazineMaxAmmo: number, currentWeaponType : string;
 
         if (roll > 90) { // _scav
             roll = this.randomUtil.getFloat(44.3, 74.3);
-            roll = 65;
+            //roll = 65;
         } else if (roll > 82) { // _decent
             roll = this.randomUtil.getFloat(19.3, 44.3);
-            roll = 38;
+            //roll = 38;
         }
 
         for(let i = 0; i < rewards.length; i++) {
@@ -175,6 +175,12 @@ export class Gamble {
                         i++; // Skip the headset reward
                     }
                 }
+                if (current === 'headset'){
+                    if (this.currentID == '5c06c6a80db834001b735491') {
+                        this.openReward('headset', roll, '5c06c6a80db834001b735491', false, 1);
+                        continue;
+                    }
+                }
 
                 if (current === 'armor'){
                     const currentID = this.currentID;
@@ -187,7 +193,7 @@ export class Gamble {
                     }
                 }
 
-                if(current === 'weapon' || current === 'premium_weapon') { // Ammo and Magazine generation
+                if(current === 'weapon') { // Ammo and Magazine generation
                     currentCaliber = this.currentCaliber;
                     currentMagazine = this.currentMagazine;
                     currentMagazineMaxAmmo = this.currentMagazineMaxAmmo
@@ -196,14 +202,16 @@ export class Gamble {
 
                     const badMagazines = [
                         '633ec6ee025b096d320a3b15', // RSh-12 12.7x55 5-round cylinder
-                        '5ae0973a5acfc4001562206c'  // Mosin Rifle 7.62x54R 5-round magazine
+                        '5ae0973a5acfc4001562206c',  // Mosin Rifle 7.62x54R 5-round magazine
+                        '587df3a12459772c28142567'  // SKS 7.62x39 10-round internal box magazine
                     ]
 
                     //push magazines and ammo
                     const caliber = this.mysteryContainer.items['ammo'].BSGCalibers[currentCaliber];
                     if (caliber != '20x70' && caliber != '23x75' && caliber != '12/70' && caliber != '.357' && !badMagazines.includes(currentMagazine)) {
-                        this.openReward(caliber, roll, this.currentMagazine, false, 1);
-                        this.openReward(caliber, roll, this.currentMagazine, false, 1);
+                        console.log('caliber: ' + caliber + ' magazine: ' + currentMagazine)
+                        this.openReward(caliber, roll, currentMagazine, false, 1);
+                        this.openReward(caliber, roll, currentMagazine, false, 1);
                     }
 
                     let tempRoll: number;
@@ -229,10 +237,20 @@ export class Gamble {
                             break;
                     }
 
+                    if (caliber == '20x70' || caliber == '23x75' || caliber == '12/70') {
+                        currentMagazineMaxAmmo = 10;
+                    }
+
+                    let ammoID: string;
+                    tempRoll = this.randomUtil.getFloat(min, max); // random roll for each ammo reward
                     for(let i = 0; i < magazineCount; i++){
                         
-                        tempRoll = this.randomUtil.getFloat(min, max); // random roll for each ammo reward
-                        this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                        if (!ammoID) {
+                            this.openReward(caliber, tempRoll, 'NaN', true, currentMagazineMaxAmmo);
+                            ammoID = this.currentID;
+                        } else {
+                            this.openReward(caliber, tempRoll, ammoID, true, currentMagazineMaxAmmo);
+                        }
                     }
                 }
 
@@ -257,7 +275,7 @@ export class Gamble {
     }
 
     private openReward(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100), id: string = 'NaN', stackable: boolean = false, reward_amount: number = undefined) { 
-        this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
+        this.logger.info(`[GamblerTrader][${name}] The container roll is: ${roll}!`);
         const odds: Array<number> = this.mysteryContainer.getOdds(name);
         let guaranteed_rewards = this.mysteryContainer.getGuaranteedRewards(name);
         let reward_rolls: Array<number> = this.mysteryContainer.getRewardRolls(name);
@@ -270,7 +288,7 @@ export class Gamble {
             }
             */
 
-        // If the ID is NaN, we need to generate a random item with a determined amound of rolls for each rarity (i.e. Medical container)
+        // If there is no defined ID, we need to generate a random item with a determined amound of rolls for each rarity (i.e. Medical container)
         if (id === "NaN" && reward_rolls) {
             const rewards = this.mysteryContainer.getRewards(name);
             for(let i = 0; i < rewards.length; i++) {
@@ -286,7 +304,7 @@ export class Gamble {
             }
         }
 
-        // If the ID is NaN, we need to generate random reward(s) based off property (rolls)
+        // If there is no defined ID, we need to generate random reward(s) based off property (rolls)
         if (id === "NaN" && !reward_rolls) {
             for(let i = 0; i < odds.length; i++) {
                 if(roll <= odds[i]) {
@@ -306,7 +324,7 @@ export class Gamble {
     
         
         if(this.config.debug) {
-            this.logger.info("[TheGambler] Weapon Mystery Box Information...");
+            this.logger.info("[GamblerTrader] Weapon Mystery Box Information...");
             this.logger.info(id);
         }
 
@@ -325,12 +343,12 @@ export class Gamble {
             }
     
         } else {
-            this.logger.info(`[TheGambler][${name}] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[GamblerTrader][${name}] Case Opened... Received Nothing... Better luck next time :)`);
         }
     }
 
     private openPreset(name: string = this.name, roll: number = this.randomUtil.getFloat(0,100)){
-        this.logger.info(`[TheGambler][${name}] The container roll is: ${roll}!`);
+        this.logger.info(`[GamblerTrader][${name}] The container roll is: ${roll}!`);
         //console.log('\nopenPreset()');
         // ItemCreator stores all preset creation functions
         let item = new ItemCreator(this.container);
@@ -358,7 +376,7 @@ export class Gamble {
         }
 
         if(this.config.debug) {
-            this.logger.info("[TheGambler] Weapon Mystery Box Information...");
+            this.logger.info("[GamblerTrader] Weapon Mystery Box Information...");
             this.logger.info(preset);
         }
 
@@ -367,7 +385,7 @@ export class Gamble {
             this.count++;
 
         } else {
-            this.logger.info(`[TheGambler][Weapon] Case Opened... Received Nothing... Better luck next time :)`);
+            this.logger.info(`[GamblerTrader][Weapon] Case Opened... Received Nothing... Better luck next time :)`);
         }
 
     }
