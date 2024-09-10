@@ -52,7 +52,7 @@
     // Mystery Key
     "key_enable": true,
     "key_manual_pricing": false,
-    "key_price": 47500,
+    "key_price": 250000,
     "key_unlimited_stock": true,
     "key_stock": 15,
     "key_rewards_found_in_raid_status": true,
@@ -367,7 +367,7 @@
   //     Odds Definitions:
   //       - container_profit_percentage:
   //         - This is how profitable the mystery container will be, and is used as a calculation by the Automatic Price Balancer when determining the mystery container price.
-  //           - The higher the percentage, the more expensive and less profitable the container will be, and vice versa.
+  //           - The higher the percentage, the more expensive and less profitable the container will be, and vice versa. setting it to 1.0 will make the container in theory average out to 0% profit or break even. This however does not account for the flea market fee. So in reality, around 0.98-0.96 is the break even point.
   //
   //       - container_extremely_rare / container_rare / container_uncommon / container_common / container_extra_common / container_base:
   //         - Theses are the odds for each rarity of a mystery container, increasing or decreasing odds will alter the mystery container price generation and the the chances at recieving a reward of that rarity.
@@ -403,12 +403,12 @@
     "keycard_blue": 0.4,          // Blue Keycard
     "keycard_violet": 0.8,       // Violet Keycard
     "keycard_black": 2.0,         // Black Keycard
-    "keycard_yellow": 4.0,        // Yellow Keycard
-    "keycard_blue_marking": 5.75, // Keycard with blue marking
+    "keycard_yellow": 3.0,        // Yellow Keycard
+    "keycard_blue_marking": 4.0, // Keycard with blue marking
     "keycard_21WS": 8.0,          // 21WS Keycard
     "keycard_11SR": 8.0,          // 11SR Keycard
-    "keycard_access": 70.75,       // Access Keycard
-    "keycard_profit_percentage": 0.92, // Container Profitability
+    "keycard_access": 40.0,       // Access Keycard
+    "keycard_profit_percentage": 0.94, // Container Profitability
 
     
     // Mystery Key

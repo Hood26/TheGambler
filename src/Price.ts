@@ -56,7 +56,7 @@ export class Price{
                 currentPrices = this.getMysteryContainerPrices(name, parent, rarities, items);
             }
 
-            currentContainerPrice = this.runPriceGeneration(odds, currentPrices, this.MysteryContainer.getProfitPercentage(name));
+            currentContainerPrice = this.runPriceGeneration(name, odds, currentPrices, this.MysteryContainer.getProfitPercentage(name));
             containerPrices[name + "_price"] = currentContainerPrice;
         }
 
@@ -236,12 +236,13 @@ export class Price{
     /**
      * Calculates the most optimal mystery container price based on the given odds, prices, and desired profitability.
      * 
+     * @param name - name of the mystery container
      * @param odds - An array of numbers representing the odds.
      * @param prices - An array of numbers representing the prices.
      * @param profitability - A number representing the profitability.
      * @returns The calculated price generation.
      */
-    private runPriceGeneration = (odds: Array<number>, prices: Array<number>, profitability: number) => {
+    private runPriceGeneration = (name: string, odds: Array<number>, prices: Array<number>, profitability: number) => {
         let sum: number = 0;
         let trackOdds = 0;
 

@@ -51,13 +51,32 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
     }
 
     /**
-     * Some work needs to be done prior to SPT code being loaded, registering the profile image + setting trader update time inside the trader config json
+     * I'm just here so I won't get fined.
      * @param container Dependency container
      */
     public preSptLoad(container: DependencyContainer): void {
-        // Get a logger
         this.logger = container.resolve<ILogger>("WinstonLogger");
-        this.logger.debug(`[${this.mod}] preAki Loading... `);
+
+        // openRandomLootContainer override in InventoryController. Adds gambler mystery boxes.
+        container.afterResolution("InventoryController", (_t, result: InventoryController) => 
+            {
+                result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string) =>
+                {
+                    return this.newOpenRandomLoot(container, pmcData, body, sessionID);
+                }
+            });
+
+        this.logger.debug(`[${this.mod}] preAki Loaded`);
+    }
+    
+    /**
+     * I'm just 'bout that gambler action boss.
+     * @param container Dependency container
+     */
+    public postDBLoad(container: DependencyContainer): void {
+
+        // Get a logger
+        this.logger.debug(`[${this.mod}] postDb Loading... `);
 
         // Get SPT code/data we need later
         const preSptModLoader: PreSptModLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
@@ -73,7 +92,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         this.hashUtil = hashUtil;
         this.traderHelper = new TraderHelper();
         this.fluentAssortCreator = new FluentAssortCreator(hashUtil, this.logger);
-        this.traderHelper.registerProfileImage(baseJson, 'zGamblerTrader', preSptModLoader, imageRouter, "thegambler.jpg");
+        this.traderHelper.registerProfileImage(baseJson, 'zzzGamblerTrader', preSptModLoader, imageRouter, "thegambler.jpg");
         this.traderHelper.setTraderUpdateTime(traderConfig, baseJson, this.config.trader_update_min_time, this.config.trader_update_max_time);
 
         // Add trader to trader enum
@@ -81,25 +100,6 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
 
         // Add trader to flea market
         ragfairConfig.traders[baseJson._id] = true;
-
-        // openRandomLootContainer override in InventoryController. Adds gambler mystery boxes.
-        container.afterResolution("InventoryController", (_t, result: InventoryController) => 
-            {
-                result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string) =>
-                {
-                    return this.newOpenRandomLoot(container, pmcData, body, sessionID);
-                }
-            });
-
-        this.logger.debug(`[${this.mod}] preAki Loaded`);
-    }
-    
-    /**
-     * Majority of trader-related work occurs after the aki database has been loaded but prior to SPT code being run
-     * @param container Dependency container
-     */
-    public postDBLoad(container: DependencyContainer): void {
-        this.logger.debug(`[${this.mod}] postDb Loading... `);
 
         // Resolve SPT classes we'll use
         const databaseServer: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
@@ -140,6 +140,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         
         //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution) // Drawer
         // Currently this adds poker chips to many static loot containers on all maps
+        /*
         for (const item of itemCreate.loot){
             for(const map of maps){
                 const mapStaticLoot = tables.locations[map].staticLoot;
@@ -158,6 +159,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
                 }
             }
         }
+        */
         this.logger.debug(`[${this.mod}] postDb Loaded`);
     }
 
