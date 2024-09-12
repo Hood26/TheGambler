@@ -207,7 +207,7 @@ export class ItemCreateHelper {
             newId: "gold_akm_handguard", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b5f75e486f77447ec5d7712",
             locales: {
                 "en": {
                     name: "Gold AKM Handguard",
@@ -229,7 +229,7 @@ export class ItemCreateHelper {
             newId: "gold_akm_foregrip", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b5f71de86f774093f2ecf13",
             locales: {
                 "en": {
                     name: "Gold AKM Foregrip",
@@ -251,7 +251,7 @@ export class ItemCreateHelper {
             newId: "gold_akm_stock", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b5f757486f774093e6cb507",
             locales: {
                 "en": {
                     name: "Gold AKM Stock",
@@ -273,7 +273,7 @@ export class ItemCreateHelper {
             newId: "gold_akm_magazine", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b5f754a86f774094242f19b",
             locales: {
                 "en": {
                     name: "Gold AKM Magazine",
@@ -295,7 +295,7 @@ export class ItemCreateHelper {
             newId: "gold_akm_receiver", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b5f764186f77447ec5d7714",
             locales: {
                 "en": {
                     name: "Gold AKM Receiver",
@@ -317,7 +317,7 @@ export class ItemCreateHelper {
             newId: "gold_akm_rearsight", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b5f746686f77447ec5d7708",
             locales: {
                 "en": {
                     name: "Gold AKM Rear Sight",
@@ -339,7 +339,7 @@ export class ItemCreateHelper {
             newId: "gold_akm_chargehandle", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b5f751486f77447ec5d770c",
             locales: {
                 "en": {
                     name: "Gold AKM Charging Handle",
@@ -361,7 +361,7 @@ export class ItemCreateHelper {
             newId: "gold_akm_silencer", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b5f731a86f774093e6cb4f9",
             locales: {
                 "en": {
                     name: "Gold AKM Silencer",
@@ -383,7 +383,7 @@ export class ItemCreateHelper {
             newId: "gold_akm_pistolgrip", 
             fleaPriceRoubles: 5000,
             handbookPriceRoubles: 5000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b5f761f86f774094242f1a1",
             locales: {
                 "en": {
                     name: "Gold AKM Pistol Grip",
