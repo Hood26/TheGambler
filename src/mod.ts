@@ -140,7 +140,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         
         //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution) // Drawer
         // Currently this adds poker chips to many static loot containers on all maps
-        /*
+        
         for (const item of itemCreate.loot){
             for(const map of maps){
                 const mapStaticLoot = tables.locations[map].staticLoot;
@@ -159,7 +159,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
                 }
             }
         }
-        */
+        
         this.logger.debug(`[${this.mod}] postDb Loaded`);
     }
 
@@ -199,7 +199,9 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             try {
                 newItemsRequest.itemsWithModsToAdd.push(...lootGenerator.getSealedWeaponCaseLoot(containerSettings));
             } catch (e) {
-                console.log(newItemsRequest.itemsWithModsToAdd)
+                console.log(containerSettings);
+                console.log(e);
+                console.log("[GamblerTrader] Unboxing error! Failed to unbox weapon box, please post your server logs to the Gambler Trader mod page comments to receive support!");
             }
             newItemsRequest.foundInRaid = containerSettings.foundInRaid;
 

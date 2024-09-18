@@ -79,8 +79,7 @@ export class TraderHelper
             base: jsonUtil.deserialize(jsonUtil.serialize(traderDetailsToAdd)) as ITraderBase, // Deserialise/serialise creates a copy of the json and allows us to cast it as an ITraderBase
             questassort: {
                 started: {},
-                success: {},
-                /*success: {
+                success: {
                     "66b15c72b10189169400fb52": "gambler_intro",
                     "66b59e1cfcf263f4d70af422": "gambler_ammo_part_1",
                     "66b59e1cfcf263f4d70af432": "gambler_ammo_part_2",
@@ -100,7 +99,6 @@ export class TraderHelper
                     "66b59e1cfcf263f4d70af42c": "gambler_ammo_part_16",
                     "66b59e1cfcf263f4d70af42e": "gambler_ammo_part_17"
                 },
-                */
                 fail: {}
             } // questassort is empty as trader has no assorts unlocked by quests
         };

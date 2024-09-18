@@ -2632,7 +2632,7 @@ export class ItemCreateHelper {
 
         const seven_six_two_by_two_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "aa_7.62x25_gamble",
+                _id: "zzaa_7.62x25_gamble",
                 _name: "gambling_7.62x25",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2739,7 +2739,7 @@ export class ItemCreateHelper {
 
         const nine_by_one_eight_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ab_9x18_gamble",
+                _id: "zzab_9x18_gamble",
                 _name: "gambling_9x18",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2846,7 +2846,7 @@ export class ItemCreateHelper {
 
         const nine_by_one_nine_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ac_9x19_gamble",
+                _id: "zzac_9x19_gamble",
                 _name: "gambling_9x19",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2953,7 +2953,7 @@ export class ItemCreateHelper {
 
         const nine_by_two_one_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ad_9x21_gamble",
+                _id: "zzad_9x21_gamble",
                 _name: "gambling_9x21",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3060,7 +3060,7 @@ export class ItemCreateHelper {
 
         const three_five_seven_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ae_.357_gamble",
+                _id: "zzae_.357_gamble",
                 _name: "gambling_.357",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3167,7 +3167,7 @@ export class ItemCreateHelper {
 
         const four_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "af_.45_gamble",
+                _id: "zzaf_.45_gamble",
                 _name: "gambling_.45",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3274,7 +3274,7 @@ export class ItemCreateHelper {
 
         const four_six_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ag_4.6x30_gamble",
+                _id: "zzag_4.6x30_gamble",
                 _name: "gambling_4.6x30",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3381,7 +3381,7 @@ export class ItemCreateHelper {
 
         const five_seven_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ah_5.7x28_gamble",
+                _id: "zzah_5.7x28_gamble",
                 _name: "gambling_5.7x28",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3488,7 +3488,7 @@ export class ItemCreateHelper {
 
         const five_four_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ai_5.45x39_gamble",
+                _id: "zzai_5.45x39_gamble",
                 _name: "gambling_5.45x39",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3595,7 +3595,7 @@ export class ItemCreateHelper {
 
         const fivefivesix_Gamble: NewItemDetails = {
             newItem: {
-                _id: "aj_5.56x45_gamble",
+                _id: "zzaj_5.56x45_gamble",
                 _name: "gambling_5.56x45",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3702,7 +3702,7 @@ export class ItemCreateHelper {
 
         const blackout_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ak_.300_gamble",
+                _id: "zzak_.300_gamble",
                 _name: "gambling_.300",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3809,7 +3809,7 @@ export class ItemCreateHelper {
 
         const seven_six_two_by_three_nine_Gamble: NewItemDetails = {
             newItem: {
-                _id: "al_7.62x39_gamble",
+                _id: "zzal_7.62x39_gamble",
                 _name: "gambling_7.62x39",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3916,7 +3916,7 @@ export class ItemCreateHelper {
 
         const seven_six_two_by_five_one_Gamble: NewItemDetails = {
             newItem: {
-                _id: "am_7.62x51_gamble",
+                _id: "zzam_7.62x51_gamble",
                 _name: "gambling_7.62x51",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4023,7 +4023,7 @@ export class ItemCreateHelper {
 
         const seven_six_two_by_five_four_Gamble: NewItemDetails = {
             newItem: {
-                _id: "an_7.62x54_gamble",
+                _id: "zzan_7.62x54_gamble",
                 _name: "gambling_7.62x54",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4130,7 +4130,7 @@ export class ItemCreateHelper {
 
         const three_three_eight_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ao_.338_gamble",
+                _id: "zzao_.338_gamble",
                 _name: "gambling_.338",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4237,7 +4237,7 @@ export class ItemCreateHelper {
 
         const nine_by_three_nine_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ap_9x39_gamble",
+                _id: "zzap_9x39_gamble",
                 _name: "gambling_9x39",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4343,7 +4343,7 @@ export class ItemCreateHelper {
         }
         const three_six_six_Gamble: NewItemDetails = {
             newItem: {
-                _id: "aq_.366_gamble",
+                _id: "zzaq_.366_gamble",
                 _name: "gambling_.366",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4449,7 +4449,7 @@ export class ItemCreateHelper {
         }
         const one_two_seven_Gamble: NewItemDetails = {
             newItem: {
-                _id: "ar_12.7x55_gamble",
+                _id: "zzar_12.7x55_gamble",
                 _name: "gambling_12.7x55",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4555,7 +4555,7 @@ export class ItemCreateHelper {
         }
         const one_two_by_seven_zero_Gamble: NewItemDetails = {
             newItem: {
-                _id: "as_12/70_gamble",
+                _id: "zzas_12/70_gamble",
                 _name: "gambling_12/70",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4661,7 +4661,7 @@ export class ItemCreateHelper {
         }
         const two_zero_by_seven_zero_Gamble: NewItemDetails = {
             newItem: {
-                _id: "at_20/70_gamble",
+                _id: "zzat_20/70_gamble",
                 _name: "gambling_20/70",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4767,7 +4767,7 @@ export class ItemCreateHelper {
         }
         const two_three_by_seven_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "au_23x75_gamble",
+                _id: "zzau_23x75_gamble",
                 _name: "gambling_23x75",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4873,12 +4873,12 @@ export class ItemCreateHelper {
         }
 
         
-        //customItem.createItemFromClone(white_chip);
-        //customItem.createItemFromClone(red_chip);
-        //customItem.createItemFromClone(green_chip);
-        //customItem.createItemFromClone(blue_chip);
-        //customItem.createItemFromClone(black_chip);
-        //customItem.createItem(pack_white_chips);
+        customItem.createItemFromClone(white_chip);
+        customItem.createItemFromClone(red_chip);
+        customItem.createItemFromClone(green_chip);
+        customItem.createItemFromClone(blue_chip);
+        customItem.createItemFromClone(black_chip);
+        customItem.createItem(pack_white_chips);
         customItem.createItemFromClone(gold_akm_handguard);
         customItem.createItemFromClone(gold_akm_foregrip);
         customItem.createItemFromClone(gold_akm_stock);

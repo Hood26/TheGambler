@@ -263,9 +263,9 @@
           "items": [
             {
               "_id": "gambler_ammo_part_1 reward_2_0",
-              "_tpl": "ac_9x19_gamble",
+              "_tpl": "zzac_9x19_gamble",
               "upd": {
-                "StackObjectsCount": 4
+                "StackObjectsCount": 10
               }
             }
           ]
@@ -276,7 +276,7 @@
           "items": [
             {
               "_id": "66b59e1cfcf263f4d70af422",
-              "_tpl": "ac_9x19_gamble"
+              "_tpl": "zzac_9x19_gamble"
             }
           ],
           "loyaltyLevel": 1,
