@@ -205,7 +205,7 @@
     "all_ammo_rewards_found_in_raid_status": true, // found in raid status of all Mystery Ammo containers
 
     // Mystery 7.62x25
-    "7.62x25_enable": true,
+    "7.62x25_enable": false,
     "7.62x25_manual_pricing": false,
     "7.62x25_price": 6000,
     "7.62x25_unlimited_stock": false,

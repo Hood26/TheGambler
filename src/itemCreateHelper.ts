@@ -3,6 +3,7 @@ import { CustomItemService } from "@spt/services/mod/CustomItemService";
 import { NewItemDetails } from "@spt/models/spt/mod/NewItemDetails";
 import { NewItemFromCloneDetails } from "@spt/models/spt/mod/NewItemDetails";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
+import { MysteryContainerInfo } from "./MysteryContainerInfo";
 
 import { VFS } from "@spt/utils/VFS";
 import { jsonc } from "jsonc";
@@ -399,7 +400,7 @@ export class ItemCreateHelper {
             itemTplToClone: "648990314b4d2b31b63a46fc",
             //overrideProperties: {},
             parentId: "62f109593b54472778797866",
-            newId: "az_sealed_weapon_gamble", 
+            newId: MysteryContainerInfo['sealed']._id,
             fleaPriceRoubles: 450000,
             handbookPriceRoubles: 450000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
@@ -609,7 +610,7 @@ export class ItemCreateHelper {
 
         const walletGamble: NewItemDetails = {
             newItem: {
-                _id: "bb_wallet_gamble",
+                _id: MysteryContainerInfo['wallet']._id,
                 _name: "gambling_wallet",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -715,7 +716,7 @@ export class ItemCreateHelper {
         }
         const keyGamble: NewItemDetails = {
             newItem: {
-                _id: "bc_key_gamble",
+                _id: MysteryContainerInfo['key']._id,
                 _name: "gambling_key",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -821,7 +822,7 @@ export class ItemCreateHelper {
         }
         const stimGamble: NewItemDetails = {
             newItem: {
-                _id: "bf_stim_gamble",
+                _id: MysteryContainerInfo['stim']._id,
                 _name: "gambling_stim",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -927,7 +928,7 @@ export class ItemCreateHelper {
         }
         const medicalGamble: NewItemDetails = {
             newItem: {
-                _id: "zz_medical_gamble",
+                _id: "67b7b98b4767af842e0521f5",
                 _name: "gambling_medical",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1033,7 +1034,7 @@ export class ItemCreateHelper {
         }
         const bitcoinGamble: NewItemDetails = {
             newItem: {
-                _id: "bg_bitcoin_gamble",
+                _id: "67b7b98b4767af842e0521ec",
                 _name: "gambling_bitcoin",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1139,7 +1140,7 @@ export class ItemCreateHelper {
         }
         const gpcoinGamble: NewItemDetails = {
             newItem: {
-                _id: "bh_gpcoin_gamble",
+                _id: "67b7b98b4767af842e0521ed",
                 _name: "gambling_gpcoin",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1246,7 +1247,7 @@ export class ItemCreateHelper {
         
         const keycardGamble: NewItemDetails = {
             newItem: {
-                _id: "bd_keycard_gamble",
+                _id: MysteryContainerInfo['keycard']._id,
                 _name: "gambling_keycard",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1353,7 +1354,7 @@ export class ItemCreateHelper {
 
         const fiftyFiftyGamble: NewItemDetails = {
             newItem: {
-                _id: "z_50/50_gamble",
+                _id: MysteryContainerInfo['fiftyfifty']._id,
                 _name: "gambling_roubles",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1460,7 +1461,7 @@ export class ItemCreateHelper {
 
         const foodGamble: NewItemDetails = {
             newItem: {
-                _id: "ba_food_gamble",
+                _id: MysteryContainerInfo['food']._id,
                 _name: "gambling_food",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1568,7 +1569,7 @@ export class ItemCreateHelper {
 
         const meleeWeaponGamble: NewItemDetails = {
             newItem: {
-                _id: "be_melee_weapon_gamble",
+                _id: MysteryContainerInfo['melee']._id,
                 _name: "gambling_melee",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1676,7 +1677,7 @@ export class ItemCreateHelper {
 
         const weaponGamble = {
             newItem: {
-                _id: "w_weapon_gamble",
+                _id: MysteryContainerInfo['weapon']._id,
                 _name: "gambling_weapon",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1782,7 +1783,7 @@ export class ItemCreateHelper {
         
         const premiumWeaponGamble = {
             newItem: {
-                _id: "wa_premium_weapon_gamble",
+                _id: MysteryContainerInfo['premium_weapon']._id,
                 _name: "gambling_premium_weapon",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1888,7 +1889,7 @@ export class ItemCreateHelper {
 
         const helmetGamble = {
             newItem: {
-                _id: "x_helmet_gamble",
+                _id: MysteryContainerInfo['helmet']._id,
                 _name: "gambling_helmet",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1995,7 +1996,7 @@ export class ItemCreateHelper {
 
         const headsetGamble = {
             newItem: {
-                _id: "xy_headset_gamble",
+                _id: MysteryContainerInfo['headset']._id,
                 _name: "gambling_headset",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2102,7 +2103,7 @@ export class ItemCreateHelper {
 
         const backpackGamble = {
             newItem: {
-                _id: "wr_backpack_gamble",
+                _id: MysteryContainerInfo['backpack']._id,
                 _name: "gambling_backpack",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2208,7 +2209,7 @@ export class ItemCreateHelper {
 
         const loadoutGamble = {
             newItem: {
-                _id: "ws_loadout_gamble",
+                _id: MysteryContainerInfo['loadout']._id,
                 _name: "gambling_loadout",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2314,7 +2315,7 @@ export class ItemCreateHelper {
 
         const rigGamble = {
             newItem: {
-                _id: "wr_rig_gamble",
+                _id: MysteryContainerInfo['rig']._id,
                 _name: "gambling_rig",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2421,7 +2422,7 @@ export class ItemCreateHelper {
 
         const armorGamble = {
             newItem: {
-                _id: "w_armor_gamble",
+                _id: MysteryContainerInfo['armor']._id,
                 _name: "gambling_armor",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2526,7 +2527,7 @@ export class ItemCreateHelper {
         };
         const premiumArmorGamble = {
             newItem: {
-                _id: "w_premium_armor_gamble",
+                _id: MysteryContainerInfo['premium_armor']._id,
                 _name: "gambling_premium_armor",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2632,7 +2633,7 @@ export class ItemCreateHelper {
 
         const seven_six_two_by_two_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzaa_7.62x25_gamble",
+                _id: MysteryContainerInfo['7.62x25']._id,
                 _name: "gambling_7.62x25",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2739,7 +2740,7 @@ export class ItemCreateHelper {
 
         const nine_by_one_eight_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzab_9x18_gamble",
+                _id: MysteryContainerInfo['9x18']._id,
                 _name: "gambling_9x18",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2846,7 +2847,7 @@ export class ItemCreateHelper {
 
         const nine_by_one_nine_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzac_9x19_gamble",
+                _id: MysteryContainerInfo['9x19']._id,
                 _name: "gambling_9x19",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -2953,7 +2954,7 @@ export class ItemCreateHelper {
 
         const nine_by_two_one_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzad_9x21_gamble",
+                _id: MysteryContainerInfo['9x21']._id,
                 _name: "gambling_9x21",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3060,7 +3061,7 @@ export class ItemCreateHelper {
 
         const three_five_seven_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzae_.357_gamble",
+                _id: MysteryContainerInfo['.357']._id,
                 _name: "gambling_.357",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3167,7 +3168,7 @@ export class ItemCreateHelper {
 
         const four_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzaf_.45_gamble",
+                _id: MysteryContainerInfo['.45']._id,
                 _name: "gambling_.45",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3274,7 +3275,7 @@ export class ItemCreateHelper {
 
         const four_six_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzag_4.6x30_gamble",
+                _id: MysteryContainerInfo['4.6x30']._id,
                 _name: "gambling_4.6x30",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3381,7 +3382,7 @@ export class ItemCreateHelper {
 
         const five_seven_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzah_5.7x28_gamble",
+                _id: MysteryContainerInfo['5.7x28']._id,
                 _name: "gambling_5.7x28",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3488,7 +3489,7 @@ export class ItemCreateHelper {
 
         const five_four_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzai_5.45x39_gamble",
+                _id: MysteryContainerInfo['5.45x39']._id,
                 _name: "gambling_5.45x39",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3595,7 +3596,7 @@ export class ItemCreateHelper {
 
         const fivefivesix_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzaj_5.56x45_gamble",
+                _id: MysteryContainerInfo['5.56x45']._id,
                 _name: "gambling_5.56x45",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3702,7 +3703,7 @@ export class ItemCreateHelper {
 
         const blackout_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzak_.300_gamble",
+                _id: MysteryContainerInfo['.300']._id,
                 _name: "gambling_.300",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3809,7 +3810,7 @@ export class ItemCreateHelper {
 
         const seven_six_two_by_three_nine_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzal_7.62x39_gamble",
+                _id: MysteryContainerInfo['7.62x39']._id,
                 _name: "gambling_7.62x39",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -3916,7 +3917,7 @@ export class ItemCreateHelper {
 
         const seven_six_two_by_five_one_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzam_7.62x51_gamble",
+                _id: MysteryContainerInfo['7.62x51']._id,
                 _name: "gambling_7.62x51",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4023,7 +4024,7 @@ export class ItemCreateHelper {
 
         const seven_six_two_by_five_four_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzan_7.62x54_gamble",
+                _id: MysteryContainerInfo['7.62x54']._id,
                 _name: "gambling_7.62x54",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4130,7 +4131,7 @@ export class ItemCreateHelper {
 
         const three_three_eight_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzao_.338_gamble",
+                _id: MysteryContainerInfo['.338']._id,
                 _name: "gambling_.338",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4237,7 +4238,7 @@ export class ItemCreateHelper {
 
         const nine_by_three_nine_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzap_9x39_gamble",
+                _id: MysteryContainerInfo['9x39']._id,
                 _name: "gambling_9x39",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4343,7 +4344,7 @@ export class ItemCreateHelper {
         }
         const three_six_six_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzaq_.366_gamble",
+                _id: MysteryContainerInfo['.366']._id,
                 _name: "gambling_.366",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4449,7 +4450,7 @@ export class ItemCreateHelper {
         }
         const one_two_seven_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzar_12.7x55_gamble",
+                _id: MysteryContainerInfo['12.7x55']._id,
                 _name: "gambling_12.7x55",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4555,7 +4556,7 @@ export class ItemCreateHelper {
         }
         const one_two_by_seven_zero_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzas_12/70_gamble",
+                _id: MysteryContainerInfo['12/70']._id,
                 _name: "gambling_12/70",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4661,7 +4662,7 @@ export class ItemCreateHelper {
         }
         const two_zero_by_seven_zero_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzat_20/70_gamble",
+                _id: MysteryContainerInfo['20/70']._id,
                 _name: "gambling_20/70",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4767,7 +4768,7 @@ export class ItemCreateHelper {
         }
         const two_three_by_seven_five_Gamble: NewItemDetails = {
             newItem: {
-                _id: "zzau_23x75_gamble",
+                _id: MysteryContainerInfo['23x75']._id,
                 _name: "gambling_23x75",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -4872,7 +4873,7 @@ export class ItemCreateHelper {
             } 
         }
 
-        
+        /*
         customItem.createItemFromClone(white_chip);
         customItem.createItemFromClone(red_chip);
         customItem.createItemFromClone(green_chip);
@@ -4888,8 +4889,9 @@ export class ItemCreateHelper {
         customItem.createItemFromClone(gold_akm_rearsight);
         customItem.createItemFromClone(gold_akm_silencer);
         customItem.createItemFromClone(gold_akm_pistolgrip);
-        customItem.createItemFromClone(sealedWeaponGamble);
         //customItem.createItem(new_green_chip);
+        */
+        customItem.createItemFromClone(sealedWeaponGamble);
         customItem.createItem(walletGamble);
         customItem.createItem(keyGamble);
         customItem.createItem(stimGamble);
@@ -4930,6 +4932,5 @@ export class ItemCreateHelper {
         customItem.createItem(seven_six_two_by_two_five_Gamble);
         customItem.createItem(seven_six_two_by_five_four_Gamble);
         customItem.createItem(seven_six_two_by_three_nine_Gamble);
-        
     }
 }

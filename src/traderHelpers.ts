@@ -80,6 +80,7 @@ export class TraderHelper
             questassort: {
                 started: {},
                 success: {
+                    /*
                     "66b15c72b10189169400fb52": "gambler_intro",
                     "66b59e1cfcf263f4d70af422": "gambler_ammo_part_1",
                     "66b59e1cfcf263f4d70af432": "gambler_ammo_part_2",
@@ -98,6 +99,7 @@ export class TraderHelper
                     "66b59e1cfcf263f4d70af42d": "gambler_ammo_part_15",
                     "66b59e1cfcf263f4d70af42c": "gambler_ammo_part_16",
                     "66b59e1cfcf263f4d70af42e": "gambler_ammo_part_17"
+                    */
                 },
                 fail: {}
             } // questassort is empty as trader has no assorts unlocked by quests
@@ -132,9 +134,9 @@ export class TraderHelper
 
         const vfs = container.resolve<VFS>("VFS")
         const config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
-        const MEDICAL_GAMBLE_ID = "zz_medical_gamble";
-        const BITCOIN_GAMBLE_ID = "bg_bitcoin_gamble"; // new aa_bitcoin_gamble
-        const GPCOIN_GAMBLE_ID = "bh_gpcoin_gamble";   // new aa_gpcoin_gamble
+        const MEDICAL_GAMBLE_ID = "67b7b98b4767af842e0521f5";
+        const BITCOIN_GAMBLE_ID = "67b7b98b4767af842e0521ec"; // new aa_bitcoin_gamble
+        const GPCOIN_GAMBLE_ID = "67b7b98b4767af842e0521ed";   // new aa_gpcoin_gamble
         const BITCOIN_ID = '59faff1d86f7746c51718c9c';
         const GPCOIN_ID = '5d235b4d86f7742e017bc88a';
         const MEDICAL_TOOLS_MEDS_ID = '619cc01e0a7c3a1a2731940c';
@@ -152,6 +154,9 @@ export class TraderHelper
         const GOLD_AKM_PISTOLGRIP_ID = 'gold_akm_pistolgrip';
         // FOR AK-74 gas tube (6P20 Sb.1-2)
         //console.log(tables.templates.items['59c6633186f7740cf0493bb9'])
+
+        // Add compatibility for golden attachments
+        /*
         tables.templates.items['59d64ec286f774171d1e0a42']._props.Slots[0]._props.filters[0].Filter.push(GOLD_AKM_HANDGUARD_ID);
         tables.templates.items['59d6088586f774275f37482f']._props.Slots[6]._props.filters[0].Filter.push(GOLD_AKM_STOCK_ID);
         tables.templates.items['59d6088586f774275f37482f']._props.Slots[7]._props.filters[0].Filter.push(GOLD_AKM_MAGAZINE_ID);
@@ -161,6 +166,7 @@ export class TraderHelper
         tables.templates.items['59d6088586f774275f37482f']._props.Slots[8]._props.filters[0].Filter.push(GOLD_AKM_CHARGE_HANDLE_ID);
         tables.templates.items['59d6088586f774275f37482f']._props.Slots[3]._props.filters[0].Filter.push(GOLD_AKM_PISTOLGRIP_ID);
         tables.templates.items['59e0bed186f774156f04ce84']._props.Slots[0]._props.filters[0].Filter.push(GOLD_AKM_FOREGRIP_ID);
+        */
 
         // All Mystery Containers _id and quest_id
         const names: Record<string, itemProps> = MysteryContainerInfo;     
@@ -298,7 +304,6 @@ export class TraderHelper
                                         .export(tables.traders[baseJson._id]);
             }
         }
-       
         if (config.container_config['medical_enable']){
             assortCreator.createSingleAssortItem(MEDICAL_GAMBLE_ID)
                                     .addStackCount(config.container_config.medical_unlimited_stock ? 999999 : config.container_config.medical_stock, config.container_config.medical_unlimited_stock)
@@ -321,7 +326,7 @@ export class TraderHelper
                                     .addBarterCost(GPCOIN_ID, 25)
                                     .addLoyaltyLevel(1)
                                     .export(tables.traders[baseJson._id]);
-        }             
+        }    
      }
 
      /**

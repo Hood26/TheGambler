@@ -57,7 +57,6 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
     public preSptLoad(container: DependencyContainer): void {
         this.logger = container.resolve<ILogger>("WinstonLogger");
 
-        // openRandomLootContainer override in InventoryController. Adds gambler mystery boxes.
         container.afterResolution("InventoryController", (_t, result: InventoryController) => 
             {
                 result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string) =>
@@ -86,13 +85,12 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         const traderConfig: ITraderConfig = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const ragfairConfig = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const vfs = container.resolve<VFS>("VFS")
-
-        // Create helper class and use it to register our traders image/icon + set its stock refresh time
+        
         this.config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
         this.hashUtil = hashUtil;
         this.traderHelper = new TraderHelper();
         this.fluentAssortCreator = new FluentAssortCreator(hashUtil, this.logger);
-        this.traderHelper.registerProfileImage(baseJson, 'zzzGamblerTrader', preSptModLoader, imageRouter, "thegambler.jpg");
+        this.traderHelper.registerProfileImage(baseJson, 'GamblerTrader', preSptModLoader, imageRouter, "thegambler.jpg");
         this.traderHelper.setTraderUpdateTime(traderConfig, baseJson, this.config.trader_update_min_time, this.config.trader_update_max_time);
 
         // Add trader to trader enum
@@ -139,8 +137,9 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         ];
         
         //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution) // Drawer
-        // Currently this adds poker chips to many static loot containers on all maps
-        
+        //
+        // Currently this adds poker chips to static loot containers on all maps
+        /*
         for (const item of itemCreate.loot){
             for(const map of maps){
                 const mapStaticLoot = tables.locations[map].staticLoot;
@@ -159,6 +158,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
                 }
             }
         }
+        */
         
         this.logger.debug(`[${this.mod}] postDb Loaded`);
     }
