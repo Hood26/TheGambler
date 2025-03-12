@@ -710,7 +710,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Wallet",
                     shortName: "Mystery Wallet",
-                    description: `Wager your Roubles to win more, or lose it all!\n==============================\n25k Roubles - ${this.config.odds['wallet_base']}%\n50k Roubles - ${this.config.odds['wallet_extra_common']}%\n100k Roubles - ${this.config.odds['wallet_common']}%\n300k Roubles - ${this.config.odds['wallet_uncommon']}%\n500k Roubles - ${this.config.odds['wallet_kinda_rare']}%\n1 Million Roubles - ${this.config.odds['wallet_rare']}%\n2.5 Million Roubles - ${this.config.odds['wallet_extremely_rare']}%`
+                    description: `Wager your Roubles to win more or lose it all!\n==============================\n25k Roubles - ${this.config.odds['wallet_base']}%\n50k Roubles - ${this.config.odds['wallet_extra_common']}%\n100k Roubles - ${this.config.odds['wallet_common']}%\n300k Roubles - ${this.config.odds['wallet_uncommon']}%\n500k Roubles - ${this.config.odds['wallet_kinda_rare']}%\n1 Million Roubles - ${this.config.odds['wallet_rare']}%\n2.5 Million Roubles - ${this.config.odds['wallet_extremely_rare']}%`
                 }
             } 
         }
@@ -1454,7 +1454,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "50/50 Case",
                     shortName: "50/50 Case",
-                    description: "ARE YOU SCARED??? DON'T BE! THIS COULD BE YOU'RE CHANCE TO WIN IT ALL! THE TRUE ALL IN OR NOTHING!\n==============================\nDelicious Can of Beef Stew - 50.0%\n5 Million Roubles - 50.0%"
+                    description: `The true all in or nothing. This case was taken from Reshala's stash and has a 50% chance to double your money!. This could be your chance to win it all! "Scared money don't make money." -YG \n==============================\nDelicious Can of Beef Stew - 50.0%\n5 Million Roubles - 50.0%`
                 }
             }                
         }
@@ -1776,7 +1776,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Weapon Mystery Box",
                     shortName: "Weapon Mystery Box",
-                    description: `Weapon Mystery Box, contains over 402 different weapons ranging from Meta/Chad weapons, early wipe weapons, scav weapons, meme/cursed weapons, and much more... \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nMeme Weapon - ${this.config.odds['weapon_meme']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}%`
+                    description: `Weapon Mystery Box, contains over 1000 different possible weapons ranging from premium meta weapons, early wipe weapons, scav weapons, meme/cursed weapons, and everything between... \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}\nMeme Weapon - ${this.config.odds['weapon_meme']}%%`
                 }
             }
         };

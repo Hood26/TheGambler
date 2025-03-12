@@ -143,6 +143,7 @@ export class TraderHelper
         const PILE_OF_MEDS_ID = '5d1b3a5d86f774252167ba22';
         const BLOODSET_ID = '5b4335ba86f7744d2837a264';
 
+        /*
         const GOLD_AKM_HANDGUARD_ID = 'gold_akm_handguard';
         const GOLD_AKM_FOREGRIP_ID = 'gold_akm_foregrip';
         const GOLD_AKM_STOCK_ID = 'gold_akm_stock';
@@ -152,6 +153,7 @@ export class TraderHelper
         const GOLD_AKM_CHARGE_HANDLE_ID = 'gold_akm_chargehandle';
         const GOLD_AKM_SILENCER_ID = 'gold_akm_silencer';
         const GOLD_AKM_PISTOLGRIP_ID = 'gold_akm_pistolgrip';
+        */
         // FOR AK-74 gas tube (6P20 Sb.1-2)
         //console.log(tables.templates.items['59c6633186f7740cf0493bb9'])
 
@@ -177,7 +179,8 @@ export class TraderHelper
         //console.log('One Loadout Cost = ' + loadoutPrice);
         
         //console.log(generatedPrices);
-
+        
+        /*
         const white_chip = 'a_white_chip';
         const pake_white_chips = 'aaa_white_chips_gamble';
         const red_chip = 'b_red_chip';
@@ -185,7 +188,6 @@ export class TraderHelper
         const blue_chip = 'd_blue_chip';
         const black_chip = 'e_black_chip';
 
-        /*
         assortCreator.createSingleAssortItem(white_chip)
                                 .addStackCount(999)
                                 .addMoneyCost(Money.ROUBLES, 5000)

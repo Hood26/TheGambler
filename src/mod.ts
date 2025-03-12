@@ -138,7 +138,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         
         //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution) // Drawer
         //
-        // Currently this adds poker chips to static loot containers on all maps
+        // adds poker chips to static loot containers on all maps
         /*
         for (const item of itemCreate.loot){
             for(const map of maps){
