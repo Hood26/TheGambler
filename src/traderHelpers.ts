@@ -143,33 +143,6 @@ export class TraderHelper
         const PILE_OF_MEDS_ID = '5d1b3a5d86f774252167ba22';
         const BLOODSET_ID = '5b4335ba86f7744d2837a264';
 
-        /*
-        const GOLD_AKM_HANDGUARD_ID = 'gold_akm_handguard';
-        const GOLD_AKM_FOREGRIP_ID = 'gold_akm_foregrip';
-        const GOLD_AKM_STOCK_ID = 'gold_akm_stock';
-        const GOLD_AKM_MAGAZINE_ID = 'gold_akm_magazine';
-        const GOLD_AKM_RECEIVER_ID = 'gold_akm_receiver';
-        const GOLD_AKM_REAR_SIGHT_ID = 'gold_akm_rearsight';
-        const GOLD_AKM_CHARGE_HANDLE_ID = 'gold_akm_chargehandle';
-        const GOLD_AKM_SILENCER_ID = 'gold_akm_silencer';
-        const GOLD_AKM_PISTOLGRIP_ID = 'gold_akm_pistolgrip';
-        */
-        // FOR AK-74 gas tube (6P20 Sb.1-2)
-        //console.log(tables.templates.items['59c6633186f7740cf0493bb9'])
-
-        // Add compatibility for golden attachments
-        /*
-        tables.templates.items['59d64ec286f774171d1e0a42']._props.Slots[0]._props.filters[0].Filter.push(GOLD_AKM_HANDGUARD_ID);
-        tables.templates.items['59d6088586f774275f37482f']._props.Slots[6]._props.filters[0].Filter.push(GOLD_AKM_STOCK_ID);
-        tables.templates.items['59d6088586f774275f37482f']._props.Slots[7]._props.filters[0].Filter.push(GOLD_AKM_MAGAZINE_ID);
-        tables.templates.items['59d6088586f774275f37482f']._props.Slots[4]._props.filters[0].Filter.push(GOLD_AKM_RECEIVER_ID);
-        tables.templates.items['59d6088586f774275f37482f']._props.Slots[2]._props.filters[0].Filter.push(GOLD_AKM_SILENCER_ID);
-        tables.templates.items['59d6088586f774275f37482f']._props.Slots[5]._props.filters[0].Filter.push(GOLD_AKM_REAR_SIGHT_ID);
-        tables.templates.items['59d6088586f774275f37482f']._props.Slots[8]._props.filters[0].Filter.push(GOLD_AKM_CHARGE_HANDLE_ID);
-        tables.templates.items['59d6088586f774275f37482f']._props.Slots[3]._props.filters[0].Filter.push(GOLD_AKM_PISTOLGRIP_ID);
-        tables.templates.items['59e0bed186f774156f04ce84']._props.Slots[0]._props.filters[0].Filter.push(GOLD_AKM_FOREGRIP_ID);
-        */
-
         // All Mystery Containers _id and quest_id
         const names: Record<string, itemProps> = MysteryContainerInfo;     
         const price = new Price(container, config, logger);

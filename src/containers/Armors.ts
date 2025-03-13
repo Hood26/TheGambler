@@ -572,121 +572,153 @@ export class Armors {
       {
         Items: [
           {
-            _id: "4f8709eadfb09920550c98b7",
-            _tpl: "5b44cf1486f77431723e3d05",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657668ad86f11bca4106d38b",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 7,
-              y: 4,
-              r: 1,
-              rotation: true,
-            },
-          },
-          {
-            _id: "5dd280f017b1438103afb916",
-            _tpl: "6575c3b3dc9932aed601c5f4",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Soft_armor_front",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "c8cdc8db2cf784235a4bcd14",
-            _tpl: "6575c3beefc786cd9101a5ed",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Soft_armor_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "eebb996638e834e9e84d80fd",
-            _tpl: "6575c3cdc6700bd6b40e8a90",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Soft_armor_left",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "0284d5ae20cd6b3ebbdcc065",
-            _tpl: "6575c3dfdc9932aed601c5f8",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "soft_armor_right",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "a6cfa22f2cff9aba6e718639",
-            _tpl: "6575c3ec52b7f8c76a05ee39",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Collar",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "76c0a118882110ab78a6f4a6",
-            _tpl: "6575c3fd52b7f8c76a05ee3d",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Shoulder_l",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "de32af397e414b82c5eda388",
-            _tpl: "6575c40c52b7f8c76a05ee41",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Shoulder_r",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "6a88055d01db4b6612e08783",
-            _tpl: "xsapi_chest",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Front_plate",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "1b6da0dc1782fd2197bf0f56",
-            _tpl: "xsapi_chest",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Back_plate",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "ec24175462e1e3ca8ffd381e",
-            _tpl: "6557458f83942d705f0c4962",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Left_side_plate",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "0f122321cb801a67a1129a9d",
-            _tpl: "6557458f83942d705f0c4962",
-            parentId: "4f8709eadfb09920550c98b7",
-            slotId: "Right_side_plate",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						_id: "67d14e9bd0b71544600376f5",
+						_tpl: "5b44cf1486f77431723e3d05",
+						upd: {
+							StackObjectsCount: 1,
+							sptPresetId: "657668ad86f11bca4106d38b"
+						},
+						parentId: "5fe49444ae6628187a2e78b8",
+						slotId: "hideout",
+						location: {
+							x: 0,
+							y: 0,
+							r: 0,
+							rotation: false
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376f6",
+						_tpl: "6575c3b3dc9932aed601c5f4",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Soft_armor_front",
+						upd: {
+							Repairable: {
+								Durability: 38,
+								MaxDurability: 48
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376f7",
+						_tpl: "6575c3beefc786cd9101a5ed",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Soft_armor_back",
+						upd: {
+							Repairable: {
+								Durability: 45,
+								MaxDurability: 52
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376f8",
+						_tpl: "6575c3cdc6700bd6b40e8a90",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Soft_armor_left",
+						upd: {
+							Repairable: {
+								Durability: 13,
+								MaxDurability: 15
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376f9",
+						_tpl: "6575c3dfdc9932aed601c5f8",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "soft_armor_right",
+						upd: {
+							Repairable: {
+								Durability: 18,
+								MaxDurability: 19
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376fa",
+						_tpl: "6575c3ec52b7f8c76a05ee39",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Collar",
+						upd: {
+							Repairable: {
+								Durability: 17,
+								MaxDurability: 19
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376fb",
+						_tpl: "6575c3fd52b7f8c76a05ee3d",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Shoulder_l",
+						upd: {
+							Repairable: {
+								Durability: 23,
+								MaxDurability: 23
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376fc",
+						_tpl: "6575c40c52b7f8c76a05ee41",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Shoulder_r",
+						upd: {
+							Repairable: {
+								Durability: 17,
+								MaxDurability: 22
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376fd",
+						_tpl: "656fa8d700d62bcd2e024084",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Front_plate",
+						upd: {
+							Repairable: {
+								Durability: 45,
+								MaxDurability: 50
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376fe",
+						_tpl: "656fa8d700d62bcd2e024084",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Back_plate",
+						upd: {
+							Repairable: {
+								Durability: 57,
+								MaxDurability: 59
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b71544600376ff",
+						_tpl: "6557458f83942d705f0c4962",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Left_side_plate",
+						upd: {
+							Repairable: {
+								Durability: 9,
+								MaxDurability: 12
+							}
+						}
+					},
+					{
+						_id: "67d14e9bd0b7154460037700",
+						_tpl: "6557458f83942d705f0c4962",
+						parentId: "67d14e9bd0b71544600376f5",
+						slotId: "Right_side_plate",
+						upd: {
+							Repairable: {
+								Durability: 15,
+								MaxDurability: 15
+							}
+						}
+					}
         ],
       },
       {
