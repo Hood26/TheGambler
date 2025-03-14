@@ -29,6 +29,8 @@ import { LoadoutFacecovers } from "./containers/LoadoutFacecovers";
 import { LoadoutStim } from "./containers/LoadoutStim";
 import type { itemProps } from "./MysteryContainerInfo";
 import { MysteryContainerInfo } from "./MysteryContainerInfo";
+//import { AverageWeapons } from "./containers/AverageWeapons";
+//import { DefaultWeapons } from "./containers/DefaultWeapons";
 
 class Container {
 
@@ -91,7 +93,7 @@ export class MysteryContainer {
             'wallet', 'keycard', 'key', 'stim', 'medical', 'food', 'melee', 
             'backpack', 'rig', 'weapon', 'premium_weapon', 'helmet', 
             'headset', 'armor', 'premium_armor', 'roubles', 'bitcoin', 'gpcoin',
-             'loadout', 'loadout_grenade', 'loadout_facecovers', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_stim', 'loadout_splint', 'loadout_healing', 'ammo'
+             'loadout', 'premium_loadout', 'loadout_grenade', 'loadout_facecovers', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_stim', 'loadout_splint', 'loadout_healing', 'ammo'
         ];
         this.simulation = [] //['armor', 'premium_armor', 'headset', 'rig', 'backpack', 'key', 'melee', 'stim', 'food', 'keycard'];
         this.override    = ['ammo', 'armor', 'weapon', 'helmet'];
@@ -108,6 +110,8 @@ export class MysteryContainer {
             helmet:              new Helmets(),
             headset:             new Headsets(),
             weapon:              new Weapons(),
+            //default_weapon:      new DefaultWeapons(),
+            //average_weapon:      new AverageWeapons(),
             premium_weapon:      new PremiumWeapons(),
             armor:               new Armors(),
             premium_armor:       new PremiumArmors(),
@@ -116,6 +120,7 @@ export class MysteryContainer {
             bitcoin:             new FlipBitcoin(),
             gpcoin:              new FlipGPCoin(),
             loadout:             new Loadouts(),
+            premium_loadout:     new Loadouts(),
             loadout_grenade:     new LoadoutGrenade(),
             loadout_facecovers:  new LoadoutFacecovers(),
             loadout_food:        new LoadoutFood(),

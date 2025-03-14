@@ -104,6 +104,8 @@ export class Gamble {
                 this.openReward(name, roll);
                 break;
             case 'weapon':
+            case 'average_weapon':
+            case 'default_weapon':
             case 'premium_weapon':
             case 'helmet':
             case 'armor':
@@ -112,6 +114,9 @@ export class Gamble {
                 break;
             case 'loadout':
                 this.openLoadoutContainer(name);
+                break;
+            case 'premium_loadout':
+                this.openLoadoutContainer(name, 10.0);
                 break;
             default:
                 this.logger.error(`[GamblerTrader] This Mystery Container Doesn't exist! Contact Author!`);    
@@ -150,15 +155,15 @@ export class Gamble {
                     
                 } else if (this.currentWeaponType == '_meta') {
 
-                    this.newGamble(current, this.randomUtil.getFloat(5,28));
+                    this.newGamble(current, this.randomUtil.getFloat(5,25));
 
                 } else if (this.currentWeaponType == '_decent') {
 
-                    this.newGamble(current, this.randomUtil.getFloat(18,45));
+                    this.newGamble(current, this.randomUtil.getFloat(12,50));
 
                 }else if (this.currentWeaponType == '_scav') {
 
-                    this.newGamble(current, this.randomUtil.getFloat(48,70));
+                    this.newGamble(current, this.randomUtil.getFloat(35,70));
 
                 }else{
                     if (randomness[i]) {

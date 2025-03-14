@@ -509,7 +509,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Wallet",
                     shortName: "Mystery Wallet",
-                    description: `Wager your Roubles to win more or lose it all!\n==============================\n25k Roubles - ${this.config.odds['wallet_base']}%\n50k Roubles - ${this.config.odds['wallet_extra_common']}%\n100k Roubles - ${this.config.odds['wallet_common']}%\n300k Roubles - ${this.config.odds['wallet_uncommon']}%\n500k Roubles - ${this.config.odds['wallet_kinda_rare']}%\n1 Million Roubles - ${this.config.odds['wallet_rare']}%\n2.5 Million Roubles - ${this.config.odds['wallet_extremely_rare']}%`
+                    description: `Wager your Roubles to win more or lose it all!\n==============================\n25K Roubles - ${this.config.odds['wallet_base']}%\n50k Roubles - ${this.config.odds['wallet_extra_common']}%\n100k Roubles - ${this.config.odds['wallet_common']}%\n250k Roubles - ${this.config.odds['wallet_uncommon']}%\n500k Roubles - ${this.config.odds['wallet_more_uncommon']}%\n750k Roubles - ${this.config.odds['wallet_extra_uncommon']}%\n1 Million Roubles - ${this.config.odds['wallet_rare']}%\n2.5 Million Roubles - ${this.config.odds['wallet_kinda_rare']}%\n5 Million Roubles - ${this.config.odds['wallet_extra_rare']}%\n10 Million Roubles - ${this.config.odds['wallet_extremely_rare']}%`
                 }
             } 
         }
@@ -727,7 +727,7 @@ export class ItemCreateHelper {
         }
         const medicalGamble: NewItemDetails = {
             newItem: {
-                _id: "67b7b98b4767af842e0521f5",
+                _id: "67b7b98b4767af842e0521fb",
                 _name: "gambling_medical",
                 _parent: "62f109593b54472778797866",
                 _props: {
@@ -1146,7 +1146,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Mystery Keycard",
                     shortName: "Mystery Keycard",
-                    description: `So you want to get into labs? Well your in luck! I have a few gambles I can offer you for the right price. Maybe you get the card you've been dreaming of or maybe you don't!\n==============================\nAccess Keycard - ${this.config.odds['keycard_access']}%\n21WS Keycard - ${this.config.odds['keycard_21WS']}%\n11SR Keycard - ${this.config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${this.config.odds['keycard_blue_marking']}%\nYellow Keycard - ${this.config.odds['keycard_yellow']}%\nBlack Keycard - ${this.config.odds['keycard_black']}%\nViolet Keycard - ${this.config.odds['keycard_violet']}%\nBlue Keycard - ${this.config.odds['keycard_blue']}%\nGreen Keycard - ${this.config.odds['keycard_green']}%\nRed Keycard - ${this.config.odds['keycard_red']}%`
+                    description: `So you want to get into labs? Well your in luck! I have a few gambles I can offer you for the right price. Maybe you get the card you've been dreaming of or maybe you don't!\n==============================\nAccess Keycard - ${this.config.odds['keycard_access']}%\nNothing - 33.3%\n21WS Keycard - ${this.config.odds['keycard_21WS']}%\n11SR Keycard - ${this.config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${this.config.odds['keycard_blue_marking']}%\nYellow Keycard - ${this.config.odds['keycard_yellow']}%\nBlack Keycard - ${this.config.odds['keycard_black']}%\nViolet Keycard - ${this.config.odds['keycard_violet']}%\nBlue Keycard - ${this.config.odds['keycard_blue']}%\nGreen Keycard - ${this.config.odds['keycard_green']}%\nRed Keycard - ${this.config.odds['keycard_red']}%`
                 }
             }                
         }
@@ -1575,10 +1575,222 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Weapon Mystery Box",
                     shortName: "Weapon Mystery Box",
-                    description: `Weapon Mystery Box, contains over 1000 different possible weapons ranging from premium meta weapons, early wipe weapons, scav weapons, meme/cursed weapons, and everything between... \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}\nMeme Weapon - ${this.config.odds['weapon_meme']}%%`
+                    description: `Weapon Mystery Box, contains over 1000 different possible weapons ranging from premium meta weapons, early wipe weapons, scav weapons, meme/cursed weapons, and everything between... \n==============================\nFully Modded Weapon - ${this.config.odds['weapon_meta']}%\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nScav Weapon - ${this.config.odds['weapon_scav']}%\nDefault Weapon - ${this.config.odds['weapon_base']}%\nMeme Weapon - ${this.config.odds['weapon_meme']}%%`
                 }
             }
         };
+        /*
+        const defaultWeaponGamble = {
+            newItem: {
+                _id: MysteryContainerInfo['default_weapon']._id,
+                _name: "gambling_default_weapon",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Default Weapon Mystery Box",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 4,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Default Weapon Mystery Box",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/spec/item_spec_weaprepair/item_spec_weaprepair.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Default Weapon Mystery Box",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 4,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+            },
+            fleaPriceRoubles: 125000,
+            handbookPriceRoubles: 125000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Default Weapon Mystery Box",
+                    shortName: "Default Weapon Mystery Box",
+                    description: `Looking for a random default weapon to use or upgrade yourself? This weapons case has every default weapon preset found all across Tarkov.  \n==============================\nDefault Weapon - ${this.config.odds['default_weapon_base']}%`
+                }
+            }
+        };
+        const AverageWeaponGamble = {
+            newItem: {
+                _id: MysteryContainerInfo['average_weapon']._id,
+                _name: "gambling_average_weapon",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Average Weapon Mystery Box",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 4,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Average Weapon Mystery Box",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/spec/item_spec_weaprepair/item_spec_weaprepair.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Average Weapon Mystery Box",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 4,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+            },
+            fleaPriceRoubles: 220000,
+            handbookPriceRoubles: 220000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Average Weapon Mystery Box",
+                    shortName: "Average Weapon Mystery Box",
+                    description: `Weapon Mystery Box, contains over 500 different possible weapons ranging from early-wipe weapons, mid-wipe weapons, and premium meta weapons \n==============================\nSemi-modded Weapon - ${this.config.odds['weapon_decent']}%\nFully modded Weapon - ${this.config.odds['weapon_meta']}%`
+                }
+            }
+        };
+        */
         
         const premiumWeaponGamble = {
             newItem: {
@@ -1681,7 +1893,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Premium Weapon Mystery Box",
                     shortName: "Premium Weapon Mystery Box",
-                    description: `The Premium Weapon Mystery Box contains a guaranteed heavily modded weappon\n==============================\nRare Weapon - ${this.config.odds['premium_weapon_meta']}%`
+                    description: `contains a heavily modded weapon, currently contains 250+ weapons in the loot pool\n==============================\nRare Weapon - ${this.config.odds['premium_weapon_meta']}%`
                 }
             }
         };
@@ -2100,14 +2312,120 @@ export class ItemCreateHelper {
                 _proto: "",
                 _type: "Item"
             },
-            fleaPriceRoubles: 800000,
-            handbookPriceRoubles: 800000,
+            fleaPriceRoubles: 600000,
+            handbookPriceRoubles: 600000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
                     name: "Mystery Loadout",
                     shortName: "Mystery Loadout",
-                    description: `A full raid kit in one unbox! You will never receive the same exact kit as every items is randomly generated and correlate by rarity of the generated weapon. Items unboxed include:\n Weapon, Extra Magazines, Ammo, Grenades, Armor, Rig, Helmet, Headset, Backpack, Food, Drink, and Medical Supplies.`
+                    description: `Contains a random tiered loadout with mostly premium items and gear. All loadouts are randomly generated and corelate by rarity, meaning scav loadouts will generate mostly scav gear with an added chance that gear and items can upgrade tiers for added randomness. Same with all tiers of loadout.  which means you will never recieve the same loadout twice.  Items unboxed include:\n Weapon, Extra Magazines, Ammo, Grenades, Armor, Rig, Helmet, Headset, Backpack, Food, Drink, and Medical Supplies.`
+                }
+            }
+        };
+
+        const premiumLoadoutGamble = {
+            newItem: {
+                _id: MysteryContainerInfo['premium_loadout']._id,
+                _name: "gambling_premium_loadout",
+                _parent: "62f109593b54472778797866",
+                _props: {
+                    "AnimationVariantsNumber": 0,
+                    "BackgroundColor": "orange",
+                    "BlocksArmorVest": false,
+                    "CanPutIntoDuringTheRaid": true,
+                    "CanRequireOnRagfair": false,
+                    "CanSellOnRagfair": false,
+                    "CantRemoveFromSlotsDuringRaid": [],
+                    "ConflictingItems": [],
+                    "Description": "Premium Mystery Loadout",
+                    "DiscardLimit": -1,
+                    "DiscardingBlock": false,
+                    "DropSoundType": "None",
+                    "ExamineExperience": 100,
+                    "ExamineTime": 1,
+                    "ExaminedByDefault": true,
+                    "ExtraSizeDown": 0,
+                    "ExtraSizeForceAdd": false,
+                    "ExtraSizeLeft": 0,
+                    "ExtraSizeRight": 0,
+                    "ExtraSizeUp": 0,
+                    "Grids": [
+                        {
+                            "_id": "6489c03c8bc5233fdc78e789",
+                            "_name": "main",
+                            "_parent": "6489c03c8bc5233fdc78e788",
+                            "_props": {
+                                "cellsH": 1,
+                                "cellsV": 1,
+                                "filters": [
+                                    {
+                                        "ExcludedFilter": [
+                                            "54009119af1c881c07000029"
+                                        ],
+                                        "Filter": []
+                                    }
+                                ],
+                                "isSortingTable": false,
+                                "maxCount": 99,
+                                "maxWeight": 0,
+                                "minCount": 1
+                            },
+                            "_proto": "55d329c24bdc2d892f8b4567"
+                        }
+                    ],
+                    "Height": 7,
+                    "HideEntrails": true,
+                    "InsuranceDisabled": false,
+                    "IsAlwaysAvailableForInsurance": false,
+                    "IsLockedafterEquip": false,
+                    "IsSpecialSlotOnly": false,
+                    "IsUnbuyable": false,
+                    "IsUndiscardable": false,
+                    "IsUngivable": false,
+                    "IsUnremovable": false,
+                    "IsUnsaleable": false,
+                    "ItemSound": "container_plastic",
+                    "LootExperience": 20,
+                    "MergesWithChildren": false,
+                    "Name": "Premium Mystery Loadout",
+                    "NotShownInSlot": false,
+                    "Prefab": {
+                        "path": "assets/content/items/equipment/backpack_6sh118/item_equipment_backpack_6sh118.bundle",
+                        "rcid": ""
+                    },
+                    "QuestItem": false,
+                    "QuestStashMaxCount": 0,
+                    "RagFairCommissionModifier": 1,
+                    "RepairCost": 0,
+                    "RepairSpeed": 0,
+                    "SearchSound": "drawer_metal_looting",
+                    "ShortName": "Premium Mystery Loadout",
+                    "Slots": [],
+                    "StackMaxSize": 1,
+                    "StackObjectsCount": 1,
+                    "Unlootable": false,
+                    "UnlootableFromSide": [],
+                    "UnlootableFromSlot": "FirstPrimaryWeapon",
+                    "UsePrefab": {
+                        "path": "",
+                        "rcid": ""
+                    },
+                    "Weight": 2,
+                    "Width": 5,
+                    "ReverbVolume": 0
+                },
+                _proto: "",
+                _type: "Item"
+            },
+            fleaPriceRoubles: 850000,
+            handbookPriceRoubles: 850000,
+            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            locales: {
+                "en": {
+                    name: "Premium Mystery Loadout",
+                    shortName: "Premium Mystery Loadout",
+                    description: `Containes a high-tier loadout with mostly premium items and gear. All loadouts are randomly generated and corelate by rarity, meaning high-tier loadouts will generate mostly rare gear with an added chance that gear and items can be downgraded to average tier for added randomness. All tiers of loadout can have some items and gear go up or down rarities as well.  which means you will never recieve the same loadout twice.  Items unboxed include:\n Weapon, Extra Magazines, Ammo, Grenades, Armor, Rig, Helmet, Headset, Backpack, Food, Drink, and Medical Supplies.`
                 }
             }
         };
@@ -4693,10 +5011,13 @@ export class ItemCreateHelper {
         customItem.createItem(fiftyFiftyGamble);
         customItem.createItem(meleeWeaponGamble);
         customItem.createItem(weaponGamble);
+        //customItem.createItem(AverageWeaponGamble);
+        //customItem.createItem(defaultWeaponGamble);
         customItem.createItem(helmetGamble);
         customItem.createItem(headsetGamble);
         customItem.createItem(backpackGamble);
         customItem.createItem(loadoutGamble);
+        customItem.createItem(premiumLoadoutGamble);
         customItem.createItem(rigGamble);
         customItem.createItem(armorGamble);
         customItem.createItem(premiumArmorGamble);

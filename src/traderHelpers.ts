@@ -134,7 +134,7 @@ export class TraderHelper
 
         const vfs = container.resolve<VFS>("VFS")
         const config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
-        const MEDICAL_GAMBLE_ID = "67b7b98b4767af842e0521f5";
+        const MEDICAL_GAMBLE_ID = "67b7b98b4767af842e0521fb";
         const BITCOIN_GAMBLE_ID = "67b7b98b4767af842e0521ec"; // new aa_bitcoin_gamble
         const GPCOIN_GAMBLE_ID = "67b7b98b4767af842e0521ed";   // new aa_gpcoin_gamble
         const BITCOIN_ID = '59faff1d86f7746c51718c9c';

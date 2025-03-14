@@ -33,31 +33,45 @@ export let MysteryContainerInfo: Record<string, itemProps> = {
         quest_id: "66b57e52fcf263f4d70af3e6"
     },  
     fiftyfifty: { // case 5 mil rouble
-        _id: "67b7b98b4767af842e0521f4",
+        _id: "67b7b98b4767af842e0521f8",
         quest_id: "66b57e52fcf263f4d70af3e7"
     }, 
     weapon: {
         _id: "67b7b98b4767af842e0521f0",
         quest_id: "66b57e52fcf263f4d70af3e8"
     }, 
-    backpack: {
-        _id: "67b7b98b4767af842e0521f2",
+    /*
+    default_weapon: {
+        _id: "67b7b98b4767af842e0521f1",
         quest_id: "66b57e52fcf263f4d70af3e9"
     }, 
+    average_weapon: {
+        _id: "67b7b98b4767af842e0521f2",
+        quest_id: "66b57e52fcf263f4d70b0f44"
+    }, 
+    */
+    backpack: {
+        _id: "67b7b98b4767af842e0521f4",
+        quest_id: "66b57e52fcf263f4d70af7d4"
+    }, 
     loadout: {
-        _id: "67b7b98b4767af842e0521f3",
+        _id: "67b7b98b4767af842e0521f5",
         quest_id: "66b57e52fcf263f4d70af3ea"
     }, 
-    rig: {
+    premium_loadout: {
         _id: "67b7b98b4767af842e0521f6",
-        quest_id: "66b57e52fcf263f4d70af3eb"
+        quest_id: "66b57e52fcf263f4d70af3f4"
+    }, 
+    rig: {
+        _id: "67b7b98b4767af842e0521f7",
+        quest_id: "66b57e52fcf263f4d70b0f45"
     }, 
     helmet: {
-        _id: "67b7b98b4767af842e0521f7",
+        _id: "67b7b98b4767af842e0521f9",
         quest_id: "66b57e52fcf263f4d70af3ec"
     }, 
     headset: {
-        _id: "67b7b98b4767af842e0521f8",
+        _id: "67b7b98b4767af842e0521fa",
         quest_id: "66b57e52fcf263f4d70af3ed"
     }, 
     armor: {
@@ -69,8 +83,8 @@ export let MysteryContainerInfo: Record<string, itemProps> = {
         quest_id: "66b57e52fcf263f4d70af3ef"
     }, 
     premium_weapon: {
-        _id: "67b7b98b4767af842e0521f1",
-        quest_id: "66b57e52fcf263f4d70af3f0"
+        _id: "67b7b98b4767af842e0521f3",
+        quest_id: "66b57e52fcf263f4d70af3eb"
     },
     '7.62x25': {
         _id: "67b7b98b4767af842e0521d0",
