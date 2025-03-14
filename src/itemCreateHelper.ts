@@ -2313,8 +2313,8 @@ export class ItemCreateHelper {
                 _proto: "",
                 _type: "Item"
             },
-            fleaPriceRoubles: 100000,
-            handbookPriceRoubles: 100000,
+            fleaPriceRoubles: 130000,
+            handbookPriceRoubles: 130000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -2418,8 +2418,8 @@ export class ItemCreateHelper {
                 _proto: "",
                 _type: "Item"
             },
-            fleaPriceRoubles: 340000,
-            handbookPriceRoubles: 340000,
+            fleaPriceRoubles: 350000,
+            handbookPriceRoubles: 350000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {

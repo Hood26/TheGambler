@@ -60,7 +60,7 @@ export class Price{
             containerPrices[name + "_price"] = currentContainerPrice;
         }
 
-        this.logger.success("[GamblerTrader] Mystery Container Price Generation Complete!");
+        this.logger.success("[GamblerTrader] Mystery Box Price Generation Complete!");
         //console.log("Mystery Container Prices")
         //console.log(containerPrices)
         return containerPrices;

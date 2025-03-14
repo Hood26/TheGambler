@@ -3,7 +3,7 @@
     "version": "0.2.6",
     "sptVersion": "~3.10",
     "loadBefore": [],
-    "loadAfter": [],
+    "loadAfter": ["zzDrakiaXYZ-LiveFleaPrices"],
     "incompatibilities": [],
     "isBundleMod": true,
     "main": "src/mod.js",
