@@ -414,30 +414,30 @@
   "odds": {
     // Mystery Wallet
     // Chance for each possibility in percentage from rarest to most common
-    "wallet_extremely_rare": 0.1,    // 10 Million Roubles
-    "wallet_extra_rare": 0.25,       // 5 Million Roubles
-    "wallet_kinda_rare": 0.5,       // 2.5 Million Roubles
-    "wallet_rare": 2.65,              // 1 Million Roubles
-    "wallet_extra_uncommon": 4.0,    // 750k Roubles
-    "wallet_more_uncommon": 10.0,    // 500k Roubles
-    "wallet_uncommon": 15.0,         // 250k Roubles
-    "wallet_common": 20.0,           // 150k Roubles
-    "wallet_extra_common": 22.5,     // 75K Roubles
-    "wallet_base": 25.0,             // 25k Roubles
-    "wallet_profit_percentage": 0.98,// Container Profitability 
+    "wallet_extremely_rare": 0.01,    // 10 Million Roubles
+    "wallet_extra_rare": 0.1,         // 5 Million Roubles
+    "wallet_kinda_rare": 0.4,         // 2.5 Million Roubles
+    "wallet_rare": 1.45,              // 1Million Roubles
+    "wallet_extra_uncommon": 7.0,     // 500k Roubles
+    "wallet_more_uncommon": 11.0,     // 250k Roubles
+    "wallet_uncommon": 15.0,          // 100k Roubles
+    "wallet_common": 20.0,            // 50k Roubles
+    "wallet_extra_common": 20.0,      // 25K Roubles
+    "wallet_base": 25.0,              // 0k Roubles
+    "wallet_profit_percentage": 0.95, //Container Profitability 
 
     // Mystery Keycard
     "keycard_red": 0.1,           // Red Keycard
     "keycard_green": 0.2,         // Green Keycard
     "keycard_blue": 0.4,          // Blue Keycard
-    "keycard_violet": 1.0,       // Violet Keycard
+    "keycard_violet": 1.0,        // Violet Keycard
     "keycard_black": 2.0,         // Black Keycard
     "keycard_yellow": 3.0,        // Yellow Keycard
-    "keycard_blue_marking": 4.0, // Keycard with blue marking
+    "keycard_blue_marking": 4.0,  // Keycard with blue marking
     "keycard_21WS": 8.0,          // 21WS Keycard
     "keycard_11SR": 8.0,          // 11SR Keycard
     "keycard_access": 40.0,       // Access Keycard
-    "keycard_profit_percentage": 0.94, // Container Profitability
+    "keycard_profit_percentage": 0.93, // Container Profitability
 
     
     // Mystery Key
@@ -445,26 +445,26 @@
     "key_rare": 5.0,              // Rare Key
     "key_uncommon": 24.5,         // Uncommon Key
     "key_common": 70.0,           // Common Key
-    "key_profit_percentage": 0.93, // Container Profitability
+    "key_profit_percentage": 0.92,// Container Profitability
 
     // Mystery Stimulant
     "stim_extremely_rare": 10.0,   // Extremely Rare Key
     "stim_rare": 15.0,             // Rare Stim
     "stim_uncommon": 25.0,         // Uncommon Stim
     "stim_common": 50.0,           // Common Stim
-    "stim_profit_percentage": 0.94, // Container Profitability
+    "stim_profit_percentage": 0.94,// Container Profitability
 
     // Mystery Medical Box
     "medical_rare": 12.0,             // Rare Meds
     "medical_uncommon": 30.0,         // Uncommon Meds
     "medical_common": 58.0,           // Common Meds
-    "medical_profit_percentage": 1.00, // Container Profitability DOESN'T WORK AS THIS CONTAINER IS BOUGHT BY BARTER
+    "medical_profit_percentage": 1.00,// Container Profitability DOESN'T WORK AS THIS CONTAINER IS BOUGHT BY BARTER
     
     // Mystery Food
     "food_rare": 5.0,              // Rare Food
     "food_uncommon": 35.0,         // Uncommon Food
     "food_common": 60.0,           // Common Food
-    "food_profit_percentage": 0.94, // Container Profitability
+    "food_profit_percentage": 0.89,// Container Profitability
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -541,21 +541,21 @@
     "melee_rare": 2.0,              // Rare melee
     "melee_uncommon": 22.75,        // Uncommon melee
     "melee_common": 75.0,           // Common melee
-    "melee_profit_percentage": 0.94, // Container Profitability
+    "melee_profit_percentage": 0.92, // Container Profitability
 
     // Mystery Backpack
     "backpack_extremely_rare": 5.0, // Extremely Rare backpack
     "backpack_rare": 20.0,          // Rare backpack
     "backpack_uncommon": 35.0,      // Uncommon backpack
     "backpack_common": 40.0,        // Common backpack
-    "backpack_profit_percentage": 0.94, // Container Profitability
+    "backpack_profit_percentage": 0.90, // Container Profitability
 
     // Mystery Tactical Rig
     "rig_boss": 5.0,               // Extremely Rare rig
     "rig_late_wipe": 30.0,         // Rare rig
     "rig_early_wipe": 40.0,        // Uncommon rig
     "rig_scav": 25.0,              // Common rig
-    "rig_profit_percentage": 0.94, // Container Profitability
+    "rig_profit_percentage": 0.88, // Container Profitability
 
     // Weapon Mystery Box
     "weapon_meta": 20.0,              // Meta Weapon
@@ -588,23 +588,23 @@
     "helmet_rare": 17.5,              // Rare Helmet
     "helmet_uncommon": 27.5,          // Uncommon Helmet
     "helmet_common": 54.65,           // Common Helmet
-    "helmet_profit_percentage": 0.86, // Container Profitability
+    "helmet_profit_percentage": 0.87, // Container Profitability
 
     // Mystery Headset
     "headset_rare": 8.0,             // Rare Headset
     "headset_uncommon": 42.0,         // Uncommon Headset
     "headset_common": 50.0,           // Common Headset
-    "headset_profit_percentage": 0.92, // Container Profitability
+    "headset_profit_percentage": 0.85, // Container Profitability
 
     // Armor Mystery Box
     "armor_rare": 20.0,             // Rare Armor
     "armor_uncommon": 40.0,         // Uncommon Armor
     "armor_common": 40.5,           // Common Armor
-    "armor_profit_percentage": 0.93, // Container Profitability
+    "armor_profit_percentage": 0.88, // Container Profitability
 
     // Premium Armor Mystery Box
     "premium_armor_rare": 100.0,           // Rare Armor
-    "premium_armor_profit_percentage": 0.98, // Container Profitability
+    "premium_armor_profit_percentage": 0.88, // Container Profitability
 
     // Mystery 7.62x25 NOT SOLD BY TRADER CURRENTLY, ONLY USED FOR LOADOUT AMMO GENERATION
     "7.62x25_common": 45.0,          // Common Round 7.62x25
