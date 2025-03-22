@@ -28,11 +28,11 @@ import { Money } from "@spt/models/enums/Money";
 
 
 // New trader classes and config
+import * as fs from 'fs';
 import * as baseJson from "../db/base.json";
 import { TraderHelper } from "./traderHelpers";
 import { ItemCreateHelper } from "./itemCreateHelper";
 import { FluentAssortConstructor as FluentAssortCreator } from "./fluentTraderAssortCreator";
-import { VFS } from "@spt/utils/VFS";
 import { jsonc } from "jsonc";
 import path from "path";
 import { Gamble } from "./Gamble";
@@ -84,9 +84,8 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         const configServer = container.resolve<ConfigServer>("ConfigServer");
         const traderConfig: ITraderConfig = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const ragfairConfig = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
-        const vfs = container.resolve<VFS>("VFS")
-        
-        this.config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
+        this.config = jsonc.parse(fs.readFileSync(path.resolve(__dirname, "../config/config.jsonc"), "utf-8"));
+        //console.log(this.config);
         this.hashUtil = hashUtil;
         this.traderHelper = new TraderHelper();
         this.fluentAssortCreator = new FluentAssortCreator(hashUtil, this.logger);

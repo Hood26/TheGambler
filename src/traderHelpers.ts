@@ -12,7 +12,7 @@ import { FluentAssortConstructor as FluentAssortCreator } from "./fluentTraderAs
 import { Money } from "@spt/models/enums/Money";
 import * as baseJson from "../db/base.json";
 
-import { VFS } from "@spt/utils/VFS";
+import * as fs from 'fs';
 import { jsonc } from "jsonc";
 import path from "path";
 import { Price } from "./Price";
@@ -132,8 +132,7 @@ export class TraderHelper
      */
      public addSingleItemsToTrader(tables: IDatabaseTables, traderId: string, assortCreator: FluentAssortCreator, container: DependencyContainer, logger: ILogger) : void {
 
-        const vfs = container.resolve<VFS>("VFS")
-        const config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
+        const config = jsonc.parse(fs.readFileSync(path.resolve(__dirname, "../config/config.jsonc"), "utf-8"));
         const MEDICAL_GAMBLE_ID = "67b7b98b4767af842e0521fb";
         const BITCOIN_GAMBLE_ID = "67b7b98b4767af842e0521ec"; // new aa_bitcoin_gamble
         const GPCOIN_GAMBLE_ID = "67b7b98b4767af842e0521ed";   // new aa_gpcoin_gamble

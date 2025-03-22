@@ -5,7 +5,7 @@ import { NewItemFromCloneDetails } from "@spt/models/spt/mod/NewItemDetails";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { MysteryContainerInfo } from "./MysteryContainerInfo";
 
-import { VFS } from "@spt/utils/VFS";
+import * as fs from 'fs';
 import { jsonc } from "jsonc";
 import path from "path";
 
@@ -17,8 +17,7 @@ export class ItemCreateHelper {
     // Create customs Items and store them in the database
     public createItems(container: DependencyContainer) {
         const db: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-        const vfs = container.resolve<VFS>("VFS");
-        this.config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
+        this.config = jsonc.parse(fs.readFileSync(path.resolve(__dirname, "../config/config.jsonc"), "utf-8"));
 
         // Resolve the CustomItemService container
         const customItem = container.resolve<CustomItemService>("CustomItemService");
