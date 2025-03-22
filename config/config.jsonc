@@ -563,7 +563,7 @@
     "weapon_scav": 22.3,              // Scav Weapon
     "weapon_meme": 7.7,               // Meme Weapon
     "weapon_base": 20.0,              // Default Weapon
-    "weapon_profit_percentage": 0.78, // Container Profitability
+    "weapon_profit_percentage": 0.74, // Container Profitability
 
 
     /*
@@ -600,11 +600,11 @@
     "armor_rare": 20.0,             // Rare Armor
     "armor_uncommon": 40.0,         // Uncommon Armor
     "armor_common": 40.5,           // Common Armor
-    "armor_profit_percentage": 0.88, // Container Profitability
+    "armor_profit_percentage": 0.92, // Container Profitability
 
     // Premium Armor Mystery Box
     "premium_armor_rare": 100.0,           // Rare Armor
-    "premium_armor_profit_percentage": 0.88, // Container Profitability
+    "premium_armor_profit_percentage": 0.90, // Container Profitability
 
     // Mystery 7.62x25 NOT SOLD BY TRADER CURRENTLY, ONLY USED FOR LOADOUT AMMO GENERATION
     "7.62x25_common": 45.0,          // Common Round 7.62x25
