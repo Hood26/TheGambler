@@ -445,7 +445,7 @@
     "key_rare": 5.0,              // Rare Key
     "key_uncommon": 24.5,         // Uncommon Key
     "key_common": 70.0,           // Common Key
-    "key_profit_percentage": 0.92,// Container Profitability
+    "key_profit_percentage": 0.93,// Container Profitability
 
     // Mystery Stimulant
     "stim_extremely_rare": 10.0,   // Extremely Rare Key
@@ -464,7 +464,7 @@
     "food_rare": 5.0,              // Rare Food
     "food_uncommon": 35.0,         // Uncommon Food
     "food_common": 60.0,           // Common Food
-    "food_profit_percentage": 0.89,// Container Profitability
+    "food_profit_percentage": 0.88,// Container Profitability
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -548,14 +548,14 @@
     "backpack_rare": 20.0,          // Rare backpack
     "backpack_uncommon": 35.0,      // Uncommon backpack
     "backpack_common": 40.0,        // Common backpack
-    "backpack_profit_percentage": 0.90, // Container Profitability
+    "backpack_profit_percentage": 0.86, // Container Profitability
 
     // Mystery Tactical Rig
     "rig_boss": 5.0,               // Extremely Rare rig
     "rig_late_wipe": 30.0,         // Rare rig
     "rig_early_wipe": 40.0,        // Uncommon rig
     "rig_scav": 25.0,              // Common rig
-    "rig_profit_percentage": 0.88, // Container Profitability
+    "rig_profit_percentage": 0.94, // Container Profitability
 
     // Weapon Mystery Box
     "weapon_meta": 20.0,              // Meta Weapon
@@ -594,7 +594,7 @@
     "headset_rare": 8.0,             // Rare Headset
     "headset_uncommon": 42.0,         // Uncommon Headset
     "headset_common": 50.0,           // Common Headset
-    "headset_profit_percentage": 0.85, // Container Profitability
+    "headset_profit_percentage": 0.95, // Container Profitability
 
     // Armor Mystery Box
     "armor_rare": 20.0,             // Rare Armor

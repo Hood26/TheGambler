@@ -132,6 +132,7 @@ export class Price{
             prices.push(sum);
             sum = 0;
         }
+
         this.MysteryContainer.setRarityAverageProfit(name, prices);
         return prices;
     }

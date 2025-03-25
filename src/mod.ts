@@ -1,9 +1,10 @@
 // SPT types
 import { DependencyContainer } from "tsyringe";
 import { IPreSptLoadMod } from "@spt/models/external/IPreSptLoadMod";
-import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { PreSptModLoader } from "@spt/loaders/PreSptModLoader";
+import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
+import { IPostSptLoadMod } from "@spt/models/external/IPostSptLoadMod";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { ImageRouter } from "@spt/routers/ImageRouter";
 import { ConfigServer } from "@spt/servers/ConfigServer";
@@ -18,15 +19,10 @@ import { LootGenerator } from "@spt/generators/LootGenerator";
 import { InventoryHelper } from "@spt/helpers/InventoryHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
-import { RandomUtil } from "@spt/utils/RandomUtil";
 import { InventoryController } from "@spt/controllers/InventoryController";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { HashUtil } from "@spt/utils/HashUtil";
 import { IAddItemDirectRequest } from "@spt/models/eft/inventory/IAddItemsDirectRequest";
-import { Item } from "../common/tables/IItem";
-import { Money } from "@spt/models/enums/Money";
-
-
 // New trader classes and config
 import * as fs from 'fs';
 import * as baseJson from "../db/base.json";
@@ -37,7 +33,7 @@ import { jsonc } from "jsonc";
 import path from "path";
 import { Gamble } from "./Gamble";
 
-class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
+class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
 {
     private mod: string
     private logger: ILogger
@@ -88,7 +84,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         //console.log(this.config);
         this.hashUtil = hashUtil;
         this.traderHelper = new TraderHelper();
-        this.fluentAssortCreator = new FluentAssortCreator(hashUtil, this.logger);
+        this.fluentAssortCreator = new FluentAssortCreator(this.hashUtil, this.logger);
         this.traderHelper.registerProfileImage(baseJson, 'GamblerTrader', preSptModLoader, imageRouter, "thegambler.jpg");
         this.traderHelper.setTraderUpdateTime(traderConfig, baseJson, this.config.trader_update_min_time, this.config.trader_update_max_time);
 
@@ -104,7 +100,6 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         const jsonUtil: JsonUtil = container.resolve<JsonUtil>("JsonUtil");
         // Creates and stores new gambling items in database
         const itemCreate = new ItemCreateHelper();
-
         itemCreate.createItems(container)
 
         // Get a reference to the database tables
@@ -112,9 +107,6 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
 
         // Add new trader to the trader dictionary in DatabaseServer - has no assorts (items) yet
         this.traderHelper.addTraderToDb(baseJson, tables, jsonUtil);
-
-        // Add gambling containers to trader
-        this.traderHelper.addSingleItemsToTrader(tables, baseJson._id, this.fluentAssortCreator, container, this.logger);
 
         // Add trader to locale file, ensures trader text shows properly on screen
         // WARNING: adds the same text to ALL locales (e.g. chinese/french/english)
@@ -160,6 +152,14 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         */
         
         this.logger.debug(`[${this.mod}] postDb Loaded`);
+    }
+
+    public postSptLoad(container: DependencyContainer): void {
+
+        const databaseServer: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+        const tables = databaseServer.getTables();
+        this.traderHelper.addSingleItemsToTrader(tables, baseJson._id, this.fluentAssortCreator, container, this.logger);
+
     }
 
     public newOpenRandomLoot(container: DependencyContainer, pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID: string): IItemEventRouterResponse {
