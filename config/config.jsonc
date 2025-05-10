@@ -532,9 +532,11 @@
 
     // Mystery Bitcoin 50/50
     "bitcoin_success": 50.0,      // Two Bitcoins
+    "bitcoin_failure": 50.0,      // Two Bitcoins
 
     // Mystery GP Coin 50/50
     "gpcoin_success": 50.0,      // Two Bitcoins
+    "gpcoin_failure": 50.0,      // Two Bitcoins
 
     // Mystery Melee
     "melee_extremely_rare": 0.25,   // Extremely Rare melee

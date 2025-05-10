@@ -34,7 +34,7 @@ export class Price{
     public generateContainerPrices(): {} {
         let containerPrices = {};
         const mysteryContainerNames = [...this.MysteryContainer.simulation, ...this.MysteryContainer.items.ammo.names];
-        //console.log(mysteryContainerNames)
+        console.log(mysteryContainerNames)
 
         for (let i = 0; i < mysteryContainerNames.length; i++) {
             const name: string = this.MysteryContainer.getName(mysteryContainerNames[i]);
@@ -110,21 +110,21 @@ export class Price{
     private getMysteryContainerPrices(name: string ,parent: string, rarities: Array<string>, items: any, amount: number = 1): Array<number> {
         let prices: Array<number>    = [];
         let sum: number              = 0;
-
+        
         for(let i = 0; i < rarities.length; i++){
             let count = 0;
             for (let j = 0; j < items.rewards[i].length; j++){
                 const currentItem = items.rewards[i][j];
                 let currentPrice: number = 0;
-
+                
                 if (currentItem == '5449016a4bdc2d6f028b456f') { // isRoubles
                     currentPrice = this.MysteryContainer.items[parent].reward_amount[i];
                     //console.log('Roubles Price: ' + currentPrice)
                 } else {
                     currentPrice =  this.getItemPrice(parent, currentItem, amount);
-
+                    
                 }
-
+                
                 sum = sum + currentPrice;
                 count++; 
             }
@@ -132,6 +132,13 @@ export class Price{
             prices.push(sum);
             sum = 0;
         }
+        
+        /*
+        console.log(name)
+        if (name == 'helmet') {
+            console.log(prices);
+        }
+            */
 
         this.MysteryContainer.setRarityAverageProfit(name, prices);
         return prices;
@@ -220,15 +227,18 @@ export class Price{
                 weaponPricesPerTier.push(Math.floor(sum));
                 sum = 0;
             }
-            //if ( name == 'helmet') {
-                //console.log('Helmet Rarity = ' + rarities[i]);
-                //console.log(weaponPricesPerTier)
-            //}
+            if ( name == 'helmet') {
+                console.log('Helmet Rarity = ' + rarities[i]);
+                console.log(weaponPricesPerTier)
+            }
             const tierSum = weaponPricesPerTier.reduce((a, b) => a + b, 0);
             sum = tierSum / count;
             prices.push(Math.floor(sum));
             sum = 0;
             weaponPricesPerTier = [];
+        }
+        if ( name == 'helmet') {
+            console.log(prices)
         }
         this.MysteryContainer.setRarityAverageProfit(name, prices);
         return prices;

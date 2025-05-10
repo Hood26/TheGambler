@@ -259,9 +259,8 @@ export class TraderHelper
                                 .addLoyaltyLevel(1)
                                 .export(tables.traders[baseJson._id]);
                                 */
+                               
 
-         //finish this                       
-        
         for (let i in Object.keys(names)) {
             const name = Object.keys(names)[i];
             const current = Object.values(names)[i];

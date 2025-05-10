@@ -55,7 +55,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
 
         container.afterResolution("InventoryController", (_t, result: InventoryController) => 
             {
-                result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string) =>
+                result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string, output: IItemEventRouterResponse) =>
                 {
                     return this.newOpenRandomLoot(container, pmcData, body, sessionID);
                 }
@@ -169,10 +169,11 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
         const eventOutputHolder = container.resolve<EventOutputHolder>("EventOutputHolder");
         const openedItem = pmcData.Inventory.items.find(x => x._id === body.item);
+        const output = eventOutputHolder.getOutput(sessionID);
+        console.log('OHHHHHHHHHH FUKKKKKKKKKKKKKKKKKKKKKKK')
 
         if (itemHelper.getItem(openedItem._tpl) == undefined){
             this.logger.error("[GamblerTrader] Cannot find unboxed mystery container in Inventory... Best option is to restart game.. I am not fully sure why this happens...")
-            const output = eventOutputHolder.getOutput(sessionID);
             return output;
         }
 
@@ -188,23 +189,13 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         const isSealedWeaponBox = containerDetails[1]._name.includes("event_container_airdrop"); // default airdrop container
         const isRefSealedWeaponBox = containerDetails[1]._name.includes("Arena_weaponcrate_blue_open"); // Ref Unlocked Weapons Container
         const isGamblingContainer = containerDetails[1]._name.includes("gambling_"); // Gambler items are tagged with "gambling_container" identifier
+        const unlockedWeaponCrates = [
+            "665829424de4820934746ce6",
+            "665732e7ac60f009f270d1ef",
+            "665888282c4a1b73af576b77",
+        ];
 
-        if(isSealedWeaponBox || isRefSealedWeaponBox) { // currently iseRefSealedWeaponBox uses the same exact loot generation as isSealedWeaponBox in spt 3.9.1
-            // Sealed Weapon container
-            // Get summary of loot from config
-            const containerSettings = inventoryHelper.getInventoryConfig().sealedAirdropContainer;
-            // This id is bugged and we have to delete it or bad shit will happen. Looks like SPT base bug?
-            delete(containerSettings.weaponRewardWeight['5e848cc2988a8701445df1e8']) 
-            try {
-                newItemsRequest.itemsWithModsToAdd.push(...lootGenerator.getSealedWeaponCaseLoot(containerSettings));
-            } catch (e) {
-                console.log(containerSettings);
-                console.log(e);
-                console.log("[GamblerTrader] Unboxing error! Failed to unbox weapon box, please post your server logs to the Gambler Trader mod page comments to receive support!");
-            }
-            newItemsRequest.foundInRaid = containerSettings.foundInRaid;
-
-        } else if (isGamblingContainer){
+        if (isGamblingContainer) {
             // All TheGambler Custom Gambling Happens Here
             const currentContainer = containerDetails[1];
             gamble = new Gamble(container, this.config, this.logger, currentContainer._name);
@@ -214,18 +205,28 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
                 newItemsRequest.itemsWithModsToAdd = [...gamble.newItemsRequest.itemsWithModsToAdd]
                 newItemsRequest.foundInRaid  = gamble.newItemsRequest.foundInRaid;
             }
-
         } else {
-            // Other containers
-            //this.logger.info(`GET RANDOM LOOT CONTAINER LOOT`);
-            // Get summary of loot from config
-            const rewardContainerDetails = inventoryHelper.getRandomLootContainerRewardDetails(openedItem._tpl);
-            const getLoot = lootGenerator.getRandomLootContainerLoot(rewardContainerDetails);
-            newItemsRequest.itemsWithModsToAdd.push(...getLoot);
-            newItemsRequest.foundInRaid = rewardContainerDetails.foundInRaid; 
-        }
+            if (isSealedWeaponBox || unlockedWeaponCrates.includes(containerDetails[1]._id)) {
+                const containerSettings = inventoryHelper.getInventoryConfig().sealedAirdropContainer;
+                newItemsRequest.itemsWithModsToAdd.push(...lootGenerator.getSealedWeaponCaseLoot(containerSettings));
 
-        const output = eventOutputHolder.getOutput(sessionID);
+                if (containerSettings.foundInRaid) {
+                    newItemsRequest.foundInRaid = containerSettings.foundInRaid;
+                }
+            } else {
+                const rewardContainerDetails = inventoryHelper.getRandomLootContainerRewardDetails(openedItem._tpl);
+                if (!rewardContainerDetails || !rewardContainerDetails.rewardCount) {
+                    this.logger.error(`Unable to add loot to container: ${openedItem._tpl}, no rewards found`);
+                } else {
+                    newItemsRequest.itemsWithModsToAdd.push(...lootGenerator.getRandomLootContainerLoot(rewardContainerDetails));
+
+                    if (rewardContainerDetails.foundInRaid) {
+                        newItemsRequest.foundInRaid = rewardContainerDetails.foundInRaid;
+                    }
+                }
+            }
+        }
+        
         let multipleItems: any;
 
         if (newItemsRequest.itemsWithModsToAdd.length != 0) {
