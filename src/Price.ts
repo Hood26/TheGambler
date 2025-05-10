@@ -80,21 +80,29 @@ export class Price{
         let currentPrice: number = 0;
 
         if (override && this.config['mystery_container_override_enable']) {
-            currentPrice = override * amount;
-            //if (parent == 'armor') {
-                //console.log('Armor Override Price: ' + currentPrice)
-            //}
+            currentPrice = override;
 
         } else {
-            // Thinking: We always want to use flea price as this is most accurate, but if there is no flea price we must fallback to handbook
+
+            const traderPrice = this.traderAssortPrice(currentItem);
             const fleaPrice = itemHelper.getDynamicItemPrice(currentItem);
-            if (fleaPrice == 0) {
-                currentPrice = itemHelper.getItemMaxPrice(currentItem) * amount;
+
+            if (traderPrice != 0 && fleaPrice == 0) {
+                currentPrice = traderPrice;
+            } else if (traderPrice == 0 && fleaPrice != 0) {
+                currentPrice = fleaPrice
             } else {
-                currentPrice = fleaPrice * amount;
+                currentPrice = Math.min(traderPrice, fleaPrice); // use cheapest option
+            } 
+
+
+            if (currentPrice == 0) { // item is not sold by trader and is not sold on flea, must use handbook price. Nuclear option.
+                currentPrice = itemHelper.getItemMaxPrice(currentItem)
+                //console.log(currentItem)
+                //console.log(currentPrice)
             }
         }
-        return currentPrice;
+        return currentPrice * amount;
     }
 
     /**
@@ -154,7 +162,7 @@ export class Price{
     private traderAssortPrice(currentItem: string): any {
         const databaseServer: DatabaseServer = this.container.resolve<DatabaseServer>("DatabaseServer");
         const tables = databaseServer.getTables();
-        const traderIDs = ['58330581ace78e27b8b10cee', '54cb50c76803fa8b248b4571', '5c0647fdd443bc2504c2d371', '5a7c2eca46aef81a7ca2145d', '5935c25fb3acc3127c3d8cd9'];
+        const traderIDs = ['58330581ace78e27b8b10cee', '54cb50c76803fa8b248b4571', '5c0647fdd443bc2504c2d371', '5a7c2eca46aef81a7ca2145d', '5935c25fb3acc3127c3d8cd9', '5ac3b934156ae10c4430e83c'];
         let price = 0;
         
         for (const traderID of traderIDs) {
@@ -191,10 +199,12 @@ export class Price{
      * @returns An array of preset prices.
      */
     private getContainerPresetPrices(name: string ,parent: string, rarities: Array<string>, items: any, amount: number = 1): Array<number> {
+        const itemHelper: ItemHelper = this.container.resolve<ItemHelper>("ItemHelper");
         let prices: Array<number>    = [];
         let weaponPricesPerTier: Array<number> = [];
         let tierTotal: number        = 0;
         let sum: number              = 0;
+        const helmet_slots = ['helmet_top', 'helmet_back', 'helmet_ears'];
 
         for(let i = 0; i < rarities.length; i++){
             let count = 0;
@@ -204,22 +214,23 @@ export class Price{
                     let currentPrice: number = 0;
                     let currentItem = items.presets[i][j].Items[k]._tpl;
 
-                    if (name == 'helmet') { // skip usless helmet attachments
-                        if (items.presets[i][j].Items[k].slotId == 'Helmet_top') continue;
-                        if (items.presets[i][j].Items[k].slotId == 'Helmet_back') continue;
+                    if (name == 'helmet') {
+                        if (helmet_slots.includes(items.presets[i][j].Items[k].slotId)) continue; // skip usless helmet attachments
+
+                        //if (i == 1 && j == 0) { // Testing
+                            //console.log(items.presets[i][j].Items[k])
+                            //console.log('ID = ' + currentItem);
+                            //console.log(itemHelper.getDynamicItemPrice(currentItem))
+                            //console.log(itemHelper.getItemMaxPrice(currentItem))
+                            //console.log(this.traderAssortPrice(currentItem))
+                        //}
                     }
                     if (this.config.skip_base_attachments.includes(currentItem)) { // attachment is a base attachment, skip...
                         continue;
 
                     } else {
-                        if (name == 'weapon' || name == 'premium_weapon') { // If weapon, we check if a trader sells the attachment
-                            currentPrice = this.traderAssortPrice(currentItem);
-                        }
-
-                        if (currentPrice == 0) { // No traders sell the attachment, we get the flea price
-                            currentPrice = this.getItemPrice(parent, currentItem, amount); // get override or flea price
-                        }
-
+                        // flea or override price
+                        currentPrice = this.getItemPrice(parent, currentItem, amount);
                         sum = sum + currentPrice;
                     }   
                 }

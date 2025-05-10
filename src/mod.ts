@@ -55,7 +55,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
 
         container.afterResolution("InventoryController", (_t, result: InventoryController) => 
             {
-                result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string, output: IItemEventRouterResponse) =>
+                result.openRandomLootContainer = (pmcData: IPmcData, body: IOpenRandomLootContainerRequestData, sessionID : string) =>
                 {
                     return this.newOpenRandomLoot(container, pmcData, body, sessionID);
                 }
@@ -170,7 +170,6 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         const eventOutputHolder = container.resolve<EventOutputHolder>("EventOutputHolder");
         const openedItem = pmcData.Inventory.items.find(x => x._id === body.item);
         const output = eventOutputHolder.getOutput(sessionID);
-        console.log('OHHHHHHHHHH FUKKKKKKKKKKKKKKKKKKKKKKK')
 
         if (itemHelper.getItem(openedItem._tpl) == undefined){
             this.logger.error("[GamblerTrader] Cannot find unboxed mystery container in Inventory... Best option is to restart game.. I am not fully sure why this happens...")

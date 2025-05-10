@@ -586,9 +586,9 @@
 
 
     // Mystery Helmet
-    "helmet_extremely_rare": 0.35,    // Extremely Rare Helmet
+    "helmet_extremely_rare": 0.25,    // Extremely Rare Helmet
     "helmet_rare": 17.5,              // Rare Helmet
-    "helmet_uncommon": 27.5,          // Uncommon Helmet
+    "helmet_uncommon": 27.65,          // Uncommon Helmet
     "helmet_common": 54.65,           // Common Helmet
     "helmet_profit_percentage": 0.87, // Container Profitability
 
@@ -922,7 +922,8 @@
       "5c07c60e0db834002330051f": 33000   // ADAR 2-15 5.56x45 carbine
     }, 
     "helmet": {
-      "5c110624d174af029e69734c": 4000000 // T-7 Thermal Goggles with a Night Vision mount
+      "5c110624d174af029e69734c": 4000000, // T-7 Thermal Goggles with a Night Vision mount
+      "5a154d5cfcdbcb001a3b00da": 120000 // Fast MT Black variant
     }
   },
 
@@ -1812,6 +1813,21 @@
     "5ac50da15acfc4001718d287", // AK-74M dust cover (6P34 0-1)
     "5ac733a45acfc400192630e2", // AK-105 rear sight (6P44 Sb.1-30)
     "5ac50c185acfc400163398d4", // AK-74M polymer stock (6P34 Sb.15)
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
+    "668670e3fb75ee4a5e02eb16", // UZI Pro Nut
+    "669946c157df3e2b4e0a0dc5", // UZI pistol grip cover
+    "62444cd3674028188b052799", // HK G36 side handguard rail
+    "622f16a1a5958f63c67f1737", // HK G36 hand stop
+    "619f52454c58466fe122843b", // Chiappa Rhino Red Fiber Optic front sight
+    "658188edf026a90c1708c827", // Built-in face shield
+    "65818e4e566d2de69901b1b1", // Built-in face shield
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
+    "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
     "5ac66bea5acfc43b321d4aec", // AK-103 7.62x39 30-round magazine
     "5648b1504bdc2d9d488b4584" // AK-74 polymer handguard (6P20 Sb.9)
   ]

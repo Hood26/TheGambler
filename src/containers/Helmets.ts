@@ -61,14 +61,14 @@ export class Helmets {
             _id: "f84e6eadc118c309abef02b8",
             _tpl: "657f9a55c6679fefb3051e19",
             parentId: "0bb11619daa78cd21159b0b1",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "cf4e22fdecb780e0479ed861",
             _tpl: "657f9a94ada5fadd1f07a589",
             parentId: "0bb11619daa78cd21159b0b1",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
           {
@@ -141,7 +141,7 @@ export class Helmets {
             _id: "bec4ed595c2d65e284dfcbf8",
             _tpl: "657f9897f4c82973640b235e",
             parentId: "21450386f70fa5985f78144f",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -150,7 +150,7 @@ export class Helmets {
             _id: "56a8e6e4222f87ac89f34a24",
             _tpl: "657f98fbada5fadd1f07a585",
             parentId: "21450386f70fa5985f78144f",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -399,7 +399,7 @@ export class Helmets {
             _id: "54ceffe2a20965bd770d2f1e",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "82c4a82fd665659af58b9039",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -408,7 +408,7 @@ export class Helmets {
             _id: "0bcd3d0fb03fc0a99e4e6b06",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "82c4a82fd665659af58b9039",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -502,7 +502,7 @@ export class Helmets {
             _id: "be332fcdcdc2c3d2cabc8e52",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "b739edbe8c1efe41bfccbf25",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -511,7 +511,7 @@ export class Helmets {
             _id: "b2dcccb612f1064375b0550c",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "b739edbe8c1efe41bfccbf25",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -607,7 +607,7 @@ export class Helmets {
             _id: "0e1dcc2d27baa6d5e454cb35",
             _tpl: "657f9897f4c82973640b235e",
             parentId: "8e06ca14f870efad77944c5b",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -616,7 +616,7 @@ export class Helmets {
             _id: "859e9d4719e1d6f6e79c0bcd",
             _tpl: "657f98fbada5fadd1f07a585",
             parentId: "8e06ca14f870efad77944c5b",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -663,7 +663,7 @@ export class Helmets {
             _id: "2e34ee135c6382110c4402c1",
             _tpl: "657f9a55c6679fefb3051e19",
             parentId: "2d9b14d2508e942ac744ec06",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -672,7 +672,7 @@ export class Helmets {
             _id: "7dba21e92ffb98dc0c5cb636",
             _tpl: "657f9a94ada5fadd1f07a589",
             parentId: "2d9b14d2508e942ac744ec06",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -731,14 +731,14 @@ export class Helmets {
             _id: "b1460dabaf0dc2d4311b13aa",
             _tpl: "657f9eb7e9433140ad0baf86",
             parentId: "6d69bfc5e607da7fcbcbe18b",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "ed6f31b445bb19b6bd8e0c8d",
             _tpl: "657f9ef6c6679fefb3051e1f",
             parentId: "6d69bfc5e607da7fcbcbe18b",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
           {
@@ -780,7 +780,7 @@ export class Helmets {
             _id: "c993ffb00a274b9c223ba301",
             _tpl: "657112234269e9a568089eac",
             parentId: "d55e3ce064037466739a633e",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -789,7 +789,7 @@ export class Helmets {
             _id: "ba5c326a65ffd2a8ab9073fa",
             _tpl: "657112a4818110db4600aa66",
             parentId: "d55e3ce064037466739a633e",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -798,7 +798,7 @@ export class Helmets {
             _id: "acecb460edffd633404879c7",
             _tpl: "657112ce22996eaf110881fb",
             parentId: "d55e3ce064037466739a633e",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -828,7 +828,7 @@ export class Helmets {
             _id: "c993ffb00a274b9c223ba301",
             _tpl: "657112234269e9a568089eac",
             parentId: "d55e3ce064037466739a633e",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -837,7 +837,7 @@ export class Helmets {
             _id: "ba5c326a65ffd2a8ab9073fa",
             _tpl: "657112a4818110db4600aa66",
             parentId: "d55e3ce064037466739a633e",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -846,7 +846,7 @@ export class Helmets {
             _id: "acecb460edffd633404879c7",
             _tpl: "657112ce22996eaf110881fb",
             parentId: "d55e3ce064037466739a633e",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -876,7 +876,7 @@ export class Helmets {
             _id: "ee502a1572b2c878b2ed84f0",
             _tpl: "657112234269e9a568089eac",
             parentId: "f0ce3e1011318cd300861fbb",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -885,7 +885,7 @@ export class Helmets {
             _id: "b52fc88a5ea4eb722a562e8a",
             _tpl: "657112a4818110db4600aa66",
             parentId: "f0ce3e1011318cd300861fbb",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -894,7 +894,7 @@ export class Helmets {
             _id: "5e42b49d005c88ccccd9adb3",
             _tpl: "657112ce22996eaf110881fb",
             parentId: "f0ce3e1011318cd300861fbb",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -924,7 +924,7 @@ export class Helmets {
             _id: "de9261567fd1f0543c6440b1",
             _tpl: "657f8b94f92cd718b70154ff",
             parentId: "1685f6bfbd72d293ec0785ce",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -933,7 +933,7 @@ export class Helmets {
             _id: "5d78ff8641272fd50873870f",
             _tpl: "657f8b43f92cd718b70154fb",
             parentId: "1685f6bfbd72d293ec0785ce",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -995,7 +995,7 @@ export class Helmets {
             _id: "dc07e943da4017b9190b91d3",
             _tpl: "657f8a8d7db258e5600fe33d",
             parentId: "f726a5430594c8539374bb81",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1004,7 +1004,7 @@ export class Helmets {
             _id: "97c16b804d2166c6d959ea21",
             _tpl: "657f8b05f4c82973640b2348",
             parentId: "f726a5430594c8539374bb81",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1066,7 +1066,7 @@ export class Helmets {
             _id: "75b88ceea446347eebffc788",
             _tpl: "657bbe73a1c61ee0c303632b",
             parentId: "74c6a1380499c64d7e8aa89f",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1075,7 +1075,7 @@ export class Helmets {
             _id: "baf992be6ca1c5e07fee1925",
             _tpl: "657bbed0aab96fccee08be96",
             parentId: "74c6a1380499c64d7e8aa89f",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1084,7 +1084,7 @@ export class Helmets {
             _id: "5021217883c4cd45531e1588",
             _tpl: "657bbefeb30eca9763051189",
             parentId: "74c6a1380499c64d7e8aa89f",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -1284,7 +1284,7 @@ export class Helmets {
             _id: "ae1a48d6221943d248961ab5",
             _tpl: "657f9c78ada5fadd1f07a58d",
             parentId: "a97941c707ac2525fc6e88f1",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1293,7 +1293,7 @@ export class Helmets {
             _id: "f7044d7c34ded5fe3c011b3d",
             _tpl: "657f9cb587e11c61f70bfaca",
             parentId: "a97941c707ac2525fc6e88f1",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1340,7 +1340,7 @@ export class Helmets {
             _id: "6d0e9ef978a0ad77b3bedd9c",
             _tpl: "657bbcc9a1c61ee0c3036327",
             parentId: "3d9cc741c70660e552f5ec32",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1349,7 +1349,7 @@ export class Helmets {
             _id: "e9466d597782bd5ba90ea0e7",
             _tpl: "657bbcffbbd440df880b2dd5",
             parentId: "3d9cc741c70660e552f5ec32",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1394,21 +1394,21 @@ export class Helmets {
             _id: "3a4891c7a113dd2ce4d2d852",
             _tpl: "657fa0fcd4caf976440afe3e",
             parentId: "822086611f584cdb3d3879b3",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "c909ad1138dded3ad1ef0e22",
             _tpl: "657fa168e9433140ad0baf8e",
             parentId: "822086611f584cdb3d3879b3",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
           {
             _id: "c2d5f1f519b65c3a278cef74",
             _tpl: "657fa186d4caf976440afe42",
             parentId: "822086611f584cdb3d3879b3",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {},
           },
           {
@@ -1453,7 +1453,7 @@ export class Helmets {
             _id: "9e45be27298dab34d659eef3",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "52d479eed63494f93fbb9c8c",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1462,7 +1462,7 @@ export class Helmets {
             _id: "38d2469c49a784bcffa36b6d",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "52d479eed63494f93fbb9c8c",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1532,7 +1532,7 @@ export class Helmets {
             _id: "7db6b945c8992af18ab58698",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "ffe00b79cf6cc5a740150b63",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1541,7 +1541,7 @@ export class Helmets {
             _id: "cc3076a93d3908216feb71be",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "ffe00b79cf6cc5a740150b63",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1588,7 +1588,7 @@ export class Helmets {
             _id: "42b29dd85c30619601c6af33",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "157b1539b633ed646266a715",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1597,7 +1597,7 @@ export class Helmets {
             _id: "8000113075d56badfab04411",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "157b1539b633ed646266a715",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1663,7 +1663,7 @@ export class Helmets {
             _id: "8902cb669d190a40de84ab19",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "2ac5dacfb8a6a120a3e5c4e1",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1672,7 +1672,7 @@ export class Helmets {
             _id: "8ae8a33c6a89b6ee3ad3d183",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "2ac5dacfb8a6a120a3e5c4e1",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1727,7 +1727,7 @@ export class Helmets {
             _id: "b30cf5239009424d843fdd7e",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "9a691b7f0b6e143086d50ad3",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1736,7 +1736,7 @@ export class Helmets {
             _id: "48fb02bebc540037d69b25c1",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "9a691b7f0b6e143086d50ad3",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1793,7 +1793,7 @@ export class Helmets {
             _id: "418c34706d2572d6bdcc61ad",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "505ba56fd41eec369c32e146",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1802,7 +1802,7 @@ export class Helmets {
             _id: "b9285186ec1d98a8527590de",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "505ba56fd41eec369c32e146",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1855,7 +1855,7 @@ export class Helmets {
             _id: "7274f8596922a0cff5c2c324",
             _tpl: "657f9897f4c82973640b235e",
             parentId: "a4fe7f6a069b604e8fe2e746",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1864,7 +1864,7 @@ export class Helmets {
             _id: "2a479782a4387206eb53e369",
             _tpl: "657f98fbada5fadd1f07a585",
             parentId: "a4fe7f6a069b604e8fe2e746",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1925,7 +1925,7 @@ export class Helmets {
             _id: "458373463ab2006da5d51c08",
             _tpl: "657f9897f4c82973640b235e",
             parentId: "0194cd9c09b12c005c41f6d7",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1934,7 +1934,7 @@ export class Helmets {
             _id: "4130b9160e5c4593a063d20d",
             _tpl: "657f98fbada5fadd1f07a585",
             parentId: "0194cd9c09b12c005c41f6d7",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -1976,7 +1976,7 @@ export class Helmets {
             _id: "fce8ef1e4ef6f6efc5e51f61",
             _tpl: "657f9897f4c82973640b235e",
             parentId: "da6f3e0fed95b8f78d0057a2",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -1985,7 +1985,7 @@ export class Helmets {
             _id: "165c2ad4fb0f59599203721b",
             _tpl: "657f98fbada5fadd1f07a585",
             parentId: "da6f3e0fed95b8f78d0057a2",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -2029,7 +2029,7 @@ export class Helmets {
             _id: "1cf0b88e84b65726ab7633f9",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "88faa20e6ee450f377698e57",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -2038,7 +2038,7 @@ export class Helmets {
             _id: "ebbacfc1cdbb1908a6029ea5",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "88faa20e6ee450f377698e57",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -2085,7 +2085,7 @@ export class Helmets {
             _id: "c5586061788bef72c5a16861",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "f569f1498ff165b15c4fd28a",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -2094,7 +2094,7 @@ export class Helmets {
             _id: "fb1e2bf613952ea991eda668",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "f569f1498ff165b15c4fd28a",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -2402,7 +2402,7 @@ export class Helmets {
             _id: "f5624814d50690865d2dfc90",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "569f2e6fda52ba434800bc8b",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -2411,7 +2411,7 @@ export class Helmets {
             _id: "104d0710b67da9f40a506ea1",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "569f2e6fda52ba434800bc8b",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -2458,7 +2458,7 @@ export class Helmets {
             _id: "80d90fc1c0c4ff7c852acb83",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "942abe0e5fea0db82a67d584",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -2467,7 +2467,7 @@ export class Helmets {
             _id: "7b10eb2c27c04a2f2f2356e2",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "942abe0e5fea0db82a67d584",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -2506,7 +2506,7 @@ export class Helmets {
             _id: "0f59af01117a67fa36b4b999",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "86f7c660b0181f5c293e49f5",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -2515,7 +2515,7 @@ export class Helmets {
             _id: "27385a71d4d9c361e9770a14",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "86f7c660b0181f5c293e49f5",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -2567,7 +2567,7 @@ export class Helmets {
             _id: "c124a345354a4197d9d68637",
             _tpl: "657f9c78ada5fadd1f07a58d",
             parentId: "b345c3df79f967d38d354803",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -2576,7 +2576,7 @@ export class Helmets {
             _id: "297a8b1d045b3ef366df7f52",
             _tpl: "657f9cb587e11c61f70bfaca",
             parentId: "b345c3df79f967d38d354803",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -2618,7 +2618,7 @@ export class Helmets {
             _id: "07662ef08fd4e84b270a9aee",
             _tpl: "657112234269e9a568089eac",
             parentId: "a77e4e381597e90daad1c90c",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -2627,7 +2627,7 @@ export class Helmets {
             _id: "c418d8aee9f52a6bda27257d",
             _tpl: "657112a4818110db4600aa66",
             parentId: "a77e4e381597e90daad1c90c",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -2636,7 +2636,7 @@ export class Helmets {
             _id: "e709f5ffd4821bf9e374add7",
             _tpl: "657112ce22996eaf110881fb",
             parentId: "a77e4e381597e90daad1c90c",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -2666,7 +2666,7 @@ export class Helmets {
             _id: "0ea9bd87d4881d1dad9d1b02",
             _tpl: "657112234269e9a568089eac",
             parentId: "425336083e7bbffc65b7cae6",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -2675,7 +2675,7 @@ export class Helmets {
             _id: "5def0e020b8e2802c2d9237d",
             _tpl: "657112a4818110db4600aa66",
             parentId: "425336083e7bbffc65b7cae6",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -2684,7 +2684,7 @@ export class Helmets {
             _id: "0742da90db5c58271949fd89",
             _tpl: "657112ce22996eaf110881fb",
             parentId: "425336083e7bbffc65b7cae6",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -2712,14 +2712,14 @@ export class Helmets {
             _id: "4a07fb939f834581475b2a4b",
             _tpl: "657f9a55c6679fefb3051e19",
             parentId: "a57eb41c9b4f8fab3d22c5b4",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "6d30ed369db2aba7198667cb",
             _tpl: "657f9a94ada5fadd1f07a589",
             parentId: "a57eb41c9b4f8fab3d22c5b4",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
           {
@@ -2759,14 +2759,14 @@ export class Helmets {
               _id: "4a07fb939f834581475b2a4b",
               _tpl: "657f9a55c6679fefb3051e19",
               parentId: "a57eb41c9b4f8fab3d22c5b4",
-              slotId: "Helmet_top",
+              slotId: "helmet_top",
               upd: {},
             },
             {
               _id: "6d30ed369db2aba7198667cb",
               _tpl: "657f9a94ada5fadd1f07a589",
               parentId: "a57eb41c9b4f8fab3d22c5b4",
-              slotId: "Helmet_back",
+              slotId: "helmet_back",
               upd: {},
             },
           ],
@@ -2794,7 +2794,7 @@ export class Helmets {
               _id: "2f32bca8a556bd06674ac8e4",
               _tpl: "657bc06daab96fccee08be9b",
               parentId: "4ecf2f7bfff0cd22e00513a0",
-              slotId: "Helmet_top",
+              slotId: "helmet_top",
               upd: {
                   SpawnedInSession: true
               }
@@ -2803,7 +2803,7 @@ export class Helmets {
               _id: "57cdcfe4d6d0f6e58ad5f45d",
               _tpl: "657bc0d8a1c61ee0c303632f",
               parentId: "4ecf2f7bfff0cd22e00513a0",
-              slotId: "Helmet_back",
+              slotId: "helmet_back",
               upd: {
                   SpawnedInSession: true
               }
@@ -2812,7 +2812,7 @@ export class Helmets {
               _id: "965e49b8f90950f93d42b6d3",
               _tpl: "657bc107aab96fccee08be9f",
               parentId: "4ecf2f7bfff0cd22e00513a0",
-              slotId: "Helmet_ears",
+              slotId: "helmet_ears",
               upd: {
                   SpawnedInSession: true
               }
@@ -2859,7 +2859,7 @@ export class Helmets {
               _id: "89da2a4e43c5e5ae7ac361ac",
               _tpl: "657bc285aab96fccee08bea3",
               parentId: "d72aca036a67d731cadebde4",
-              slotId: "Helmet_top",
+              slotId: "helmet_top",
               upd: {
                   SpawnedInSession: true
               }
@@ -2868,7 +2868,7 @@ export class Helmets {
               _id: "4a07aa2bd51469d8b2c1e402",
               _tpl: "657bc2c5a1c61ee0c3036333",
               parentId: "d72aca036a67d731cadebde4",
-              slotId: "Helmet_back",
+              slotId: "helmet_back",
               upd: {
                   SpawnedInSession: true
               }
@@ -2877,7 +2877,7 @@ export class Helmets {
               _id: "afe51072ac9b8f069c624e7f",
               _tpl: "657bc2e7b30eca976305118d",
               parentId: "d72aca036a67d731cadebde4",
-              slotId: "Helmet_ears",
+              slotId: "helmet_ears",
               upd: {
                   SpawnedInSession: true
               }
@@ -2924,7 +2924,7 @@ export class Helmets {
               _id: "1b20509a02d08a754864ea55",
               _tpl: "6571133d22996eaf11088200",
               parentId: "6907e0363ef81b0a562c7480",
-              slotId: "Helmet_top",
+              slotId: "helmet_top",
               upd: {
                   SpawnedInSession: true
               }
@@ -2933,7 +2933,7 @@ export class Helmets {
               _id: "7aa1e559a3c102a4e9a7526d",
               _tpl: "6571138e818110db4600aa71",
               parentId: "6907e0363ef81b0a562c7480",
-              slotId: "Helmet_back",
+              slotId: "helmet_back",
               upd: {
                   SpawnedInSession: true
               }
@@ -2942,7 +2942,7 @@ export class Helmets {
               _id: "8a69a94872b04c0574e82beb",
               _tpl: "657112fa818110db4600aa6b",
               parentId: "6907e0363ef81b0a562c7480",
-              slotId: "Helmet_ears",
+              slotId: "helmet_ears",
               upd: {
                   SpawnedInSession: true
               }
@@ -2982,21 +2982,21 @@ export class Helmets {
               _id: "deb40b11190f7b3f53dc2e3d",
               _tpl: "6571133d22996eaf11088200",
               parentId: "f7245351f59e34fb94322d14",
-              slotId: "Helmet_top",
+              slotId: "helmet_top",
               upd: {}
           },
           {
               _id: "9525ef73c8b5344264ee47f1",
               _tpl: "6571138e818110db4600aa71",
               parentId: "f7245351f59e34fb94322d14",
-              slotId: "Helmet_back",
+              slotId: "helmet_back",
               upd: {}
           },
           {
               _id: "f0c8cd33ce87cba09317f478",
               _tpl: "657112fa818110db4600aa6b",
               parentId: "f7245351f59e34fb94322d14",
-              slotId: "Helmet_ears",
+              slotId: "helmet_ears",
               upd: {}
           },
           {
@@ -3044,7 +3044,7 @@ export class Helmets {
             _id: "691456a904344da341c2c4bb",
             _tpl: "65711b07a330b8c9060f7b01",
             parentId: "579ea4306e9cbdf85c986f81",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3053,7 +3053,7 @@ export class Helmets {
             _id: "ab4602d3697f10cbe273fbc4",
             _tpl: "65711b489eb8c145180dbb9d",
             parentId: "579ea4306e9cbdf85c986f81",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3080,7 +3080,7 @@ export class Helmets {
             _id: "7fff82bba12cc4d56c94de09",
             _tpl: "65711b706d197c216005b31c",
             parentId: "579ea4306e9cbdf85c986f81",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -3110,7 +3110,7 @@ export class Helmets {
             _id: "1f54ab19bfbd4c2b508778ff",
             _tpl: "657f9897f4c82973640b235e",
             parentId: "0858c6d87482de1656d90e00",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3119,7 +3119,7 @@ export class Helmets {
             _id: "64d8cccd463d0d0aeda2ad64",
             _tpl: "657f98fbada5fadd1f07a585",
             parentId: "0858c6d87482de1656d90e00",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3149,7 +3149,7 @@ export class Helmets {
             _id: "3ce7c9c16dcdd8bd99cf79db",
             _tpl: "657bbad7a1c61ee0c3036323",
             parentId: "8cb539ce25febea9d604452f",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3158,7 +3158,7 @@ export class Helmets {
             _id: "610f8f34b7f0bf705e766676",
             _tpl: "657bbb31b30eca9763051183",
             parentId: "8cb539ce25febea9d604452f",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3186,14 +3186,14 @@ export class Helmets {
             _id: "bac7d12bb01758a156242675",
             _tpl: "657f95bff92cd718b701550c",
             parentId: "87e3730c6a8c02f6a0c2cf85",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "339ed9097eef9cbd16e49671",
             _tpl: "657f9605f4c82973640b2358",
             parentId: "87e3730c6a8c02f6a0c2cf85",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
         ],
@@ -3221,7 +3221,7 @@ export class Helmets {
             _id: "f346574bf0f981a8a65fbadb",
             _tpl: "657f95bff92cd718b701550c",
             parentId: "36f9dc521443e0bfebbb4836",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3230,7 +3230,7 @@ export class Helmets {
             _id: "53e5b2b7309f895b83561d2c",
             _tpl: "657f9605f4c82973640b2358",
             parentId: "36f9dc521443e0bfebbb4836",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3260,7 +3260,7 @@ export class Helmets {
             _id: "4fc7c3b1399635d019879863",
             _tpl: "657f8a8d7db258e5600fe33d",
             parentId: "b176433f7a5f27cef038e17f",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3269,7 +3269,7 @@ export class Helmets {
             _id: "8456becef517a662b5c4e876",
             _tpl: "657f8b05f4c82973640b2348",
             parentId: "b176433f7a5f27cef038e17f",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3299,7 +3299,7 @@ export class Helmets {
             _id: "97c39fc0ba9b537003f645b9",
             _tpl: "657f8b94f92cd718b70154ff",
             parentId: "356b36d1f8ff24de28094f27",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3308,7 +3308,7 @@ export class Helmets {
             _id: "666788c212dd74ba41508757",
             _tpl: "657f8b43f92cd718b70154fb",
             parentId: "356b36d1f8ff24de28094f27",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3338,7 +3338,7 @@ export class Helmets {
             _id: "03371894a2605f27f6df195a",
             _tpl: "657f9c78ada5fadd1f07a58d",
             parentId: "2f983adacefcb1113ab193ce",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3347,7 +3347,7 @@ export class Helmets {
             _id: "436485fe628292de0e38f8c9",
             _tpl: "657f9cb587e11c61f70bfaca",
             parentId: "2f983adacefcb1113ab193ce",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3377,7 +3377,7 @@ export class Helmets {
             _id: "c4de7b8658546eb7e13d6083",
             _tpl: "657bbcc9a1c61ee0c3036327",
             parentId: "e7cac6727ddd197c9009dc90",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3386,7 +3386,7 @@ export class Helmets {
             _id: "194a320bc1092f8008c46622",
             _tpl: "657bbcffbbd440df880b2dd5",
             parentId: "e7cac6727ddd197c9009dc90",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3414,21 +3414,21 @@ export class Helmets {
             _id: "a44f4544ec0d04b23676b7ec",
             _tpl: "657fa0fcd4caf976440afe3e",
             parentId: "fcdb3078584c5b4fad100caf",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "37e80e142e127da6b4b880c7",
             _tpl: "657fa168e9433140ad0baf8e",
             parentId: "fcdb3078584c5b4fad100caf",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
           {
             _id: "15d2aec848e50b25783248df",
             _tpl: "657fa186d4caf976440afe42",
             parentId: "fcdb3078584c5b4fad100caf",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {},
           },
         ],
@@ -3456,7 +3456,7 @@ export class Helmets {
             _id: "78b2f3cf66cb22df89adaebe",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "ddecb1ec60d42eea83574af4",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3465,7 +3465,7 @@ export class Helmets {
             _id: "b726c53727cd25c01b456ca5",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "ddecb1ec60d42eea83574af4",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3495,7 +3495,7 @@ export class Helmets {
             _id: "b16accaafc9fc0fa4c844677",
             _tpl: "657f8ec5f4c82973640b234c",
             parentId: "aec2b9fab18800c236d6c2c4",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3504,7 +3504,7 @@ export class Helmets {
             _id: "94a7f3860f26c3cde5af5a57",
             _tpl: "657f8f10f4c82973640b2350",
             parentId: "aec2b9fab18800c236d6c2c4",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3612,7 +3612,7 @@ export class Helmets {
             _id: "574e2715103d0ca355b5e003",
             _tpl: "657f925dada5fadd1f07a57a",
             parentId: "b69558c3cc209b4a6f173b24",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3621,7 +3621,7 @@ export class Helmets {
             _id: "53438b0e0cc65f74f853771d",
             _tpl: "657f92acada5fadd1f07a57e",
             parentId: "b69558c3cc209b4a6f173b24",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3630,7 +3630,7 @@ export class Helmets {
             _id: "31bd53cbf2f8bd974d5c60b2",
             _tpl: "657f92e7f4c82973640b2354",
             parentId: "b69558c3cc209b4a6f173b24",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -3658,21 +3658,21 @@ export class Helmets {
             _id: "60471cf03251fddf231edc0e",
             _tpl: "657f925dada5fadd1f07a57a",
             parentId: "30eb1b6f1b617b35a82f58b1",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "42a47792bece3a5792f3c3b9",
             _tpl: "657f92acada5fadd1f07a57e",
             parentId: "30eb1b6f1b617b35a82f58b1",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
           {
             _id: "f7ccf81be939dfc826d21099",
             _tpl: "657f92e7f4c82973640b2354",
             parentId: "30eb1b6f1b617b35a82f58b1",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {},
           },
           {
@@ -3755,7 +3755,7 @@ export class Helmets {
             _id: "17df87c524a0660f7ee79bf8",
             _tpl: "657baaf0b7e9ca9a02045c02",
             parentId: "62c54d4fa82bb075e3c7e9d7",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3764,7 +3764,7 @@ export class Helmets {
             _id: "3c3261dea89c55e6a1eef709",
             _tpl: "657bab6ec6f689d3a205b85f",
             parentId: "62c54d4fa82bb075e3c7e9d7",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3773,7 +3773,7 @@ export class Helmets {
             _id: "a559685a837bd40f40e2ca3a",
             _tpl: "657babc6f58ba5a6250107a2",
             parentId: "62c54d4fa82bb075e3c7e9d7",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -3803,7 +3803,7 @@ export class Helmets {
             _id: "574a373bf3172c710315b7d6",
             _tpl: "657baaf0b7e9ca9a02045c02",
             parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3812,7 +3812,7 @@ export class Helmets {
             _id: "e3d6c261f9d0a5f12f750c0d",
             _tpl: "657bab6ec6f689d3a205b85f",
             parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3821,7 +3821,7 @@ export class Helmets {
             _id: "e2e6151c63489256c4a72086",
             _tpl: "657babc6f58ba5a6250107a2",
             parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -3851,7 +3851,7 @@ export class Helmets {
             _id: "574a373bf3172c710315b7d6",
             _tpl: "657baaf0b7e9ca9a02045c02",
             parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3860,7 +3860,7 @@ export class Helmets {
             _id: "e3d6c261f9d0a5f12f750c0d",
             _tpl: "657bab6ec6f689d3a205b85f",
             parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3869,7 +3869,7 @@ export class Helmets {
             _id: "e2e6151c63489256c4a72086",
             _tpl: "657babc6f58ba5a6250107a2",
             parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -3899,7 +3899,7 @@ export class Helmets {
             _id: "3587a5713c0a629cd47320bf",
             _tpl: "657bae18b7e9ca9a02045c0a",
             parentId: "79312f00bf37c3505974912f",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -3908,7 +3908,7 @@ export class Helmets {
             _id: "5879da616879d56642c8b49e",
             _tpl: "657baeaacfcf63c951052db3",
             parentId: "79312f00bf37c3505974912f",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -3917,7 +3917,7 @@ export class Helmets {
             _id: "e0d7f5008cabf45b761d2eca",
             _tpl: "657baecbc6f689d3a205b863",
             parentId: "79312f00bf37c3505974912f",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -3945,21 +3945,21 @@ export class Helmets {
             _id: "76bc6f0ace41d12bbd9282f8",
             _tpl: "657ba50c23918923cb0df56c",
             parentId: "682b7d135c1f2069bbd0978d",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "d9c33b0bda8b9d828fe941cf",
             _tpl: "657ba5439ba22f103e08139f",
             parentId: "682b7d135c1f2069bbd0978d",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
           {
             _id: "03aef5b35511791326ff4a02",
             _tpl: "657ba57af58ba5a62501079e",
             parentId: "682b7d135c1f2069bbd0978d",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {},
           },
         ],
@@ -3985,14 +3985,14 @@ export class Helmets {
             _id: "a60ccfc1f301d49bd021a8c3",
             _tpl: "657bb92fa1c61ee0c303631f",
             parentId: "db3198144bbcd2ae985161e9",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "e412c09a44cc16a45814a406",
             _tpl: "657bb99db30eca976305117f",
             parentId: "db3198144bbcd2ae985161e9",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
         ],
@@ -4018,14 +4018,14 @@ export class Helmets {
             _id: "a60ccfc1f301d49bd021a8c3",
             _tpl: "657bb92fa1c61ee0c303631f",
             parentId: "db3198144bbcd2ae985161e9",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {},
           },
           {
             _id: "e412c09a44cc16a45814a406",
             _tpl: "657bb99db30eca976305117f",
             parentId: "db3198144bbcd2ae985161e9",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {},
           },
         ],
@@ -4053,7 +4053,7 @@ export class Helmets {
             _id: "fb849758453e4bacdc794333",
             _tpl: "657ba6c3c6f689d3a205b857",
             parentId: "dcf5909ada71ded0e39c9549",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -4062,7 +4062,7 @@ export class Helmets {
             _id: "082d6ada84030d4ca9fed277",
             _tpl: "657ba737b7e9ca9a02045bf6",
             parentId: "dcf5909ada71ded0e39c9549",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -4080,7 +4080,7 @@ export class Helmets {
             _id: "4b7e3e2a0d3639b9b3594a15",
             _tpl: "657ba75e23918923cb0df573",
             parentId: "dcf5909ada71ded0e39c9549",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -4110,7 +4110,7 @@ export class Helmets {
             _id: "2248c52cd1708878e22f3ddd",
             _tpl: "657bb70486c7f9ef7a009936",
             parentId: "fde5a95099c7928807b65ee0",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -4119,7 +4119,7 @@ export class Helmets {
             _id: "4af31ae294dc83f0eada7d6a",
             _tpl: "657bb79ba1c61ee0c303631a",
             parentId: "fde5a95099c7928807b65ee0",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -4128,7 +4128,7 @@ export class Helmets {
             _id: "5994402f03d5703d3dda4f40",
             _tpl: "657bb7d7b30eca9763051176",
             parentId: "fde5a95099c7928807b65ee0",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -4158,7 +4158,7 @@ export class Helmets {
             _id: "4dee4b04c1e6745c429e39ea",
             _tpl: "6571199565daf6aa960c9b10",
             parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -4167,7 +4167,7 @@ export class Helmets {
             _id: "c7471503b633a8c2d55d732e",
             _tpl: "657119d49eb8c145180dbb95",
             parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -4176,7 +4176,7 @@ export class Helmets {
             _id: "59108743b33bfe07623846da",
             _tpl: "657119fea330b8c9060f7afc",
             parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -4206,7 +4206,7 @@ export class Helmets {
             _id: "4dee4b04c1e6745c429e39ea",
             _tpl: "6571199565daf6aa960c9b10",
             parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -4215,7 +4215,7 @@ export class Helmets {
             _id: "c7471503b633a8c2d55d732e",
             _tpl: "657119d49eb8c145180dbb95",
             parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -4224,7 +4224,7 @@ export class Helmets {
             _id: "59108743b33bfe07623846da",
             _tpl: "657119fea330b8c9060f7afc",
             parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -4254,7 +4254,7 @@ export class Helmets {
             _id: "608a32bd75d0e7b574ef35d9",
             _tpl: "657ba85ecfcf63c951052da7",
             parentId: "310bc0ff3089351b4c4cacdf",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -4263,7 +4263,7 @@ export class Helmets {
             _id: "422e67feae7884cff92d7ac4",
             _tpl: "657ba8bccfcf63c951052dab",
             parentId: "310bc0ff3089351b4c4cacdf",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -4281,7 +4281,7 @@ export class Helmets {
             _id: "40e7d0f6c8d8f9c20babf804",
             _tpl: "657ba8eab7e9ca9a02045bfd",
             parentId: "310bc0ff3089351b4c4cacdf",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -4311,7 +4311,7 @@ export class Helmets {
             _id: "a4fb6629b4b94325cf1975bc",
             _tpl: "657ba096e57570b7f80a17fb",
             parentId: "c14e3a6f8e83d76ed9d164e2",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -4320,7 +4320,7 @@ export class Helmets {
             _id: "19fdd34f21680846e285a5cb",
             _tpl: "657ba145e57570b7f80a17ff",
             parentId: "c14e3a6f8e83d76ed9d164e2",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -4329,7 +4329,7 @@ export class Helmets {
             _id: "6d730ac195b0ec1c16049234",
             _tpl: "657ba18923918923cb0df568",
             parentId: "c14e3a6f8e83d76ed9d164e2",
-            slotId: "Helmet_ears",
+            slotId: "helmet_ears",
             upd: {
               SpawnedInSession: true,
             },
@@ -4359,7 +4359,7 @@ export class Helmets {
             _id: "9ef364417802f3e25f0a4738",
             _tpl: "657ba2eef58ba5a625010798",
             parentId: "44d6a6625838f44707c29947",
-            slotId: "Helmet_top",
+            slotId: "helmet_top",
             upd: {
               SpawnedInSession: true,
             },
@@ -4368,7 +4368,7 @@ export class Helmets {
             _id: "efdc08c858746de4e43645aa",
             _tpl: "657ba34b9ba22f103e08139b",
             parentId: "44d6a6625838f44707c29947",
-            slotId: "Helmet_back",
+            slotId: "helmet_back",
             upd: {
               SpawnedInSession: true,
             },
@@ -4455,21 +4455,21 @@ export class Helmets {
               _id: "b356019c126f9dda708fb463",
               _tpl: "657f925dada5fadd1f07a57a",
               parentId: "679fd0f7dde61a653205170e",
-              slotId: "Helmet_top",
+              slotId: "helmet_top",
               upd: {}
           },
           {
               _id: "0faa9c1642e28b16a9c8411b",
               _tpl: "657f92acada5fadd1f07a57e",
               parentId: "679fd0f7dde61a653205170e",
-              slotId: "Helmet_back",
+              slotId: "helmet_back",
               upd: {}
           },
           {
               _id: "0ab6665f71a3e8aeecd1aead",
               _tpl: "657f92e7f4c82973640b2354",
               parentId: "679fd0f7dde61a653205170e",
-              slotId: "Helmet_ears",
+              slotId: "helmet_ears",
               upd: {}
           },
         ],
@@ -4495,21 +4495,21 @@ export class Helmets {
               _id: "5af689c9c09a28ef3613b4b0",
               _tpl: "657f925dada5fadd1f07a57a",
               parentId: "5b8eb43bb732656a4c164974",
-              slotId: "Helmet_top",
+              slotId: "helmet_top",
               upd: {}
           },
           {
               _id: "4878eed9438f7aeb67e2e1f4",
               _tpl: "657f92acada5fadd1f07a57e",
               parentId: "5b8eb43bb732656a4c164974",
-              slotId: "Helmet_back",
+              slotId: "helmet_back",
               upd: {}
           },
           {
               _id: "83c7e5c0dbab88c117d69d0a",
               _tpl: "657f92e7f4c82973640b2354",
               parentId: "5b8eb43bb732656a4c164974",
-              slotId: "Helmet_ears",
+              slotId: "helmet_ears",
               upd: {}
           },
         ],
