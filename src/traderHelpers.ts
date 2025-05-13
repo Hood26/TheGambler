@@ -133,62 +133,39 @@ export class TraderHelper
      public addSingleItemsToTrader(tables: IDatabaseTables, traderId: string, assortCreator: FluentAssortCreator, container: DependencyContainer, logger: ILogger) : void {
 
         const config = jsonc.parse(fs.readFileSync(path.resolve(__dirname, "../config/config.jsonc"), "utf-8"));
-        const MEDICAL_GAMBLE_ID = "67b7b98b4767af842e0521fb";
-        const BITCOIN_GAMBLE_ID = "67b7b98b4767af842e0521ec"; // new aa_bitcoin_gamble
-        const GPCOIN_GAMBLE_ID = "67b7b98b4767af842e0521ed";   // new aa_gpcoin_gamble
-        const BITCOIN_ID = '59faff1d86f7746c51718c9c';
-        const GPCOIN_ID = '5d235b4d86f7742e017bc88a';
-        const MEDICAL_TOOLS_MEDS_ID = '619cc01e0a7c3a1a2731940c';
-        const PILE_OF_MEDS_ID = '5d1b3a5d86f774252167ba22';
-        const BLOODSET_ID = '5b4335ba86f7744d2837a264';
-
         // All Mystery Containers _id and quest_id
-        const names: Record<string, itemProps> = MysteryContainerInfo;     
+        const info: Record<string, itemProps> = MysteryContainerInfo(config);  
         const price = new Price(container, config, logger);
         const generatedPrices = price.generateContainerPrices();
         //const loadoutPrice = price.loadoutSimulation();
         //console.log('One Loadout Cost = ' + loadoutPrice);
         //console.log(generatedPrices);           
 
-        for (let i in Object.keys(names)) {
-            const name = Object.keys(names)[i];
-            const current = Object.values(names)[i];
-            if (config.container_config[name + '_enable']){
 
-                if ((parseInt(name.substring(0,1)) || name.substring(0,1) == '.') && !config.container_config['all_ammo_enable']) { // isAmmo and ammo is disabled: SKIP all ammo
+        for (const [key, value] of Object.entries(info)) {
+            if (config.container_config[key + '_enable']){
+
+                if ((parseInt(key.substring(0,1)) || key.substring(0,1) == '.') && !config.container_config['all_ammo_enable']) { // isAmmo and ammo is disabled: SKIP all ammo
                     continue;
                 }
 
-                assortCreator.createSingleAssortItem(current._id, current.quest_id)
-                                        .addStackCount(config.container_config[name + '_unlimited_stock'] ? 999999 : config.container_config[name + '_stock'], config.container_config[name + '_unlimited_stock'])
-                                        .addMoneyCost(Money.ROUBLES, (generatedPrices[name + '_price'] && !config.container_config[name + '_manual_pricing']) ? (generatedPrices[name + '_price'] * config.price_multiplier) : (config.container_config[name + '_price'] * config.price_multiplier))
-                                        .addLoyaltyLevel(1)
-                                        .export(tables.traders[baseJson._id]);
+                const newTrade = assortCreator.createSingleAssortItem(value._id, value.quest_id)
+
+                    if (value.barter) {
+                        
+                        for (const [barter, amount] of Object.entries(value.barter)) {
+                            newTrade.addBarterCost(barter, amount);
+                        }
+
+                    } else {
+                        newTrade.addMoneyCost(Money.ROUBLES, (generatedPrices[key + '_price'] && !config.container_config[key + '_manual_pricing']) ? (generatedPrices[key + '_price'] * config.price_multiplier) : (config.container_config[key + '_price'] * config.price_multiplier))
+                        
+                    }
+                    newTrade.addStackCount(config.container_config[key + '_unlimited_stock'] ? 999999 : config.container_config[key + '_stock'], config.container_config[key + '_unlimited_stock'])
+                    newTrade.addLoyaltyLevel(1)
+                    newTrade.export(tables.traders[baseJson._id]);
             }
         }
-        if (config.container_config['medical_enable']){
-            assortCreator.createSingleAssortItem(MEDICAL_GAMBLE_ID)
-                                    .addStackCount(config.container_config.medical_unlimited_stock ? 999999 : config.container_config.medical_stock, config.container_config.medical_unlimited_stock)
-                                    .addBarterCost(PILE_OF_MEDS_ID, 3)
-                                    .addBarterCost(MEDICAL_TOOLS_MEDS_ID, 2)
-                                    .addBarterCost(BLOODSET_ID, 1)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        }                       
-        if (config.container_config['bitcoin_enable']){
-            assortCreator.createSingleAssortItem(BITCOIN_GAMBLE_ID)
-                                    .addStackCount(config.container_config.bitcoin_unlimited_stock ? 999999 : config.container_config.bitcoin_stock, config.container_config.bitcoin_unlimited_stock)
-                                    .addBarterCost(BITCOIN_ID, 1)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        }
-        if (config.container_config['gpcoin_enable']){
-            assortCreator.createSingleAssortItem(GPCOIN_GAMBLE_ID)
-                                    .addStackCount(config.container_config.gpcoin_unlimited_stock ? 999999 : config.container_config.gpcoin_stock, config.container_config.gpcoin_unlimited_stock)
-                                    .addBarterCost(GPCOIN_ID, 25)
-                                    .addLoyaltyLevel(1)
-                                    .export(tables.traders[baseJson._id]);
-        }    
      }
 
      /**

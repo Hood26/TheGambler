@@ -186,8 +186,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         };
 
         const isSealedWeaponBox = containerDetails[1]._name.includes("event_container_airdrop"); // default airdrop container
-        const isRefSealedWeaponBox = containerDetails[1]._name.includes("Arena_weaponcrate_blue_open"); // Ref Unlocked Weapons Container
-        const isGamblingContainer = containerDetails[1]._name.includes("gambling_"); // Gambler items are tagged with "gambling_container" identifier
+        const isGamblingContainer = containerDetails[1]._name.includes("gambling_"); // Gambler items are tagged with `gambling_${container}` identifier
         const unlockedWeaponCrates = [
             "665829424de4820934746ce6",
             "665732e7ac60f009f270d1ef",
@@ -195,7 +194,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         ];
 
         if (isGamblingContainer) {
-            // All TheGambler Custom Gambling Happens Here
+            // All Gambler action happens here
             const currentContainer = containerDetails[1];
             gamble = new Gamble(container, this.config, this.logger, currentContainer._name);
             gamble.newGamble();
@@ -205,6 +204,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
                 newItemsRequest.foundInRaid  = gamble.newItemsRequest.foundInRaid;
             }
         } else {
+            // All other sealed containers
             if (isSealedWeaponBox || unlockedWeaponCrates.includes(containerDetails[1]._id)) {
                 const containerSettings = inventoryHelper.getInventoryConfig().sealedAirdropContainer;
                 newItemsRequest.itemsWithModsToAdd.push(...lootGenerator.getSealedWeaponCaseLoot(containerSettings));

@@ -229,7 +229,7 @@ export class Price{
                         continue;
 
                     } else {
-                        // flea or override price
+                        // Order of prices: Override -> Min(trader, flea) -> handbook -> prices.json
                         currentPrice = this.getItemPrice(parent, currentItem, amount);
                         sum = sum + currentPrice;
                     }   

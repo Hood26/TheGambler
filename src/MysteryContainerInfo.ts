@@ -1,173 +1,615 @@
 export type itemProps = {
     _id: string,
+    _name: string,
     quest_id: string,
+    name: string,
+    shortName: string,
+    desc: string,
+    fleaPriceRoubles: number,
+    handbookPriceRoubles: number,
+    prefab: string,
+    width: number,
+    height: number,
+    barter?: Record<string, number> // New: barter cost object, key=itemTpl, value=amount
 }
 
-export let MysteryContainerInfo: Record<string, itemProps> = {
-    wallet: {
-        _id: "67b7b98b4767af842e0521e7",
-        quest_id: "66b57e52fcf263f4d70af3e0"
-    },
-    key: {
-        _id: "67b7b98b4767af842e0521e8",
-        quest_id: "66b57e52fcf263f4d70af3e1"
-    },             
-    keycard: {
-        _id: "67b7b98b4767af842e0521e9",
-        quest_id: "66b57e52fcf263f4d70af3e2"
-    }, 
-    sealed: {
-        _id: "67b7b98b4767af842e0521e5",
-        quest_id: "66b57e52fcf263f4d70af3e3"
-    }, 
-    food: {
-        _id: "67b7b98b4767af842e0521e6",
-        quest_id: "66b57e52fcf263f4d70af3e4"
-    }, 
-    melee:  {
-        _id: "67b7b98b4767af842e0521ea",
-        quest_id: "66b57e52fcf263f4d70af3e5"
-    }, 
-    stim: {
-        _id: "67b7b98b4767af842e0521eb",
-        quest_id: "66b57e52fcf263f4d70af3e6"
-    },  
-    fiftyfifty: { // case 5 mil rouble
-        _id: "67b7b98b4767af842e0521f8",
-        quest_id: "66b57e52fcf263f4d70af3e7"
-    }, 
-    weapon: {
-        _id: "67b7b98b4767af842e0521f0",
-        quest_id: "66b57e52fcf263f4d70af3e8"
-    }, 
-    /*
-    default_weapon: {
-        _id: "67b7b98b4767af842e0521f1",
-        quest_id: "66b57e52fcf263f4d70af3e9"
-    }, 
-    average_weapon: {
-        _id: "67b7b98b4767af842e0521f2",
-        quest_id: "66b57e52fcf263f4d70b0f44"
-    }, 
-    */
-    backpack: {
-        _id: "67b7b98b4767af842e0521f4",
-        quest_id: "66b57e52fcf263f4d70af7d4"
-    }, 
-    loadout: {
-        _id: "67b7b98b4767af842e0521f5",
-        quest_id: "66b57e52fcf263f4d70af3ea"
-    }, 
-    premium_loadout: {
-        _id: "67b7b98b4767af842e0521f6",
-        quest_id: "66b57e52fcf263f4d70af3f4"
-    }, 
-    rig: {
-        _id: "67b7b98b4767af842e0521f7",
-        quest_id: "66b57e52fcf263f4d70b0f45"
-    }, 
-    helmet: {
-        _id: "67b7b98b4767af842e0521f9",
-        quest_id: "66b57e52fcf263f4d70af3ec"
-    }, 
-    headset: {
-        _id: "67b7b98b4767af842e0521fa",
-        quest_id: "66b57e52fcf263f4d70af3ed"
-    }, 
-    armor: {
-        _id: "67b7b98b4767af842e0521ee",
-        quest_id: "66b57e52fcf263f4d70af3ee"
-    }, 
-    premium_armor: {
-        _id: "67b7b98b4767af842e0521ef",
-        quest_id: "66b57e52fcf263f4d70af3ef"
-    }, 
-    premium_weapon: {
-        _id: "67b7b98b4767af842e0521f3",
-        quest_id: "66b57e52fcf263f4d70af3eb"
-    },
-    '7.62x25': {
-        _id: "67b7b98b4767af842e0521d0",
-        quest_id: "66b59e1cfcf263f4d70af000"
-    },  
-    '9x18': {
-        _id: "67b7b98b4767af842e0521d1",
-        quest_id: "66b59e1cfcf263f4d70af421"
-    },  
-    '9x19': {
-        _id: "67b7b98b4767af842e0521d2",
-        quest_id: "66b59e1cfcf263f4d70af422"
-    },
-    '9x21': {
-        _id: "67b7b98b4767af842e0521d3",
-        quest_id: "66b59e1cfcf263f4d70af423"
-    },
-    '.357': {
-        _id: "67b7b98b4767af842e0521d4",
-        quest_id: "66b59e1cfcf263f4d70af424"
-    },
-    '.45': {
-        _id: "67b7b98b4767af842e0521d5",
-        quest_id: "66b59e1cfcf263f4d70af425"
-    },
-    '4.6x30': {
-        _id: "67b7b98b4767af842e0521d6",
-        quest_id: "66b59e1cfcf263f4d70af426"
-    },
-    '5.7x28': {
-        _id: "67b7b98b4767af842e0521d7",
-        quest_id: "66b59e1cfcf263f4d70af427"
-    },
-    '5.45x39': {
-        _id: "67b7b98b4767af842e0521d8",
-        quest_id: "66b59e1cfcf263f4d70af428"
-    },
-    '5.56x45': {
-        _id: "67b7b98b4767af842e0521d9",
-        quest_id: "66b59e1cfcf263f4d70af429"
-    },
-    '.300': {
-        _id: "67b7b98b4767af842e0521da",
-        quest_id: "66b59e1cfcf263f4d70af42a"
-    },
-    '7.62x39': {
-        _id: "67b7b98b4767af842e0521db",
-        quest_id: "66b59e1cfcf263f4d70af42b"
-    },
-    '7.62x51': {
-        _id: "67b7b98b4767af842e0521dc",
-        quest_id: "66b59e1cfcf263f4d70af42c"
-    },
-    '7.62x54': {
-        _id: "67b7b98b4767af842e0521dd",
-        quest_id: "66b59e1cfcf263f4d70af42d"
-    },
-    '.338': {
-        _id: "67b7b98b4767af842e0521de",
-        quest_id: "66b59e1cfcf263f4d70af42e"
-    },
-    '9x39': {
-        _id: "67b7b98b4767af842e0521df",
-        quest_id: "66b59e1cfcf263f4d70af42f"
-    },
-    '.366': {
-        _id: "67b7b98b4767af842e0521e0",
-        quest_id: "66b59e1cfcf263f4d70af430"
-    },
-    '12.7x55': {
-        _id: "67b7b98b4767af842e0521e1",
-        quest_id: "66b59e1cfcf263f4d70af431"
-    },
-    '12/70': {
-        _id: "67b7b98b4767af842e0521e2",
-        quest_id: "66b59e1cfcf263f4d70af432"
-    },
-    '20/70': {
-        _id: "67b7b98b4767af842e0521e3",
-        quest_id: "66b59e1cfcf263f4d70af433"
-    },
-    '23x75': {
-        _id: "67b7b98b4767af842e0521e4",
-        quest_id: "66b59e1cfcf263f4d70af434"
-    },
+export function MysteryContainerInfo(config: any): Record<string, itemProps> {
+    return({
+        wallet: {
+            _id: "67b7b98b4767af842e0521e7",
+            _name: "gambling_wallet",
+            quest_id: "66b57e52fcf263f4d70af3e0",
+            name: "Mystery Wallet",
+            shortName: "Mystery Wallet",
+            desc: `Wager your Roubles to win more or lose it all!\n==============================\n0 Roubles - ${config.odds['wallet_base']}%\n25K Roubles - ${config.odds['wallet_extra_common']}%\n50k Roubles - ${config.odds['wallet_common']}%\n100k Roubles - ${config.odds['wallet_uncommon']}%\n250k Roubles - ${config.odds['wallet_more_uncommon']}%\n500k Roubles - ${config.odds['wallet_extra_uncommon']}%\n1 Million Roubles - ${config.odds['wallet_rare']}%\n2.5 Million Roubles - ${config.odds['wallet_kinda_rare']}%\n5 Million Roubles - ${config.odds['wallet_extra_rare']}%\n10 Million Roubles - ${config.odds['wallet_extremely_rare']}%`,
+            fleaPriceRoubles: 130000,
+            handbookPriceRoubles: 130000,
+            prefab: "assets/content/items/barter/item_barter_walletwz/item_barter_walletwz.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        key: {
+            _id: "67b7b98b4767af842e0521e8",
+            _name: "gambling_key",
+            quest_id: "66b57e52fcf263f4d70af3e1",
+            name: "Mystery Key",
+            shortName: "Mystery Key",
+            desc: `So you want a brand-new key to your favorite looting spot? Or maybe you're looking for that pesky quest key. We have it all! (Seriously every single key found throughout Tarkov!) Try your luck!\n==============================\nCommon Key - ${config.odds['key_common']}%\nUncommon Key - ${config.odds['key_uncommon']}%\nRare Key - ${config.odds['key_rare']}%\nExtremely Rare Key - ${config.odds['key_extremely_rare']}%`,
+            fleaPriceRoubles: 90000,
+            handbookPriceRoubles: 90000,
+            prefab: "assets/content/items/spec/keys/item_key_14.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        keycard: {
+            _id: "67b7b98b4767af842e0521e9",
+            _name: "gambling_keycard",
+            quest_id: "66b57e52fcf263f4d70af3e2",
+            name: "Mystery Keycard",
+            shortName: "Mystery Keycard",
+            desc: `So you want to get into labs? Well your in luck! I have a few gambles I can offer you for the right price. Maybe you get the card you've been dreaming of or maybe you don't!\n==============================\nAccess Keycard - ${config.odds['keycard_access']}%\nNothing - 33.3%\n21WS Keycard - ${config.odds['keycard_21WS']}%\n11SR Keycard - ${config.odds['keycard_11SR']}%\nKeycard with a blue marking - ${config.odds['keycard_blue_marking']}%\nYellow Keycard - ${config.odds['keycard_yellow']}%\nBlack Keycard - ${config.odds['keycard_black']}%\nViolet Keycard - ${config.odds['keycard_violet']}%\nBlue Keycard - ${config.odds['keycard_blue']}%\nGreen Keycard - ${config.odds['keycard_green']}%\nRed Keycard - ${config.odds['keycard_red']}%`,
+            fleaPriceRoubles: 325000,
+            handbookPriceRoubles: 325000,
+            prefab: "assets/content/items/barter/item_container_cardholder/item_container_cardholder.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        bitcoin: {
+            _id: "67b7b98b4767af842e0521ec",
+            _name: "gambling_bitcoin",
+            quest_id: "66b57e52fcf263f4d70af4e2", // NEED REPLACE
+            name: "Mystery Bitcoin 50/50",
+            shortName: "Mystery Bitcoin 50/50",
+            desc: `Feeling lucky? Looking to double up your spoils? Try your luck at double or nothing!\n==============================\nTwo Bitcoins - ${config.odds['bitcoin_success']}%\nNothing - ${config.odds['bitcoin_failure']}`,
+            fleaPriceRoubles: 1100000,
+            handbookPriceRoubles: 1100000,
+            prefab: "assets/content/items/barter/item_barter_valuable_bitcoin/item_barter_valuable_bitcoin.bundle",
+            width: 1,
+            height: 1,
+            barter: {
+                "59faff1d86f7746c51718c9c": 1 // Bitcoin
+            }
+        },
+        gpcoin: {
+            _id: "67b7b98b4767af842e0521ed",
+            _name: "gambling_gpcoin",
+            quest_id: "66b57e52fcf263f4d70af5e2", // NEED REPLACE
+            name: "Mystery GP Coin 50/50",
+            shortName: "Mystery GP Coin 50/50",
+            desc: `Feeling lucky? Looking to double up your spoils? Try your luck at double or nothing!\n==============================\n50 GP Coin - ${config.odds['gpcoin_success']}%\nNothing - ${config.odds['gpcoin_failure']}`,
+            fleaPriceRoubles: 1700000,
+            handbookPriceRoubles: 125000,
+            prefab: "assets/content/items/barter/item_barter_valuable_gp/item_barter_valuable_gp.bundle",
+            width: 1,
+            height: 1,
+            barter: {
+                "5d235b4d86f7742e017bc88a": 25 // GP Coin
+            }
+        },
+        medical: {
+            _id: "67b7b98b4767af842e0521fb",
+            _name: "gambling_medical",
+            quest_id: "66b57e52fcf263f4d70af6e2", // NEED REPLACE
+            name: "Mystery Medical Kit",
+            shortName: "Mystery Medical Kit",
+            desc: `Hey soldier, looking for some meds to help keep you alive out there? I have a business to run here and I don't have time to sort through all this stuff. Take a chance and see what you get!`,
+            fleaPriceRoubles: 350000,
+            handbookPriceRoubles: 350000,
+            prefab: "assets/content/items/containers/item_container_meds/item_container_meds.bundle",
+            width: 3,
+            height: 3,
+            barter: {
+                "5d1b3a5d86f774252167ba22": 3, // Pile of meds
+                "619cc01e0a7c3a1a2731940c": 2, // Medical tools
+                "5b4335ba86f7744d2837a264": 1  // Bloodset
+            }
+        },
+        sealed: {
+            _id: "67b7b98b4767af842e0521e5",
+            _name: "gambling_sealed_weapon_case",
+            quest_id: "66b57e52fcf263f4d70af3e3",
+            name: "Sealed Weapon Case",
+            shortName: "Sealed Weapon Case",
+            desc: "Looking for a weapon with some attachments that are left for you to attach yourself? Well do we have the perfect container for you. This is the same Sealed Weapon Case you would find in an airdrop and is not custom in any way.",
+            fleaPriceRoubles: 450000,
+            handbookPriceRoubles: 450000,
+            prefab: "assets/content/items/barter/item_barter_walletwz/item_barter_walletwz.bundle",
+            width: 5,
+            height: 2,
+            barter: undefined
+        },
+        food: {
+            _id: "67b7b98b4767af842e0521e6",
+            _name: "gambling_food",
+            quest_id: "66b57e52fcf263f4d70af3e4",
+            name: "Mystery Food",
+            shortName: "Mystery Food",
+            desc: `Come along friend, you look a little hungry. Try your luck at scoring a delicious snack!\n==============================\nCommon Food - ${config.odds['food_common']}%\nUncommon Food - ${config.odds['food_uncommon']}%\nRare Food - ${config.odds['food_rare']}%`,
+            fleaPriceRoubles: 35000,
+            handbookPriceRoubles: 35000,
+            prefab: "assets/content/weapons/usable_items/item_mre/item_mre_loot.bundle",
+            width: 1,
+            height: 2,
+            barter: undefined
+        },
+        melee: {
+            _id: "67b7b98b4767af842e0521ea",
+            _name: "gambling_melee",
+            quest_id: "66b57e52fcf263f4d70af3e5",
+            name: "Mystery Melee",
+            shortName: "Mystery Melee",
+            desc: `Looking for a shiny new weapon to beat your foes with? Come test your luck!\n\n PS: These weapons may or may have not been stolen from a sad little Timmy who didn't shove this up their pouch in time... poor timmy :'(\n==============================\nCommon Melee - ${config.odds['melee_common']}%\nUncommon Melee - ${config.odds['melee_uncommon']}%\nRare Melee - ${config.odds['melee_rare']}%\nExtremely Rare Melee - ${config.odds['melee_extremely_rare']}%`,
+            fleaPriceRoubles: 82500,
+            handbookPriceRoubles: 82500,
+            prefab: "assets/content/weapons/taiga/weapon_usvr_taiga_container.bundle",
+            width: 1,
+            height: 3,
+            barter: undefined
+        },
+        stim: {
+            _id: "67b7b98b4767af842e0521eb",
+            _name: "gambling_stim",
+            quest_id: "66b57e52fcf263f4d70af3e6",
+            name: "Mystery Stimulant",
+            shortName: "Mystery Stimulant",
+            desc: `Looking for your next pick me up? We have all the drugs you could ask for!\n==============================\nCommon Stimulant - ${config.odds['stim_common']}%\nUncommon Stimulant - ${config.odds['stim_uncommon']}%\nRare Stimulant - ${config.odds['stim_rare']}%`,
+            fleaPriceRoubles: 70000,
+            handbookPriceRoubles: 70000,
+            prefab: "assets/content/items/barter/item_container_injectorcase/item_container_injectorcase.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        fiftyfifty: {
+            _id: "67b7b98b4767af842e0521f8",
+            _name: "gambling_roubles",
+            quest_id: "66b57e52fcf263f4d70af3e7",
+            name: "50/50 Case",
+            shortName: "50/50 Case",
+            desc: `The true all in or nothing. This case was taken from Reshala's stash and has a 50% chance to double your money!. This could be your chance to win it all! "Scared money don't make money." -YG \n==============================\nDelicious Can of Beef Stew - 50.0%\n5 Million Roubles - 50.0%`,
+            fleaPriceRoubles: 2750000,
+            handbookPriceRoubles: 2750000,
+            prefab: "assets/content/items/containers/item_container_money/item_container_money.bundle",
+            width: 5,
+            height: 4,
+            barter: undefined
+        },
+        weapon: {
+            _id: "67b7b98b4767af842e0521f0",
+            _name: "gambling_weapon",
+            quest_id: "66b57e52fcf263f4d70af3e8",
+            name: "Weapon Mystery Box",
+            shortName: "Weapon Mystery Box",
+            desc: `Weapon Mystery Box, contains over 1000 different possible weapons ranging from premium meta weapons, early wipe weapons, scav weapons, meme/cursed weapons, and everything between... \n==============================\nFully Modded Weapon - ${config.odds['weapon_meta']}%\nSemi-modded Weapon - ${config.odds['weapon_decent']}%\nScav Weapon - ${config.odds['weapon_scav']}%\nDefault Weapon - ${config.odds['weapon_base']}%\nMeme Weapon - ${config.odds['weapon_meme']}%%`,
+            fleaPriceRoubles: 200000,
+            handbookPriceRoubles: 200000,
+            prefab: "assets/content/items/spec/item_spec_weaprepair/item_spec_weaprepair.bundle",
+            width: 4,
+            height: 4,
+            barter: undefined
+        },
+        backpack: {
+            _id: "67b7b98b4767af842e0521f4",
+            _name: "gambling_backpack",
+            quest_id: "66b57e52fcf263f4d70af7d4",
+            name: "Backpack Mystery Bag",
+            shortName: "Backpack Mystery Bag",
+            desc: `Need a new bag for your next loot run? Come try these bags for size!\n==============================\nCommon Backpack - ${config.odds['backpack_common']}%\nUncommon Backpack - ${config.odds['backpack_uncommon']}%\nRare Backpack - ${config.odds['backpack_rare']}%\nExtremely Rare Backpack - ${config.odds['backpack_extremely_rare']}%`,
+            fleaPriceRoubles: 79750,
+            handbookPriceRoubles: 79750,
+            prefab: "assets/content/items/equipment/backpack_pilgrim/item_equipment_backpack_pilgrim_christmas.bundle",
+            width: 5,
+            height: 7,
+            barter: undefined
+        },
+        loadout: {
+            _id: "67b7b98b4767af842e0521f5",
+            _name: "gambling_loadout",
+            quest_id: "66b57e52fcf263f4d70af3ea",
+            name: "Mystery Loadout",
+            shortName: "Mystery Loadout",
+            desc: `Contains a random tiered loadout with mostly premium items and gear. All loadouts are randomly generated and corelate by rarity, meaning scav loadouts will generate mostly scav gear with an added chance that gear and items can upgrade tiers for added randomness. Same with all tiers of loadout.  which means you will never recieve the same loadout twice.  Items unboxed include:\n Weapon, Extra Magazines, Ammo, Grenades, Armor, Rig, Helmet, Headset, Backpack, Food, Drink, and Medical Supplies.`,
+            fleaPriceRoubles: 600000,
+            handbookPriceRoubles: 600000,
+            prefab: "assets/content/items/equipment/backpack_blackjack/item_equipment_backpack_blackjack.bundle",
+            width: 5,
+            height: 7,
+            barter: undefined
+        },
+        premium_loadout: {
+            _id: "67b7b98b4767af842e0521f6",
+            _name: "gambling_premium_loadout",
+            quest_id: "66b57e52fcf263f4d70af3f4",
+            name: "Premium Mystery Loadout",
+            shortName: "Premium Mystery Loadout",
+            desc: `Containes a high-tier loadout with mostly premium items and gear. All loadouts are randomly generated and corelate by rarity, meaning high-tier loadouts will generate mostly rare gear with an added chance that gear and items can be downgraded to average tier for added randomness. All tiers of loadout can have some items and gear go up or down rarities as well.  which means you will never recieve the same loadout twice.  Items unboxed include:\n Weapon, Extra Magazines, Ammo, Grenades, Armor, Rig, Helmet, Headset, Backpack, Food, Drink, and Medical Supplies.`,
+            fleaPriceRoubles: 850000,
+            handbookPriceRoubles: 850000,
+            prefab: "assets/content/items/equipment/backpack_6sh118/item_equipment_backpack_6sh118.bundle",
+            width: 5,
+            height: 7,
+            barter: undefined
+        },
+        rig: {
+            _id: "67b7b98b4767af842e0521f7",
+            _name: "gambling_rig",
+            quest_id: "66b57e52fcf263f4d70b0f45",
+            name: "Tactical Rig Mystery Box",
+            shortName: "Tactical Rig Mystery Box",
+            desc: `Looking for a brand new Tactical Rig? From Scav rigs to Boss Rigs We've got you covered!\n==============================\nScav Rig - ${config.odds['rig_scav']}%\nEarly Wipe Rig - ${config.odds['rig_early_wipe']}%\nLate Wipe Rig - ${config.odds['rig_late_wipe']}%\nBoss Rig - ${config.odds['rig_boss']}%`,
+            fleaPriceRoubles: 79750,
+            handbookPriceRoubles: 79750,
+            prefab: "assets/content/items/equipment/rig_boss_birdeye/item_equipment_rig_boss_birdeye.bundle",
+            width: 2,
+            height: 2,
+            barter: undefined
+        },
+        helmet: {
+            _id: "67b7b98b4767af842e0521f9",
+            _name: "gambling_helmet",
+            quest_id: "66b57e52fcf263f4d70af3ec",
+            name: "Mystery Helmet",
+            shortName: "Mystery Helmet",
+            desc: `Are you tired of Chad PMCs one tapping the largest part of your player? Well I can offer protection for you! Purchase a Helmet Mystery Box today!\n==============================\nCommon Helmet - ${config.odds['helmet_common']}%\nUncommon Helmet - ${config.odds['helmet_uncommon']}%\nRare Helmet - ${config.odds['helmet_rare']}%\nExtremely Rare T-7 Thermal Helmet - ${config.odds['helmet_extremely_rare']}%`,
+            fleaPriceRoubles: 100000,
+            handbookPriceRoubles: 100000,
+            prefab: "assets/content/items/equipment/helmet_altyn/item_equipment_helmet_altyn.bundle",
+            width: 2,
+            height: 2,
+            barter: undefined
+        },
+        headset: {
+            _id: "67b7b98b4767af842e0521fa",
+            _name: "gambling_headset",
+            quest_id: "66b57e52fcf263f4d70af3ed",
+            name: "Mystery Headset",
+            shortName: "Mystery Headset",
+            desc: `You can't expect to hear that sneaky USEC with those flimsy pair of headphones. Buy a Mystery Headset today!\n==============================\nCommon Headset - ${config.odds['headset_common']}%\nUncommon Headset - ${config.odds['headset_uncommon']}%\nRare Headset - ${config.odds['headset_rare']}%`,
+            fleaPriceRoubles: 79750,
+            handbookPriceRoubles: 79750,
+            prefab: "assets/content/items/equipment/headset_comtaciv/item_equipment_headset_comtaciv.bundle",
+            width: 2,
+            height: 2,
+            barter: undefined
+        },
+        armor: {
+            _id: "67b7b98b4767af842e0521ee",
+            _name: "gambling_armor",
+            quest_id: "66b57e52fcf263f4d70af3ee",
+            name: "Armor Mystery Box",
+            shortName: "Armor Mystery Box",
+            desc: `Need protection? Better be safe than sorry. Otherwise, that Timmy will catch you lacking.\n==============================\nCommon Armor - ${config.odds['armor_common']}%\nUncommon Armor - ${config.odds['armor_uncommon']}%\nRare Armor - ${config.odds['armor_rare']}%`,
+            fleaPriceRoubles: 130000,
+            handbookPriceRoubles: 130000,
+            prefab: "assets/content/items/spec/item_spec_armorrepair/item_spec_armorrepair.bundle",
+            width: 4,
+            height: 4,
+            barter: undefined
+        },
+        premium_armor: {
+            _id: "67b7b98b4767af842e0521ef",
+            _name: "gambling_premium_armor",
+            quest_id: "66b57e52fcf263f4d70af3ef",
+            name: "Premium Armor Mystery Box",
+            shortName: "Premium Armor Mystery Box",
+            desc: `So you need something a little better than a PACA? Alright... sheesh.. Since I like you a little better than the rest, I have a sweet deal I can offer you. I don't have much of these left to offer, but you can try your luck.\n==============================\nRare Armor - ${config.odds['premium_armor_rare']}%`,
+            fleaPriceRoubles: 350000,
+            handbookPriceRoubles: 350000,
+            prefab: "assets/content/items/spec/item_spec_armorrepair/item_spec_armorrepair.bundle",
+            width: 4,
+            height: 4,
+            barter: undefined
+        },
+        premium_weapon: {
+            _id: "67b7b98b4767af842e0521f3",
+            _name: "gambling_premium_weapon",
+            quest_id: "66b57e52fcf263f4d70af3eb",
+            name: "Premium Weapon Mystery Box",
+            shortName: "Premium Weapon Mystery Box",
+            desc: `contains a heavily modded weapon, currently contains 250+ weapons in the loot pool\n==============================\nRare Weapon - ${config.odds['premium_weapon_meta']}%`,
+            fleaPriceRoubles: 300000,
+            handbookPriceRoubles: 300000,
+            prefab: "assets/content/items/spec/item_spec_weaprepair/item_spec_weaprepair.bundle",
+            width: 4,
+            height: 4,
+            barter: undefined
+        },
+        '7.62x25': {
+            _id: "67b7b98b4767af842e0521d0",
+            _name: "gambling_7.62x25",
+            quest_id: "66b59e1cfcf263f4d70af000",
+            name: "Mystery 7.62x25mm",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Or maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nUnboxes ${config.odds['7.62x25_min']}%-${config.odds['7.62x25_max']}% Rounds\nCommon Rounds - ${config.odds["7.62x25_common"]}%\nUncommon Rounds - ${config.odds["7.62x25_uncommon"]}%\nRare Rounds - ${config.odds["7.62x25_rare"]}%`,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
+            prefab: "assets/content/items/ammo/patrons/patron_762x25tt_pst_gzh.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '9x18': {
+            _id: "67b7b98b4767af842e0521d1",
+            _name: "gambling_9x18",
+            quest_id: "66b59e1cfcf263f4d70af421",
+            name: "Mystery 9x18mm Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['9x18_min']}-${config.odds['9x18_max']} Rounds\nCommon Rounds - ${config.odds["9x18_common"]}%\nUncommon Rounds - ${config.odds["9x18_uncommon"]}%\nRare Rounds - ${config.odds["9x18_rare"]}%`,
+            fleaPriceRoubles: 14000,
+            handbookPriceRoubles: 14000,
+            prefab: "assets/content/items/ammo/patrons/patron_9x18pm_pbm.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '9x19': {
+            _id: "67b7b98b4767af842e0521d2",
+            _name: "gambling_9x19",
+            quest_id: "66b59e1cfcf263f4d70af422",
+            name: "Mystery 9x19mm Parabellum Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['9x19_min']}-${config.odds['9x19_max']} Rounds\nCommon Rounds - ${config.odds["9x19_common"]}%\nUncommon Rounds - ${config.odds["9x19_uncommon"]}%\nRare Rounds - ${config.odds["9x19_rare"]}%`,
+            fleaPriceRoubles: 19500,
+            handbookPriceRoubles: 19500,
+            prefab: "assets/content/items/ammo/patrons/patron_9x19_7n31.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '9x21': {
+            _id: "67b7b98b4767af842e0521d3",
+            _name: "gambling_9x21",
+            quest_id: "66b59e1cfcf263f4d70af423",
+            name: "Mystery 9x21mm Gyurza Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['9x21_min']}-${config.odds['9x21_max']} Rounds\nCommon Rounds - ${config.odds["9x21_common"]}%\nUncommon Rounds - ${config.odds["9x21_uncommon"]}%\nRare Rounds - ${config.odds["9x21_rare"]}%`,
+            fleaPriceRoubles: 19000,
+            handbookPriceRoubles: 19000,
+            prefab: "assets/content/items/ammo/patrons/patron_9x21_7n42.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '.357': {
+            _id: "67b7b98b4767af842e0521d4",
+            _name: "gambling_.357",
+            quest_id: "66b59e1cfcf263f4d70af424",
+            name: "Mystery .357 Magnum Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['.357_min']}-${config.odds['.357_max']} Rounds\nCommon Rounds - ${config.odds[".357_common"]}%\nUncommon Rounds - ${config.odds[".357_uncommon"]}%\nRare Rounds - ${config.odds[".357_rare"]}%`,
+            fleaPriceRoubles: 13000,
+            handbookPriceRoubles: 13000,
+            prefab: "assets/content/items/ammo/patrons/patron_9x33r_fmj.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '.45': {
+            _id: "67b7b98b4767af842e0521d5",
+            _name: "gambling_.45",
+            quest_id: "66b59e1cfcf263f4d70af425",
+            name: "Mystery .45 ACP Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['.45_min']}-${config.odds['.45_max']} Rounds\nCommon Rounds - ${config.odds[".45_common"]}%\nUncommon Rounds - ${config.odds[".45_uncommon"]}%\nRare Rounds - ${config.odds[".45_rare"]}%`,
+            fleaPriceRoubles: 19000,
+            handbookPriceRoubles: 19000,
+            prefab: "assets/content/items/ammo/patrons/patron_1143x23_acp_ap.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '4.6x30': {
+            _id: "67b7b98b4767af842e0521d6",
+            _name: "gambling_4.6x30",
+            quest_id: "66b59e1cfcf263f4d70af426",
+            name: "Mystery 4.6x30mm HK Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['4.6x30_min']}-${config.odds['4.6x30_max']} Rounds\nCommon Rounds - ${config.odds["4.6x30_common"]}%\nUncommon Rounds - ${config.odds["4.6x30_uncommon"]}%\nRare Rounds - ${config.odds["4.6x30_rare"]}%`,
+            fleaPriceRoubles: 23000,
+            handbookPriceRoubles: 23000,
+            prefab: "assets/content/items/ammo/patrons/patron_46x30_ap_sx.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '5.7x28': {
+            _id: "67b7b98b4767af842e0521d7",
+            _name: "gambling_5.7x28",
+            quest_id: "66b59e1cfcf263f4d70af427",
+            name: "Mystery 5.7x28mm FN Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['5.7x28_min']}-${config.odds['5.7x28_max']} Rounds\nCommon Rounds - ${config.odds["5.7x28_common"]}%\nUncommon Rounds - ${config.odds["5.7x28_uncommon"]}%\nRare Rounds - ${config.odds["5.7x28_rare"]}%`,
+            fleaPriceRoubles: 20000,
+            handbookPriceRoubles: 20000,
+            prefab: "assets/content/items/ammo/patrons/patron_57x28_ss190.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '5.45x39': {
+            _id: "67b7b98b4767af842e0521d8",
+            _name: "gambling_5.45x39",
+            quest_id: "66b59e1cfcf263f4d70af428",
+            name: "Mystery 5.45x39mm Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['5.45x39_min']}-${config.odds['5.45x39_max']} Rounds\nCommon Rounds - ${config.odds["5.45x39_common"]}%\nUncommon Rounds - ${config.odds["5.45x39_uncommon"]}%\nRare Rounds - ${config.odds["5.45x39_rare"]}%`,
+            fleaPriceRoubles: 20000,
+            handbookPriceRoubles: 20000,
+            prefab: "assets/content/items/ammo/patrons/patron_545x39_bs.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '5.56x45': {
+            _id: "67b7b98b4767af842e0521d9",
+            _name: "gambling_5.56x45",
+            quest_id: "66b59e1cfcf263f4d70af429",
+            name: "Mystery 5.56x45mm NATO Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['5.56x45_min']}-${config.odds['5.56x45_max']} Rounds\nCommon Rounds - ${config.odds["5.56x45_common"]}%\nUncommon Rounds - ${config.odds["5.56x45_uncommon"]}%\nRare Rounds - ${config.odds["5.56x45_rare"]}%`,
+            fleaPriceRoubles: 25000,
+            handbookPriceRoubles: 25000,
+            prefab: "assets/content/items/ammo/patrons/patron_556x45_m995.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '.300': {
+            _id: "67b7b98b4767af842e0521da",
+            _name: "gambling_.300",
+            quest_id: "66b59e1cfcf263f4d70af42a",
+            name: "Mystery .300 Blackout Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['.300_min']}-${config.odds['.300_max']} Rounds\nCommon Rounds - ${config.odds[".300_common"]}%\nUncommon Rounds - ${config.odds[".300_uncommon"]}%\nRare Rounds - ${config.odds[".300_rare"]}%`,
+            fleaPriceRoubles: 22500,
+            handbookPriceRoubles: 22500,
+            prefab: "assets/content/items/ammo/patrons/patron_762x35_ap.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '7.62x39': {
+            _id: "67b7b98b4767af842e0521db",
+            _name: "gambling_7.62x39",
+            quest_id: "66b59e1cfcf263f4d70af42b",
+            name: "Mystery 7.62x39mm Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['7.62x39_min']}-${config.odds['7.62x39_max']} Rounds\nCommon Rounds - ${config.odds["7.62x39_common"]}%\nUncommon Rounds - ${config.odds["7.62x39_uncommon"]}%\nRare Rounds - ${config.odds["7.62x39_rare"]}%`,
+            fleaPriceRoubles: 22500,
+            handbookPriceRoubles: 22500,
+            prefab: "assets/content/items/ammo/patrons/patron_762x39_bp.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '7.62x51': {
+            _id: "67b7b98b4767af842e0521dc",
+            _name: "gambling_7.62x51",
+            quest_id: "66b59e1cfcf263f4d70af42c",
+            name: "Mystery 7.62x51mm NATO Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['7.62x51_min']}-${config.odds['7.62x51_max']} Rounds\nCommon Rounds - ${config.odds["7.62x51_common"]}%\nUncommon Rounds - ${config.odds["7.62x51_uncommon"]}%\nRare Rounds - ${config.odds["7.62x51_rare"]}%`,
+            fleaPriceRoubles: 24500,
+            handbookPriceRoubles: 24500,
+            prefab: "assets/content/items/ammo/patrons/patron_762x51.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '7.62x54': {
+            _id: "67b7b98b4767af842e0521dd",
+            _name: "gambling_7.62x54",
+            quest_id: "66b59e1cfcf263f4d70af42d",
+            name: "Mystery 7.62x54mm Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['7.62x54_min']}-${config.odds['7.62x54_max']} Rounds\nCommon Rounds - ${config.odds["7.62x54_common"]}%\nUncommon Rounds - ${config.odds["7.62x54_uncommon"]}%\nRare Rounds - ${config.odds["7.62x54_rare"]}%`,
+            fleaPriceRoubles: 26000,
+            handbookPriceRoubles: 26000,
+            prefab: "assets/content/items/ammo/patrons/patron_762x54r_7n14.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '.338': {
+            _id: "67b7b98b4767af842e0521de",
+            _name: "gambling_.338",
+            quest_id: "66b59e1cfcf263f4d70af42e",
+            name: "Mystery .338 Lapua Magnum Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['.338_min']}-${config.odds['.338_max']} Rounds\nCommon Rounds - ${config.odds[".338_common"]}%\nUncommon Rounds - ${config.odds[".338_uncommon"]}%\nRare Rounds - ${config.odds[".338_rare"]}%`,
+            fleaPriceRoubles: 80000,
+            handbookPriceRoubles: 80000,
+            prefab: "assets/content/items/ammo/patrons/patron_338_lapua_fmj.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '9x39': {
+            _id: "67b7b98b4767af842e0521df",
+            _name: "gambling_9x39",
+            quest_id: "66b59e1cfcf263f4d70af42f",
+            name: "Mystery 9x39mm Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['9x39_min']}-${config.odds['9x39_max']} Rounds\nCommon Rounds - ${config.odds["9x39_common"]}%\nUncommon Rounds - ${config.odds["9x39_uncommon"]}%\nRare Rounds - ${config.odds["9x39_rare"]}%`,
+            fleaPriceRoubles: 22000,
+            handbookPriceRoubles: 22000,
+            prefab: "assets/content/items/ammo/patrons/patron_9x39_7n9.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '.366': {
+            _id: "67b7b98b4767af842e0521e0",
+            _name: "gambling_.366",
+            quest_id: "66b59e1cfcf263f4d70af430",
+            name: "Mystery .366 TKM Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['.366_min']}-${config.odds['.366_max']} Rounds\nCommon Rounds - ${config.odds[".366_common"]}%\nUncommon Rounds - ${config.odds[".366_uncommon"]}%\nRare Rounds - ${config.odds[".366_rare"]}%`,
+            fleaPriceRoubles: 17000,
+            handbookPriceRoubles: 17000,
+            prefab: "assets/content/items/ammo/patrons/patron_366_ap.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '12.7x55': {
+            _id: "67b7b98b4767af842e0521e1",
+            _name: "gambling_12.7x55",
+            quest_id: "66b59e1cfcf263f4d70af431",
+            name: "Mystery 12.7x55mm Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['12.7x55_min']}-${config.odds['12.7x55_max']} Rounds\nCommon Rounds - ${config.odds["12.7x55_common"]}%\nUncommon Rounds - ${config.odds["12.7x55_uncommon"]}%\nRare Rounds - ${config.odds["12.7x55_rare"]}%`,
+            fleaPriceRoubles: 25500,
+            handbookPriceRoubles: 25500,
+            prefab: "assets/content/items/ammo/patrons/patron_127x55_ps12.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '12/70': {
+            _id: "67b7b98b4767af842e0521e2",
+            _name: "gambling_12/70",
+            quest_id: "66b59e1cfcf263f4d70af432",
+            name: "Mystery 12/70 Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['12/70_min']}-${config.odds['12/70_max']} Rounds\nCommon Rounds - ${config.odds["12/70_common"]}%\nUncommon Rounds - ${config.odds["12/70_uncommon"]}%\nRare Rounds - ${config.odds["12/70_rare"]}%`,
+            fleaPriceRoubles: 14500,
+            handbookPriceRoubles: 14500,
+            prefab: "assets/content/items/ammo/patrons/patron_12x70_7mm.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '20/70': {
+            _id: "67b7b98b4767af842e0521e3",
+            _name: "gambling_20/70",
+            quest_id: "66b59e1cfcf263f4d70af433",
+            name: "Mystery 20/70 Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['20/70_min']}-${config.odds['20/70_max']} Rounds\nCommon Rounds - ${config.odds["20/70_common"]}%\nUncommon Rounds - ${config.odds["20/70_uncommon"]}%\nRare Rounds - ${config.odds["20/70_rare"]}%`,
+            fleaPriceRoubles: 16000,
+            handbookPriceRoubles: 16000,
+            prefab: "assets/content/items/ammo/patrons/patron_20x70_7mm.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '23x75': {
+            _id: "67b7b98b4767af842e0521e4",
+            _name: "gambling_23x75",
+            quest_id: "66b59e1cfcf263f4d70af434",
+            name: "Mystery 23x75 Rounds",
+            shortName: "Mystery",
+            desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['23x75_min']}-${config.odds['23x75_max']} Rounds\nCommon Rounds - ${config.odds["23x75_common"]}%\nUncommon Rounds - ${config.odds["23x75_uncommon"]}%\nRare Rounds - ${config.odds["23x75_rare"]}%`,
+            fleaPriceRoubles: 18000,
+            handbookPriceRoubles: 18000,
+            prefab: "assets/content/items/ammo/patrons/patron_23x75_sh.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+    })
 };
