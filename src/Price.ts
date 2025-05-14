@@ -8,9 +8,6 @@ import { Ammo } from "./containers/Ammo";
 import { MysteryContainer } from "./MysteryContainer";
 import { Gamble } from "./Gamble";
 
-
-
-
 export class Price{
     private container: DependencyContainer;
     private config: any;
@@ -95,8 +92,7 @@ export class Price{
                 currentPrice = Math.min(traderPrice, fleaPrice); // use cheapest option
             } 
 
-
-            if (currentPrice == 0) { // item is not sold by trader and is not sold on flea, must use handbook price. Nuclear option.
+            if (currentPrice == 0) { // Item is not sold by trader or flea, must use handbook price. Nuclear option.
                 currentPrice = itemHelper.getItemMaxPrice(currentItem)
                 //console.log(currentItem)
                 //console.log(currentPrice)
@@ -130,7 +126,6 @@ export class Price{
                     //console.log('Roubles Price: ' + currentPrice)
                 } else {
                     currentPrice =  this.getItemPrice(parent, currentItem, amount);
-                    
                 }
                 
                 sum = sum + currentPrice;
@@ -204,7 +199,7 @@ export class Price{
         let weaponPricesPerTier: Array<number> = [];
         let tierTotal: number        = 0;
         let sum: number              = 0;
-        const helmet_slots = ['helmet_top', 'helmet_back', 'helmet_ears'];
+        const helmet_slots = ['helmet_top', 'helmet_back', 'helmet_ears', 'Helmet_top', 'Helmet_back', 'Helmet_ears'];
 
         for(let i = 0; i < rarities.length; i++){
             let count = 0;
@@ -217,7 +212,7 @@ export class Price{
                     if (name == 'helmet') {
                         if (helmet_slots.includes(items.presets[i][j].Items[k].slotId)) continue; // skip usless helmet attachments
 
-                        //if (i == 1 && j == 0) { // Testing
+                        //if (i == 3 && j == 0) { // Testing
                             //console.log(items.presets[i][j].Items[k])
                             //console.log('ID = ' + currentItem);
                             //console.log(itemHelper.getDynamicItemPrice(currentItem))

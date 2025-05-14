@@ -33,6 +33,8 @@ export class Armors {
     "64a536392d2c4e6e970f4121", // WARTECH TV-115 plate carrier (Olive Drab)
     "5c0e446786f7742013381639", // 6B5-15 Zh-86 Uley armored rig (Flora)
     "5c0e3eb886f7742015526062", // 6B5-16 Zh-86 Uley armored rig (Khaki)
+    "66b6296d7994640992013b17", // Stich Profi Plate Carrier V2 (Black)
+    "66b6295178bbc0200425f995", // Stich Profi Stich Defense mod.2 plate carrier (MultiCam)
   ]
 
   public rewards = [

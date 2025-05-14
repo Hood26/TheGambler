@@ -21,7 +21,8 @@ export class Helmets {
     '59ef13ca86f77445fd0e2483', // Jack-o'-lantern tactical pumpkin helmet
     '5645bc214bdc2d363b8b4571', // FORT Kiver-M bulletproof helmet
     '5aa7d193e5b5b000171d063f', // SSSh-94 SFERA-S helmet
-    '5b4329f05acfc47a86086aa1', // DevTac Ronin ballistic helmet
+    '5b4329f05acfc47a86086aa1', // DevTac Ronin Respirator
+    '66bdc28a0b603c26902b2011', // DevTac Ronin ballistic helmet
     '5aa7e4a4e5b5b000137b76f2', // ZSh-1-2M helmet (Black cover)
     '5aa7e454e5b5b0214e506fa2', // ZSh-1-2M helmet (Olive Drab)
     '5d6d3716a4b9361bc8618872', // BNTI LShZ-2DTM helmet (Black)
@@ -43,2979 +44,4884 @@ export class Helmets {
       {
         Items: [
           {
-            _id: "0bb11619daa78cd21159b0b1",
-            _tpl: "5ea17ca01412a1425304d1c0",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 4,
-              y: 2,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "f84e6eadc118c309abef02b8",
-            _tpl: "657f9a55c6679fefb3051e19",
-            parentId: "0bb11619daa78cd21159b0b1",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "cf4e22fdecb780e0479ed861",
-            _tpl: "657f9a94ada5fadd1f07a589",
-            parentId: "0bb11619daa78cd21159b0b1",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-            _id: "22af1e4a52ef058538ff5302",
-            _tpl: "5a16b8a9fcdbcb00165aa6ca",
-            upd: {
-              StackObjectsCount: 1,
-              Repairable: {
-                Durability: 100,
-                MaxDurability: 100,
-              },
-              SpawnedInSession: true,
-            },
-            parentId: "0bb11619daa78cd21159b0b1",
-            slotId: "mod_nvg",
-          },
-          {
-            _id: "1ad6f728b448d6ed55d8ac8a",
-            _tpl: "5c11046cd174af02a012e42b",
-            upd: {
-              StackObjectsCount: 1,
-              Repairable: {
-                Durability: 100,
-                MaxDurability: 100,
-              },
-              SpawnedInSession: true,
-            },
-            parentId: "22af1e4a52ef058538ff5302",
-            slotId: "mod_nvg",
-          },
-          {
-            _id: "f5d46bc744a36018927eba55",
-            _tpl: "5c110624d174af029e69734c",
-            upd: {
-              StackObjectsCount: 1,
-              Repairable: {
-                Durability: 100,
-                MaxDurability: 100,
-              },
-              SpawnedInSession: true,
-              Togglable: {
-                On: true,
-              },
-            },
-            parentId: "1ad6f728b448d6ed55d8ac8a",
-            slotId: "mod_nvg",
-          },
+						"_id": "6822d84eddc96b68ac0512ba",
+						"_tpl": "5ea17ca01412a1425304d1c0",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 4,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d84eddc96b68ac0512bc",
+						"_tpl": "657f9a55c6679fefb3051e19",
+						"parentId": "6822d84eddc96b68ac0512ba",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d84eddc96b68ac0512bd",
+						"_tpl": "657f9a94ada5fadd1f07a589",
+						"parentId": "6822d84eddc96b68ac0512ba",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d9a5185ce152ec038d12",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d84eddc96b68ac0512ba",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d99c185ce152ec038d0c",
+						"_tpl": "5c11046cd174af02a012e42b",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d9a5185ce152ec038d12",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d98f185ce152ec038d03",
+						"_tpl": "5c110624d174af029e69734c",
+						"parentId": "6822d99c185ce152ec038d0c",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "21450386f70fa5985f78144f",
-            _tpl: "5c17a7ed2e2216152142459c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa92de65c0122b70ffdb9",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 7,
-              y: 0,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "bec4ed595c2d65e284dfcbf8",
-            _tpl: "657f9897f4c82973640b235e",
-            parentId: "21450386f70fa5985f78144f",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "56a8e6e4222f87ac89f34a24",
-            _tpl: "657f98fbada5fadd1f07a585",
-            parentId: "21450386f70fa5985f78144f",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "fa3cfbbfc0913f31abbcbb4e",
-              _tpl: "5c178a942e22164bef5ceca3",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 25,
-                      MaxDurability: 25
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "21450386f70fa5985f78144f",
-              slotId: "mod_equipment_001"
-          },
-          {
-              _id: "2498ba8002fa314f79469379",
-              _tpl: "5a16b8a9fcdbcb00165aa6ca",
-              parentId: "21450386f70fa5985f78144f",
-              slotId: "mod_nvg",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "a27da3b9f0ce325b9a1e4d7d",
-              _tpl: "5c11046cd174af02a012e42b",
-              parentId: "2498ba8002fa314f79469379",
-              slotId: "mod_nvg",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "2c58c89044c89a9117026ee8",
-              _tpl: "5c110624d174af029e69734c",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "a27da3b9f0ce325b9a1e4d7d",
-              slotId: "mod_nvg"
-          },
+						"_id": "6822d866ddc96b68ac0512be",
+						"_tpl": "6759af0f9c8a538dd70bfae6",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "677e90e191de7ae4136e3967",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d866ddc96b68ac0512bf",
+						"_tpl": "6571133d22996eaf11088200",
+						"parentId": "6822d866ddc96b68ac0512be",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d866ddc96b68ac0512c0",
+						"_tpl": "6571138e818110db4600aa71",
+						"parentId": "6822d866ddc96b68ac0512be",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d866ddc96b68ac0512c1",
+						"_tpl": "657112fa818110db4600aa6b",
+						"parentId": "6822d866ddc96b68ac0512be",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d866ddc96b68ac0512c2",
+						"_tpl": "5c0e842486f77443a74d2976",
+						"parentId": "6822d866ddc96b68ac0512be",
+						"slotId": "mod_equipment",
+						"upd": {
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "ed13348a20e89261afa6180e",
-            _tpl: "5e00c1ad86f774747333222c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "6571200b6fe59548840cb53a",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 1,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "4a587edbc21f3b93954b650a",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "ed13348a20e89261afa6180e",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "91127af6ea9ddbd81cb15373",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "ed13348a20e89261afa6180e",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "3b4653c4240c55e1b0417c40",
-              _tpl: "5e00cfa786f77469dc6e5685",
-              parentId: "ed13348a20e89261afa6180e",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "b060d3e3a9fc3c515e0873a0",
-              _tpl: "5a16b8a9fcdbcb00165aa6ca",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "ed13348a20e89261afa6180e",
-              slotId: "mod_nvg"
-          },
-          {
-              _id: "fc850eb8cba9250e1088f690",
-              _tpl: "5c11046cd174af02a012e42b",
-              parentId: "b060d3e3a9fc3c515e0873a0",
-              slotId: "mod_nvg",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "5fa144f7a12712cf853216bd",
-              _tpl: "5c110624d174af029e69734c",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "fc850eb8cba9250e1088f690",
-              slotId: "mod_nvg"
-          },
+						"_id": "6822d870ddc96b68ac0512c3",
+						"_tpl": "5a154d5cfcdbcb001a3b00da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7c0e65c0122b70ffdb0",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d870ddc96b68ac0512c4",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "6822d870ddc96b68ac0512c3",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d870ddc96b68ac0512c5",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "6822d870ddc96b68ac0512c3",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d9a2185ce152ec038d0d",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"parentId": "6822d870ddc96b68ac0512c3",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d99b185ce152ec038d0b",
+						"_tpl": "5c11046cd174af02a012e42b",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d9a2185ce152ec038d0d",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d98f185ce152ec038d04",
+						"_tpl": "5c110624d174af029e69734c",
+						"parentId": "6822d99b185ce152ec038d0b",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "d71e85c96a4f0d4420c98b67",
-            _tpl: "5e01ef6886f77445f643baa4",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 2,
-              y: 2,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "7db4ee3f12de224c1d510f41",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "d71e85c96a4f0d4420c98b67",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "a92fdaffbcdde2ba83f22d77",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "d71e85c96a4f0d4420c98b67",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-              _id: "f7b4f867ea5d308cad7441a1",
-              _tpl: "5e01f31d86f77465cf261343",
-              parentId: "d71e85c96a4f0d4420c98b67",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "8c31fbd181d7c8cf0c6b510e",
-              _tpl: "5a16b8a9fcdbcb00165aa6ca",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "d71e85c96a4f0d4420c98b67",
-              slotId: "mod_nvg"
-          },
-          {
-              _id: "73759289fef7c7eb2a41cf81",
-              _tpl: "5c11046cd174af02a012e42b",
-              parentId: "8c31fbd181d7c8cf0c6b510e",
-              slotId: "mod_nvg",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "8c109672c9cfac2a2805cd6f",
-              _tpl: "5c110624d174af029e69734c",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "73759289fef7c7eb2a41cf81",
-              slotId: "mod_nvg"
-          },
+						"_id": "6822d873ddc96b68ac051309",
+						"_tpl": "5ac8d6885acfc400180ae7b0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7f1e9433140ad0baf9d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d873ddc96b68ac05130a",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "6822d873ddc96b68ac051309",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d873ddc96b68ac05130b",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "6822d873ddc96b68ac051309",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d9a3185ce152ec038d0e",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"parentId": "6822d873ddc96b68ac051309",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d99a185ce152ec038d0a",
+						"_tpl": "5c11046cd174af02a012e42b",
+						"parentId": "6822d9a3185ce152ec038d0e",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d98f185ce152ec038d07",
+						"_tpl": "5c110624d174af029e69734c",
+						"parentId": "6822d99a185ce152ec038d0a",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "82c4a82fd665659af58b9039",
-            _tpl: "5ac8d6885acfc400180ae7b0",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7f1e9433140ad0baf9d",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 5,
-              y: 0,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "54ceffe2a20965bd770d2f1e",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "82c4a82fd665659af58b9039",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "0bcd3d0fb03fc0a99e4e6b06",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "82c4a82fd665659af58b9039",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "0eda732c6589e7a4551f0bad",
-              _tpl: "5a16b9fffcdbcb0176308b34",
-              upd: {
-                  StackObjectsCount: 1,
-                  SpawnedInSession: true
-              },
-              parentId: "82c4a82fd665659af58b9039",
-              slotId: "mod_equipment_001"
-          },
-          {
-              _id: "89e00a0472a5d77d4c9632fa",
-              _tpl: "5c0e66e2d174af02a96252f4",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 32,
-                      MaxDurability: 32
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "82c4a82fd665659af58b9039",
-              slotId: "mod_equipment_002"
-          },
-          {
-              _id: "70854807ef2be458f7c7724a",
-              _tpl: "5a16b8a9fcdbcb00165aa6ca",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "82c4a82fd665659af58b9039",
-              slotId: "mod_nvg"
-          },
-          {
-              _id: "7416a4d72c8590c5acf81368",
-              _tpl: "5c11046cd174af02a012e42b",
-              parentId: "70854807ef2be458f7c7724a",
-              slotId: "mod_nvg",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "a48202c0a26432e5eb77b724",
-              _tpl: "5c110624d174af029e69734c",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "7416a4d72c8590c5acf81368",
-              slotId: "mod_nvg"
-          },
+						"_id": "6822d87addc96b68ac05130c",
+						"_tpl": "5f60c74e3b85f6263c145586",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc861b588f345450a6d76",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d87addc96b68ac05130d",
+						"_tpl": "657bc285aab96fccee08bea3",
+						"parentId": "6822d87addc96b68ac05130c",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d87addc96b68ac05130e",
+						"_tpl": "657bc2c5a1c61ee0c3036333",
+						"parentId": "6822d87addc96b68ac05130c",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d87addc96b68ac05130f",
+						"_tpl": "657bc2e7b30eca976305118d",
+						"parentId": "6822d87addc96b68ac05130c",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d9c7185ce152ec038d15",
+						"_tpl": "5f60c85b58eff926626a60f7",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 55,
+								"MaxDurability": 55
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d87addc96b68ac05130c",
+						"slotId": "mod_equipment"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "b739edbe8c1efe41bfccbf25",
-            _tpl: "5a154d5cfcdbcb001a3b00da",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7c0e65c0122b70ffdb0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 3,
-              y: 0,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "be332fcdcdc2c3d2cabc8e52",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "b739edbe8c1efe41bfccbf25",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "b2dcccb612f1064375b0550c",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "b739edbe8c1efe41bfccbf25",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "6e01b05a0cb13a690786a91c",
-              _tpl: "5a16b9fffcdbcb0176308b34",
-              upd: {
-                  StackObjectsCount: 1,
-                  SpawnedInSession: true
-              },
-              parentId: "b739edbe8c1efe41bfccbf25",
-              slotId: "mod_equipment_001"
-          },
-          {
-              _id: "ba45a82f4d03c908f51fafab",
-              _tpl: "5c0e66e2d174af02a96252f4",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 32,
-                      MaxDurability: 32
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "b739edbe8c1efe41bfccbf25",
-              slotId: "mod_equipment_002"
-          },
-          {
-              _id: "cdbfc8f8a51cb2598c8ad738",
-              _tpl: "5a16b8a9fcdbcb00165aa6ca",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "b739edbe8c1efe41bfccbf25",
-              slotId: "mod_nvg"
-          },
-          {
-              _id: "85b745faea702373bb50702e",
-              _tpl: "5c11046cd174af02a012e42b",
-              parentId: "cdbfc8f8a51cb2598c8ad738",
-              slotId: "mod_nvg",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "9d96bd689af3c116431ec353",
-              _tpl: "5c110624d174af029e69734c",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "85b745faea702373bb50702e",
-              slotId: "mod_nvg"
-          },
+						"_id": "6822d885ddc96b68ac05215c",
+						"_tpl": "5e00c1ad86f774747333222c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6571200b6fe59548840cb53a",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 2,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d885ddc96b68ac05215d",
+						"_tpl": "6551fec55d0cf82e51014288",
+						"parentId": "6822d885ddc96b68ac05215c",
+						"slotId": "helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d885ddc96b68ac05215e",
+						"_tpl": "655200ba0ef76cf7be09d528",
+						"parentId": "6822d885ddc96b68ac05215c",
+						"slotId": "helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d9a4185ce152ec038d10",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d885ddc96b68ac05215c",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d99a185ce152ec038d08",
+						"_tpl": "5c11046cd174af02a012e42b",
+						"parentId": "6822d9a4185ce152ec038d10",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d98f185ce152ec038d06",
+						"_tpl": "5c110624d174af029e69734c",
+						"parentId": "6822d99a185ce152ec038d08",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
-      }
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d886ddc96b68ac05215f",
+						"_tpl": "5e01ef6886f77445f643baa4",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120376d197c216005b33e",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 2,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d886ddc96b68ac052160",
+						"_tpl": "6551fec55d0cf82e51014288",
+						"parentId": "6822d886ddc96b68ac05215f",
+						"slotId": "helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d886ddc96b68ac052161",
+						"_tpl": "655200ba0ef76cf7be09d528",
+						"parentId": "6822d886ddc96b68ac05215f",
+						"slotId": "helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d9a4185ce152ec038d11",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d886ddc96b68ac05215f",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d99a185ce152ec038d09",
+						"_tpl": "5c11046cd174af02a012e42b",
+						"parentId": "6822d9a4185ce152ec038d11",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d98f185ce152ec038d05",
+						"_tpl": "5c110624d174af029e69734c",
+						"parentId": "6822d99a185ce152ec038d09",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d89dddc96b68ac052162",
+						"_tpl": "5ca20ee186f774799474abc2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc8c926820ea7da04f2fa",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d89dddc96b68ac052163",
+						"_tpl": "657bbe73a1c61ee0c303632b",
+						"parentId": "6822d89dddc96b68ac052162",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d89dddc96b68ac052164",
+						"_tpl": "657bbed0aab96fccee08be96",
+						"parentId": "6822d89dddc96b68ac052162",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d89dddc96b68ac052165",
+						"_tpl": "657bbefeb30eca9763051189",
+						"parentId": "6822d89dddc96b68ac052162",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d9bc185ce152ec038d13",
+						"_tpl": "5ca2113f86f7740b2547e1d2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 85,
+								"MaxDurability": 85
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d89dddc96b68ac052162",
+						"slotId": "mod_equipment"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d8aaddc96b68ac052166",
+						"_tpl": "5aa7e276e5b5b000171d0647",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc88ebbd440df880b2dfe",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d8aaddc96b68ac052167",
+						"_tpl": "657bc06daab96fccee08be9b",
+						"parentId": "6822d8aaddc96b68ac052166",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d8aaddc96b68ac052168",
+						"_tpl": "657bc0d8a1c61ee0c303632f",
+						"parentId": "6822d8aaddc96b68ac052166",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d8aaddc96b68ac052169",
+						"_tpl": "657bc107aab96fccee08be9f",
+						"parentId": "6822d8aaddc96b68ac052166",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d9c0185ce152ec038d14",
+						"_tpl": "5aa7e373e5b5b000137b76f0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 50,
+								"MaxDurability": 50
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d8aaddc96b68ac052166",
+						"slotId": "mod_equipment"
+					}
+        ],
+      },
     ],
     [ // _rare
       {
         Items: [
           {
-            _id: "8e06ca14f870efad77944c5b",
-            _tpl: "5c17a7ed2e2216152142459c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa92de65c0122b70ffdb9",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 6,
-              y: 6,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "0e1dcc2d27baa6d5e454cb35",
-            _tpl: "657f9897f4c82973640b235e",
-            parentId: "8e06ca14f870efad77944c5b",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "859e9d4719e1d6f6e79c0bcd",
-            _tpl: "657f98fbada5fadd1f07a585",
-            parentId: "8e06ca14f870efad77944c5b",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "34ce3718ff52cc72e046293a",
-              _tpl: "5c0558060db834001b735271",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "8e06ca14f870efad77944c5b",
-              slotId: "mod_nvg"
-          },
+						"_id": "67ecee80150082490003850a",
+						"_tpl": "6745895717824b1ec20570a6",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "677d14927f8ee8353d85918d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 0,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "67ecee80150082490003850b",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "67ecee80150082490003850a",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecee80150082490003850c",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "67ecee80150082490003850a",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecee80150082490003850d",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "67ecee80150082490003850a",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "2d9b14d2508e942ac744ec06",
-            _tpl: "5ea17ca01412a1425304d1c0",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa95ae9433140ad0bafad",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 4,
-              y: 12,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "2e34ee135c6382110c4402c1",
-            _tpl: "657f9a55c6679fefb3051e19",
-            parentId: "2d9b14d2508e942ac744ec06",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "7dba21e92ffb98dc0c5cb636",
-            _tpl: "657f9a94ada5fadd1f07a589",
-            parentId: "2d9b14d2508e942ac744ec06",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "3260c49263ce484b62bdb53c",
-              _tpl: "5ea18c84ecf1982c7712d9a2",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 36,
-                      MaxDurability: 36
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "2d9b14d2508e942ac744ec06",
-              slotId: "mod_nvg"
-          },
-          {
-              _id: "2310bc6d3a76fffd55c0c5cb",
-              _tpl: "5c0558060db834001b735271",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "3260c49263ce484b62bdb53c",
-              slotId: "mod_nvg"
-          },
+						"_id": "67ecee86150082490003850e",
+						"_tpl": "5aa7cfc0e5b5b00015693143",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc6ceaab96fccee08beb2",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 0,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "67ecee86150082490003850f",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "67ecee86150082490003850e",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecee861500824900038510",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "67ecee86150082490003850e",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecee861500824900038511",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "67ecee86150082490003850e",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "6d69bfc5e607da7fcbcbe18b",
-            _tpl: "65709d2d21b9f815e208ff95",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 0,
-              y: 13,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "b1460dabaf0dc2d4311b13aa",
-            _tpl: "657f9eb7e9433140ad0baf86",
-            parentId: "6d69bfc5e607da7fcbcbe18b",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "ed6f31b445bb19b6bd8e0c8d",
-            _tpl: "657f9ef6c6679fefb3051e1f",
-            parentId: "6d69bfc5e607da7fcbcbe18b",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-              _id: "4e25671dcd3f56b64417d476",
-              _tpl: "6570a88c8f221f3b210353b7",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 20,
-                      MaxDurability: 20
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "6d69bfc5e607da7fcbcbe18b",
-              slotId: "mod_equipment_000"
-          },
+						"_id": "67ecee8c1500824900038512",
+						"_tpl": "5aa7e276e5b5b000171d0647",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc88ebbd440df880b2dfe",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecee8c1500824900038513",
+						"_tpl": "657bc06daab96fccee08be9b",
+						"parentId": "67ecee8c1500824900038512",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecee8c1500824900038514",
+						"_tpl": "657bc0d8a1c61ee0c303632f",
+						"parentId": "67ecee8c1500824900038512",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecee8c1500824900038515",
+						"_tpl": "657bc107aab96fccee08be9f",
+						"parentId": "67ecee8c1500824900038512",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "681ec144b2f0bf68a003951c",
+						"_tpl": "5aa7e373e5b5b000137b76f0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 50,
+								"MaxDurability": 50
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecee8c1500824900038512",
+						"slotId": "mod_equipment"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "d55e3ce064037466739a633e",
-            _tpl: "5b40e1525acfc4771e1c6611",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657120b36fe59548840cb542",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 4,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "c993ffb00a274b9c223ba301",
-            _tpl: "657112234269e9a568089eac",
-            parentId: "d55e3ce064037466739a633e",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "ba5c326a65ffd2a8ab9073fa",
-            _tpl: "657112a4818110db4600aa66",
-            parentId: "d55e3ce064037466739a633e",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "acecb460edffd633404879c7",
-            _tpl: "657112ce22996eaf110881fb",
-            parentId: "d55e3ce064037466739a633e",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "67ecee911500824900038516",
+						"_tpl": "5c066ef40db834001966a595",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 4,
+							"y": 14,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "681ef2dc73ead7872003a853",
+						"_tpl": "5c066e3a0db834001b7353f0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecee911500824900038516",
+						"slotId": "mod_nvg"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "d55e3ce064037466739a633e",
-            _tpl: "5b40e1525acfc4771e1c6611",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657120b36fe59548840cb542",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 4,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "c993ffb00a274b9c223ba301",
-            _tpl: "657112234269e9a568089eac",
-            parentId: "d55e3ce064037466739a633e",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "ba5c326a65ffd2a8ab9073fa",
-            _tpl: "657112a4818110db4600aa66",
-            parentId: "d55e3ce064037466739a633e",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "acecb460edffd633404879c7",
-            _tpl: "657112ce22996eaf110881fb",
-            parentId: "d55e3ce064037466739a633e",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "67ecee9d1500824900038517",
+						"_tpl": "5d6d3716a4b9361bc8618872",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 4,
+							"y": 8,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecee9d1500824900038519",
+						"_tpl": "657fa009d4caf976440afe3a",
+						"parentId": "67ecee9d1500824900038517",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecee9d150082490003851a",
+						"_tpl": "657fa04ac6679fefb3051e24",
+						"parentId": "67ecee9d1500824900038517",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecee9d150082490003851b",
+						"_tpl": "657fa07387e11c61f70bface",
+						"parentId": "67ecee9d1500824900038517",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "681ec170b2f0bf68a003951d",
+						"_tpl": "5d6d3943a4b9360dbc46d0cc",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 1,
+								"MaxDurability": 1
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecee9d1500824900038517",
+						"slotId": "mod_equipment_002"
+					},
+					{
+						"_id": "681ec176b2f0bf68a003951e",
+						"_tpl": "5d6d3829a4b9361bc8618943",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 50,
+								"MaxDurability": 50
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecee9d1500824900038517",
+						"slotId": "mod_equipment_000"
+					},
+					{
+						"_id": "681ec179b2f0bf68a0039561",
+						"_tpl": "5d6d3be5a4b9361bc73bc763",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 35,
+								"MaxDurability": 35
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecee9d1500824900038517",
+						"slotId": "mod_equipment_001"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "f0ce3e1011318cd300861fbb",
-            _tpl: "5b40e2bc5acfc40016388216",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657120dd6fe59548840cb54c",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 2,
-              y: 6,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "ee502a1572b2c878b2ed84f0",
-            _tpl: "657112234269e9a568089eac",
-            parentId: "f0ce3e1011318cd300861fbb",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "b52fc88a5ea4eb722a562e8a",
-            _tpl: "657112a4818110db4600aa66",
-            parentId: "f0ce3e1011318cd300861fbb",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "5e42b49d005c88ccccd9adb3",
-            _tpl: "657112ce22996eaf110881fb",
-            parentId: "f0ce3e1011318cd300861fbb",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "67eceeab150082490003851d",
+						"_tpl": "66b5f65ca7f72d197e70bcd6",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66b9c41f0b603c26902afd8d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceeab150082490003851e",
+						"_tpl": "66b61cfae98be930d701c029",
+						"parentId": "67eceeab150082490003851d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceeab150082490003851f",
+						"_tpl": "66b61ce0c5d72b027748867e",
+						"parentId": "67eceeab150082490003851d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e078185ce152ec04b34d",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"parentId": "67eceeab150082490003851d",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e07d185ce152ec04b351",
+						"_tpl": "5c0695860db834001b735461",
+						"parentId": "6822e078185ce152ec04b34d",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e086185ce152ec04c195",
+						"_tpl": "5c0696830db834001d23f5da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822e07d185ce152ec04b351",
+						"slotId": "mod_nvg"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "1685f6bfbd72d293ec0785ce",
-            _tpl: "5d5e9c74a4b9364855191c40",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa735e65c0122b70ffda5",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 6,
-              y: 8,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "de9261567fd1f0543c6440b1",
-            _tpl: "657f8b94f92cd718b70154ff",
-            parentId: "1685f6bfbd72d293ec0785ce",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "5d78ff8641272fd50873870f",
-            _tpl: "657f8b43f92cd718b70154fb",
-            parentId: "1685f6bfbd72d293ec0785ce",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "7aa8594b8696539b01f010a6",
-              _tpl: "5c0e66e2d174af02a96252f4",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 32,
-                      MaxDurability: 32
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "1685f6bfbd72d293ec0785ce",
-              slotId: "mod_equipment_002"
-          },
-          {
-              _id: "e876a97fa02f1e5fc2b66342",
-              _tpl: "5a398ab9c4a282000c5a9842",
-              parentId: "1685f6bfbd72d293ec0785ce",
-              slotId: "mod_mount",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "675bcbc8729877ee92207421",
-              _tpl: "57d17c5e2459775a5c57d17d",
-              parentId: "e876a97fa02f1e5fc2b66342",
-              slotId: "mod_flashlight",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          }
+						"_id": "67eceeb31500824900038520",
+						"_tpl": "66b5f666cad6f002ab7214c2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66b9c562fd38bf060b4b85a7",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceeb31500824900038521",
+						"_tpl": "66b61cfae98be930d701c029",
+						"parentId": "67eceeb31500824900038520",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceeb31500824900038522",
+						"_tpl": "66b61ce0c5d72b027748867e",
+						"parentId": "67eceeb31500824900038520",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "f726a5430594c8539374bb81",
-            _tpl: "5d5e7d28a4b936645d161203",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa705e9433140ad0baf95",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 4,
-              y: 8,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "dc07e943da4017b9190b91d3",
-            _tpl: "657f8a8d7db258e5600fe33d",
-            parentId: "f726a5430594c8539374bb81",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "97c16b804d2166c6d959ea21",
-            _tpl: "657f8b05f4c82973640b2348",
-            parentId: "f726a5430594c8539374bb81",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "4967d7b4434b22236b7c24b8",
-              _tpl: "5c0e66e2d174af02a96252f4",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 32,
-                      MaxDurability: 32
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "f726a5430594c8539374bb81",
-              slotId: "mod_equipment_002"
-          },
-          {
-              _id: "7ebce207517cc976c5f9c22a",
-              _tpl: "5a398ab9c4a282000c5a9842",
-              parentId: "f726a5430594c8539374bb81",
-              slotId: "mod_mount",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "a80722e2e88938d4a0ed6af6",
-              _tpl: "57d17c5e2459775a5c57d17d",
-              parentId: "7ebce207517cc976c5f9c22a",
-              slotId: "mod_flashlight",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
+						"_id": "67eceeb81500824900038523",
+						"_tpl": "66b5f661af44ca0014063c05",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66b9c53ea7f72d197e70bf83",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceeb81500824900038524",
+						"_tpl": "66b61cfae98be930d701c029",
+						"parentId": "67eceeb81500824900038523",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceeb81500824900038525",
+						"_tpl": "66b61ce0c5d72b027748867e",
+						"parentId": "67eceeb81500824900038523",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e079185ce152ec04b34e",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67eceeb81500824900038523",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822e07d185ce152ec04b350",
+						"_tpl": "5c0695860db834001b735461",
+						"parentId": "6822e079185ce152ec04b34e",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e085185ce152ec04c194",
+						"_tpl": "5c0696830db834001d23f5da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822e07d185ce152ec04b350",
+						"slotId": "mod_nvg"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "74c6a1380499c64d7e8aa89f",
-            _tpl: "5ca20ee186f774799474abc2",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc8c926820ea7da04f2fa",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 2,
-              y: 8,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "75b88ceea446347eebffc788",
-            _tpl: "657bbe73a1c61ee0c303632b",
-            parentId: "74c6a1380499c64d7e8aa89f",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "baf992be6ca1c5e07fee1925",
-            _tpl: "657bbed0aab96fccee08be96",
-            parentId: "74c6a1380499c64d7e8aa89f",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "5021217883c4cd45531e1588",
-            _tpl: "657bbefeb30eca9763051189",
-            parentId: "74c6a1380499c64d7e8aa89f",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "9a945cd03e2c5fb412bf69be",
-              _tpl: "5ca2113f86f7740b2547e1d2",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 35,
-                      MaxDurability: 35
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "74c6a1380499c64d7e8aa89f",
-              slotId: "mod_equipment"
-          },
+						"_id": "67eceec61500824900038546",
+						"_tpl": "5c17a7ed2e2216152142459c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa92de65c0122b70ffdb9",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 30,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceec61500824900038547",
+						"_tpl": "657f9897f4c82973640b235e",
+						"parentId": "67eceec61500824900038546",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceec61500824900038548",
+						"_tpl": "657f98fbada5fadd1f07a585",
+						"parentId": "67eceec61500824900038546",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf123150082490003da71",
+						"_tpl": "5a16b7e1fcdbcb00165aa6c9",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67eceec61500824900038546",
+						"slotId": "mod_equipment_000"
+					},
+					{
+						"_id": "67ecf3141500824900043f39",
+						"_tpl": "5c1793902e221602b21d3de2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 27,
+								"MaxDurability": 27
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67eceec61500824900038546",
+						"slotId": "mod_equipment_001"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "b88bb22c2e1a949b1d487edf",
-            _tpl: "5e01ef6886f77445f643baa4",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657120376d197c216005b33e",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 10,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "77749d5347ef03d67eaf48d9",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "b88bb22c2e1a949b1d487edf",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "9f1cd99cfc5c655bee40701a",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "b88bb22c2e1a949b1d487edf",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "e0314c5307dd7ebf1434d6c2",
-              _tpl: "5e00cfa786f77469dc6e5685",
-              parentId: "b88bb22c2e1a949b1d487edf",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "b7938bf6adc8bd1e3f2ffd0f",
-              _tpl: "5a16b8a9fcdbcb00165aa6ca",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "b88bb22c2e1a949b1d487edf",
-              slotId: "mod_nvg"
-          },
-          {
-              _id: "a899fc806d661b26e636cfbd",
-              _tpl: "5c0695860db834001b735461",
-              parentId: "b7938bf6adc8bd1e3f2ffd0f",
-              slotId: "mod_nvg",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "dc764e29ddc9c164f0da3a44",
-              _tpl: "5c066e3a0db834001b7353f0",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "a899fc806d661b26e636cfbd",
-              slotId: "mod_nvg"
-          },
+						"_id": "67eceecc1500824900038549",
+						"_tpl": "5b4329f05acfc47a86086aa1",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "65711f886d197c216005b32f",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 4,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceecc150082490003854a",
+						"_tpl": "65711b07a330b8c9060f7b01",
+						"parentId": "67eceecc1500824900038549",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceecc150082490003854b",
+						"_tpl": "65711b489eb8c145180dbb9d",
+						"parentId": "67eceecc1500824900038549",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceecc150082490003854c",
+						"_tpl": "65711b9b65daf6aa960c9b1b",
+						"parentId": "67eceecc1500824900038549",
+						"slotId": "helmet_eyes",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceecc150082490003854d",
+						"_tpl": "65711bc79eb8c145180dbba1",
+						"parentId": "67eceecc1500824900038549",
+						"slotId": "helmet_jaw",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceecc150082490003854e",
+						"_tpl": "65711b706d197c216005b31c",
+						"parentId": "67eceecc1500824900038549",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "8abb86e5ccf76b9089ab967f",
-            _tpl: "5e00c1ad86f774747333222c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "6571200b6fe59548840cb53a",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 9,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "58625c9a24842a2ccad73a90",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "8abb86e5ccf76b9089ab967f",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "a748a67f0bd31869ea6f741a",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "8abb86e5ccf76b9089ab967f",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "27516e0c0904cef39139194d",
-              _tpl: "5e01f31d86f77465cf261343",
-              parentId: "8abb86e5ccf76b9089ab967f",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "c2b9cd08fc9c9f23b5852be9",
-              _tpl: "5e00cdd986f7747473332240",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 22,
-                      MaxDurability: 22
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "8abb86e5ccf76b9089ab967f",
-              slotId: "mod_equipment_001"
-          },
+						"_id": "67eceed3150082490003854f",
+						"_tpl": "5ea17ca01412a1425304d1c0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa95ae9433140ad0bafad",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 20,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceed31500824900038550",
+						"_tpl": "657f9a55c6679fefb3051e19",
+						"parentId": "67eceed3150082490003854f",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceed31500824900038551",
+						"_tpl": "657f9a94ada5fadd1f07a589",
+						"parentId": "67eceed3150082490003854f",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0bc150082490003cd0f",
+						"_tpl": "5ea18c84ecf1982c7712d9a2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67eceed3150082490003854f",
+						"slotId": "mod_nvg"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "a97941c707ac2525fc6e88f1",
-            _tpl: "5e4bfc1586f774264f7582d3",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa9cf87e11c61f70bfadd",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 11,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "ae1a48d6221943d248961ab5",
-            _tpl: "657f9c78ada5fadd1f07a58d",
-            parentId: "a97941c707ac2525fc6e88f1",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "f7044d7c34ded5fe3c011b3d",
-            _tpl: "657f9cb587e11c61f70bfaca",
-            parentId: "a97941c707ac2525fc6e88f1",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "e5a3119f881cd1a5c129375c",
-              _tpl: "5a16b7e1fcdbcb00165aa6c9",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 60,
-                      MaxDurability: 60
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "a97941c707ac2525fc6e88f1",
-              slotId: "mod_equipment_000"
-          },
+						"_id": "67eceed81500824900038552",
+						"_tpl": "65709d2d21b9f815e208ff95",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 0,
+							"y": 4,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceed81500824900038554",
+						"_tpl": "657f9eb7e9433140ad0baf86",
+						"parentId": "67eceed81500824900038552",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceed81500824900038555",
+						"_tpl": "657f9ef6c6679fefb3051e1f",
+						"parentId": "67eceed81500824900038552",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "3d9cc741c70660e552f5ec32",
-            _tpl: "61bca7cda0eae612383adf57",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc7d6aab96fccee08bec4",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 12,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "6d0e9ef978a0ad77b3bedd9c",
-            _tpl: "657bbcc9a1c61ee0c3036327",
-            parentId: "3d9cc741c70660e552f5ec32",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "e9466d597782bd5ba90ea0e7",
-            _tpl: "657bbcffbbd440df880b2dd5",
-            parentId: "3d9cc741c70660e552f5ec32",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "a8d25109d4c47ad8fa4ba9b7",
-              _tpl: "5a16b7e1fcdbcb00165aa6c9",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 60,
-                      MaxDurability: 60
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "3d9cc741c70660e552f5ec32",
-              slotId: "mod_equipment_000"
-          },
+						"_id": "67eceeeb1500824900038556",
+						"_tpl": "5f60b34a41e30a4ab12a6947",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7a5bbd440df880b2df6",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 20,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceeeb1500824900038557",
+						"_tpl": "657bbad7a1c61ee0c3036323",
+						"parentId": "67eceeeb1500824900038556",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceeeb1500824900038558",
+						"_tpl": "657bbb31b30eca9763051183",
+						"parentId": "67eceeeb1500824900038556",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e0ce185ce152ec04d16d",
+						"_tpl": "5f60c076f2bcbb675b00dac2",
+						"parentId": "67eceeeb1500824900038556",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "822086611f584cdb3d3879b3",
-            _tpl: "65719f0775149d62ce0a670b",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 2,
-              y: 14,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "3a4891c7a113dd2ce4d2d852",
-            _tpl: "657fa0fcd4caf976440afe3e",
-            parentId: "822086611f584cdb3d3879b3",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "c909ad1138dded3ad1ef0e22",
-            _tpl: "657fa168e9433140ad0baf8e",
-            parentId: "822086611f584cdb3d3879b3",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-            _id: "c2d5f1f519b65c3a278cef74",
-            _tpl: "657fa186d4caf976440afe42",
-            parentId: "822086611f584cdb3d3879b3",
-            slotId: "helmet_ears",
-            upd: {},
-          },
-          {
-              _id: "02ffc9646eef8f386cd4a416",
-              _tpl: "65719f9ef392ad76c50a2ec8",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 35,
-                      MaxDurability: 35
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "822086611f584cdb3d3879b3",
-              slotId: "mod_equipment_000"
-          },
+						"_id": "67eceeee1500824900038559",
+						"_tpl": "5b40e3f35acfc40016388218",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 8,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceeee150082490003855b",
+						"_tpl": "657f95bff92cd718b701550c",
+						"parentId": "67eceeee1500824900038559",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceeee150082490003855c",
+						"_tpl": "657f9605f4c82973640b2358",
+						"parentId": "67eceeee1500824900038559",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "52d479eed63494f93fbb9c8c",
-            _tpl: "5a154d5cfcdbcb001a3b00da",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7c0e65c0122b70ffdb0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 5,
-              y: 0,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "9e45be27298dab34d659eef3",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "52d479eed63494f93fbb9c8c",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "38d2469c49a784bcffa36b6d",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "52d479eed63494f93fbb9c8c",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "227eefd7686420b6a660138b",
-              _tpl: "5a16badafcdbcb001865f72d",
-              parentId: "52d479eed63494f93fbb9c8c",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "acd25ee1b6482419f90eaad4",
-              _tpl: "5ea058e01dbce517f324b3e2",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 20,
-                      MaxDurability: 20
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "52d479eed63494f93fbb9c8c",
-              slotId: "mod_nvg"
-          },
-          {
-              _id: "99f66f52176aae5e6d3af8a3",
-              _tpl: "5c0558060db834001b735271",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "acd25ee1b6482419f90eaad4",
-              slotId: "mod_nvg"
-          },
+						"_id": "67eceef1150082490003855d",
+						"_tpl": "5b40e4035acfc47a87740943",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 0,
+							"y": 6,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "67eceef1150082490003855f",
+						"_tpl": "657f95bff92cd718b701550c",
+						"parentId": "67eceef1150082490003855d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceef11500824900038560",
+						"_tpl": "657f9605f4c82973640b2358",
+						"parentId": "67eceef1150082490003855d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "ffe00b79cf6cc5a740150b63",
-            _tpl: "5ac8d6885acfc400180ae7b0",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7f1e9433140ad0baf9d",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 4,
-              y: 4,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "7db6b945c8992af18ab58698",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "ffe00b79cf6cc5a740150b63",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "cc3076a93d3908216feb71be",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "ffe00b79cf6cc5a740150b63",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "6814affcab3a7d5f88adbfe4",
-              _tpl: "5c0558060db834001b735271",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "ffe00b79cf6cc5a740150b63",
-              slotId: "mod_nvg"
-          },
+						"_id": "67eceef81500824900038565",
+						"_tpl": "5b40e2bc5acfc40016388216",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120dd6fe59548840cb54c",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 16,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67eceef81500824900038566",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "67eceef81500824900038565",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceef81500824900038567",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "67eceef81500824900038565",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67eceef81500824900038568",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "67eceef81500824900038565",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "157b1539b633ed646266a715",
-            _tpl: "5ac8d6885acfc400180ae7b0",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7f1e9433140ad0baf9d",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 2,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "42b29dd85c30619601c6af33",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "157b1539b633ed646266a715",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "8000113075d56badfab04411",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "157b1539b633ed646266a715",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "cd3296c218c6d704817936ee",
-            _tpl: "5a16b672fcdbcb001912fa83",
-            parentId: "157b1539b633ed646266a715",
-            slotId: "mod_equipment_000",
-            upd: {
-              StackObjectsCount: 1,
-              Togglable: {
-                On: true,
-              },
-            },
-          },
-          {
-              _id: "672f2fc07be4542742d66f28",
-              _tpl: "5a16b9fffcdbcb0176308b34",
-              upd: {
-                  StackObjectsCount: 1,
-                  SpawnedInSession: true
-              },
-              parentId: "157b1539b633ed646266a715",
-              slotId: "mod_equipment_001"
-          },
-          {
-              _id: "059167f76e3f54c5579b6804",
-              _tpl: "5c0e66e2d174af02a96252f4",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 32,
-                      MaxDurability: 32
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "157b1539b633ed646266a715",
-              slotId: "mod_equipment_002"
-          },
+						"_id": "67ecef051500824900038569",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 2,
+							"y": 26,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef05150082490003856b",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "67ecef051500824900038569",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef05150082490003856c",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "67ecef051500824900038569",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf34a1500824900044e6c",
+						"_tpl": "5a16b7e1fcdbcb00165aa6c9",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecef051500824900038569",
+						"slotId": "mod_equipment_000"
+					},
+					{
+						"_id": "67ecf130150082490003da7d",
+						"_tpl": "5a16b9fffcdbcb0176308b34",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecef051500824900038569",
+						"slotId": "mod_equipment_001"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "2ac5dacfb8a6a120a3e5c4e1",
-            _tpl: "5a154d5cfcdbcb001a3b00da",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7c0e65c0122b70ffdb0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 3,
-              y: 0,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "8902cb669d190a40de84ab19",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "2ac5dacfb8a6a120a3e5c4e1",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "8ae8a33c6a89b6ee3ad3d183",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "2ac5dacfb8a6a120a3e5c4e1",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "69f8a63e39391498315bd398",
-              _tpl: "5a16b9fffcdbcb0176308b34",
-              upd: {
-                  StackObjectsCount: 1,
-                  SpawnedInSession: true
-              },
-              parentId: "2ac5dacfb8a6a120a3e5c4e1",
-              slotId: "mod_equipment_001"
-          },
-          {
-              _id: "4ceee81e50996eaa8919a681",
-              _tpl: "5ea058e01dbce517f324b3e2",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 20,
-                      MaxDurability: 20
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "2ac5dacfb8a6a120a3e5c4e1",
-              slotId: "mod_nvg"
-          },
-          
+						"_id": "67ecef0d150082490003856d",
+						"_tpl": "5d5e7d28a4b936645d161203",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa705e9433140ad0baf95",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 6,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "67ecef0d150082490003856e",
+						"_tpl": "657f8a8d7db258e5600fe33d",
+						"parentId": "67ecef0d150082490003856d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef0d150082490003856f",
+						"_tpl": "657f8b05f4c82973640b2348",
+						"parentId": "67ecef0d150082490003856d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "9a691b7f0b6e143086d50ad3",
-            _tpl: "5ac8d6885acfc400180ae7b0",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7f1e9433140ad0baf9d",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 2,
-              y: 4,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "b30cf5239009424d843fdd7e",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "9a691b7f0b6e143086d50ad3",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "48fb02bebc540037d69b25c1",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "9a691b7f0b6e143086d50ad3",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "d74512e2d5731e0effb61fa7",
-              _tpl: "5a16b7e1fcdbcb00165aa6c9",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 60,
-                      MaxDurability: 60
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "9a691b7f0b6e143086d50ad3",
-              slotId: "mod_equipment_000"
-          },
-          {
-              _id: "663fc4cc5b4380cf6757dde8",
-              _tpl: "5a16b9fffcdbcb0176308b34",
-              upd: {
-                  StackObjectsCount: 1,
-                  SpawnedInSession: true
-              },
-              parentId: "9a691b7f0b6e143086d50ad3",
-              slotId: "mod_equipment_001"
-          },
+						"_id": "67ecef101500824900038570",
+						"_tpl": "5d5e9c74a4b9364855191c40",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa735e65c0122b70ffda5",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 8,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef101500824900038571",
+						"_tpl": "657f8b94f92cd718b70154ff",
+						"parentId": "67ecef101500824900038570",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef101500824900038572",
+						"_tpl": "657f8b43f92cd718b70154fb",
+						"parentId": "67ecef101500824900038570",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "505ba56fd41eec369c32e146",
-            _tpl: "5ac8d6885acfc400180ae7b0",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7f1e9433140ad0baf9d",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 3,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "418c34706d2572d6bdcc61ad",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "505ba56fd41eec369c32e146",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "b9285186ec1d98a8527590de",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "505ba56fd41eec369c32e146",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "b2f678e98ce92ab9cb8f9c96",
-              _tpl: "5a16badafcdbcb001865f72d",
-              parentId: "505ba56fd41eec369c32e146",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "5d38f1814280dcd5d18844ee",
-              _tpl: "5c0e66e2d174af02a96252f4",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 32,
-                      MaxDurability: 32
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "505ba56fd41eec369c32e146",
-              slotId: "mod_equipment_002"
-          },
+						"_id": "67ecef141500824900038573",
+						"_tpl": "5e4bfc1586f774264f7582d3",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa9cf87e11c61f70bfadd",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 20,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef141500824900038574",
+						"_tpl": "657f9c78ada5fadd1f07a58d",
+						"parentId": "67ecef141500824900038573",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef141500824900038575",
+						"_tpl": "657f9cb587e11c61f70bfaca",
+						"parentId": "67ecef141500824900038573",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf101150082490003da6c",
+						"_tpl": "5a16b7e1fcdbcb00165aa6c9",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecef141500824900038573",
+						"slotId": "mod_equipment_000"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "a4fe7f6a069b604e8fe2e746",
-            _tpl: "5c17a7ed2e2216152142459c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa92de65c0122b70ffdb9",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 6,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "7274f8596922a0cff5c2c324",
-            _tpl: "657f9897f4c82973640b235e",
-            parentId: "a4fe7f6a069b604e8fe2e746",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "2a479782a4387206eb53e369",
-            _tpl: "657f98fbada5fadd1f07a585",
-            parentId: "a4fe7f6a069b604e8fe2e746",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "f567d6c5f17e04277e621bb4",
-              _tpl: "5a16b7e1fcdbcb00165aa6c9",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 60,
-                      MaxDurability: 60
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "a4fe7f6a069b604e8fe2e746",
-              slotId: "mod_equipment_000"
-          },
-          {
-              _id: "5dac2ae6c3780a801a120b6f",
-              _tpl: "5c178a942e22164bef5ceca3",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 25,
-                      MaxDurability: 25
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "a4fe7f6a069b604e8fe2e746",
-              slotId: "mod_equipment_001"
-          },
+						"_id": "67ecef1b1500824900038576",
+						"_tpl": "675956062f6ddfe8ff0e2806",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6777b37393a9a6f10ea57501",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 6,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef1b1500824900038577",
+						"_tpl": "676307c004856a0b3c0dfffd",
+						"parentId": "67ecef1b1500824900038576",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef1b1500824900038578",
+						"_tpl": "676307b4d9ec0af3d9001fa8",
+						"parentId": "67ecef1b1500824900038576",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "0194cd9c09b12c005c41f6d7",
-            _tpl: "5c17a7ed2e2216152142459c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa92de65c0122b70ffdb9",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 4,
-              y: 6,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "458373463ab2006da5d51c08",
-            _tpl: "657f9897f4c82973640b235e",
-            parentId: "0194cd9c09b12c005c41f6d7",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "4130b9160e5c4593a063d20d",
-            _tpl: "657f98fbada5fadd1f07a585",
-            parentId: "0194cd9c09b12c005c41f6d7",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "6af2a0bbaa65560459608ba7",
-              _tpl: "5a16b672fcdbcb001912fa83",
-              parentId: "0194cd9c09b12c005c41f6d7",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1,
-                  Togglable: {
-                      On: true
-                  }
-              }
-          },
+						"_id": "67ecef211500824900038579",
+						"_tpl": "6759655674aa5e0825040d62",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6777bf37e10ffdb431ff9508",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 8,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "67ecef21150082490003857a",
+						"_tpl": "676307c004856a0b3c0dfffd",
+						"parentId": "67ecef211500824900038579",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef21150082490003857b",
+						"_tpl": "676307b4d9ec0af3d9001fa8",
+						"parentId": "67ecef211500824900038579",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "da6f3e0fed95b8f78d0057a2",
-            _tpl: "5c17a7ed2e2216152142459c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa92de65c0122b70ffdb9",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 7,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "fce8ef1e4ef6f6efc5e51f61",
-            _tpl: "657f9897f4c82973640b235e",
-            parentId: "da6f3e0fed95b8f78d0057a2",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "165c2ad4fb0f59599203721b",
-            _tpl: "657f98fbada5fadd1f07a585",
-            parentId: "da6f3e0fed95b8f78d0057a2",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "5d6248b7c34c02c82a49f671",
-              _tpl: "5c1793902e221602b21d3de2",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 15,
-                      MaxDurability: 15
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "da6f3e0fed95b8f78d0057a2",
-              slotId: "mod_equipment_001"
-          },
+						"_id": "67ecef28150082490003857c",
+						"_tpl": "67597ceea35600b4c10cea86",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6777bfee0658691ef27d9993",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 8,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "67ecef28150082490003857d",
+						"_tpl": "676307ded8b241b4f703a3e8",
+						"parentId": "67ecef28150082490003857c",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef28150082490003857e",
+						"_tpl": "676307d3d9ec0af3d9001fac",
+						"parentId": "67ecef28150082490003857c",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "88faa20e6ee450f377698e57",
-            _tpl: "5a154d5cfcdbcb001a3b00da",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7c0e65c0122b70ffdb0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 2,
-              y: 2,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "1cf0b88e84b65726ab7633f9",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "88faa20e6ee450f377698e57",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "ebbacfc1cdbb1908a6029ea5",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "88faa20e6ee450f377698e57",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "5b5fcf0e57793cc617b36fd0",
-              _tpl: "5a16b7e1fcdbcb00165aa6c9",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 60,
-                      MaxDurability: 60
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "88faa20e6ee450f377698e57",
-              slotId: "mod_equipment_000"
-          },
+						"_id": "67ecef2d150082490003857f",
+						"_tpl": "67597d241d5a44f2f605df06",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6777c1244557b9b1474da362",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 10,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "67ecef2d1500824900038580",
+						"_tpl": "676307ded8b241b4f703a3e8",
+						"parentId": "67ecef2d150082490003857f",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef2d1500824900038581",
+						"_tpl": "676307d3d9ec0af3d9001fac",
+						"parentId": "67ecef2d150082490003857f",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "f569f1498ff165b15c4fd28a",
-            _tpl: "5a154d5cfcdbcb001a3b00da",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7c0e65c0122b70ffdb0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 6,
-              y: 2,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "c5586061788bef72c5a16861",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "f569f1498ff165b15c4fd28a",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "fb1e2bf613952ea991eda668",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "f569f1498ff165b15c4fd28a",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "346c7baa6041945e8be9a316",
-              _tpl: "5a16b672fcdbcb001912fa83",
-              parentId: "f569f1498ff165b15c4fd28a",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1,
-                  Togglable: {
-                      On: true
-                  }
-              }
-          },
-          {
-              _id: "67ab3771999e6a8699263720",
-              _tpl: "5a16b9fffcdbcb0176308b34",
-              upd: {
-                  StackObjectsCount: 1,
-                  SpawnedInSession: true
-              },
-              parentId: "f569f1498ff165b15c4fd28a",
-              slotId: "mod_equipment_001"
-          },
-          {
-              _id: "a6aa0c572cd17d5ea7c61b7f",
-              _tpl: "5c0e66e2d174af02a96252f4",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 32,
-                      MaxDurability: 32
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "f569f1498ff165b15c4fd28a",
-              slotId: "mod_equipment_002"
-          },
+						"_id": "67ecef3f1500824900038582",
+						"_tpl": "5c0e874186f7745dc7616606",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc821aab96fccee08becc",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef3f1500824900038583",
+						"_tpl": "6571133d22996eaf11088200",
+						"parentId": "67ecef3f1500824900038582",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef3f1500824900038584",
+						"_tpl": "6571138e818110db4600aa71",
+						"parentId": "67ecef3f1500824900038582",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef3f1500824900038585",
+						"_tpl": "657112fa818110db4600aa6b",
+						"parentId": "67ecef3f1500824900038582",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef3f1500824900038586",
+						"_tpl": "5c0e842486f77443a74d2976",
+						"parentId": "67ecef3f1500824900038582",
+						"slotId": "mod_equipment",
+						"upd": {
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "8a3cb7bfb11b9c7a65e4730a",
-            _tpl: "5e00c1ad86f774747333222c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "6571200b6fe59548840cb53a",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 8,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "15f0145a4f7246f5ea88e55f",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "8a3cb7bfb11b9c7a65e4730a",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "f0f0019e639ec785707509ca",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "8a3cb7bfb11b9c7a65e4730a",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "56e568ac859fce28d813b2a2",
-              _tpl: "5e00cfa786f77469dc6e5685",
-              parentId: "8a3cb7bfb11b9c7a65e4730a",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "5ca731cd8a8f546b97719918",
-              _tpl: "5e00cdd986f7747473332240",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 22,
-                      MaxDurability: 22
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "8a3cb7bfb11b9c7a65e4730a",
-              slotId: "mod_equipment_001"
-          },
+						"_id": "67ecef421500824900038587",
+						"_tpl": "5c091a4e0db834001d5addc8",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "65712075f1074598bf0c02a7",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 14,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef421500824900038588",
+						"_tpl": "6571133d22996eaf11088200",
+						"parentId": "67ecef421500824900038587",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef421500824900038589",
+						"_tpl": "6571138e818110db4600aa71",
+						"parentId": "67ecef421500824900038587",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef42150082490003858a",
+						"_tpl": "657112fa818110db4600aa6b",
+						"parentId": "67ecef421500824900038587",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf063150082490003b043",
+						"_tpl": "5c0919b50db834001b7ce3b9",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 50,
+								"MaxDurability": 50
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecef421500824900038587",
+						"slotId": "mod_equipment"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "b830e35d979d06cd8b408dd3",
-            _tpl: "5e00c1ad86f774747333222c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "6571200b6fe59548840cb53a",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 2,
-              y: 10,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "6bc1bc96da3fefc190204a96",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "b830e35d979d06cd8b408dd3",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "33a0898057034537a65ee4a2",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "b830e35d979d06cd8b408dd3",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "9d78e63891a6522cc5369a28",
-              _tpl: "5e01f31d86f77465cf261343",
-              parentId: "b830e35d979d06cd8b408dd3",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "3d9d7c9d8182ed2e17e985a9",
-              _tpl: "5a16b8a9fcdbcb00165aa6ca",
-              parentId: "b830e35d979d06cd8b408dd3",
-              slotId: "mod_nvg",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
-          {
-              _id: "21c48ae435997c2b7cc974eb",
-              _tpl: "5c0695860db834001b735461",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "3d9d7c9d8182ed2e17e985a9",
-              slotId: "mod_nvg"
-          },
-          {
-              _id: "515ec955d1db4568612d50c6",
-              _tpl: "5c066e3a0db834001b7353f0",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 100,
-                      MaxDurability: 100
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "21c48ae435997c2b7cc974eb",
-              slotId: "mod_nvg"
-          },
+						"_id": "67ecef48150082490003858b",
+						"_tpl": "61bca7cda0eae612383adf57",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7d6aab96fccee08bec4",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef48150082490003858c",
+						"_tpl": "657bbcc9a1c61ee0c3036327",
+						"parentId": "67ecef48150082490003858b",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef48150082490003858d",
+						"_tpl": "657bbcffbbd440df880b2dd5",
+						"parentId": "67ecef48150082490003858b",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "0c228bb444bf2676dd491124",
-            _tpl: "5e01ef6886f77445f643baa4",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 4,
-              y: 10,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "c250f8a9142c79ad80c76250",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "0c228bb444bf2676dd491124",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "e21d2943e5d667aa4e9e192e",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "0c228bb444bf2676dd491124",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-              _id: "33892537c6da16f033273827",
-              _tpl: "5e01f31d86f77465cf261343",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 8,
-                      MaxDurability: 8
-                  },
-                  SpawnedInSession: true
-              },
-              parentId: "0c228bb444bf2676dd491124",
-              slotId: "mod_equipment_000"
-          },
+						"_id": "67ecef4d150082490003858e",
+						"_tpl": "65719f0775149d62ce0a670b",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 8,
+							"y": 10,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "67ecef4d1500824900038590",
+						"_tpl": "657fa0fcd4caf976440afe3e",
+						"parentId": "67ecef4d150082490003858e",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef4d1500824900038591",
+						"_tpl": "657fa168e9433140ad0baf8e",
+						"parentId": "67ecef4d150082490003858e",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef4d1500824900038592",
+						"_tpl": "657fa186d4caf976440afe42",
+						"parentId": "67ecef4d150082490003858e",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "37cfdb505f23bfb79ede1607",
-            _tpl: "5e01ef6886f77445f643baa4",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 6,
-              y: 10,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "d10261387da0203c9d3dbf47",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "37cfdb505f23bfb79ede1607",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "261e11dd93595515a2f5bdb2",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "37cfdb505f23bfb79ede1607",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-              _id: "df6bb9b496504910f70fdadf",
-              _tpl: "5e00cfa786f77469dc6e5685",
-              parentId: "37cfdb505f23bfb79ede1607",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
+						"_id": "67ecef4f1500824900038593",
+						"_tpl": "5a154d5cfcdbcb001a3b00da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7c0e65c0122b70ffdb0",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 32,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef4f1500824900038594",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecef4f1500824900038593",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef4f1500824900038595",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecef4f1500824900038593",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0eb150082490003cd1b",
+						"_tpl": "5a16b672fcdbcb001912fa83",
+						"parentId": "67ecef4f1500824900038593",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+					{
+						"_id": "67ecf12f150082490003da79",
+						"_tpl": "5a16b9fffcdbcb0176308b34",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecef4f1500824900038593",
+						"slotId": "mod_equipment_001"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "569f2e6fda52ba434800bc8b",
-            _tpl: "5a154d5cfcdbcb001a3b00da",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7c0e65c0122b70ffdb0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 7,
-              y: 0,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "f5624814d50690865d2dfc90",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "569f2e6fda52ba434800bc8b",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "104d0710b67da9f40a506ea1",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "569f2e6fda52ba434800bc8b",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "7ec9eef415d891e222ee2b47",
-              _tpl: "5a16b7e1fcdbcb00165aa6c9",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 60,
-                      MaxDurability: 60
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "569f2e6fda52ba434800bc8b",
-              slotId: "mod_equipment_000"
-          },
+						"_id": "67ecef511500824900038596",
+						"_tpl": "5ac8d6885acfc400180ae7b0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7f1e9433140ad0baf9d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 34,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef511500824900038597",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecef511500824900038596",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef511500824900038598",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecef511500824900038596",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0aa150082490003bed8",
+						"_tpl": "5c0558060db834001b735271",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecef511500824900038596",
+						"slotId": "mod_nvg"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "942abe0e5fea0db82a67d584",
-            _tpl: "5a154d5cfcdbcb001a3b00da",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7c0e65c0122b70ffdb0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 4,
-              y: 2,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "80d90fc1c0c4ff7c852acb83",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "942abe0e5fea0db82a67d584",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "7b10eb2c27c04a2f2f2356e2",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "942abe0e5fea0db82a67d584",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "065e9853cc0a06739cc7548f",
-              _tpl: "5a16badafcdbcb001865f72d",
-              parentId: "942abe0e5fea0db82a67d584",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1
-              }
-          },
+						"_id": "67ecef581500824900038599",
+						"_tpl": "5f60c74e3b85f6263c145586",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc861b588f345450a6d76",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef58150082490003859a",
+						"_tpl": "657bc285aab96fccee08bea3",
+						"parentId": "67ecef581500824900038599",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef58150082490003859b",
+						"_tpl": "657bc2c5a1c61ee0c3036333",
+						"parentId": "67ecef581500824900038599",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef58150082490003859c",
+						"_tpl": "657bc2e7b30eca976305118d",
+						"parentId": "67ecef581500824900038599",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf074150082490003be9c",
+						"_tpl": "5f60c85b58eff926626a60f7",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 55,
+								"MaxDurability": 55
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecef581500824900038599",
+						"slotId": "mod_equipment"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "86f7c660b0181f5c293e49f5",
-            _tpl: "5a154d5cfcdbcb001a3b00da",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7c0e65c0122b70ffdb0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 1,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "0f59af01117a67fa36b4b999",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "86f7c660b0181f5c293e49f5",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "27385a71d4d9c361e9770a14",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "86f7c660b0181f5c293e49f5",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "89f70bbef8aa9a8e79855c9c",
-              _tpl: "5a16b672fcdbcb001912fa83",
-              parentId: "86f7c660b0181f5c293e49f5",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1,
-                  Togglable: {
-                      On: true
-                  }
-              }
-          },
-          {
-            _id: "1c7ab5b221712a1a57323fa1",
-            _tpl: "5a16b9fffcdbcb0176308b34",
-            upd: {
-              StackObjectsCount: 1,
-              SpawnedInSession: true,
-            },
-            parentId: "86f7c660b0181f5c293e49f5",
-            slotId: "mod_equipment_001",
-          },
+						"_id": "67ecef67150082490003859d",
+						"_tpl": "5e00c1ad86f774747333222c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6571200b6fe59548840cb53a",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 28,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef67150082490003859e",
+						"_tpl": "6551fec55d0cf82e51014288",
+						"parentId": "67ecef67150082490003859d",
+						"slotId": "helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef67150082490003859f",
+						"_tpl": "655200ba0ef76cf7be09d528",
+						"parentId": "67ecef67150082490003859d",
+						"slotId": "helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0aa150082490003bed9",
+						"_tpl": "5c0558060db834001b735271",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecef67150082490003859d",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "67ecf545150082490004c32a",
+						"_tpl": "66b5f69ea7f72d197e70bcdb",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecef67150082490003859d",
+						"slotId": "mod_equipment_000"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "b345c3df79f967d38d354803",
-            _tpl: "5e4bfc1586f774264f7582d3",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa9cf87e11c61f70bfadd",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 2,
-              y: 12,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "c124a345354a4197d9d68637",
-            _tpl: "657f9c78ada5fadd1f07a58d",
-            parentId: "b345c3df79f967d38d354803",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "297a8b1d045b3ef366df7f52",
-            _tpl: "657f9cb587e11c61f70bfaca",
-            parentId: "b345c3df79f967d38d354803",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-              _id: "f98069eab1e3c2bbf01cdc93",
-              _tpl: "5a16b672fcdbcb001912fa83",
-              parentId: "b345c3df79f967d38d354803",
-              slotId: "mod_equipment_000",
-              upd: {
-                  StackObjectsCount: 1,
-                  Togglable: {
-                      On: true
-                  }
-              }
-          },
+						"_id": "67ecef6a15008249000385a0",
+						"_tpl": "5e01ef6886f77445f643baa4",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 0,
+							"y": 34,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef6a15008249000385a2",
+						"_tpl": "6551fec55d0cf82e51014288",
+						"parentId": "67ecef6a15008249000385a0",
+						"slotId": "helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef6a15008249000385a3",
+						"_tpl": "655200ba0ef76cf7be09d528",
+						"parentId": "67ecef6a15008249000385a0",
+						"slotId": "helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822ded5185ce152ec044ede",
+						"_tpl": "66b5f6a28ca68c6461709ed8",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecef6a15008249000385a0",
+						"slotId": "mod_equipment_000"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "a77e4e381597e90daad1c90c",
-            _tpl: "5b40e1525acfc4771e1c6611",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657120b36fe59548840cb542",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 6,
-              y: 4,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "07662ef08fd4e84b270a9aee",
-            _tpl: "657112234269e9a568089eac",
-            parentId: "a77e4e381597e90daad1c90c",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "c418d8aee9f52a6bda27257d",
-            _tpl: "657112a4818110db4600aa66",
-            parentId: "a77e4e381597e90daad1c90c",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "e709f5ffd4821bf9e374add7",
-            _tpl: "657112ce22996eaf110881fb",
-            parentId: "a77e4e381597e90daad1c90c",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "67ecef8015008249000385a4",
+						"_tpl": "5ca20ee186f774799474abc2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc8c926820ea7da04f2fa",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef8015008249000385a5",
+						"_tpl": "657bbe73a1c61ee0c303632b",
+						"parentId": "67ecef8015008249000385a4",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef8015008249000385a6",
+						"_tpl": "657bbed0aab96fccee08be96",
+						"parentId": "67ecef8015008249000385a4",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef8015008249000385a7",
+						"_tpl": "657bbefeb30eca9763051189",
+						"parentId": "67ecef8015008249000385a4",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf06c150082490003be9b",
+						"_tpl": "5ca2113f86f7740b2547e1d2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 85,
+								"MaxDurability": 85
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecef8015008249000385a4",
+						"slotId": "mod_equipment"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "425336083e7bbffc65b7cae6",
-            _tpl: "5b40e2bc5acfc40016388216",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657120dd6fe59548840cb54c",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 5,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "0ea9bd87d4881d1dad9d1b02",
-            _tpl: "657112234269e9a568089eac",
-            parentId: "425336083e7bbffc65b7cae6",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "5def0e020b8e2802c2d9237d",
-            _tpl: "657112a4818110db4600aa66",
-            parentId: "425336083e7bbffc65b7cae6",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "0742da90db5c58271949fd89",
-            _tpl: "657112ce22996eaf110881fb",
-            parentId: "425336083e7bbffc65b7cae6",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "67ecef841500824900039429",
+						"_tpl": "5a16bb52fcdbcb001a3b00dc",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecefdb150082490003a1c5",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"parentId": "67ecef841500824900039429",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecefe2150082490003a1c6",
+						"_tpl": "5c0695860db834001b735461",
+						"parentId": "67ecefdb150082490003a1c5",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf02f150082490003b042",
+						"_tpl": "5c0696830db834001d23f5da",
+						"parentId": "67ecefe2150082490003a1c6",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "a57eb41c9b4f8fab3d22c5b4",
-            _tpl: "5ea17ca01412a1425304d1c0",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 6,
-              y: 12,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "4a07fb939f834581475b2a4b",
-            _tpl: "657f9a55c6679fefb3051e19",
-            parentId: "a57eb41c9b4f8fab3d22c5b4",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "6d30ed369db2aba7198667cb",
-            _tpl: "657f9a94ada5fadd1f07a589",
-            parentId: "a57eb41c9b4f8fab3d22c5b4",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-            _id: "de001e061a9b46b5e7366882",
-            _tpl: "5ea18c84ecf1982c7712d9a2",
-            upd: {
-              StackObjectsCount: 1,
-              Repairable: {
-                Durability: 36,
-                MaxDurability: 36,
-              },
-              SpawnedInSession: true,
-            },
-            parentId: "a57eb41c9b4f8fab3d22c5b4",
-            slotId: "mod_nvg",
-          },
-        ],
-      },
-      {
-          Items: [
-            {
-              _id: "a57eb41c9b4f8fab3d22c5b4",
-              _tpl: "5ea17ca01412a1425304d1c0",
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              upd: {
-                StackObjectsCount: 1,
-              },
-              location: {
-                x: 6,
-                y: 12,
-                r: "Horizontal",
-                isSearched: true,
-              },
-            },
-            {
-              _id: "4a07fb939f834581475b2a4b",
-              _tpl: "657f9a55c6679fefb3051e19",
-              parentId: "a57eb41c9b4f8fab3d22c5b4",
-              slotId: "helmet_top",
-              upd: {},
-            },
-            {
-              _id: "6d30ed369db2aba7198667cb",
-              _tpl: "657f9a94ada5fadd1f07a589",
-              parentId: "a57eb41c9b4f8fab3d22c5b4",
-              slotId: "helmet_back",
-              upd: {},
-            },
-          ],
-        },
-      {
-        Items: [
-          {
-              _id: "4ecf2f7bfff0cd22e00513a0",
-              _tpl: "5aa7e276e5b5b000171d0647",
-              upd: {
-                  StackObjectsCount: 1,
-                  "sptPresetId": "657bc88ebbd440df880b2dfe",
-                  SpawnedInSession: true
-              },
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              "location": {
-                  "x": 2,
-                  "y": 14,
-                  "r": 0,
-                  "rotation": false
-              }
-          },
-          {
-              _id: "2f32bca8a556bd06674ac8e4",
-              _tpl: "657bc06daab96fccee08be9b",
-              parentId: "4ecf2f7bfff0cd22e00513a0",
-              slotId: "helmet_top",
-              upd: {
-                  SpawnedInSession: true
-              }
-          },
-          {
-              _id: "57cdcfe4d6d0f6e58ad5f45d",
-              _tpl: "657bc0d8a1c61ee0c303632f",
-              parentId: "4ecf2f7bfff0cd22e00513a0",
-              slotId: "helmet_back",
-              upd: {
-                  SpawnedInSession: true
-              }
-          },
-          {
-              _id: "965e49b8f90950f93d42b6d3",
-              _tpl: "657bc107aab96fccee08be9f",
-              parentId: "4ecf2f7bfff0cd22e00513a0",
-              slotId: "helmet_ears",
-              upd: {
-                  SpawnedInSession: true
-              }
-          },
-          {
-              _id: "25e20eafc97100f0dd36b172",
-              _tpl: "5aa7e373e5b5b000137b76f0",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 35,
-                      MaxDurability: 35
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "4ecf2f7bfff0cd22e00513a0",
-              slotId: "mod_equipment"
-          },
+						"_id": "67ecef89150082490003942a",
+						"_tpl": "5aa7e4a4e5b5b000137b76f2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa87fc6679fefb3051e32",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef89150082490003942b",
+						"_tpl": "657f925dada5fadd1f07a57a",
+						"parentId": "67ecef89150082490003942a",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef89150082490003942c",
+						"_tpl": "657f92acada5fadd1f07a57e",
+						"parentId": "67ecef89150082490003942a",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef89150082490003942d",
+						"_tpl": "657f92e7f4c82973640b2354",
+						"parentId": "67ecef89150082490003942a",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecefd3150082490003a1c4",
+						"_tpl": "5aa7e3abe5b5b000171d064d",
+						"parentId": "67ecef89150082490003942a",
+						"slotId": "mod_equipment",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-              _id: "d72aca036a67d731cadebde4",
-              _tpl: "5f60c74e3b85f6263c145586",
-              upd: {
-                  StackObjectsCount: 1,
-                  "sptPresetId": "657bc861b588f345450a6d76",
-                  SpawnedInSession: true
-              },
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              "location": {
-                  "x": 4,
-                  "y": 14,
-                  "r": 0,
-                  "rotation": false
-              }
-          },
-          {
-              _id: "89da2a4e43c5e5ae7ac361ac",
-              _tpl: "657bc285aab96fccee08bea3",
-              parentId: "d72aca036a67d731cadebde4",
-              slotId: "helmet_top",
-              upd: {
-                  SpawnedInSession: true
-              }
-          },
-          {
-              _id: "4a07aa2bd51469d8b2c1e402",
-              _tpl: "657bc2c5a1c61ee0c3036333",
-              parentId: "d72aca036a67d731cadebde4",
-              slotId: "helmet_back",
-              upd: {
-                  SpawnedInSession: true
-              }
-          },
-          {
-              _id: "afe51072ac9b8f069c624e7f",
-              _tpl: "657bc2e7b30eca976305118d",
-              parentId: "d72aca036a67d731cadebde4",
-              slotId: "helmet_ears",
-              upd: {
-                  SpawnedInSession: true
-              }
-          },
-          {
-              _id: "d9f16a9ce2ad987eee1c3c67",
-              _tpl: "5f60c85b58eff926626a60f7",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 30,
-                      MaxDurability: 30
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "d72aca036a67d731cadebde4",
-              slotId: "mod_equipment"
-          },
+						"_id": "67ecef8b150082490003942e",
+						"_tpl": "5aa7e454e5b5b0214e506fa2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa836c6679fefb3051e28",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecef8b150082490003942f",
+						"_tpl": "657f925dada5fadd1f07a57a",
+						"parentId": "67ecef8b150082490003942e",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef8b1500824900039430",
+						"_tpl": "657f92acada5fadd1f07a57e",
+						"parentId": "67ecef8b150082490003942e",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecef8b1500824900039431",
+						"_tpl": "657f92e7f4c82973640b2354",
+						"parentId": "67ecef8b150082490003942e",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecefd1150082490003a1c3",
+						"_tpl": "5aa7e3abe5b5b000171d064d",
+						"parentId": "67ecef8b150082490003942e",
+						"slotId": "mod_equipment",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-              _id: "6907e0363ef81b0a562c7480",
-              _tpl: "5c0e874186f7745dc7616606",
-              upd: {
-                  StackObjectsCount: 1,
-                  "sptPresetId": "657bc821aab96fccee08becc",
-                  SpawnedInSession: true
-              },
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              "location": {
-                  "x": 6,
-                  "y": 14,
-                  "r": 0,
-                  "rotation": false
-              }
-          },
-          {
-              _id: "1b20509a02d08a754864ea55",
-              _tpl: "6571133d22996eaf11088200",
-              parentId: "6907e0363ef81b0a562c7480",
-              slotId: "helmet_top",
-              upd: {
-                  SpawnedInSession: true
-              }
-          },
-          {
-              _id: "7aa1e559a3c102a4e9a7526d",
-              _tpl: "6571138e818110db4600aa71",
-              parentId: "6907e0363ef81b0a562c7480",
-              slotId: "helmet_back",
-              upd: {
-                  SpawnedInSession: true
-              }
-          },
-          {
-              _id: "8a69a94872b04c0574e82beb",
-              _tpl: "657112fa818110db4600aa6b",
-              parentId: "6907e0363ef81b0a562c7480",
-              slotId: "helmet_ears",
-              upd: {
-                  SpawnedInSession: true
-              }
-          },
-          {
-              _id: "fcba5f70a49021b8f81621b6",
-              _tpl: "5c0e842486f77443a74d2976",
-              parentId: "6907e0363ef81b0a562c7480",
-              slotId: "mod_equipment",
-              upd: {
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              }
-          },
+						"_id": "67ecf083150082490003be9d",
+						"_tpl": "5ac8d6885acfc400180ae7b0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7f1e9433140ad0baf9d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 36,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf083150082490003be9e",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf083150082490003be9d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf083150082490003be9f",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf083150082490003be9d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0c1150082490003cd13",
+						"_tpl": "5ea058e01dbce517f324b3e2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 45,
+								"MaxDurability": 45
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf083150082490003be9d",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "67ecf12c150082490003da77",
+						"_tpl": "5a16badafcdbcb001865f72d",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 25,
+								"MaxDurability": 25
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf083150082490003be9d",
+						"slotId": "mod_equipment_000"
+					},
         ],
       },
       {
         Items: [
           {
-              _id: "f7245351f59e34fb94322d14",
-              _tpl: "5c091a4e0db834001d5addc8",
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              upd: {
-                  StackObjectsCount: 1
-              },
-              "location": {
-                  "x": 8,
-                  "y": 15,
-                  "r": 0,
-                  "rotation": false
-              }
-          },
+						"_id": "67ecf084150082490003bea0",
+						"_tpl": "5ac8d6885acfc400180ae7b0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7f1e9433140ad0baf9d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 32,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf084150082490003bea1",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf084150082490003bea0",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf084150082490003bea2",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf084150082490003bea0",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0ea150082490003cd1a",
+						"_tpl": "5a16b672fcdbcb001912fa83",
+						"parentId": "67ecf084150082490003bea0",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+					{
+						"_id": "67ecf130150082490003da7c",
+						"_tpl": "5a16b9fffcdbcb0176308b34",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf084150082490003bea0",
+						"slotId": "mod_equipment_001"
+					},
+        ],
+      },
+      {
+        Items: [
           {
-              _id: "deb40b11190f7b3f53dc2e3d",
-              _tpl: "6571133d22996eaf11088200",
-              parentId: "f7245351f59e34fb94322d14",
-              slotId: "helmet_top",
-              upd: {}
-          },
+						"_id": "67ecf08e150082490003bea3",
+						"_tpl": "5a154d5cfcdbcb001a3b00da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7c0e65c0122b70ffdb0",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 34,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf08e150082490003bea4",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf08e150082490003bea3",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf08e150082490003bea5",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf08e150082490003bea3",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0a8150082490003bed7",
+						"_tpl": "5c0558060db834001b735271",
+						"parentId": "67ecf08e150082490003bea3",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
           {
-              _id: "9525ef73c8b5344264ee47f1",
-              _tpl: "6571138e818110db4600aa71",
-              parentId: "f7245351f59e34fb94322d14",
-              slotId: "helmet_back",
-              upd: {}
-          },
+						"_id": "67ecf090150082490003bea6",
+						"_tpl": "5a154d5cfcdbcb001a3b00da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7c0e65c0122b70ffdb0",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 30,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf090150082490003bea7",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf090150082490003bea6",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf090150082490003bea8",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf090150082490003bea6",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0c2150082490003cd14",
+						"_tpl": "5ea058e01dbce517f324b3e2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 45,
+								"MaxDurability": 45
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf090150082490003bea6",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "67ecf12d150082490003da78",
+						"_tpl": "5a16badafcdbcb001865f72d",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 25,
+								"MaxDurability": 25
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf090150082490003bea6",
+						"slotId": "mod_equipment_000"
+					},
+        ],
+      },
+      {
+        Items: [
           {
-              _id: "f0c8cd33ce87cba09317f478",
-              _tpl: "657112fa818110db4600aa6b",
-              parentId: "f7245351f59e34fb94322d14",
-              slotId: "helmet_ears",
-              upd: {}
-          },
+						"_id": "67ecf150150082490003e84a",
+						"_tpl": "5ac8d6885acfc400180ae7b0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7f1e9433140ad0baf9d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 30,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf150150082490003e84b",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf150150082490003e84a",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf150150082490003e84c",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf150150082490003e84a",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf103150082490003da70",
+						"_tpl": "5a16b7e1fcdbcb00165aa6c9",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf150150082490003e84a",
+						"slotId": "mod_equipment_000"
+					},
+					{
+						"_id": "67ecf130150082490003da7b",
+						"_tpl": "5a16b9fffcdbcb0176308b34",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf150150082490003e84a",
+						"slotId": "mod_equipment_001"
+					},
+        ],
+      },
+      {
+        Items: [
           {
-              _id: "ceba81bfb1efe75ec6cd999a",
-              _tpl: "5c0919b50db834001b7ce3b9",
-              upd: {
-                  StackObjectsCount: 1,
-                  Repairable: {
-                      Durability: 30,
-                      MaxDurability: 30
-                  },
-                  SpawnedInSession: true,
-                  Togglable: {
-                      On: true
-                  }
-              },
-              parentId: "f7245351f59e34fb94322d14",
-              slotId: "mod_equipment"
-          }
+						"_id": "67ecf155150082490003e84d",
+						"_tpl": "5a154d5cfcdbcb001a3b00da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7c0e65c0122b70ffdb0",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 28,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf155150082490003e84e",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf155150082490003e84d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf155150082490003e84f",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf155150082490003e84d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf102150082490003da6f",
+						"_tpl": "5a16b7e1fcdbcb00165aa6c9",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf155150082490003e84d",
+						"slotId": "mod_equipment_000"
+					},
+					{
+						"_id": "67ecf131150082490003da7f",
+						"_tpl": "5a16b9fffcdbcb0176308b34",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf155150082490003e84d",
+						"slotId": "mod_equipment_001"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf1bc150082490003f5f9",
+						"_tpl": "5a154d5cfcdbcb001a3b00da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7c0e65c0122b70ffdb0",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 26,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf1bc150082490003f5fa",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf1bc150082490003f5f9",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf1bc150082490003f5fb",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf1bc150082490003f5f9",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf102150082490003da6e",
+						"_tpl": "5a16b7e1fcdbcb00165aa6c9",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf1bc150082490003f5f9",
+						"slotId": "mod_equipment_000"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf1bf150082490003f5fc",
+						"_tpl": "5ac8d6885acfc400180ae7b0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7f1e9433140ad0baf9d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 28,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf1bf150082490003f5fd",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf1bf150082490003f5fc",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf1bf150082490003f5fe",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf1bf150082490003f5fc",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf102150082490003da6d",
+						"_tpl": "5a16b7e1fcdbcb00165aa6c9",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf1bf150082490003f5fc",
+						"slotId": "mod_equipment_000"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf1d3150082490004042e",
+						"_tpl": "5ac8d6885acfc400180ae7b0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7f1e9433140ad0baf9d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 26,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf1d3150082490004042f",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf1d3150082490004042e",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf1d31500824900040430",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf1d3150082490004042e",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0e9150082490003cd18",
+						"_tpl": "5a16b672fcdbcb001912fa83",
+						"parentId": "67ecf1d3150082490004042e",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+					{
+						"_id": "67ecf127150082490003da73",
+						"_tpl": "5c0e66e2d174af02a96252f4",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 30,
+								"MaxDurability": 30
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf1d3150082490004042e",
+						"slotId": "mod_equipment_002"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf2d81500824900042ff2",
+						"_tpl": "5e4bfc1586f774264f7582d3",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa9cf87e11c61f70bfadd",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf2d81500824900042ff3",
+						"_tpl": "657f9c78ada5fadd1f07a58d",
+						"parentId": "67ecf2d81500824900042ff2",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf2d81500824900042ff4",
+						"_tpl": "657f9cb587e11c61f70bfaca",
+						"parentId": "67ecf2d81500824900042ff2",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf2ea1500824900043f31",
+						"_tpl": "5a16b672fcdbcb001912fa83",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 20,
+								"MaxDurability": 20
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf2d81500824900042ff2",
+						"slotId": "mod_equipment_000"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf3031500824900043f32",
+						"_tpl": "5c17a7ed2e2216152142459c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa92de65c0122b70ffdb9",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 24,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf3031500824900043f33",
+						"_tpl": "657f9897f4c82973640b235e",
+						"parentId": "67ecf3031500824900043f32",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf3031500824900043f34",
+						"_tpl": "657f98fbada5fadd1f07a585",
+						"parentId": "67ecf3031500824900043f32",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf3331500824900044e66",
+						"_tpl": "5c17a7ed2e2216152142459c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa92de65c0122b70ffdb9",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 26,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf3331500824900044e67",
+						"_tpl": "657f9897f4c82973640b235e",
+						"parentId": "67ecf3331500824900044e66",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf3331500824900044e68",
+						"_tpl": "657f98fbada5fadd1f07a585",
+						"parentId": "67ecf3331500824900044e66",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf34d1500824900044e6e",
+						"_tpl": "5a16b672fcdbcb001912fa83",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 20,
+								"MaxDurability": 20
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf3331500824900044e66",
+						"slotId": "mod_equipment_000"
+					},
+					{
+						"_id": "67ecf3511500824900044e71",
+						"_tpl": "5c178a942e22164bef5ceca3",
+						"parentId": "67ecf3331500824900044e66",
+						"slotId": "mod_equipment_001",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf3341500824900044e69",
+						"_tpl": "5c17a7ed2e2216152142459c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa92de65c0122b70ffdb9",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 28,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf3341500824900044e6a",
+						"_tpl": "657f9897f4c82973640b235e",
+						"parentId": "67ecf3341500824900044e69",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf3341500824900044e6b",
+						"_tpl": "657f98fbada5fadd1f07a585",
+						"parentId": "67ecf3341500824900044e69",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf34a1500824900044e6d",
+						"_tpl": "5a16b7e1fcdbcb00165aa6c9",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf3341500824900044e69",
+						"slotId": "mod_equipment_000"
+					},
+					{
+						"_id": "67ecf3531500824900044e72",
+						"_tpl": "5c178a942e22164bef5ceca3",
+						"parentId": "67ecf3341500824900044e69",
+						"slotId": "mod_equipment_001",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf3871500824900045e8d",
+						"_tpl": "5e4bfc1586f774264f7582d3",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa9cf87e11c61f70bfadd",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 22,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf3871500824900045e8e",
+						"_tpl": "657f9c78ada5fadd1f07a58d",
+						"parentId": "67ecf3871500824900045e8d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf3871500824900045e8f",
+						"_tpl": "657f9cb587e11c61f70bfaca",
+						"parentId": "67ecf3871500824900045e8d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf3941500824900045e90",
+						"_tpl": "5c0558060db834001b735271",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf3871500824900045e8d",
+						"slotId": "mod_nvg"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf3cd1500824900046ce7",
+						"_tpl": "5a154d5cfcdbcb001a3b00da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7c0e65c0122b70ffdb0",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 24,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf3cd1500824900046ce8",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf3cd1500824900046ce7",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf3cd1500824900046ce9",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf3cd1500824900046ce7",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf3d11500824900046cea",
+						"_tpl": "5ac8d6885acfc400180ae7b0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7f1e9433140ad0baf9d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 24,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf3d11500824900046ceb",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "67ecf3d11500824900046cea",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf3d11500824900046cec",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "67ecf3d11500824900046cea",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf41015008249000479ec",
+						"_tpl": "5ea17ca01412a1425304d1c0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa95ae9433140ad0bafad",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 22,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf41015008249000479ed",
+						"_tpl": "657f9a55c6679fefb3051e19",
+						"parentId": "67ecf41015008249000479ec",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf41015008249000479ee",
+						"_tpl": "657f9a94ada5fadd1f07a589",
+						"parentId": "67ecf41015008249000479ec",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf4af150082490004a67f",
+						"_tpl": "5c0558060db834001b735271",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf41015008249000479ec",
+						"slotId": "mod_nvg"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf44415008249000488a6",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc772aab96fccee08bebc",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 30,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf44415008249000488a7",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "67ecf44415008249000488a6",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf44415008249000488a8",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "67ecf44415008249000488a6",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf34d1500824900044e6f",
+						"_tpl": "5a16b672fcdbcb001912fa83",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 20,
+								"MaxDurability": 20
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf44415008249000488a6",
+						"slotId": "mod_equipment_000"
+					},
+					{
+						"_id": "67ecf131150082490003da7e",
+						"_tpl": "5a16b9fffcdbcb0176308b34",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf44415008249000488a6",
+						"slotId": "mod_equipment_001"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf44515008249000488a9",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc772aab96fccee08bebc",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 28,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf44515008249000488aa",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "67ecf44515008249000488a9",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf44515008249000488ab",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "67ecf44515008249000488a9",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf0c3150082490003cd15",
+						"_tpl": "5ea058e01dbce517f324b3e2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 45,
+								"MaxDurability": 45
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf44515008249000488a9",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "67ecf0f9150082490003cd1e",
+						"_tpl": "5a16badafcdbcb001865f72d",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 25,
+								"MaxDurability": 25
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf44515008249000488a9",
+						"slotId": "mod_equipment_000"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf48c150082490004975e",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc772aab96fccee08bebc",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 32,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf48c150082490004975f",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "67ecf48c150082490004975e",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf48c1500824900049760",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "67ecf48c150082490004975e",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf4ae150082490004a67e",
+						"_tpl": "5c0558060db834001b735271",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf48c150082490004975e",
+						"slotId": "mod_nvg"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf524150082490004c31f",
+						"_tpl": "5e00c1ad86f774747333222c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6571200b6fe59548840cb53a",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 26,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf524150082490004c320",
+						"_tpl": "6551fec55d0cf82e51014288",
+						"parentId": "67ecf524150082490004c31f",
+						"slotId": "helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf524150082490004c321",
+						"_tpl": "655200ba0ef76cf7be09d528",
+						"parentId": "67ecf524150082490004c31f",
+						"slotId": "helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf4af150082490004a680",
+						"_tpl": "5c0558060db834001b735271",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "67ecf524150082490004c31f",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "67ecf546150082490004c32b",
+						"_tpl": "66b5f6a28ca68c6461709ed8",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"parentId": "67ecf524150082490004c31f",
+						"slotId": "mod_equipment_000"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf58f150082490004e270",
+						"_tpl": "5e00c1ad86f774747333222c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6571200b6fe59548840cb53a",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 24,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf58f150082490004e271",
+						"_tpl": "6551fec55d0cf82e51014288",
+						"parentId": "67ecf58f150082490004e270",
+						"slotId": "helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf58f150082490004e272",
+						"_tpl": "655200ba0ef76cf7be09d528",
+						"parentId": "67ecf58f150082490004e270",
+						"slotId": "helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "67ecf591150082490004e273",
+						"_tpl": "5e00c1ad86f774747333222c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6571200b6fe59548840cb53a",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 30,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "67ecf591150082490004e274",
+						"_tpl": "6551fec55d0cf82e51014288",
+						"parentId": "67ecf591150082490004e273",
+						"slotId": "helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf591150082490004e275",
+						"_tpl": "655200ba0ef76cf7be09d528",
+						"parentId": "67ecf591150082490004e273",
+						"slotId": "helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "67ecf53b150082490004c324",
+						"_tpl": "5e00cfa786f77469dc6e5685",
+						"parentId": "67ecf591150082490004e273",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "681ef22373ead78720038b5f",
+						"_tpl": "5b40e1525acfc4771e1c6611",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120b36fe59548840cb542",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "681ef22373ead78720038b60",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "681ef22373ead78720038b5f",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "681ef22373ead78720038b61",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "681ef22373ead78720038b5f",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "681ef22373ead78720038b62",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "681ef22373ead78720038b5f",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "681ef27073ead78720038b6b",
+						"_tpl": "5f60b34a41e30a4ab12a6947",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7a5bbd440df880b2df6",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "681ef27073ead78720038b6c",
+						"_tpl": "657bbad7a1c61ee0c3036323",
+						"parentId": "681ef27073ead78720038b6b",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "681ef27073ead78720038b6d",
+						"_tpl": "657bbb31b30eca9763051183",
+						"parentId": "681ef27073ead78720038b6b",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "681ef28a73ead78720039a82",
+						"_tpl": "5f60c076f2bcbb675b00dac2",
+						"parentId": "681ef27073ead78720038b6b",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "681ef28c73ead78720039a83",
+						"_tpl": "5f60b85bbdb8e27dee3dc985",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "681ef27073ead78720038b6b",
+						"slotId": "mod_equipment_002"
+					},
+					{
+						"_id": "681ef29073ead78720039a87",
+						"_tpl": "5f60bf4558eff926626a60f2",
+						"parentId": "681ef27073ead78720038b6b",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822dac7185ce152ec038d9b",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 2,
+							"y": 24,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822dac7185ce152ec038d9d",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "6822dac7185ce152ec038d9b",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dac7185ce152ec038d9e",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "6822dac7185ce152ec038d9b",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822daee185ce152ec038d9f",
+						"_tpl": "5c17a7ed2e2216152142459c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa92de65c0122b70ffdb9",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 32,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822daee185ce152ec038da0",
+						"_tpl": "657f9897f4c82973640b235e",
+						"parentId": "6822daee185ce152ec038d9f",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822daee185ce152ec038da1",
+						"_tpl": "657f98fbada5fadd1f07a585",
+						"parentId": "6822daee185ce152ec038d9f",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822daf7185ce152ec038da2",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"parentId": "6822daee185ce152ec038d9f",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dafb185ce152ec038da3",
+						"_tpl": "5c0695860db834001b735461",
+						"parentId": "6822daf7185ce152ec038da2",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822db01185ce152ec038da4",
+						"_tpl": "5c0696830db834001d23f5da",
+						"parentId": "6822dafb185ce152ec038da3",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822dc80185ce152ec03d6e6",
+						"_tpl": "5e4bfc1586f774264f7582d3",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa9cf87e11c61f70bfadd",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 16,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822dc80185ce152ec03d6e7",
+						"_tpl": "657f9c78ada5fadd1f07a58d",
+						"parentId": "6822dc80185ce152ec03d6e6",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dc80185ce152ec03d6e8",
+						"_tpl": "657f9cb587e11c61f70bfaca",
+						"parentId": "6822dc80185ce152ec03d6e6",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822dc90185ce152ec03d6e9",
+						"_tpl": "5ea17ca01412a1425304d1c0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa95ae9433140ad0bafad",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822dc90185ce152ec03d6ea",
+						"_tpl": "657f9a55c6679fefb3051e19",
+						"parentId": "6822dc90185ce152ec03d6e9",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dc90185ce152ec03d6eb",
+						"_tpl": "657f9a94ada5fadd1f07a589",
+						"parentId": "6822dc90185ce152ec03d6e9",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822dc92185ce152ec03d6ec",
+						"_tpl": "5ea17ca01412a1425304d1c0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa95ae9433140ad0bafad",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 16,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822dc92185ce152ec03d6ed",
+						"_tpl": "657f9a55c6679fefb3051e19",
+						"parentId": "6822dc92185ce152ec03d6ec",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dc92185ce152ec03d6ee",
+						"_tpl": "657f9a94ada5fadd1f07a589",
+						"parentId": "6822dc92185ce152ec03d6ec",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822dcae185ce152ec03e6a7",
+						"_tpl": "5b40e1525acfc4771e1c6611",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120b36fe59548840cb542",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 22,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822dcae185ce152ec03e6a8",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "6822dcae185ce152ec03e6a7",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dcae185ce152ec03e6a9",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "6822dcae185ce152ec03e6a7",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dcae185ce152ec03e6aa",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "6822dcae185ce152ec03e6a7",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822dcaf185ce152ec03e6ab",
+						"_tpl": "5b40e1525acfc4771e1c6611",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120b36fe59548840cb542",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 20,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822dcaf185ce152ec03e6ac",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "6822dcaf185ce152ec03e6ab",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dcaf185ce152ec03e6ad",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "6822dcaf185ce152ec03e6ab",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dcaf185ce152ec03e6ae",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "6822dcaf185ce152ec03e6ab",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822dcb0185ce152ec03e6af",
+						"_tpl": "5b40e1525acfc4771e1c6611",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120b36fe59548840cb542",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 16,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822dcb0185ce152ec03e6b0",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "6822dcb0185ce152ec03e6af",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dcb0185ce152ec03e6b1",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "6822dcb0185ce152ec03e6af",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dcb0185ce152ec03e6b2",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "6822dcb0185ce152ec03e6af",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822dea3185ce152ec044edb",
+						"_tpl": "5ea17ca01412a1425304d1c0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa95ae9433140ad0bafad",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 14,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822dea3185ce152ec044edc",
+						"_tpl": "657f9a55c6679fefb3051e19",
+						"parentId": "6822dea3185ce152ec044edb",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dea3185ce152ec044edd",
+						"_tpl": "657f9a94ada5fadd1f07a589",
+						"parentId": "6822dea3185ce152ec044edb",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822dee5185ce152ec045e2c",
+						"_tpl": "5e01ef6886f77445f643baa4",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 0,
+							"y": 32,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822dee5185ce152ec045e2e",
+						"_tpl": "6551fec55d0cf82e51014288",
+						"parentId": "6822dee5185ce152ec045e2c",
+						"slotId": "helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822dee5185ce152ec045e2f",
+						"_tpl": "655200ba0ef76cf7be09d528",
+						"parentId": "6822dee5185ce152ec045e2c",
+						"slotId": "helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822df68185ce152ec047a8f",
+						"_tpl": "5b40e1525acfc4771e1c6611",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120b36fe59548840cb542",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 22,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822df68185ce152ec047a90",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "6822df68185ce152ec047a8f",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822df68185ce152ec047a91",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "6822df68185ce152ec047a8f",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822df68185ce152ec047a92",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "6822df68185ce152ec047a8f",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822df6a185ce152ec047a93",
+						"_tpl": "5b40e1525acfc4771e1c6611",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120b36fe59548840cb542",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 20,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822df6a185ce152ec047a94",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "6822df6a185ce152ec047a93",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822df6a185ce152ec047a95",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "6822df6a185ce152ec047a93",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822df6a185ce152ec047a96",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "6822df6a185ce152ec047a93",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822e092185ce152ec04c196",
+						"_tpl": "66b5f666cad6f002ab7214c2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66b9c562fd38bf060b4b85a7",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822e092185ce152ec04c197",
+						"_tpl": "66b61cfae98be930d701c029",
+						"parentId": "6822e092185ce152ec04c196",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e092185ce152ec04c198",
+						"_tpl": "66b61ce0c5d72b027748867e",
+						"parentId": "6822e092185ce152ec04c196",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e07a185ce152ec04b34f",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822e092185ce152ec04c196",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822e07e185ce152ec04b352",
+						"_tpl": "5c0695860db834001b735461",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822e07a185ce152ec04b34f",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822e084185ce152ec04c193",
+						"_tpl": "5c0696830db834001d23f5da",
+						"parentId": "6822e07e185ce152ec04b352",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822e097185ce152ec04c199",
+						"_tpl": "66b5f661af44ca0014063c05",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66b9c53ea7f72d197e70bf83",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 2,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822e097185ce152ec04c19a",
+						"_tpl": "66b61cfae98be930d701c029",
+						"parentId": "6822e097185ce152ec04c199",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e097185ce152ec04c19b",
+						"_tpl": "66b61ce0c5d72b027748867e",
+						"parentId": "6822e097185ce152ec04c199",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822e0af185ce152ec04c19c",
+						"_tpl": "5b40e3f35acfc40016388218",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 6,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822e0af185ce152ec04c19e",
+						"_tpl": "657f95bff92cd718b701550c",
+						"parentId": "6822e0af185ce152ec04c19c",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e0af185ce152ec04c19f",
+						"_tpl": "657f9605f4c82973640b2358",
+						"parentId": "6822e0af185ce152ec04c19c",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822e0be185ce152ec04d168",
+						"_tpl": "5f60b34a41e30a4ab12a6947",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7a5bbd440df880b2df6",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 22,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822e0be185ce152ec04d169",
+						"_tpl": "657bbad7a1c61ee0c3036323",
+						"parentId": "6822e0be185ce152ec04d168",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e0be185ce152ec04d16a",
+						"_tpl": "657bbb31b30eca9763051183",
+						"parentId": "6822e0be185ce152ec04d168",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e0cc185ce152ec04d16b",
+						"_tpl": "5f60bf4558eff926626a60f2",
+						"parentId": "6822e0be185ce152ec04d168",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e0cf185ce152ec04d16e",
+						"_tpl": "5f60c076f2bcbb675b00dac2",
+						"parentId": "6822e0be185ce152ec04d168",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822e0fd185ce152ec04df4e",
+						"_tpl": "5f60b34a41e30a4ab12a6947",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7a5bbd440df880b2df6",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822e0fd185ce152ec04df4f",
+						"_tpl": "657bbad7a1c61ee0c3036323",
+						"parentId": "6822e0fd185ce152ec04df4e",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e0fd185ce152ec04df50",
+						"_tpl": "657bbb31b30eca9763051183",
+						"parentId": "6822e0fd185ce152ec04df4e",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822e110185ce152ec04df51",
+						"_tpl": "5b40e2bc5acfc40016388216",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120dd6fe59548840cb54c",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822e110185ce152ec04df52",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "6822e110185ce152ec04df51",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e110185ce152ec04df53",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "6822e110185ce152ec04df51",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e110185ce152ec04df54",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "6822e110185ce152ec04df51",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822e110185ce152ec04df55",
+						"_tpl": "5b40e2bc5acfc40016388216",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120dd6fe59548840cb54c",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 14,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822e110185ce152ec04df56",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "6822e110185ce152ec04df55",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e110185ce152ec04df57",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "6822e110185ce152ec04df55",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e110185ce152ec04df58",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "6822e110185ce152ec04df55",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					}
         ],
       },
     ],
@@ -3024,1494 +4930,3572 @@ export class Helmets {
       {
         Items: [
           {
-            _id: "579ea4306e9cbdf85c986f81",
-            _tpl: "5b4329f05acfc47a86086aa1",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "65711f886d197c216005b32f",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 3,
-              y: 0,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "691456a904344da341c2c4bb",
-            _tpl: "65711b07a330b8c9060f7b01",
-            parentId: "579ea4306e9cbdf85c986f81",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "ab4602d3697f10cbe273fbc4",
-            _tpl: "65711b489eb8c145180dbb9d",
-            parentId: "579ea4306e9cbdf85c986f81",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "87baa8081bfbf6a8f4d5b9d9",
-            _tpl: "65711b9b65daf6aa960c9b1b",
-            parentId: "579ea4306e9cbdf85c986f81",
-            slotId: "helmet_eyes",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "6d5e4971fc631a667a23c05a",
-            _tpl: "65711bc79eb8c145180dbba1",
-            parentId: "579ea4306e9cbdf85c986f81",
-            slotId: "helmet_jaw",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "7fff82bba12cc4d56c94de09",
-            _tpl: "65711b706d197c216005b31c",
-            parentId: "579ea4306e9cbdf85c986f81",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d35bddc96b68ac03e095",
+						"_tpl": "6745895717824b1ec20570a6",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "677d14927f8ee8353d85918d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d35bddc96b68ac03e096",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d35bddc96b68ac03e095",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d35bddc96b68ac03e097",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d35bddc96b68ac03e095",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d35bddc96b68ac03e098",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d35bddc96b68ac03e095",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "0858c6d87482de1656d90e00",
-            _tpl: "5c17a7ed2e2216152142459c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa92de65c0122b70ffdb9",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 5,
-              y: 0,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "1f54ab19bfbd4c2b508778ff",
-            _tpl: "657f9897f4c82973640b235e",
-            parentId: "0858c6d87482de1656d90e00",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "64d8cccd463d0d0aeda2ad64",
-            _tpl: "657f98fbada5fadd1f07a585",
-            parentId: "0858c6d87482de1656d90e00",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d35eddc96b68ac03e099",
+						"_tpl": "5aa7cfc0e5b5b00015693143",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc6ceaab96fccee08beb2",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d35eddc96b68ac03e09a",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d35eddc96b68ac03e099",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d35eddc96b68ac03e09b",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d35eddc96b68ac03e099",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d35eddc96b68ac03e09c",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d35eddc96b68ac03e099",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "8cb539ce25febea9d604452f",
-            _tpl: "5f60b34a41e30a4ab12a6947",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc7a5bbd440df880b2df6",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 7,
-              y: 0,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "3ce7c9c16dcdd8bd99cf79db",
-            _tpl: "657bbad7a1c61ee0c3036323",
-            parentId: "8cb539ce25febea9d604452f",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "610f8f34b7f0bf705e766676",
-            _tpl: "657bbb31b30eca9763051183",
-            parentId: "8cb539ce25febea9d604452f",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d360ddc96b68ac03e09d",
+						"_tpl": "5a7c4850e899ef00150be885",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 4,
+							"y": 0,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d360ddc96b68ac03e09f",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d360ddc96b68ac03e09d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d360ddc96b68ac03e0a0",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d360ddc96b68ac03e09d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d360ddc96b68ac03e0a1",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d360ddc96b68ac03e09d",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "87e3730c6a8c02f6a0c2cf85",
-            _tpl: "5b40e3f35acfc40016388218",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 0,
-              y: 1,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "bac7d12bb01758a156242675",
-            _tpl: "657f95bff92cd718b701550c",
-            parentId: "87e3730c6a8c02f6a0c2cf85",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "339ed9097eef9cbd16e49671",
-            _tpl: "657f9605f4c82973640b2358",
-            parentId: "87e3730c6a8c02f6a0c2cf85",
-            slotId: "helmet_back",
-            upd: {},
-          },
+						"_id": "6822d366ddc96b68ac03e0a2",
+						"_tpl": "5c066ef40db834001966a595",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 4,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d5f2ddc96b68ac04726a",
+						"_tpl": "5c066e3a0db834001b7353f0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d366ddc96b68ac03e0a2",
+						"slotId": "mod_nvg"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "36f9dc521443e0bfebbb4836",
-            _tpl: "5b40e4035acfc47a87740943",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa8e787e11c61f70bfad5",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 2,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "f346574bf0f981a8a65fbadb",
-            _tpl: "657f95bff92cd718b701550c",
-            parentId: "36f9dc521443e0bfebbb4836",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "53e5b2b7309f895b83561d2c",
-            _tpl: "657f9605f4c82973640b2358",
-            parentId: "36f9dc521443e0bfebbb4836",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d374ddc96b68ac03ef3b",
+						"_tpl": "5d6d3716a4b9361bc8618872",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 2,
+							"y": 8,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d374ddc96b68ac03ef3d",
+						"_tpl": "657fa009d4caf976440afe3a",
+						"parentId": "6822d374ddc96b68ac03ef3b",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d374ddc96b68ac03ef3e",
+						"_tpl": "657fa04ac6679fefb3051e24",
+						"parentId": "6822d374ddc96b68ac03ef3b",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d374ddc96b68ac03ef3f",
+						"_tpl": "657fa07387e11c61f70bface",
+						"parentId": "6822d374ddc96b68ac03ef3b",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "b176433f7a5f27cef038e17f",
-            _tpl: "5d5e7d28a4b936645d161203",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa705e9433140ad0baf95",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 4,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "4fc7c3b1399635d019879863",
-            _tpl: "657f8a8d7db258e5600fe33d",
-            parentId: "b176433f7a5f27cef038e17f",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "8456becef517a662b5c4e876",
-            _tpl: "657f8b05f4c82973640b2348",
-            parentId: "b176433f7a5f27cef038e17f",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d377ddc96b68ac03ef40",
+						"_tpl": "66b5f65ca7f72d197e70bcd6",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66b9c41f0b603c26902afd8d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d377ddc96b68ac03ef41",
+						"_tpl": "66b61cfae98be930d701c029",
+						"parentId": "6822d377ddc96b68ac03ef40",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d377ddc96b68ac03ef42",
+						"_tpl": "66b61ce0c5d72b027748867e",
+						"parentId": "6822d377ddc96b68ac03ef40",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d42cddc96b68ac040cd1",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"parentId": "6822d377ddc96b68ac03ef40",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d432ddc96b68ac040cd5",
+						"_tpl": "5c0695860db834001b735461",
+						"parentId": "6822d42cddc96b68ac040cd1",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d443ddc96b68ac041bac",
+						"_tpl": "5c0696830db834001d23f5da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d432ddc96b68ac040cd5",
+						"slotId": "mod_nvg"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "356b36d1f8ff24de28094f27",
-            _tpl: "5d5e9c74a4b9364855191c40",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa735e65c0122b70ffda5",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 6,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "97c39fc0ba9b537003f645b9",
-            _tpl: "657f8b94f92cd718b70154ff",
-            parentId: "356b36d1f8ff24de28094f27",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "666788c212dd74ba41508757",
-            _tpl: "657f8b43f92cd718b70154fb",
-            parentId: "356b36d1f8ff24de28094f27",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d37addc96b68ac03ef43",
+						"_tpl": "66b5f666cad6f002ab7214c2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66b9c562fd38bf060b4b85a7",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 4,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d37addc96b68ac03ef44",
+						"_tpl": "66b61cfae98be930d701c029",
+						"parentId": "6822d37addc96b68ac03ef43",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d37addc96b68ac03ef45",
+						"_tpl": "66b61ce0c5d72b027748867e",
+						"parentId": "6822d37addc96b68ac03ef43",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "2f983adacefcb1113ab193ce",
-            _tpl: "5e4bfc1586f774264f7582d3",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa9cf87e11c61f70bfadd",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "03371894a2605f27f6df195a",
-            _tpl: "657f9c78ada5fadd1f07a58d",
-            parentId: "2f983adacefcb1113ab193ce",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "436485fe628292de0e38f8c9",
-            _tpl: "657f9cb587e11c61f70bfaca",
-            parentId: "2f983adacefcb1113ab193ce",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d37cddc96b68ac03ef46",
+						"_tpl": "66b5f661af44ca0014063c05",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66b9c53ea7f72d197e70bf83",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d37cddc96b68ac03ef47",
+						"_tpl": "66b61cfae98be930d701c029",
+						"parentId": "6822d37cddc96b68ac03ef46",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d37cddc96b68ac03ef48",
+						"_tpl": "66b61ce0c5d72b027748867e",
+						"parentId": "6822d37cddc96b68ac03ef46",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "e7cac6727ddd197c9009dc90",
-            _tpl: "61bca7cda0eae612383adf57",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc7d6aab96fccee08bec4",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 3,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "c4de7b8658546eb7e13d6083",
-            _tpl: "657bbcc9a1c61ee0c3036327",
-            parentId: "e7cac6727ddd197c9009dc90",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "194a320bc1092f8008c46622",
-            _tpl: "657bbcffbbd440df880b2dd5",
-            parentId: "e7cac6727ddd197c9009dc90",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d382ddc96b68ac03ef49",
+						"_tpl": "5c17a7ed2e2216152142459c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa92de65c0122b70ffdb9",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d382ddc96b68ac03ef4a",
+						"_tpl": "657f9897f4c82973640b235e",
+						"parentId": "6822d382ddc96b68ac03ef49",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d382ddc96b68ac03ef4b",
+						"_tpl": "657f98fbada5fadd1f07a585",
+						"parentId": "6822d382ddc96b68ac03ef49",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "fcdb3078584c5b4fad100caf",
-            _tpl: "65719f0775149d62ce0a670b",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 2,
-              y: 4,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "a44f4544ec0d04b23676b7ec",
-            _tpl: "657fa0fcd4caf976440afe3e",
-            parentId: "fcdb3078584c5b4fad100caf",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "37e80e142e127da6b4b880c7",
-            _tpl: "657fa168e9433140ad0baf8e",
-            parentId: "fcdb3078584c5b4fad100caf",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-            _id: "15d2aec848e50b25783248df",
-            _tpl: "657fa186d4caf976440afe42",
-            parentId: "fcdb3078584c5b4fad100caf",
-            slotId: "helmet_ears",
-            upd: {},
-          },
+						"_id": "6822d387ddc96b68ac03ef4c",
+						"_tpl": "66bdc28a0b603c26902b2011",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66c49c0f2e6e23eb7b03f22d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 6,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d387ddc96b68ac03ef4d",
+						"_tpl": "66bdc2ea8cbd597c9c2f9360",
+						"parentId": "6822d387ddc96b68ac03ef4c",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d387ddc96b68ac03ef4e",
+						"_tpl": "66bdc2e25f17154509115d1e",
+						"parentId": "6822d387ddc96b68ac03ef4c",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d387ddc96b68ac03ef4f",
+						"_tpl": "66bdc2d051aa8c345646d03f",
+						"parentId": "6822d387ddc96b68ac03ef4c",
+						"slotId": "helmet_eyes",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d387ddc96b68ac03ef50",
+						"_tpl": "66bdc2d9408f1e66eb4fd957",
+						"parentId": "6822d387ddc96b68ac03ef4c",
+						"slotId": "helmet_jaw",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d387ddc96b68ac03ef51",
+						"_tpl": "66bdc2c90b603c26902b2018",
+						"parentId": "6822d387ddc96b68ac03ef4c",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "ddecb1ec60d42eea83574af4",
-            _tpl: "5a154d5cfcdbcb001a3b00da",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7c0e65c0122b70ffdb0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 4,
-              y: 4,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "78b2f3cf66cb22df89adaebe",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "ddecb1ec60d42eea83574af4",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "b726c53727cd25c01b456ca5",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "ddecb1ec60d42eea83574af4",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d389ddc96b68ac03ef52",
+						"_tpl": "5ea17ca01412a1425304d1c0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa95ae9433140ad0bafad",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 4,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d389ddc96b68ac03ef53",
+						"_tpl": "657f9a55c6679fefb3051e19",
+						"parentId": "6822d389ddc96b68ac03ef52",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d389ddc96b68ac03ef54",
+						"_tpl": "657f9a94ada5fadd1f07a589",
+						"parentId": "6822d389ddc96b68ac03ef52",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "aec2b9fab18800c236d6c2c4",
-            _tpl: "5ac8d6885acfc400180ae7b0",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa7f1e9433140ad0baf9d",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 6,
-              y: 4,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "b16accaafc9fc0fa4c844677",
-            _tpl: "657f8ec5f4c82973640b234c",
-            parentId: "aec2b9fab18800c236d6c2c4",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "94a7f3860f26c3cde5af5a57",
-            _tpl: "657f8f10f4c82973640b2350",
-            parentId: "aec2b9fab18800c236d6c2c4",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d38cddc96b68ac03ef55",
+						"_tpl": "65709d2d21b9f815e208ff95",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657faa32e65c0122b70ffdc1",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 4,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d38cddc96b68ac03ef56",
+						"_tpl": "657f9eb7e9433140ad0baf86",
+						"parentId": "6822d38cddc96b68ac03ef55",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d38cddc96b68ac03ef57",
+						"_tpl": "657f9ef6c6679fefb3051e1f",
+						"parentId": "6822d38cddc96b68ac03ef55",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "eb9c242513bf70d3c795ae98",
-            _tpl: "5e00c1ad86f774747333222c",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "6571200b6fe59548840cb53a",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 4,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "5c769c7d0e77cabdf6a38047",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "eb9c242513bf70d3c795ae98",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "031ed98072b2212e08f8dd74",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "eb9c242513bf70d3c795ae98",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d3a4ddc96b68ac03ef58",
+						"_tpl": "5645bc214bdc2d363b8b4571",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 8,
+							"y": 14,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d3a4ddc96b68ac03ef5a",
+						"_tpl": "657bae18b7e9ca9a02045c0a",
+						"parentId": "6822d3a4ddc96b68ac03ef58",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3a4ddc96b68ac03ef5b",
+						"_tpl": "657baeaacfcf63c951052db3",
+						"parentId": "6822d3a4ddc96b68ac03ef58",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3a4ddc96b68ac03ef5c",
+						"_tpl": "657baecbc6f689d3a205b863",
+						"parentId": "6822d3a4ddc96b68ac03ef58",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d619ddc96b68ac047fc2",
+						"_tpl": "5b46238386f7741a693bcf9c",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 40,
+								"MaxDurability": 40
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d3a4ddc96b68ac03ef58",
+						"slotId": "mod_equipment"
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "6259b2a9fedbc104af359746",
-            _tpl: "5e01ef6886f77445f643baa4",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657120376d197c216005b33e",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 5,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "0f191494bdea93b7f64e489c",
-            _tpl: "6551fec55d0cf82e51014288",
-            parentId: "6259b2a9fedbc104af359746",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "30af348eab81ce7c33a45a1d",
-            _tpl: "655200ba0ef76cf7be09d528",
-            parentId: "6259b2a9fedbc104af359746",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d3a6ddc96b68ac03ef5d",
+						"_tpl": "5f60b34a41e30a4ab12a6947",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7a5bbd440df880b2df6",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 20,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d3a6ddc96b68ac03ef5e",
+						"_tpl": "657bbad7a1c61ee0c3036323",
+						"parentId": "6822d3a6ddc96b68ac03ef5d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3a6ddc96b68ac03ef5f",
+						"_tpl": "657bbb31b30eca9763051183",
+						"parentId": "6822d3a6ddc96b68ac03ef5d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d53cddc96b68ac0447bb",
+						"_tpl": "5f60c076f2bcbb675b00dac2",
+						"parentId": "6822d3a6ddc96b68ac03ef5d",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "b69558c3cc209b4a6f173b24",
-            _tpl: "5aa7e454e5b5b0214e506fa2",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657fa836c6679fefb3051e28",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 2,
-              y: 6,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "574e2715103d0ca355b5e003",
-            _tpl: "657f925dada5fadd1f07a57a",
-            parentId: "b69558c3cc209b4a6f173b24",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "53438b0e0cc65f74f853771d",
-            _tpl: "657f92acada5fadd1f07a57e",
-            parentId: "b69558c3cc209b4a6f173b24",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "31bd53cbf2f8bd974d5c60b2",
-            _tpl: "657f92e7f4c82973640b2354",
-            parentId: "b69558c3cc209b4a6f173b24",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d3abddc96b68ac03ef60",
+						"_tpl": "5b40e3f35acfc40016388218",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 8,
+							"y": 4,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d3abddc96b68ac03ef62",
+						"_tpl": "657f95bff92cd718b701550c",
+						"parentId": "6822d3abddc96b68ac03ef60",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3abddc96b68ac03ef63",
+						"_tpl": "657f9605f4c82973640b2358",
+						"parentId": "6822d3abddc96b68ac03ef60",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "30eb1b6f1b617b35a82f58b1",
-            _tpl: "5aa7e4a4e5b5b000137b76f2",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 0,
-              y: 7,
-              r: "Horizontal",
-              isSearched: true,
-            },
-          },
-          {
-            _id: "60471cf03251fddf231edc0e",
-            _tpl: "657f925dada5fadd1f07a57a",
-            parentId: "30eb1b6f1b617b35a82f58b1",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "42a47792bece3a5792f3c3b9",
-            _tpl: "657f92acada5fadd1f07a57e",
-            parentId: "30eb1b6f1b617b35a82f58b1",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-            _id: "f7ccf81be939dfc826d21099",
-            _tpl: "657f92e7f4c82973640b2354",
-            parentId: "30eb1b6f1b617b35a82f58b1",
-            slotId: "helmet_ears",
-            upd: {},
-          },
-          {
-            _id: "4e7f5994234b0423fd6abfdf",
-            _tpl: "5aa7e3abe5b5b000171d064d",
-            parentId: "30eb1b6f1b617b35a82f58b1",
-            slotId: "mod_equipment",
-            upd: {
-              StackObjectsCount: 1,
-              Togglable: {
-                On: true,
-              },
-            },
-          },
+						"_id": "6822d3afddc96b68ac03ef64",
+						"_tpl": "5b40e4035acfc47a87740943",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa8e787e11c61f70bfad5",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 6,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d3afddc96b68ac03ef65",
+						"_tpl": "657f95bff92cd718b701550c",
+						"parentId": "6822d3afddc96b68ac03ef64",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3afddc96b68ac03ef66",
+						"_tpl": "657f9605f4c82973640b2358",
+						"parentId": "6822d3afddc96b68ac03ef64",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-              _id: "0c0b06fc4712b021d08e0299",
-              _tpl: "5a16bb52fcdbcb001a3b00dc",
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              upd: {
-                  StackObjectsCount: 1
-              },
-              "location": {
-                  "x": 2,
-                  "y": 2,
-                  "r": 0,
-                  "rotation": false
-              }
-          },
-          {
-              _id: "e5fdebf9a2ade01fb8553c00",
-              _tpl: "5a16b8a9fcdbcb00165aa6ca",
-              parentId: "0c0b06fc4712b021d08e0299",
-              slotId: "mod_nvg",
-              upd: {}
-          },
-          {
-              _id: "0770a465f0843d51533ae2be",
-              _tpl: "5a16b93dfcdbcbcae6687261",
-              parentId: "e5fdebf9a2ade01fb8553c00",
-              slotId: "mod_nvg",
-              upd: {}
-          },
-          {
-              _id: "6a60886196750e2a79fd88e3",
-              _tpl: "57235b6f24597759bf5a30f1",
-              parentId: "0770a465f0843d51533ae2be",
-              slotId: "mod_nvg",
-              upd: {}
-          }
+						"_id": "6822d3b2ddc96b68ac03ef89",
+						"_tpl": "5b40e1525acfc4771e1c6611",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120b36fe59548840cb542",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 6,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d3b2ddc96b68ac03ef8a",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "6822d3b2ddc96b68ac03ef89",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3b2ddc96b68ac03ef8b",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "6822d3b2ddc96b68ac03ef89",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3b2ddc96b68ac03ef8c",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "6822d3b2ddc96b68ac03ef89",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
-      }
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3b4ddc96b68ac03ef8d",
+						"_tpl": "5b40e2bc5acfc40016388216",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657120dd6fe59548840cb54c",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 6,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d3b4ddc96b68ac03ef8e",
+						"_tpl": "657112234269e9a568089eac",
+						"parentId": "6822d3b4ddc96b68ac03ef8d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3b4ddc96b68ac03ef8f",
+						"_tpl": "657112a4818110db4600aa66",
+						"parentId": "6822d3b4ddc96b68ac03ef8d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3b4ddc96b68ac03ef90",
+						"_tpl": "657112ce22996eaf110881fb",
+						"parentId": "6822d3b4ddc96b68ac03ef8d",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3bcddc96b68ac03fd9c",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc772aab96fccee08bebc",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 20,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d3bcddc96b68ac03fd9d",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "6822d3bcddc96b68ac03fd9c",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3bcddc96b68ac03fd9e",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "6822d3bcddc96b68ac03fd9c",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d4dfddc96b68ac043888",
+						"_tpl": "5ea058e01dbce517f324b3e2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 45,
+								"MaxDurability": 45
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d3bcddc96b68ac03fd9c",
+						"slotId": "mod_nvg"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3c0ddc96b68ac03fd9f",
+						"_tpl": "5d5e7d28a4b936645d161203",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa705e9433140ad0baf95",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d3c0ddc96b68ac03fda0",
+						"_tpl": "657f8a8d7db258e5600fe33d",
+						"parentId": "6822d3c0ddc96b68ac03fd9f",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3c0ddc96b68ac03fda1",
+						"_tpl": "657f8b05f4c82973640b2348",
+						"parentId": "6822d3c0ddc96b68ac03fd9f",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d745ddc96b68ac04c8c0",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d3c0ddc96b68ac03fd9f",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d74addc96b68ac04c8c1",
+						"_tpl": "5c0695860db834001b735461",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d745ddc96b68ac04c8c0",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d750ddc96b68ac04c8c3",
+						"_tpl": "5c0696830db834001d23f5da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d74addc96b68ac04c8c1",
+						"slotId": "mod_nvg"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3c2ddc96b68ac03fda2",
+						"_tpl": "5d5e9c74a4b9364855191c40",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa735e65c0122b70ffda5",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 8,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d3c2ddc96b68ac03fda3",
+						"_tpl": "657f8b94f92cd718b70154ff",
+						"parentId": "6822d3c2ddc96b68ac03fda2",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3c2ddc96b68ac03fda4",
+						"_tpl": "657f8b43f92cd718b70154fb",
+						"parentId": "6822d3c2ddc96b68ac03fda2",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3c4ddc96b68ac03fda5",
+						"_tpl": "5e4bfc1586f774264f7582d3",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa9cf87e11c61f70bfadd",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d3c4ddc96b68ac03fda6",
+						"_tpl": "657f9c78ada5fadd1f07a58d",
+						"parentId": "6822d3c4ddc96b68ac03fda5",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3c4ddc96b68ac03fda7",
+						"_tpl": "657f9cb587e11c61f70bfaca",
+						"parentId": "6822d3c4ddc96b68ac03fda5",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d568ddc96b68ac04570b",
+						"_tpl": "5a16b672fcdbcb001912fa83",
+						"parentId": "6822d3c4ddc96b68ac03fda5",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3c7ddc96b68ac03fda8",
+						"_tpl": "675956062f6ddfe8ff0e2806",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6777b37393a9a6f10ea57501",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 8,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d3c7ddc96b68ac03fda9",
+						"_tpl": "676307c004856a0b3c0dfffd",
+						"parentId": "6822d3c7ddc96b68ac03fda8",
+						"slotId": "Helmet_top",
+						"upd": {
+							"Repairable": {
+								"Durability": 25,
+								"MaxDurability": 25
+							},
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3c7ddc96b68ac03fdaa",
+						"_tpl": "676307b4d9ec0af3d9001fa8",
+						"parentId": "6822d3c7ddc96b68ac03fda8",
+						"slotId": "Helmet_back",
+						"upd": {
+							"Repairable": {
+								"Durability": 25,
+								"MaxDurability": 25
+							},
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3c9ddc96b68ac03fdab",
+						"_tpl": "6759655674aa5e0825040d62",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6777bf37e10ffdb431ff9508",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 8,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d3c9ddc96b68ac03fdac",
+						"_tpl": "676307c004856a0b3c0dfffd",
+						"parentId": "6822d3c9ddc96b68ac03fdab",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3c9ddc96b68ac03fdad",
+						"_tpl": "676307b4d9ec0af3d9001fa8",
+						"parentId": "6822d3c9ddc96b68ac03fdab",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3cbddc96b68ac03fdae",
+						"_tpl": "67597ceea35600b4c10cea86",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6777bfee0658691ef27d9993",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 8,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d3cbddc96b68ac03fdaf",
+						"_tpl": "676307ded8b241b4f703a3e8",
+						"parentId": "6822d3cbddc96b68ac03fdae",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3cbddc96b68ac03fdb0",
+						"_tpl": "676307d3d9ec0af3d9001fac",
+						"parentId": "6822d3cbddc96b68ac03fdae",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3cdddc96b68ac03fdb1",
+						"_tpl": "67597d241d5a44f2f605df06",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "6777c1244557b9b1474da362",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d3cdddc96b68ac03fdb2",
+						"_tpl": "676307ded8b241b4f703a3e8",
+						"parentId": "6822d3cdddc96b68ac03fdb1",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3cdddc96b68ac03fdb3",
+						"_tpl": "676307d3d9ec0af3d9001fac",
+						"parentId": "6822d3cdddc96b68ac03fdb1",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3d9ddc96b68ac03fdb4",
+						"_tpl": "61bca7cda0eae612383adf57",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7d6aab96fccee08bec4",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d3d9ddc96b68ac03fdb5",
+						"_tpl": "657bbcc9a1c61ee0c3036327",
+						"parentId": "6822d3d9ddc96b68ac03fdb4",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3d9ddc96b68ac03fdb6",
+						"_tpl": "657bbcffbbd440df880b2dd5",
+						"parentId": "6822d3d9ddc96b68ac03fdb4",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3ddddc96b68ac03fdb7",
+						"_tpl": "65719f0775149d62ce0a670b",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657faa0687e11c61f70bfae5",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d3ddddc96b68ac03fdb8",
+						"_tpl": "657fa0fcd4caf976440afe3e",
+						"parentId": "6822d3ddddc96b68ac03fdb7",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3ddddc96b68ac03fdb9",
+						"_tpl": "657fa168e9433140ad0baf8e",
+						"parentId": "6822d3ddddc96b68ac03fdb7",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3ddddc96b68ac03fdba",
+						"_tpl": "657fa186d4caf976440afe42",
+						"parentId": "6822d3ddddc96b68ac03fdb7",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d3e0ddc96b68ac03fdbe",
+						"_tpl": "5ac8d6885acfc400180ae7b0",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa7f1e9433140ad0baf9d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 6,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d3e0ddc96b68ac03fdbf",
+						"_tpl": "657f8ec5f4c82973640b234c",
+						"parentId": "6822d3e0ddc96b68ac03fdbe",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d3e0ddc96b68ac03fdc0",
+						"_tpl": "657f8f10f4c82973640b2350",
+						"parentId": "6822d3e0ddc96b68ac03fdbe",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d40cddc96b68ac040cc7",
+						"_tpl": "5aa7e4a4e5b5b000137b76f2",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 2,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d40cddc96b68ac040cc9",
+						"_tpl": "657f925dada5fadd1f07a57a",
+						"parentId": "6822d40cddc96b68ac040cc7",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d40cddc96b68ac040cca",
+						"_tpl": "657f92acada5fadd1f07a57e",
+						"parentId": "6822d40cddc96b68ac040cc7",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d40cddc96b68ac040ccb",
+						"_tpl": "657f92e7f4c82973640b2354",
+						"parentId": "6822d40cddc96b68ac040cc7",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d465ddc96b68ac041bb2",
+						"_tpl": "5aa7e3abe5b5b000171d064d",
+						"parentId": "6822d40cddc96b68ac040cc7",
+						"slotId": "mod_equipment",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d411ddc96b68ac040ccc",
+						"_tpl": "5aa7e454e5b5b0214e506fa2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa836c6679fefb3051e28",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d411ddc96b68ac040ccd",
+						"_tpl": "657f925dada5fadd1f07a57a",
+						"parentId": "6822d411ddc96b68ac040ccc",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d411ddc96b68ac040cce",
+						"_tpl": "657f92acada5fadd1f07a57e",
+						"parentId": "6822d411ddc96b68ac040ccc",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d411ddc96b68ac040ccf",
+						"_tpl": "657f92e7f4c82973640b2354",
+						"parentId": "6822d411ddc96b68ac040ccc",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d465ddc96b68ac041bb3",
+						"_tpl": "5aa7e3abe5b5b000171d064d",
+						"parentId": "6822d411ddc96b68ac040ccc",
+						"slotId": "mod_equipment",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d4f4ddc96b68ac04388e",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc772aab96fccee08bebc",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d4f4ddc96b68ac04388f",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "6822d4f4ddc96b68ac04388e",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d4f4ddc96b68ac043890",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "6822d4f4ddc96b68ac04388e",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d4e3ddc96b68ac04388a",
+						"_tpl": "5a16b672fcdbcb001912fa83",
+						"parentId": "6822d4f4ddc96b68ac04388e",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d4feddc96b68ac043891",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc772aab96fccee08bebc",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 22,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d4feddc96b68ac043892",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "6822d4feddc96b68ac043891",
+						"slotId": "Helmet_top",
+						"upd": {
+							"Repairable": {
+								"Durability": 18,
+								"MaxDurability": 18
+							},
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d4feddc96b68ac043893",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "6822d4feddc96b68ac043891",
+						"slotId": "Helmet_back",
+						"upd": {
+							"Repairable": {
+								"Durability": 17,
+								"MaxDurability": 17
+							},
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d707ddc96b68ac04ba2d",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d4feddc96b68ac043891",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d703ddc96b68ac04ba2c",
+						"_tpl": "5c0695860db834001b735461",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d707ddc96b68ac04ba2d",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d70bddc96b68ac04ba2e",
+						"_tpl": "5c0696830db834001d23f5da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d703ddc96b68ac04ba2c",
+						"slotId": "mod_nvg"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d555ddc96b68ac0447bc",
+						"_tpl": "5f60b34a41e30a4ab12a6947",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7a5bbd440df880b2df6",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 18,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d555ddc96b68ac0447bd",
+						"_tpl": "657bbad7a1c61ee0c3036323",
+						"parentId": "6822d555ddc96b68ac0447bc",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d555ddc96b68ac0447be",
+						"_tpl": "657bbb31b30eca9763051183",
+						"parentId": "6822d555ddc96b68ac0447bc",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d69bddc96b68ac049cad",
+						"_tpl": "5f60bf4558eff926626a60f2",
+						"parentId": "6822d555ddc96b68ac0447bc",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d69dddc96b68ac049cae",
+						"_tpl": "5f60c076f2bcbb675b00dac2",
+						"parentId": "6822d555ddc96b68ac0447bc",
+						"slotId": "mod_equipment_000",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d583ddc96b68ac04570d",
+						"_tpl": "5e4bfc1586f774264f7582d3",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa9cf87e11c61f70bfadd",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 20,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d583ddc96b68ac04570e",
+						"_tpl": "657f9c78ada5fadd1f07a58d",
+						"parentId": "6822d583ddc96b68ac04570d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d583ddc96b68ac04570f",
+						"_tpl": "657f9cb587e11c61f70bfaca",
+						"parentId": "6822d583ddc96b68ac04570d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d42eddc96b68ac040cd3",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d583ddc96b68ac04570d",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d434ddc96b68ac040cd8",
+						"_tpl": "5c0695860db834001b735461",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d42eddc96b68ac040cd3",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d444ddc96b68ac041bae",
+						"_tpl": "5c0696830db834001d23f5da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d434ddc96b68ac040cd8",
+						"slotId": "mod_nvg"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d5bdddc96b68ac0464d1",
+						"_tpl": "66b5f65ca7f72d197e70bcd6",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "66b9c41f0b603c26902afd8d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 16,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d5bdddc96b68ac0464d2",
+						"_tpl": "66b61cfae98be930d701c029",
+						"parentId": "6822d5bdddc96b68ac0464d1",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d5bdddc96b68ac0464d3",
+						"_tpl": "66b61ce0c5d72b027748867e",
+						"parentId": "6822d5bdddc96b68ac0464d1",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d5f9ddc96b68ac04726b",
+						"_tpl": "5a7c4850e899ef00150be885",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 6,
+							"y": 0,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d5f9ddc96b68ac04726d",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d5f9ddc96b68ac04726b",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d5f9ddc96b68ac04726e",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d5f9ddc96b68ac04726b",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d5f9ddc96b68ac04726f",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d5f9ddc96b68ac04726b",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d5f9ddc96b68ac047270",
+						"_tpl": "5a7c4850e899ef00150be885",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 8,
+							"y": 0,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d5f9ddc96b68ac047272",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d5f9ddc96b68ac047270",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d5f9ddc96b68ac047273",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d5f9ddc96b68ac047270",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d5f9ddc96b68ac047274",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d5f9ddc96b68ac047270",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d744ddc96b68ac04c8bf",
+						"_tpl": "5a16b8a9fcdbcb00165aa6ca",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d5f9ddc96b68ac047270",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d74addc96b68ac04c8c2",
+						"_tpl": "5c0695860db834001b735461",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false
+						},
+						"parentId": "6822d744ddc96b68ac04c8bf",
+						"slotId": "mod_nvg"
+					},
+					{
+						"_id": "6822d751ddc96b68ac04c8c4",
+						"_tpl": "5c0696830db834001d23f5da",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 100,
+								"MaxDurability": 100
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d74addc96b68ac04c8c2",
+						"slotId": "mod_nvg"
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d5fcddc96b68ac047275",
+						"_tpl": "5aa7cfc0e5b5b00015693143",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc6ceaab96fccee08beb2",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d5fcddc96b68ac047276",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d5fcddc96b68ac047275",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d5fcddc96b68ac047277",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d5fcddc96b68ac047275",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d5fcddc96b68ac047278",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d5fcddc96b68ac047275",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d5fdddc96b68ac047279",
+						"_tpl": "5aa7cfc0e5b5b00015693143",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc6ceaab96fccee08beb2",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d5fdddc96b68ac04727a",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d5fdddc96b68ac047279",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d5fdddc96b68ac04727b",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d5fdddc96b68ac047279",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d5fdddc96b68ac04727c",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d5fdddc96b68ac047279",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d68addc96b68ac049c6b",
+						"_tpl": "5e4bfc1586f774264f7582d3",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa9cf87e11c61f70bfadd",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 16,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d68addc96b68ac049c6c",
+						"_tpl": "657f9c78ada5fadd1f07a58d",
+						"parentId": "6822d68addc96b68ac049c6b",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d68addc96b68ac049c6d",
+						"_tpl": "657f9cb587e11c61f70bfaca",
+						"parentId": "6822d68addc96b68ac049c6b",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d6a7ddc96b68ac049caf",
+						"_tpl": "5f60b34a41e30a4ab12a6947",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7a5bbd440df880b2df6",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 16,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d6a7ddc96b68ac049cb0",
+						"_tpl": "657bbad7a1c61ee0c3036323",
+						"parentId": "6822d6a7ddc96b68ac049caf",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d6a7ddc96b68ac049cb1",
+						"_tpl": "657bbb31b30eca9763051183",
+						"parentId": "6822d6a7ddc96b68ac049caf",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d718ddc96b68ac04ba2f",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc772aab96fccee08bebc",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 16,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d718ddc96b68ac04ba30",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "6822d718ddc96b68ac04ba2f",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d718ddc96b68ac04ba31",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "6822d718ddc96b68ac04ba2f",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d768ddc96b68ac04c8c5",
+						"_tpl": "5d5e7d28a4b936645d161203",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa705e9433140ad0baf95",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 16,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d768ddc96b68ac04c8c6",
+						"_tpl": "657f8a8d7db258e5600fe33d",
+						"parentId": "6822d768ddc96b68ac04c8c5",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d768ddc96b68ac04c8c7",
+						"_tpl": "657f8b05f4c82973640b2348",
+						"parentId": "6822d768ddc96b68ac04c8c5",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d794ddc96b68ac04d809",
+						"_tpl": "5645bc214bdc2d363b8b4571",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 8,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d794ddc96b68ac04d80b",
+						"_tpl": "657bae18b7e9ca9a02045c0a",
+						"parentId": "6822d794ddc96b68ac04d809",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d794ddc96b68ac04d80c",
+						"_tpl": "657baeaacfcf63c951052db3",
+						"parentId": "6822d794ddc96b68ac04d809",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d794ddc96b68ac04d80d",
+						"_tpl": "657baecbc6f689d3a205b863",
+						"parentId": "6822d794ddc96b68ac04d809",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					}
+        ],
+      },
     ],
     [
       // _common
       {
         Items: [
           {
-            _id: "62c54d4fa82bb075e3c7e9d7",
-            _tpl: "5aa7cfc0e5b5b00015693143",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc6ceaab96fccee08beb2",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 3,
-              y: 0,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "17df87c524a0660f7ee79bf8",
-            _tpl: "657baaf0b7e9ca9a02045c02",
-            parentId: "62c54d4fa82bb075e3c7e9d7",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "3c3261dea89c55e6a1eef709",
-            _tpl: "657bab6ec6f689d3a205b85f",
-            parentId: "62c54d4fa82bb075e3c7e9d7",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "a559685a837bd40f40e2ca3a",
-            _tpl: "657babc6f58ba5a6250107a2",
-            parentId: "62c54d4fa82bb075e3c7e9d7",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d0a6ddc96b68ac0388d4",
+						"_tpl": "6745895717824b1ec20570a6",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "677d14927f8ee8353d85918d",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 0,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d0a6ddc96b68ac0388d5",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d0a6ddc96b68ac0388d4",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0a6ddc96b68ac0388d6",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d0a6ddc96b68ac0388d4",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0a6ddc96b68ac0388d7",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d0a6ddc96b68ac0388d4",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "e1c0bb1fde48e772ee101579",
-            _tpl: "5a7c4850e899ef00150be885",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc68d26820ea7da04f2f0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 5,
-              y: 0,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "574a373bf3172c710315b7d6",
-            _tpl: "657baaf0b7e9ca9a02045c02",
-            parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "e3d6c261f9d0a5f12f750c0d",
-            _tpl: "657bab6ec6f689d3a205b85f",
-            parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "e2e6151c63489256c4a72086",
-            _tpl: "657babc6f58ba5a6250107a2",
-            parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d0aaddc96b68ac0388d8",
+						"_tpl": "5aa7cfc0e5b5b00015693143",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc6ceaab96fccee08beb2",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d0aaddc96b68ac0388d9",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d0aaddc96b68ac0388d8",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0aaddc96b68ac0388da",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d0aaddc96b68ac0388d8",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0aaddc96b68ac0388db",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d0aaddc96b68ac0388d8",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "e1c0bb1fde48e772ee101579",
-            _tpl: "5a7c4850e899ef00150be885",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc68d26820ea7da04f2f0",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 5,
-              y: 0,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "574a373bf3172c710315b7d6",
-            _tpl: "657baaf0b7e9ca9a02045c02",
-            parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "e3d6c261f9d0a5f12f750c0d",
-            _tpl: "657bab6ec6f689d3a205b85f",
-            parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "e2e6151c63489256c4a72086",
-            _tpl: "657babc6f58ba5a6250107a2",
-            parentId: "e1c0bb1fde48e772ee101579",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d0acddc96b68ac0388dc",
+						"_tpl": "5a7c4850e899ef00150be885",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc68d26820ea7da04f2f0",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 10,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d0acddc96b68ac0388dd",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d0acddc96b68ac0388dc",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0acddc96b68ac0388de",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d0acddc96b68ac0388dc",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0acddc96b68ac0388df",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d0acddc96b68ac0388dc",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "79312f00bf37c3505974912f",
-            _tpl: "5645bc214bdc2d363b8b4571",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc706b588f345450a6d6c",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 7,
-              y: 0,
-              r: 0,
-              rotation: false,
-            },
-          },
+						"_id": "6822d0b5ddc96b68ac0388e0",
+						"_tpl": "5c066ef40db834001966a595",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 6,
+							"y": 0,
+							"r": "Horizontal"
+						}
+            
+					},
           {
-            _id: "3587a5713c0a629cd47320bf",
-            _tpl: "657bae18b7e9ca9a02045c0a",
-            parentId: "79312f00bf37c3505974912f",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "5879da616879d56642c8b49e",
-            _tpl: "657baeaacfcf63c951052db3",
-            parentId: "79312f00bf37c3505974912f",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "e0d7f5008cabf45b761d2eca",
-            _tpl: "657baecbc6f689d3a205b863",
-            parentId: "79312f00bf37c3505974912f",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d1f5ddc96b68ac03a63b",
+						"_tpl": "5c066e3a0db834001b7353f0",
+						"parentId": "6822d0b5ddc96b68ac0388e0",
+						"slotId": "mod_nvg",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "682b7d135c1f2069bbd0978d",
-            _tpl: "59e7711e86f7746cae05fbe1",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 0,
-              y: 1,
-              r: 0,
-              rotation: false,
-            },
-          },
+						"_id": "6822d0e9ddc96b68ac038930",
+						"_tpl": "5645bc214bdc2d363b8b4571",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 8,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d0e9ddc96b68ac038932",
+						"_tpl": "657bae18b7e9ca9a02045c0a",
+						"parentId": "6822d0e9ddc96b68ac038930",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0e9ddc96b68ac038933",
+						"_tpl": "657baeaacfcf63c951052db3",
+						"parentId": "6822d0e9ddc96b68ac038930",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0e9ddc96b68ac038934",
+						"_tpl": "657baecbc6f689d3a205b863",
+						"parentId": "6822d0e9ddc96b68ac038930",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
           {
-            _id: "76bc6f0ace41d12bbd9282f8",
-            _tpl: "657ba50c23918923cb0df56c",
-            parentId: "682b7d135c1f2069bbd0978d",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "d9c33b0bda8b9d828fe941cf",
-            _tpl: "657ba5439ba22f103e08139f",
-            parentId: "682b7d135c1f2069bbd0978d",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-            _id: "03aef5b35511791326ff4a02",
-            _tpl: "657ba57af58ba5a62501079e",
-            parentId: "682b7d135c1f2069bbd0978d",
-            slotId: "helmet_ears",
-            upd: {},
-          },
+						"_id": "6822d203ddc96b68ac03a63c",
+						"_tpl": "5b46238386f7741a693bcf9c",
+						"parentId": "6822d0e9ddc96b68ac038930",
+						"slotId": "mod_equipment",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "db3198144bbcd2ae985161e9",
-            _tpl: "5b432d215acfc4771e1c6624",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 2,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "a60ccfc1f301d49bd021a8c3",
-            _tpl: "657bb92fa1c61ee0c303631f",
-            parentId: "db3198144bbcd2ae985161e9",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "e412c09a44cc16a45814a406",
-            _tpl: "657bb99db30eca976305117f",
-            parentId: "db3198144bbcd2ae985161e9",
-            slotId: "helmet_back",
-            upd: {},
-          },
+						"_id": "6822d0f0ddc96b68ac038935",
+						"_tpl": "5f60b34a41e30a4ab12a6947",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7a5bbd440df880b2df6",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 2,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d0f0ddc96b68ac038936",
+						"_tpl": "657bbad7a1c61ee0c3036323",
+						"parentId": "6822d0f0ddc96b68ac038935",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0f0ddc96b68ac038937",
+						"_tpl": "657bbb31b30eca9763051183",
+						"parentId": "6822d0f0ddc96b68ac038935",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "db3198144bbcd2ae985161e9",
-            _tpl: "5b432d215acfc4771e1c6624",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 2,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
+						"_id": "6822d0fbddc96b68ac038938",
+						"_tpl": "59e7711e86f7746cae05fbe1",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 2,
+							"y": 2,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d0fbddc96b68ac03893a",
+						"_tpl": "657ba50c23918923cb0df56c",
+						"parentId": "6822d0fbddc96b68ac038938",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0fbddc96b68ac03893b",
+						"_tpl": "657ba5439ba22f103e08139f",
+						"parentId": "6822d0fbddc96b68ac038938",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d0fbddc96b68ac03893c",
+						"_tpl": "657ba57af58ba5a62501079e",
+						"parentId": "6822d0fbddc96b68ac038938",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
           {
-            _id: "a60ccfc1f301d49bd021a8c3",
-            _tpl: "657bb92fa1c61ee0c303631f",
-            parentId: "db3198144bbcd2ae985161e9",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "e412c09a44cc16a45814a406",
-            _tpl: "657bb99db30eca976305117f",
-            parentId: "db3198144bbcd2ae985161e9",
-            slotId: "helmet_back",
-            upd: {},
-          },
+						"_id": "6822d1d4ddc96b68ac039740",
+						"_tpl": "5ac4c50d5acfc40019262e87",
+						"parentId": "6822d0fbddc96b68ac038938",
+						"slotId": "mod_equipment",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "dcf5909ada71ded0e39c9549",
-            _tpl: "5c0d2727d174af02a012cf58",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc600b588f345450a6d62",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 4,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "fb849758453e4bacdc794333",
-            _tpl: "657ba6c3c6f689d3a205b857",
-            parentId: "dcf5909ada71ded0e39c9549",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "082d6ada84030d4ca9fed277",
-            _tpl: "657ba737b7e9ca9a02045bf6",
-            parentId: "dcf5909ada71ded0e39c9549",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "dcedd99cf4996619a50e5d6d",
-            _tpl: "658188edf026a90c1708c827",
-            parentId: "dcf5909ada71ded0e39c9549",
-            slotId: "helmet_eyes",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "4b7e3e2a0d3639b9b3594a15",
-            _tpl: "657ba75e23918923cb0df573",
-            parentId: "dcf5909ada71ded0e39c9549",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d103ddc96b68ac03893d",
+						"_tpl": "5b432d215acfc4771e1c6624",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc772aab96fccee08bebc",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 4,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d103ddc96b68ac03893e",
+						"_tpl": "657bb92fa1c61ee0c303631f",
+						"parentId": "6822d103ddc96b68ac03893d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d103ddc96b68ac03893f",
+						"_tpl": "657bb99db30eca976305117f",
+						"parentId": "6822d103ddc96b68ac03893d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "fde5a95099c7928807b65ee0",
-            _tpl: "5aa7d193e5b5b000171d063f",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc742bbd440df880b2dec",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 6,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "2248c52cd1708878e22f3ddd",
-            _tpl: "657bb70486c7f9ef7a009936",
-            parentId: "fde5a95099c7928807b65ee0",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "4af31ae294dc83f0eada7d6a",
-            _tpl: "657bb79ba1c61ee0c303631a",
-            parentId: "fde5a95099c7928807b65ee0",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "5994402f03d5703d3dda4f40",
-            _tpl: "657bb7d7b30eca9763051176",
-            parentId: "fde5a95099c7928807b65ee0",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d131ddc96b68ac038940",
+						"_tpl": "61bca7cda0eae612383adf57",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc7d6aab96fccee08bec4",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 2,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d131ddc96b68ac038941",
+						"_tpl": "657bbcc9a1c61ee0c3036327",
+						"parentId": "6822d131ddc96b68ac038940",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d131ddc96b68ac038942",
+						"_tpl": "657bbcffbbd440df880b2dd5",
+						"parentId": "6822d131ddc96b68ac038940",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "dccf5bd2fcf6d0ee163594aa",
-            _tpl: "5c06c6a80db834001b735491",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "65711fc9c50461e8750d1f5b",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "4dee4b04c1e6745c429e39ea",
-            _tpl: "6571199565daf6aa960c9b10",
-            parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "c7471503b633a8c2d55d732e",
-            _tpl: "657119d49eb8c145180dbb95",
-            parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "59108743b33bfe07623846da",
-            _tpl: "657119fea330b8c9060f7afc",
-            parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d137ddc96b68ac038943",
+						"_tpl": "65719f0775149d62ce0a670b",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657faa0687e11c61f70bfae5",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 2,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d137ddc96b68ac038944",
+						"_tpl": "657fa0fcd4caf976440afe3e",
+						"parentId": "6822d137ddc96b68ac038943",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d137ddc96b68ac038945",
+						"_tpl": "657fa168e9433140ad0baf8e",
+						"parentId": "6822d137ddc96b68ac038943",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d137ddc96b68ac038946",
+						"_tpl": "657fa186d4caf976440afe42",
+						"parentId": "6822d137ddc96b68ac038943",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "dccf5bd2fcf6d0ee163594aa",
-            _tpl: "5c06c6a80db834001b735491",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "65711fc9c50461e8750d1f5b",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 8,
-              y: 2,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "4dee4b04c1e6745c429e39ea",
-            _tpl: "6571199565daf6aa960c9b10",
-            parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "c7471503b633a8c2d55d732e",
-            _tpl: "657119d49eb8c145180dbb95",
-            parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "59108743b33bfe07623846da",
-            _tpl: "657119fea330b8c9060f7afc",
-            parentId: "dccf5bd2fcf6d0ee163594aa",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d13fddc96b68ac038947",
+						"_tpl": "5c0d2727d174af02a012cf58",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc600b588f345450a6d62",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 4,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d13fddc96b68ac038948",
+						"_tpl": "657ba6c3c6f689d3a205b857",
+						"parentId": "6822d13fddc96b68ac038947",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d13fddc96b68ac038949",
+						"_tpl": "657ba737b7e9ca9a02045bf6",
+						"parentId": "6822d13fddc96b68ac038947",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d13fddc96b68ac03894a",
+						"_tpl": "658188edf026a90c1708c827",
+						"parentId": "6822d13fddc96b68ac038947",
+						"slotId": "helmet_eyes",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d13fddc96b68ac03894b",
+						"_tpl": "657ba75e23918923cb0df573",
+						"parentId": "6822d13fddc96b68ac038947",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "310bc0ff3089351b4c4cacdf",
-            _tpl: "5c08f87c0db8340019124324",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc644bbd440df880b2de2",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 0,
-              y: 3,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "608a32bd75d0e7b574ef35d9",
-            _tpl: "657ba85ecfcf63c951052da7",
-            parentId: "310bc0ff3089351b4c4cacdf",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "422e67feae7884cff92d7ac4",
-            _tpl: "657ba8bccfcf63c951052dab",
-            parentId: "310bc0ff3089351b4c4cacdf",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "fc3cc89a95e71f992e726b6f",
-            _tpl: "65818e4e566d2de69901b1b1",
-            parentId: "310bc0ff3089351b4c4cacdf",
-            slotId: "helmet_eyes",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "40e7d0f6c8d8f9c20babf804",
-            _tpl: "657ba8eab7e9ca9a02045bfd",
-            parentId: "310bc0ff3089351b4c4cacdf",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d14bddc96b68ac03894c",
+						"_tpl": "5aa7d193e5b5b000171d063f",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc742bbd440df880b2dec",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 4,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d14bddc96b68ac03894d",
+						"_tpl": "657bb70486c7f9ef7a009936",
+						"parentId": "6822d14bddc96b68ac03894c",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d14bddc96b68ac03894e",
+						"_tpl": "657bb79ba1c61ee0c303631a",
+						"parentId": "6822d14bddc96b68ac03894c",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d14bddc96b68ac03894f",
+						"_tpl": "657bb7d7b30eca9763051176",
+						"parentId": "6822d14bddc96b68ac03894c",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "c14e3a6f8e83d76ed9d164e2",
-            _tpl: "5df8a58286f77412631087ed",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc54eb588f345450a6d56",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 2,
-              y: 4,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "a4fb6629b4b94325cf1975bc",
-            _tpl: "657ba096e57570b7f80a17fb",
-            parentId: "c14e3a6f8e83d76ed9d164e2",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "19fdd34f21680846e285a5cb",
-            _tpl: "657ba145e57570b7f80a17ff",
-            parentId: "c14e3a6f8e83d76ed9d164e2",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "6d730ac195b0ec1c16049234",
-            _tpl: "657ba18923918923cb0df568",
-            parentId: "c14e3a6f8e83d76ed9d164e2",
-            slotId: "helmet_ears",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d14fddc96b68ac038950",
+						"_tpl": "5c06c6a80db834001b735491",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "65711fc9c50461e8750d1f5b",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 8,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d14fddc96b68ac038951",
+						"_tpl": "6571199565daf6aa960c9b10",
+						"parentId": "6822d14fddc96b68ac038950",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d14fddc96b68ac038952",
+						"_tpl": "657119d49eb8c145180dbb95",
+						"parentId": "6822d14fddc96b68ac038950",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d14fddc96b68ac038953",
+						"_tpl": "657119fea330b8c9060f7afc",
+						"parentId": "6822d14fddc96b68ac038950",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "44d6a6625838f44707c29947",
-            _tpl: "5ea05cf85ad9772e6624305d",
-            upd: {
-              StackObjectsCount: 1,
-              sptPresetId: "657bc59526820ea7da04f2e8",
-              SpawnedInSession: true,
-            },
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            location: {
-              x: 4,
-              y: 4,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "9ef364417802f3e25f0a4738",
-            _tpl: "657ba2eef58ba5a625010798",
-            parentId: "44d6a6625838f44707c29947",
-            slotId: "helmet_top",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
-          {
-            _id: "efdc08c858746de4e43645aa",
-            _tpl: "657ba34b9ba22f103e08139b",
-            parentId: "44d6a6625838f44707c29947",
-            slotId: "helmet_back",
-            upd: {
-              SpawnedInSession: true,
-            },
-          },
+						"_id": "6822d152ddc96b68ac038954",
+						"_tpl": "5c08f87c0db8340019124324",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc644bbd440df880b2de2",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 4,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d152ddc96b68ac038955",
+						"_tpl": "657ba85ecfcf63c951052da7",
+						"parentId": "6822d152ddc96b68ac038954",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d152ddc96b68ac038956",
+						"_tpl": "657ba8bccfcf63c951052dab",
+						"parentId": "6822d152ddc96b68ac038954",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d152ddc96b68ac038957",
+						"_tpl": "65818e4e566d2de69901b1b1",
+						"parentId": "6822d152ddc96b68ac038954",
+						"slotId": "helmet_eyes",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d152ddc96b68ac038958",
+						"_tpl": "657ba8eab7e9ca9a02045bfd",
+						"parentId": "6822d152ddc96b68ac038954",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-            _id: "d29c4b9cc01e79501ecaec75",
-            _tpl: "5aa7d03ae5b5b00016327db5",
-            parentId: "5fe49444ae6628187a2e78b8",
-            slotId: "hideout",
-            upd: {
-              StackObjectsCount: 1,
-            },
-            location: {
-              x: 6,
-              y: 4,
-              r: 0,
-              rotation: false,
-            },
-          },
-          {
-            _id: "c08912a9fc4f5abe2ce7cc9e",
-            _tpl: "654a90aff4f81a421b0a7c86",
-            parentId: "d29c4b9cc01e79501ecaec75",
-            slotId: "helmet_top",
-            upd: {},
-          },
-          {
-            _id: "e2a528a45995620c1130ea81",
-            _tpl: "654a91068e1ce698150fd1e2",
-            parentId: "d29c4b9cc01e79501ecaec75",
-            slotId: "helmet_back",
-            upd: {},
-          },
-          {
-            _id: "6ffd19929cf6ced63e0bffa5",
-            _tpl: "654a9189bcc67a392b056c79",
-            parentId: "d29c4b9cc01e79501ecaec75",
-            slotId: "helmet_ears",
-            upd: {},
-          },
+						"_id": "6822d156ddc96b68ac038959",
+						"_tpl": "5df8a58286f77412631087ed",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 8,
+							"y": 4,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d156ddc96b68ac03895b",
+						"_tpl": "657ba096e57570b7f80a17fb",
+						"parentId": "6822d156ddc96b68ac038959",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d156ddc96b68ac03895c",
+						"_tpl": "657ba145e57570b7f80a17ff",
+						"parentId": "6822d156ddc96b68ac038959",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d156ddc96b68ac03895d",
+						"_tpl": "657ba18923918923cb0df568",
+						"parentId": "6822d156ddc96b68ac038959",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-              _id: "7ff17277552057a5f7395bf4",
-              _tpl: "5c066ef40db834001966a595",
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              upd: {
-                  StackObjectsCount: 1
-              },
-              "location": {
-                  "x": 5,
-                  "y": 0,
-                  "r": 0,
-                  "rotation": false
-              }
-          },
+						"_id": "6822d159ddc96b68ac03895e",
+						"_tpl": "5ea05cf85ad9772e6624305d",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc59526820ea7da04f2e8",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 6,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d159ddc96b68ac03895f",
+						"_tpl": "657ba2eef58ba5a625010798",
+						"parentId": "6822d159ddc96b68ac03895e",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d159ddc96b68ac038960",
+						"_tpl": "657ba34b9ba22f103e08139b",
+						"parentId": "6822d159ddc96b68ac03895e",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+          {
+						"_id": "6822d18cddc96b68ac03896d",
+						"_tpl": "5a16b672fcdbcb001912fa83",
+						"upd": {
+							"StackObjectsCount": 1,
+							"Repairable": {
+								"Durability": 20,
+								"MaxDurability": 20
+							},
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						},
+						"parentId": "6822d159ddc96b68ac03895e",
+						"slotId": "mod_equipment_000"
+					},
         ],
       },
       {
         Items: [
           {
-              _id: "679fd0f7dde61a653205170e",
-              _tpl: "5aa7e454e5b5b0214e506fa2",
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              upd: {
-                  StackObjectsCount: 1
-              },
-              "location": {
-                  "x": 2,
-                  "y": 6,
-                  "r": 0,
-                  "rotation": false
-              }
-          },
-          {
-              _id: "b356019c126f9dda708fb463",
-              _tpl: "657f925dada5fadd1f07a57a",
-              parentId: "679fd0f7dde61a653205170e",
-              slotId: "helmet_top",
-              upd: {}
-          },
-          {
-              _id: "0faa9c1642e28b16a9c8411b",
-              _tpl: "657f92acada5fadd1f07a57e",
-              parentId: "679fd0f7dde61a653205170e",
-              slotId: "helmet_back",
-              upd: {}
-          },
-          {
-              _id: "0ab6665f71a3e8aeecd1aead",
-              _tpl: "657f92e7f4c82973640b2354",
-              parentId: "679fd0f7dde61a653205170e",
-              slotId: "helmet_ears",
-              upd: {}
-          },
+						"_id": "6822d161ddc96b68ac038961",
+						"_tpl": "5aa7d03ae5b5b00016327db5",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "65711f2bc50461e8750d1f4f",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d161ddc96b68ac038962",
+						"_tpl": "654a90aff4f81a421b0a7c86",
+						"parentId": "6822d161ddc96b68ac038961",
+						"slotId": "helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d161ddc96b68ac038963",
+						"_tpl": "654a91068e1ce698150fd1e2",
+						"parentId": "6822d161ddc96b68ac038961",
+						"slotId": "helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d161ddc96b68ac038964",
+						"_tpl": "654a9189bcc67a392b056c79",
+						"parentId": "6822d161ddc96b68ac038961",
+						"slotId": "helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
         ],
       },
       {
         Items: [
           {
-              _id: "5b8eb43bb732656a4c164974",
-              _tpl: "5aa7e4a4e5b5b000137b76f2",
-              parentId: "5fe49444ae6628187a2e78b8",
-              slotId: "hideout",
-              upd: {
-                  StackObjectsCount: 1
-              },
-              "location": {
-                  "x": 0,
-                  "y": 5,
-                  "r": 0,
-                  "rotation": false
-              }
-          },
+						"_id": "6822d174ddc96b68ac038965",
+						"_tpl": "5aa7e4a4e5b5b000137b76f2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa87fc6679fefb3051e32",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 8,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d174ddc96b68ac038966",
+						"_tpl": "657f925dada5fadd1f07a57a",
+						"parentId": "6822d174ddc96b68ac038965",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d174ddc96b68ac038967",
+						"_tpl": "657f92acada5fadd1f07a57e",
+						"parentId": "6822d174ddc96b68ac038965",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d174ddc96b68ac038968",
+						"_tpl": "657f92e7f4c82973640b2354",
+						"parentId": "6822d174ddc96b68ac038965",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
           {
-              _id: "5af689c9c09a28ef3613b4b0",
-              _tpl: "657f925dada5fadd1f07a57a",
-              parentId: "5b8eb43bb732656a4c164974",
-              slotId: "helmet_top",
-              upd: {}
-          },
+						"_id": "6822d1aaddc96b68ac039709",
+						"_tpl": "5aa7e3abe5b5b000171d064d",
+						"parentId": "6822d174ddc96b68ac038965",
+						"slotId": "mod_equipment",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
           {
-              _id: "4878eed9438f7aeb67e2e1f4",
-              _tpl: "657f92acada5fadd1f07a57e",
-              parentId: "5b8eb43bb732656a4c164974",
-              slotId: "helmet_back",
-              upd: {}
-          },
+						"_id": "6822d177ddc96b68ac038969",
+						"_tpl": "5aa7e454e5b5b0214e506fa2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa836c6679fefb3051e28",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 8,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d177ddc96b68ac03896a",
+						"_tpl": "657f925dada5fadd1f07a57a",
+						"parentId": "6822d177ddc96b68ac038969",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d177ddc96b68ac03896b",
+						"_tpl": "657f92acada5fadd1f07a57e",
+						"parentId": "6822d177ddc96b68ac038969",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d177ddc96b68ac03896c",
+						"_tpl": "657f92e7f4c82973640b2354",
+						"parentId": "6822d177ddc96b68ac038969",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
           {
-              _id: "83c7e5c0dbab88c117d69d0a",
-              _tpl: "657f92e7f4c82973640b2354",
-              parentId: "5b8eb43bb732656a4c164974",
-              slotId: "helmet_ears",
-              upd: {}
-          },
+						"_id": "6822d1aaddc96b68ac03970a",
+						"_tpl": "5aa7e3abe5b5b000171d064d",
+						"parentId": "6822d177ddc96b68ac038969",
+						"slotId": "mod_equipment",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false,
+							"Togglable": {
+								"On": true
+							}
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d198ddc96b68ac03896e",
+						"_tpl": "5ea05cf85ad9772e6624305d",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc59526820ea7da04f2e8",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 2,
+							"y": 6,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d198ddc96b68ac03896f",
+						"_tpl": "657ba2eef58ba5a625010798",
+						"parentId": "6822d198ddc96b68ac03896e",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d198ddc96b68ac038970",
+						"_tpl": "657ba34b9ba22f103e08139b",
+						"parentId": "6822d198ddc96b68ac03896e",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d19dddc96b68ac0396fd",
+						"_tpl": "5c06c6a80db834001b735491",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "65711fc9c50461e8750d1f5b",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 8,
+							"y": 6,
+							"r": 0,
+							"rotation": false
+						}
+					},
+					{
+						"_id": "6822d19dddc96b68ac0396fe",
+						"_tpl": "6571199565daf6aa960c9b10",
+						"parentId": "6822d19dddc96b68ac0396fd",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d19dddc96b68ac0396ff",
+						"_tpl": "657119d49eb8c145180dbb95",
+						"parentId": "6822d19dddc96b68ac0396fd",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d19dddc96b68ac039700",
+						"_tpl": "657119fea330b8c9060f7afc",
+						"parentId": "6822d19dddc96b68ac0396fd",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d1a3ddc96b68ac039701",
+						"_tpl": "5aa7e454e5b5b0214e506fa2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa836c6679fefb3051e28",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 6,
+							"y": 6,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d1a3ddc96b68ac039702",
+						"_tpl": "657f925dada5fadd1f07a57a",
+						"parentId": "6822d1a3ddc96b68ac039701",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d1a3ddc96b68ac039703",
+						"_tpl": "657f92acada5fadd1f07a57e",
+						"parentId": "6822d1a3ddc96b68ac039701",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d1a3ddc96b68ac039704",
+						"_tpl": "657f92e7f4c82973640b2354",
+						"parentId": "6822d1a3ddc96b68ac039701",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d1a6ddc96b68ac039705",
+						"_tpl": "5aa7e4a4e5b5b000137b76f2",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657fa87fc6679fefb3051e32",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 4,
+							"y": 6,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d1a6ddc96b68ac039706",
+						"_tpl": "657f925dada5fadd1f07a57a",
+						"parentId": "6822d1a6ddc96b68ac039705",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d1a6ddc96b68ac039707",
+						"_tpl": "657f92acada5fadd1f07a57e",
+						"parentId": "6822d1a6ddc96b68ac039705",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d1a6ddc96b68ac039708",
+						"_tpl": "657f92e7f4c82973640b2354",
+						"parentId": "6822d1a6ddc96b68ac039705",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d1ebddc96b68ac03a636",
+						"_tpl": "5a7c4850e899ef00150be885",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 2,
+							"y": 8,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d1ebddc96b68ac03a638",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d1ebddc96b68ac03a636",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d1ebddc96b68ac03a639",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d1ebddc96b68ac03a636",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d1ebddc96b68ac03a63a",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d1ebddc96b68ac03a636",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d209ddc96b68ac03a63d",
+						"_tpl": "5645bc214bdc2d363b8b4571",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 8,
+							"y": 0,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d209ddc96b68ac03a63f",
+						"_tpl": "657bae18b7e9ca9a02045c0a",
+						"parentId": "6822d209ddc96b68ac03a63d",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d209ddc96b68ac03a640",
+						"_tpl": "657baeaacfcf63c951052db3",
+						"parentId": "6822d209ddc96b68ac03a63d",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d209ddc96b68ac03a641",
+						"_tpl": "657baecbc6f689d3a205b863",
+						"parentId": "6822d209ddc96b68ac03a63d",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822d24bddc96b68ac03b488",
+						"_tpl": "5a7c4850e899ef00150be885",
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"upd": {
+							"StackObjectsCount": 1,
+							"SpawnedInSession": false
+						},
+						"location": {
+							"x": 2,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822d24bddc96b68ac03b48a",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822d24bddc96b68ac03b488",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d24bddc96b68ac03b48b",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822d24bddc96b68ac03b488",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822d24bddc96b68ac03b48c",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822d24bddc96b68ac03b488",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822e1b1185ce152ec050acf",
+						"_tpl": "5aa7cfc0e5b5b00015693143",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc6ceaab96fccee08beb2",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 12,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822e1b1185ce152ec050ad0",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822e1b1185ce152ec050acf",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e1b1185ce152ec050ad1",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822e1b1185ce152ec050acf",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e1b1185ce152ec050ad2",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822e1b1185ce152ec050acf",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+        ],
+      },
+      {
+        Items: [
+          {
+						"_id": "6822e1b1185ce152ec050ad3",
+						"_tpl": "5aa7cfc0e5b5b00015693143",
+						"upd": {
+							"StackObjectsCount": 1,
+							"sptPresetId": "657bc6ceaab96fccee08beb2",
+							"SpawnedInSession": false
+						},
+						"parentId": "5fe49444ae6628187a2e78b8",
+						"slotId": "hideout",
+						"location": {
+							"x": 0,
+							"y": 8,
+							"r": "Horizontal"
+						}
+					},
+					{
+						"_id": "6822e1b1185ce152ec050ad4",
+						"_tpl": "657baaf0b7e9ca9a02045c02",
+						"parentId": "6822e1b1185ce152ec050ad3",
+						"slotId": "Helmet_top",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e1b1185ce152ec050ad5",
+						"_tpl": "657bab6ec6f689d3a205b85f",
+						"parentId": "6822e1b1185ce152ec050ad3",
+						"slotId": "Helmet_back",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					},
+					{
+						"_id": "6822e1b1185ce152ec050ad6",
+						"_tpl": "657babc6f58ba5a6250107a2",
+						"parentId": "6822e1b1185ce152ec050ad3",
+						"slotId": "Helmet_ears",
+						"upd": {
+							"SpawnedInSession": false
+						}
+					}
         ],
       },
     ],

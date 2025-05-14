@@ -2,7 +2,6 @@ import { DependencyContainer } from "tsyringe";
 import { CustomItemService } from "@spt/services/mod/CustomItemService";
 import { NewItemDetails } from "@spt/models/spt/mod/NewItemDetails";
 import { NewItemFromCloneDetails } from "@spt/models/spt/mod/NewItemDetails";
-import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { MysteryContainerInfo } from "./MysteryContainerInfo";
 import { itemProps } from "./MysteryContainerInfo";
 import * as fs from 'fs';
@@ -14,32 +13,13 @@ export class ItemCreateHelper {
     public config: any;
     public loot: Array<NewItemFromCloneDetails> = [];
 
-    // Create customs Items and store them in the database
+    // builds all mystery containers and pushes to database
     public createItems(container: DependencyContainer) {
         this.config = jsonc.parse(fs.readFileSync(path.resolve(__dirname, "../config/config.jsonc"), "utf-8"));
-        const db: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const info: Record<string, itemProps> = MysteryContainerInfo(this.config);
         const customItem = container.resolve<CustomItemService>("CustomItemService");
 
-        const sealedWeaponGamble: NewItemFromCloneDetails = {
-            itemTplToClone: "648990314b4d2b31b63a46fc",
-            //overrideProperties: {},
-            parentId: "62f109593b54472778797866",
-            newId: info['sealed']._id,
-            fleaPriceRoubles: 450000,
-            handbookPriceRoubles: 450000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
-            locales: {
-                "en": {
-                    name: "Sealed Weapon Case",
-                    shortName: "Sealed Weapon Case",
-                    description: "Looking for a weapon with some attachments that are left for you to attach yourself? Well do we have the perfect container for you. This is the same Sealed Weapon Case you would find in an airdrop and is not custom in any way."
-                }
-            }
-        }
-        customItem.createItemFromClone(sealedWeaponGamble);
-
-        for (const [key, value] of Object.entries(info)) {
+        for (const [_, value] of Object.entries(info)) {
             
             const item: NewItemDetails = {
                 newItem: {

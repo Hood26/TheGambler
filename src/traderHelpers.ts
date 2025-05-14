@@ -133,26 +133,30 @@ export class TraderHelper
      public addSingleItemsToTrader(tables: IDatabaseTables, traderId: string, assortCreator: FluentAssortCreator, container: DependencyContainer, logger: ILogger) : void {
 
         const config = jsonc.parse(fs.readFileSync(path.resolve(__dirname, "../config/config.jsonc"), "utf-8"));
-        // All Mystery Containers _id and quest_id
         const info: Record<string, itemProps> = MysteryContainerInfo(config);  
         const price = new Price(container, config, logger);
         const generatedPrices = price.generateContainerPrices();
         //const loadoutPrice = price.loadoutSimulation();
         //console.log('One Loadout Cost = ' + loadoutPrice);
-        //console.log(generatedPrices);           
-
+        //console.log(generatedPrices);
+        
+        //const thermal = '5c110624d174af029e69734c' // HelmetGenTest
+        //const testTrade = assortCreator.createSingleAssortItem(thermal)
+        //testTrade.addMoneyCost(Money.ROUBLES, 100);
+        //testTrade.export(tables.traders[baseJson._id]);
 
         for (const [key, value] of Object.entries(info)) {
             if (config.container_config[key + '_enable']){
 
-                if ((parseInt(key.substring(0,1)) || key.substring(0,1) == '.') && !config.container_config['all_ammo_enable']) { // isAmmo and ammo is disabled: SKIP all ammo
+                // isAmmo and ammo is disabled: SKIP all ammo
+                if ((parseInt(key.substring(0,1)) || key.substring(0,1) == '.') && !config.container_config['all_ammo_enable']) {
                     continue;
                 }
 
                 const newTrade = assortCreator.createSingleAssortItem(value._id, value.quest_id)
 
                     if (value.barter) {
-                        
+
                         for (const [barter, amount] of Object.entries(value.barter)) {
                             newTrade.addBarterCost(barter, amount);
                         }

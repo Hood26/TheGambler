@@ -10,7 +10,7 @@ export type itemProps = {
     prefab: string,
     width: number,
     height: number,
-    barter?: Record<string, number> // New: barter cost object, key=itemTpl, value=amount
+    barter?: Record<string, number> // barter cost object: {key=itemTpl, value=amount}
 }
 
 export function MysteryContainerInfo(config: any): Record<string, itemProps> {
@@ -109,14 +109,14 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
         },
         sealed: {
             _id: "67b7b98b4767af842e0521e5",
-            _name: "gambling_sealed_weapon_case",
+            _name: "event_container_airdrop_01",
             quest_id: "66b57e52fcf263f4d70af3e3",
             name: "Sealed Weapon Case",
             shortName: "Sealed Weapon Case",
             desc: "Looking for a weapon with some attachments that are left for you to attach yourself? Well do we have the perfect container for you. This is the same Sealed Weapon Case you would find in an airdrop and is not custom in any way.",
             fleaPriceRoubles: 450000,
             handbookPriceRoubles: 450000,
-            prefab: "assets/content/items/barter/item_barter_walletwz/item_barter_walletwz.bundle",
+            prefab: "assets/content/items/containers/item_container_weaponcase/item_container_weaponcase.bundle"
             width: 5,
             height: 2,
             barter: undefined
@@ -522,7 +522,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['.338_min']}-${config.odds['.338_max']} Rounds\nCommon Rounds - ${config.odds[".338_common"]}%\nUncommon Rounds - ${config.odds[".338_uncommon"]}%\nRare Rounds - ${config.odds[".338_rare"]}%`,
             fleaPriceRoubles: 80000,
             handbookPriceRoubles: 80000,
-            prefab: "assets/content/items/ammo/patrons/patron_338_lapua_fmj.bundle",
+            prefab: "assets/content/items/ammo/patrons/patron_86x70_lapua_magnum.bundle",
             width: 1,
             height: 1,
             barter: undefined
@@ -536,7 +536,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['9x39_min']}-${config.odds['9x39_max']} Rounds\nCommon Rounds - ${config.odds["9x39_common"]}%\nUncommon Rounds - ${config.odds["9x39_uncommon"]}%\nRare Rounds - ${config.odds["9x39_rare"]}%`,
             fleaPriceRoubles: 22000,
             handbookPriceRoubles: 22000,
-            prefab: "assets/content/items/ammo/patrons/patron_9x39_7n9.bundle",
+            prefab: "assets/content/items/ammo/patrons/patron_9x39_pab9.bundle",
             width: 1,
             height: 1,
             barter: undefined
@@ -550,7 +550,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['.366_min']}-${config.odds['.366_max']} Rounds\nCommon Rounds - ${config.odds[".366_common"]}%\nUncommon Rounds - ${config.odds[".366_uncommon"]}%\nRare Rounds - ${config.odds[".366_rare"]}%`,
             fleaPriceRoubles: 17000,
             handbookPriceRoubles: 17000,
-            prefab: "assets/content/items/ammo/patrons/patron_366_ap.bundle",
+            prefab: "assets/content/items/ammo/patrons/patron_366_custom_ap.bundle",
             width: 1,
             height: 1,
             barter: undefined
@@ -564,7 +564,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['12.7x55_min']}-${config.odds['12.7x55_max']} Rounds\nCommon Rounds - ${config.odds["12.7x55_common"]}%\nUncommon Rounds - ${config.odds["12.7x55_uncommon"]}%\nRare Rounds - ${config.odds["12.7x55_rare"]}%`,
             fleaPriceRoubles: 25500,
             handbookPriceRoubles: 25500,
-            prefab: "assets/content/items/ammo/patrons/patron_127x55_ps12.bundle",
+            prefab: "assets/content/items/ammo/patrons/patron_12,7x55_ps12b.bundle",
             width: 1,
             height: 1,
             barter: undefined
@@ -578,7 +578,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['12/70_min']}-${config.odds['12/70_max']} Rounds\nCommon Rounds - ${config.odds["12/70_common"]}%\nUncommon Rounds - ${config.odds["12/70_uncommon"]}%\nRare Rounds - ${config.odds["12/70_rare"]}%`,
             fleaPriceRoubles: 14500,
             handbookPriceRoubles: 14500,
-            prefab: "assets/content/items/ammo/patrons/patron_12x70_7mm.bundle",
+            prefab: "assets/content/items/ammo/patrons/patron_12x70.bundle",
             width: 1,
             height: 1,
             barter: undefined
@@ -592,7 +592,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['20/70_min']}-${config.odds['20/70_max']} Rounds\nCommon Rounds - ${config.odds["20/70_common"]}%\nUncommon Rounds - ${config.odds["20/70_uncommon"]}%\nRare Rounds - ${config.odds["20/70_rare"]}%`,
             fleaPriceRoubles: 16000,
             handbookPriceRoubles: 16000,
-            prefab: "assets/content/items/ammo/patrons/patron_20x70_7mm.bundle",
+            prefab: "assets/content/items/ammo/patrons/patron_20x70.bundle",
             width: 1,
             height: 1,
             barter: undefined
@@ -606,7 +606,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['23x75_min']}-${config.odds['23x75_max']} Rounds\nCommon Rounds - ${config.odds["23x75_common"]}%\nUncommon Rounds - ${config.odds["23x75_uncommon"]}%\nRare Rounds - ${config.odds["23x75_rare"]}%`,
             fleaPriceRoubles: 18000,
             handbookPriceRoubles: 18000,
-            prefab: "assets/content/items/ammo/patrons/patron_23x75_sh.bundle",
+            prefab: "assets/content/items/ammo/patrons/patron_23x75_shrapnel_25.bundle",
             width: 1,
             height: 1,
             barter: undefined

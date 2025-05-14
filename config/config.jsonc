@@ -127,6 +127,7 @@
     "weapon_stock": 30,
     "weapon_rewards_found_in_raid_status": false,
 
+    /* DOES NOTHING
     // default_weapon Mystery Box
     "default_weapon_enable": true,
     "default_weapon_manual_pricing": false,
@@ -142,6 +143,7 @@
     "average_weapon_unlimited_stock": true,
     "average_weapon_stock": 999,
     "average_weapon_rewards_found_in_raid_status": false,
+    */
 
     // Premium Weapon Mystery Box
     "premium_weapon_enable": true,
@@ -590,12 +592,12 @@
     "helmet_rare": 17.5,              // Rare Helmet
     "helmet_uncommon": 27.65,          // Uncommon Helmet
     "helmet_common": 54.65,           // Common Helmet
-    "helmet_profit_percentage": 0.87, // Container Profitability
+    "helmet_profit_percentage": 0.86, // Container Profitability
 
     // Mystery Headset
-    "headset_rare": 8.0,             // Rare Headset
-    "headset_uncommon": 42.0,         // Uncommon Headset
-    "headset_common": 50.0,           // Common Headset
+    "headset_rare": 15.0,             // Rare Headset
+    "headset_uncommon": 40.0,         // Uncommon Headset
+    "headset_common": 45.0,           // Common Headset
     "headset_profit_percentage": 0.95, // Container Profitability
 
     // Armor Mystery Box
