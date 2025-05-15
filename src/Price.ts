@@ -7,6 +7,7 @@ import { RandomUtil } from "@spt/utils/RandomUtil";
 import { Ammo } from "./containers/Ammo";
 import { MysteryContainer } from "./MysteryContainer";
 import { Gamble } from "./Gamble";
+import { Weapons } from "./containers/Weapons";
 
 export class Price{
     private container: DependencyContainer;
@@ -31,7 +32,7 @@ export class Price{
     public generateContainerPrices(): {} {
         let containerPrices = {};
         const mysteryContainerNames = [...this.MysteryContainer.simulation, ...this.MysteryContainer.items.ammo.names];
-        console.log(mysteryContainerNames)
+        //console.log(mysteryContainerNames)
 
         for (let i = 0; i < mysteryContainerNames.length; i++) {
             const name: string = this.MysteryContainer.getName(mysteryContainerNames[i]);
@@ -57,7 +58,6 @@ export class Price{
             containerPrices[name + "_price"] = currentContainerPrice;
         }
 
-        this.logger.success("[GamblerTrader] Mystery Box Price Generation Complete!");
         //console.log("Mystery Container Prices")
         //console.log(containerPrices)
         return containerPrices;
@@ -131,17 +131,20 @@ export class Price{
                 sum = sum + currentPrice;
                 count++; 
             }
+            //if (name == 'key') {
+                //console.log(prices);
+            //}
             sum = sum / count;
             prices.push(sum);
             sum = 0;
         }
         
-        /*
-        console.log(name)
-        if (name == 'helmet') {
-            console.log(prices);
-        }
-            */
+        
+        //console.log(name)
+        //if (name == 'key') {
+            //console.log(prices);
+        //}
+            
 
         this.MysteryContainer.setRarityAverageProfit(name, prices);
         return prices;
@@ -195,6 +198,7 @@ export class Price{
      */
     private getContainerPresetPrices(name: string ,parent: string, rarities: Array<string>, items: any, amount: number = 1): Array<number> {
         const itemHelper: ItemHelper = this.container.resolve<ItemHelper>("ItemHelper");
+        const weapons = new Weapons();
         let prices: Array<number>    = [];
         let weaponPricesPerTier: Array<number> = [];
         let tierTotal: number        = 0;
@@ -220,7 +224,7 @@ export class Price{
                             //console.log(this.traderAssortPrice(currentItem))
                         //}
                     }
-                    if (this.config.skip_base_attachments.includes(currentItem)) { // attachment is a base attachment, skip...
+                    if (weapons.skip_base_attachments.includes(currentItem)) { // attachment is a base attachment, skip...
                         continue;
 
                     } else {
@@ -233,19 +237,19 @@ export class Price{
                 weaponPricesPerTier.push(Math.floor(sum));
                 sum = 0;
             }
-            if ( name == 'helmet') {
-                console.log('Helmet Rarity = ' + rarities[i]);
-                console.log(weaponPricesPerTier)
-            }
+            //if ( name == 'helmet') {
+                //console.log('Helmet Rarity = ' + rarities[i]);
+                //console.log(weaponPricesPerTier)
+            //}
             const tierSum = weaponPricesPerTier.reduce((a, b) => a + b, 0);
             sum = tierSum / count;
             prices.push(Math.floor(sum));
             sum = 0;
             weaponPricesPerTier = [];
         }
-        if ( name == 'helmet') {
-            console.log(prices)
-        }
+        //if ( name == 'helmet') {
+            //console.log(prices)
+        //}
         this.MysteryContainer.setRarityAverageProfit(name, prices);
         return prices;
     }

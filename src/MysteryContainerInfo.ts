@@ -21,7 +21,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             quest_id: "66b57e52fcf263f4d70af3e0",
             name: "Mystery Wallet",
             shortName: "Mystery Wallet",
-            desc: `Wager your Roubles to win more or lose it all!\n==============================\n0 Roubles - ${config.odds['wallet_base']}%\n25K Roubles - ${config.odds['wallet_extra_common']}%\n50k Roubles - ${config.odds['wallet_common']}%\n100k Roubles - ${config.odds['wallet_uncommon']}%\n250k Roubles - ${config.odds['wallet_more_uncommon']}%\n500k Roubles - ${config.odds['wallet_extra_uncommon']}%\n1 Million Roubles - ${config.odds['wallet_rare']}%\n2.5 Million Roubles - ${config.odds['wallet_kinda_rare']}%\n5 Million Roubles - ${config.odds['wallet_extra_rare']}%\n10 Million Roubles - ${config.odds['wallet_extremely_rare']}%`,
+            desc: `Wager your Roubles to win more or lose it all!\n==============================\n0 Roubles - ${config.odds['wallet_base']}%\n25K Roubles - ${config.odds['wallet_extra_common']}%\n50k Roubles - ${config.odds['wallet_common']}%\n100k Roubles - ${config.odds['wallet_uncommon']}%\n250k Roubles - ${config.odds['wallet_more_uncommon']}%\n500k Roubles - ${config.odds['wallet_extra_uncommon']}%\n1 Million Roubles - ${config.odds['wallet_rare']}%\n2 Million Roubles - ${config.odds['wallet_kinda_rare']}%`,
             fleaPriceRoubles: 130000,
             handbookPriceRoubles: 130000,
             prefab: "assets/content/items/barter/item_barter_walletwz/item_barter_walletwz.bundle",
@@ -61,9 +61,9 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             _id: "67b7b98b4767af842e0521ec",
             _name: "gambling_bitcoin",
             quest_id: "66b57e52fcf263f4d70af4e2", // NEED REPLACE
-            name: "Mystery Bitcoin 50/50",
-            shortName: "Mystery Bitcoin 50/50",
-            desc: `Feeling lucky? Looking to double up your spoils? Try your luck at double or nothing!\n==============================\nTwo Bitcoins - ${config.odds['bitcoin_success']}%\nNothing - ${config.odds['bitcoin_failure']}`,
+            name: "Bitcoin Coinflip",
+            shortName: "Coinflip",
+            desc: `Feeling lucky? Looking to double up your spoils? Try your luck at double or nothing!\n==============================\n2 Bitcoins - ${config.odds['bitcoin_success']}%\nNothing - ${config.odds['bitcoin_failure']}%`,
             fleaPriceRoubles: 1100000,
             handbookPriceRoubles: 1100000,
             prefab: "assets/content/items/barter/item_barter_valuable_bitcoin/item_barter_valuable_bitcoin.bundle",
@@ -77,9 +77,9 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             _id: "67b7b98b4767af842e0521ed",
             _name: "gambling_gpcoin",
             quest_id: "66b57e52fcf263f4d70af5e2", // NEED REPLACE
-            name: "Mystery GP Coin 50/50",
-            shortName: "Mystery GP Coin 50/50",
-            desc: `Feeling lucky? Looking to double up your spoils? Try your luck at double or nothing!\n==============================\n50 GP Coin - ${config.odds['gpcoin_success']}%\nNothing - ${config.odds['gpcoin_failure']}`,
+            name: "GP Coin Coinflip",
+            shortName: "Coinflip",
+            desc: `Feeling lucky? Looking to double up your spoils? Try your luck at double or nothing!\n==============================\n50 GP Coin - ${config.odds['gpcoin_success']}%\nNothing - ${config.odds['gpcoin_failure']}%`,
             fleaPriceRoubles: 1700000,
             handbookPriceRoubles: 125000,
             prefab: "assets/content/items/barter/item_barter_valuable_gp/item_barter_valuable_gp.bundle",
@@ -90,7 +90,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             }
         },
         medical: {
-            _id: "67b7b98b4767af842e0521fb",
+            _id: "67b7b98b4767af842e0521fc",
             _name: "gambling_medical",
             quest_id: "66b57e52fcf263f4d70af6e2", // NEED REPLACE
             name: "Mystery Medical Kit",
@@ -116,7 +116,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             desc: "Looking for a weapon with some attachments that are left for you to attach yourself? Well do we have the perfect container for you. This is the same Sealed Weapon Case you would find in an airdrop and is not custom in any way.",
             fleaPriceRoubles: 450000,
             handbookPriceRoubles: 450000,
-            prefab: "assets/content/items/containers/item_container_weaponcase/item_container_weaponcase.bundle"
+            prefab: "assets/content/items/containers/item_container_weaponcase/item_container_weaponcase.bundle",
             width: 5,
             height: 2,
             barter: undefined
@@ -164,7 +164,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             barter: undefined
         },
         fiftyfifty: {
-            _id: "67b7b98b4767af842e0521f8",
+            _id: "67b7b98b4767af842e0521f9",
             _name: "gambling_roubles",
             quest_id: "66b57e52fcf263f4d70af3e7",
             name: "50/50 Case",
@@ -191,8 +191,50 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             height: 4,
             barter: undefined
         },
-        backpack: {
+        '100k': {
+            _id: "67b7b98b4767af842e0521f2",
+            _name: "gambling_100k",
+            quest_id: "66b57e52fcf233f4d70af7d4",
+            name: "100K Coinflip",
+            shortName: "Coinflip",
+            desc: `Wager your Roubles to win more or lose it all!\n==============================\n200K Roubles - 50.0%\nNothing - 50.0%`,
+            fleaPriceRoubles: 130000,
+            handbookPriceRoubles: 130000,
+            prefab: "assets/content/items/barter/wallet/item_wallet.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '500k': {
+            _id: "67b7b98b4767af842e0521f3",
+            _name: "gambling_500k",
+            quest_id: "66b57e52fcf253f4d70af7d4",
+            name: "500K Coinflip",
+            shortName: "Coinflip",
+            desc: `Wager your Roubles to win more or lose it all!\n==============================\n1 Million Roubles - 50.0%\nNothing - 50.0%`,
+            fleaPriceRoubles: 650000,
+            handbookPriceRoubles: 650000,
+            prefab: "assets/content/items/barter/wallet/item_wallet.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        '1mil': {
             _id: "67b7b98b4767af842e0521f4",
+            _name: "gambling_1mil",
+            quest_id: "66b57e52fcf244f4d70af7d4",
+            name: "1 Million Coinflip",
+            shortName: "Coinflip",
+            desc: `Wager your Roubles to win more or lose it all!\n==============================\n2 Million Roubles - 50.0%\nNothing - 50.0%`,
+            fleaPriceRoubles: 1200000,
+            handbookPriceRoubles: 1200000,
+            prefab: "assets/content/items/barter/wallet/item_wallet.bundle",
+            width: 1,
+            height: 1,
+            barter: undefined
+        },
+        backpack: {
+            _id: "67b7b98b4767af842e0521f5",
             _name: "gambling_backpack",
             quest_id: "66b57e52fcf263f4d70af7d4",
             name: "Backpack Mystery Bag",
@@ -206,7 +248,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             barter: undefined
         },
         loadout: {
-            _id: "67b7b98b4767af842e0521f5",
+            _id: "67b7b98b4767af842e0521f6",
             _name: "gambling_loadout",
             quest_id: "66b57e52fcf263f4d70af3ea",
             name: "Mystery Loadout",
@@ -220,7 +262,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             barter: undefined
         },
         premium_loadout: {
-            _id: "67b7b98b4767af842e0521f6",
+            _id: "67b7b98b4767af842e0521f7",
             _name: "gambling_premium_loadout",
             quest_id: "66b57e52fcf263f4d70af3f4",
             name: "Premium Mystery Loadout",
@@ -234,7 +276,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             barter: undefined
         },
         rig: {
-            _id: "67b7b98b4767af842e0521f7",
+            _id: "67b7b98b4767af842e0521f8",
             _name: "gambling_rig",
             quest_id: "66b57e52fcf263f4d70b0f45",
             name: "Tactical Rig Mystery Box",
@@ -248,7 +290,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             barter: undefined
         },
         helmet: {
-            _id: "67b7b98b4767af842e0521f9",
+            _id: "67b7b98b4767af842e0521fa",
             _name: "gambling_helmet",
             quest_id: "66b57e52fcf263f4d70af3ec",
             name: "Mystery Helmet",
@@ -262,7 +304,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             barter: undefined
         },
         headset: {
-            _id: "67b7b98b4767af842e0521fa",
+            _id: "67b7b98b4767af842e0521fb",
             _name: "gambling_headset",
             quest_id: "66b57e52fcf263f4d70af3ed",
             name: "Mystery Headset",
@@ -304,7 +346,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             barter: undefined
         },
         premium_weapon: {
-            _id: "67b7b98b4767af842e0521f3",
+            _id: "67b7b98b4767af842e0521f1",
             _name: "gambling_premium_weapon",
             quest_id: "66b57e52fcf263f4d70af3eb",
             name: "Premium Weapon Mystery Box",
@@ -338,8 +380,8 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             name: "Mystery 9x18mm Rounds",
             shortName: "Mystery",
             desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['9x18_min']}-${config.odds['9x18_max']} Rounds\nCommon Rounds - ${config.odds["9x18_common"]}%\nUncommon Rounds - ${config.odds["9x18_uncommon"]}%\nRare Rounds - ${config.odds["9x18_rare"]}%`,
-            fleaPriceRoubles: 14000,
-            handbookPriceRoubles: 14000,
+            fleaPriceRoubles: 5000,
+            handbookPriceRoubles: 5000,
             prefab: "assets/content/items/ammo/patrons/patron_9x18pm_pbm.bundle",
             width: 1,
             height: 1,
@@ -352,8 +394,8 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             name: "Mystery 9x19mm Parabellum Rounds",
             shortName: "Mystery",
             desc: `Are you tired of packing your magazines full of BBs? Maybe your Looking for that extra punch in your weapon to help put down that juicy PMC in The Lab. We have all the ammunition you could ask for!\n==============================\nRandomly Unboxes ${config.odds['9x19_min']}-${config.odds['9x19_max']} Rounds\nCommon Rounds - ${config.odds["9x19_common"]}%\nUncommon Rounds - ${config.odds["9x19_uncommon"]}%\nRare Rounds - ${config.odds["9x19_rare"]}%`,
-            fleaPriceRoubles: 19500,
-            handbookPriceRoubles: 19500,
+            fleaPriceRoubles: 10000,
+            handbookPriceRoubles: 10000,
             prefab: "assets/content/items/ammo/patrons/patron_9x19_7n31.bundle",
             width: 1,
             height: 1,

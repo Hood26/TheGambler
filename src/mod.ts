@@ -23,7 +23,6 @@ import { InventoryController } from "@spt/controllers/InventoryController";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { HashUtil } from "@spt/utils/HashUtil";
 import { IAddItemDirectRequest } from "@spt/models/eft/inventory/IAddItemsDirectRequest";
-// New trader classes and config
 import * as fs from 'fs';
 import * as baseJson from "../db/base.json";
 import { TraderHelper } from "./traderHelpers";
@@ -80,8 +79,11 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         const configServer = container.resolve<ConfigServer>("ConfigServer");
         const traderConfig: ITraderConfig = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const ragfairConfig = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
+        const databaseServer: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
+        const tables = databaseServer.getTables();
+        const jsonUtil: JsonUtil = container.resolve<JsonUtil>("JsonUtil");
+        const itemCreate = new ItemCreateHelper();
         this.config = jsonc.parse(fs.readFileSync(path.resolve(__dirname, "../config/config.jsonc"), "utf-8"));
-        //console.log(this.config);
         this.hashUtil = hashUtil;
         this.traderHelper = new TraderHelper();
         this.fluentAssortCreator = new FluentAssortCreator(this.hashUtil, this.logger);
@@ -90,25 +92,14 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
 
         // Add trader to trader enum
         Traders[baseJson._id] = baseJson._id;
-
         // Add trader to flea market
         ragfairConfig.traders[baseJson._id] = true;
-
-        // Resolve SPT classes we'll use
-        const databaseServer: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-        //const configServer: ConfigServer = container.resolve<ConfigServer>("ConfigServer");
-        const jsonUtil: JsonUtil = container.resolve<JsonUtil>("JsonUtil");
         // Creates and stores new gambling items in database
-        const itemCreate = new ItemCreateHelper();
         itemCreate.createItems(container)
-
-        // Get a reference to the database tables
-        const tables = databaseServer.getTables();
 
         // Add new trader to the trader dictionary in DatabaseServer - has no assorts (items) yet
         this.traderHelper.addTraderToDb(baseJson, tables, jsonUtil);
 
-        // Add trader to locale file, ensures trader text shows properly on screen
         // WARNING: adds the same text to ALL locales (e.g. chinese/french/english)
         this.traderHelper.addTraderToLocales(baseJson, tables, baseJson.name, "Gambler", baseJson.nickname, baseJson.location, "Welcome Traveler! May I indulge you in purchasing some mystery boxes?");
 
@@ -156,9 +147,11 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
 
     public postSptLoad(container: DependencyContainer): void {
 
+        this.logger.success("[Gambler Trader] Generating Mystery Container Prices...");
         const databaseServer: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const tables = databaseServer.getTables();
         this.traderHelper.addSingleItemsToTrader(tables, baseJson._id, this.fluentAssortCreator, container, this.logger);
+        this.logger.success("[Gambler Trader] Finished Loading! Ready To Launch.");
 
     }
 
@@ -194,7 +187,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         ];
 
         if (isGamblingContainer) {
-            // All Gambler action happens here
+            // All Gambler containers
             const currentContainer = containerDetails[1];
             gamble = new Gamble(container, this.config, this.logger, currentContainer._name);
             gamble.newGamble();

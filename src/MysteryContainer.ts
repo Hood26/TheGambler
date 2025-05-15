@@ -29,6 +29,9 @@ import { LoadoutFacecovers } from "./containers/LoadoutFacecovers";
 import { LoadoutStim } from "./containers/LoadoutStim";
 import type { itemProps } from "./MysteryContainerInfo";
 import { MysteryContainerInfo } from "./MysteryContainerInfo";
+import { CoinFlip500k } from "./containers/CoinFlip500k";
+import { CoinFlip100k } from "./containers/CoinFlip100k";
+import { CoinFlip1Mil } from "./containers/CoinFlip1Mil";
 //import { AverageWeapons } from "./containers/AverageWeapons";
 //import { DefaultWeapons } from "./containers/DefaultWeapons";
 
@@ -88,9 +91,9 @@ export class MysteryContainer {
     constructor(config, logger){
         this.config     = config;
         this.logger     = logger;
-        this.containerInfo = MysteryContainerInfo;
+        this.containerInfo = MysteryContainerInfo(this.config);
         this.names = [
-            'wallet', 'keycard', 'key', 'stim', 'medical', 'food', 'melee', 
+            'wallet', '100k', '500k', '1mil', 'keycard', 'key', 'stim', 'medical', 'food', 'melee', 
             'backpack', 'rig', 'weapon', 'premium_weapon', 'helmet', 
             'headset', 'armor', 'premium_armor', 'roubles', 'bitcoin', 'gpcoin',
              'loadout', 'premium_loadout', 'loadout_grenade', 'loadout_facecovers', 'loadout_food', 'loadout_drink', 'loadout_light_bleed', 'loadout_heavy_bleed', 'loadout_stim', 'loadout_splint', 'loadout_healing', 'ammo'
@@ -99,6 +102,9 @@ export class MysteryContainer {
         this.override    = ['ammo', 'armor', 'weapon', 'helmet'];
         this.items      = {
             wallet:              new Wallet(),
+            '100k':              new CoinFlip100k(),
+            '500k':              new CoinFlip500k(),
+            '1mil':              new CoinFlip1Mil(),
             keycard:             new Keycard(),
             key:                 new Keys(),
             stim:                new Stims(),

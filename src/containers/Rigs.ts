@@ -28,7 +28,11 @@ export class Rigs {
     [
       '5d5d85c586f774279a21cbdb', // Haley Strategic D3CRX Chest Harness (Ranger Green)
       '5ca20abf86f77418567a43f2', // Dynaforce Triton M43-A chest harness (Black)
+      '5648a69d4bdc2ded0b8b457b', // BlackRock chest rig (Gray)
       '5b44c8ea86f7742d1627baf1', // BlackHawk! Commando chest harness (Desert Tan)
+      '603648ff5a45383c122086ac', // Azimut SS "Zhuk" chest harness (Black)
+      '6040dd4ddcf9592f401632d2', // Azimut SS "Zhuk" chest harness (SURPAT)
+      '5c0e6a1586f77404597b4965', // Poyas-A + Poyas-B gear rig
       '5f5f41f56760b4138443b352', // Direct Action Thunderbolt compact chest rig (Shadow Grey)
       '5fd4c60f875c30179f5d04c2', // Gear Craft GC-BSS-MK1 chest rig (A-TACS FG)
       '60a6220e953894617404b00a', // Stich Profi Chest Rig MK2 (Recon, A-TACS FG)
@@ -48,6 +52,10 @@ export class Rigs {
       '5929a2a086f7744f4b234d43', // UMTBS 6Sh112 Scout-Sniper chest rig (Digital Flora)
       '5e4abfed86f77406a2713cf7', // Splav Tarzan M22 chest rig (Smog)
       '6034cf5fffd42c541047f72e', // Umka M33-SET1 hunter vest (Olive Drab)
+      '5ab8dab586f77441cd04f2a2', // WARTECH MK3 TV-104 chest rig (MultiCam)
+      '60a621c49c197e4e8c4455e6', // Stich Profi Chest Rig MK2 (Assault, A-TACS FG)
+      '6040dd4ddcf9592f401632d2', // Azimut SS "Zhuk" chest harness (SURPAT)
+      
     ]
   ]
 }

@@ -139,13 +139,21 @@ export class TraderHelper
         //const loadoutPrice = price.loadoutSimulation();
         //console.log('One Loadout Cost = ' + loadoutPrice);
         //console.log(generatedPrices);
-        
         //const thermal = '5c110624d174af029e69734c' // HelmetGenTest
         //const testTrade = assortCreator.createSingleAssortItem(thermal)
         //testTrade.addMoneyCost(Money.ROUBLES, 100);
         //testTrade.export(tables.traders[baseJson._id]);
 
         for (const [key, value] of Object.entries(info)) {
+            const prices = tables.templates.prices;
+
+            if (generatedPrices[key + '_price'] > 250000) {
+                prices[value._id] = generatedPrices[key + '_price'] * 1.20;
+            } else {
+                prices[value._id] = generatedPrices[key + '_price'] * 1.35;
+            }
+
+
             if (config.container_config[key + '_enable']){
 
                 // isAmmo and ammo is disabled: SKIP all ammo

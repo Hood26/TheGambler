@@ -4,8 +4,6 @@ export class Wallet {
   public price_generate = true;
   
     public rarities = [
-      "_extremely_rare", 
-      "_extra_rare", 
       "_kinda_rare", 
       "_rare", 
       "_extra_uncommon", 
@@ -15,11 +13,9 @@ export class Wallet {
       "_extra_common",
       "_base"
     ]
-    public stackable = [true, true, true, true, true, true, true, true, true, true]
+    public stackable = [true, true, true, true, true, true, true, true]
     public reward_amount = [
-      10000000,
-      5000000, 
-      2500000, 
+      2000000, 
       1000000, 
       500000, 
       250000, 
@@ -28,9 +24,7 @@ export class Wallet {
       25000,
       0
     ]
-    public rewards = [
-      ['5449016a4bdc2d6f028b456f'], 
-      ['5449016a4bdc2d6f028b456f'], 
+    public rewards = [ 
       ['5449016a4bdc2d6f028b456f'], 
       ['5449016a4bdc2d6f028b456f'], 
       ['5449016a4bdc2d6f028b456f'], 
@@ -38,7 +32,7 @@ export class Wallet {
       ['5449016a4bdc2d6f028b456f'],
       ['5449016a4bdc2d6f028b456f'],
       ['5449016a4bdc2d6f028b456f'],
-      ['5449016a4bdc2d6f028b456f']
+      ['NaN']
     ]
 
 /*

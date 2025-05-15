@@ -58,6 +58,9 @@ export class Gamble {
 
         switch(name){
             case 'wallet':
+            case '100k':
+            case '500k':
+            case '1mil':
             case 'roubles':
             case 'bitcoin':
             case 'gpcoin':

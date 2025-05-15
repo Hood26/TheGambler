@@ -380,6 +380,7 @@ export class Ammo {
                 [
                     "5a608bf24f39f98ffc77720e", // 7.62x51mm M62 Tracer
                     "5a6086ea4f39f99cd479502f", // 7.62x51mm M61
+                    "6768c25aa7b238f14a08d3f6", // 7.62x51mm M80A1
                     "5efb0c1bd79ff02a1f5e68d9", // 7.62x51mm M993
                 ],
                 [
@@ -448,16 +449,15 @@ export class Ammo {
                 [
                     "5c0d688c86f77413ae3407b2", // 9x39mm BP gs
                     "57a0e5022459774d1673f889", // 9x39mm SP-6 gs
-                    "57a0e5022459774d1673f889", // 9x39mm SP-6 gs
                 ],
                 [
                     "57a0dfb82459774d3078b56c", // 9x39mm SP-5 gs
-                    "57a0dfb82459774d3078b56c", // 9x39mm SP-5 gs
-                    "57a0dfb82459774d3078b56c", // 9x39mm SP-5 gs
+                    "5c0d668f86f7747ccb7f13b2", // 9x39mm SPP gs
                     "5c0d668f86f7747ccb7f13b2", // 9x39mm SPP gs
                     "61962d879bb3d20b0946d385", // 9x39mm PAB-9 gs
                 ],
                 [
+                    "57a0dfb82459774d3078b56c", // 9x39mm SP-5 gs
                     "6576f96220d53a5b8f3e395e", // 9x39mm FMJ
                 ],
             ]
@@ -545,11 +545,18 @@ export class Ammo {
                 [
                     "5d6e6a5fa4b93614ec501745", // 20/70 Devastator slug
                     "5d6e6a05a4b93618084f58d0", // 20/70 Star slug
+                    "660137d8481cc6907a0c5cda", // 20/70 TSS Armor Piercing Slug
+                    "660137d8481cc6907a0c5cda", // 20/70 TSS Armor Piercing Slug
+                    "660137ef76c1b56143052be8", // 20/70 Dangerous Game Slug
+                    "660137ef76c1b56143052be8", // 20/70 Dangerous Game Slug
+                    "6601380580e77cfd080e3418", // 20/70 flechette
+                    "6601380580e77cfd080e3418", // 20/70 flechette
                 ],
                 [
                     "5d6e69c7a4b9360b6c0d54e4", // 20/70 7.3mm buckshot
                     "5d6e6a53a4b9361bd473feec", // 20/70 "Poleva-3" slug
                     "5d6e6a42a4b9364f07165f52", // 20/70 "Poleva-6u" slug
+                    "6601380580e77cfd080e3418", // 20/70 flechette
                 ],
                 [
                     "5d6e695fa4b936359b35d852", // 20/70 5.6mm buckshot
@@ -569,9 +576,11 @@ export class Ammo {
                 [
                     "5e85a9f4add9fe03027d9bf1", // 23x75mm Zvezda flashbang round
                     "5e85aa1a988a8701445df1f5", // 23x75mm Barrikada slug
+                    "5e85a9a6eacf8c039e4e2ac1", // 23x75mm Shrapnel-10 buckshot
                 ],
                 [
                     "5e85a9a6eacf8c039e4e2ac1", // 23x75mm Shrapnel-10 buckshot
+                    "5f647f31b6238e5dd066e196", // 23x75mm Shrapnel-25 buckshot
                 ],
                 [
                     "5f647f31b6238e5dd066e196", // 23x75mm Shrapnel-25 buckshot
