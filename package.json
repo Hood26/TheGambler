@@ -1,6 +1,6 @@
 {
     "name": "GamblerTrader",
-    "version": "0.3.0",
+    "version": "0.2.7",
     "sptVersion": "~3.11",
     "loadBefore": [],
     "loadAfter": ["zzDrakiaXYZ-LiveFleaPrices", "platinum-theblacklist"],
