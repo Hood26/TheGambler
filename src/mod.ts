@@ -68,11 +68,8 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
      * @param container Dependency container
      */
     public postDBLoad(container: DependencyContainer): void {
-
-        // Get a logger
+        
         this.logger.debug(`[${this.mod}] postDb Loading... `);
-
-        // Get SPT code/data we need later
         const preSptModLoader: PreSptModLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
         const imageRouter: ImageRouter = container.resolve<ImageRouter>("ImageRouter");
         const hashUtil: HashUtil = container.resolve<HashUtil>("HashUtil");
@@ -100,9 +97,13 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         // Add new trader to the trader dictionary in DatabaseServer - has no assorts (items) yet
         this.traderHelper.addTraderToDb(baseJson, tables, jsonUtil);
 
+        // Add gambling containers to trader
+        this.traderHelper.addSingleItemsToTrader(tables, baseJson._id, this.fluentAssortCreator, container, this.logger);
+
         // WARNING: adds the same text to ALL locales (e.g. chinese/french/english)
         this.traderHelper.addTraderToLocales(baseJson, tables, baseJson.name, "Gambler", baseJson.nickname, baseJson.location, "Welcome Traveler! May I indulge you in purchasing some mystery boxes?");
 
+        /*
         const maps = [
             "bigmap",     // customs
             "factory4_day",
@@ -121,7 +122,6 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution) // Drawer
         //
         // adds poker chips to static loot containers on all maps
-        /*
         for (const item of itemCreate.loot){
             for(const map of maps){
                 const mapStaticLoot = tables.locations[map].staticLoot;
@@ -145,12 +145,12 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
         this.logger.debug(`[${this.mod}] postDb Loaded`);
     }
 
-    public postSptLoad(container: DependencyContainer): void {
-
+    // Update container prices after all mods have loaded
+    public postSptLoad(container: DependencyContainer): void {\
         this.logger.success("[Gambler Trader] Generating Mystery Container Prices...");
         const databaseServer: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const tables = databaseServer.getTables();
-        this.traderHelper.addSingleItemsToTrader(tables, baseJson._id, this.fluentAssortCreator, container, this.logger);
+        this.traderHelper.updateContainerPrices(tables, baseJson._id, this.fluentAssortCreator, container, this.logger);
         this.logger.success("[Gambler Trader] Finished Loading! Ready To Launch.");
 
     }

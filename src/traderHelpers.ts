@@ -126,33 +126,15 @@ export class TraderHelper
     }
 
      /**
-     * Add basic items to trader
+     * Add container to trader PostDBLoad.
      * @param tables SPT db
      * @param traderId Traders id (basejson/_id value)
      */
      public addSingleItemsToTrader(tables: IDatabaseTables, traderId: string, assortCreator: FluentAssortCreator, container: DependencyContainer, logger: ILogger) : void {
-
         const config = jsonc.parse(fs.readFileSync(path.resolve(__dirname, "../config/config.jsonc"), "utf-8"));
         const info: Record<string, itemProps> = MysteryContainerInfo(config);  
-        const price = new Price(container, config, logger);
-        const generatedPrices = price.generateContainerPrices();
-        //const loadoutPrice = price.loadoutSimulation();
-        //console.log('One Loadout Cost = ' + loadoutPrice);
-        //console.log(generatedPrices);
 
         for (const [key, value] of Object.entries(info)) {
-            const prices = tables.templates.prices;
-
-            // auto generate flea prices
-            if (generatedPrices[key + '_price'] > 250000) {
-                if (generatedPrices[key + '_price']){
-                    prices[value._id] = generatedPrices[key + '_price'] * 1.20;
-                }
-            } else {
-                if (generatedPrices[key + '_price']){
-                    prices[value._id] = generatedPrices[key + '_price'] * 1.35;
-                }
-            }
 
             // store containers to trader assort
             if (config.container_config[key + '_enable']){
@@ -171,14 +153,63 @@ export class TraderHelper
                         }
 
                     } else {
-                        newTrade.addMoneyCost(Money.ROUBLES, (generatedPrices[key + '_price'] && !config.container_config[key + '_manual_pricing']) ? (generatedPrices[key + '_price'] * config.price_multiplier) : (config.container_config[key + '_price'] * config.price_multiplier))
-                        
+                        newTrade.addMoneyCost(Money.ROUBLES, config.container_config[key + '_price'] * config.price_multiplier)
                     }
+
                     newTrade.addStackCount(config.container_config[key + '_unlimited_stock'] ? 999999 : config.container_config[key + '_stock'], config.container_config[key + '_unlimited_stock'])
                     newTrade.addLoyaltyLevel(1)
                     newTrade.export(tables.traders[baseJson._id]);
             }
         }
+     }
+
+     // find container info based on its quest_id
+     private findItem(quest_id: string, info: Record<string, itemProps>): string {
+
+        for (const [key, value] of Object.entries(info)){
+
+            if (quest_id == value.quest_id) {
+                return key; 
+            }
+        }
+        return undefined;
+     }
+
+     /**
+     * Updated container prices PostSPTLoad
+     * @param tables SPT db
+     * @param traderId Traders id (basejson/_id value)
+     */
+     public updateContainerPrices(tables: IDatabaseTables, traderId: string, assortCreator: FluentAssortCreator, container: DependencyContainer, logger: ILogger) : void {
+        const config = jsonc.parse(fs.readFileSync(path.resolve(__dirname, "../config/config.jsonc"), "utf-8"));
+        const info: Record<string, itemProps> = MysteryContainerInfo(config);  
+        const price = new Price(container, config, logger);
+        const fleaPrices = tables.templates.prices;
+        const generatedPrices = price.generateContainerPrices();
+        const gamblerAssort = tables.traders[traderId].assort;
+
+        //update trader assort prices 
+        for (const [key, _] of Object.entries(gamblerAssort.barter_scheme)) {
+            const currentItem = this.findItem(key, info);
+            
+            if (generatedPrices[currentItem + '_price']) {
+                gamblerAssort.barter_scheme[key][0][0].count = generatedPrices[currentItem + '_price'];
+            }
+        }
+
+        // updated container flea prices
+        for (const [key, value] of Object.entries(info)) {
+
+            if (generatedPrices[key + '_price'] > 250000) {
+                if (generatedPrices[key + '_price']){
+                    fleaPrices[value._id] = generatedPrices[key + '_price'] * 1.20;
+                }
+            } else {
+                if (generatedPrices[key + '_price']){
+                    fleaPrices[value._id] = generatedPrices[key + '_price'] * 1.35;
+                }
+            }
+        } 
      }
 
      /**
