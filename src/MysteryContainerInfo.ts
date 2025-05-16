@@ -80,7 +80,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             name: "GP Coin Coinflip",
             shortName: "Coinflip",
             desc: `Feeling lucky? Looking to double up your spoils? Try your luck at double or nothing!\n==============================\n50 GP Coin - ${config.odds['gpcoin_success']}%\nNothing - ${config.odds['gpcoin_failure']}%`,
-            fleaPriceRoubles: 1700000,
+            fleaPriceRoubles: 400000,
             handbookPriceRoubles: 125000,
             prefab: "assets/content/items/barter/item_barter_valuable_gp/item_barter_valuable_gp.bundle",
             width: 1,
