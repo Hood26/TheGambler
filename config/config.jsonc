@@ -593,7 +593,7 @@
     "rig_late_wipe": 30.0,         // Rare rig
     "rig_early_wipe": 40.0,        // Uncommon rig
     "rig_scav": 25.0,              // Common rig
-    "rig_profit_percentage": 0.95, // Container Profitability
+    "rig_profit_percentage": 0.93, // Container Profitability
 
     // Weapon Mystery Box
     "weapon_meta": 20.0,              // Meta Weapon
@@ -632,7 +632,7 @@
     "headset_rare": 15.0,             // Rare Headset
     "headset_uncommon": 40.0,         // Uncommon Headset
     "headset_common": 45.0,           // Common Headset
-    "headset_profit_percentage": 0.95, // Container Profitability
+    "headset_profit_percentage": 0.93, // Container Profitability
 
     // Armor Mystery Box
     "armor_rare": 20.0,             // Rare Armor

@@ -351,7 +351,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
             quest_id: "66b57e52fcf263f4d70af3eb",
             name: "Premium Weapon Mystery Box",
             shortName: "Premium Weapon Mystery Box",
-            desc: `contains a heavily modded weapon, currently contains 250+ weapons in the loot pool\n==============================\nRare Weapon - ${config.odds['premium_weapon_meta']}%`,
+            desc: `Contains a heavily modded weapon, currently contains 250+ weapons in the loot pool\n==============================\nRare Weapon - ${config.odds['premium_weapon_meta']}%`,
             fleaPriceRoubles: 300000,
             handbookPriceRoubles: 300000,
             prefab: "assets/content/items/spec/item_spec_weaprepair/item_spec_weaprepair.bundle",
