@@ -375,7 +375,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
         },
         '9x18': {
             _id: "67b7b98b4767af842e0521d1",
-            _name: "adsfjjladfs",
+            _name: "gambling_9x18",
             quest_id: "66b59e1cfcf263f4d70af421",
             name: "Mystery 9x18mm Rounds",
             shortName: "Mystery",
