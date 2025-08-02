@@ -1,10 +1,10 @@
 export type itemProps = {
     _id: string,
-    _name: string,
+    _name: string,     // DO NOT CHANGE THIS EVER
     quest_id: string,
-    name: string,
-    shortName: string,
-    desc: string,
+    name: string,      // localized name
+    shortName: string, // localized short name
+    desc: string,      // localized description
     fleaPriceRoubles: number,
     handbookPriceRoubles: number,
     prefab: string,
@@ -17,7 +17,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
     return({
         wallet: {
             _id: "67b7b98b4767af842e0521e7",
-            _name: "gambling_wallet",
+            _name: "gambling_wallet", // DO NOT CHANGE THIS EVER
             quest_id: "66b57e52fcf263f4d70af3e0",
             name: "Mystery Wallet",
             shortName: "Mystery Wallet",
@@ -375,7 +375,7 @@ export function MysteryContainerInfo(config: any): Record<string, itemProps> {
         },
         '9x18': {
             _id: "67b7b98b4767af842e0521d1",
-            _name: "gambling_9x18",
+            _name: "adsfjjladfs",
             quest_id: "66b59e1cfcf263f4d70af421",
             name: "Mystery 9x18mm Rounds",
             shortName: "Mystery",

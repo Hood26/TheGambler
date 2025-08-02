@@ -208,6 +208,9 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
             } else {
                 const rewardContainerDetails = inventoryHelper.getRandomLootContainerRewardDetails(openedItem._tpl);
                 if (!rewardContainerDetails || !rewardContainerDetails.rewardCount) {
+                    console.log('Gambler Error Logging...')
+                    console.log(openedItem);
+                    console.log(itemHelper.getItem(openedItem._tpl))
                     this.logger.error(`Unable to add loot to container: ${openedItem._tpl}, no rewards found`);
                 } else {
                     newItemsRequest.itemsWithModsToAdd.push(...lootGenerator.getRandomLootContainerLoot(rewardContainerDetails));
